@@ -104,6 +104,10 @@
     position: absolute;
 }
 
+
+/**
+ * @example when-breakpoint(medium) { width: 50% }
+ **/
 @mixin when-breakpoint ($point) {
     @if $point == large {
         @media (min-width: 64.375em) { 

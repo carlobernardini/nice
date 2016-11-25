@@ -81,6 +81,14 @@
              background-size: $param;
 }
 
+@mixin set-user-select ($param) {
+    -webkit-user-select: $param;
+       -moz-user-select: $param;
+        -ms-user-select: $param;
+         -o-user-select: $param;
+            user-select: $param;
+}
+
 @mixin set-linear-gradient ($color-from, $color-to) {
     background: -webkit-linear-gradient($color-from, $color-to);
     background: -o-linear-gradient($color-from, $color-to);

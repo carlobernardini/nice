@@ -14,7 +14,9 @@ gulp.task('compile', function(){
 
 gulp.task('compile-min', function(){
     return gulp.src('./src/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
         .pipe(rename('nice.min.css'))
         .pipe(gulp.dest('./dist'));
 });

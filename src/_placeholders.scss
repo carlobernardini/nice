@@ -1,0 +1,47 @@
+/**
+ * Nice! Placeholders collection
+ **/
+
+%background-size-cover {
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+}
+
+%disable-user-select {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+%display-inline-block {
+    display: -moz-inline-stack;
+    display: inline-block;
+    *display: inline-block;
+    zoom: 1;
+}
+
+%clearfix {
+    zoom: 1;
+    display: block;
+    height: 1%;
+    clear: both;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+        content: ".";
+        display: block;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+}

@@ -1,9 +1,28 @@
+/**
+ * Nice! Mixins collection
+ **/
+
+@function calculateRem ($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
 @mixin set-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $font_stack: $fonts-primary) {
     font-family: $font_stack;
     font-style: $style;
     font-variant: $variant;
     font-weight: $weight;
     font-size: $size;
+}
+
+@mixin set-font-size ($size: 12px) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin set-line-height ($height: 12px) {
+    line-height: $height;
+    line-height: calculateRem($height);
 }
 
 @mixin set-transform ($params...) {
@@ -23,6 +42,7 @@
 @mixin set-transition ($params...) {
     -webkit-transition: $params;
        -moz-transition: $params;
+        -ms-transition: $params;
          -o-transition: $params;
             transition: $params;
 }
@@ -50,6 +70,8 @@
     -khtml-opacity: $transparency;
       -moz-opacity: $transparency;
            opacity: $transparency;
+       $opacity-ie: $opacity * 100;
+            filter: alpha(opacity=$opacity-ie);
 }
 
 @mixin set-background-size ($param) {
@@ -64,4 +86,30 @@
     background: -o-linear-gradient($color-from, $color-to);
     background: -moz-linear-gradient($color-from, $color-to);
     background: linear-gradient($color-from, $color-to);
+}
+
+@mixin set-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+@mixin when-breakpoint ($point) {
+    @if $point == large {
+        @media (min-width: 64.375em) { 
+            @content; 
+        }
+    }
+    @else if $point == medium {
+        @media (min-width: 50em) { 
+            @content; 
+        }
+    }
+    @else if $point == small {
+        @media (min-width: 37.5em)  {
+            @content; 
+        }
+    }
 }

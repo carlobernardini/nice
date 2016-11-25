@@ -1,0 +1,67 @@
+@mixin set-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $font_stack: $fonts-primary) {
+    font-family: $font_stack;
+    font-style: $style;
+    font-variant: $variant;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin set-transform ($params...) {
+    -webkit-transform:  $params;
+       -moz-transform:  $params;
+        -ms-transform:  $params;
+         -o-transform:  $params;
+            transform:  $params;
+}
+
+@mixin set-box-sizing ($param) {
+    -webkit-box-sizing: $param;
+        moz-box-sizing: $param;
+            box-sizing: $param;
+}
+
+@mixin set-transition ($params...) {
+    -webkit-transition: $params;
+       -moz-transition: $params;
+         -o-transition: $params;
+            transition: $params;
+}
+
+@mixin set-box-shadow ($params...) {
+    -webkit-box-shadow: $params;
+       -moz-box-shadow: $params;
+            box-shadow: $params;
+}
+
+@mixin set-text-shadow ($params...) {
+    text-shadow: $params;
+}
+
+@mixin set-border-radius ($radiuses...) {
+    -webkit-border-radius: $radiuses;
+       -moz-border-radius: $radiuses;
+            border-radius: $radiuses;
+    -webkit-background-clip: padding-box; 
+       -moz-background-clip: padding; 
+            background-clip: padding-box;
+}
+
+@mixin set-opacity ($transparency) {
+    -khtml-opacity: $transparency;
+      -moz-opacity: $transparency;
+           opacity: $transparency;
+}
+
+@mixin set-background-size ($param) {
+     -webkit-background-size: $param;
+        -moz-background-size: $param;
+          -o-background-size: $param;
+             background-size: $param;
+}
+
+@mixin set-linear-gradient ($color-from, $color-to) {
+    background: -webkit-linear-gradient($color-from, $color-to);
+    background: -o-linear-gradient($color-from, $color-to);
+    background: -moz-linear-gradient($color-from, $color-to);
+    background: linear-gradient($color-from, $color-to);
+}

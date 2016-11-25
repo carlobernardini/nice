@@ -7,7 +7,7 @@
     @return $remSize * 1rem;
 }
 
-@mixin set-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $font_stack: $fonts-primary) {
+@mixin nice-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $font_stack: $fonts-primary) {
     font-family: $font_stack;
     font-style: $style;
     font-variant: $variant;
@@ -15,17 +15,17 @@
     font-size: $size;
 }
 
-@mixin set-font-size ($size: 12px) {
+@mixin nice-font-size ($size: 12px) {
     font-size: $size;
     font-size: calculateRem($size);
 }
 
-@mixin set-line-height ($height: 12px) {
+@mixin nice-line-height ($height: 12px) {
     line-height: $height;
     line-height: calculateRem($height);
 }
 
-@mixin set-transform ($params...) {
+@mixin nice-transform ($params...) {
     -webkit-transform:  $params;
        -moz-transform:  $params;
         -ms-transform:  $params;
@@ -33,7 +33,7 @@
             transform:  $params;
 }
 
-@mixin set-box-sizing ($param) {
+@mixin nice-box-sizing ($param) {
     -webkit-box-sizing: $param;
         moz-box-sizing: $param;
             box-sizing: $param;
@@ -47,17 +47,17 @@
             transition: $params;
 }
 
-@mixin set-box-shadow ($params...) {
+@mixin nice-box-shadow ($params...) {
     -webkit-box-shadow: $params;
        -moz-box-shadow: $params;
             box-shadow: $params;
 }
 
-@mixin set-text-shadow ($params...) {
+@mixin nice-text-shadow ($params...) {
     text-shadow: $params;
 }
 
-@mixin set-border-radius ($radiuses...) {
+@mixin nice-border-radius ($radiuses...) {
     -webkit-border-radius: $radiuses;
        -moz-border-radius: $radiuses;
             border-radius: $radiuses;
@@ -66,7 +66,7 @@
             background-clip: padding-box;
 }
 
-@mixin set-opacity ($transparency) {
+@mixin nice-opacity ($transparency) {
     -khtml-opacity: $transparency;
       -moz-opacity: $transparency;
            opacity: $transparency;
@@ -74,14 +74,14 @@
             filter: alpha(opacity=$opacity-ie);
 }
 
-@mixin set-background-size ($param) {
+@mixin nice-background-size ($param) {
      -webkit-background-size: $param;
         -moz-background-size: $param;
           -o-background-size: $param;
              background-size: $param;
 }
 
-@mixin set-user-select ($param) {
+@mixin nice-user-select ($param) {
     -webkit-user-select: $param;
        -moz-user-select: $param;
         -ms-user-select: $param;
@@ -89,14 +89,14 @@
             user-select: $param;
 }
 
-@mixin set-linear-gradient ($color-from, $color-to) {
+@mixin nice-linear-gradient ($color-from, $color-to) {
     background: -webkit-linear-gradient($color-from, $color-to);
     background: -o-linear-gradient($color-from, $color-to);
     background: -moz-linear-gradient($color-from, $color-to);
     background: linear-gradient($color-from, $color-to);
 }
 
-@mixin set-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin nice-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
     top: $top;
     right: $right;
     bottom: $bottom;
@@ -108,7 +108,7 @@
 /**
  * @example when-breakpoint(medium) { width: 50% }
  **/
-@mixin when-breakpoint ($point) {
+@mixin nice-breakpoint ($point) {
     @if $point == large {
         @media (min-width: 64.375em) { 
             @content; 

@@ -1,0 +1,7 @@
+input {
+    &[type="text"],
+    &[type="password"] {
+        @include nice-border-radius(3px);
+        @include nice-font-size(14px);
+    }
+}

@@ -1,0 +1,27 @@
+.nice-btn {
+    color: $black;
+    position: relative;
+    border: 1px solid $nice-btn-border;
+    background-color: $nice-btn-background;
+    padding: 0 10px;
+    margin-top: -5px;
+    text-decoration:none;
+    outline: none;
+    text-align: center;
+    @include nice-font($family: $fonts-primary);
+    @include nice-line-height(32px);
+    @include nice-border-radius($default-radius);
+    @include nice-transition(border 0.1s, background 0.1s);
+    @extend %display-inline-block;
+    @extend %disable-user-select;
+
+    &:hover {
+        border:1px solid $nice-btn-border-hover;
+        background-color: $nice-btn-background-hover;
+    }
+    &:active {
+        border:1px solid $nice-btn-border-active;
+        background: $nice-btn-background-active;
+        @include nice-box-shadow(inset 0px 2px 1px rgba($nice-btn-box-shadow, .3));
+    }
+}

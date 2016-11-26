@@ -2368,8 +2368,9 @@ input[type="text"], input[type="password"] {
 
 .nice-btn {
   position: relative;
-  border: 1px solid #D0D1D5;
-  padding: 0 7px;
+  border: 1px solid #EEEEEE;
+  background-color: #FFF;
+  padding: 0 10px;
   margin-top: -5px;
   text-decoration: none;
   outline: none;
@@ -2387,3 +2388,12 @@ input[type="text"], input[type="password"] {
   -ms-transition: border 0.1s, background 0.1s;
   -o-transition: border 0.1s, background 0.1s;
   transition: border 0.1s, background 0.1s; }
+  .nice-btn:hover {
+    border: 1px solid #c8c8c8;
+    background-color: #F5F7F7; }
+  .nice-btn:active {
+    border: 1px solid #c8c8c8;
+    background: #EEEEEE;
+    -webkit-box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3); }

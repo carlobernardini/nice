@@ -11,6 +11,9 @@
         'helpers/mixins',
         'helpers/placeholders';
 
+// Themes
+@import 'themes/default';
+
 // UI Elements
 @import 'elements/form',
         'elements/button';

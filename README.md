@@ -1,6 +1,6 @@
 # Nice!
 
-A reusable framework of UI elements for Textkernel
+A framework of reusable UI elements for Textkernel
 
 __Why use Nice! in your project?__
 * Don't care about writing CSS, it's done for you -- just apply some classes

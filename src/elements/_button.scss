@@ -1,4 +1,5 @@
 .nice-btn {
+    color: $black;
     position: relative;
     border: 1px solid $nice-btn-border;
     background-color: $nice-btn-background;
@@ -7,6 +8,7 @@
     text-decoration:none;
     outline: none;
     text-align: center;
+    @include nice-font($family: $fonts-primary);
     @include nice-line-height(32px);
     @include nice-border-radius($default-radius);
     @include nice-transition(border 0.1s, background 0.1s);

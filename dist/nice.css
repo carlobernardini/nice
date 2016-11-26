@@ -2367,6 +2367,7 @@ input[type="text"], input[type="password"] {
   font-size: 0.875rem; }
 
 .nice-btn {
+  color: #000;
   position: relative;
   border: 1px solid #EEEEEE;
   background-color: #FFF;
@@ -2375,6 +2376,11 @@ input[type="text"], input[type="password"] {
   text-decoration: none;
   outline: none;
   text-align: center;
+  font-family: "Open Sans", sans-serif, helvetica;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  font-size: 1em;
   line-height: 32px;
   line-height: 2rem;
   -webkit-border-radius: 3px;

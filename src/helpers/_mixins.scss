@@ -7,8 +7,8 @@
     @return $remSize * 1rem;
 }
 
-@mixin nice-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $font_stack: $fonts-primary) {
-    font-family: $font_stack;
+@mixin nice-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $family: $fonts-primary) {
+    font-family: $family;
     font-style: $style;
     font-variant: $variant;
     font-weight: $weight;

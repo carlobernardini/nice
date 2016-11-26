@@ -38,4 +38,4 @@ gulp.task('watch', function(){
     gulp.watch('./src/**/*.scss', ['compile-min']);
 })
 
-gulp.task('default', ['icons', 'compile-min']);
+gulp.task('default', ['icons', 'compile', 'compile-min']);

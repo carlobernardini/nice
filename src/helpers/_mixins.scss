@@ -39,7 +39,7 @@
             box-sizing: $param;
 }
 
-@mixin set-transition ($params...) {
+@mixin nice-transition ($params...) {
     -webkit-transition: $params;
        -moz-transition: $params;
         -ms-transition: $params;

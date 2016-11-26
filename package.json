@@ -20,7 +20,5 @@
     "node-bourbon": "4.2.8",
     "node-neat": "1.7.2"
   },
-  "devDependencies": {
-    "fontawesome": "^4.5.0"
-  }
+  "devDependencies": {}
 }

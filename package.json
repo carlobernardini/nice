@@ -13,10 +13,14 @@
   "author": "Textkernel B.V.",
   "license": "ISC",
   "dependencies": {
+    "font-awesome": "4.7.0",
     "gulp": "3.9.1",
     "gulp-rename": "1.2.2",
     "gulp-sass": "2.3.2",
     "node-bourbon": "4.2.8",
     "node-neat": "1.7.2"
+  },
+  "devDependencies": {
+    "fontawesome": "^4.5.0"
   }
 }

@@ -1,0 +1,42 @@
+$alignments: (
+    'start': 'flex-start',
+    'end': 'flex-end',
+    'center': 'center',
+    'baseline': 'baseline',
+    'stretch': 'stretch'
+);
+$justifications: (
+    'start': 'flex-start',
+    'end': 'flex-end',
+    'center': 'center',
+    'space-between': 'space-between',
+    'space-around': 'space-around'
+);
+$item-grow: (
+    'stretch': 1,
+    'double': 2
+);
+
+.nice-flex-container {
+    @include display(flex);
+    @each $name, $alignment in $alignments {
+        &.align-#{$name} {
+            @include align-items($alignment);
+        }
+    }
+    @each $direction in ('row', 'row-reverse', 'column', 'column-reverse') {
+        &.direction-#{$direction} {
+            @include flex-direction($direction);
+        }
+    }
+    @each $name, $value in $justifications {
+        &.justify-#{$name} {
+            @include justify-content($value);
+        }
+    }
+    @each $name, $value in $item-grow {
+        >.nice-flex-#{$name} {
+            @include flex-grow($value);
+        }
+    }
+}

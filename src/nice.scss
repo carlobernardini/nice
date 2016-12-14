@@ -12,7 +12,8 @@
         'helpers/placeholders';
 
 // Layout
-@import 'layout/grid';
+@import 'layout/grid',
+        'layout/flexbox';
 
 // Themes
 @import 'themes/default';

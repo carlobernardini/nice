@@ -27,6 +27,32 @@ html {
   *display: inline-block;
   zoom: 1; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif, helvetica;
+  font-weight: 400; }
+  h1.bold, h2.bold, h3.bold, h4.bold, h5.bold, h6.bold {
+    font-weight: 600; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    font-size: .75em; }
+
+h1 {
+  font-size: 2.25rem; }
+
+h2 {
+  font-size: 1.875rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.125rem; }
+
+h5 {
+  font-size: 0.875rem; }
+
+h6 {
+  font-size: 0.75rem; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2678,10 +2704,9 @@ input[type="text"], input[type="password"] {
 .nice-btn {
   color: #000;
   position: relative;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #D0D1D5;
   background-color: #FFF;
   padding: 0 10px;
-  margin-top: -5px;
   text-decoration: none;
   outline: none;
   text-align: center;
@@ -2704,14 +2729,22 @@ input[type="text"], input[type="password"] {
   -o-transition: border 0.1s, background 0.1s;
   transition: border 0.1s, background 0.1s; }
   .nice-btn:hover {
-    border: 1px solid #c8c8c8;
+    border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
   .nice-btn:active {
-    border: 1px solid #c8c8c8;
+    border: 1px solid #a8a9b1;
     background: #EEEEEE;
-    -webkit-box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0px 2px 1px rgba(0, 0, 0, 0.3); }
+    -webkit-box-shadow: inset 0px 2px 1px rgba(200, 200, 200, 0.4);
+    -moz-box-shadow: inset 0px 2px 1px rgba(200, 200, 200, 0.4);
+    box-shadow: inset 0px 2px 1px rgba(200, 200, 200, 0.4); }
   .nice-btn.icon::before {
     font-family: FontAwesome;
     margin-right: 5px; }
+  .nice-btn.link {
+    border: none;
+    background-color: transparent; }
+    .nice-btn.link:hover, .nice-btn.link:focus {
+      background-color: transparent;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }

@@ -1,7 +1,8 @@
-$nice-btn-border:               $nice-gray-b !default;
+$nice-btn-border:               $nice-gray-d !default;
 $nice-btn-border-hover:         darken($nice-btn-border, 15%) !default;
-$nice-btn-border-active:	darken($nice-btn-border, 15%) !default;
+$nice-btn-border-active:        darken($nice-btn-border, 15%) !default;
 $nice-btn-background:           $white !default;
 $nice-btn-background-hover:     $nice-gray-a !default;
 $nice-btn-background-active:	$nice-gray-b !default;
-$nice-btn-box-shadow:           $black;
+$nice-btn-box-shadow:           $nice-gray-c;
+$nice-btn-primary-background:   

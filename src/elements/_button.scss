@@ -24,4 +24,10 @@
         background: $nice-btn-background-active;
         @include nice-box-shadow(inset 0px 2px 1px rgba($nice-btn-box-shadow, .3));
     }
+    &.icon {
+        &::before {
+            font-family: FontAwesome;
+            margin-right: 5px;
+        }
+    }
 }

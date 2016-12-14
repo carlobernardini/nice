@@ -1,8 +1,5 @@
 @charset 'UTF-8';
 
-// Fonts
-@import 'font-awesome';
-
 // Utilities
 @import 'bourbon',
         'neat',
@@ -10,6 +7,9 @@
         'helpers/colors',
         'helpers/mixins',
         'helpers/placeholders';
+
+// Fonts
+@import 'font-awesome';
 
 // Layout
 @import 'layout/grid',

@@ -11,6 +11,9 @@
         'helpers/mixins',
         'helpers/placeholders';
 
+// Layout
+@import 'layout/grid';
+
 // Themes
 @import 'themes/default';
 

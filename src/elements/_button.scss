@@ -39,4 +39,19 @@
             @include nice-box-shadow(none);
         }
     }
+    &.primary {
+        color: $color-white;
+        background-color: $color-primary;
+        border: none;
+        padding: 0 11px;
+        @include nice-line-height(34px);
+        @include nice-font($weight: 400);
+
+        &:hover {
+            background-color: #F39C12;
+        }
+        &:active {
+            @include nice-box-shadow(inset 0px 2px 1px darken($color-primary, 5%));
+        }
+    }
 }

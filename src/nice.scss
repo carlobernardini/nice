@@ -1,5 +1,8 @@
 @charset 'UTF-8';
 
+// Themes
+@import 'themes/default';
+
 // Utilities
 @import 'bourbon',
         'neat',
@@ -8,9 +11,6 @@
         'helpers/placeholders',
         'helpers/typography',
         'helpers/generics';
-
-// Themes
-@import 'themes/colors';
 
 // Fonts
 @import 'font-awesome';

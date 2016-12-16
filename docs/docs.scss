@@ -2,7 +2,8 @@
 @charset 'UTF-8';
 
 @import '../src/themes/default',
-        '../src/helpers/variables';
+        '../src/helpers/variables',
+        '../src/helpers/mixins';
 
 body {
     margin: 0;
@@ -22,5 +23,15 @@ body {
         > * {
             display: block;
         }
+    }
+    code {
+        display: block;
+        padding: 15px;
+        border: 1px solid $color-border;
+        background-color: $gray-vlight;
+        font-size: 12px;
+        line-height: 18px;
+        color: $gray-dark;
+        @include nice-border-radius($default-radius);
     }
 }

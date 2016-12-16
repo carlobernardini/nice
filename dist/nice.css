@@ -53,6 +53,17 @@ h5 {
 h6 {
   font-size: 0.75rem; }
 
+a {
+  color: #009fc3;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s; }
+  a:hover {
+    color: #006177; }
+
 .nice-circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

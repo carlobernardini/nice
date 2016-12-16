@@ -1,3 +1,12 @@
+a {
+    color: $color-link;
+    text-decoration: none;
+    @include nice-transition(color 0.3s);
+
+    &:hover {
+        color: darken($color-link, 15%);
+    }
+}
 .nice-circle {
     @include nice-border-radius(50%);
 }

@@ -4,10 +4,13 @@
 @import 'bourbon',
         'neat',
         'helpers/variables',
-        'helpers/colors',
         'helpers/mixins',
         'helpers/placeholders',
-        'helpers/typography';
+        'helpers/typography',
+        'helpers/generics';
+
+// Themes
+@import 'themes/colors';
 
 // Fonts
 @import 'font-awesome';
@@ -15,9 +18,6 @@
 // Layout
 @import 'layout/grid',
         'layout/flexbox';
-
-// Themes
-@import 'themes/default';
 
 // UI Elements
 @import 'elements/form',

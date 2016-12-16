@@ -53,6 +53,14 @@ h5 {
 h6 {
   font-size: 0.75rem; }
 
+.nice-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2733,10 +2741,10 @@ input[type="text"], input[type="password"] {
     background-color: #F5F7F7; }
   .nice-btn:active {
     border: 1px solid #a8a9b1;
-    background: #EEEEEE;
-    -webkit-box-shadow: inset 0px 2px 1px rgba(200, 200, 200, 0.4);
-    -moz-box-shadow: inset 0px 2px 1px rgba(200, 200, 200, 0.4);
-    box-shadow: inset 0px 2px 1px rgba(200, 200, 200, 0.4); }
+    background: #ECF0F1;
+    -webkit-box-shadow: inset 0px 2px 1px #d0d1d5;
+    -moz-box-shadow: inset 0px 2px 1px #d0d1d5;
+    box-shadow: inset 0px 2px 1px #d0d1d5; }
   .nice-btn.icon::before {
     font-family: FontAwesome;
     margin-right: 5px; }

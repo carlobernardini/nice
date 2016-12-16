@@ -1,8 +1,8 @@
 .nice-btn {
-    color: $black;
+    color: $color-black;
     position: relative;
-    border: 1px solid $nice-btn-border;
-    background-color: $nice-btn-background;
+    border: 1px solid $color-border;
+    background-color: $color-white;
     padding: 0 10px;
     text-decoration:none;
     outline: none;
@@ -15,13 +15,13 @@
     @extend %disable-user-select;
 
     &:hover {
-        border: 1px solid $nice-btn-border-hover;
-        background-color: $nice-btn-background-hover;
+        border: 1px solid darken($color-border, 15%);
+        background-color: $gray-vlight;
     }
     &:active {
-        border: 1px solid $nice-btn-border-active;
-        background: $nice-btn-background-active;
-        @include nice-box-shadow(inset 0px 2px 1px rgba($nice-btn-box-shadow, .4));
+        border: 1px solid darken($color-border, 15%);
+        background: $gray-light;
+        @include nice-box-shadow(inset 0px 2px 1px rgba($gray-medium, 1));
     }
     &.icon {
         &::before {

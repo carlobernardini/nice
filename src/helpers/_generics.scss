@@ -4,7 +4,12 @@ a {
     @include nice-transition(color 0.3s);
 
     &:hover {
-        color: darken($color-link, 15%);
+        color: lighten($color-link, 10%);
+    }
+}
+.icon {
+    &::before {
+        font-family: FontAwesome;
     }
 }
 .nice-circle {
@@ -29,11 +34,11 @@ a {
     background-color: $color-warning;
 }
 .nice-bg-danger {
-    background-color: $color-danger;
+    background-color: $color-bad;
 }
 .nice-bg-info {
     background-color: $color-info;
 }
 .nice-bg-success {
-    background-color: $color-success;
+    background-color: $color-good;
 }

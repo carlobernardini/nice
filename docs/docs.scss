@@ -8,9 +8,11 @@
 body {
     margin: 0;
     font-family: $fonts-primary;
+    background-color: $gray-vlight;
 
     .color-swatch {
         width: 100px;
+        margin: 5px 0;
         text-align: center;
         height: 100px;
         color: $color-white;
@@ -28,7 +30,7 @@ body {
         display: block;
         padding: 15px;
         border: 1px solid $color-border;
-        background-color: $gray-vlight;
+        background-color: $color-white;
         font-size: 12px;
         line-height: 18px;
         color: $gray-dark;

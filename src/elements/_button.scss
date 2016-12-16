@@ -15,6 +15,7 @@
     @extend %disable-user-select;
 
     &:hover {
+        color: $color-black;
         border: 1px solid darken($color-border, 15%);
         background-color: $gray-vlight;
     }
@@ -25,7 +26,6 @@
     }
     &.icon {
         &::before {
-            font-family: FontAwesome;
             margin-right: 5px;
         }
     }
@@ -37,7 +37,7 @@
 
         &:hover,
         &:focus {
-            color: darken($color-link, 15%);
+            color:lighten($color-link, 10%);
             background-color: transparent;
             @include nice-box-shadow(none);
         }

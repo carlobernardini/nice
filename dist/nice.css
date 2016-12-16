@@ -53,6 +53,18 @@ h5 {
 h6 {
   font-size: 0.75rem; }
 
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
 a {
   color: #009fc3;
   text-decoration: none;
@@ -62,7 +74,10 @@ a {
   -o-transition: color 0.3s;
   transition: color 0.3s; }
   a:hover {
-    color: #006177; }
+    color: #00c9f6; }
+
+.icon::before {
+  font-family: FontAwesome; }
 
 .nice-circle {
   -webkit-border-radius: 50%;
@@ -2783,6 +2798,7 @@ header,
       display: table; }
   header .nice-header-brand,
   .nice-header .nice-header-brand {
+    display: inline-block;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -2793,8 +2809,49 @@ header,
     background-size: contain; }
     header .nice-header-brand img,
     .nice-header .nice-header-brand img {
-      height: 40px;
-      margin: 10px 0; }
+      height: 30px;
+      margin: 15px 0; }
+  header .nice-header-menu,
+  .nice-header .nice-header-menu {
+    float: right;
+    padding: 0;
+    margin: 0;
+    line-height: 60px;
+    line-height: 3.75rem; }
+    header .nice-header-menu li,
+    .nice-header .nice-header-menu li {
+      list-style: none;
+      display: block;
+      float: left; }
+      header .nice-header-menu li a,
+      .nice-header .nice-header-menu li a {
+        display: block;
+        padding: 0 10px; }
+    header .nice-header-menu.menu-pills li a,
+    .nice-header .nice-header-menu.menu-pills li a {
+      -webkit-transition: background-color 0.1s;
+      -moz-transition: background-color 0.1s;
+      -ms-transition: background-color 0.1s;
+      -o-transition: background-color 0.1s;
+      transition: background-color 0.1s; }
+      header .nice-header-menu.menu-pills li a:hover,
+      .nice-header .nice-header-menu.menu-pills li a:hover {
+        background-color: #F5F7F7; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+  html body {
+    margin-bottom: 100px; }
+    html body footer,
+    html body .nice-footer {
+      background-color: #182642;
+      color: #FFF;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      width: 100%; }
 
 input[type="text"], input[type="password"] {
   -webkit-border-radius: 3px;
@@ -2834,6 +2891,7 @@ input[type="text"], input[type="password"] {
   -o-transition: border 0.1s, background 0.1s;
   transition: border 0.1s, background 0.1s; }
   .nice-btn:hover {
+    color: #000;
     border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
   .nice-btn:active {
@@ -2843,7 +2901,6 @@ input[type="text"], input[type="password"] {
     -moz-box-shadow: inset 0px 2px 1px #d0d1d5;
     box-shadow: inset 0px 2px 1px #d0d1d5; }
   .nice-btn.icon::before {
-    font-family: FontAwesome;
     margin-right: 5px; }
   .nice-btn.link {
     color: #009fc3;
@@ -2855,7 +2912,7 @@ input[type="text"], input[type="password"] {
     -o-transition: color 0.3s;
     transition: color 0.3s; }
     .nice-btn.link:hover, .nice-btn.link:focus {
-      color: #006177;
+      color: #00c9f6;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
@@ -2878,3 +2935,29 @@ input[type="text"], input[type="password"] {
       -webkit-box-shadow: inset 0px 2px 1px #d97818;
       -moz-box-shadow: inset 0px 2px 1px #d97818;
       box-shadow: inset 0px 2px 1px #d97818; }
+
+.nice-alert {
+  padding: 15px;
+  border: 1px solid #D0D1D5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-alert.info {
+    background-color: #e1f0fa;
+    color: #124364;
+    border-color: #b6daf2; }
+  .nice-alert.good {
+    background-color: #d1f5e0;
+    color: #124f2c;
+    border-color: #a8ebc4; }
+  .nice-alert.warning {
+    background-color: #fdedd4;
+    color: #674105;
+    border-color: #fad9a4; }
+  .nice-alert.bad {
+    background-color: #fdf3f2;
+    color: #7b190f;
+    border-color: #f8c9c4; }

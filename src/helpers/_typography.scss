@@ -27,3 +27,8 @@ h5 {
 h6 {
     font-size: rem(12);
 }
+@each $value in (left, right, center, justify) {
+    .text-#{$value} {
+        text-align: $value;
+    }
+}

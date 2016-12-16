@@ -14,6 +14,7 @@ html {
 /**
  * Nice! Placeholders collection
  **/
+button,
 .nice-btn {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -21,6 +22,7 @@ html {
   -o-user-select: none;
   user-select: none; }
 
+button,
 .nice-btn {
   display: -moz-inline-stack;
   display: inline-block;
@@ -2751,15 +2753,63 @@ h6 {
     flex-wrap: wrap-reverse; }
 
 input[type="text"], input[type="password"] {
+  border: 1px solid #D0D1D5;
+  outline: none;
+  min-height: 1.875rem;
+  padding: 0 5px;
+  font-family: "Open Sans", sans-serif, helvetica;
+  font-size: 1em;
+  width: 100%;
+  background-color: #FFF;
+  -webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 30px;
+  line-height: 1.875rem;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  -webkit-transition: box-shadow 0.1s, border 0.1s;
+  -moz-transition: box-shadow 0.1s, border 0.1s;
+  -ms-transition: box-shadow 0.1s, border 0.1s;
+  -o-transition: box-shadow 0.1s, border 0.1s;
+  transition: box-shadow 0.1s, border 0.1s;
   font-size: 14px;
   font-size: 0.875rem; }
+  input[type="text"]:focus, input[type="password"]:focus {
+    border: 1px solid #12BCD0;
+    -webkit-box-shadow: inset 0 2px 2px #ECF0F1;
+    -moz-box-shadow: inset 0 2px 2px #ECF0F1;
+    box-shadow: inset 0 2px 2px #ECF0F1; }
 
+.nice-control-group > *:first-child {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.nice-control-group > *:last-child {
+  -webkit-border-radius: 0 3px 3px 0;
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.nice-control-group > *:not(:first-child):not(:last-child) {
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius: none;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+button,
 .nice-btn {
   color: #000;
   position: relative;
@@ -2787,18 +2837,22 @@ input[type="text"], input[type="password"] {
   -ms-transition: border 0.1s, background 0.1s;
   -o-transition: border 0.1s, background 0.1s;
   transition: border 0.1s, background 0.1s; }
+  button:hover,
   .nice-btn:hover {
     border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
+  button:active,
   .nice-btn:active {
     border: 1px solid #a8a9b1;
     background: #ECF0F1;
     -webkit-box-shadow: inset 0px 2px 1px #d0d1d5;
     -moz-box-shadow: inset 0px 2px 1px #d0d1d5;
     box-shadow: inset 0px 2px 1px #d0d1d5; }
+  button.icon::before,
   .nice-btn.icon::before {
     font-family: FontAwesome;
     margin-right: 5px; }
+  button.link,
   .nice-btn.link {
     color: #009fc3;
     border: none;
@@ -2808,12 +2862,15 @@ input[type="text"], input[type="password"] {
     -ms-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s; }
-    .nice-btn.link:hover, .nice-btn.link:focus {
+    button.link:hover, button.link:focus,
+    .nice-btn.link:hover,
+    .nice-btn.link:focus {
       color: #006177;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
+  button.primary,
   .nice-btn.primary {
     color: #FFF;
     background-color: #E78523;
@@ -2826,8 +2883,10 @@ input[type="text"], input[type="password"] {
     font-variant: normal;
     font-weight: 400;
     font-size: 1em; }
+    button.primary:hover,
     .nice-btn.primary:hover {
       background-color: #F39C12; }
+    button.primary:active,
     .nice-btn.primary:active {
       -webkit-box-shadow: inset 0px 2px 1px #d97818;
       -moz-box-shadow: inset 0px 2px 1px #d97818;

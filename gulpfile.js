@@ -33,9 +33,19 @@ gulp.task('compile-min', function(){
         .pipe(rename('nice.min.css'))
         .pipe(gulp.dest('./dist'));
 });
+gulp.task('docs', function(){
+    return gulp.src('./docs/**/*.scss')
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(rename('docs.min.css'))
+        .pipe(gulp.dest('./docs'));
+});
+gulp.task('default', ['icons', 'compile', 'compile-min']);
 
 gulp.task('watch', function(){
-    gulp.watch('./src/**/*.scss', ['compile-min']);
-})
-
-gulp.task('default', ['icons', 'compile', 'compile-min']);
+    gulp.watch('./src/**/*.scss', ['default']);
+});
+gulp.task('watch-docs', function(){
+    gulp.watch('./docs/**/*.scss', ['docs']);
+});

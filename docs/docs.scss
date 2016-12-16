@@ -1,0 +1,25 @@
+// Styles for example site
+@charset 'UTF-8';
+
+@import '../src/themes/default',
+        '../src/helpers/variables';
+
+body {
+    font-family: $fonts-primary;
+
+    .color-swatch {
+        width: 100px;
+        text-align: center;
+        height: 100px;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: .9em;
+
+        > * {
+            display: block;
+        }
+    }
+}

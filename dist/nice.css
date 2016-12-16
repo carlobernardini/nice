@@ -2575,52 +2575,52 @@ h6 {
     -webkit-box-align: start;
     -moz-box-align: start;
     box-align: start;
-    -webkit-align-items: "flex-start";
-    -moz-align-items: "flex-start";
-    -ms-align-items: "flex-start";
-    -o-align-items: "flex-start";
-    align-items: "flex-start";
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    -o-align-items: flex-start;
+    align-items: flex-start;
     -ms-flex-align: start; }
   .nice-flex-container.align-end {
     -webkit-box-align: end;
     -moz-box-align: end;
     box-align: end;
-    -webkit-align-items: "flex-end";
-    -moz-align-items: "flex-end";
-    -ms-align-items: "flex-end";
-    -o-align-items: "flex-end";
-    align-items: "flex-end";
+    -webkit-align-items: flex-end;
+    -moz-align-items: flex-end;
+    -ms-align-items: flex-end;
+    -o-align-items: flex-end;
+    align-items: flex-end;
     -ms-flex-align: end; }
   .nice-flex-container.align-center {
-    -webkit-box-align: "center";
-    -moz-box-align: "center";
-    box-align: "center";
-    -webkit-align-items: "center";
-    -moz-align-items: "center";
-    -ms-align-items: "center";
-    -o-align-items: "center";
-    align-items: "center";
-    -ms-flex-align: "center"; }
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
   .nice-flex-container.align-baseline {
-    -webkit-box-align: "baseline";
-    -moz-box-align: "baseline";
-    box-align: "baseline";
-    -webkit-align-items: "baseline";
-    -moz-align-items: "baseline";
-    -ms-align-items: "baseline";
-    -o-align-items: "baseline";
-    align-items: "baseline";
-    -ms-flex-align: "baseline"; }
+    -webkit-box-align: baseline;
+    -moz-box-align: baseline;
+    box-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-align-items: baseline;
+    -ms-align-items: baseline;
+    -o-align-items: baseline;
+    align-items: baseline;
+    -ms-flex-align: baseline; }
   .nice-flex-container.align-stretch {
-    -webkit-box-align: "stretch";
-    -moz-box-align: "stretch";
-    box-align: "stretch";
-    -webkit-align-items: "stretch";
-    -moz-align-items: "stretch";
-    -ms-align-items: "stretch";
-    -o-align-items: "stretch";
-    align-items: "stretch";
-    -ms-flex-align: "stretch"; }
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-align-items: stretch;
+    -ms-align-items: stretch;
+    -o-align-items: stretch;
+    align-items: stretch;
+    -ms-flex-align: stretch; }
   .nice-flex-container.direction-row {
     -webkit-box-orient: horizontal;
     -moz-box-orient: horizontal;
@@ -2628,10 +2628,10 @@ h6 {
     -webkit-box-direction: normal;
     -moz-box-direction: normal;
     box-direction: normal;
-    -webkit-flex-direction: "row";
-    -moz-flex-direction: "row";
-    flex-direction: "row";
-    -ms-flex-direction: "row"; }
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-direction: row; }
   .nice-flex-container.direction-row-reverse {
     -webkit-box-orient: horizontal;
     -moz-box-orient: horizontal;
@@ -2639,10 +2639,10 @@ h6 {
     -webkit-box-direction: reverse;
     -moz-box-direction: reverse;
     box-direction: reverse;
-    -webkit-flex-direction: "row-reverse";
-    -moz-flex-direction: "row-reverse";
-    flex-direction: "row-reverse";
-    -ms-flex-direction: "row-reverse"; }
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse; }
   .nice-flex-container.direction-column {
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
@@ -2650,10 +2650,10 @@ h6 {
     -webkit-box-direction: normal;
     -moz-box-direction: normal;
     box-direction: normal;
-    -webkit-flex-direction: "column";
-    -moz-flex-direction: "column";
-    flex-direction: "column";
-    -ms-flex-direction: "column"; }
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column; }
   .nice-flex-container.direction-column-reverse {
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
@@ -2661,10 +2661,10 @@ h6 {
     -webkit-box-direction: reverse;
     -moz-box-direction: reverse;
     box-direction: reverse;
-    -webkit-flex-direction: "column-reverse";
-    -moz-flex-direction: "column-reverse";
-    flex-direction: "column-reverse";
-    -ms-flex-direction: "column-reverse"; }
+    -webkit-flex-direction: column-reverse;
+    -moz-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse; }
   .nice-flex-container.justify-start {
     -webkit-box-pack: start;
     -moz-box-pack: start;
@@ -2725,6 +2725,30 @@ h6 {
     -moz-flex-grow: 2;
     flex-grow: 2;
     -ms-flex-positive: 2; }
+  .nice-flex-container.no-wrap {
+    -webkit-box-lines: no-wrap;
+    -moz-box-lines: no-wrap;
+    box-lines: no-wrap;
+    -webkit-flex-wrap: no-wrap;
+    -moz-flex-wrap: no-wrap;
+    -ms-flex-wrap: no-wrap;
+    flex-wrap: no-wrap; }
+  .nice-flex-container.wrap {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .nice-flex-container.wrap-reverse {
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap-reverse;
+    -moz-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse; }
 
 input[type="text"], input[type="password"] {
   -webkit-border-radius: 3px;
@@ -2776,9 +2800,16 @@ input[type="text"], input[type="password"] {
     font-family: FontAwesome;
     margin-right: 5px; }
   .nice-btn.link {
+    color: #009fc3;
     border: none;
-    background-color: transparent; }
+    background-color: transparent;
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    -ms-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
     .nice-btn.link:hover, .nice-btn.link:focus {
+      color: #006177;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;

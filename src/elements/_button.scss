@@ -30,11 +30,14 @@
         }
     }
     &.link {
+        color: $color-link;
         border: none;
         background-color: transparent;
+        @include nice-transition(color 0.3s);
 
         &:hover,
         &:focus {
+            color: darken($color-link, 15%);
             background-color: transparent;
             @include nice-box-shadow(none);
         }

@@ -5,6 +5,6 @@ $(function(){
             state = toggle.is('.collapsed');
 
         toggle.toggleClass('collapsed', !state);
-        menu.toggleClass('expanded', state);
+        $('body').toggleClass('expanded', state);
     });
 });

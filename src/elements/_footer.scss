@@ -17,3 +17,14 @@ html {
         }
     }
 }
+
+@include media($mobile) {
+    html {
+        body {
+            footer,
+            .nice-footer {
+                padding: 0 15px;
+            }
+        }
+    }
+}

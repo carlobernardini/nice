@@ -2843,50 +2843,72 @@ header,
 
 @media screen and (min-width: 20em) and (max-width: 720px) {
   body {
-    padding-top: 60px; }
-  header,
-  .nice-header {
-    top: 0;
+    padding: 0 15px;
     left: 0;
-    width: 100%;
-    position: fixed; }
-    header .nice-header-container,
-    .nice-header .nice-header-container {
-      padding: 0 15px; }
-    header .nice-header-menu,
-    .nice-header .nice-header-menu {
-      border-top: 1px solid #ECF0F1;
-      top: 60px;
-      height: calc(100% - 1px);
-      width: 100%;
-      position: fixed;
-      left: 105%;
-      background-color: #FFF;
-      z-index: 998;
-      overflow: hidden;
-      overflow-y: auto;
-      -webkit-transition: left 0.5s ease-in-out;
-      -moz-transition: left 0.5s ease-in-out;
-      -ms-transition: left 0.5s ease-in-out;
-      -o-transition: left 0.5s ease-in-out;
-      transition: left 0.5s ease-in-out;
-      -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
-      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1); }
-      header .nice-header-menu li,
-      .nice-header .nice-header-menu li {
-        float: none; }
-        header .nice-header-menu li a,
-        .nice-header .nice-header-menu li a {
-          padding: 0 20px; }
-      header .nice-header-menu.expanded,
-      .nice-header .nice-header-menu.expanded {
-        left: 0;
+    -webkit-transition: left 0.2s ease-in-out;
+    -moz-transition: left 0.2s ease-in-out;
+    -ms-transition: left 0.2s ease-in-out;
+    -o-transition: left 0.2s ease-in-out;
+    transition: left 0.2s ease-in-out; }
+    body.expanded {
+      position: relative;
+      left: calc(-100% + 60px);
+      z-index: 999;
+      overflow: visible;
+      -webkit-transition: left 0.2s ease-out;
+      -moz-transition: left 0.2s ease-out;
+      -ms-transition: left 0.2s ease-out;
+      -o-transition: left 0.2s ease-out;
+      transition: left 0.2s ease-out; }
+      body.expanded .nice-header-menu {
+        left: 60px;
         -webkit-transition: left 0.2s ease-in-out;
         -moz-transition: left 0.2s ease-in-out;
         -ms-transition: left 0.2s ease-in-out;
         -o-transition: left 0.2s ease-in-out;
         transition: left 0.2s ease-in-out; }
+  header,
+  .nice-header {
+    margin: 0 -15px;
+    position: relative; }
+    header .nice-header-container,
+    .nice-header .nice-header-container {
+      padding: 0 15px; }
+    header .nice-header-menu,
+    .nice-header .nice-header-menu {
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      left: 105%;
+      background-color: #182642;
+      overflow: hidden;
+      overflow-y: auto;
+      -webkit-transition: left 0.2s ease-in-out;
+      -moz-transition: left 0.2s ease-in-out;
+      -ms-transition: left 0.2s ease-in-out;
+      -o-transition: left 0.2s ease-in-out;
+      transition: left 0.2s ease-in-out; }
+      header .nice-header-menu li,
+      .nice-header .nice-header-menu li {
+        float: none; }
+        header .nice-header-menu li a,
+        .nice-header .nice-header-menu li a {
+          padding: 0 20px;
+          color: #FFF;
+          -webkit-transition: background-color 0.1s, color 0.1s;
+          -moz-transition: background-color 0.1s, color 0.1s;
+          -ms-transition: background-color 0.1s, color 0.1s;
+          -o-transition: background-color 0.1s, color 0.1s;
+          transition: background-color 0.1s, color 0.1s; }
+          header .nice-header-menu li a::before,
+          .nice-header .nice-header-menu li a::before {
+            margin-right: 10px; }
+      header .nice-header-menu.menu-pills li a:hover, header .nice-header-menu.menu-pills li a:active,
+      .nice-header .nice-header-menu.menu-pills li a:hover,
+      .nice-header .nice-header-menu.menu-pills li a:active {
+        background-color: #FFF;
+        color: #009fc3; }
     header .nice-header-toggle,
     .nice-header .nice-header-toggle {
       display: block;
@@ -2896,15 +2918,15 @@ header,
       margin-top: -16px;
       border: none;
       padding: 10px 10px;
-      background-color: #FFF;
+      background-color: transparent;
       outline: none;
-      z-index: 999; }
+      text-align: center; }
       header .nice-header-toggle .icon-bar,
       .nice-header .nice-header-toggle .icon-bar {
         display: block;
         width: 22px;
         height: 2px;
-        background-color: #888;
+        background-color: #182642;
         -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
         -ms-transition: all 0.2s;
@@ -2954,7 +2976,11 @@ header,
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
-        transform: rotate(0); } }
+        transform: rotate(0); }
+      header .nice-header-toggle:focus, header .nice-header-toggle:active,
+      .nice-header .nice-header-toggle:focus,
+      .nice-header .nice-header-toggle:active {
+        background-color: transparent; } }
 
 html {
   position: relative;
@@ -2970,6 +2996,11 @@ html {
       bottom: 0;
       height: 100px;
       width: 100%; }
+
+@media screen and (min-width: 20em) and (max-width: 720px) {
+  html body footer,
+  html body .nice-footer {
+    padding: 0 15px; } }
 
 input[type="text"], input[type="password"] {
   -webkit-border-radius: 3px;

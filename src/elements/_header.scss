@@ -57,43 +57,65 @@ header,
 
 @include media($mobile) {
     body {
-        padding-top: 60px;
+        padding: 0 15px;
+        left: 0;
+        @include nice-transition(left .2s ease-in-out);
+
+        &.expanded {
+            position: relative;
+            left: calc(-100% + 60px);
+            z-index: 999;
+            overflow: visible;
+            @include nice-transition(left .2s ease-out);
+
+            .nice-header-menu {
+                left: 60px;
+                @include nice-transition(left .2s ease-in-out);
+            }
+        }
     }
     header,
     .nice-header {
-        top: 0;
-        left: 0;
-        width: 100%;
-        position: fixed;
+        margin: 0 -15px;
+        position: relative;
 
         .nice-header-container {
             padding: 0 15px;
         }
         .nice-header-menu {
-            border-top: 1px solid $gray-light;
-            top: 60px;
-            height: calc(100% - 1px);
+            top: 0;
+            height: 100%;
             width: 100%;
             position: fixed;
             left: 105%;
-            background-color: $color-white;
-            z-index: 998;
+            background-color: $color-accent;
             overflow: hidden;
             overflow-y: auto;
-            @include nice-transition(left .5s ease-in-out);
-            @include nice-box-shadow(-5px 5px 5px rgba($color-black, .1));
+            @include nice-transition(left .2s ease-in-out);
 
             li {
                 float: none;
 
                 a {
                     padding: 0 20px;
+                    color: $color-white;
+                    @include nice-transition(background-color .1s, color .1s);
+
+                    &::before {
+                        margin-right: 10px;
+                    }
                 }
             }
-
-            &.expanded {
-                left: 0;
-                @include nice-transition(left .2s ease-in-out);
+            &.menu-pills {
+                li {
+                    a {
+                        &:hover,
+                        &:active {
+                            background-color: $color-white;
+                            color: $color-link;
+                        }
+                    }
+                }
             }
         }
         .nice-header-toggle {
@@ -104,15 +126,15 @@ header,
             margin-top: -16px;
             border: none;
             padding: 10px 10px;
-            background-color: $color-white;
+            background-color: transparent;
             outline: none;
-            z-index: 999;
+            text-align: center;
 
             .icon-bar {
                 display: block;
                 width: 22px;
                 height: 2px;
-                background-color: #888;
+                background-color: $color-accent;
                 @include nice-transition(all 0.2s);
 
                 &.top-bar {
@@ -142,6 +164,10 @@ header,
                         @include nice-transform(rotate(0));
                     }
                 }
+            }
+            &:focus,
+            &:active {
+                background-color: transparent;
             }
         }
     }

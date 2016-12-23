@@ -1,0 +1,19 @@
+html {
+    position: relative;
+    min-height: 100%;
+
+    body {
+        margin-bottom: $default-footer-height;
+
+        footer,
+        .nice-footer {
+            background-color: $color-accent;
+            color: $color-white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: $default-footer-height;
+            width: 100%;
+        }
+    }
+}

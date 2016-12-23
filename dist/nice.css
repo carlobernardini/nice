@@ -2855,13 +2855,13 @@ header,
       padding: 0 15px; }
     header .nice-header-menu,
     .nice-header .nice-header-menu {
-      border-top: 1px solid #EEE;
+      border-top: 1px solid #ECF0F1;
       top: 60px;
       height: calc(100% - 1px);
       width: 100%;
       position: fixed;
       left: 105%;
-      background-color: #fff;
+      background-color: #FFF;
       z-index: 998;
       overflow: hidden;
       overflow-y: auto;
@@ -2896,7 +2896,7 @@ header,
       margin-top: -16px;
       border: none;
       padding: 10px 10px;
-      background-color: #fff;
+      background-color: #FFF;
       outline: none;
       z-index: 999; }
       header .nice-header-toggle .icon-bar,

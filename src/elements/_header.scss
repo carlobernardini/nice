@@ -70,18 +70,18 @@ header,
             padding: 0 15px;
         }
         .nice-header-menu {
-            border-top: 1px solid #EEE;
+            border-top: 1px solid $gray-light;
             top: 60px;
             height: calc(100% - 1px);
             width: 100%;
             position: fixed;
             left: 105%;
-            background-color: #fff;
+            background-color: $color-white;
             z-index: 998;
             overflow: hidden;
             overflow-y: auto;
             @include nice-transition(left .5s ease-in-out);
-            @include nice-box-shadow(-5px 5px 5px rgba(0,0,0,.1));
+            @include nice-box-shadow(-5px 5px 5px rgba($color-black, .1));
 
             li {
                 float: none;
@@ -104,7 +104,7 @@ header,
             margin-top: -16px;
             border: none;
             padding: 10px 10px;
-            background-color: #fff;
+            background-color: $color-white;
             outline: none;
             z-index: 999;
 

@@ -1,0 +1,48 @@
+@include keyframes(pulse) {
+    0% {
+        background-color: lighten($color-primary, 15%);
+    }    
+    50% {
+        background-color: $color-primary;
+    }
+    100% {
+        background-color: lighten($color-primary, 15%);
+    }
+}
+
+.nice-progress {
+    background-color: darken($gray-light, 5%);
+    height: 28px;
+    padding: 4px;
+    margin: 5px 0;
+    @include nice-border-radius(15px);
+    // @include nice-box-shadow(0 1px 0 $gray-medium);
+
+    .nice-progress-fill {
+        text-align: center;
+        color: $color-white;
+        background-color: $color-primary;
+        max-width: 100%;
+        min-width: 10%;
+        @include nice-font($size: .8em, $weight: 600);
+        @include nice-line-height(20px);
+        @include nice-border-radius(15px);
+        @include nice-transition(width 0.3s ease-in-out);
+    }
+    &.accent {
+        .nice-progress-fill {
+            background-color: $color-accent;
+        }
+    }
+    &.brand {
+        .nice-progress-fill {
+            background-color: $color-brand;
+        }
+    }
+    &.pulse {
+        .nice-progress-fill {
+            @include animation(pulse 1.5s ease-out);
+            @include animation-iteration-count(infinite);
+        }
+    }
+}

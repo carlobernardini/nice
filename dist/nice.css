@@ -2829,6 +2829,9 @@ header,
       .nice-header .nice-header-menu li a {
         display: block;
         padding: 0 10px; }
+      header .nice-header-menu li.nice-header-menu-top,
+      .nice-header .nice-header-menu li.nice-header-menu-top {
+        padding: 0 15px; }
     header .nice-header-menu.menu-pills li a,
     .nice-header .nice-header-menu.menu-pills li a {
       -webkit-transition: background-color 0.1s;
@@ -2914,8 +2917,6 @@ header,
           header .nice-header-menu li.nice-header-menu-top input[type="password"],
           .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"],
           .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"] {
-            margin: 0 15px;
-            width: calc(100% - 30px);
             color: #FFF;
             border-color: transparent;
             background-color: transparent;
@@ -3228,3 +3229,74 @@ button,
     background-color: #fdf3f2;
     color: #7b190f;
     border-color: #f8c9c4; }
+
+@-webkit-keyframes pulse {
+  0% {
+    background-color: #efab68; }
+  50% {
+    background-color: #E78523; }
+  100% {
+    background-color: #efab68; } }
+
+@-moz-keyframes pulse {
+  0% {
+    background-color: #efab68; }
+  50% {
+    background-color: #E78523; }
+  100% {
+    background-color: #efab68; } }
+
+@keyframes pulse {
+  0% {
+    background-color: #efab68; }
+  50% {
+    background-color: #E78523; }
+  100% {
+    background-color: #efab68; } }
+
+.nice-progress {
+  background-color: #dde4e6;
+  height: 28px;
+  padding: 4px;
+  margin: 5px 0;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-progress .nice-progress-fill {
+    text-align: center;
+    color: #FFF;
+    background-color: #E78523;
+    max-width: 100%;
+    min-width: 10%;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 20px;
+    line-height: 1.25rem;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; }
+  .nice-progress.accent .nice-progress-fill {
+    background-color: #182642; }
+  .nice-progress.brand .nice-progress-fill {
+    background-color: #12BCD0; }
+  .nice-progress.pulse .nice-progress-fill {
+    -webkit-animation: pulse 1.5s ease-out;
+    -moz-animation: pulse 1.5s ease-out;
+    animation: pulse 1.5s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }

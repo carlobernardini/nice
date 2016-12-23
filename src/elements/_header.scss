@@ -37,6 +37,9 @@ header,
                 display: block;
                 padding: 0 10px;
             }
+            &.nice-header-menu-top {
+                padding: 0 15px;
+            }
         }
         &.menu-pills {
             li {
@@ -111,8 +114,6 @@ header,
 
                     input[type="text"],
                     input[type="password"] {
-                        margin: 0 15px;
-                        width: calc(100% - 30px);
                         color: $color-white;
                         border-color: transparent;
                         background-color: transparent;

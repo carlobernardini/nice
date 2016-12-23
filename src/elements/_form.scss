@@ -8,7 +8,7 @@ input {
         font-family: $fonts-primary;
         font-size: 1em;
         width: 100%;
-        background-color: #FFF;
+        background-color: $color-white;
         @include nice-box-sizing(border-box);
         @include nice-line-height(30px);
         @include nice-border-radius($default-radius);

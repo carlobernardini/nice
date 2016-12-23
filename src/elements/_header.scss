@@ -39,6 +39,17 @@ header,
             }
             &.nice-header-menu-top {
                 padding: 0 15px;
+
+                input[type="text"] {
+                    border-color: $gray-light;
+                    @include nice-transition(border-color 0.3s, margin-left 0.3s, width 0.3s);
+
+                    &:focus {
+                        width: 150%;
+                        margin-left: -50%;
+                        border-color: $color-brand;
+                    }
+                }
             }
         }
         &.menu-pills {
@@ -112,8 +123,7 @@ header,
                 &.nice-header-menu-top {
                     background-color: lighten($color-accent, 15%);
 
-                    input[type="text"],
-                    input[type="password"] {
+                    input[type="text"] {
                         color: $color-white;
                         border-color: transparent;
                         background-color: transparent;
@@ -128,6 +138,8 @@ header,
                         &:focus,
                         &:active {
                             border-bottom-color: $color-white;
+                            width: 100%;
+                            margin-left: 0;
                         }
                     }
                 }

@@ -14,6 +14,7 @@ html {
             left: 0;
             bottom: 0;
             height: $default-footer-height;
+            overflow: hidden;
             width: 100%;
 
             .nice-footer-menu {
@@ -47,6 +48,10 @@ html {
             .nice-footer {
                 margin-top: 15px;
                 padding: 0 15px;
+
+                .nice-footer-menu {
+                    display: none;
+                }
             }
         }
     }

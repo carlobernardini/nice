@@ -2832,6 +2832,19 @@ header,
       header .nice-header-menu li.nice-header-menu-top,
       .nice-header .nice-header-menu li.nice-header-menu-top {
         padding: 0 15px; }
+        header .nice-header-menu li.nice-header-menu-top input[type="text"],
+        .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"] {
+          border-color: #ECF0F1;
+          -webkit-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
+          -moz-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
+          -ms-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
+          -o-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
+          transition: border-color 0.3s, margin-left 0.3s, width 0.3s; }
+          header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus,
+          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus {
+            width: 150%;
+            margin-left: -50%;
+            border-color: #12BCD0; }
     header .nice-header-menu.menu-pills li a,
     .nice-header .nice-header-menu.menu-pills li a {
       -webkit-transition: background-color 0.1s;
@@ -2914,9 +2927,7 @@ header,
         .nice-header .nice-header-menu li.nice-header-menu-top {
           background-color: #2c467a; }
           header .nice-header-menu li.nice-header-menu-top input[type="text"],
-          header .nice-header-menu li.nice-header-menu-top input[type="password"],
-          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"],
-          .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"] {
+          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"] {
             color: #FFF;
             border-color: transparent;
             background-color: transparent;
@@ -2936,33 +2947,23 @@ header,
             -o-transition: border-bottom-color 0.3s;
             transition: border-bottom-color 0.3s; }
             header .nice-header-menu li.nice-header-menu-top input[type="text"]::-webkit-input-placeholder,
-            header .nice-header-menu li.nice-header-menu-top input[type="password"]::-webkit-input-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]::-webkit-input-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"]::-webkit-input-placeholder {
+            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]::-webkit-input-placeholder {
               color: #F5F7F7; }
             header .nice-header-menu li.nice-header-menu-top input[type="text"]:-moz-placeholder,
-            header .nice-header-menu li.nice-header-menu-top input[type="password"]:-moz-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:-moz-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"]:-moz-placeholder {
+            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:-moz-placeholder {
               color: #F5F7F7; }
             header .nice-header-menu li.nice-header-menu-top input[type="text"]::-moz-placeholder,
-            header .nice-header-menu li.nice-header-menu-top input[type="password"]::-moz-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]::-moz-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"]::-moz-placeholder {
+            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]::-moz-placeholder {
               color: #F5F7F7; }
             header .nice-header-menu li.nice-header-menu-top input[type="text"]:-ms-input-placeholder,
-            header .nice-header-menu li.nice-header-menu-top input[type="password"]:-ms-input-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:-ms-input-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"]:-ms-input-placeholder {
+            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:-ms-input-placeholder {
               color: #F5F7F7; }
             header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus, header .nice-header-menu li.nice-header-menu-top input[type="text"]:active,
-            header .nice-header-menu li.nice-header-menu-top input[type="password"]:focus,
-            header .nice-header-menu li.nice-header-menu-top input[type="password"]:active,
             .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:active,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"]:focus,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="password"]:active {
-              border-bottom-color: #FFF; }
+            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:active {
+              border-bottom-color: #FFF;
+              width: 100%;
+              margin-left: 0; }
       header .nice-header-menu.menu-pills li a:hover, header .nice-header-menu.menu-pills li a:active,
       .nice-header .nice-header-menu.menu-pills li a:hover,
       .nice-header .nice-header-menu.menu-pills li a:active {
@@ -3058,6 +3059,7 @@ html {
       left: 0;
       bottom: 0;
       height: 100px;
+      overflow: hidden;
       width: 100%; }
       html body footer .nice-footer-menu,
       html body .nice-footer .nice-footer-menu {
@@ -3081,7 +3083,10 @@ html {
   html body footer,
   html body .nice-footer {
     margin-top: 15px;
-    padding: 0 15px; } }
+    padding: 0 15px; }
+    html body footer .nice-footer-menu,
+    html body .nice-footer .nice-footer-menu {
+      display: none; } }
 
 input[type="text"], input[type="password"] {
   border: 1px solid #D0D1D5;

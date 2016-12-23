@@ -3059,6 +3059,23 @@ html {
       bottom: 0;
       height: 100px;
       width: 100%; }
+      html body footer .nice-footer-menu,
+      html body .nice-footer .nice-footer-menu {
+        margin: 0;
+        float: right; }
+        html body footer .nice-footer-menu li,
+        html body .nice-footer .nice-footer-menu li {
+          list-style: none;
+          float: left;
+          margin-left: 25px; }
+          html body footer .nice-footer-menu li a,
+          html body .nice-footer .nice-footer-menu li a {
+            color: #D0D1D5;
+            display: block;
+            padding: 1em 0; }
+            html body footer .nice-footer-menu li a:hover,
+            html body .nice-footer .nice-footer-menu li a:hover {
+              color: #FFF; }
 
 @media screen and (min-width: 20em) and (max-width: 720px) {
   html body footer,

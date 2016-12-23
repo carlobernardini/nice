@@ -15,6 +15,27 @@ html {
             bottom: 0;
             height: $default-footer-height;
             width: 100%;
+
+            .nice-footer-menu {
+                margin: 0;
+                float: right;
+
+                li {
+                    list-style: none;
+                    float: left;
+                    margin-left: 25px;
+
+                    a {
+                        color: $gray-medium;
+                        display: block;
+                        padding: 1em 0;
+
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
         }
     }
 }

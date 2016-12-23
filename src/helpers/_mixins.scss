@@ -70,7 +70,7 @@
     -khtml-opacity: $transparency;
       -moz-opacity: $transparency;
            opacity: $transparency;
-       $opacity-ie: $opacity * 100;
+       $opacity-ie: $transparency * 100;
             filter: alpha(opacity=$opacity-ie);
 }
 

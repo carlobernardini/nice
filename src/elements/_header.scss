@@ -50,4 +50,99 @@ header,
             }
         }
     }
+    .nice-header-toggle {
+        display: none;
+    }
+}
+
+@include media($mobile) {
+    body {
+        padding-top: 60px;
+    }
+    header,
+    .nice-header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        position: fixed;
+
+        .nice-header-container {
+            padding: 0 15px;
+        }
+        .nice-header-menu {
+            border-top: 1px solid #EEE;
+            top: 60px;
+            height: calc(100% - 1px);
+            width: 100%;
+            position: fixed;
+            left: 105%;
+            background-color: #fff;
+            z-index: 998;
+            overflow: hidden;
+            overflow-y: auto;
+            @include nice-transition(left .5s ease-in-out);
+            @include nice-box-shadow(-5px 5px 5px rgba(0,0,0,.1));
+
+            li {
+                float: none;
+
+                a {
+                    padding: 0 20px;
+                }
+            }
+
+            &.expanded {
+                left: 0;
+                @include nice-transition(left .2s ease-in-out);
+            }
+        }
+        .nice-header-toggle {
+            display: block;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -16px;
+            border: none;
+            padding: 10px 10px;
+            background-color: #fff;
+            outline: none;
+            z-index: 999;
+
+            .icon-bar {
+                display: block;
+                width: 22px;
+                height: 2px;
+                background-color: #888;
+                @include nice-transition(all 0.2s);
+
+                &.top-bar {
+                    transform-origin: 10% 10%;
+                    @include nice-transform(rotate(45deg));
+                }
+                &.middle-bar {
+                    @include nice-opacity(0);
+                }
+                &.bottom-bar {
+                    transform-origin: 10% 90%;
+                    @include nice-transform(rotate(-45deg));
+                }
+                &+.icon-bar {
+                    margin-top: 4px;
+                }
+            }
+            &.collapsed {
+                .icon-bar {
+                    &.top-bar {
+                        @include nice-transform(rotate(0));
+                    }
+                    &.middle-bar {
+                        @include nice-opacity(1);
+                    }
+                    &.bottom-bar {
+                        @include nice-transform(rotate(0));
+                    }
+                }
+            }
+        }
+    }
 }

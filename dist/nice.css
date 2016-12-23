@@ -2837,6 +2837,124 @@ header,
       header .nice-header-menu.menu-pills li a:hover,
       .nice-header .nice-header-menu.menu-pills li a:hover {
         background-color: #F5F7F7; }
+  header .nice-header-toggle,
+  .nice-header .nice-header-toggle {
+    display: none; }
+
+@media screen and (min-width: 20em) and (max-width: 720px) {
+  body {
+    padding-top: 60px; }
+  header,
+  .nice-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed; }
+    header .nice-header-container,
+    .nice-header .nice-header-container {
+      padding: 0 15px; }
+    header .nice-header-menu,
+    .nice-header .nice-header-menu {
+      border-top: 1px solid #EEE;
+      top: 60px;
+      height: calc(100% - 1px);
+      width: 100%;
+      position: fixed;
+      left: 105%;
+      background-color: #fff;
+      z-index: 998;
+      overflow: hidden;
+      overflow-y: auto;
+      -webkit-transition: left 0.5s ease-in-out;
+      -moz-transition: left 0.5s ease-in-out;
+      -ms-transition: left 0.5s ease-in-out;
+      -o-transition: left 0.5s ease-in-out;
+      transition: left 0.5s ease-in-out;
+      -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1); }
+      header .nice-header-menu li,
+      .nice-header .nice-header-menu li {
+        float: none; }
+        header .nice-header-menu li a,
+        .nice-header .nice-header-menu li a {
+          padding: 0 20px; }
+      header .nice-header-menu.expanded,
+      .nice-header .nice-header-menu.expanded {
+        left: 0;
+        -webkit-transition: left 0.2s ease-in-out;
+        -moz-transition: left 0.2s ease-in-out;
+        -ms-transition: left 0.2s ease-in-out;
+        -o-transition: left 0.2s ease-in-out;
+        transition: left 0.2s ease-in-out; }
+    header .nice-header-toggle,
+    .nice-header .nice-header-toggle {
+      display: block;
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      margin-top: -16px;
+      border: none;
+      padding: 10px 10px;
+      background-color: #fff;
+      outline: none;
+      z-index: 999; }
+      header .nice-header-toggle .icon-bar,
+      .nice-header .nice-header-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #888;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+        header .nice-header-toggle .icon-bar.top-bar,
+        .nice-header .nice-header-toggle .icon-bar.top-bar {
+          transform-origin: 10% 10%;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg); }
+        header .nice-header-toggle .icon-bar.middle-bar,
+        .nice-header .nice-header-toggle .icon-bar.middle-bar {
+          -khtml-opacity: 0;
+          -moz-opacity: 0;
+          opacity: 0;
+          filter: alpha(opacity=0); }
+        header .nice-header-toggle .icon-bar.bottom-bar,
+        .nice-header .nice-header-toggle .icon-bar.bottom-bar {
+          transform-origin: 10% 90%;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        header .nice-header-toggle .icon-bar + .icon-bar,
+        .nice-header .nice-header-toggle .icon-bar + .icon-bar {
+          margin-top: 4px; }
+      header .nice-header-toggle.collapsed .icon-bar.top-bar,
+      .nice-header .nice-header-toggle.collapsed .icon-bar.top-bar {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0); }
+      header .nice-header-toggle.collapsed .icon-bar.middle-bar,
+      .nice-header .nice-header-toggle.collapsed .icon-bar.middle-bar {
+        -khtml-opacity: 1;
+        -moz-opacity: 1;
+        opacity: 1;
+        filter: alpha(opacity=100); }
+      header .nice-header-toggle.collapsed .icon-bar.bottom-bar,
+      .nice-header .nice-header-toggle.collapsed .icon-bar.bottom-bar {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -ms-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0); } }
 
 html {
   position: relative;

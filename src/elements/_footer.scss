@@ -3,7 +3,7 @@ html {
     min-height: 100%;
 
     body {
-        margin-bottom: $default-footer-height;
+        margin-bottom: calc($default-footer-height + 15px);
 
         footer,
         .nice-footer {
@@ -23,6 +23,7 @@ html {
         body {
             footer,
             .nice-footer {
+                margin-top: 15px;
                 padding: 0 15px;
             }
         }

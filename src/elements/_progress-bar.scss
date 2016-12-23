@@ -16,7 +16,6 @@
     padding: 4px;
     margin: 5px 0;
     @include nice-border-radius(15px);
-    // @include nice-box-shadow(0 1px 0 $gray-medium);
 
     .nice-progress-fill {
         text-align: center;
@@ -24,6 +23,8 @@
         background-color: $color-primary;
         max-width: 100%;
         min-width: 10%;
+        text-overflow: ellipsis;
+        overflow: hidden;
         @include nice-font($size: .8em, $weight: 600);
         @include nice-line-height(20px);
         @include nice-border-radius(15px);
@@ -37,6 +38,16 @@
     &.brand {
         .nice-progress-fill {
             background-color: $color-brand;
+        }
+    }
+    &.good {
+        .nice-progress-fill {
+            background-color: $color-good;
+        }   
+    }
+    &.bad {
+        .nice-progress-fill {
+            background-color: $color-bad;
         }
     }
     &.pulse {

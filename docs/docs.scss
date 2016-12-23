@@ -34,6 +34,8 @@ body {
         font-size: 12px;
         line-height: 18px;
         color: $gray-dark;
+        white-space: pre;
+
         @include nice-border-radius($default-radius);
     }
 }

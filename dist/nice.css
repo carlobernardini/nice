@@ -3048,7 +3048,7 @@ html {
   position: relative;
   min-height: 100%; }
   html body {
-    margin-bottom: 100px; }
+    margin-bottom: calc($default-footer-height + 15px); }
     html body footer,
     html body .nice-footer {
       background-color: #182642;
@@ -3062,6 +3062,7 @@ html {
 @media screen and (min-width: 20em) and (max-width: 720px) {
   html body footer,
   html body .nice-footer {
+    margin-top: 15px;
     padding: 0 15px; } }
 
 input[type="text"], input[type="password"] {
@@ -3271,6 +3272,8 @@ button,
     background-color: #E78523;
     max-width: 100%;
     min-width: 10%;
+    text-overflow: ellipsis;
+    overflow: hidden;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
@@ -3293,6 +3296,10 @@ button,
     background-color: #182642; }
   .nice-progress.brand .nice-progress-fill {
     background-color: #12BCD0; }
+  .nice-progress.good .nice-progress-fill {
+    background-color: #2ecc71; }
+  .nice-progress.bad .nice-progress-fill {
+    background-color: #e74c3c; }
   .nice-progress.pulse .nice-progress-fill {
     -webkit-animation: pulse 1.5s ease-out;
     -moz-animation: pulse 1.5s ease-out;

@@ -3048,7 +3048,8 @@ html {
   position: relative;
   min-height: 100%; }
   html body {
-    margin-bottom: calc($default-footer-height + 15px); }
+    margin-bottom: 100px;
+    padding-bottom: 15px; }
     html body footer,
     html body .nice-footer {
       background-color: #182642;
@@ -3121,6 +3122,45 @@ input[type="text"], input[type="password"] {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
+
+table.nice-table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  table.nice-table thead tr th, table.nice-table thead tr td {
+    text-align: left;
+    border-bottom: 1px solid #D0D1D5;
+    padding: 0 10px;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 36px;
+    line-height: 2.25rem; }
+  table.nice-table tbody tr th, table.nice-table tbody tr td {
+    text-align: left;
+    padding: 0 10px;
+    line-height: 32px;
+    line-height: 2rem; }
+  table.nice-table.condensed tbody tr th, table.nice-table.condensed tbody tr td {
+    line-height: 24px;
+    line-height: 1.5rem; }
+  table.nice-table.striped tbody tr:nth-child(odd) th, table.nice-table.striped tbody tr:nth-child(odd) td {
+    background-color: #ECF0F1; }
+  table.nice-table.striped tbody tr:nth-child(even) th, table.nice-table.striped tbody tr:nth-child(even) td {
+    background-color: transparent; }
+  table.nice-table.bordered {
+    border: 1px solid #D0D1D5; }
+    table.nice-table.bordered thead tr th, table.nice-table.bordered thead tr td, table.nice-table.bordered tbody tr th, table.nice-table.bordered tbody tr td {
+      border: 1px solid #D0D1D5; }
+  table.nice-table.hover tbody tr:hover th, table.nice-table.hover tbody tr:hover td {
+    background-color: #ECF0F1;
+    color: #000; }
 
 button,
 .nice-btn {

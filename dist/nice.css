@@ -2961,6 +2961,7 @@ header,
             header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus, header .nice-header-menu li.nice-header-menu-top input[type="text"]:active,
             .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus,
             .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:active {
+              border-color: transparent;
               border-bottom-color: #FFF;
               width: 100%;
               margin-left: 0; }

@@ -85,12 +85,13 @@ header,
         .nice-header-menu {
             top: 0;
             height: 100%;
-            width: 100%;
+            width: calc(100% - 60px);
             position: fixed;
             left: 105%;
             background-color: $color-accent;
             overflow: hidden;
             overflow-y: auto;
+            z-index: 5;
             @include nice-transition(left .2s ease-in-out);
 
             li {
@@ -103,6 +104,30 @@ header,
 
                     &::before {
                         margin-right: 10px;
+                    }
+                }
+                &.nice-header-menu-top {
+                    background-color: lighten($color-accent, 15%);
+
+                    input[type="text"],
+                    input[type="password"] {
+                        margin: 0 15px;
+                        width: calc(100% - 30px);
+                        color: $color-white;
+                        border-color: transparent;
+                        background-color: transparent;
+                        padding: 0;
+                        @include nice-box-shadow(none);
+                        @include nice-border-radius(0);
+                        @include nice-transition(border-bottom-color 0.3s);
+                        @include nice-placeholder-color {
+                            color: $gray-vlight;
+                        }
+
+                        &:focus,
+                        &:active {
+                            border-bottom-color: $color-white;
+                        }
                     }
                 }
             }
@@ -168,6 +193,7 @@ header,
             &:focus,
             &:active {
                 background-color: transparent;
+                @include nice-box-shadow(none);
             }
         }
     }

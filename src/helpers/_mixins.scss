@@ -89,6 +89,21 @@
             user-select: $param;
 }
 
+@mixin nice-placeholder-color {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
 @mixin nice-linear-gradient ($color-from, $color-to) {
     background: -webkit-linear-gradient($color-from, $color-to);
     background: -o-linear-gradient($color-from, $color-to);

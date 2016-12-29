@@ -14,7 +14,10 @@ gulp.task('icons', function(){
     return gulp.src('./node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('./dist/fonts'))
 });
-
+gulp.task('fonts', function(){
+    return gulp.src('./src/fonts/**/*.*')
+        .pipe(gulp.dest('./dist/fonts'));
+});
 gulp.task('compile', function(){
     return gulp.src('./src/**/*.scss')
         .pipe(sass({
@@ -23,7 +26,6 @@ gulp.task('compile', function(){
         .pipe(rename('nice.css'))
         .pipe(gulp.dest('./dist'));
 });
-
 gulp.task('compile-min', function(){
     return gulp.src('./src/**/*.scss')
         .pipe(sass({
@@ -41,7 +43,7 @@ gulp.task('docs', function(){
         .pipe(rename('docs.min.css'))
         .pipe(gulp.dest('./docs'));
 });
-gulp.task('default', ['icons', 'compile', 'compile-min']);
+gulp.task('default', ['icons', 'fonts', 'compile', 'compile-min']);
 
 gulp.task('watch', function(){
     gulp.watch('./src/**/*.scss', ['default']);

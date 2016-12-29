@@ -3311,6 +3311,7 @@ button,
       box-shadow: inset 0px 2px 1px #d97818; }
 
 .nice-alert {
+  margin: 0 0 20px 0;
   padding: 15px;
   border: 1px solid #D0D1D5;
   -webkit-border-radius: 3px;

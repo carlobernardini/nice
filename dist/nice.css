@@ -2870,6 +2870,13 @@ header,
         header .nice-header-menu li.nice-header-menu-top input[type="text"],
         .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"] {
           border-color: #ECF0F1;
+          padding: 0 10px;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+          -webkit-background-clip: padding-box;
+          -moz-background-clip: padding;
+          background-clip: padding-box;
           -webkit-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
           -moz-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
           -ms-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;

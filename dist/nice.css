@@ -2882,6 +2882,9 @@ header,
           -ms-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
           -o-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
           transition: border-color 0.3s, margin-left 0.3s, width 0.3s; }
+          header .nice-header-menu li.nice-header-menu-top input[type="text"]:hover,
+          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:hover {
+            border-color: #cfd9db; }
           header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus,
           .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus {
             width: 150%;

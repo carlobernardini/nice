@@ -46,6 +46,9 @@ header,
                     @include nice-border-radius(15px);
                     @include nice-transition(border-color 0.3s, margin-left 0.3s, width 0.3s);
 
+                    &:hover {
+                        border-color: darken($gray-light, 10%);
+                    }
                     &:focus {
                         width: 150%;
                         margin-left: -50%;

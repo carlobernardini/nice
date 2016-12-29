@@ -102,14 +102,18 @@
             <div class="nice-row">
                 <h2>Buttons</h2>
                 <div class="nice-col-6">
-                    <a href="#" class="nice-btn primary icon fa-search">Primary button</a>
                     <a href="#" class="nice-btn icon fa-check">Default button</a>
+                    <a href="#" class="nice-btn primary icon fa-search">Primary button</a>
                     <a href="#" class="nice-btn link">Link button</a>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;a href="#" class="nice-btn primary icon fa-search"&gt;Primary button&lt;/a&gt;
-&lt;a href="#" class="nice-btn icon fa-check"&gt;Default button&lt;/a&gt;
-&lt;a href="#" class="nice-btn link"&gt;Link button&lt;/a&gt;</code>
+                    <code>&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">primary link</span>"&gt;
+    Primary button
+&lt;/a&gt;
+&lt;a href="#" class="nice-btn <span class="main">icon fa-check</span>"&gt;
+    Button with icon
+&lt;/a&gt;
+</code>
                 </div>
             </div>
             <div class="nice-row">
@@ -125,7 +129,7 @@
                 </div>
             </div>
             <div class="nice-row">
-                <h2>Progress bars</h2>
+                <h2>Progress and loading</h2>
                 <div class="nice-col-6">
                     <div class="nice-progress">
                         <div class="nice-progress-fill" style="width: 65%;">
@@ -159,11 +163,23 @@
                     </div>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;div class="nice-progress"&gt;
-    &lt;div class="nice-progress-fill" style="width: 65%;"&gt;
+                    <code>&lt;div class="<span class="main">nice-progress</span> <span class="variation">accent brand good bad pulse</span>"&gt;
+    &lt;div class="<span class="main">nice-progress-fill</span>" style="width: 65%;"&gt;
         65%
     &lt;/div&gt;
 &lt;/div&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row">
+                <div class="nice-col-6">
+                    <div class="nice-loading brand " style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading primary" style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading medium good" style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading medium bad" style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading large" style="margin: 15px 0;">&nbsp;</div>
+                </div>
+                <div class="nice-col-6">
+                    <code>&lt;div class="<span class="main">nice-loading</span> <span class="variation">medium large brand primary good bad</span>"&gt;&lt;/div&gt;</code>
                 </div>
             </div>
             <div class="nice-row">
@@ -202,7 +218,7 @@
                     </table>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;table class="nice-table striped bordered hover"&gt;
+                    <code>&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;#&lt;/th&gt;

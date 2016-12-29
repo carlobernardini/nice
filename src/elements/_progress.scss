@@ -9,7 +9,49 @@
         background-color: lighten($color-primary, 15%);
     }
 }
+@include keyframes(spin) {
+    0% {
+        @include nice-transform(rotate(0deg));
+    }
+    100% {
+        @include nice-transform(rotate(360deg));
+    }
+}
+.nice-loading {
+    border: .25rem solid rgba($color-black, .15);
+    border-top-color: rgba($color-accent, 1);
+    height: 24px;
+    width: 24px;
+    @include animation(spin 1s linear);
+    @include animation-iteration-count(infinite);
+    @include nice-border-radius(50%);
+    @extend %display-inline-block;
 
+    &.primary {
+        border-top-color: rgba($color-primary, 1);
+    }
+    &.brand {
+        border-top-color: rgba($color-brand, 1);
+    }
+    &.good {
+        border-top-color: rgba($color-good, 1);
+    }
+    &.bad {
+        border-top-color: rgba($color-bad, 1);
+    }
+    &.medium {
+        border-width: .35rem;
+        height: 48px;
+        width: 48px;
+        @include animation-duration(1.25s);
+    }
+    &.large {
+        border-width: .45rem;
+        height: 128px;
+        width: 128px;
+        @include animation-duration(1.5s);
+    }
+}
 .nice-progress {
     background-color: darken($gray-light, 5%);
     height: 28px;

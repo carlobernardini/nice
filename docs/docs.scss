@@ -37,5 +37,14 @@ body {
         white-space: pre-wrap;
 
         @include nice-border-radius($default-radius);
+
+        span {
+            &.main {
+                font-weight: 600;
+            } 
+            &.variation {
+                color: $color-brand;
+            }
+        }
     }
 }

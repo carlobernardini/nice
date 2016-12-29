@@ -23,7 +23,7 @@ button,
   user-select: none; }
 
 button,
-.nice-btn {
+.nice-btn, .nice-loading {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline-block;
@@ -3317,6 +3317,88 @@ button,
     background-color: #E78523; }
   100% {
     background-color: #efab68; } }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.nice-loading {
+  border: 0.25rem solid rgba(0, 0, 0, 0.15);
+  border-top-color: #182642;
+  height: 24px;
+  width: 24px;
+  -webkit-animation: spin 1s linear;
+  -moz-animation: spin 1s linear;
+  animation: spin 1s linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-loading.primary {
+    border-top-color: #e78523; }
+  .nice-loading.brand {
+    border-top-color: #12bcd0; }
+  .nice-loading.good {
+    border-top-color: #2ecc71; }
+  .nice-loading.bad {
+    border-top-color: #e74c3c; }
+  .nice-loading.medium {
+    border-width: .35rem;
+    height: 48px;
+    width: 48px;
+    -webkit-animation-duration: 1.25s;
+    -moz-animation-duration: 1.25s;
+    animation-duration: 1.25s; }
+  .nice-loading.large {
+    border-width: .45rem;
+    height: 128px;
+    width: 128px;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s; }
 
 .nice-progress {
   background-color: #dde4e6;

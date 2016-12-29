@@ -20,6 +20,7 @@ table {
         tbody { 
             tr {
                 th, td {
+                    vertical-align: top;
                     text-align: left;
                     padding: 0 10px;
                     @include nice-line-height(32px);

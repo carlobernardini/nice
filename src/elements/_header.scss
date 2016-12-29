@@ -15,11 +15,13 @@ header,
         padding: 0;
         overflow: hidden;
         height: 60px;
+        outline: none;
         @include nice-background-size(contain);
 
         img {
             height: 30px;
             margin: 15px 0;
+            border: 0;
         }
     }
     .nice-header-menu {

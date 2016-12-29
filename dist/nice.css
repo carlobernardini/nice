@@ -2840,6 +2840,7 @@ header,
     padding: 0;
     overflow: hidden;
     height: 60px;
+    outline: none;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -2847,7 +2848,8 @@ header,
     header .nice-header-brand img,
     .nice-header .nice-header-brand img {
       height: 30px;
-      margin: 15px 0; }
+      margin: 15px 0;
+      border: 0; }
   header .nice-header-menu,
   .nice-header .nice-header-menu {
     float: right;
@@ -3211,6 +3213,7 @@ table.nice-table {
     line-height: 36px;
     line-height: 2.25rem; }
   table.nice-table tbody tr th, table.nice-table tbody tr td {
+    vertical-align: top;
     text-align: left;
     padding: 0 10px;
     line-height: 32px;

@@ -119,7 +119,7 @@
                 &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; /&gt;
             &lt;/li&gt;
             &lt;li&gt;
-                &lt;a href=&quot;#&quot; class=&quot;icon fa-book&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-book</span>&quot;&gt;
                     Link
                 &lt;/a&gt;
             &lt;/li&gt;
@@ -287,7 +287,42 @@
             </div>
             <div class="nice-row">
                 <h2>Browser support</h2>
-                Nice! supports Internet Explorer 9 and newer versions, except for specific features such as Flexbox that are only supported in modern browsers.
+                <p>
+                    Nice! supports Internet Explorer 9 and newer versions, except for specific modules such as Flexbox that are only supported in modern browsers. It is designed to deliver an equally consistent appearance on browsers that do not support CSS3. Please check <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">this reference</a> for a detailed overview of CSS3 browser support.
+                </p>
+                <table class="nice-table bordered striped">
+                    <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>Support</th>
+                            <th>Limitations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Internet Explorer 9</td>
+                            <td>Limited</td>
+                            <td>
+                                <ul>
+                                    <li>No transitions</li>
+                                    <li>No animations</li>
+                                    <li>No text shadows</li>
+                                    <li>No Flexbox</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Internet Explorer 10</td>
+                            <td>Good</td>
+                            <td>Uses fallbacks for limited Flexbox support</td>
+                        </tr>
+                        <tr>
+                            <td>Internet Explorer 11+</td>
+                            <td>Full support</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
         <footer>

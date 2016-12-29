@@ -32,3 +32,7 @@ h6 {
         text-align: $value;
     }
 }
+.text-brand {
+    letter-spacing: 1px;
+    @include nice-font($family: $fonts-brand, $weight: 300);
+}

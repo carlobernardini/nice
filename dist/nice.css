@@ -67,6 +67,14 @@ h6 {
 .text-justify {
   text-align: justify; }
 
+.text-brand {
+  letter-spacing: 1px;
+  font-family: Colaborate, "Open Sans", sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  font-size: 1em; }
+
 a {
   color: #009fc3;
   text-decoration: none;

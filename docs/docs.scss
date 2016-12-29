@@ -14,7 +14,7 @@ body {
         font-family: Colaborate;
         font-weight: 100;
         padding: 0 0 10px 0;
-        border-bottom: 1px solid lighten($gray-medium, 5%);
+        border-bottom: 1px solid lighten($color-border, 5%);
     }
     .color-swatch {
         width: 100px;
@@ -56,6 +56,11 @@ body {
             cursor: pointer;
             max-height: 200px;
             overflow-y: hidden;
+        }
+    }
+    footer {
+        .text-brand {
+            font-size: 1.15em;
         }
     }
 }

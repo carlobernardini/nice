@@ -2996,6 +2996,7 @@ header,
     padding: 0 15px; }
     header .nice-header-form input[type="text"],
     .nice-header .nice-header-form input[type="text"] {
+      display: inline;
       border-color: #ECF0F1;
       padding: 0 10px;
       -webkit-border-radius: 15px;
@@ -3386,6 +3387,7 @@ input[type="text"], input[type="password"] {
   font-family: "Open Sans", sans-serif, helvetica;
   font-size: 1em;
   width: 100%;
+  display: block;
   background-color: #FFF;
   -webkit-box-sizing: border-box;
   moz-box-sizing: border-box;
@@ -3410,6 +3412,9 @@ input[type="text"], input[type="password"] {
     -webkit-box-shadow: inset 0 2px 2px #ECF0F1;
     -moz-box-shadow: inset 0 2px 2px #ECF0F1;
     box-shadow: inset 0 2px 2px #ECF0F1; }
+
+.nice-form-group {
+  margin-bottom: 15px; }
 
 .nice-control-group > *:first-child {
   -webkit-border-radius: 3px 0 0 3px;

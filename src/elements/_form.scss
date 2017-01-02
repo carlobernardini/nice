@@ -8,6 +8,7 @@ input {
         font-family: $fonts-primary;
         font-size: 1em;
         width: 100%;
+        display: block;
         background-color: $color-white;
         @include nice-box-sizing(border-box);
         @include nice-line-height(30px);
@@ -20,6 +21,9 @@ input {
             @include nice-box-shadow(inset 0 2px 2px $gray-light);
         }
     }
+}
+.nice-form-group {
+    margin-bottom: 15px;
 }
 .nice-control-group {
     > *:first-child {

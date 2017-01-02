@@ -155,7 +155,7 @@
                 &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; /&gt;
             &lt;/form&gt;
             &lt;ul class=&quot;<span class="main">nice-header-menu</span> <span class="variation">menu-pills</span>&quot;&gt;
-                &lt;li&gt;
+                &lt;li class=&quot;<span class="variation">has-children</span>&quot;&gt;
                     &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-book</span>&quot;&gt;
                         Link
                     &lt;/a&gt;
@@ -221,8 +221,12 @@
             <div class="nice-row" id="nice-form-elements">
                 <h2>Form elements</h2>
                 <div class="nice-col-6">
-                    <input type="text" placeholder="Nice input..." /><br /><br />
-                    <input type="password" placeholder="Nice password..." />
+                    <div class="nice-form-group">
+                        <input type="text" placeholder="Nice input..." />
+                    </div>
+                    <div class="nice-form-group">
+                        <input type="password" placeholder="Nice password..." />
+                    </div>
                 </div>
                 <div class="nice-col-6">
                     <code>&lt;input type="text" placeholder="Nice input..." /&gt;

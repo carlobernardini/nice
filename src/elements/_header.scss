@@ -36,6 +36,7 @@ header,
         padding: 0 15px;
 
         input[type="text"] {
+            display: inline;
             border-color: $gray-light;
             padding: 0 10px;
             @include nice-border-radius(15px);

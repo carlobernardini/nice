@@ -34,10 +34,47 @@ header,
             list-style: none;
             display: block;
             float:left;
+            position: relative;
 
             a {
                 display: block;
                 padding: 0 10px;
+            }
+            ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: $color-accent;
+                padding: 0;
+
+                li {
+                    float: none;
+                    @include nice-line-height(50px);
+
+                    a {
+                        min-width: 200px;
+                        color: $color-white;
+                        display: block;
+                        padding: 0 15px;
+                        white-space: nowrap;
+
+                        &:hover {
+                            background-color: $color-brand;
+                        }
+                    }
+                    ul {
+                        position: absolute;
+                        left: 100%;
+                        top: 0;
+                        display: none;
+                    }
+                    &:hover {
+                        > ul {
+                            display: block;
+                        }
+                    }
+                }
             }
             &.nice-header-menu-top {
                 padding: 0 15px;
@@ -58,6 +95,11 @@ header,
                     }
                 }
             }
+            &:hover {
+                > ul {
+                    display: block;
+                }
+            }
         }
         &.menu-pills {
             li {
@@ -66,6 +108,15 @@ header,
 
                     &:hover {
                         background-color: $gray-vlight;
+                    }
+                }
+                ul {
+                    li {
+                        a {
+                            &:hover {
+                                background-color: $color-brand;
+                            }
+                        }
                     }
                 }
             }

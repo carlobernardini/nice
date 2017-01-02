@@ -2869,11 +2869,44 @@ header,
     .nice-header .nice-header-menu li {
       list-style: none;
       display: block;
-      float: left; }
+      float: left;
+      position: relative; }
       header .nice-header-menu li a,
       .nice-header .nice-header-menu li a {
         display: block;
         padding: 0 10px; }
+      header .nice-header-menu li ul,
+      .nice-header .nice-header-menu li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #182642;
+        padding: 0; }
+        header .nice-header-menu li ul li,
+        .nice-header .nice-header-menu li ul li {
+          float: none;
+          line-height: 50px;
+          line-height: 3.125rem; }
+          header .nice-header-menu li ul li a,
+          .nice-header .nice-header-menu li ul li a {
+            min-width: 200px;
+            color: #FFF;
+            display: block;
+            padding: 0 15px;
+            white-space: nowrap; }
+            header .nice-header-menu li ul li a:hover,
+            .nice-header .nice-header-menu li ul li a:hover {
+              background-color: #12BCD0; }
+          header .nice-header-menu li ul li ul,
+          .nice-header .nice-header-menu li ul li ul {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            display: none; }
+          header .nice-header-menu li ul li:hover > ul,
+          .nice-header .nice-header-menu li ul li:hover > ul {
+            display: block; }
       header .nice-header-menu li.nice-header-menu-top,
       .nice-header .nice-header-menu li.nice-header-menu-top {
         padding: 0 15px; }
@@ -2900,6 +2933,9 @@ header,
             width: 150%;
             margin-left: -50%;
             border-color: #12BCD0; }
+      header .nice-header-menu li:hover > ul,
+      .nice-header .nice-header-menu li:hover > ul {
+        display: block; }
     header .nice-header-menu.menu-pills li a,
     .nice-header .nice-header-menu.menu-pills li a {
       -webkit-transition: background-color 0.1s;
@@ -2910,6 +2946,9 @@ header,
       header .nice-header-menu.menu-pills li a:hover,
       .nice-header .nice-header-menu.menu-pills li a:hover {
         background-color: #F5F7F7; }
+    header .nice-header-menu.menu-pills li ul li a:hover,
+    .nice-header .nice-header-menu.menu-pills li ul li a:hover {
+      background-color: #12BCD0; }
   header .nice-header-toggle,
   .nice-header .nice-header-toggle {
     display: none; }

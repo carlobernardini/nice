@@ -36,3 +36,21 @@ input {
         @include nice-border-radius(none);
     }
 }
+.nice-radio,
+.nice-checkbox {
+    label {
+        cursor: pointer;
+        min-height: 20px;
+        padding-left: 20px;
+        margin-bottom: 0;
+        @extend %display-inline-block;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+        position: absolute;
+        margin: 4px 0 0;
+        margin-left: -20px;
+        padding: 0;
+        @include nice-box-sizing(border-box);
+    }
+}

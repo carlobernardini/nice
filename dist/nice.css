@@ -22,7 +22,8 @@ button,
   -o-user-select: none;
   user-select: none; }
 
-.nice-pagination, button,
+.nice-radio label,
+.nice-checkbox label, .nice-pagination, button,
 .nice-btn, .nice-loading {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3516,6 +3517,25 @@ input[type="text"], input[type="password"] {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
+
+.nice-radio label,
+.nice-checkbox label {
+  cursor: pointer;
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0; }
+
+.nice-radio input[type="checkbox"],
+.nice-radio input[type="radio"],
+.nice-checkbox input[type="checkbox"],
+.nice-checkbox input[type="radio"] {
+  position: absolute;
+  margin: 4px 0 0;
+  margin-left: -20px;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .nice-pagination {
   list-style: none;

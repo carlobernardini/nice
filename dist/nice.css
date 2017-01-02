@@ -22,12 +22,28 @@ button,
   -o-user-select: none;
   user-select: none; }
 
-button,
+.nice-pagination, button,
 .nice-btn, .nice-loading {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline-block;
   zoom: 1; }
+
+nav {
+  zoom: 1;
+  display: block;
+  height: 1%;
+  clear: both; }
+  nav:before, nav:after {
+    content: "";
+    display: table; }
+  nav:after {
+    clear: both;
+    content: ".";
+    display: block;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif, helvetica;
@@ -3289,6 +3305,82 @@ input[type="text"], input[type="password"] {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
+
+.nice-pagination {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; }
+  .nice-pagination li {
+    display: inline;
+    -webkit-box-sizing: border-box;
+    moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .nice-pagination li span, .nice-pagination li a {
+      margin: 0 1px;
+      float: left;
+      display: block;
+      padding: 0.3125rem 0.625rem;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-pagination li a {
+      text-decoration: none;
+      -webkit-transition: none;
+      -moz-transition: none;
+      -ms-transition: none;
+      -o-transition: none;
+      transition: none; }
+      .nice-pagination li a:hover {
+        background-color: #12BCD0;
+        color: #FFF; }
+    .nice-pagination li.current span, .nice-pagination li.current a {
+      background: #182642;
+      color: #FFF; }
+    .nice-pagination li.disabled span, .nice-pagination li.disabled a {
+      color: #c3c4c9;
+      cursor: default;
+      text-shadow: 1px 1px 0 #FFF; }
+  .nice-pagination.small li span, .nice-pagination.small li a {
+    font-size: .8em; }
+  .nice-pagination.large li span, .nice-pagination.large li a {
+    font-size: 1.2em; }
+  .nice-pagination.bordered li span, .nice-pagination.bordered li a {
+    margin: 0;
+    position: relative;
+    border: 1px solid #dddee1;
+    margin-left: -1px;
+    background-color: #FFF;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+  .nice-pagination.bordered li a:hover {
+    z-index: 2;
+    background-color: #12BCD0;
+    border-color: #12BCD0; }
+  .nice-pagination.bordered li:first-child span, .nice-pagination.bordered li:first-child a {
+    margin-left: 0;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+  .nice-pagination.bordered li:last-child span, .nice-pagination.bordered li:last-child a {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+  .nice-pagination.bordered li.current span, .nice-pagination.bordered li.current a {
+    background-color: #182642;
+    border-color: #182642; }
 
 table.nice-table {
   border-spacing: 0;

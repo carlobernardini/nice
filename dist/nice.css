@@ -3244,6 +3244,9 @@ header,
               position: relative;
               left: auto;
               padding-left: 15px; }
+        header .nice-header-menu li.has-children > a:after,
+        .nice-header .nice-header-menu li.has-children > a:after {
+          display: none; }
       header .nice-header-menu.menu-pills li a:hover, header .nice-header-menu.menu-pills li a:active,
       .nice-header .nice-header-menu.menu-pills li a:hover,
       .nice-header .nice-header-menu.menu-pills li a:active {

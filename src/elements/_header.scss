@@ -265,6 +265,13 @@ header,
                         }
                     }
                 }
+                &.has-children {
+                    > a {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
             }
             &.menu-pills {
                 li {

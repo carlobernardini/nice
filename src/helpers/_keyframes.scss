@@ -1,0 +1,29 @@
+@include keyframes(pulse) {
+    0% {
+        background-color: lighten($color-primary, 15%);
+    }    
+    50% {
+        background-color: $color-primary;
+    }
+    100% {
+        background-color: lighten($color-primary, 15%);
+    }
+}
+
+@include keyframes(spin) {
+    0% {
+        @include nice-transform(rotate(0deg));
+    }
+    100% {
+        @include nice-transform(rotate(360deg));
+    }
+}
+
+@include keyframes(flip) {
+    from {
+        @include nice-transform(rotate(0deg));
+    }
+    to {
+        @include nice-transform(rotate(-90deg));
+    }
+}

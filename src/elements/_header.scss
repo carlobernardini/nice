@@ -1,12 +1,3 @@
-@include keyframes(flip) {
-    from {
-        @include nice-transform(rotate(0deg));
-    }
-    to {
-        @include nice-transform(rotate(-90deg));
-    }
-}
-
 header,
 .nice-header {
     background-color: $color-white;

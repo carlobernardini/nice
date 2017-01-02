@@ -1,22 +1,3 @@
-@include keyframes(pulse) {
-    0% {
-        background-color: lighten($color-primary, 15%);
-    }    
-    50% {
-        background-color: $color-primary;
-    }
-    100% {
-        background-color: lighten($color-primary, 15%);
-    }
-}
-@include keyframes(spin) {
-    0% {
-        @include nice-transform(rotate(0deg));
-    }
-    100% {
-        @include nice-transform(rotate(360deg));
-    }
-}
 .nice-loading {
     border: .25rem solid rgba($color-black, .15);
     border-top-color: rgba($color-accent, 1);

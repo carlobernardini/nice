@@ -2907,11 +2907,11 @@ header,
           header .nice-header-menu li ul li:hover > ul,
           .nice-header .nice-header-menu li ul li:hover > ul {
             display: block; }
-      header .nice-header-menu li.nice-header-menu-top,
-      .nice-header .nice-header-menu li.nice-header-menu-top {
+      header .nice-header-menu li.nice-header-form,
+      .nice-header .nice-header-menu li.nice-header-form {
         padding: 0 15px; }
-        header .nice-header-menu li.nice-header-menu-top input[type="text"],
-        .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"] {
+        header .nice-header-menu li.nice-header-form input[type="text"],
+        .nice-header .nice-header-menu li.nice-header-form input[type="text"] {
           border-color: #ECF0F1;
           padding: 0 10px;
           -webkit-border-radius: 15px;
@@ -2925,11 +2925,11 @@ header,
           -ms-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
           -o-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
           transition: border-color 0.3s, margin-left 0.3s, width 0.3s; }
-          header .nice-header-menu li.nice-header-menu-top input[type="text"]:hover,
-          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:hover {
+          header .nice-header-menu li.nice-header-form input[type="text"]:hover,
+          .nice-header .nice-header-menu li.nice-header-form input[type="text"]:hover {
             border-color: #cfd9db; }
-          header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus,
-          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus {
+          header .nice-header-menu li.nice-header-form input[type="text"]:focus,
+          .nice-header .nice-header-menu li.nice-header-form input[type="text"]:focus {
             width: 150%;
             margin-left: -50%;
             border-color: #12BCD0; }
@@ -3017,11 +3017,11 @@ header,
           header .nice-header-menu li a::before,
           .nice-header .nice-header-menu li a::before {
             margin-right: 10px; }
-        header .nice-header-menu li.nice-header-menu-top,
-        .nice-header .nice-header-menu li.nice-header-menu-top {
+        header .nice-header-menu li.nice-header-form,
+        .nice-header .nice-header-menu li.nice-header-form {
           background-color: #2c467a; }
-          header .nice-header-menu li.nice-header-menu-top input[type="text"],
-          .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"] {
+          header .nice-header-menu li.nice-header-form input[type="text"],
+          .nice-header .nice-header-menu li.nice-header-form input[type="text"] {
             color: #FFF;
             border-color: transparent;
             background-color: transparent;
@@ -3040,21 +3040,21 @@ header,
             -ms-transition: border-bottom-color 0.3s;
             -o-transition: border-bottom-color 0.3s;
             transition: border-bottom-color 0.3s; }
-            header .nice-header-menu li.nice-header-menu-top input[type="text"]::-webkit-input-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]::-webkit-input-placeholder {
+            header .nice-header-menu li.nice-header-form input[type="text"]::-webkit-input-placeholder,
+            .nice-header .nice-header-menu li.nice-header-form input[type="text"]::-webkit-input-placeholder {
               color: #F5F7F7; }
-            header .nice-header-menu li.nice-header-menu-top input[type="text"]:-moz-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:-moz-placeholder {
+            header .nice-header-menu li.nice-header-form input[type="text"]:-moz-placeholder,
+            .nice-header .nice-header-menu li.nice-header-form input[type="text"]:-moz-placeholder {
               color: #F5F7F7; }
-            header .nice-header-menu li.nice-header-menu-top input[type="text"]::-moz-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]::-moz-placeholder {
+            header .nice-header-menu li.nice-header-form input[type="text"]::-moz-placeholder,
+            .nice-header .nice-header-menu li.nice-header-form input[type="text"]::-moz-placeholder {
               color: #F5F7F7; }
-            header .nice-header-menu li.nice-header-menu-top input[type="text"]:-ms-input-placeholder,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:-ms-input-placeholder {
+            header .nice-header-menu li.nice-header-form input[type="text"]:-ms-input-placeholder,
+            .nice-header .nice-header-menu li.nice-header-form input[type="text"]:-ms-input-placeholder {
               color: #F5F7F7; }
-            header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus, header .nice-header-menu li.nice-header-menu-top input[type="text"]:active,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:focus,
-            .nice-header .nice-header-menu li.nice-header-menu-top input[type="text"]:active {
+            header .nice-header-menu li.nice-header-form input[type="text"]:focus, header .nice-header-menu li.nice-header-form input[type="text"]:active,
+            .nice-header .nice-header-menu li.nice-header-form input[type="text"]:focus,
+            .nice-header .nice-header-menu li.nice-header-form input[type="text"]:active {
               border-color: transparent;
               border-bottom-color: #FFF;
               width: 100%;

@@ -76,7 +76,7 @@ header,
                     }
                 }
             }
-            &.nice-header-menu-top {
+            &.nice-header-form {
                 padding: 0 15px;
 
                 input[type="text"] {
@@ -178,7 +178,7 @@ header,
                         margin-right: 10px;
                     }
                 }
-                &.nice-header-menu-top {
+                &.nice-header-form {
                     background-color: lighten($color-accent, 15%);
 
                     input[type="text"] {

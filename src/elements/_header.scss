@@ -220,7 +220,6 @@ header,
             left: calc(-100% + 60px);
             z-index: 999;
             overflow: visible;
-            @include nice-transition(left .2s ease-out);
 
             .nice-header {
                 &.fixed {
@@ -228,7 +227,6 @@ header,
                 }
                 .nice-header-collapse {
                     left: 60px;
-                    @include nice-transition(left .2s ease-in-out);
                 }
             }
         }
@@ -252,6 +250,7 @@ header,
             position: fixed;
             left: 105%;
             background-color: $color-accent;
+            @include nice-transition(left .2s ease-out);
 
             > form, ul, div {
                 float: none;

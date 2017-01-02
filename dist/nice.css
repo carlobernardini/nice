@@ -3178,21 +3178,11 @@ header,
       position: relative;
       left: calc(-100% + 60px);
       z-index: 999;
-      overflow: visible;
-      -webkit-transition: left 0.2s ease-out;
-      -moz-transition: left 0.2s ease-out;
-      -ms-transition: left 0.2s ease-out;
-      -o-transition: left 0.2s ease-out;
-      transition: left 0.2s ease-out; }
+      overflow: visible; }
       body.expanded .nice-header.fixed {
         left: calc(-100% + 60px); }
       body.expanded .nice-header .nice-header-collapse {
-        left: 60px;
-        -webkit-transition: left 0.2s ease-in-out;
-        -moz-transition: left 0.2s ease-in-out;
-        -ms-transition: left 0.2s ease-in-out;
-        -o-transition: left 0.2s ease-in-out;
-        transition: left 0.2s ease-in-out; }
+        left: 60px; }
   header,
   .nice-header {
     margin: 0 -15px;
@@ -3215,7 +3205,12 @@ header,
       width: calc(100% - 60px);
       position: fixed;
       left: 105%;
-      background-color: #182642; }
+      background-color: #182642;
+      -webkit-transition: left 0.2s ease-out;
+      -moz-transition: left 0.2s ease-out;
+      -ms-transition: left 0.2s ease-out;
+      -o-transition: left 0.2s ease-out;
+      transition: left 0.2s ease-out; }
       header .nice-header-collapse > form, header .nice-header-collapse ul, header .nice-header-collapse div,
       .nice-header .nice-header-collapse > form,
       .nice-header .nice-header-collapse ul,

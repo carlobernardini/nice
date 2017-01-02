@@ -3018,6 +3018,60 @@ header,
         width: 150%;
         margin-left: -50%;
         border-color: #12BCD0; }
+        header .nice-header-form input[type="text"]:focus + button,
+        .nice-header .nice-header-form input[type="text"]:focus + button {
+          display: block;
+          color: #cfd9db; }
+    header .nice-header-form .nice-header-input-wrapper,
+    .nice-header .nice-header-form .nice-header-input-wrapper {
+      position: relative; }
+      header .nice-header-form .nice-header-input-wrapper button,
+      .nice-header .nice-header-form .nice-header-input-wrapper button {
+        position: absolute;
+        width: 24px;
+        margin-top: -12px;
+        top: 50%;
+        padding: 0;
+        right: 5px;
+        border: none;
+        color: #ECF0F1;
+        cursor: pointer;
+        display: none;
+        outline: none;
+        background-color: transparent;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+        line-height: 24px;
+        line-height: 1.5rem;
+        -webkit-transition: background-color 0.3s, color 0.3s;
+        -moz-transition: background-color 0.3s, color 0.3s;
+        -ms-transition: background-color 0.3s, color 0.3s;
+        -o-transition: background-color 0.3s, color 0.3s;
+        transition: background-color 0.3s, color 0.3s; }
+        header .nice-header-form .nice-header-input-wrapper button i,
+        .nice-header .nice-header-form .nice-header-input-wrapper button i {
+          font-size: .9em; }
+      header .nice-header-form .nice-header-input-wrapper:hover button,
+      .nice-header .nice-header-form .nice-header-input-wrapper:hover button {
+        display: block; }
+        header .nice-header-form .nice-header-input-wrapper:hover button:hover,
+        .nice-header .nice-header-form .nice-header-input-wrapper:hover button:hover {
+          background-color: transparent; }
+        header .nice-header-form .nice-header-input-wrapper:hover button:active,
+        .nice-header .nice-header-form .nice-header-input-wrapper:hover button:active {
+          color: #12BCD0;
+          -webkit-transition: none;
+          -moz-transition: none;
+          -ms-transition: none;
+          -o-transition: none;
+          transition: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
   header .nice-header-menu,
   .nice-header .nice-header-menu {
     float: right;
@@ -3192,6 +3246,12 @@ header,
           border-bottom-color: #FFF;
           width: 100%;
           margin-left: 0; }
+      header .nice-header-form .nice-header-input-wrapper button,
+      .nice-header .nice-header-form .nice-header-input-wrapper button {
+        right: 0; }
+        header .nice-header-form .nice-header-input-wrapper button:active,
+        .nice-header .nice-header-form .nice-header-input-wrapper button:active {
+          color: #FFF; }
     header .nice-header-menu,
     .nice-header .nice-header-menu {
       overflow: hidden;

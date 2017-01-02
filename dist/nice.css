@@ -2952,6 +2952,12 @@ header,
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+  header.fixed,
+  .nice-header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; }
   header .nice-header-container,
   .nice-header .nice-header-container {
     height: 60px;
@@ -3160,7 +3166,8 @@ header,
 
 @media screen and (min-width: 20em) and (max-width: 720px) {
   body {
-    padding: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     left: 0;
     -webkit-transition: left 0.2s ease-in-out;
     -moz-transition: left 0.2s ease-in-out;
@@ -3177,7 +3184,9 @@ header,
       -ms-transition: left 0.2s ease-out;
       -o-transition: left 0.2s ease-out;
       transition: left 0.2s ease-out; }
-      body.expanded .nice-header-collapse {
+      body.expanded .nice-header.fixed {
+        left: calc(-100% + 60px); }
+      body.expanded .nice-header .nice-header-collapse {
         left: 60px;
         -webkit-transition: left 0.2s ease-in-out;
         -moz-transition: left 0.2s ease-in-out;
@@ -3188,6 +3197,14 @@ header,
   .nice-header {
     margin: 0 -15px;
     position: relative; }
+    header.fixed,
+    .nice-header.fixed {
+      -webkit-transition: left 0.2s ease-out;
+      -moz-transition: left 0.2s ease-out;
+      -ms-transition: left 0.2s ease-out;
+      -o-transition: left 0.2s ease-out;
+      transition: left 0.2s ease-out;
+      margin: 0; }
     header .nice-header-container,
     .nice-header .nice-header-container {
       padding: 0 15px; }

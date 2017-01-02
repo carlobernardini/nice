@@ -4,6 +4,12 @@ header,
     border-bottom: 1px solid $color-border;
     @include nice-box-shadow(0 1px 3px rgba($color-black, 0.1));
 
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
     .nice-header-container {
         height: 60px;
         @include nice-line-height(60px);
@@ -204,7 +210,8 @@ header,
 
 @include media($mobile) {
     body {
-        padding: 0 15px;
+        padding-left: 15px;
+        padding-right: 15px;
         left: 0;
         @include nice-transition(left .2s ease-in-out);
 
@@ -215,9 +222,14 @@ header,
             overflow: visible;
             @include nice-transition(left .2s ease-out);
 
-            .nice-header-collapse {
-                left: 60px;
-                @include nice-transition(left .2s ease-in-out);
+            .nice-header {
+                &.fixed {
+                    left: calc(-100% + 60px);
+                }
+                .nice-header-collapse {
+                    left: 60px;
+                    @include nice-transition(left .2s ease-in-out);
+                }
             }
         }
     }
@@ -226,6 +238,10 @@ header,
         margin: 0 -15px;
         position: relative;
 
+        &.fixed {
+            @include nice-transition(left .2s ease-out);
+            margin: 0;
+        }
         .nice-header-container {
             padding: 0 15px;
         }

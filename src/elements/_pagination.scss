@@ -79,12 +79,12 @@ nav {
             &:first-child {
                 span, a {
                     margin-left: 0;
-                    @include nice-border-radius($default-radius 0 0 $default-radius);
+                    @include nice-border-radius(25px 0 0 25px);
                 }
             }
             &:last-child {
                 span, a {
-                    @include nice-border-radius(0 $default-radius $default-radius 0);
+                    @include nice-border-radius(0 25px 25px 0);
                 }
             }
             &.current {

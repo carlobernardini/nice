@@ -24,6 +24,33 @@ header,
             border: 0;
         }
     }
+    .nice-header-collapse {
+        float: right;
+
+        > form, ul, div {
+            float: left;
+        }
+    }
+    .nice-header-form {
+        float: right;
+        padding: 0 15px;
+
+        input[type="text"] {
+            border-color: $gray-light;
+            padding: 0 10px;
+            @include nice-border-radius(15px);
+            @include nice-transition(border-color 0.3s, margin-left 0.3s, width 0.3s);
+
+            &:hover {
+                border-color: darken($gray-light, 10%);
+            }
+            &:focus {
+                width: 150%;
+                margin-left: -50%;
+                border-color: $color-brand;
+            }
+        }
+    }
     .nice-header-menu {
         float: right;
         padding: 0;
@@ -76,25 +103,6 @@ header,
                     }
                 }
             }
-            &.nice-header-form {
-                padding: 0 15px;
-
-                input[type="text"] {
-                    border-color: $gray-light;
-                    padding: 0 10px;
-                    @include nice-border-radius(15px);
-                    @include nice-transition(border-color 0.3s, margin-left 0.3s, width 0.3s);
-
-                    &:hover {
-                        border-color: darken($gray-light, 10%);
-                    }
-                    &:focus {
-                        width: 150%;
-                        margin-left: -50%;
-                        border-color: $color-brand;
-                    }
-                }
-            }
             &:hover {
                 > ul {
                     display: block;
@@ -140,7 +148,7 @@ header,
             overflow: visible;
             @include nice-transition(left .2s ease-out);
 
-            .nice-header-menu {
+            .nice-header-collapse {
                 left: 60px;
                 @include nice-transition(left .2s ease-in-out);
             }
@@ -154,16 +162,47 @@ header,
         .nice-header-container {
             padding: 0 15px;
         }
-        .nice-header-menu {
+        .nice-header-collapse {
             top: 0;
             height: 100%;
             width: calc(100% - 60px);
             position: fixed;
             left: 105%;
             background-color: $color-accent;
+
+            > form, ul, div {
+                float: none;
+            }
+        }
+        .nice-header-form {
+            background-color: lighten($color-accent, 15%);
+
+            input[type="text"] {
+                color: $color-white;
+                border-color: transparent;
+                background-color: transparent;
+                padding: 0;
+                @include nice-box-shadow(none);
+                @include nice-border-radius(0);
+                @include nice-transition(border-bottom-color 0.3s);
+                @include nice-placeholder-color {
+                    color: $gray-vlight;
+                }
+
+                &:focus,
+                &:active {
+                    border-color: transparent;
+                    border-bottom-color: $color-white;
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+        .nice-header-menu {
             overflow: hidden;
             overflow-y: auto;
             z-index: 5;
+            height: 100%;
             @include nice-transition(left .2s ease-in-out);
 
             li {
@@ -178,27 +217,28 @@ header,
                         margin-right: 10px;
                     }
                 }
-                &.nice-header-form {
-                    background-color: lighten($color-accent, 15%);
+                ul {
+                    display: block;
+                    position: relative;
 
-                    input[type="text"] {
-                        color: $color-white;
-                        border-color: transparent;
-                        background-color: transparent;
-                        padding: 0;
-                        @include nice-box-shadow(none);
-                        @include nice-border-radius(0);
-                        @include nice-transition(border-bottom-color 0.3s);
-                        @include nice-placeholder-color {
-                            color: $gray-vlight;
+                    li {
+                        white-space: normal;
+
+                        a {
+                            padding-left: 50px;
+                            @include nice-font($size: .9em);
+
+                            &:hover,
+                            &:focus,
+                            &:active {
+                                background-color: transparent;
+                            }
                         }
-
-                        &:focus,
-                        &:active {
-                            border-color: transparent;
-                            border-bottom-color: $color-white;
-                            width: 100%;
-                            margin-left: 0;
+                        ul {
+                            display: block;
+                            position: relative;
+                            left: auto;
+                            padding-left: 15px;
                         }
                     }
                 }
@@ -210,6 +250,19 @@ header,
                         &:active {
                             background-color: $color-white;
                             color: $color-link;
+                            outline: none;
+                        }
+                    }
+                    ul {
+                        li {
+                            a {
+                                &:hover,
+                                &:focus,
+                                &:active {
+                                    background-color: transparent;
+                                    color: $color-white;
+                                }
+                            }
                         }
                     }
                 }

@@ -2837,6 +2837,48 @@ a {
     -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse; }
 
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+
+@-moz-keyframes flip {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+
+@keyframes flip {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+
 header,
 .nice-header {
   background-color: #FFF;
@@ -2961,6 +3003,23 @@ header,
       header .nice-header-menu li:hover > ul,
       .nice-header .nice-header-menu li:hover > ul {
         display: block; }
+      header .nice-header-menu li.has-children > a:after,
+      .nice-header .nice-header-menu li.has-children > a:after {
+        font-family: FontAwesome;
+        content: '\f107';
+        color: #FFF;
+        position: absolute;
+        right: 15px;
+        top: 0; }
+      header .nice-header-menu li.has-children:hover > a:after,
+      .nice-header .nice-header-menu li.has-children:hover > a:after {
+        color: #FFF;
+        -webkit-animation: flip 0.15s linear forwards;
+        -moz-animation: flip 0.15s linear forwards;
+        animation: flip 0.15s linear forwards;
+        -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        animation-iteration-count: 1; }
     header .nice-header-menu.menu-pills li a,
     .nice-header .nice-header-menu.menu-pills li a {
       -webkit-transition: background-color 0.1s;
@@ -3082,6 +3141,7 @@ header,
         float: none; }
         header .nice-header-menu li a,
         .nice-header .nice-header-menu li a {
+          position: relative;
           padding: 0 20px;
           color: #FFF;
           -webkit-transition: background-color 0.1s, color 0.1s;

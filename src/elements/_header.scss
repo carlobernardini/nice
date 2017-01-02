@@ -288,6 +288,9 @@ header,
                     }
                 }
             }
+            ~ .nice-header-menu {
+                height: calc(100% - 60px);    
+            }
         }
         .nice-header-menu {
             overflow: hidden;

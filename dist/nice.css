@@ -3264,6 +3264,9 @@ header,
         header .nice-header-form .nice-header-input-wrapper button:active,
         .nice-header .nice-header-form .nice-header-input-wrapper button:active {
           color: #FFF; }
+      header .nice-header-form ~ .nice-header-menu,
+      .nice-header .nice-header-form ~ .nice-header-menu {
+        height: calc(100% - 60px); }
     header .nice-header-menu,
     .nice-header .nice-header-menu {
       overflow: hidden;

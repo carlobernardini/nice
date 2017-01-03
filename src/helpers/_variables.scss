@@ -1,4 +1,5 @@
-$fa-font-path:          'fonts' !default;
+$font-path:             'fonts' !default;
+$fa-font-path:          $font-path !default;
 
 // Fonts
 $fonts-primary:			'Open Sans', sans-serif, helvetica;

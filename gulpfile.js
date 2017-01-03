@@ -15,7 +15,7 @@ gulp.task('icons', function(){
         .pipe(gulp.dest('./dist/fonts'))
 });
 gulp.task('fonts', function(){
-    return gulp.src('./src/fonts/**/*.*')
+    return gulp.src('./src/fonts/**/*.{eot,svg,ttf,otf,woff}')
         .pipe(gulp.dest('./dist/fonts'));
 });
 gulp.task('compile', function(){

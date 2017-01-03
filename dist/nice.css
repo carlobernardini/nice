@@ -30,15 +30,15 @@ button,
   *display: inline-block;
   zoom: 1; }
 
-nav {
+.nice-tabs, nav {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  nav:before, nav:after {
+  .nice-tabs:before, nav:before, .nice-tabs:after, nav:after {
     content: "";
     display: table; }
-  nav:after {
+  .nice-tabs:after, nav:after {
     clear: both;
     content: ".";
     display: block;
@@ -3548,6 +3548,121 @@ textarea.nice-form-control {
   -webkit-box-sizing: border-box;
   moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.nice-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #D0D1D5; }
+  .nice-tabs li {
+    margin-bottom: -1px;
+    position: relative;
+    float: left;
+    display: block; }
+    .nice-tabs li a {
+      text-align: center;
+      min-width: 80px;
+      display: block;
+      text-decoration: none;
+      padding: 10px 15px;
+      margin-right: 2px;
+      position: relative;
+      white-space: nowrap;
+      outline: none;
+      border: 1px solid transparent;
+      line-height: 20px;
+      line-height: 1.25rem;
+      -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-tabs li a:hover {
+        background-color: #ECF0F1; }
+      .nice-tabs li a.icon {
+        min-width: auto;
+        text-align: left;
+        padding-left: 30px; }
+        .nice-tabs li a.icon:before {
+          position: absolute;
+          left: 15px;
+          top: 50%;
+          margin-top: -10px; }
+    .nice-tabs li.current a {
+      background-color: #FFF;
+      border: 1px solid #D0D1D5;
+      border-bottom-color: #FFF;
+      cursor: default;
+      color: #000; }
+      .nice-tabs li.current a:hover {
+        background-color: #FFF; }
+    .nice-tabs li.primary a {
+      background-color: #E78523;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.primary a:hover {
+        background-color: #ec9f51; }
+    .nice-tabs li.accent a {
+      background-color: #182642;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.accent a:hover {
+        background-color: #263c67; }
+    .nice-tabs li.brand a {
+      background-color: #12BCD0;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.brand a:hover {
+        background-color: #29d8ec; }
+  .nice-tabs.bold {
+    font-weight: 600; }
+  .nice-tabs.small a {
+    min-width: 60px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-size: 0.8125rem; }
+    .nice-tabs.small a.icon {
+      min-width: auto; }
+      .nice-tabs.small a.icon:before {
+        left: 12px;
+        margin-top: -9px; }
+
+.nice-tabs-wrapper .nice-tabs {
+  border-bottom: none; }
+
+.nice-tabs-wrapper .nice-tabs-content {
+  border: 1px solid #D0D1D5;
+  background-color: #FFF;
+  padding: 15px;
+  -webkit-border-radius: 0 3px 3px;
+  -moz-border-radius: 0 3px 3px;
+  border-radius: 0 3px 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.nice-tabs-wrapper ul.nice-tabs-content {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .nice-tabs-wrapper ul.nice-tabs-content li {
+    display: none;
+    padding: 15px; }
+    .nice-tabs-wrapper ul.nice-tabs-content li.current {
+      display: block; }
 
 .nice-pagination {
   list-style: none;

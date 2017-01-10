@@ -18,14 +18,18 @@ header,
         @include outer-container;
     }
     .nice-header-brand {
-        display: inline-block;
         margin: 0;
         padding: 0;
         overflow: hidden;
         height: 60px;
         outline: none;
+        @include nice-font($size: 1.3em, $weight: 600, $family: $fonts-primary);
         @include nice-background-size(contain);
+        @extend %display-inline-block;
 
+        a {
+            display: inline-block;
+        }
         img {
             height: 30px;
             margin: 15px 0;

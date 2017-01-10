@@ -22,7 +22,8 @@ button,
   -o-user-select: none;
   user-select: none; }
 
-.nice-radio label,
+header .nice-header-brand,
+.nice-header .nice-header-brand, .nice-radio label,
 .nice-checkbox label, .nice-stacked-list li .badge, .nice-stacked-list a .badge, .nice-pagination, button,
 .nice-btn, .nice-loading {
   display: -moz-inline-stack;
@@ -2976,16 +2977,23 @@ header,
       display: table; }
   header .nice-header-brand,
   .nice-header .nice-header-brand {
-    display: inline-block;
     margin: 0;
     padding: 0;
     overflow: hidden;
     height: 60px;
     outline: none;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 600;
+    font-size: 1.3em;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain; }
+    header .nice-header-brand a,
+    .nice-header .nice-header-brand a {
+      display: inline-block; }
     header .nice-header-brand img,
     .nice-header .nice-header-brand img {
       height: 30px;

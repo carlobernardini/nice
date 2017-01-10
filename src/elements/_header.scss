@@ -16,6 +16,10 @@ header,
         height: 60px;
         @include nice-line-height(60px);
         @include outer-container;
+
+        &:after {
+            display: none;
+        }
     }
     .nice-header-brand {
         margin: 0;

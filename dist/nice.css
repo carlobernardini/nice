@@ -2978,6 +2978,9 @@ header,
       clear: both;
       content: "";
       display: table; }
+    header .nice-header-container:after,
+    .nice-header .nice-header-container:after {
+      display: none; }
   header .nice-header-brand,
   .nice-header .nice-header-brand {
     margin: 0;

@@ -4149,7 +4149,7 @@ code {
     -moz-background-clip: padding;
     background-clip: padding-box; }
 
-.nice-code-container .nice-code-title {
+.nice-code-container .nice-code-heading {
   border: 1px solid #D0D1D5;
   border-bottom: none;
   background-color: #F5F7F7;
@@ -4165,7 +4165,7 @@ code {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
-  .nice-code-container .nice-code-title + code {
+  .nice-code-container .nice-code-heading + code {
     border: 1px solid #D0D1D5;
     border-top: none;
     -webkit-border-radius: 0 0 3px 3px;
@@ -4174,24 +4174,24 @@ code {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
-  .nice-code-container .nice-code-title::before {
+  .nice-code-container .nice-code-heading::before {
     position: relative;
     left: -5px; }
-  .nice-code-container .nice-code-title.brand, .nice-code-container .nice-code-title.good, .nice-code-container .nice-code-title.warning, .nice-code-container .nice-code-title.bad {
+  .nice-code-container .nice-code-heading.brand, .nice-code-container .nice-code-heading.good, .nice-code-container .nice-code-heading.warning, .nice-code-container .nice-code-heading.bad {
     color: #FFF; }
-  .nice-code-container .nice-code-title.brand {
+  .nice-code-container .nice-code-heading.brand {
     border-color: #2ecc71;
     background-color: #2ecc71; }
-  .nice-code-container .nice-code-title.good {
+  .nice-code-container .nice-code-heading.good {
     border-color: #2ecc71;
     background-color: #2ecc71; }
-  .nice-code-container .nice-code-title.warning {
+  .nice-code-container .nice-code-heading.warning {
     border-color: #f39c12;
     background-color: #f39c12; }
-  .nice-code-container .nice-code-title.bad {
+  .nice-code-container .nice-code-heading.bad {
     border-color: #e74c3c;
     background-color: #e74c3c; }
-  .nice-code-container .nice-code-title .nice-code-syntax {
+  .nice-code-container .nice-code-heading .nice-code-syntax {
     float: right;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

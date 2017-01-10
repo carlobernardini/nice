@@ -1,0 +1,58 @@
+html {
+    position: relative;
+    min-height: 100%;
+
+    body {
+        margin-bottom: $default-footer-height;
+        padding-bottom: 15px;
+
+        footer,
+        .nice-footer {
+            background-color: $color-accent;
+            color: $color-white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: $default-footer-height;
+            overflow: hidden;
+            width: 100%;
+
+            .nice-footer-menu {
+                margin: 0;
+                float: right;
+
+                li {
+                    list-style: none;
+                    float: left;
+                    margin-left: 25px;
+
+                    a {
+                        color: $gray-medium;
+                        display: block;
+                        padding: 1em 0;
+
+                        &:hover {
+                            color: $color-white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media($mobile) {
+    html {
+        body {
+            footer,
+            .nice-footer {
+                margin-top: 15px;
+                padding: 0 15px;
+
+                .nice-footer-menu {
+                    display: none;
+                }
+            }
+        }
+    }
+}

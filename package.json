@@ -1,0 +1,24 @@
+{
+  "name": "nice",
+  "version": "1.0.0",
+  "description": "A framework of reusable UI-elements",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@tkgit-01.textkernel.local:nice/nice.git"
+  },
+  "author": "Textkernel B.V.",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "4.7.0",
+    "gulp": "3.9.1",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.2",
+    "node-bourbon": "4.2.8",
+    "node-neat": "1.7.2"
+  },
+  "devDependencies": {}
+}

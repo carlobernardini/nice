@@ -1,0 +1,48 @@
+body {
+    background-color: $gray-vlight;
+    font-family: $fonts-primary;
+}
+a {
+    color: $color-link;
+    text-decoration: none;
+    @include nice-transition(color 0.3s);
+
+    &:hover {
+        color: lighten($color-link, 10%);
+    }
+}
+.icon {
+    &::before {
+        font-family: FontAwesome;
+    }
+}
+.nice-circle {
+    @include nice-border-radius(50%);
+}
+.nice-muted {
+    color: $gray-medium;
+}
+.nice-brand {
+    color: $color-brand;
+}
+.nice-bg-brand {
+    background-color: $color-brand;
+}
+.nice-bg-primary {
+    background-color: $color-primary;
+}
+.nice-bg-accent {
+    background-color: $color-accent;
+}
+.nice-bg-warning {
+    background-color: $color-warning;
+}
+.nice-bg-danger {
+    background-color: $color-bad;
+}
+.nice-bg-info {
+    background-color: $color-info;
+}
+.nice-bg-success {
+    background-color: $color-good;
+}

@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $fonts-primary;
+    font-weight: 400;
+
+    &.bold {
+        font-weight: 600;
+    }
+    small {
+        font-size: .75em;
+    }
+}
+h1 {
+    font-size: rem(36);
+}
+h2 {
+    font-size: rem(30);
+}
+h3 {
+    font-size: rem(24);
+}
+h4 {
+    font-size: rem(18);
+}
+h5 {
+    font-size: rem(14);
+}
+h6 {
+    font-size: rem(12);
+}
+@each $value in (left, right, center, justify) {
+    .text-#{$value} {
+        text-align: $value;
+    }
+}
+.text-brand {
+    letter-spacing: 1px;
+    @include nice-font($family: $fonts-brand, $weight: 300);
+}

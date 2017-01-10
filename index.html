@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="white">
+        <title>Nice! Framework examples</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+        <link href="docs/docs.min.css" rel="stylesheet">
+        <link href="dist/nice.css" rel="stylesheet">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="docs/docs.js"></script>
+    </head>
+    <body>
+        <header class="nice-header fixed">
+            <div class="nice-header-container">
+                <h1 class="nice-header-brand">
+                    <a href="index.html">
+                        <img src="assets/textkernel@2x.png" />
+                    </a>
+                </h1>
+                <div class="nice-header-collapse">
+                    <form action="#" class="nice-header-form">
+                        <div class="nice-header-input-wrapper">
+                            <input type="text" placeholder="Search..." class="nice-form-control" />
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="nice-header-menu menu-pills">
+                        <li>
+                            <a href="index.html" class="icon fa-book">
+                                Documentation
+                            </a>
+                            <ul>
+                                <li class="has-children">
+                                    <a href="#nice-colors">Colors</a>
+                                    <ul>
+                                        <li>
+                                            <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">
+                                                Brand Guidelines
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#nice-page-header">Page header</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-buttons">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-form-elements">Form elements</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-tabs">Tabs</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-pagination">Pagination</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-stacked-lists">Stacked lists</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-progress-loading">Progress and loading</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-code-blocks">Code blocks</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-tables">Tables</a>
+                                </li>
+                                <li>
+                                    <a href="#nice-browser-support">Browser support</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://tkgit-01.textkernel.local/nice/nice" target="_blank" class="icon fa-gitlab">
+                                Source
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">
+                                Brand Guidelines
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://textkernel.com" target="_blank">
+                                Textkernel
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="nice-header-toggle collapsed">
+                    <span class="icon-bar top-bar"></span>
+                    <span class="icon-bar middle-bar"></span>
+                    <span class="icon-bar bottom-bar"></span>
+                </button>
+            </div><!-- .nice-header-container -->
+        </header>
+        <section class="nice-container">
+            <h1>
+                <span class="nice-brand">Nice!</span>
+                <small>Framework for reusable UI elements</small>
+            </h1>
+            <div class="nice-row" id="nice-colors">
+                <h2>Colors</h2>
+                <div class="nice-col-8">
+                    <div class="nice-flex-container justify-space-between wrap">
+                        <div class="color-swatch nice-circle nice-bg-brand">
+                            <strong>Textkernel</strong>
+                            #12BCD0
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-brand">
+                            <strong>Link</strong>
+                            #009FC3
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-primary">
+                            <strong>Primary</strong>
+                            #E78523
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-accent">
+                            <strong>Accent</strong>
+                            #182642
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-success">
+                            <strong>Good</strong>
+                            #2ECC71
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-info">
+                            <strong>Info</strong>
+                            #3498DB
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-warning">
+                            <strong>Warning</strong>
+                            #F39C12
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-danger">
+                            <strong>Bad</strong>
+                            #E74C3C
+                        </div>
+                    </div>
+                </div>
+                <div class="nice-col-4">
+                    <p class="nice-alert warning text-justify">
+                        <i class="fa fa-warning"></i> When copying specific color codes, please make sure to take these directly from the official <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">Brand Guidelines</a>.
+                    </p>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-page-header">
+                    <h2>Page header</h2>
+                    <div class="nice-col-12">
+                        <p>
+                            You can see an example of this component at the top of this page. The header component is responsive out of the box, meaning the menu becomes off-canvas and toggleable on mobile views.
+                        </p>
+                        <p>
+                            In case you need the header to stick to the top of the viewport, apply the additional <code class="inline">fixed</code> class to the top level header element. Also, be sure to give the body a top-padding of 60 pixels (i.e. <code class="inline">body { padding-top: 60px; }</code>).
+                        </p>
+                    </div>
+                    <div class="nice-col-12">
+                        <code class="docs">&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
+        &lt;h1 class=&quot;<span class="main">nice-header-brand</span>&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;
+                &lt;img src=&quot;assets/logo@2x.png&quot; /&gt;
+            &lt;/a&gt;
+        &lt;/h1&gt;
+        &lt;div class=&quot;<span class="main">nice-header-collapse</span>&quot;&gt;
+            &lt;span class=&quot;<span class="main">nice-header-product</span>&quot;&gt;
+                Product! v1.0
+            &lt;/span&gt;
+            &lt;form action=&quot;#&quot; class=&quot;<span class="main">nice-header-form</span>&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; /&gt;
+            &lt;/form&gt;
+            &lt;ul class=&quot;<span class="main">nice-header-menu</span> <span class="variation">menu-pills</span>&quot;&gt;
+                &lt;li class=&quot;<span class="variation">has-children</span>&quot;&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-book</span>&quot;&gt;
+                        Link
+                    &lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;Sub-item&lt;/a&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;#&quot;&gt;
+                                        Sub-sub-item
+                                    &lt;/a&gt;
+                                &lt;/li&gt;
+                            &lt;/ul&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;#&quot;&gt;Sub-item&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot;&gt;
+                        Link
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
+                        Link
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;http://textkernel.com&quot; target=&quot;_blank&quot;&gt;
+                        Textkernel
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;button&quot; class=&quot;<span class="main">nice-header-toggle collapsed</span>&quot;&gt;
+            &lt;span class=&quot;icon-bar top-bar&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;icon-bar middle-bar&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;icon-bar bottom-bar&quot;&gt;&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/header&gt;</code>
+                    </div>
+            </div>
+            <div class="nice-row" id="nice-buttons">
+                <h2>Buttons</h2>
+                <div class="nice-col-6">
+                    <a href="#" class="nice-btn icon fa-check">Default button</a>
+                    <a href="#" class="nice-btn primary icon fa-search">Primary button</a>
+                    <a href="#" class="nice-btn link">Link button</a>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">primary link</span>"&gt;
+    Primary button
+&lt;/a&gt;
+&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">icon fa-check</span>"&gt;
+    Button with icon
+&lt;/a&gt;
+</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-form-elements">
+                <h2>Form elements</h2>
+                <div class="nice-col-6">
+                    <div class="nice-form-group">
+                        <input type="text" placeholder="Nice input..." class="nice-form-control" />
+                    </div>
+                    <div class="nice-form-group">
+                        <input type="password" placeholder="Nice password..." class="nice-form-control" />
+                    </div>
+                    <div class="nice-form-group">
+                        <select class="nice-form-control">
+                            <option>Item 1</option>
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                            <option>Item 4</option>
+                            <option>Item 5</option>
+                        </select>
+                    </div>
+                    <div class="nice-form-group">
+                        <select size="5" multiple="multiple" class="nice-form-control">
+                            <option>Item 1</option>
+                            <option>Item 2</option>
+                            <option>Item 3</option>
+                            <option>Item 4</option>
+                            <option>Item 5</option>
+                        </select>
+                    </div>
+                    <div class="nice-form-group">
+                        <textarea class="nice-form-control" placeholder="Nice textarea..."></textarea>
+                    </div>
+                    <div class="nice-form-group">
+                        <div class="nice-radio">
+                            <label>
+                                <input type="radio" name="nice-radio-example" />
+                                Radio A
+                            </label>
+                        </div>
+                        <div class="nice-radio">
+                            <label>
+                                <input type="radio" name="nice-radio-example" />
+                                Radio B
+                            </label>
+                        </div>
+                    </div>
+                    <div class="nice-form-group">
+                        <div class="nice-checkbox">
+                            <label>
+                                <input type="checkbox" name="nice-checkbox-example[]" />
+                                Checkbox A
+                            </label>
+                        </div>
+                        <div class="nice-checkbox">
+                            <label>
+                                <input type="checkbox" name="nice-checkbox-example[]" />
+                                Checkbox B
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+    &lt;input type=&quot;text&quot; placeholder=&quot;Nice input...&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+    &lt;input type=&quot;password&quot; placeholder=&quot;Nice password...&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nice-form-group&quot;&gt;
+    &lt;select class=&quot;<span class="main">nice-form-control</span>&quot;&gt;
+        &lt;option&gt;Item 1&lt;/option&gt;
+        &lt;option&gt;Item 2&lt;/option&gt;
+        &lt;option&gt;Item 3&lt;/option&gt;
+        &lt;option&gt;Item 4&lt;/option&gt;
+        &lt;option&gt;Item 5&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;nice-form-group&quot;&gt;
+    &lt;select class=&quot;<span class="main">nice-form-control</span>&quot; size=&quot;5&quot; multiple=&quot;multiple&quot;&gt;
+        &lt;option&gt;Item 1&lt;/option&gt;
+        &lt;option&gt;Item 2&lt;/option&gt;
+        &lt;option&gt;Item 3&lt;/option&gt;
+        &lt;option&gt;Item 4&lt;/option&gt;
+        &lt;option&gt;Item 5&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/div&gt;
+&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+    &lt;textarea class=&quot;<span class="main">nice-form-control</span>&quot; placeholder=&quot;Nice textarea...&quot;&gt;&lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-radio</span>&quot;&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;radio&quot; name=&quot;nice-radio-example&quot; /&gt;
+            Radio A
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-checkbox</span>&quot;&gt;
+        &lt;label&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;nice-checkbox-example[]&quot; /&gt;
+            Checkbox A
+        &lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-tabs">
+                <h2>Tabs</h2>
+                <div class="nice-col-6">
+                    <p>
+                        <div class="nice-tabs-wrapper">
+                            <ul class="nice-tabs">
+                                <li class="current">
+                                    <a href="#" class="icon fa-info">First</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fourth</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fifth</a>
+                                </li>
+                            </ul>
+                            <div class="nice-tabs-content">
+                                Tab content
+                            </div>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="nice-tabs-wrapper">
+                            <ul class="nice-tabs small bold">
+                                <li class="current">
+                                    <a href="#" class="icon fa-home">First</a>
+                                </li>
+                                <li class="brand">
+                                    <a href="#" class="icon fa-cog">Second</a>
+                                </li>
+                                <li class="accent">
+                                    <a href="#">Third</a>
+                                </li>
+                                <li class="primary">
+                                    <a href="#">Fourth</a>
+                                </li>
+                                <li>
+                                    <a href="#">Fifth</a>
+                                </li>
+                            </ul>
+                            <ul class="nice-tabs-content">
+                                <li class="current">
+                                    This tab is currently active
+                                </li>
+                                <li>
+                                    This tab is hidden
+                                </li>
+                            </ul>
+                        </div>
+                    </p>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
+    &lt;ul class=&quot;<span class="main">nice-tabs</span> <span class="variation">small bold</span>&quot;&gt;
+        &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-home</span>&quot;&gt;First&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;<span class="variation">brand</span>&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Second&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;<span class="variation">accent</span>&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Third&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;<span class="variation">primary</span>&quot;&gt;
+            &lt;a href=&quot;#&quot;&gt;Fourth&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Fifth&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;<span class="main">nice-tabs-content</span>&quot;&gt;
+        &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
+            This tab is currently active
+        &lt;/li&gt;
+        &lt;li&gt;
+            This tab is hidden
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-pagination">
+                <h2>Pagination</h2>
+                <div class="nice-col-6">
+                    <nav>
+                        <ul class="nice-pagination small" role="navigation">
+                            <li class="disabled">
+                                <span>
+                                    &laquo; Previous
+                                </span>
+                            </li>
+                            <li class="current">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#">Next &raquo;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul class="nice-pagination bordered" role="navigation">
+                            <li class="disabled">
+                                <span>
+                                    &laquo; Previous
+                                </span>
+                            </li>
+                            <li class="current">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#">Next &raquo;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul class="nice-pagination large" role="navigation">
+                            <li class="disabled">
+                                <span>
+                                    &laquo; Previous
+                                </span>
+                            </li>
+                            <li class="current">
+                                <span>1</span>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                            <li>
+                                <a href="#">Next &raquo;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;nav&gt;
+    &lt;ul class=&quot;<span class="main">nice-pagination</span> <span class="variation">bordered small large</span>&quot; role=&quot;navigation&quot;&gt;
+        &lt;li class=&quot;<span class="variation">disabled</span>&quot;&gt;
+            &lt;span&gt;
+                &amp;laquo; Previous
+            &lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
+            &lt;span&gt;1&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;4&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;5&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#&quot;&gt;Next &amp;raquo;&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-stacked-lists">
+                <h2>Stacked lists</h2>
+                <div class="nice-col-6">
+                    <nav>
+                        <div class="nice-stacked-list">
+                            <a href="#">
+                                Menu item A
+                                <span class="badge">
+                                    14
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item B
+                                <span class="badge">
+                                    New
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item C
+                                <span class="badge primary">
+                                    23
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item C
+                                <span class="badge accent">
+                                    23
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item C
+                                <span class="badge info">
+                                    Working
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item C
+                                <span class="badge warning">
+                                    Attention
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item D
+                                <span class="badge good">
+                                    Complete
+                                </span>
+                            </a>
+                            <a href="#">
+                                Menu item E
+                                <span class="badge bad">
+                                    Error
+                                </span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="nice-col-6">
+
+                </div>
+            </div>
+            <div class="nice-row" id="nice-progress-loading">
+                <h2>Progress and loading</h2>
+                <div class="nice-col-6">
+                    <div class="nice-progress">
+                        <div class="nice-progress-fill" style="width: 65%;">
+                            65%
+                        </div>
+                    </div>
+                    <div class="nice-progress accent">
+                        <div class="nice-progress-fill" style="width: 40%;">
+                            40%
+                        </div>
+                    </div>
+                    <div class="nice-progress brand">
+                        <div class="nice-progress-fill" style="width: 100%;">
+                            100%
+                        </div>
+                    </div>
+                    <div class="nice-progress good">
+                        <div class="nice-progress-fill" style="width: 65%;">
+                            65%
+                        </div>
+                    </div>
+                    <div class="nice-progress bad">
+                        <div class="nice-progress-fill" style="width: 50%;">
+                            50%
+                        </div>
+                    </div>
+                    <div class="nice-progress pulse">
+                        <div class="nice-progress-fill" style="width: 80%;">
+                            Loading...
+                        </div>
+                    </div>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;div class="<span class="main">nice-progress</span> <span class="variation">accent brand good bad pulse</span>"&gt;
+    &lt;div class="<span class="main">nice-progress-fill</span>" style="width: 65%;"&gt;
+        65%
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row">
+                <div class="nice-col-6">
+                    <div class="nice-loading brand " style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading primary" style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading medium good" style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading medium bad" style="margin: 15px 0;">&nbsp;</div>
+                    <div class="nice-loading large" style="margin: 15px 0;">&nbsp;</div>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;div class="<span class="main">nice-loading</span> <span class="variation">medium large brand primary good bad</span>"&gt;&lt;/div&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-code-blocks">
+                <h2>Code blocks</h2>
+                <div class="nice-col-6">
+                    <div class="nice-code-container">
+                        <div class="nice-code-heading icon fa-code">
+                            Sample API response
+                            <span class="nice-code-syntax">
+                                JSON
+                            </span>
+                        </div>
+                        <code class="restrain-s">{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product set",
+    "type": "array",
+    "items": {
+        "title": "Product",
+        "type": "object",
+        "properties": {
+            "id": {
+                "description": "The unique identifier for a product",
+                "type": "number"
+            },
+            "name": {
+                "type": "string"
+            },
+            "price": {
+                "type": "number",
+                "minimum": 0,
+                "exclusiveMinimum": true
+            },
+            "tags": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "length": {"type": "number"},
+                    "width": {"type": "number"},
+                    "height": {"type": "number"}
+                },
+                "required": ["length", "width", "height"]
+            },
+            "warehouseLocation": {
+                "description": "Coordinates of the warehouse with the product",
+                "$ref": "http://json-schema.org/geo"
+            }
+        },
+        "required": ["id", "name", "price"]
+    }
+}</code>
+                    </div>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-code-container</span>&quot;&gt;
+    &lt;code class=&quot;<span class="variation">restrain-s restrain-m restrain-l restrain-max</span>&quot;&gt
+        Your code goes here...
+    &lt;/code&gt;
+    &lt;div class=&quot;<span class="main">nice-code-heading</span> <span class="variation">brand good warning bad icon fa-code</span>&quot;&gt;
+        Sample API response
+        &lt;span class=&quot;<span class="main">nice-code-syntax</span>&quot;&gt;
+            JSON
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-tables">
+                <h2>Tables</h2>
+                <div class="nice-col-6">
+                    <table class="nice-table striped bordered hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Carlo</td>
+                                <td>Bernardini</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Dario</td>
+                                <td>Tognacci</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Darko</td>
+                                <td>Zelic</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Paul</td>
+                                <td>Karabilo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;First name&lt;/th&gt;
+            &lt;th&gt;Last name&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th scope="row"&gt;1&lt;/th&gt;
+            &lt;td&gt;Carlo&lt;/td&gt;
+            &lt;td&gt;Bernardini&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-browser-support">
+                <h2>Browser support</h2>
+                <p>
+                    Nice! supports Internet Explorer 9 and newer versions, except for specific modules such as Flexbox that are only supported in modern browsers. It is designed to deliver an equally consistent appearance on browsers that do not support CSS3. Please check <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">this reference</a> for a detailed overview of CSS3 browser support.
+                </p>
+                <table class="nice-table bordered striped">
+                    <thead>
+                        <tr>
+                            <th>Browser</th>
+                            <th>Support</th>
+                            <th>Limitations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Internet Explorer 9</td>
+                            <td>Limited</td>
+                            <td>
+                                <ul>
+                                    <li>No transitions</li>
+                                    <li>No animations</li>
+                                    <li>No text shadows</li>
+                                    <li>No Flexbox</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Internet Explorer 10</td>
+                            <td>Good</td>
+                            <td>Uses fallbacks for limited Flexbox support</td>
+                        </tr>
+                        <tr>
+                            <td>Internet Explorer 11+</td>
+                            <td>Full support</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <div class="nice-container">
+                <p class="pull-left">
+                    &copy; 2016 <span class="text-brand">textkernel</span>
+                </p>
+                <ul class="nice-footer-menu">
+                    <li>
+                        <a href="index.html" class="icon fa-book">
+                            Nice! Documentation
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://tkgit-01.textkernel.local/nice/nice" target="_blank" class="icon fa-gitlab">
+                            Source
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">
+                            Brand Guidelines
+                        </a>
+                    <li>
+                        <a href="http://tkgit-01.textkernel.local/nice/nice" target="_blank">
+                            Textkernel
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>
+

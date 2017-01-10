@@ -1,0 +1,17 @@
+.nice-container {
+    @include outer-container;
+}
+.nice-row {
+    @include fill-parent();
+    @include row();
+}
+@for $i from 1 through 12 {
+    .nice-col-#{$i} {
+        @include span-columns($i);
+    }
+}
+@for $i from 1 through 11 {
+    .nice-shift-#{$i} {
+        @include shift($i);
+    }
+}

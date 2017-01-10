@@ -1,0 +1,21 @@
+$colors: (
+    'info': $color-info,
+    'good': $color-good,
+    'warning': $color-warning,
+    'bad': $color-bad
+);
+
+.nice-alert {
+    margin: 0 0 20px 0;
+    padding: 15px;
+    border: 1px solid $color-border;
+    @include nice-border-radius($default-radius);
+
+    @each $type in (info, good, warning, bad) {
+        &.#{$type} {
+            background-color: lighten(map-get($colors, #{$type}), 40%);
+            color: darken(map-get($colors, #{$type}), 30%);
+            border-color: lighten(map-get($colors, #{$type}), 30%);    
+        }
+    }
+}

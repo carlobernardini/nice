@@ -1,0 +1,142 @@
+/**
+ * Nice! Mixins collection
+ **/
+
+@function calculateRem ($size) {
+    $remSize: $size / 16px;
+    @return $remSize * 1rem;
+}
+
+@mixin nice-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $family: $fonts-primary) {
+    font-family: $family;
+    font-style: $style;
+    font-variant: $variant;
+    font-weight: $weight;
+    font-size: $size;
+}
+
+@mixin nice-font-size ($size: 12px) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+
+@mixin nice-line-height ($height: 12px) {
+    line-height: $height;
+    line-height: calculateRem($height);
+}
+
+@mixin nice-transform ($params...) {
+    -webkit-transform:  $params;
+       -moz-transform:  $params;
+        -ms-transform:  $params;
+         -o-transform:  $params;
+            transform:  $params;
+}
+
+@mixin nice-box-sizing ($param) {
+    -webkit-box-sizing: $param;
+        moz-box-sizing: $param;
+            box-sizing: $param;
+}
+
+@mixin nice-transition ($params...) {
+    -webkit-transition: $params;
+       -moz-transition: $params;
+        -ms-transition: $params;
+         -o-transition: $params;
+            transition: $params;
+}
+
+@mixin nice-box-shadow ($params...) {
+    -webkit-box-shadow: $params;
+       -moz-box-shadow: $params;
+            box-shadow: $params;
+}
+
+@mixin nice-text-shadow ($params...) {
+    text-shadow: $params;
+}
+
+@mixin nice-border-radius ($radiuses...) {
+    -webkit-border-radius: $radiuses;
+       -moz-border-radius: $radiuses;
+            border-radius: $radiuses;
+    -webkit-background-clip: padding-box; 
+       -moz-background-clip: padding; 
+            background-clip: padding-box;
+}
+
+@mixin nice-opacity ($transparency) {
+    -khtml-opacity: $transparency;
+      -moz-opacity: $transparency;
+           opacity: $transparency;
+       $opacity-ie: $transparency * 100;
+            filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin nice-background-size ($param) {
+     -webkit-background-size: $param;
+        -moz-background-size: $param;
+          -o-background-size: $param;
+             background-size: $param;
+}
+
+@mixin nice-user-select ($param) {
+    -webkit-user-select: $param;
+       -moz-user-select: $param;
+        -ms-user-select: $param;
+         -o-user-select: $param;
+            user-select: $param;
+}
+
+@mixin nice-placeholder-color {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin nice-linear-gradient ($color-from, $color-to) {
+    background: -webkit-linear-gradient($color-from, $color-to);
+    background: -o-linear-gradient($color-from, $color-to);
+    background: -moz-linear-gradient($color-from, $color-to);
+    background: linear-gradient($color-from, $color-to);
+}
+
+@mixin nice-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+
+
+/**
+ * @example when-breakpoint(medium) { width: 50% }
+ **/
+@mixin nice-breakpoint ($point) {
+    @if $point == large {
+        @media (min-width: 64.375em) { 
+            @content; 
+        }
+    }
+    @else if $point == medium {
+        @media (min-width: 50em) { 
+            @content; 
+        }
+    }
+    @else if $point == small {
+        @media (min-width: 37.5em)  {
+            @content; 
+        }
+    }
+}

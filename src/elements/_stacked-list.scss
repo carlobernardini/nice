@@ -1,0 +1,76 @@
+.nice-stacked-list {
+    padding: 0;
+    margin: 0;
+    background-color: $color-white;
+    list-style: none;
+    @include nice-border-radius($default-radius);
+    @include nice-box-shadow(0 1px 1px rgba(0,0,0,.2));
+
+    li, a {
+        display: block;
+        border-bottom: 1px solid lighten($color-border, 10%);
+        padding: 15px 15px;
+        position: relative;
+        @include nice-line-height(18px);
+
+        .badge {
+            float:right;
+            background-color: $gray-medium;
+            color: $color-white;
+            padding: 3px 8px;
+            margin: -3px;
+            @extend %display-inline-block;
+            @include nice-font($size: 13px, $weight: 600);
+            @include nice-border-radius(15px);
+            @include nice-transition(background-color 0.1s);
+
+            &.primary {
+                background-color: lighten($color-primary, 10%);
+            }
+            &.accent {
+                background-color: lighten($color-accent, 10%);
+            }
+            &.info {
+                background-color: lighten($color-info, 10%);
+            }
+            &.warning {
+                background-color: lighten($color-warning, 10%);
+            }
+            &.good {
+                background-color: lighten($color-good, 10%);
+            }
+            &.bad {
+                background-color: lighten($color-bad, 10%);
+            }
+        }
+        &:hover {
+            .badge {
+                background-color: $color-brand;
+
+                &.primary {
+                    background-color: $color-primary;
+                }
+                &.accent {
+                    background-color: $color-accent;
+                }
+                &.info {
+                    background-color: $color-info;
+                }
+                &.warning {
+                    background-color: $color-warning;
+                }
+                &.good {
+                    background-color: $color-good;
+                }
+                &.bad {
+                    background-color: $color-bad;
+                }
+            }
+        }
+    }
+    &.condensed {
+        li, a {
+            padding: 10px 15px;
+        }
+    }
+}

@@ -1,0 +1,129 @@
+@mixin nice-tab-variation($color) {
+    background-color: $color;
+    color: $color-white;
+    @include nice-transition(background-color 0.3s);
+
+    &:hover {
+        background-color: lighten($color, 10%);
+    }
+}
+
+.nice-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid $color-border;
+    @extend %clearfix;
+
+    li {
+        margin-bottom: -1px;
+        position: relative;
+        float: left;
+        display: block;
+
+        a {
+            text-align: center;
+            min-width: 80px;
+            display: block;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin-right: 2px;
+            position: relative;
+            white-space: nowrap;
+            outline: none;
+            border: 1px solid transparent;
+            @include nice-line-height(20px);
+            @include nice-border-radius($default-radius $default-radius 0 0);
+
+            &:hover {
+                background-color: $gray-light;
+            }
+            &.icon {
+                min-width: auto;
+                text-align: left;
+                padding-left: 30px;
+
+                &:before {
+                    position: absolute;
+                    left: 15px;
+                    top: 50%;
+                    margin-top: -10px;
+                }
+            }
+        }
+        &.current {
+            a {
+                background-color: $color-white;
+                border: 1px solid $color-border;
+                border-bottom-color: $color-white;
+                cursor: default;
+                color: $color-black;
+
+                &:hover {
+                    background-color: $color-white;
+                }
+            }
+        }
+        &.primary {
+            a {
+                @include nice-tab-variation($color-primary);
+            }
+        }
+        &.accent {
+            a {
+                @include nice-tab-variation($color-accent);
+            }
+        }
+        &.brand {
+            a {
+                @include nice-tab-variation($color-brand);
+            }
+        }
+    }
+    &.bold {
+        font-weight: 600;
+    }
+    &.small {
+        a {
+            min-width: 60px;
+            padding: 5px 10px;
+            @include nice-font-size(13px);
+
+            &.icon {
+                min-width: auto;
+
+                &:before {
+                    left: 12px;
+                    margin-top: -9px;
+                }
+            }
+        }
+    }
+}
+.nice-tabs-wrapper {
+    .nice-tabs {
+        border-bottom: none;
+    }
+    .nice-tabs-content {
+        border: 1px solid $color-border;
+        background-color: $color-white;
+        padding: 15px;
+        @include nice-border-radius(0 $default-radius $default-radius);
+    }
+    ul {
+        &.nice-tabs-content {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: none;
+                padding: 15px;
+
+                &.current {
+                    display: block;
+                }
+            }
+        }
+    }
+}

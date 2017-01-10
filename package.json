@@ -1,5 +1,5 @@
 {
-  "name": "nice!",
+  "name": "nice",
   "version": "1.0.0",
   "description": "A framework of reusable UI-elements",
   "main": "gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@tkgit-01.textkernel.local:bernardini/nice.git"
+    "url": "git@tkgit-01.textkernel.local:nice/nice.git"
   },
   "author": "Textkernel B.V.",
   "license": "ISC",

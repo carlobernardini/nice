@@ -4140,6 +4140,8 @@ code {
   -moz-background-clip: padding;
   background-clip: padding-box; }
   .nice-code-container code + .nice-code-title {
+    border: 1px solid #D0D1D5;
+    border-top: none;
     -webkit-border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
     border-radius: 0 0 3px 3px;
@@ -4148,8 +4150,10 @@ code {
     background-clip: padding-box; }
 
 .nice-code-container .nice-code-title {
-  background-color: #12BCD0;
-  color: #FFF;
+  border: 1px solid #D0D1D5;
+  border-bottom: none;
+  background-color: #F5F7F7;
+  color: #000;
   padding: 0 15px;
   font-size: 0.7em;
   font-weight: 600;
@@ -4162,6 +4166,7 @@ code {
   -moz-background-clip: padding;
   background-clip: padding-box; }
   .nice-code-container .nice-code-title + code {
+    border: 1px solid #D0D1D5;
     border-top: none;
     -webkit-border-radius: 0 0 3px 3px;
     -moz-border-radius: 0 0 3px 3px;
@@ -4172,11 +4177,19 @@ code {
   .nice-code-container .nice-code-title::before {
     position: relative;
     left: -5px; }
+  .nice-code-container .nice-code-title.brand, .nice-code-container .nice-code-title.good, .nice-code-container .nice-code-title.warning, .nice-code-container .nice-code-title.bad {
+    color: #FFF; }
+  .nice-code-container .nice-code-title.brand {
+    border-color: #2ecc71;
+    background-color: #2ecc71; }
   .nice-code-container .nice-code-title.good {
+    border-color: #2ecc71;
     background-color: #2ecc71; }
   .nice-code-container .nice-code-title.warning {
+    border-color: #f39c12;
     background-color: #f39c12; }
   .nice-code-container .nice-code-title.bad {
+    border-color: #e74c3c;
     background-color: #e74c3c; }
   .nice-code-container .nice-code-title .nice-code-syntax {
     float: right;

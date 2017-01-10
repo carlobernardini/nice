@@ -151,13 +151,16 @@
             </div>
             <div class="nice-row" id="nice-page-header">
                     <h2>Page header</h2>
-                    <div class="nice-col-3">
-                        <p class="nice-alert info">
+                    <div class="nice-col-12">
+                        <p>
                             You can see an example of this component at the top of this page. The header component is responsive out of the box, meaning the menu becomes off-canvas and toggleable on mobile views.
                         </p>
+                        <p>
+                            In case you need the header to stick to the top of the viewport, apply the additional <code class="inline">fixed</code> class to the top level header element. Also, be sure to give the body a top-padding of 60 pixels (i.e. <code class="inline">body { padding-top: 60px; }</code>).
+                        </p>
                     </div>
-                    <div class="nice-col-9">
-                        <code>&lt;header&gt;
+                    <div class="nice-col-12">
+                        <code>&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
         &lt;h1 class=&quot;<span class="main">nice-header-brand</span>&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;

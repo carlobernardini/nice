@@ -212,6 +212,11 @@ header,
     .nice-header-toggle {
         display: none;
     }
+    .nice-header-product {
+        float: right;
+        padding-left: 15px;
+        @include nice-font($weight: 400, $size: 1em);
+    }
 }
 
 @include media($mobile) {
@@ -258,11 +263,12 @@ header,
             background-color: $color-accent;
             @include nice-transition(left .2s ease-out);
 
-            > form, ul, div {
+            > form, ul, div, span {
                 float: none;
             }
         }
         .nice-header-form {
+            padding: 0 20px;
             background-color: lighten($color-accent, 15%);
 
             input[type="text"] {
@@ -283,6 +289,7 @@ header,
                     border-bottom-color: $color-white;
                     width: 100%;
                     margin-left: 0;
+                    @include nice-box-shadow(none);
                 }
             }
             .nice-header-input-wrapper {
@@ -375,6 +382,11 @@ header,
                     }
                 }
             }
+            @for $i from 3 to 5 {
+                &:nth-child(#{$i}) {
+                    height: calc(100% - #{($i - 1) * 60 + 'px'});
+                }
+            }
         }
         .nice-header-toggle {
             display: block;
@@ -427,6 +439,17 @@ header,
             &:active {
                 background-color: transparent;
                 @include nice-box-shadow(none);
+            }
+        }
+        .nice-header-product {
+            display: block;
+            padding: 0 20px;
+            color: $color-white;
+            background-color: lighten($color-accent, 15%);
+            @include nice-font($size: .9em, $weight: 600);
+
+            + .nice-header-form {
+                border-top: 1px solid lighten($color-accent, 30%);
             }
         }
     }

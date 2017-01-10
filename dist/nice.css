@@ -201,6 +201,9 @@ h6 {
     -o-transform: rotate(-90deg);
     transform: rotate(-90deg); } }
 
+body {
+  font-family: "Open Sans", sans-serif, helvetica; }
+
 a {
   color: #009fc3;
   text-decoration: none;

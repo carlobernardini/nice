@@ -1,0 +1,68 @@
+code {
+    display: block;
+    position: relative;
+    padding: 15px;
+    border: 1px solid $color-border;
+    background-color: $color-white;
+    font-size: 12px;
+    line-height: 18px;
+    color: $gray-dark;
+    overflow: auto;
+    white-space: pre-wrap;
+    @include nice-transition(max-height 0.5s);
+    @include nice-border-radius($default-radius);
+
+    &.restrain-s {
+        max-height: 250px;
+    }
+    &.restrain-m {
+        max-height: 500px;
+    }
+    &.restrain-l {
+        max-height: 750px;
+    }
+    &.restrain-max {
+        max-height: 100%;
+    }
+}
+.nice-code-container {
+    code {
+        border-bottom: none;
+        @include nice-border-radius($default-radius $default-radius 0 0);
+
+        + .nice-code-title {
+            @include nice-border-radius(0 0 $default-radius $default-radius);
+        }
+    }
+    .nice-code-title {
+        background-color: $color-brand;
+        color: $color-white;
+        padding: 0 15px;
+        font-size: 0.7em;
+        font-weight: 600;
+        @include nice-line-height(32px);
+        @include nice-border-radius($default-radius $default-radius 0 0);
+
+        + code {
+            border-top: none;
+            @include nice-border-radius(0 0 $default-radius $default-radius);
+        }
+        &::before {
+            position: relative;
+            left: -5px;
+        }
+        &.good {
+            background-color: $color-good;
+        }
+        &.warning {
+            background-color: $color-warning;
+        }
+        &.bad {
+            background-color: $color-bad;
+        }
+        .nice-code-syntax {
+            float: right;
+            @include nice-border-radius($default-radius);
+        }
+    }
+}

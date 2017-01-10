@@ -160,7 +160,7 @@
                         </p>
                     </div>
                     <div class="nice-col-12">
-                        <code>&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
+                        <code class="docs">&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
         &lt;h1 class=&quot;<span class="main">nice-header-brand</span>&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;
@@ -229,7 +229,7 @@
                     <a href="#" class="nice-btn link">Link button</a>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">primary link</span>"&gt;
+                    <code class="docs">&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">primary link</span>"&gt;
     Primary button
 &lt;/a&gt;
 &lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">icon fa-check</span>"&gt;
@@ -298,7 +298,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
     &lt;input type=&quot;text&quot; placeholder=&quot;Nice input...&quot; /&gt;
 &lt;/div&gt;
 &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
@@ -402,7 +402,7 @@
                     </p>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
     &lt;ul class=&quot;<span class="main">nice-tabs</span> <span class="variation">small bold</span>&quot;&gt;
         &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-home</span>&quot;&gt;First&lt;/a&gt;
@@ -517,7 +517,7 @@
                     </nav>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;nav&gt;
+                    <code class="docs">&lt;nav&gt;
     &lt;ul class=&quot;<span class="main">nice-pagination</span> <span class="variation">bordered small large</span>&quot; role=&quot;navigation&quot;&gt;
         &lt;li class=&quot;<span class="variation">disabled</span>&quot;&gt;
             &lt;span&gt;
@@ -641,7 +641,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;div class="<span class="main">nice-progress</span> <span class="variation">accent brand good bad pulse</span>"&gt;
+                    <code class="docs">&lt;div class="<span class="main">nice-progress</span> <span class="variation">accent brand good bad pulse</span>"&gt;
     &lt;div class="<span class="main">nice-progress-fill</span>" style="width: 65%;"&gt;
         65%
     &lt;/div&gt;
@@ -657,7 +657,80 @@
                     <div class="nice-loading large" style="margin: 15px 0;">&nbsp;</div>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;div class="<span class="main">nice-loading</span> <span class="variation">medium large brand primary good bad</span>"&gt;&lt;/div&gt;</code>
+                    <code class="docs">&lt;div class="<span class="main">nice-loading</span> <span class="variation">medium large brand primary good bad</span>"&gt;&lt;/div&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-code-blocks">
+                <h2>Code blocks</h2>
+                <div class="nice-col-6">
+                    <div class="nice-code-container">
+                        <code class="restrain-s">{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Product set",
+    "type": "array",
+    "items": {
+        "title": "Product",
+        "type": "object",
+        "properties": {
+            "id": {
+                "description": "The unique identifier for a product",
+                "type": "number"
+            },
+            "name": {
+                "type": "string"
+            },
+            "price": {
+                "type": "number",
+                "minimum": 0,
+                "exclusiveMinimum": true
+            },
+            "tags": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minItems": 1,
+                "uniqueItems": true
+            },
+            "dimensions": {
+                "type": "object",
+                "properties": {
+                    "length": {"type": "number"},
+                    "width": {"type": "number"},
+                    "height": {"type": "number"}
+                },
+                "required": ["length", "width", "height"]
+            },
+            "warehouseLocation": {
+                "description": "Coordinates of the warehouse with the product",
+                "$ref": "http://json-schema.org/geo"
+            }
+        },
+        "required": ["id", "name", "price"]
+    }
+}
+                        </code>
+                        <div class="nice-code-title icon fa-code">
+                            Sample API response
+                            <span class="nice-code-syntax">
+                                JSON
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="nice-col-6">
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-code-container</span>&quot;&gt;
+    &lt;code class=&quot;<span class="variation">restrain-s</span>&quot;&gt
+        Your code goes here...
+    &lt;/code&gt;
+    &lt;div class=&quot;<span class="main">nice-code-title</span> <span class="variation">icon fa-code</span>&quot;&gt;
+        Sample API response
+        &lt;span class=&quot;<span class="main">nice-code-syntax</span>&quot;&gt;
+            JSON
+        &lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                    </code>
                 </div>
             </div>
             <div class="nice-row" id="nice-tables">
@@ -696,7 +769,7 @@
                     </table>
                 </div>
                 <div class="nice-col-6">
-                    <code>&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
+                    <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
     &lt;thead&gt;
         &lt;tr&gt;
             &lt;th&gt;#&lt;/th&gt;

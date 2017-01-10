@@ -4099,3 +4099,90 @@ button,
     -webkit-animation-iteration-count: infinite;
     -moz-animation-iteration-count: infinite;
     animation-iteration-count: infinite; }
+
+code {
+  display: block;
+  position: relative;
+  padding: 15px;
+  border: 1px solid #D0D1D5;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 18px;
+  color: #333333;
+  overflow: auto;
+  white-space: pre-wrap;
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -ms-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  code.restrain-s {
+    max-height: 250px; }
+  code.restrain-m {
+    max-height: 500px; }
+  code.restrain-l {
+    max-height: 750px; }
+  code.restrain-max {
+    max-height: 100%; }
+
+.nice-code-container code {
+  border-bottom: none;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-code-container code + .nice-code-title {
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+
+.nice-code-container .nice-code-title {
+  background-color: #12BCD0;
+  color: #FFF;
+  padding: 0 15px;
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 32px;
+  line-height: 2rem;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-code-container .nice-code-title + code {
+    border-top: none;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+  .nice-code-container .nice-code-title::before {
+    position: relative;
+    left: -5px; }
+  .nice-code-container .nice-code-title.good {
+    background-color: #2ecc71; }
+  .nice-code-container .nice-code-title.warning {
+    background-color: #f39c12; }
+  .nice-code-container .nice-code-title.bad {
+    background-color: #e74c3c; }
+  .nice-code-container .nice-code-title .nice-code-syntax {
+    float: right;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }

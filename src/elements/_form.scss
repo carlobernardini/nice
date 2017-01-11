@@ -1,7 +1,7 @@
 %form-control {
     border: 1px solid $color-border;
     outline: none;
-    padding: 0 5px;
+    padding: 5px;
     font-family: $fonts-primary;
     font-size: 1em;
     width: 100%;
@@ -22,13 +22,13 @@ input {
         &[type="text"],
         &[type="password"] {
             @extend %form-control;
-            @include nice-line-height(30px);
+            @include nice-line-height(18px);
         }
     }
 }
 select {
     &.nice-form-control {
-        height: calculateRem(30px);
+        height: calculateRem(32px);
         @extend %form-control;
 
         &[multiple] {

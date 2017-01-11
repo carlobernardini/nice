@@ -52,9 +52,9 @@ header,
         padding: 0 15px;
 
         input[type="text"] {
-            display: inline;
+            display: inline-block;
             border-color: $gray-light;
-            padding: 0 10px;
+            padding: 5px 10px;
             @include nice-border-radius(15px);
             @include nice-transition(border-color 0.3s, margin-left 0.3s, width 0.3s);
 

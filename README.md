@@ -12,4 +12,7 @@ __Why use Nice! in your project?__
 __What it's not meant for__
 * Selling customization for any of our products
 
+__Contact us__
+[nice@textkernel.nl](mailto:nice@textkernel.nl)
+
 [__Project wiki__](http://tkgit-01.textkernel.local/bernardini/nice/wikis/home)

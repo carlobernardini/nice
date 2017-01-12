@@ -24,6 +24,16 @@ code {
     &.restrain-max {
         max-height: 100%;
     }
+    &.inline {
+        display: inline;
+        background-color: $color-white;
+        line-height: inherit;
+        border: 1px solid $color-border;
+        padding: 3px 3px;
+        color: $color-bad;
+        font-size: inherit;
+        @include nice-border-radius(#{$default-radius - 1}px);
+    }
 }
 .nice-code-container {
     margin-bottom: 20px;

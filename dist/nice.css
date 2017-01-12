@@ -4245,6 +4245,20 @@ code {
     max-height: 750px; }
   code.restrain-max {
     max-height: 100%; }
+  code.inline {
+    display: inline;
+    background-color: #FFF;
+    line-height: inherit;
+    border: 1px solid #D0D1D5;
+    padding: 3px 3px;
+    color: #e74c3c;
+    font-size: inherit;
+    -webkit-border-radius: 2pxpx;
+    -moz-border-radius: 2pxpx;
+    border-radius: 2pxpx;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
 
 .nice-code-container {
   margin-bottom: 20px; }

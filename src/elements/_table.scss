@@ -4,8 +4,12 @@ table {
         border-collapse: collapse;
         width: 100%;
         max-width: 100%;
+        margin-bottom: 20px;
         @include nice-box-sizing(border-box);
 
+        &:last-child {
+            margin-bottom: 0;
+        }
         thead {
             tr {
                 th, td {

@@ -2765,6 +2765,85 @@ a {
 .nice-shift-11 {
   margin-left: 93.82785%; }
 
+@media screen and (min-width: 20em) and (max-width: 720px) {
+  .nice-col-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-1:last-child {
+      margin-right: 0; }
+  .nice-col-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-2:last-child {
+      margin-right: 0; }
+  .nice-col-3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-3:last-child {
+      margin-right: 0; }
+  .nice-col-4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-4:last-child {
+      margin-right: 0; }
+  .nice-col-5 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-5:last-child {
+      margin-right: 0; }
+  .nice-col-6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-6:last-child {
+      margin-right: 0; }
+  .nice-col-7 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-7:last-child {
+      margin-right: 0; }
+  .nice-col-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-8:last-child {
+      margin-right: 0; }
+  .nice-col-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-9:last-child {
+      margin-right: 0; }
+  .nice-col-10 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-10:last-child {
+      margin-right: 0; }
+  .nice-col-11 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-11:last-child {
+      margin-right: 0; } }
+
 .nice-flex-container {
   display: -webkit-box;
   display: -moz-box;
@@ -3867,9 +3946,12 @@ table.nice-table {
   border-collapse: collapse;
   width: 100%;
   max-width: 100%;
+  margin-bottom: 20px;
   -webkit-box-sizing: border-box;
   moz-box-sizing: border-box;
   box-sizing: border-box; }
+  table.nice-table:last-child {
+    margin-bottom: 0; }
   table.nice-table thead tr th, table.nice-table thead tr td {
     text-align: left;
     border-bottom: 1px solid #D0D1D5;
@@ -4136,71 +4218,72 @@ code {
   code.restrain-max {
     max-height: 100%; }
 
-.nice-code-container code {
-  border-bottom: none;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-  .nice-code-container code + .nice-code-title {
+.nice-code-container {
+  margin-bottom: 20px; }
+  .nice-code-container code {
+    border-bottom: none;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-code-container code + .nice-code-title {
+      border: 1px solid #D0D1D5;
+      border-top: none;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+  .nice-code-container .nice-code-heading {
     border: 1px solid #D0D1D5;
-    border-top: none;
-    -webkit-border-radius: 0 0 3px 3px;
-    -moz-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
+    border-bottom: none;
+    background-color: #F5F7F7;
+    color: #000;
+    padding: 0 15px;
+    font-size: 0.7em;
+    font-weight: 600;
+    line-height: 32px;
+    line-height: 2rem;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
-
-.nice-code-container .nice-code-heading {
-  border: 1px solid #D0D1D5;
-  border-bottom: none;
-  background-color: #F5F7F7;
-  color: #000;
-  padding: 0 15px;
-  font-size: 0.7em;
-  font-weight: 600;
-  line-height: 32px;
-  line-height: 2rem;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-  .nice-code-container .nice-code-heading + code {
-    border: 1px solid #D0D1D5;
-    border-top: none;
-    -webkit-border-radius: 0 0 3px 3px;
-    -moz-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box; }
-  .nice-code-container .nice-code-heading::before {
-    position: relative;
-    left: -5px; }
-  .nice-code-container .nice-code-heading.brand, .nice-code-container .nice-code-heading.good, .nice-code-container .nice-code-heading.warning, .nice-code-container .nice-code-heading.bad {
-    color: #FFF; }
-  .nice-code-container .nice-code-heading.brand {
-    border-color: #2ecc71;
-    background-color: #2ecc71; }
-  .nice-code-container .nice-code-heading.good {
-    border-color: #2ecc71;
-    background-color: #2ecc71; }
-  .nice-code-container .nice-code-heading.warning {
-    border-color: #f39c12;
-    background-color: #f39c12; }
-  .nice-code-container .nice-code-heading.bad {
-    border-color: #e74c3c;
-    background-color: #e74c3c; }
-  .nice-code-container .nice-code-heading .nice-code-syntax {
-    float: right;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box; }
+    .nice-code-container .nice-code-heading + code {
+      border: 1px solid #D0D1D5;
+      border-top: none;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-code-container .nice-code-heading::before {
+      position: relative;
+      left: -5px; }
+    .nice-code-container .nice-code-heading.brand, .nice-code-container .nice-code-heading.good, .nice-code-container .nice-code-heading.warning, .nice-code-container .nice-code-heading.bad {
+      color: #FFF; }
+    .nice-code-container .nice-code-heading.brand {
+      border-color: #2ecc71;
+      background-color: #2ecc71; }
+    .nice-code-container .nice-code-heading.good {
+      border-color: #2ecc71;
+      background-color: #2ecc71; }
+    .nice-code-container .nice-code-heading.warning {
+      border-color: #f39c12;
+      background-color: #f39c12; }
+    .nice-code-container .nice-code-heading.bad {
+      border-color: #e74c3c;
+      background-color: #e74c3c; }
+    .nice-code-container .nice-code-heading .nice-code-syntax {
+      float: right;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }

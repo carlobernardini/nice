@@ -26,6 +26,8 @@ code {
     }
 }
 .nice-code-container {
+    margin-bottom: 20px;
+
     code {
         border-bottom: none;
         @include nice-border-radius($default-radius $default-radius 0 0);

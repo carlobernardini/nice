@@ -15,3 +15,11 @@
         @include shift($i);
     }
 }
+
+@include media($mobile) {
+    @for $i from 1 through 11 {
+        .nice-col-#{$i} {
+            @include span-columns(12);
+        }
+    }
+}

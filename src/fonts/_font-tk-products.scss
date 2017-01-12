@@ -4,6 +4,8 @@ $product-jobfeed: "\e902";
 $product-match: "\e903";
 $product-search: "\e904";
 $product-sourcebox: "\e905";
+$product-wte: "\e906";
+$product-textkernel: "\e907";
 
 @font-face {
     font-family: 'TKProducts';
@@ -50,6 +52,16 @@ $product-sourcebox: "\e905";
     &.sourcebox {
         &:before {
             content: $product-sourcebox;
+        }
+    }
+    &.wte {
+        &:before {
+            content: $product-wte;
+        }
+    }
+    &.textkernel {
+        &:before {
+            content: $product-textkernel;
         }
     }
 }

@@ -2642,6 +2642,10 @@ a {
     content: ""; }
   .product-icon.sourcebox:before {
     content: ""; }
+  .product-icon.wte:before {
+    content: ""; }
+  .product-icon.textkernel:before {
+    content: ""; }
 
 .nice-container {
   max-width: 68em;

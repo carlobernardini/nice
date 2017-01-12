@@ -2619,6 +2619,30 @@ a {
   font-weight: 500;
   font-style: normal; }
 
+@font-face {
+  font-family: 'TKProducts';
+  src: url("fonts/tk-products/tk-products.eot?1313ij");
+  src: url("fonts/tk-products/tk-products.eot?1313ij#iefix") format("embedded-opentype"), url("fonts/tk-products/tk-products.ttf?1313ij") format("truetype"), url("fonts/tk-products/tk-products.woff?1313ij") format("woff"), url("fonts/tk-products/tk-products.svg?1313ij#TKProducts") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.product-icon {
+  font-style: normal; }
+  .product-icon::before {
+    font-family: TKProducts; }
+  .product-icon.extract:before {
+    content: ""; }
+  .product-icon.harvester:before {
+    content: ""; }
+  .product-icon.jobfeed:before {
+    content: ""; }
+  .product-icon.match:before {
+    content: ""; }
+  .product-icon.search:before {
+    content: ""; }
+  .product-icon.sourcebox:before {
+    content: ""; }
+
 .nice-container {
   max-width: 68em;
   margin-left: auto;

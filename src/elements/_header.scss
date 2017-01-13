@@ -279,7 +279,7 @@ header,
                 color: $color-white;
                 border-color: transparent;
                 background-color: transparent;
-                padding: 0;
+                padding: 5px 0;
                 @include nice-box-shadow(none);
                 @include nice-border-radius(0);
                 @include nice-transition(border-bottom-color 0.3s);

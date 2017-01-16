@@ -59,3 +59,65 @@ button,
         }
     }
 }
+.nice-btn-group {    
+    margin: 15px 0;
+    @extend %clearfix;
+
+    > {
+        .nice-btn {
+            position: relative;
+            float: left;
+
+            &:not(:first-child):not(:last-child) {
+                @include nice-border-radius(0);
+            }
+            &:first-child {
+                @include nice-border-radius($default-radius 0 0 $default-radius);
+            }
+            &:last-child {
+                @include nice-border-radius(0 $default-radius $default-radius 0);
+            }
+            + .nice-btn {
+                margin-left: -1px;
+            }
+            &:hover {
+                z-index: 2;
+            }
+        }
+    }
+    &.stacked {
+        > {
+            .nice-btn {
+                float: none;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                margin-left: 0;
+
+                &:first-child {
+                    @include nice-border-radius($default-radius $default-radius 0 0);
+                }
+                &:last-child {
+                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                }
+                + .nice-btn {
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+    &.justified {
+        display: table;
+        table-layout: fixed;
+        border-collapse: separate;
+        width: 100%;
+
+        > {
+            .nice-btn {
+                display: table-cell;
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+}

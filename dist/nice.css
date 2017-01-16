@@ -31,15 +31,15 @@ header .nice-header-brand,
   *display: inline-block;
   zoom: 1; }
 
-.nice-tabs, nav {
+.nice-tabs, nav, .nice-btn-group {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .nice-tabs:before, nav:before, .nice-tabs:after, nav:after {
+  .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-tabs:after, nav:after, .nice-btn-group:after {
     content: "";
     display: table; }
-  .nice-tabs:after, nav:after {
+  .nice-tabs:after, nav:after, .nice-btn-group:after {
     clear: both;
     content: ".";
     display: block;
@@ -4123,6 +4123,68 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #d97818;
       -moz-box-shadow: inset 0px 2px 1px #d97818;
       box-shadow: inset 0px 2px 1px #d97818; }
+
+.nice-btn-group {
+  margin: 15px 0; }
+  .nice-btn-group > .nice-btn {
+    position: relative;
+    float: left; }
+    .nice-btn-group > .nice-btn:not(:first-child):not(:last-child) {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn:first-child {
+      -webkit-border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn:last-child {
+      -webkit-border-radius: 0 3px 3px 0;
+      -moz-border-radius: 0 3px 3px 0;
+      border-radius: 0 3px 3px 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn + .nice-btn {
+      margin-left: -1px; }
+    .nice-btn-group > .nice-btn:hover {
+      z-index: 2; }
+  .nice-btn-group.stacked > .nice-btn {
+    float: none;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0; }
+    .nice-btn-group.stacked > .nice-btn:first-child {
+      -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group.stacked > .nice-btn:last-child {
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group.stacked > .nice-btn + .nice-btn {
+      margin-top: -1px; }
+  .nice-btn-group.justified {
+    display: table;
+    table-layout: fixed;
+    border-collapse: separate;
+    width: 100%; }
+    .nice-btn-group.justified > .nice-btn {
+      display: table-cell;
+      float: none;
+      width: 100%; }
 
 .nice-alert {
   margin: 0 0 20px 0;

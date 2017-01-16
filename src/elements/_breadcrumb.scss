@@ -1,0 +1,28 @@
+.nice-breadcrumb {
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 5px 10px;
+    background-color: $color-white;
+    @include nice-border-radius($default-radius);
+
+    li {
+        @extend %display-inline-block;
+
+        a {
+            &.current {
+                color: $color-black;
+            }
+        }
+        + li {
+            &:before {
+                font-family: FontAwesome;
+                content: "\f105";
+                color: $gray-medium;
+                margin: 0 5px;
+            }
+        }
+    }
+    &:before {
+        margin-right: 5px;
+    }
+}

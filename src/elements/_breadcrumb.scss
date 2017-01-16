@@ -2,7 +2,7 @@
     list-style: none;
     margin: 0 0 15px 0;
     padding: 5px 10px;
-    background-color: $color-white;
+    background-color: $gray-light;
     @include nice-border-radius($default-radius);
 
     li {
@@ -20,9 +20,19 @@
                 color: $gray-medium;
                 margin: 0 5px;
             }
+            &:hover {
+                &:before {
+                    color: $color-link;
+                }
+            }
         }
     }
-    &:before {
-        margin-right: 5px;
+    &.icon {
+        &:before {
+            margin-right: 5px;
+        }
+    }
+    &.small {
+        @include nice-font-size($default-font-size-small);
     }
 }

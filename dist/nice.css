@@ -3905,7 +3905,7 @@ textarea.nice-form-control {
   list-style: none;
   margin: 0 0 15px 0;
   padding: 5px 10px;
-  background-color: #FFF;
+  background-color: #ECF0F1;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -3919,8 +3919,13 @@ textarea.nice-form-control {
     content: "\f105";
     color: #D0D1D5;
     margin: 0 5px; }
-  .nice-breadcrumb:before {
+  .nice-breadcrumb li + li:hover:before {
+    color: #009fc3; }
+  .nice-breadcrumb.icon:before {
     margin-right: 5px; }
+  .nice-breadcrumb.small {
+    font-size: 13px;
+    font-size: 0.8125rem; }
 
 .nice-pagination {
   list-style: none;

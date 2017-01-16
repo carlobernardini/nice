@@ -5,7 +5,7 @@ summary {
         float: left;
         background-color: $color-white;
         border: 1px solid $color-border;
-        margin: 0 5px;
+        margin: 0 5px 15px;
         @include nice-border-radius($default-radius);
         @include nice-box-shadow(0 1px 1px rgba(0,0,0,.1));
 

@@ -4284,7 +4284,7 @@ summary.nice-card {
   float: left;
   background-color: #FFF;
   border: 1px solid #D0D1D5;
-  margin: 0 5px;
+  margin: 0 5px 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;

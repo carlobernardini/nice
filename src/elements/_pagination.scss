@@ -48,14 +48,14 @@ nav {
     &.small {
         li {
             span, a {
-                font-size: .8em;
+                @include nice-font-size($default-font-size-small);
             }
         }
     }
     &.large {
         li {
             span, a {
-                font-size: 1.2em;
+                @include nice-font-size($default-font-size-large);
             }
         }
     }

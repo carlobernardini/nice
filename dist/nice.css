@@ -3960,9 +3960,11 @@ textarea.nice-form-control {
       cursor: default;
       text-shadow: 1px 1px 0 #FFF; }
   .nice-pagination.small li span, .nice-pagination.small li a {
-    font-size: .8em; }
+    font-size: 13px;
+    font-size: 0.8125rem; }
   .nice-pagination.large li span, .nice-pagination.large li a {
-    font-size: 1.2em; }
+    font-size: 18px;
+    font-size: 1.125rem; }
   .nice-pagination.bordered li span, .nice-pagination.bordered li a {
     margin: 0;
     position: relative;
@@ -4123,6 +4125,22 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #d97818;
       -moz-box-shadow: inset 0px 2px 1px #d97818;
       box-shadow: inset 0px 2px 1px #d97818; }
+  button.small,
+  .nice-btn.small,
+  .nice-btn-group.small > .nice-btn {
+    padding: 0 5px;
+    line-height: 18px;
+    line-height: 1.125rem;
+    font-size: 13px;
+    font-size: 0.8125rem; }
+  button.large,
+  .nice-btn.large,
+  .nice-btn-group.large > .nice-btn {
+    padding: 0 15px;
+    line-height: 42px;
+    line-height: 2.625rem;
+    font-size: 18px;
+    font-size: 1.125rem; }
 
 .nice-btn-group {
   margin: 15px 0; }

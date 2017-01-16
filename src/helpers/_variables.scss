@@ -2,10 +2,12 @@ $font-path:             'fonts' !default;
 $fa-font-path:          $font-path !default;
 
 // Fonts
-$fonts-primary:			'Open Sans', sans-serif, helvetica;
-$fonts-brand:           Colaborate, 'Open Sans', sans-serif;
-$fonts-icon:            FontAwesome;
-$default-font-weight:   400;
+$fonts-primary:             'Open Sans', sans-serif, helvetica;
+$fonts-brand:               Colaborate, 'Open Sans', sans-serif;
+$fonts-icon:                FontAwesome;
+$default-font-weight:       400;
+$default-font-size-small:   13px;
+$default-font-size-large:   18px;
 
 $mobile-size:           em(320);
 $tablet-size:           720px;

@@ -58,6 +58,16 @@ button,
             @include nice-box-shadow(inset 0px 2px 1px darken($color-primary, 5%));
         }
     }
+    &.small {
+        padding: 0 5px;
+        @include nice-line-height(18px);
+        @include nice-font-size($default-font-size-small);
+    }
+    &.large {
+        padding: 0 15px;
+        @include nice-line-height(42px);
+        @include nice-font-size($default-font-size-large);
+    }
 }
 .nice-btn-group {    
     margin: 15px 0;
@@ -117,6 +127,20 @@ button,
                 display: table-cell;
                 float: none;
                 width: 100%;
+            }
+        }
+    }
+    &.small {
+        > {
+            .nice-btn {
+                @extend .nice-btn.small;
+            }
+        }
+    }
+    &.large {
+        > {
+            .nice-btn {
+                @extend .nice-btn.large;
             }
         }
     }

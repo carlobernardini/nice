@@ -16,6 +16,7 @@ table {
                     text-align: left;
                     border-bottom: 1px solid $color-border;
                     padding: 0 10px;
+                    background-color: $color-white;
                     @include nice-font($weight: 600);
                     @include nice-line-height(36px);
                 }

@@ -4378,9 +4378,9 @@ summary.nice-card {
   summary.nice-card .nice-card-content {
     margin: -5px 0 0;
     padding: 15px; }
-  div.nice-card.has-links,
-  article.nice-card.has-links,
-  summary.nice-card.has-links {
+  div.nice-card.has-controls,
+  article.nice-card.has-controls,
+  summary.nice-card.has-controls {
     padding-bottom: 42px; }
   div.nice-card.primary .nice-card-title,
   article.nice-card.primary .nice-card-title,

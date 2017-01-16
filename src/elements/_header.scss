@@ -223,7 +223,7 @@ header,
     }
 }
 
-@include media($mobile) {
+@include media($mobile-and-tablet) {
     body {
         padding-left: 15px;
         padding-right: 15px;
@@ -275,36 +275,6 @@ header,
             padding: 0 20px;
             background-color: lighten($color-accent, 15%);
 
-            input[type="text"] {
-                color: $color-white;
-                border-color: transparent;
-                background-color: transparent;
-                padding: 5px 0;
-                @include nice-box-shadow(none);
-                @include nice-border-radius(0);
-                @include nice-transition(border-bottom-color 0.3s);
-                @include nice-placeholder-color {
-                    color: $gray-vlight;
-                }
-
-                &:focus,
-                &:active {
-                    border-color: transparent;
-                    border-bottom-color: $color-white;
-                    width: 100%;
-                    margin-left: 0;
-                    @include nice-box-shadow(none);
-                }
-            }
-            .nice-header-input-wrapper {
-                button {
-                    right: 0;
-
-                    &:active {
-                        color: $color-white;
-                    }
-                }
-            }
             ~ .nice-header-menu {
                 height: calc(100% - 60px);    
             }
@@ -454,6 +424,60 @@ header,
 
             + .nice-header-form {
                 border-top: 1px solid lighten($color-accent, 30%);
+            }
+        }
+    }
+}
+
+@include media($mobile) {
+    header,
+    .nice-header {
+        .nice-header-form {
+            .nice-header-input-wrapper {
+                button {
+                    right: 0;
+
+                    &:active {
+                        color: $color-white;
+                    }
+                }
+            }
+            input[type="text"] {
+                color: $color-white;
+                border-color: transparent;
+                background-color: transparent;
+                padding: 5px 0;
+                @include nice-box-shadow(none);
+                @include nice-border-radius(0);
+                @include nice-transition(border-bottom-color 0.3s);
+                @include nice-placeholder-color {
+                    color: $gray-vlight;
+                }
+
+                &:focus,
+                &:active {
+                    border-color: transparent;
+                    border-bottom-color: $color-white;
+                    width: 100%;
+                    margin-left: 0;
+                    @include nice-box-shadow(none);
+                }
+            }
+        }
+    }
+}
+
+@include media($tablet) {
+    header,
+    .nice-header {
+        .nice-header-form {
+            width: 50%;
+            position: absolute;
+            right: calc(100% + 75px);
+            padding: 0 15px;
+            background-color: transparent;
+
+            input[type="text"] {
             }
         }
     }

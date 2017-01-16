@@ -1,0 +1,80 @@
+div, 
+article, 
+summary {
+    &.nice-card {
+        float: left;
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        margin: 0 5px;
+        @include nice-border-radius($default-radius);
+        @include nice-box-shadow(0 1px 1px rgba(0,0,0,.1));
+
+        .nice-card-title {
+            background-color: $color-accent;
+            color: $color-white;
+            padding: 10px 15px;
+            margin: -1px -1px 0 -1px;
+            @include nice-font-size(18px);
+            @include nice-border-radius($default-radius $default-radius 0 0);
+
+            h3 {
+                margin: 0;
+                font-weight: 600;
+                @include nice-font-size(18px);
+            }
+        }
+        .nice-card-links {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            border-top: 1px solid lighten($color-border, 10%);
+
+            > a {
+                padding: 10px 15px;
+                text-align: center;
+                display: table-cell;
+                @include nice-transition(background-color 0.2s, color 0.2s);
+
+                + a {
+                    border-left: 1px solid lighten($color-border, 10%);
+                    text-align: center;
+                }
+                &:hover {
+                    background-color: $gray-vlight;
+                }
+            }
+        }
+        > img {
+            margin: 0 -1px;
+        }
+        .nice-card-content {
+            margin: -5px 0 0;
+            padding: 15px;
+        }
+        &.primary {
+            .nice-card-title {
+                background-color: $color-primary;
+            }
+        }
+        &.brand {
+            .nice-card-title {
+                background-color: $color-brand;
+            }
+        }
+        &.good {
+            .nice-card-title {
+                background-color: $color-good;
+            }
+        }
+        &.warning {
+            .nice-card-title {
+                background-color: $color-warning;
+            }
+        }
+        &.bad {
+            .nice-card-title {
+                background-color: $color-bad;
+            }
+        }
+    }
+}

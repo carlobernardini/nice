@@ -2,6 +2,7 @@ div,
 article, 
 summary {
     &.nice-card {
+        position: relative;
         float: left;
         background-color: $color-white;
         border: 1px solid $color-border;
@@ -23,13 +24,37 @@ summary {
                 @include nice-font-size(18px);
             }
         }
+        .nice-card-sub {
+            background-color: $gray-vlight;
+            color: $gray-dark;
+            padding: 10px 15px;
+            font-size: .8em;
+            border-top: 1px solid $color-border;
+
+            &.icon {
+                position: relative;
+                padding-left: 40px;
+
+                &:before {
+                    color: $gray-medium;
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    @include nice-text-shadow(1px 1px 0 $color-white);
+                }
+            }
+        }
         .nice-card-links {
+            position: absolute;
+            bottom: 0;
             display: table;
             table-layout: fixed;
             width: 100%;
             border-top: 1px solid lighten($color-border, 10%);
+            background-color: $color-white;
 
             > a {
+                vertical-align: bottom;
                 padding: 10px 15px;
                 text-align: center;
                 display: table-cell;
@@ -50,6 +75,9 @@ summary {
         .nice-card-content {
             margin: -5px 0 0;
             padding: 15px;
+        }
+        &.has-links {
+            padding-bottom: 42px;
         }
         &.primary {
             .nice-card-title {

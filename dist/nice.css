@@ -4281,6 +4281,7 @@ button,
 div.nice-card,
 article.nice-card,
 summary.nice-card {
+  position: relative;
   float: left;
   background-color: #FFF;
   border: 1px solid #D0D1D5;
@@ -4316,16 +4317,41 @@ summary.nice-card {
       font-weight: 600;
       font-size: 18px;
       font-size: 1.125rem; }
+  div.nice-card .nice-card-sub,
+  article.nice-card .nice-card-sub,
+  summary.nice-card .nice-card-sub {
+    background-color: #F5F7F7;
+    color: #333333;
+    padding: 10px 15px;
+    font-size: .8em;
+    border-top: 1px solid #D0D1D5; }
+    div.nice-card .nice-card-sub.icon,
+    article.nice-card .nice-card-sub.icon,
+    summary.nice-card .nice-card-sub.icon {
+      position: relative;
+      padding-left: 40px; }
+      div.nice-card .nice-card-sub.icon:before,
+      article.nice-card .nice-card-sub.icon:before,
+      summary.nice-card .nice-card-sub.icon:before {
+        color: #D0D1D5;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        text-shadow: 1px 1px 0 #FFF; }
   div.nice-card .nice-card-links,
   article.nice-card .nice-card-links,
   summary.nice-card .nice-card-links {
+    position: absolute;
+    bottom: 0;
     display: table;
     table-layout: fixed;
     width: 100%;
-    border-top: 1px solid #ebebed; }
+    border-top: 1px solid #ebebed;
+    background-color: #FFF; }
     div.nice-card .nice-card-links > a,
     article.nice-card .nice-card-links > a,
     summary.nice-card .nice-card-links > a {
+      vertical-align: bottom;
       padding: 10px 15px;
       text-align: center;
       display: table-cell;
@@ -4352,6 +4378,10 @@ summary.nice-card {
   summary.nice-card .nice-card-content {
     margin: -5px 0 0;
     padding: 15px; }
+  div.nice-card.has-links,
+  article.nice-card.has-links,
+  summary.nice-card.has-links {
+    padding-bottom: 42px; }
   div.nice-card.primary .nice-card-title,
   article.nice-card.primary .nice-card-title,
   summary.nice-card.primary .nice-card-title {

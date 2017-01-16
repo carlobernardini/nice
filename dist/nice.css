@@ -3940,15 +3940,17 @@ textarea.nice-form-control {
       background-clip: padding-box; }
     .nice-breadcrumb li:hover > ul {
       display: block; }
-      .nice-breadcrumb li:hover > ul li a {
-        display: block;
-        padding: 0 10px;
-        white-space: nowrap;
-        line-height: 24px;
-        line-height: 1.5rem; }
-      .nice-breadcrumb li:hover > ul li:before {
-        content: none;
-        margin: 0; }
+      .nice-breadcrumb li:hover > ul li {
+        padding: 0; }
+        .nice-breadcrumb li:hover > ul li a {
+          display: block;
+          padding: 0 10px;
+          white-space: nowrap;
+          line-height: 32px;
+          line-height: 2rem; }
+        .nice-breadcrumb li:hover > ul li:before {
+          content: none;
+          margin: 0; }
   .nice-breadcrumb.icon:before {
     margin-right: 5px; }
   .nice-breadcrumb.small {

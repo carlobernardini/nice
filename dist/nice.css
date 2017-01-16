@@ -3904,7 +3904,7 @@ textarea.nice-form-control {
 .nice-breadcrumb {
   list-style: none;
   margin: 0 0 15px 0;
-  padding: 5px 10px;
+  padding: 0 10px;
   background-color: #ECF0F1;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -3912,15 +3912,43 @@ textarea.nice-form-control {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box; }
-  .nice-breadcrumb li a.current {
-    color: #000; }
-  .nice-breadcrumb li + li:before {
-    font-family: FontAwesome;
-    content: "\f105";
-    color: #D0D1D5;
-    margin: 0 5px; }
-  .nice-breadcrumb li + li:hover:before {
-    color: #009fc3; }
+  .nice-breadcrumb li {
+    padding: 5px 0;
+    position: relative; }
+    .nice-breadcrumb li a.current {
+      color: #000; }
+    .nice-breadcrumb li + li:before {
+      font-family: FontAwesome;
+      content: "\f105";
+      color: #D0D1D5;
+      margin: 0 5px; }
+    .nice-breadcrumb li + li:hover:before {
+      color: #009fc3; }
+    .nice-breadcrumb li > ul {
+      background-color: #ECF0F1;
+      padding: 0;
+      list-style: none;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-breadcrumb li:hover > ul {
+      display: block; }
+      .nice-breadcrumb li:hover > ul li a {
+        display: block;
+        padding: 0 10px;
+        white-space: nowrap;
+        line-height: 24px;
+        line-height: 1.5rem; }
+      .nice-breadcrumb li:hover > ul li:before {
+        content: none;
+        margin: 0; }
   .nice-breadcrumb.icon:before {
     margin-right: 5px; }
   .nice-breadcrumb.small {

@@ -3674,29 +3674,34 @@ textarea.nice-form-control {
 .nice-form-group {
   margin-bottom: 15px; }
 
-.nice-control-group > *:first-child {
-  -webkit-border-radius: 3px 0 0 3px;
-  -moz-border-radius: 3px 0 0 3px;
-  border-radius: 3px 0 0 3px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-
-.nice-control-group > *:last-child {
-  -webkit-border-radius: 0 3px 3px 0;
-  -moz-border-radius: 0 3px 3px 0;
-  border-radius: 0 3px 3px 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
-
-.nice-control-group > *:not(:first-child):not(:last-child) {
-  -webkit-border-radius: none;
-  -moz-border-radius: none;
-  border-radius: none;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
+.nice-control-group {
+  display: table;
+  white-space: nowrap; }
+  .nice-control-group > input.nice-form-control,
+  .nice-control-group > select.nice-form-control,
+  .nice-control-group > .nice-btn {
+    display: table-cell; }
+  .nice-control-group > *:first-child {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+  .nice-control-group > *:last-child {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+  .nice-control-group > *:not(:first-child):not(:last-child) {
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
 
 .nice-radio label,
 .nice-checkbox label {
@@ -4369,6 +4374,15 @@ summary.nice-card {
       article.nice-card .nice-card-links > a:hover,
       summary.nice-card .nice-card-links > a:hover {
         background-color: #F5F7F7; }
+  div.nice-card > div:last-child,
+  article.nice-card > div:last-child,
+  summary.nice-card > div:last-child {
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
   div.nice-card > img,
   article.nice-card > img,
   summary.nice-card > img {

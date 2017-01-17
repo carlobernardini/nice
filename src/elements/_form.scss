@@ -48,14 +48,24 @@ textarea {
     margin-bottom: 15px;
 }
 .nice-control-group {
-    > *:first-child {
-        @include nice-border-radius($default-radius 0 0 $default-radius);
-    }
-    > *:last-child {
-        @include nice-border-radius(0 $default-radius $default-radius 0);
-    }
-    > *:not(:first-child):not(:last-child) {
-        @include nice-border-radius(none);
+    display: table;
+    white-space: nowrap;
+
+    > {
+        input.nice-form-control, 
+        select.nice-form-control,
+        .nice-btn {
+            display: table-cell;
+        }
+        *:first-child {
+            @include nice-border-radius($default-radius 0 0 $default-radius);
+        }
+        *:last-child {
+            @include nice-border-radius(0 $default-radius $default-radius 0);
+        }
+        *:not(:first-child):not(:last-child) {
+            @include nice-border-radius(none);
+        }
     }
 }
 .nice-radio,

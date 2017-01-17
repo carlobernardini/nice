@@ -69,8 +69,15 @@ summary {
                 }
             }
         }
-        > img {
-            margin: 0 -1px;
+        > {
+            div {
+                &:last-child {
+                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                }
+            }
+            img {
+                margin: 0 -1px;
+            }
         }
         .nice-card-content {
             margin: -5px 0 0;

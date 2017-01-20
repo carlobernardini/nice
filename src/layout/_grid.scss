@@ -5,21 +5,27 @@
     @include fill-parent();
     @include row();
 }
-@for $i from 1 through 12 {
-    .nice-col-#{$i} {
-        @include span-columns($i);
-    }
-}
-@for $i from 1 through 11 {
-    .nice-shift-#{$i} {
-        @include shift($i);
+
+@mixin col($size) {
+    @for $i from 1 through 12 {
+        .nice-col-#{if($size != false, $size + '-', '')}#{$i} {
+            @include span-columns($i);
+        }
+        @if($i < 12) {
+            .nice-shift-#{if($size != false, $size + '-', '')}#{$i} {
+                @include shift($i);
+            }
+        }
     }
 }
 
-@include media($mobile) {
-    @for $i from 1 through 11 {
-        .nice-col-#{$i} {
-            @include span-columns(12);
-        }
+@for $i from 1 through 12 {
+    @include col(false);
+}
+
+
+@each $size in large, medium, small {
+    @include nice-breakpoint(#{$size}) {
+        @include col(#{$size});
     }
 }

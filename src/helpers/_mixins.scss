@@ -125,18 +125,18 @@
  **/
 @mixin nice-breakpoint ($point) {
     @if $point == large {
-        @media (min-width: 64.375em) { 
-            @content; 
+        @include media(min-width 64.375em) {
+            @content;
         }
     }
     @else if $point == medium {
-        @media (min-width: 50em) { 
-            @content; 
+        @include media(max-width 64.375em min-width 37.5em) {
+            @content;
         }
     }
     @else if $point == small {
-        @media (min-width: 37.5em)  {
-            @content; 
+        @media (max-width: 37.5em)  {
+            @content;
         }
     }
 }

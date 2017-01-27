@@ -3089,7 +3089,7 @@ a {
 header,
 .nice-header {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   background-color: #FFF;
   border-bottom: 1px solid #D0D1D5;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);

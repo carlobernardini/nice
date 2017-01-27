@@ -1,7 +1,7 @@
 header,
 .nice-header {
     position: relative;
-    z-index: 1;
+    z-index: 3;
     background-color: $color-white;
     border-bottom: 1px solid $color-border;
     @include nice-box-shadow(0 1px 3px rgba($color-black, 0.1));

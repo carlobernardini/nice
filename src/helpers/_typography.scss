@@ -36,3 +36,6 @@ h6 {
     letter-spacing: 1px;
     @include nice-font($family: $fonts-brand, $weight: 300);
 }
+.text-muted {
+    color: $color-muted;
+}

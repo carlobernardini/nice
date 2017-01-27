@@ -29,22 +29,22 @@
             @include nice-transition(background-color 0.1s);
 
             &.primary {
-                background-color: lighten($color-primary, 10%);
+                background-color: lighten($color-primary, 5%);
             }
             &.accent {
-                background-color: lighten($color-accent, 10%);
+                background-color: lighten($color-accent, 5%);
             }
             &.info {
-                background-color: lighten($color-info, 10%);
+                background-color: lighten($color-info, 5%);
             }
             &.warning {
-                background-color: lighten($color-warning, 10%);
+                background-color: lighten($color-warning, 5%);
             }
             &.good {
-                background-color: lighten($color-good, 10%);
+                background-color: lighten($color-good, 5%);
             }
             &.bad {
-                background-color: lighten($color-bad, 10%);
+                background-color: lighten($color-bad, 5%);
             }
         }
         &:hover {

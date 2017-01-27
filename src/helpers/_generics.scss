@@ -1,4 +1,5 @@
 body {
+    color: $color-text;
     background-color: $gray-vlight;
     font-family: $fonts-primary;
     font-weight: $default-font-weight;
@@ -29,11 +30,20 @@ a {
 .nice-bg-brand {
     background-color: $color-brand;
 }
+.nice-bg-link {
+    background-color: $color-link;
+}
+.nice-bg-text {
+    background-color: $color-text;
+}
 .nice-bg-primary {
     background-color: $color-primary;
 }
 .nice-bg-accent {
     background-color: $color-accent;
+}
+.nice-bg-muted {
+    background-color: $color-muted;
 }
 .nice-bg-warning {
     background-color: $color-warning;

@@ -3137,7 +3137,9 @@ header,
     .nice-header .nice-header-brand a {
       display: inline-block; }
     header .nice-header-brand img,
-    .nice-header .nice-header-brand img {
+    header .nice-header-brand svg,
+    .nice-header .nice-header-brand img,
+    .nice-header .nice-header-brand svg {
       height: 30px;
       margin: 15px 0;
       border: 0; }

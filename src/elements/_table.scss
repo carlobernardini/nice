@@ -15,10 +15,9 @@ table {
                 th, td {
                     text-align: left;
                     border-bottom: 1px solid $color-border;
-                    padding: 0 10px;
+                    padding: 8px;
                     background-color: $color-white;
                     @include nice-font($weight: 600);
-                    @include nice-line-height(36px);
                 }
             }
         }
@@ -27,8 +26,7 @@ table {
                 th, td {
                     vertical-align: top;
                     text-align: left;
-                    padding: 0 10px;
-                    @include nice-line-height(32px);
+                    padding: 8px;
                 }
             }
         }
@@ -73,6 +71,15 @@ table {
                             background-color: $gray-light;
                             color: $color-black
                         }
+                    }
+                }
+            }
+        }
+        &.small-body {
+            tbody {
+                tr {
+                    td {
+                        font-size: .85em;
                     }
                 }
             }

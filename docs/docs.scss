@@ -94,6 +94,7 @@ body {
         }
     }
     code {
+        position: relative;
         display: block;
         padding: 15px;
         border: 1px solid $color-border;
@@ -117,6 +118,16 @@ body {
             cursor: pointer;
             max-height: 200px;
             overflow-y: hidden;
+
+            &:after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 15px;
+                width: 100%;
+                @include linear-gradient(rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 50%);
+            }
         }
     }
     footer {

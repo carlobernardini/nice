@@ -88,6 +88,11 @@
          -o-user-select: $param;
             user-select: $param;
 }
+@mixin nice-appearance ($param) {
+    -webkit-appearance: $param;
+       -moz-appearance: $param;
+            appearance: $param;
+}
 
 @mixin nice-placeholder-color {
   &::-webkit-input-placeholder {

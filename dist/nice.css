@@ -257,7 +257,7 @@ a {
   background-color: #B2B2B2; }
 
 .nice-bg-warning {
-  background-color: #FF5F00; }
+  background-color: #FFB819; }
 
 .nice-bg-danger {
   background-color: #F42534; }
@@ -266,7 +266,7 @@ a {
   background-color: #60C4DE; }
 
 .nice-bg-success {
-  background-color: #00B550; }
+  background-color: #5CB85C; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3919,9 +3919,9 @@ textarea.nice-form-control {
       .nice-stacked-list li .badge.info, .nice-stacked-list a .badge.info {
         background-color: #75cce2; }
       .nice-stacked-list li .badge.warning, .nice-stacked-list a .badge.warning {
-        background-color: #ff6f1a; }
+        background-color: #ffc033; }
       .nice-stacked-list li .badge.good, .nice-stacked-list a .badge.good {
-        background-color: #00cf5b; }
+        background-color: #6ec06e; }
       .nice-stacked-list li .badge.bad, .nice-stacked-list a .badge.bad {
         background-color: #f53d4b; }
     .nice-stacked-list li:hover .badge, .nice-stacked-list a:hover .badge {
@@ -3933,9 +3933,9 @@ textarea.nice-form-control {
       .nice-stacked-list li:hover .badge.info, .nice-stacked-list a:hover .badge.info {
         background-color: #60C4DE; }
       .nice-stacked-list li:hover .badge.warning, .nice-stacked-list a:hover .badge.warning {
-        background-color: #FF5F00; }
+        background-color: #FFB819; }
       .nice-stacked-list li:hover .badge.good, .nice-stacked-list a:hover .badge.good {
-        background-color: #00B550; }
+        background-color: #5CB85C; }
       .nice-stacked-list li:hover .badge.bad, .nice-stacked-list a:hover .badge.bad {
         background-color: #F42534; }
     .nice-stacked-list li.current, .nice-stacked-list a.current {
@@ -4257,11 +4257,11 @@ button,
       box-shadow: inset 0px 2px 1px #4bbcda; }
   button.good,
   .nice-btn.good {
-    background-color: #69ffab;
-    color: #004f23;
-    border-color: #00cf5b;
+    background-color: #d8eed8;
+    color: #357935;
+    border-color: #6ec06e;
     color: #FFF;
-    background-color: #00B550;
+    background-color: #5CB85C;
     border: none;
     padding: 0 11px;
     line-height: 34px;
@@ -4273,19 +4273,19 @@ button,
     font-size: 1em; }
     button.good:hover,
     .nice-btn.good:hover {
-      background-color: #00cf5b; }
+      background-color: #6ec06e; }
     button.good:active,
     .nice-btn.good:active {
-      -webkit-box-shadow: inset 0px 2px 1px #009c45;
-      -moz-box-shadow: inset 0px 2px 1px #009c45;
-      box-shadow: inset 0px 2px 1px #009c45; }
+      -webkit-box-shadow: inset 0px 2px 1px #4cae4c;
+      -moz-box-shadow: inset 0px 2px 1px #4cae4c;
+      box-shadow: inset 0px 2px 1px #4cae4c; }
   button.warning,
   .nice-btn.warning {
-    background-color: #ffcfb3;
-    color: #993900;
-    border-color: #ff6f1a;
+    background-color: #ffefcc;
+    color: #b27b00;
+    border-color: #ffc033;
     color: #FFF;
-    background-color: #FF5F00;
+    background-color: #FFB819;
     border: none;
     padding: 0 11px;
     line-height: 34px;
@@ -4297,12 +4297,12 @@ button,
     font-size: 1em; }
     button.warning:hover,
     .nice-btn.warning:hover {
-      background-color: #ff6f1a; }
+      background-color: #ffc033; }
     button.warning:active,
     .nice-btn.warning:active {
-      -webkit-box-shadow: inset 0px 2px 1px #e65600;
-      -moz-box-shadow: inset 0px 2px 1px #e65600;
-      box-shadow: inset 0px 2px 1px #e65600; }
+      -webkit-box-shadow: inset 0px 2px 1px #ffb000;
+      -moz-box-shadow: inset 0px 2px 1px #ffb000;
+      box-shadow: inset 0px 2px 1px #ffb000; }
   button.bad,
   .nice-btn.bad {
     background-color: #fdcfd2;
@@ -4421,13 +4421,13 @@ button,
     color: #2596b3;
     border-color: #75cce2; }
   .nice-alert.good {
-    background-color: #69ffab;
-    color: #004f23;
-    border-color: #00cf5b; }
+    background-color: #d8eed8;
+    color: #357935;
+    border-color: #6ec06e; }
   .nice-alert.warning {
-    background-color: #ffcfb3;
-    color: #993900;
-    border-color: #ff6f1a; }
+    background-color: #ffefcc;
+    color: #b27b00;
+    border-color: #ffc033; }
   .nice-alert.bad {
     background-color: #fdcfd2;
     color: #aa0914;
@@ -4557,11 +4557,11 @@ summary.nice-card {
   div.nice-card.good .nice-card-title,
   article.nice-card.good .nice-card-title,
   summary.nice-card.good .nice-card-title {
-    background-color: #00B550; }
+    background-color: #5CB85C; }
   div.nice-card.warning .nice-card-title,
   article.nice-card.warning .nice-card-title,
   summary.nice-card.warning .nice-card-title {
-    background-color: #FF5F00; }
+    background-color: #FFB819; }
   div.nice-card.bad .nice-card-title,
   article.nice-card.bad .nice-card-title,
   summary.nice-card.bad .nice-card-title {
@@ -4589,7 +4589,7 @@ summary.nice-card {
   .nice-loading.brand {
     border-top-color: #009cc1; }
   .nice-loading.good {
-    border-top-color: #00b550; }
+    border-top-color: #5cb85c; }
   .nice-loading.bad {
     border-top-color: #f42534; }
   .nice-loading.medium {
@@ -4649,7 +4649,7 @@ summary.nice-card {
   .nice-progress.brand .nice-progress-fill {
     background-color: #009CC1; }
   .nice-progress.good .nice-progress-fill {
-    background-color: #00B550; }
+    background-color: #5CB85C; }
   .nice-progress.bad .nice-progress-fill {
     background-color: #F42534; }
   .nice-progress.pulse .nice-progress-fill {
@@ -4755,14 +4755,14 @@ code {
     .nice-code-container .nice-code-heading.brand, .nice-code-container .nice-code-heading.good, .nice-code-container .nice-code-heading.warning, .nice-code-container .nice-code-heading.bad {
       color: #FFF; }
     .nice-code-container .nice-code-heading.brand {
-      border-color: #00B550;
-      background-color: #00B550; }
+      border-color: #5CB85C;
+      background-color: #5CB85C; }
     .nice-code-container .nice-code-heading.good {
-      border-color: #00B550;
-      background-color: #00B550; }
+      border-color: #5CB85C;
+      background-color: #5CB85C; }
     .nice-code-container .nice-code-heading.warning {
-      border-color: #FF5F00;
-      background-color: #FF5F00; }
+      border-color: #FFB819;
+      background-color: #FFB819; }
     .nice-code-container .nice-code-heading.bad {
       border-color: #F42534;
       background-color: #F42534; }

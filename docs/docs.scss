@@ -1,7 +1,9 @@
 // Styles for example site
 @charset 'UTF-8';
 
-@import '../src/themes/default',
+@import 'bourbon',
+        'neat',
+        '../src/themes/default',
         '../src/helpers/variables',
         '../src/helpers/mixins';
 
@@ -19,10 +21,44 @@ body {
         padding: 0 0 10px 0;
         border-bottom: 1px solid lighten($color-border, 5%);
     }
+    .banner {
+        position: relative;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        background-image: url(assets/nice-banner-background.jpg);
+        background-size: cover;
+        background-position: 50% 70%;
+
+        &:before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-black,.3);
+            @include linear-gradient(rgba($color-black,0), rgba($color-black,.5));
+        }
+        .nice-container {
+            z-index: 2;
+
+            h1 {
+                color: $color-white;
+                @include nice-text-shadow(1px 1px 1px rgba($color-black,.7));
+
+                .nice-brand {
+                    color: $color-white;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
     .nice-example {
         .color-swatch {
             width: 100px;
-            margin: 5px 0;
+            margin: 5px 15px 5px 0;
             text-align: center;
             height: 100px;
             color: $color-white;
@@ -36,9 +72,16 @@ body {
                 display: block;
             }
         }
-        .product-icon {
+        .product-icon,
+        .additional-icon {
             font-size: 4em;
             margin: 0 .15em;
+        }
+        .product-icon {
+            color: $color-brand;
+        }
+        .additional-icon {
+            color: $color-muted;
         }
         .nice-btn-group.stacked {
             width: 150px;
@@ -46,8 +89,12 @@ body {
         .nice-card {
             width: 300px;
         }
+        .nice-btn {
+            margin-bottom: 5px;
+        }
     }
     code {
+        position: relative;
         display: block;
         padding: 15px;
         border: 1px solid $color-border;
@@ -71,12 +118,47 @@ body {
             cursor: pointer;
             max-height: 200px;
             overflow-y: hidden;
+
+            &:after {
+                content: " ";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 15px;
+                width: 100%;
+                @include linear-gradient(rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 50%);
+            }
         }
     }
     footer {
         .text-brand {
             font-size: 1.25em;
             margin: 0 5px;
+        }
+    }
+}
+
+@include media($mobile) {
+    body {
+        .banner {
+            height: auto;
+            margin: 0 -15px;
+            padding: 0 15px;
+            background: none;
+
+            &:before {
+                display: none;
+            }
+            .nice-container {
+                h1 {
+                    color: $color-text;
+                    @include nice-text-shadow(none);
+
+                    .nice-brand {
+                        color: $color-brand;
+                    }
+                }
+            }
         }
     }
 }

@@ -13,9 +13,9 @@ $colors: (
 
     @each $type in (info, good, warning, bad) {
         &.#{$type} {
-            background-color: lighten(map-get($colors, #{$type}), 40%);
-            color: darken(map-get($colors, #{$type}), 30%);
-            border-color: lighten(map-get($colors, #{$type}), 30%);    
+            background-color: lighten(map-get($colors, #{$type}), 35%);
+            color: darken(map-get($colors, #{$type}), 20%);
+            border-color: lighten(map-get($colors, #{$type}), 5%);    
         }
     }
 }

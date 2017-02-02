@@ -19,7 +19,14 @@
             <div class="nice-header-container">
                 <h1 class="nice-header-brand">
                     <a href="index.html">
-                        <img src="assets/textkernel@2x.png" />
+                        <!-- 
+                            This example uses an SVG logo by default, with a fallback trick for old browsers.
+                            You can also use a regular <img /> element without SVG:
+                            <img src="assets/textkernel.png" /> 
+                        -->
+                        <svg height="30" width="172">
+                            <image xlink:href="assets/textkernel.svg" src="assets/textkernel@2x.png" width="172" height="30" />
+                        </svg>
                     </a>
                 </h1>
                 <div class="nice-header-collapse">
@@ -41,11 +48,14 @@
                                     <a href="#nice-colors">Colors</a>
                                     <ul>
                                         <li>
-                                            <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">
+                                            <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank" class="additional-icon fw frontify">
                                                 Brand Guidelines
                                             </a>
                                         </li>
                                     </ul>
+                                </li>
+                                <li>
+                                    <a href="#nice-static-assets">Static assets</a>
                                 </li>
                                 <li>
                                     <a href="#nice-font-icons">Font icons</a>
@@ -99,7 +109,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">
+                            <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank" class="additional-icon fw frontify">
                                 Brand Guidelines
                             </a>
                         </li>
@@ -117,46 +127,58 @@
                 </button>
             </div><!-- .nice-header-container -->
         </header>
+        <div class="banner">
+            <div class="nice-container">
+                <h1>
+                    <span class="nice-brand">Nice!</span>
+                    <small>Framework for reusable UI elements</small>
+                </h1>
+            </div>
+        </div>
         <section class="nice-container">
-            <h1>
-                <span class="nice-brand">Nice!</span>
-                <small>Framework for reusable UI elements</small>
-            </h1>
             <div class="nice-row" id="nice-colors">
                 <h2>Colors</h2>
                 <div class="nice-col-8 nice-example">
-                    <div class="nice-flex-container justify-space-between wrap">
+                    <div class="nice-flex-container wrap">
                         <div class="color-swatch nice-circle nice-bg-brand">
-                            <strong>Textkernel</strong>
-                            #12BCD0
+                            <strong>Brand</strong>
+                            #009CC1
                         </div>
-                        <div class="color-swatch nice-circle nice-bg-brand">
+                        <div class="color-swatch nice-circle nice-bg-link">
                             <strong>Link</strong>
-                            #009FC3
+                            #009CC1
+                        </div>
+                        <div class="color-swatch nice-circle nice-bg-text">
+                            <strong>Text</strong>
+                            #1D1D1B
                         </div>
                         <div class="color-swatch nice-circle nice-bg-primary">
                             <strong>Primary</strong>
-                            #E78523
+                            #F18700
                         </div>
                         <div class="color-swatch nice-circle nice-bg-accent">
                             <strong>Accent</strong>
                             #182642
                         </div>
+                        <div class="color-swatch nice-circle nice-bg-muted">
+                            <strong>Muted</strong>
+                            #182642
+                        </div>
                         <div class="color-swatch nice-circle nice-bg-success">
                             <strong>Good</strong>
-                            #2ECC71
+                            #5CB85C
                         </div>
                         <div class="color-swatch nice-circle nice-bg-info">
                             <strong>Info</strong>
-                            #3498DB
+                            #60C4DE
                         </div>
                         <div class="color-swatch nice-circle nice-bg-warning">
                             <strong>Warning</strong>
-                            #F39C12
+                            #FFB819
                         </div>
                         <div class="color-swatch nice-circle nice-bg-danger">
                             <strong>Bad</strong>
-                            #E74C3C
+                            #F42534
                         </div>
                     </div>
                 </div>
@@ -166,20 +188,78 @@
                     </p>
                 </div>
             </div>
+            <div class="nice-row" id="nice-static-assets">
+                <h2>Static assets</h2>
+                <div class="nice-col-6 nice-example">
+                    <table class="nice-table bordered small-body">
+                        <thead>
+                            <tr>
+                                <th>Resource</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="assets/textkernel.svg" target="_blank">assets/textkernel.svg</a>
+                                </td>
+                                <td>Responsive SVG logo</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="assets/textkernel@2x.png" target="_blank">assets/textkernel@2x.png</a>
+                                </td>
+                                <td>Double-sized PNG logo for high resolution displays (1726x300 pixels)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="assets/textkernel.png" target="_blank">assets/textkernel.png</a>
+                                </td>
+                                <td>Small-scale PNG logo (863x150 pixels)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="assets/textkernel-tagline.svg" target="_blank">assets/textkernel-tagline.svg</a>
+                                </td>
+                                <td>Responsive SVG logo with tagline</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="assets/textkernel-tagline@2x.png" target="_blank">assets/textkernel-tagline@2x.png</a>
+                                </td>
+                                <td>Double-sized PNG logo with tagline for high resolution displays (1489x400 pixels)</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="assets/textkernel-tagline.png" target="_blank">assets/textkernel-tagline.png</a>
+                                </td>
+                                <td>Small-scale PNG logo with tagline (745x200 pixels)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="nice-col-6 text-justify">
+                    Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.
+                    <p>
+                        The use of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_as_an_Image" target="_blank" title="MDN: SVG as an Image">SVG images</a> is highly recommended because as these can scale any size without quality loss.
+                    </p>
+                </div>
+            </div>
             <div class="nice-row" id="nice-font-icons">
                 <h2>Font icons</h2>
                 <p>
-                    Nice! is bundeled with <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a> out of the box. To know which version of FontAwesome is included with the release of Nice! you are using, refer to the <code class="inline">package.json</code> file. Additionally, a custom font iconset is included for all Textkernel products listed below. All font icons are scalable vector graphics.
+                    Nice! is bundeled with <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a> out of the box. To know which version of FontAwesome is included with the release of Nice! you are using, refer to the <code class="inline">package.json</code> file. Additionally, a custom font iconset is included for all Textkernel products listed below. The font family is called &ldquo;TKProducts&rdquo;. Any other custom icons that do not come with FontAwesome and are not related to Textkernel products, are included in &ldquo;TKAdditional&rdquo;. All font icons are scalable vector graphics, meaning they can be resized without loss of quality.
                 </p>
                 <div class="nice-col-6 nice-example">
-                    <i class="product-icon extract"></i>
-                    <i class="product-icon harvester"></i>
-                    <i class="product-icon jobfeed"></i>
-                    <i class="product-icon match"></i>
-                    <i class="product-icon search"></i>
-                    <i class="product-icon sourcebox"></i>
-                    <i class="product-icon wte"></i>
-                    <i class="product-icon textkernel"></i>
+                    <i class="product-icon extract" title="product-icon extract"></i>
+                    <i class="product-icon harvester" title="product-icon harvester"></i>
+                    <i class="product-icon jobfeed" title="product-icon jobfeed"></i>
+                    <i class="product-icon match" title="product-icon match"></i>
+                    <i class="product-icon search" title="product-icon search"></i>
+                    <i class="product-icon sourcebox" title="product-icon sourcebox"></i>
+                    <i class="product-icon wte" title="product-icon wte"></i>
+                    <i class="product-icon textkernel" title="product-icon textkernel"></i>
+                    <i class="additional-icon frontify" title="additional-icon frontify"></i>
                 </div>
                 <div class="nice-col-6">
                     <code class="docs">&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">extract</span>&quot;&gt;&lt;/i&gt;
@@ -189,7 +269,8 @@
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">search</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">sourcebox</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">wte</span>&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;</code>
+&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;<span class="main">additional-icon</span> <span class="variation">frontify</span>&quot;&gt;&lt;/i&gt;</code>
                 </div>
             </div>
             <div class="nice-row" id="nice-page-header">
@@ -207,7 +288,7 @@
     &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
         &lt;h1 class=&quot;<span class="main">nice-header-brand</span>&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;
-                &lt;img src=&quot;assets/logo@2x.png&quot; /&gt;
+                &lt;img src=&quot;assets/textkernel.svg&quot; /&gt;
             &lt;/a&gt;
         &lt;/h1&gt;
         &lt;div class=&quot;<span class="main">nice-header-collapse</span>&quot;&gt;
@@ -270,7 +351,11 @@
                     <p>
                         <a href="#" class="nice-btn icon fa-check">Default button</a>
                         <a href="#" class="nice-btn primary icon fa-search">Primary button</a>
+                        <a href="#" class="nice-btn accent icon fa-check">Accent</a>
                         <a href="#" class="nice-btn link">Link button</a>
+                        <a href="#" class="nice-btn good icon fa-check">Good</a>
+                        <a href="#" class="nice-btn warning icon fa-exclamation">Warning</a>
+                        <a href="#" class="nice-btn bad icon fa-times">Bad</a>
                     </p>
                     <p>
                         <a href="#" class="nice-btn small">Small size</a>
@@ -801,6 +886,26 @@
 &lt;/ul&gt;</code>
                 </div>
             </div>
+            <div class="nice-row" id="nice-alerts">
+                <h2>Alerts</h2>
+                <div class="nice-col-6 nice-example">
+                    <div class="nice-alert info">
+                        <strong>Hey you!</strong> Here is some information
+                    </div>
+                    <div class="nice-alert warning">
+                        <strong>Heads up</strong> This is a warning
+                    </div>
+                    <div class="nice-alert bad">
+                        <strong>Uh oh...</strong> Something is wrong
+                    </div>
+                    <div class="nice-alert good">
+                        <strong>Great success</strong> All good!
+                    </div>
+                </div>
+                <div class="nice-col-6">
+
+                </div>
+            </div>
             <div class="nice-row" id="nice-cards">
                 <h2>Cards</h2>
                 <div class="nice-col-12 nice-example">
@@ -1030,6 +1135,11 @@
                         </tr>
                         <tr>
                             <th scope="row">2</th>
+                            <td>Chris</td>
+                            <td>Dekker</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
                             <td>Dario</td>
                             <td>Tognacci</td>
                         </tr>
@@ -1119,7 +1229,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">
+                        <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank" class="additional-icon fw frontify">
                             Brand Guidelines
                         </a>
                     <li>

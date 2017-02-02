@@ -93,29 +93,32 @@ h6 {
   font-weight: 300;
   font-size: 1em; }
 
+.text-muted {
+  color: #B2B2B2; }
+
 @-webkit-keyframes pulse {
   0% {
-    background-color: #efab68; }
+    background-color: #ffaa3f; }
   50% {
-    background-color: #E78523; }
+    background-color: #F18700; }
   100% {
-    background-color: #efab68; } }
+    background-color: #ffaa3f; } }
 
 @-moz-keyframes pulse {
   0% {
-    background-color: #efab68; }
+    background-color: #ffaa3f; }
   50% {
-    background-color: #E78523; }
+    background-color: #F18700; }
   100% {
-    background-color: #efab68; } }
+    background-color: #ffaa3f; } }
 
 @keyframes pulse {
   0% {
-    background-color: #efab68; }
+    background-color: #ffaa3f; }
   50% {
-    background-color: #E78523; }
+    background-color: #F18700; }
   100% {
-    background-color: #efab68; } }
+    background-color: #ffaa3f; } }
 
 @-webkit-keyframes spin {
   0% {
@@ -202,12 +205,13 @@ h6 {
     transform: rotate(-90deg); } }
 
 body {
+  color: #1D1D1B;
   background-color: #F5F7F7;
   font-family: "Open Sans", sans-serif, helvetica;
   font-weight: 400; }
 
 a {
-  color: #009fc3;
+  color: #009CC1;
   text-decoration: none;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -215,7 +219,7 @@ a {
   -o-transition: color 0.3s;
   transition: color 0.3s; }
   a:hover {
-    color: #00c9f6; }
+    color: #00c5f4; }
 
 .icon::before {
   font-family: FontAwesome; }
@@ -232,28 +236,37 @@ a {
   color: #D0D1D5; }
 
 .nice-brand {
-  color: #12BCD0; }
+  color: #009CC1; }
 
 .nice-bg-brand {
-  background-color: #12BCD0; }
+  background-color: #009CC1; }
+
+.nice-bg-link {
+  background-color: #009CC1; }
+
+.nice-bg-text {
+  background-color: #1D1D1B; }
 
 .nice-bg-primary {
-  background-color: #E78523; }
+  background-color: #F18700; }
 
 .nice-bg-accent {
   background-color: #182642; }
 
+.nice-bg-muted {
+  background-color: #B2B2B2; }
+
 .nice-bg-warning {
-  background-color: #f39c12; }
+  background-color: #FFB819; }
 
 .nice-bg-danger {
-  background-color: #e74c3c; }
+  background-color: #F42534; }
 
 .nice-bg-info {
-  background-color: #3498db; }
+  background-color: #60C4DE; }
 
 .nice-bg-success {
-  background-color: #2ecc71; }
+  background-color: #5CB85C; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2647,6 +2660,20 @@ a {
   .product-icon.textkernel:before {
     content: ""; }
 
+@font-face {
+  font-family: 'TKAdditional';
+  src: url("fonts/tk-additional/tk-additional.eot?opn9zj");
+  src: url("fonts/tk-additional/tk-additional.eot?opn9zj#iefix") format("embedded-opentype"), url("fonts/tk-additional/tk-additional.ttf?opn9zj") format("truetype"), url("fonts/tk-additional/tk-additional.woff?opn9zj") format("woff"), url("fonts/tk-additional/tk-additional.svg?opn9zj#TKAdditional") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.additional-icon {
+  font-style: normal; }
+  .additional-icon::before {
+    font-family: TKAdditional; }
+  .additional-icon.frontify:before {
+    content: ""; }
+
 .nice-container {
   max-width: 68em;
   margin-left: auto;
@@ -3062,7 +3089,7 @@ a {
 header,
 .nice-header {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   background-color: #FFF;
   border-bottom: 1px solid #D0D1D5;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -3110,7 +3137,9 @@ header,
     .nice-header .nice-header-brand a {
       display: inline-block; }
     header .nice-header-brand img,
-    .nice-header .nice-header-brand img {
+    header .nice-header-brand svg,
+    .nice-header .nice-header-brand img,
+    .nice-header .nice-header-brand svg {
       height: 30px;
       margin: 15px 0;
       border: 0; }
@@ -3149,7 +3178,7 @@ header,
       .nice-header .nice-header-form input[type="text"]:focus {
         width: 150%;
         margin-left: -50%;
-        border-color: #12BCD0; }
+        border-color: #009CC1; }
         header .nice-header-form input[type="text"]:focus + button,
         .nice-header .nice-header-form input[type="text"]:focus + button {
           display: block;
@@ -3195,7 +3224,7 @@ header,
           background-color: transparent; }
         header .nice-header-form .nice-header-input-wrapper:hover button:active,
         .nice-header .nice-header-form .nice-header-input-wrapper:hover button:active {
-          color: #12BCD0;
+          color: #009CC1;
           -webkit-transition: none;
           -moz-transition: none;
           -ms-transition: none;
@@ -3243,7 +3272,7 @@ header,
             white-space: nowrap; }
             header .nice-header-menu li ul li a:hover,
             .nice-header .nice-header-menu li ul li a:hover {
-              background-color: #12BCD0; }
+              background-color: #009CC1; }
           header .nice-header-menu li ul li ul,
           .nice-header .nice-header-menu li ul li ul {
             position: absolute;
@@ -3285,7 +3314,7 @@ header,
         background-color: #F5F7F7; }
     header .nice-header-menu.menu-pills li ul li a:hover,
     .nice-header .nice-header-menu.menu-pills li ul li a:hover {
-      background-color: #12BCD0; }
+      background-color: #009CC1; }
   header .nice-header-toggle,
   .nice-header .nice-header-toggle {
     display: none; }
@@ -3419,7 +3448,7 @@ header,
       .nice-header .nice-header-menu.menu-pills li a:hover,
       .nice-header .nice-header-menu.menu-pills li a:active {
         background-color: #FFF;
-        color: #009fc3;
+        color: #009CC1;
         outline: none; }
       header .nice-header-menu.menu-pills li ul li a:hover, header .nice-header-menu.menu-pills li ul li a:focus, header .nice-header-menu.menu-pills li ul li a:active,
       .nice-header .nice-header-menu.menu-pills li ul li a:hover,
@@ -3651,7 +3680,7 @@ input.nice-form-control[type="text"], input.nice-form-control[type="password"], 
   font-size: 14px;
   font-size: 0.875rem; }
   input.nice-form-control[type="text"]:focus, input.nice-form-control[type="password"]:focus, select.nice-form-control:focus, textarea.nice-form-control:focus {
-    border: 1px solid #12BCD0;
+    border: 1px solid #009CC1;
     -webkit-box-shadow: inset 0 2px 2px #ECF0F1;
     -moz-box-shadow: inset 0 2px 2px #ECF0F1;
     box-shadow: inset 0 2px 2px #ECF0F1; }
@@ -3771,7 +3800,7 @@ textarea.nice-form-control {
       .nice-tabs li.current a:hover {
         background-color: #FFF; }
     .nice-tabs li.primary a {
-      background-color: #E78523;
+      background-color: #F18700;
       color: #FFF;
       -webkit-transition: background-color 0.3s;
       -moz-transition: background-color 0.3s;
@@ -3779,7 +3808,7 @@ textarea.nice-form-control {
       -o-transition: background-color 0.3s;
       transition: background-color 0.3s; }
       .nice-tabs li.primary a:hover {
-        background-color: #ec9f51; }
+        background-color: #ff9f25; }
     .nice-tabs li.accent a {
       background-color: #182642;
       color: #FFF;
@@ -3791,7 +3820,7 @@ textarea.nice-form-control {
       .nice-tabs li.accent a:hover {
         background-color: #263c67; }
     .nice-tabs li.brand a {
-      background-color: #12BCD0;
+      background-color: #009CC1;
       color: #FFF;
       -webkit-transition: background-color 0.3s;
       -moz-transition: background-color 0.3s;
@@ -3799,7 +3828,7 @@ textarea.nice-form-control {
       -o-transition: background-color 0.3s;
       transition: background-color 0.3s; }
       .nice-tabs li.brand a:hover {
-        background-color: #29d8ec; }
+        background-color: #00c5f4; }
   .nice-tabs.bold {
     font-weight: 600; }
   .nice-tabs.small a {
@@ -3884,31 +3913,31 @@ textarea.nice-form-control {
       -o-transition: background-color 0.1s;
       transition: background-color 0.1s; }
       .nice-stacked-list li .badge.primary, .nice-stacked-list a .badge.primary {
-        background-color: #ec9f51; }
+        background-color: #ff940c; }
       .nice-stacked-list li .badge.accent, .nice-stacked-list a .badge.accent {
-        background-color: #263c67; }
+        background-color: #1f3155; }
       .nice-stacked-list li .badge.info, .nice-stacked-list a .badge.info {
-        background-color: #5faee3; }
+        background-color: #75cce2; }
       .nice-stacked-list li .badge.warning, .nice-stacked-list a .badge.warning {
-        background-color: #f5b043; }
+        background-color: #ffc033; }
       .nice-stacked-list li .badge.good, .nice-stacked-list a .badge.good {
-        background-color: #54d98c; }
+        background-color: #6ec06e; }
       .nice-stacked-list li .badge.bad, .nice-stacked-list a .badge.bad {
-        background-color: #ed7669; }
+        background-color: #f53d4b; }
     .nice-stacked-list li:hover .badge, .nice-stacked-list a:hover .badge {
-      background-color: #12BCD0; }
+      background-color: #009CC1; }
       .nice-stacked-list li:hover .badge.primary, .nice-stacked-list a:hover .badge.primary {
-        background-color: #E78523; }
+        background-color: #F18700; }
       .nice-stacked-list li:hover .badge.accent, .nice-stacked-list a:hover .badge.accent {
         background-color: #182642; }
       .nice-stacked-list li:hover .badge.info, .nice-stacked-list a:hover .badge.info {
-        background-color: #3498db; }
+        background-color: #60C4DE; }
       .nice-stacked-list li:hover .badge.warning, .nice-stacked-list a:hover .badge.warning {
-        background-color: #f39c12; }
+        background-color: #FFB819; }
       .nice-stacked-list li:hover .badge.good, .nice-stacked-list a:hover .badge.good {
-        background-color: #2ecc71; }
+        background-color: #5CB85C; }
       .nice-stacked-list li:hover .badge.bad, .nice-stacked-list a:hover .badge.bad {
-        background-color: #e74c3c; }
+        background-color: #F42534; }
     .nice-stacked-list li.current, .nice-stacked-list a.current {
       background-color: #F5F7F7;
       color: #000; }
@@ -3939,7 +3968,7 @@ textarea.nice-form-control {
       color: #D0D1D5;
       margin: 0 5px; }
     .nice-breadcrumb li + li:hover:before {
-      color: #009fc3; }
+      color: #009CC1; }
     .nice-breadcrumb li > ul {
       background-color: #ECF0F1;
       padding: 0;
@@ -4001,7 +4030,7 @@ textarea.nice-form-control {
       -o-transition: none;
       transition: none; }
       .nice-pagination li a:hover {
-        background-color: #12BCD0;
+        background-color: #009CC1;
         color: #FFF; }
     .nice-pagination li.current span, .nice-pagination li.current a {
       background: #182642;
@@ -4030,8 +4059,8 @@ textarea.nice-form-control {
     background-clip: padding-box; }
   .nice-pagination.bordered li a:hover {
     z-index: 2;
-    background-color: #12BCD0;
-    border-color: #12BCD0; }
+    background-color: #009CC1;
+    border-color: #009CC1; }
   .nice-pagination.bordered li:first-child span, .nice-pagination.bordered li:first-child a {
     margin-left: 0;
     -webkit-border-radius: 25px 0 0 25px;
@@ -4065,21 +4094,17 @@ table.nice-table {
   table.nice-table thead tr th, table.nice-table thead tr td {
     text-align: left;
     border-bottom: 1px solid #D0D1D5;
-    padding: 0 10px;
+    padding: 8px;
     background-color: #FFF;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
-    font-size: 1em;
-    line-height: 36px;
-    line-height: 2.25rem; }
+    font-size: 1em; }
   table.nice-table tbody tr th, table.nice-table tbody tr td {
     vertical-align: top;
     text-align: left;
-    padding: 0 10px;
-    line-height: 32px;
-    line-height: 2rem; }
+    padding: 8px; }
   table.nice-table.condensed tbody tr th, table.nice-table.condensed tbody tr td {
     line-height: 24px;
     line-height: 1.5rem; }
@@ -4094,6 +4119,8 @@ table.nice-table {
   table.nice-table.hover tbody tr:hover th, table.nice-table.hover tbody tr:hover td {
     background-color: #ECF0F1;
     color: #000; }
+  table.nice-table.small-body tbody tr td {
+    font-size: .85em; }
 
 button,
 .nice-btn {
@@ -4140,7 +4167,7 @@ button,
     margin-right: 5px; }
   button.link,
   .nice-btn.link {
-    color: #009fc3;
+    color: #009CC1;
     border: none;
     background-color: transparent;
     -webkit-transition: color 0.3s;
@@ -4151,15 +4178,18 @@ button,
     button.link:hover, button.link:focus,
     .nice-btn.link:hover,
     .nice-btn.link:focus {
-      color: #00c9f6;
+      color: #00c5f4;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
   button.primary,
   .nice-btn.primary {
+    background-color: #ffd7a5;
+    color: #8b4e00;
+    border-color: #ff940c;
     color: #FFF;
-    background-color: #E78523;
+    background-color: #F18700;
     border: none;
     padding: 0 11px;
     line-height: 34px;
@@ -4171,12 +4201,132 @@ button,
     font-size: 1em; }
     button.primary:hover,
     .nice-btn.primary:hover {
-      background-color: #F39C12; }
+      background-color: #ff940c; }
     button.primary:active,
     .nice-btn.primary:active {
-      -webkit-box-shadow: inset 0px 2px 1px #d97818;
-      -moz-box-shadow: inset 0px 2px 1px #d97818;
-      box-shadow: inset 0px 2px 1px #d97818; }
+      -webkit-box-shadow: inset 0px 2px 1px #d87900;
+      -moz-box-shadow: inset 0px 2px 1px #d87900;
+      box-shadow: inset 0px 2px 1px #d87900; }
+  button.accent,
+  .nice-btn.accent {
+    background-color: #4e73bf;
+    color: black;
+    border-color: #1f3155;
+    color: #FFF;
+    background-color: #182642;
+    border: none;
+    padding: 0 11px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-size: 1em; }
+    button.accent:hover,
+    .nice-btn.accent:hover {
+      background-color: #1f3155; }
+    button.accent:active,
+    .nice-btn.accent:active {
+      -webkit-box-shadow: inset 0px 2px 1px #111b2f;
+      -moz-box-shadow: inset 0px 2px 1px #111b2f;
+      box-shadow: inset 0px 2px 1px #111b2f; }
+  button.info,
+  .nice-btn.info {
+    background-color: #f4fbfd;
+    color: #2596b3;
+    border-color: #75cce2;
+    color: #FFF;
+    background-color: #60C4DE;
+    border: none;
+    padding: 0 11px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-size: 1em; }
+    button.info:hover,
+    .nice-btn.info:hover {
+      background-color: #75cce2; }
+    button.info:active,
+    .nice-btn.info:active {
+      -webkit-box-shadow: inset 0px 2px 1px #4bbcda;
+      -moz-box-shadow: inset 0px 2px 1px #4bbcda;
+      box-shadow: inset 0px 2px 1px #4bbcda; }
+  button.good,
+  .nice-btn.good {
+    background-color: #d8eed8;
+    color: #357935;
+    border-color: #6ec06e;
+    color: #FFF;
+    background-color: #5CB85C;
+    border: none;
+    padding: 0 11px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-size: 1em; }
+    button.good:hover,
+    .nice-btn.good:hover {
+      background-color: #6ec06e; }
+    button.good:active,
+    .nice-btn.good:active {
+      -webkit-box-shadow: inset 0px 2px 1px #4cae4c;
+      -moz-box-shadow: inset 0px 2px 1px #4cae4c;
+      box-shadow: inset 0px 2px 1px #4cae4c; }
+  button.warning,
+  .nice-btn.warning {
+    background-color: #ffefcc;
+    color: #b27b00;
+    border-color: #ffc033;
+    color: #FFF;
+    background-color: #FFB819;
+    border: none;
+    padding: 0 11px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-size: 1em; }
+    button.warning:hover,
+    .nice-btn.warning:hover {
+      background-color: #ffc033; }
+    button.warning:active,
+    .nice-btn.warning:active {
+      -webkit-box-shadow: inset 0px 2px 1px #ffb000;
+      -moz-box-shadow: inset 0px 2px 1px #ffb000;
+      box-shadow: inset 0px 2px 1px #ffb000; }
+  button.bad,
+  .nice-btn.bad {
+    background-color: #fdcfd2;
+    color: #aa0914;
+    border-color: #f53d4b;
+    color: #FFF;
+    background-color: #F42534;
+    border: none;
+    padding: 0 11px;
+    line-height: 34px;
+    line-height: 2.125rem;
+    font-family: "Open Sans", sans-serif, helvetica;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    font-size: 1em; }
+    button.bad:hover,
+    .nice-btn.bad:hover {
+      background-color: #f53d4b; }
+    button.bad:active,
+    .nice-btn.bad:active {
+      -webkit-box-shadow: inset 0px 2px 1px #f30d1d;
+      -moz-box-shadow: inset 0px 2px 1px #f30d1d;
+      box-shadow: inset 0px 2px 1px #f30d1d; }
   button.small,
   .nice-btn.small,
   .nice-btn-group.small > .nice-btn {
@@ -4267,21 +4417,21 @@ button,
   -moz-background-clip: padding;
   background-clip: padding-box; }
   .nice-alert.info {
-    background-color: #e1f0fa;
-    color: #124364;
-    border-color: #b6daf2; }
+    background-color: #f4fbfd;
+    color: #2596b3;
+    border-color: #75cce2; }
   .nice-alert.good {
-    background-color: #d1f5e0;
-    color: #124f2c;
-    border-color: #a8ebc4; }
+    background-color: #d8eed8;
+    color: #357935;
+    border-color: #6ec06e; }
   .nice-alert.warning {
-    background-color: #fdedd4;
-    color: #674105;
-    border-color: #fad9a4; }
+    background-color: #ffefcc;
+    color: #b27b00;
+    border-color: #ffc033; }
   .nice-alert.bad {
-    background-color: #fdf3f2;
-    color: #7b190f;
-    border-color: #f8c9c4; }
+    background-color: #fdcfd2;
+    color: #aa0914;
+    border-color: #f53d4b; }
 
 div.nice-card,
 article.nice-card,
@@ -4399,23 +4549,23 @@ summary.nice-card {
   div.nice-card.primary .nice-card-title,
   article.nice-card.primary .nice-card-title,
   summary.nice-card.primary .nice-card-title {
-    background-color: #E78523; }
+    background-color: #F18700; }
   div.nice-card.brand .nice-card-title,
   article.nice-card.brand .nice-card-title,
   summary.nice-card.brand .nice-card-title {
-    background-color: #12BCD0; }
+    background-color: #009CC1; }
   div.nice-card.good .nice-card-title,
   article.nice-card.good .nice-card-title,
   summary.nice-card.good .nice-card-title {
-    background-color: #2ecc71; }
+    background-color: #5CB85C; }
   div.nice-card.warning .nice-card-title,
   article.nice-card.warning .nice-card-title,
   summary.nice-card.warning .nice-card-title {
-    background-color: #f39c12; }
+    background-color: #FFB819; }
   div.nice-card.bad .nice-card-title,
   article.nice-card.bad .nice-card-title,
   summary.nice-card.bad .nice-card-title {
-    background-color: #e74c3c; }
+    background-color: #F42534; }
 
 .nice-loading {
   border: 0.25rem solid rgba(0, 0, 0, 0.15);
@@ -4435,13 +4585,13 @@ summary.nice-card {
   -moz-background-clip: padding;
   background-clip: padding-box; }
   .nice-loading.primary {
-    border-top-color: #e78523; }
+    border-top-color: #f18700; }
   .nice-loading.brand {
-    border-top-color: #12bcd0; }
+    border-top-color: #009cc1; }
   .nice-loading.good {
-    border-top-color: #2ecc71; }
+    border-top-color: #5cb85c; }
   .nice-loading.bad {
-    border-top-color: #e74c3c; }
+    border-top-color: #f42534; }
   .nice-loading.medium {
     border-width: .35rem;
     height: 48px;
@@ -4471,7 +4621,7 @@ summary.nice-card {
   .nice-progress .nice-progress-fill {
     text-align: center;
     color: #FFF;
-    background-color: #E78523;
+    background-color: #F18700;
     max-width: 100%;
     min-width: 10%;
     text-overflow: ellipsis;
@@ -4497,11 +4647,11 @@ summary.nice-card {
   .nice-progress.accent .nice-progress-fill {
     background-color: #182642; }
   .nice-progress.brand .nice-progress-fill {
-    background-color: #12BCD0; }
+    background-color: #009CC1; }
   .nice-progress.good .nice-progress-fill {
-    background-color: #2ecc71; }
+    background-color: #5CB85C; }
   .nice-progress.bad .nice-progress-fill {
-    background-color: #e74c3c; }
+    background-color: #F42534; }
   .nice-progress.pulse .nice-progress-fill {
     -webkit-animation: pulse 1.5s ease-out;
     -moz-animation: pulse 1.5s ease-out;
@@ -4546,7 +4696,7 @@ code {
     line-height: inherit;
     border: 1px solid #D0D1D5;
     padding: 3px 3px;
-    color: #e74c3c;
+    color: #F42534;
     font-size: inherit;
     -webkit-border-radius: 2pxpx;
     -moz-border-radius: 2pxpx;
@@ -4605,17 +4755,17 @@ code {
     .nice-code-container .nice-code-heading.brand, .nice-code-container .nice-code-heading.good, .nice-code-container .nice-code-heading.warning, .nice-code-container .nice-code-heading.bad {
       color: #FFF; }
     .nice-code-container .nice-code-heading.brand {
-      border-color: #2ecc71;
-      background-color: #2ecc71; }
+      border-color: #5CB85C;
+      background-color: #5CB85C; }
     .nice-code-container .nice-code-heading.good {
-      border-color: #2ecc71;
-      background-color: #2ecc71; }
+      border-color: #5CB85C;
+      background-color: #5CB85C; }
     .nice-code-container .nice-code-heading.warning {
-      border-color: #f39c12;
-      background-color: #f39c12; }
+      border-color: #FFB819;
+      background-color: #FFB819; }
     .nice-code-container .nice-code-heading.bad {
-      border-color: #e74c3c;
-      background-color: #e74c3c; }
+      border-color: #F42534;
+      background-color: #F42534; }
     .nice-code-container .nice-code-heading .nice-code-syntax {
       float: right;
       -webkit-border-radius: 3px;

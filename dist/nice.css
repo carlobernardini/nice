@@ -31,15 +31,15 @@ header .nice-header-brand,
   *display: inline-block;
   zoom: 1; }
 
-.nice-tabs, nav, .nice-btn-group {
+.clearfix, .nice-tabs, nav, .nice-btn-group {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-tabs:after, nav:after, .nice-btn-group:after {
+  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after {
     content: "";
     display: table; }
-  .nice-tabs:after, nav:after, .nice-btn-group:after {
+  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after {
     clear: both;
     content: ".";
     display: block;
@@ -73,16 +73,16 @@ h5 {
 h6 {
   font-size: 0.75rem; }
 
-.text-left {
+.text-align-left {
   text-align: left; }
 
-.text-right {
+.text-align-right {
   text-align: right; }
 
-.text-center {
+.text-align-center {
   text-align: center; }
 
-.text-justify {
+.text-align-justify {
   text-align: justify; }
 
 .text-brand {
@@ -95,6 +95,25 @@ h6 {
 
 .text-muted {
   color: #B2B2B2; }
+
+.text-bold {
+  font-weight: bold; }
+
+.text-italic {
+  font-style: italic; }
+
+.text-small-caps {
+  font-variant: small-caps; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-default {
+  font-family: "Open Sans", sans-serif, helvetica;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  font-size: 1em; }
 
 @-webkit-keyframes pulse {
   0% {
@@ -224,6 +243,9 @@ a {
 .icon::before {
   font-family: FontAwesome; }
 
+i.icon {
+  font-style: normal; }
+
 .nice-circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -267,6 +289,36 @@ a {
 
 .nice-bg-success {
   background-color: #5CB85C; }
+
+.shown {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+.invisible {
+  visibility: hidden; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.center-block {
+  margin: 0 auto; }
+
+.position-fixed {
+  position: fixed; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
+.position-static {
+  position: static; }
 
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome

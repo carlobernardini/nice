@@ -28,7 +28,7 @@ h6 {
     font-size: rem(12);
 }
 @each $value in (left, right, center, justify) {
-    .text-#{$value} {
+    .text-align-#{$value} {
         text-align: $value;
     }
 }
@@ -38,4 +38,19 @@ h6 {
 }
 .text-muted {
     color: $color-muted;
+}
+.text-bold {
+    font-weight: bold;
+}
+.text-italic {
+    font-style: italic;
+}
+.text-small-caps {
+    font-variant: small-caps;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-default {
+    @include nice-font();
 }

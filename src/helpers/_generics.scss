@@ -18,6 +18,11 @@ a {
         font-family: FontAwesome;
     }
 }
+i {
+    &.icon {
+        font-style: normal;
+    }
+}
 .nice-circle {
     @include nice-border-radius(50%);
 }
@@ -56,4 +61,30 @@ a {
 }
 .nice-bg-success {
     background-color: $color-good;
+}
+.clearfix {
+    @extend %clearfix;
+}
+.shown {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.invisible {
+    visibility: hidden;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.center-block {
+    margin: 0 auto;
+}
+@each $value in (fixed, relative, absolute, static) {
+    .position-#{$value} {
+        position: $value;
+    }
 }

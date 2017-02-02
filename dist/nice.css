@@ -227,7 +227,8 @@ body {
   color: #1D1D1B;
   background-color: #F5F7F7;
   font-family: "Open Sans", sans-serif, helvetica;
-  font-weight: 400; }
+  font-weight: 400;
+  font-size: 16px; }
 
 a {
   color: #009CC1;
@@ -239,6 +240,9 @@ a {
   transition: color 0.3s; }
   a:hover {
     color: #00c5f4; }
+
+strong {
+  font-weight: 600; }
 
 .icon::before {
   font-family: FontAwesome; }
@@ -2727,6 +2731,7 @@ i.icon {
     content: ""; }
 
 .nice-container {
+  padding: 0 15px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
@@ -3758,8 +3763,8 @@ textarea.nice-form-control {
   line-height: 18px;
   line-height: 1.125rem; }
 
-.nice-form-group {
-  margin-bottom: 15px; }
+.nice-form-group + .nice-form-group {
+  margin-top: 15px; }
 
 .nice-control-group {
   display: table;
@@ -3954,6 +3959,26 @@ textarea.nice-form-control {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
   .nice-stacked-list:last-child {
     margin-bottom: 0; }
+  .nice-stacked-list li.list-heading {
+    background-color: #182642;
+    color: #FFF;
+    font-weight: 600;
+    margin: -1px -1px 0 -1px;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-stacked-list li.list-heading + li {
+      border-top-width: 0; }
+  .nice-stacked-list li .item-heading {
+    margin: -15px -15px 15px;
+    padding: 10px 15px;
+    background-color: #F5F7F7;
+    display: block;
+    font-weight: 600;
+    font-size: 1em; }
   .nice-stacked-list li, .nice-stacked-list a {
     display: block;
     border-bottom: 1px solid #ebebed;

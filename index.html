@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="nice-reset">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -353,6 +353,8 @@
                         <a href="#" class="nice-btn primary icon fa-search">Primary button</a>
                         <a href="#" class="nice-btn accent icon fa-check">Accent</a>
                         <a href="#" class="nice-btn link">Link button</a>
+                    </p>
+                    <p>
                         <a href="#" class="nice-btn good icon fa-check">Good</a>
                         <a href="#" class="nice-btn warning icon fa-exclamation">Warning</a>
                         <a href="#" class="nice-btn bad icon fa-times">Bad</a>
@@ -862,9 +864,33 @@
                         </a>
                     </nav>
                     <ul class="nice-stacked-list">
-                        <li>Item A</li>
-                        <li>Item B</li>
+                        <li class="list-heading">
+                            Search!
+                        </li>
+                        <li>
+                            <h3 class="item-heading">
+                                Working Hours
+                            </h3>
+                            <div class="nice-form-group">
+                                <select class="nice-form-control">
+                                    <option>No preference</option>
+                                    <option>Regular working hours</option>
+                                    <option>Shift work</option>
+                                </select>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="item-heading">Advertiser Type</h3>
+                            <div class="nice-form-group">
+                                <select class="nice-form-control">
+                                    <option>No preference</option>
+                                    <option>Direct employer</option>
+                                    <option>Staffing / Recruitment agency</option>
+                                </select>
+                            </div>
+                        </li>
                         <li>Item C</li>
+                        <li>Item D</li>
                     </ul>
                 </div>
                 <div class="nice-col-6">
@@ -879,8 +905,17 @@
 &lt;/nav&gt;
 
 &lt;ul class=&quot;<span class="main">nice-stacked-list</span>&quot;&gt;
+    &lt;li class=&quot;<span class="variation">list-heading</span>&quot;&gt;
+        Search!
+    &lt;/li&gt;
     &lt;li&gt;
+        &lt;h3 class=&quot;<span class="variation">item-heading</span>&quot;&gt;
+            Item heading
+        &lt;/h3&gt;
         Item A
+    &lt;/li&gt;
+    &lt;li&gt;
+        Item B
     &lt;/li&gt;
     ...
 &lt;/ul&gt;</code>

@@ -54,7 +54,9 @@ textarea {
     }
 }
 .nice-form-group {
-    margin-bottom: 15px;
+    + .nice-form-group {
+        margin-top: 15px;
+    }
 }
 .nice-control-group {
     display: table;

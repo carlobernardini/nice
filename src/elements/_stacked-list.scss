@@ -10,6 +10,27 @@
     &:last-child {
         margin-bottom: 0;
     }
+    li {
+        &.list-heading {
+            background-color: $color-accent;
+            color: $color-white;
+            font-weight: 600;
+            margin: -1px -1px 0 -1px;
+            @include nice-border-radius($default-radius $default-radius 0 0);
+
+            + li {
+                border-top-width: 0;
+            }
+        }
+        .item-heading {
+            margin: -15px -15px 15px;
+            padding: 10px 15px;
+            background-color: $gray-vlight;
+            display: block;
+            font-weight: 600;
+            font-size: 1em;
+        }
+    }
     li, a {
         display: block;
         border-bottom: 1px solid lighten($color-border, 10%);
@@ -18,7 +39,7 @@
         @include nice-line-height(18px);
 
         .badge {
-            float:right;
+            float: right;
             background-color: $gray-medium;
             color: $color-white;
             padding: 3px 8px;

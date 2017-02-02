@@ -24,7 +24,7 @@ button,
 
 header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list li .badge, .nice-stacked-list a .badge, .nice-breadcrumb li, .nice-pagination, button,
+.nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, button,
 .nice-btn, .nice-loading {
   display: -moz-inline-stack;
   display: inline-block;
@@ -3979,14 +3979,14 @@ textarea.nice-form-control {
     display: block;
     font-weight: 600;
     font-size: 1em; }
-  .nice-stacked-list li, .nice-stacked-list a {
+  .nice-stacked-list > li, .nice-stacked-list > a {
     display: block;
     border-bottom: 1px solid #ebebed;
     padding: 15px 15px;
     position: relative;
     line-height: 18px;
     line-height: 1.125rem; }
-    .nice-stacked-list li .badge, .nice-stacked-list a .badge {
+    .nice-stacked-list > li .badge, .nice-stacked-list > a .badge {
       float: right;
       background-color: #D0D1D5;
       color: #FFF;
@@ -4008,36 +4008,36 @@ textarea.nice-form-control {
       -ms-transition: background-color 0.1s;
       -o-transition: background-color 0.1s;
       transition: background-color 0.1s; }
-      .nice-stacked-list li .badge.primary, .nice-stacked-list a .badge.primary {
+      .nice-stacked-list > li .badge.primary, .nice-stacked-list > a .badge.primary {
         background-color: #ff940c; }
-      .nice-stacked-list li .badge.accent, .nice-stacked-list a .badge.accent {
+      .nice-stacked-list > li .badge.accent, .nice-stacked-list > a .badge.accent {
         background-color: #1f3155; }
-      .nice-stacked-list li .badge.info, .nice-stacked-list a .badge.info {
+      .nice-stacked-list > li .badge.info, .nice-stacked-list > a .badge.info {
         background-color: #75cce2; }
-      .nice-stacked-list li .badge.warning, .nice-stacked-list a .badge.warning {
+      .nice-stacked-list > li .badge.warning, .nice-stacked-list > a .badge.warning {
         background-color: #ffc033; }
-      .nice-stacked-list li .badge.good, .nice-stacked-list a .badge.good {
+      .nice-stacked-list > li .badge.good, .nice-stacked-list > a .badge.good {
         background-color: #6ec06e; }
-      .nice-stacked-list li .badge.bad, .nice-stacked-list a .badge.bad {
+      .nice-stacked-list > li .badge.bad, .nice-stacked-list > a .badge.bad {
         background-color: #f53d4b; }
-    .nice-stacked-list li:hover .badge, .nice-stacked-list a:hover .badge {
+    .nice-stacked-list > li:hover .badge, .nice-stacked-list > a:hover .badge {
       background-color: #009CC1; }
-      .nice-stacked-list li:hover .badge.primary, .nice-stacked-list a:hover .badge.primary {
+      .nice-stacked-list > li:hover .badge.primary, .nice-stacked-list > a:hover .badge.primary {
         background-color: #F18700; }
-      .nice-stacked-list li:hover .badge.accent, .nice-stacked-list a:hover .badge.accent {
+      .nice-stacked-list > li:hover .badge.accent, .nice-stacked-list > a:hover .badge.accent {
         background-color: #182642; }
-      .nice-stacked-list li:hover .badge.info, .nice-stacked-list a:hover .badge.info {
+      .nice-stacked-list > li:hover .badge.info, .nice-stacked-list > a:hover .badge.info {
         background-color: #60C4DE; }
-      .nice-stacked-list li:hover .badge.warning, .nice-stacked-list a:hover .badge.warning {
+      .nice-stacked-list > li:hover .badge.warning, .nice-stacked-list > a:hover .badge.warning {
         background-color: #FFB819; }
-      .nice-stacked-list li:hover .badge.good, .nice-stacked-list a:hover .badge.good {
+      .nice-stacked-list > li:hover .badge.good, .nice-stacked-list > a:hover .badge.good {
         background-color: #5CB85C; }
-      .nice-stacked-list li:hover .badge.bad, .nice-stacked-list a:hover .badge.bad {
+      .nice-stacked-list > li:hover .badge.bad, .nice-stacked-list > a:hover .badge.bad {
         background-color: #F42534; }
-    .nice-stacked-list li.current, .nice-stacked-list a.current {
+    .nice-stacked-list > li.current, .nice-stacked-list > a.current {
       background-color: #F5F7F7;
       color: #000; }
-    .nice-stacked-list li:last-child, .nice-stacked-list a:last-child {
+    .nice-stacked-list > li:last-child, .nice-stacked-list > a:last-child {
       border-bottom: none; }
   .nice-stacked-list.condensed li, .nice-stacked-list.condensed a {
     padding: 10px 15px; }

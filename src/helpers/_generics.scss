@@ -3,6 +3,7 @@ body {
     background-color: $gray-vlight;
     font-family: $fonts-primary;
     font-weight: $default-font-weight;
+    font-size: 16px;
 }
 a {
     color: $color-link;
@@ -12,6 +13,9 @@ a {
     &:hover {
         color: lighten($color-link, 10%);
     }
+}
+strong {
+    font-weight: 600;
 }
 .icon {
     &::before {

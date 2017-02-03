@@ -52,6 +52,7 @@ $colors: (
         margin: -15px;
         display: table;
         width: calc(100% + 30px);
+        @include nice-border-radius($default-radius);
     }
     .nice-alert-content,
     .nice-alert-button {
@@ -61,12 +62,14 @@ $colors: (
     .nice-alert-content {
         width: 80%;
         vertical-align: top;
+        @include nice-border-radius($default-radius 0 0 $default-radius);
     }
     .nice-alert-button {
         text-align: center;
         width: 20%;
         vertical-align: middle;
         font-weight: 600;
+        @include nice-border-radius(0 $default-radius $default-radius 0);
         @include nice-transition(background-color 0.3s);
     }
 }

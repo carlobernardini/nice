@@ -4581,19 +4581,37 @@ button,
   .nice-alert .nice-alert-wrapper {
     margin: -15px;
     display: table;
-    width: calc(100% + 31px); }
+    width: calc(100% + 30px);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
   .nice-alert .nice-alert-content,
   .nice-alert .nice-alert-button {
     padding: 15px;
     display: table-cell; }
   .nice-alert .nice-alert-content {
     width: 80%;
-    vertical-align: top; }
+    vertical-align: top;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
   .nice-alert .nice-alert-button {
     text-align: center;
     width: 20%;
     vertical-align: middle;
     font-weight: 600;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
     -ms-transition: background-color 0.3s;

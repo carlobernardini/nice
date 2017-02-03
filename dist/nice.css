@@ -4516,18 +4516,89 @@ button,
     background-color: #f4fbfd;
     color: #2596b3;
     border-color: #75cce2; }
+    .nice-alert.info .nice-alert-heading {
+      background-color: #60C4DE;
+      color: #FFF; }
+    .nice-alert.info .nice-alert-dismiss {
+      color: #2596b3; }
+    .nice-alert.info .nice-alert-button {
+      border-left: 1px solid #b4e3f0;
+      color: #2596b3; }
+      .nice-alert.info .nice-alert-button:hover {
+        background-color: #dff3f8; }
   .nice-alert.good {
     background-color: #d8eed8;
     color: #357935;
     border-color: #6ec06e; }
+    .nice-alert.good .nice-alert-heading {
+      background-color: #5CB85C;
+      color: #FFF; }
+    .nice-alert.good .nice-alert-dismiss {
+      color: #357935; }
+    .nice-alert.good .nice-alert-button {
+      border-left: 1px solid #a3d7a3;
+      color: #357935; }
+      .nice-alert.good .nice-alert-button:hover {
+        background-color: #c7e6c7; }
   .nice-alert.warning {
     background-color: #ffefcc;
     color: #b27b00;
     border-color: #ffc033; }
+    .nice-alert.warning .nice-alert-heading {
+      background-color: #FFB819;
+      color: #FFF; }
+    .nice-alert.warning .nice-alert-dismiss {
+      color: #b27b00; }
+    .nice-alert.warning .nice-alert-button {
+      border-left: 1px solid #ffd77f;
+      color: #b27b00; }
+      .nice-alert.warning .nice-alert-button:hover {
+        background-color: #ffe7b2; }
   .nice-alert.bad {
     background-color: #fdcfd2;
     color: #aa0914;
     border-color: #f53d4b; }
+    .nice-alert.bad .nice-alert-heading {
+      background-color: #F42534;
+      color: #FFF; }
+    .nice-alert.bad .nice-alert-dismiss {
+      color: #aa0914; }
+    .nice-alert.bad .nice-alert-button {
+      border-left: 1px solid #f9868e;
+      color: #aa0914; }
+      .nice-alert.bad .nice-alert-button:hover {
+        background-color: #fbb7bc; }
+  .nice-alert .nice-alert-heading {
+    margin: -15px -15px 15px;
+    padding: 5px 15px;
+    font-weight: 600; }
+  .nice-alert .nice-alert-dismiss {
+    padding: 10px;
+    margin: -10px;
+    float: right; }
+    .nice-alert .nice-alert-dismiss:hover {
+      color: #000; }
+  .nice-alert .nice-alert-wrapper {
+    margin: -15px;
+    display: table;
+    width: calc(100% + 31px); }
+  .nice-alert .nice-alert-content,
+  .nice-alert .nice-alert-button {
+    padding: 15px;
+    display: table-cell; }
+  .nice-alert .nice-alert-content {
+    width: 80%;
+    vertical-align: top; }
+  .nice-alert .nice-alert-button {
+    text-align: center;
+    width: 20%;
+    vertical-align: middle;
+    font-weight: 600;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s; }
 
 div.nice-card,
 article.nice-card,

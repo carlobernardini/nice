@@ -16,6 +16,57 @@ $colors: (
             background-color: lighten(map-get($colors, #{$type}), 35%);
             color: darken(map-get($colors, #{$type}), 20%);
             border-color: lighten(map-get($colors, #{$type}), 5%);    
+
+            .nice-alert-heading {
+                background-color: map-get($colors, #{$type});
+                color: $color-white;
+            }
+            .nice-alert-dismiss {
+                color: darken(map-get($colors, #{$type}), 20%);
+            }
+            .nice-alert-button {
+                border-left: 1px solid lighten(map-get($colors, #{$type}), 20%);                    
+                color: darken(map-get($colors, #{$type}), 20%);
+
+                &:hover {
+                    background-color: lighten(map-get($colors, #{$type}), 30%);
+                }
+            }
         }
+    }
+    .nice-alert-heading {
+        margin: -15px -15px 15px;
+        padding: 5px 15px;
+        font-weight: 600;
+    }
+    .nice-alert-dismiss {
+        padding: 10px;
+        margin: -10px;
+        float: right;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+    .nice-alert-wrapper {
+        margin: -15px;
+        display: table;
+        width: calc(100% + 31px);
+    }
+    .nice-alert-content,
+    .nice-alert-button {
+        padding: 15px;
+        display: table-cell;
+    }
+    .nice-alert-content {
+        width: 80%;
+        vertical-align: top;
+    }
+    .nice-alert-button {
+        text-align: center;
+        width: 20%;
+        vertical-align: middle;
+        font-weight: 600;
+        @include nice-transition(background-color 0.3s);
     }
 }

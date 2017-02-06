@@ -28,16 +28,14 @@ $select-caret-base64: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1
 
 input {
     &.nice-form-control {
-        &[type="text"],
-        &[type="password"] {
-            @extend %form-control;
-            @include nice-line-height(18px);
-        }
+        @extend %form-control;
+        @include nice-line-height(20px);
     }
 }
 select {
     &.nice-form-control {
         height: calculateRem(32px);
+        @include nice-line-height(20px);
         @extend %form-control;
 
         &[multiple] {
@@ -61,11 +59,12 @@ textarea {
 .nice-control-group {
     display: table;
     white-space: nowrap;
+    border-collapse: separate;
 
     > {
         input.nice-form-control, 
         select.nice-form-control,
-        .nice-btn {
+        .nice-control-group-btn {
             display: table-cell;
         }
         *:first-child {
@@ -76,6 +75,42 @@ textarea {
         }
         *:not(:first-child):not(:last-child) {
             @include nice-border-radius(none);
+        }
+        .nice-form-control {
+            position: relative;
+            float: left;
+            width: 100%;
+            z-index: 2;
+
+            &:focus {
+                z-index: 3;
+            }
+        }
+        .nice-control-group-btn {
+            font-size: 0;
+            white-space: nowrap;
+            vertical-align: middle;
+            position: relative;
+            width: 1%;
+
+            &:last-child {
+                button,
+                .nice-btn {
+                    z-index: 2;
+                    margin-left: -1px;
+                }
+            }
+            button,
+            .nice-btn {
+                position: relative;
+            }
+            *:last-child {
+                margin-left: -1px;
+                @include nice-border-radius(0 $default-radius $default-radius 0);
+            }
+            *:not(:first-child):not(:last-child) {
+                @include nice-border-radius(none);
+            }
         }
     }
 }

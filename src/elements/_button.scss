@@ -49,6 +49,7 @@ button,
     &.link {
         color: $color-link;
         border: none;
+        padding: 6px 10px;
         background-color: transparent;
         @include nice-transition(color 0.3s);
 

@@ -4375,6 +4375,7 @@ button,
   .nice-btn.link {
     color: #009CC1;
     border: none;
+    padding: 6px 10px;
     background-color: transparent;
     -webkit-transition: color 0.3s;
     -moz-transition: color 0.3s;

@@ -1,0 +1,23 @@
+.nice-panel {
+    @extend %panel;
+
+    .nice-panel-heading {
+        @extend %panel-heading;
+    }
+    .nice-panel-content {
+        padding: 15px;
+
+        ~ .nice-panel-heading {
+            @include nice-border-radius(0 0 $default-radius $default-radius);
+        }
+    }
+    @each $type in (brand, info, good, warning, bad) {
+        &.#{$type} {
+            @include nice-box-shadow(0 1px 2px rgba(map-get($color-scheme, #{$type}), .6));
+
+            .nice-panel-heading {
+                background-color: map-get($color-scheme, #{$type});
+            }
+        }
+    }
+}

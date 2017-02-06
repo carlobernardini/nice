@@ -149,6 +149,9 @@ body {
             &.variation {
                 color: $color-brand;
             }
+            &.optional {
+                color: $color-muted;
+            }
         }
         &.collapsed {
             cursor: pointer;

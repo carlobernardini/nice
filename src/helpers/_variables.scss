@@ -24,3 +24,16 @@ $largedesktop:          new-breakpoint(min-width $largedesktop-size 16);
 // Spatial
 $default-radius:		3px;
 $default-footer-height: 100px;
+
+// Color scheme map
+$color-scheme: (
+    'brand':    $color-brand,
+    'primary':  $color-primary,
+    'accent':   $color-accent,
+    'link':     $color-link,
+    'muted':    $color-muted,
+    'info':     $color-info,
+    'good':     $color-good,
+    'warning':  $color-warning,
+    'bad':      $color-bad
+);

@@ -31,6 +31,34 @@ header .nice-header-brand,
   *display: inline-block;
   zoom: 1; }
 
+.nice-panel, .nice-stacked-list {
+  padding: 0;
+  margin: 0 0 15px 0;
+  background-color: #FFF;
+  border-top: 1px solid #dddee1;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+
+.nice-panel .nice-panel-heading, .nice-stacked-list li.list-heading {
+  background-color: #182642;
+  color: #FFF;
+  font-weight: 600;
+  margin: -1px -1px 0 -1px;
+  padding: 10px 15px;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
 .clearfix, .nice-tabs, nav, .nice-btn-group {
   zoom: 1;
   display: block;
@@ -3946,35 +3974,55 @@ textarea.nice-form-control {
     .nice-tabs-wrapper ul.nice-tabs-content li.current {
       display: block; }
 
-.nice-stacked-list {
-  padding: 0;
-  margin: 0 0 15px 0;
-  background-color: #FFF;
-  list-style: none;
-  border-top: 1px solid #dddee1;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .nice-stacked-list li.list-heading {
-    background-color: #182642;
-    color: #FFF;
-    font-weight: 600;
-    margin: -1px -1px 0 -1px;
-    padding: 10px 15px;
-    -webkit-border-radius: 3px 3px 0 0;
-    -moz-border-radius: 3px 3px 0 0;
-    border-radius: 3px 3px 0 0;
+.nice-panel .nice-panel-content {
+  padding: 15px; }
+  .nice-panel .nice-panel-content ~ .nice-panel-heading {
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
-    .nice-stacked-list li.list-heading + li {
-      border-top-width: 0; }
+
+.nice-panel.brand {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 156, 193, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(0, 156, 193, 0.6);
+  box-shadow: 0 1px 2px rgba(0, 156, 193, 0.6); }
+  .nice-panel.brand .nice-panel-heading {
+    background-color: #009CC1; }
+
+.nice-panel.info {
+  -webkit-box-shadow: 0 1px 2px rgba(96, 196, 222, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(96, 196, 222, 0.6);
+  box-shadow: 0 1px 2px rgba(96, 196, 222, 0.6); }
+  .nice-panel.info .nice-panel-heading {
+    background-color: #60C4DE; }
+
+.nice-panel.good {
+  -webkit-box-shadow: 0 1px 2px rgba(92, 184, 92, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(92, 184, 92, 0.6);
+  box-shadow: 0 1px 2px rgba(92, 184, 92, 0.6); }
+  .nice-panel.good .nice-panel-heading {
+    background-color: #5CB85C; }
+
+.nice-panel.warning {
+  -webkit-box-shadow: 0 1px 2px rgba(255, 184, 25, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(255, 184, 25, 0.6);
+  box-shadow: 0 1px 2px rgba(255, 184, 25, 0.6); }
+  .nice-panel.warning .nice-panel-heading {
+    background-color: #FFB819; }
+
+.nice-panel.bad {
+  -webkit-box-shadow: 0 1px 2px rgba(244, 37, 52, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(244, 37, 52, 0.6);
+  box-shadow: 0 1px 2px rgba(244, 37, 52, 0.6); }
+  .nice-panel.bad .nice-panel-heading {
+    background-color: #F42534; }
+
+.nice-stacked-list {
+  list-style: none; }
+  .nice-stacked-list li.list-heading + li {
+    border-top-width: 0; }
   .nice-stacked-list li .item-heading {
     margin: -15px -15px 15px;
     padding: 10px 15px;
@@ -4900,7 +4948,7 @@ code {
     display: inline;
     background-color: #FFF;
     line-height: inherit;
-    border: 1px solid #D0D1D5;
+    border: none;
     padding: 3px 3px;
     color: #F42534;
     -webkit-border-radius: 2pxpx;

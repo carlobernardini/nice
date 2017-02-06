@@ -82,6 +82,9 @@
                                     <a href="#nice-pagination">Pagination</a>
                                 </li>
                                 <li>
+                                    <a href="#nice-panels">Panels</a>
+                                </li>
+                                <li>
                                     <a href="#nice-stacked-lists">Stacked lists</a>
                                 </li>
                                 <li>
@@ -864,6 +867,57 @@
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;</code>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-panels">
+                <h2>Panels</h2>
+                <div class="nice-col-6">
+                    <div class="nice-panel">
+                        <div class="nice-panel-content">
+                            This is a panel without heading
+                        </div>
+                    </div>
+                    <div class="nice-panel">
+                        <div class="nice-panel-heading">
+                            Panel with heading
+                        </div>
+                        <div class="nice-panel-content">
+                            This panel has a heading
+                        </div>
+                    </div>
+                    <div class="nice-panel good">
+                        <div class="nice-panel-heading">
+                            Very well
+                        </div>
+                        <div class="nice-panel-content">
+                            This is a good panel
+                        </div>
+                    </div>
+                    <div class="nice-panel info">
+                        <div class="nice-panel-content">
+                            This panel has a reversed heading
+                        </div>
+<div class="nice-panel-heading">
+    For Your Information
+</div>
+                    </div>
+                </div>
+                <div class="nice-col-6">
+                    <p class="text-align-justify">
+                        Panels are required to have a <code class="inline">.nice-panel-content</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
+                    </p>
+                    <code class="docs">&lt;div class=&quot;<span class="main">nice-panel</span> <span class="variation">brand info good warning bad</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-panel-heading</span>&quot;&gt;
+        Optional panel heading
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-panel-content</span>&quot;&gt;
+        Panel content goes here
+    &lt;/div&gt;
+    <span class="optional">&lt;div class=&quot;nice-panel-heading&quot;&gt;
+        The panel heading can also go at the bottom
+    &lt;/div&gt;</span>
+&lt;/div&gt;
+                    </code>
                 </div>
             </div>
             <div class="nice-row" id="nice-stacked-lists">

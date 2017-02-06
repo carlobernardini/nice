@@ -1,26 +1,18 @@
-$colors: (
-    'primary': $color-primary,
-    'accent': $color-accent,
-    'info': $color-info,
-    'good': $color-good,
-    'warning': $color-warning,
-    'bad': $color-bad
-);
-
 button,
 .nice-btn {
     color: $color-black;
     position: relative;
     border: 1px solid $color-border;
     background-color: $color-white;
-    padding: 0 10px;
+    padding: 5px 10px;
     text-decoration:none;
     outline: none;
     text-align: center;
     @include nice-font($family: $fonts-primary);
-    @include nice-line-height(32px);
+    @include nice-line-height(20px);
     @include nice-border-radius($default-radius);
     @include nice-transition(border 0.1s, background 0.1s);
+    @include nice-font-size(14px);
     @extend %display-inline-block;
     @extend %disable-user-select;
 
@@ -33,6 +25,21 @@ button,
         border: 1px solid darken($color-border, 15%);
         background: $gray-light;
         @include nice-box-shadow(inset 0px 2px 1px rgba($gray-medium, 1));
+    }
+    &[disabled],
+    &.disabled {
+        background-color: lighten($color-border, 20%);
+        border-color: lighten($color-border, 5%);
+        color: $color-muted;
+        cursor: default;
+
+        &:active,
+        &:hover,
+        &:focus {
+            background-color: lighten($color-border, 20%);
+            border-color: lighten($color-border, 5%);
+            @include nice-box-shadow(none);
+        }
     }
     &.icon {
         &::before {
@@ -47,44 +54,41 @@ button,
 
         &:hover,
         &:focus {
-            color:lighten($color-link, 10%);
+            color: lighten($color-link, 10%);
             background-color: transparent;
             @include nice-box-shadow(none);
         }
+        &[disabled],
+        &.disabled {
+            color: $color-muted;
+        }
     }
-    // &.primary {
-    //     color: $color-white;
-    //     background-color: $color-primary;
-    //     border: none;
-    //     padding: 0 11px;
-    //     @include nice-line-height(34px);
-    //     @include nice-font($weight: 400);
-
-    //     &:hover {
-    //         background-color: #F39C12;
-    //     }
-    //     &:active {
-    //         @include nice-box-shadow(inset 0px 2px 1px darken($color-primary, 5%));
-    //     }
-    // }
     @each $type in (primary, accent, info, good, warning, bad) {
         &.#{$type} {
-            background-color: lighten(map-get($colors, #{$type}), 35%);
-            color: darken(map-get($colors, #{$type}), 20%);
-            border-color: lighten(map-get($colors, #{$type}), 5%);    
-
+            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+            color: darken(map-get($color-scheme, #{$type}), 20%);
+            border-color: lighten(map-get($color-scheme, #{$type}), 5%);    
             color: $color-white;
-            background-color: map-get($colors, #{$type});
+            background-color: map-get($color-scheme, #{$type});
             border: none;
-            padding: 0 11px;
-            @include nice-line-height(34px);
-            @include nice-font($weight: 400);
+            padding: 6px 11px;
+            @include nice-font($weight: 400, $size: 14px);
 
             &:hover {
-                background-color: lighten(map-get($colors, #{$type}), 5%);
+                background-color: lighten(map-get($color-scheme, #{$type}), 5%);
             }
             &:active {
-                @include nice-box-shadow(inset 0px 2px 1px darken(map-get($colors, #{$type}), 5%));
+                @include nice-box-shadow(inset 0px 2px 1px darken(map-get($color-scheme, #{$type}), 5%));
+            }
+            &[disabled],
+            &.disabled {
+                $btn-lightened: lighten(map-get($color-scheme, #{$type}), 25%);
+                $btn-desaturated: desaturate($btn-lightened, 30%);
+                background-color: $btn-desaturated;
+
+                &:active {
+                    @include nice-box-shadow(none);
+                }
             }
         }
     }

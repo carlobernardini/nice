@@ -3749,7 +3749,7 @@ html {
 /**
  * Module placeholders
  **/
-input.nice-form-control[type="text"], input.nice-form-control[type="password"], select.nice-form-control, textarea.nice-form-control {
+input.nice-form-control, select.nice-form-control, textarea.nice-form-control {
   border: 1px solid #D0D1D5;
   outline: none;
   padding: 5px;
@@ -3774,18 +3774,20 @@ input.nice-form-control[type="text"], input.nice-form-control[type="password"], 
   transition: box-shadow 0.1s, border 0.1s;
   font-size: 14px;
   font-size: 0.875rem; }
-  input.nice-form-control[type="text"]:focus, input.nice-form-control[type="password"]:focus, select.nice-form-control:focus, textarea.nice-form-control:focus {
+  input.nice-form-control:focus, select.nice-form-control:focus, textarea.nice-form-control:focus {
     border: 1px solid #009CC1;
     -webkit-box-shadow: inset 0 2px 2px #ECF0F1;
     -moz-box-shadow: inset 0 2px 2px #ECF0F1;
     box-shadow: inset 0 2px 2px #ECF0F1; }
 
-input.nice-form-control[type="text"], input.nice-form-control[type="password"] {
-  line-height: 18px;
-  line-height: 1.125rem; }
+input.nice-form-control {
+  line-height: 20px;
+  line-height: 1.25rem; }
 
 select.nice-form-control {
-  height: 2rem; }
+  height: 2rem;
+  line-height: 20px;
+  line-height: 1.25rem; }
   select.nice-form-control[multiple] {
     padding: 5px;
     height: auto; }
@@ -3800,10 +3802,11 @@ textarea.nice-form-control {
 
 .nice-control-group {
   display: table;
-  white-space: nowrap; }
+  white-space: nowrap;
+  border-collapse: separate; }
   .nice-control-group > input.nice-form-control,
   .nice-control-group > select.nice-form-control,
-  .nice-control-group > .nice-btn {
+  .nice-control-group > .nice-control-group-btn {
     display: table-cell; }
   .nice-control-group > *:first-child {
     -webkit-border-radius: 3px 0 0 3px;
@@ -3826,6 +3829,41 @@ textarea.nice-form-control {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
+  .nice-control-group > .nice-form-control {
+    position: relative;
+    float: left;
+    width: 100%;
+    z-index: 2; }
+    .nice-control-group > .nice-form-control:focus {
+      z-index: 3; }
+  .nice-control-group > .nice-control-group-btn {
+    font-size: 0;
+    white-space: nowrap;
+    vertical-align: middle;
+    position: relative;
+    width: 1%; }
+    .nice-control-group > .nice-control-group-btn:last-child button,
+    .nice-control-group > .nice-control-group-btn:last-child .nice-btn {
+      z-index: 2;
+      margin-left: -1px; }
+    .nice-control-group > .nice-control-group-btn button,
+    .nice-control-group > .nice-control-group-btn .nice-btn {
+      position: relative; }
+    .nice-control-group > .nice-control-group-btn *:last-child {
+      margin-left: -1px;
+      -webkit-border-radius: 0 3px 3px 0;
+      -moz-border-radius: 0 3px 3px 0;
+      border-radius: 0 3px 3px 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-control-group > .nice-control-group-btn *:not(:first-child):not(:last-child) {
+      -webkit-border-radius: none;
+      -moz-border-radius: none;
+      border-radius: none;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
 
 .nice-radio label,
 .nice-checkbox label {
@@ -4275,7 +4313,7 @@ button,
   position: relative;
   border: 1px solid #D0D1D5;
   background-color: #FFF;
-  padding: 0 10px;
+  padding: 5px 10px;
   text-decoration: none;
   outline: none;
   text-align: center;
@@ -4284,8 +4322,8 @@ button,
   font-variant: normal;
   font-weight: 300;
   font-size: 1em;
-  line-height: 32px;
-  line-height: 2rem;
+  line-height: 20px;
+  line-height: 1.25rem;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -4296,7 +4334,9 @@ button,
   -moz-transition: border 0.1s, background 0.1s;
   -ms-transition: border 0.1s, background 0.1s;
   -o-transition: border 0.1s, background 0.1s;
-  transition: border 0.1s, background 0.1s; }
+  transition: border 0.1s, background 0.1s;
+  font-size: 14px;
+  font-size: 0.875rem; }
   button:hover,
   .nice-btn:hover {
     color: #000;
@@ -4309,6 +4349,25 @@ button,
     -webkit-box-shadow: inset 0px 2px 1px #d0d1d5;
     -moz-box-shadow: inset 0px 2px 1px #d0d1d5;
     box-shadow: inset 0px 2px 1px #d0d1d5; }
+  button[disabled], button.disabled,
+  .nice-btn[disabled],
+  .nice-btn.disabled {
+    background-color: white;
+    border-color: #dddee1;
+    color: #B2B2B2;
+    cursor: default; }
+    button[disabled]:active, button[disabled]:hover, button[disabled]:focus, button.disabled:active, button.disabled:hover, button.disabled:focus,
+    .nice-btn[disabled]:active,
+    .nice-btn[disabled]:hover,
+    .nice-btn[disabled]:focus,
+    .nice-btn.disabled:active,
+    .nice-btn.disabled:hover,
+    .nice-btn.disabled:focus {
+      background-color: white;
+      border-color: #dddee1;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
   button.icon::before,
   .nice-btn.icon::before {
     margin-right: 5px; }
@@ -4330,6 +4389,10 @@ button,
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
+    button.link[disabled], button.link.disabled,
+    .nice-btn.link[disabled],
+    .nice-btn.link.disabled {
+      color: #B2B2B2; }
   button.primary,
   .nice-btn.primary {
     background-color: #ffd7a5;
@@ -4338,14 +4401,12 @@ button,
     color: #FFF;
     background-color: #F18700;
     border: none;
-    padding: 0 11px;
-    line-height: 34px;
-    line-height: 2.125rem;
+    padding: 6px 11px;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 1em; }
+    font-size: 14px; }
     button.primary:hover,
     .nice-btn.primary:hover {
       background-color: #ff940c; }
@@ -4354,6 +4415,16 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #d87900;
       -moz-box-shadow: inset 0px 2px 1px #d87900;
       box-shadow: inset 0px 2px 1px #d87900; }
+    button.primary[disabled], button.primary.disabled,
+    .nice-btn.primary[disabled],
+    .nice-btn.primary.disabled {
+      background-color: #eabe87; }
+      button.primary[disabled]:active, button.primary.disabled:active,
+      .nice-btn.primary[disabled]:active,
+      .nice-btn.primary.disabled:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
   button.accent,
   .nice-btn.accent {
     background-color: #4e73bf;
@@ -4362,14 +4433,12 @@ button,
     color: #FFF;
     background-color: #182642;
     border: none;
-    padding: 0 11px;
-    line-height: 34px;
-    line-height: 2.125rem;
+    padding: 6px 11px;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 1em; }
+    font-size: 14px; }
     button.accent:hover,
     .nice-btn.accent:hover {
       background-color: #1f3155; }
@@ -4378,6 +4447,16 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #111b2f;
       -moz-box-shadow: inset 0px 2px 1px #111b2f;
       box-shadow: inset 0px 2px 1px #111b2f; }
+    button.accent[disabled], button.accent.disabled,
+    .nice-btn.accent[disabled],
+    .nice-btn.accent.disabled {
+      background-color: #5b677f; }
+      button.accent[disabled]:active, button.accent.disabled:active,
+      .nice-btn.accent[disabled]:active,
+      .nice-btn.accent.disabled:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
   button.info,
   .nice-btn.info {
     background-color: #f4fbfd;
@@ -4386,14 +4465,12 @@ button,
     color: #FFF;
     background-color: #60C4DE;
     border: none;
-    padding: 0 11px;
-    line-height: 34px;
-    line-height: 2.125rem;
+    padding: 6px 11px;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 1em; }
+    font-size: 14px; }
     button.info:hover,
     .nice-btn.info:hover {
       background-color: #75cce2; }
@@ -4402,6 +4479,16 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #4bbcda;
       -moz-box-shadow: inset 0px 2px 1px #4bbcda;
       box-shadow: inset 0px 2px 1px #4bbcda; }
+    button.info[disabled], button.info.disabled,
+    .nice-btn.info[disabled],
+    .nice-btn.info.disabled {
+      background-color: #d3e5ea; }
+      button.info[disabled]:active, button.info.disabled:active,
+      .nice-btn.info[disabled]:active,
+      .nice-btn.info.disabled:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
   button.good,
   .nice-btn.good {
     background-color: #d8eed8;
@@ -4410,14 +4497,12 @@ button,
     color: #FFF;
     background-color: #5CB85C;
     border: none;
-    padding: 0 11px;
-    line-height: 34px;
-    line-height: 2.125rem;
+    padding: 6px 11px;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 1em; }
+    font-size: 14px; }
     button.good:hover,
     .nice-btn.good:hover {
       background-color: #6ec06e; }
@@ -4426,6 +4511,16 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #4cae4c;
       -moz-box-shadow: inset 0px 2px 1px #4cae4c;
       box-shadow: inset 0px 2px 1px #4cae4c; }
+    button.good[disabled], button.good.disabled,
+    .nice-btn.good[disabled],
+    .nice-btn.good.disabled {
+      background-color: #c5cfc5; }
+      button.good[disabled]:active, button.good.disabled:active,
+      .nice-btn.good[disabled]:active,
+      .nice-btn.good.disabled:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
   button.warning,
   .nice-btn.warning {
     background-color: #ffefcc;
@@ -4434,14 +4529,12 @@ button,
     color: #FFF;
     background-color: #FFB819;
     border: none;
-    padding: 0 11px;
-    line-height: 34px;
-    line-height: 2.125rem;
+    padding: 6px 11px;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 1em; }
+    font-size: 14px; }
     button.warning:hover,
     .nice-btn.warning:hover {
       background-color: #ffc033; }
@@ -4450,6 +4543,16 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #ffb000;
       -moz-box-shadow: inset 0px 2px 1px #ffb000;
       box-shadow: inset 0px 2px 1px #ffb000; }
+    button.warning[disabled], button.warning.disabled,
+    .nice-btn.warning[disabled],
+    .nice-btn.warning.disabled {
+      background-color: #f0d9a8; }
+      button.warning[disabled]:active, button.warning.disabled:active,
+      .nice-btn.warning[disabled]:active,
+      .nice-btn.warning.disabled:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
   button.bad,
   .nice-btn.bad {
     background-color: #fdcfd2;
@@ -4458,14 +4561,12 @@ button,
     color: #FFF;
     background-color: #F42534;
     border: none;
-    padding: 0 11px;
-    line-height: 34px;
-    line-height: 2.125rem;
+    padding: 6px 11px;
     font-family: "Open Sans", sans-serif, helvetica;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 1em; }
+    font-size: 14px; }
     button.bad:hover,
     .nice-btn.bad:hover {
       background-color: #f53d4b; }
@@ -4474,6 +4575,16 @@ button,
       -webkit-box-shadow: inset 0px 2px 1px #f30d1d;
       -moz-box-shadow: inset 0px 2px 1px #f30d1d;
       box-shadow: inset 0px 2px 1px #f30d1d; }
+    button.bad[disabled], button.bad.disabled,
+    .nice-btn.bad[disabled],
+    .nice-btn.bad.disabled {
+      background-color: #ebaeb2; }
+      button.bad[disabled]:active, button.bad.disabled:active,
+      .nice-btn.bad[disabled]:active,
+      .nice-btn.bad.disabled:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
   button.small,
   .nice-btn.small,
   .nice-btn-group.small > .nice-btn {

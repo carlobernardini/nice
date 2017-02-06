@@ -241,6 +241,9 @@ a {
   a:hover {
     color: #00c5f4; }
 
+p {
+  margin: 0 0 15px 0; }
+
 strong {
   font-weight: 600; }
 
@@ -2731,7 +2734,6 @@ i.icon {
     content: ""; }
 
 .nice-container {
-  padding: 0 15px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
@@ -3683,6 +3685,9 @@ html {
       height: 100px;
       overflow: hidden;
       width: 100%; }
+      html body footer p,
+      html body .nice-footer p {
+        margin: 15px 0; }
       html body footer .nice-footer-menu,
       html body .nice-footer .nice-footer-menu {
         margin: 0;
@@ -3943,7 +3948,7 @@ textarea.nice-form-control {
 
 .nice-stacked-list {
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
   background-color: #FFF;
   list-style: none;
   border-top: 1px solid #dddee1;
@@ -3956,8 +3961,6 @@ textarea.nice-form-control {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
-  .nice-stacked-list:last-child {
-    margin-bottom: 0; }
   .nice-stacked-list li.list-heading {
     background-color: #182642;
     color: #FFF;
@@ -4678,9 +4681,9 @@ summary.nice-card {
         top: 15px;
         left: 15px;
         text-shadow: 1px 1px 0 #FFF; }
-  div.nice-card .nice-card-links,
-  article.nice-card .nice-card-links,
-  summary.nice-card .nice-card-links {
+  div.nice-card .nice-card-controls,
+  article.nice-card .nice-card-controls,
+  summary.nice-card .nice-card-controls {
     position: absolute;
     bottom: 0;
     display: table;
@@ -4688,9 +4691,9 @@ summary.nice-card {
     width: 100%;
     border-top: 1px solid #ebebed;
     background-color: #FFF; }
-    div.nice-card .nice-card-links > a,
-    article.nice-card .nice-card-links > a,
-    summary.nice-card .nice-card-links > a {
+    div.nice-card .nice-card-controls > a,
+    article.nice-card .nice-card-controls > a,
+    summary.nice-card .nice-card-controls > a {
       vertical-align: bottom;
       padding: 10px 15px;
       text-align: center;
@@ -4700,14 +4703,32 @@ summary.nice-card {
       -ms-transition: background-color 0.2s, color 0.2s;
       -o-transition: background-color 0.2s, color 0.2s;
       transition: background-color 0.2s, color 0.2s; }
-      div.nice-card .nice-card-links > a + a,
-      article.nice-card .nice-card-links > a + a,
-      summary.nice-card .nice-card-links > a + a {
+      div.nice-card .nice-card-controls > a + a,
+      article.nice-card .nice-card-controls > a + a,
+      summary.nice-card .nice-card-controls > a + a {
         border-left: 1px solid #ebebed;
         text-align: center; }
-      div.nice-card .nice-card-links > a:hover,
-      article.nice-card .nice-card-links > a:hover,
-      summary.nice-card .nice-card-links > a:hover {
+      div.nice-card .nice-card-controls > a:first-child,
+      article.nice-card .nice-card-controls > a:first-child,
+      summary.nice-card .nice-card-controls > a:first-child {
+        -webkit-border-radius: 0 0 0 3px;
+        -moz-border-radius: 0 0 0 3px;
+        border-radius: 0 0 0 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      div.nice-card .nice-card-controls > a:last-child,
+      article.nice-card .nice-card-controls > a:last-child,
+      summary.nice-card .nice-card-controls > a:last-child {
+        -webkit-border-radius: 0 0 3px 0;
+        -moz-border-radius: 0 0 3px 0;
+        border-radius: 0 0 3px 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      div.nice-card .nice-card-controls > a:hover,
+      article.nice-card .nice-card-controls > a:hover,
+      summary.nice-card .nice-card-controls > a:hover {
         background-color: #F5F7F7; }
   div.nice-card > div:last-child,
   article.nice-card > div:last-child,
@@ -4882,7 +4903,6 @@ code {
     border: 1px solid #D0D1D5;
     padding: 3px 3px;
     color: #F42534;
-    font-size: inherit;
     -webkit-border-radius: 2pxpx;
     -moz-border-radius: 2pxpx;
     border-radius: 2pxpx;

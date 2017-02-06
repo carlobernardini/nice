@@ -44,7 +44,7 @@ summary {
                 }
             }
         }
-        .nice-card-links {
+        .nice-card-controls {
             position: absolute;
             bottom: 0;
             display: table;
@@ -63,6 +63,12 @@ summary {
                 + a {
                     border-left: 1px solid lighten($color-border, 10%);
                     text-align: center;
+                }
+                &:first-child {
+                    @include nice-border-radius(0 0 0 $default-radius);
+                }
+                &:last-child {
+                    @include nice-border-radius(0 0 $default-radius 0);
                 }
                 &:hover {
                     background-color: $gray-vlight;

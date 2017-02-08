@@ -54,8 +54,15 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li class="has-children">
                                     <a href="#nice-static-assets">Static assets</a>
+                                    <ul>
+                                        <li>
+                                            <a href="http://tkgit-01.textkernel.net/nice/nice-logos/tree/master" target="_blank" class="icon fa-picture-o">
+                                                Product logos
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#nice-font-icons">Font icons</a>
@@ -248,9 +255,14 @@
                     </table>
                 </div>
                 <div class="nice-col-6 text-align-justify">
-                    Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.
+                    <p>
+                        Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.
+                    </p>
                     <p>
                         The use of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_as_an_Image" target="_blank" title="MDN: SVG as an Image">SVG images</a> is highly recommended because as these can scale any size without quality loss.
+                    </p>
+                    <p>
+                        Additional high resolution logo files can be found in the <a href="http://tkgit-01.textkernel.net/nice/nice-logos/tree/master" target="_blank">Nice! Logo repository</a>.
                     </p>
                 </div>
             </div>
@@ -467,7 +479,7 @@
                     <p>
                         The justified button group uses table layout by default for better browser support. Alternatively, you can omit the <code class="inline">justified</code> class and apply Flexbox classes instead.
                     </p>
-                    <code class="docs">&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">primary link small large</span>"&gt;
+                    <code class="docs">&lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">primary good bad warning link small large bold disabled</span>"&gt;
     Primary button
 &lt;/a&gt;
 &lt;a href="#" class="<span class="main">nice-btn</span> <span class="variation">icon fa-check</span>"&gt;
@@ -905,14 +917,58 @@
                         <div class="nice-panel-content">
                             This panel has a inverse heading
                         </div>
-<div class="nice-panel-heading">
-    For Your Information
-</div>
+                        <div class="nice-panel-heading">
+                            For Your Information
+                        </div>
+                    </div>
+                    <div class="nice-panel">
+                        <div class="nice-panel-heading">
+                            Panels with table
+                        </div>
+                        <div class="nice-panel-content">
+                            This panel has a table
+                        </div>
+                        <table class="nice-table bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-align-center">#</th>
+                                    <th>First name</th>
+                                    <th>Last name</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="text-align-center">1</th>
+                                    <td>Carlo</td>
+                                    <td>Bernardini</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Chris</td>
+                                    <td>Dekker</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Dario</td>
+                                    <td>Tognacci</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Darko</td>
+                                    <td>Zelić</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Paul</td>
+                                    <td>Karabilo</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="nice-col-6">
                     <p class="text-align-justify">
-                        Panels are required to have a <code class="inline">.nice-panel-content</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
+                        Panels are required to have a <code class="inline">.nice-panel-content</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
                     </p>
                     <code class="docs">&lt;div class=&quot;<span class="main">nice-panel</span> <span class="variation">brand info good warning bad</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-panel-heading</span>&quot;&gt;

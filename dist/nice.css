@@ -23,7 +23,8 @@ button,
   user-select: none; }
 
 header .nice-header-brand,
-.nice-header .nice-header-brand, .nice-radio label,
+.nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
+.nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
 .nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, button,
 .nice-btn, .nice-loading {
   display: -moz-inline-stack;
@@ -3800,6 +3801,13 @@ textarea.nice-form-control {
 .nice-form-group + .nice-form-group {
   margin-top: 15px; }
 
+.nice-form-inline .nice-form-group {
+  vertical-align: middle; }
+  .nice-form-inline .nice-form-group input.nice-form-control,
+  .nice-form-inline .nice-form-group select.nice-form-control {
+    width: auto;
+    vertical-align: middle; }
+
 .nice-control-group {
   display: table;
   white-space: nowrap;
@@ -4012,6 +4020,13 @@ textarea.nice-form-control {
     .nice-tabs-wrapper ul.nice-tabs-content li.current {
       display: block; }
 
+.nice-panel .nice-panel-heading + table.nice-table {
+  border-top: 0; }
+  .nice-panel .nice-panel-heading + table.nice-table.bordered {
+    border-top: 0; }
+    .nice-panel .nice-panel-heading + table.nice-table.bordered thead:first-child tr:first-child th {
+      border-top: 0; }
+
 .nice-panel .nice-panel-content {
   padding: 15px; }
   .nice-panel .nice-panel-content ~ .nice-panel-heading {
@@ -4021,6 +4036,15 @@ textarea.nice-form-control {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
+
+.nice-panel > table.nice-table.bordered {
+  border: 0; }
+  .nice-panel > table.nice-table.bordered tr td:first-child, .nice-panel > table.nice-table.bordered tr th:first-child {
+    border-left: 0; }
+  .nice-panel > table.nice-table.bordered tr td:last-child, .nice-panel > table.nice-table.bordered tr th:last-child {
+    border-right: 0; }
+  .nice-panel > table.nice-table.bordered tbody tr:last-child td, .nice-panel > table.nice-table.bordered tbody tr:last-child th {
+    border-bottom: 0; }
 
 .nice-panel.brand {
   -webkit-box-shadow: 0 1px 2px rgba(0, 156, 193, 0.6);
@@ -4294,7 +4318,7 @@ table.nice-table {
     line-height: 24px;
     line-height: 1.5rem; }
   table.nice-table.striped tbody tr:nth-child(odd) th, table.nice-table.striped tbody tr:nth-child(odd) td {
-    background-color: #ECF0F1; }
+    background-color: #F5F7F7; }
   table.nice-table.striped tbody tr:nth-child(even) th, table.nice-table.striped tbody tr:nth-child(even) td {
     background-color: transparent; }
   table.nice-table.bordered {
@@ -4602,6 +4626,9 @@ button,
     line-height: 2.625rem;
     font-size: 18px;
     font-size: 1.125rem; }
+  button.bold,
+  .nice-btn.bold {
+    font-weight: 600; }
 
 .nice-btn-group {
   margin: 15px 0; }

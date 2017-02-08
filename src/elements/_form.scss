@@ -56,6 +56,24 @@ textarea {
         margin-top: 15px;
     }
 }
+.nice-form-inline {
+    .nice-form-group {
+        vertical-align: middle;
+        @extend %display-inline-block;
+
+        input,
+        select {
+            &.nice-form-control {
+                width: auto;
+                vertical-align: middle;
+                @extend %display-inline-block;
+            }
+        }
+        label {
+            @extend %display-inline-block;
+        }
+    }
+}
 .nice-control-group {
     display: table;
     white-space: nowrap;
@@ -138,14 +156,14 @@ textarea {
  * Target Webkit-browsers only
  **/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-        select {
-            &.nice-form-control {
-                background: $color-white url($select-caret-base64) no-repeat right 50%;
-                @include nice-appearance(none);
+    select {
+        &.nice-form-control {
+            background: $color-white url($select-caret-base64) no-repeat right 50%;
+            @include nice-appearance(none);
 
-                &[multiple] {
-                    background-image: none;
-                }
+            &[multiple] {
+                background-image: none;
             }
         }
     }
+}

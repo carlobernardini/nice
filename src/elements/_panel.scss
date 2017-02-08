@@ -3,12 +3,61 @@
 
     .nice-panel-heading {
         @extend %panel-heading;
+
+        + table {
+            &.nice-table {
+                border-top: 0;
+
+                &.bordered {
+                    border-top: 0;
+
+                    thead {
+                        &:first-child {
+                            tr {
+                                &:first-child {
+                                    th {
+                                        border-top: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     .nice-panel-content {
         padding: 15px;
 
         ~ .nice-panel-heading {
             @include nice-border-radius(0 0 $default-radius $default-radius);
+        }
+    }
+    > table {
+        &.nice-table {
+            &.bordered {
+                border: 0;
+
+                tr {
+                    td, th {
+                        &:first-child {
+                            border-left: 0;
+                        }
+                        &:last-child {
+                            border-right: 0;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        &:last-child {
+                            td, th {
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     @each $type in (brand, info, good, warning, bad) {

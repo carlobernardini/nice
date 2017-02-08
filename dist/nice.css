@@ -3837,6 +3837,7 @@ textarea.nice-form-control {
     -moz-background-clip: padding;
     background-clip: padding-box; }
   .nice-control-group > *:not(:first-child):not(:last-child) {
+    margin-left: -1px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;

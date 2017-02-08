@@ -102,6 +102,7 @@ textarea {
             @include nice-border-radius(0 $default-radius $default-radius 0);
         }
         *:not(:first-child):not(:last-child) {
+            margin-left: -1px;
             @include nice-border-radius(0);
         }
         .nice-form-control {

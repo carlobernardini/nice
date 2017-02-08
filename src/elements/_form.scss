@@ -58,6 +58,7 @@ textarea {
 }
 .nice-form-inline {
     .nice-form-group {
+        margin-top: 0;
         vertical-align: middle;
         @extend %display-inline-block;
 

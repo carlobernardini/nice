@@ -3802,6 +3802,7 @@ textarea.nice-form-control {
   margin-top: 15px; }
 
 .nice-form-inline .nice-form-group {
+  margin-top: 0;
   vertical-align: middle; }
   .nice-form-inline .nice-form-group input.nice-form-control,
   .nice-form-inline .nice-form-group select.nice-form-control {

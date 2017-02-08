@@ -3809,6 +3809,11 @@ textarea.nice-form-control {
     width: auto;
     vertical-align: middle; }
 
+.nice-form-inline .nice-control-group > input.nice-form-control,
+.nice-form-inline .nice-control-group > select.nice-form-control,
+.nice-form-inline .nice-control-group > .nice-control-group-btn {
+  display: table-cell; }
+
 .nice-control-group {
   display: table;
   white-space: nowrap;
@@ -3832,9 +3837,9 @@ textarea.nice-form-control {
     -moz-background-clip: padding;
     background-clip: padding-box; }
   .nice-control-group > *:not(:first-child):not(:last-child) {
-    -webkit-border-radius: none;
-    -moz-border-radius: none;
-    border-radius: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }

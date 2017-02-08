@@ -74,6 +74,15 @@ textarea {
             @extend %display-inline-block;
         }
     }
+    .nice-control-group {
+        > {
+            input.nice-form-control, 
+            select.nice-form-control,
+            .nice-control-group-btn {
+                display: table-cell;
+            }
+        }
+    }
 }
 .nice-control-group {
     display: table;
@@ -93,7 +102,7 @@ textarea {
             @include nice-border-radius(0 $default-radius $default-radius 0);
         }
         *:not(:first-child):not(:last-child) {
-            @include nice-border-radius(none);
+            @include nice-border-radius(0);
         }
         .nice-form-control {
             position: relative;

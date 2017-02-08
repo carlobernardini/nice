@@ -103,6 +103,9 @@ button,
         @include nice-line-height(42px);
         @include nice-font-size($default-font-size-large);
     }
+    &.bold {
+        font-weight: 600;
+    }
 }
 .nice-btn-group {    
     margin: 15px 0;

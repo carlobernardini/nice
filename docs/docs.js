@@ -37,7 +37,7 @@ $(function(){
                 ClipboardHelper.copyElement(code);
                 var copyAlert = $('<div />')
                     .addClass('nice-alert info')
-                    .text('Code copied to clipboard')
+                    .text('Code snippet copied to clipboard')
                     .css({
                         zIndex: 999,
                         position: 'fixed',

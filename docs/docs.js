@@ -35,6 +35,23 @@ $(function(){
             });
             copy.bind('click', function(e){
                 ClipboardHelper.copyElement(code);
+                var copyAlert = $('<div />')
+                    .addClass('nice-alert info')
+                    .text('Code copied to clipboard')
+                    .css({
+                        zIndex: 999,
+                        position: 'fixed',
+                        bottom: '-100%',
+                        right: '15px'
+                    })
+                    .appendTo($('body'))
+                    .animate({
+                        bottom: '15px'
+                    }, 500);
+                setTimeout(function(){
+                    copyAlert.remove();
+                }, 3000);
+
                 return false;
             });
         }

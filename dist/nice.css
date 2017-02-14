@@ -4820,7 +4820,7 @@ article.nice-card,
 summary.nice-card {
   position: relative;
   float: left;
-  background-color: #FFF;
+  background-color: #F5F7F7;
   border: 1px solid #D0D1D5;
   margin: 0 5px 15px;
   -webkit-border-radius: 3px;
@@ -4938,12 +4938,13 @@ summary.nice-card {
   div.nice-card > img,
   article.nice-card > img,
   summary.nice-card > img {
-    margin: 0 -1px; }
+    margin: 0 -1px;
+    vertical-align: middle; }
   div.nice-card .nice-card-content,
   article.nice-card .nice-card-content,
   summary.nice-card .nice-card-content {
-    margin: -5px 0 0;
-    padding: 15px; }
+    padding: 15px;
+    background-color: #FFF; }
   div.nice-card.has-controls,
   article.nice-card.has-controls,
   summary.nice-card.has-controls {

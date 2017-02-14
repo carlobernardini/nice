@@ -4,7 +4,7 @@ summary {
     &.nice-card {
         position: relative;
         float: left;
-        background-color: $color-white;
+        background-color: $gray-vlight;
         border: 1px solid $color-border;
         margin: 0 5px 15px;
         @include nice-border-radius($default-radius);
@@ -85,11 +85,12 @@ summary {
             }
             img {
                 margin: 0 -1px;
+                vertical-align: middle;
             }
         }
         .nice-card-content {
-            margin: -5px 0 0;
             padding: 15px;
+            background-color: $color-white;
         }
         &.has-controls {
             padding-bottom: 42px;

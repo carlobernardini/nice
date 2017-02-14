@@ -169,6 +169,51 @@ body {
             }
         }
     }
+    .docs-code-wrapper {
+        position: relative;
+        padding: 0;
+        margin: 0;
+
+        .doc-code-tools {
+            position: absolute;
+            bottom: 1px;
+            right: 1px;
+            border-top: 1px solid $color-border;
+            border-left: 1px solid $color-border;
+            padding: 0;
+            margin: 0;
+            z-index: 999;
+            @include nice-border-radius($default-radius 0);
+
+            li {
+                display: block;
+                float:left;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+
+                &:not(:last-child) {
+                    border-right: 1px solid $color-border;
+                }
+                &:last-child {
+                    a {
+                        @include nice-border-radius(0 0 $default-radius);
+                    }
+                }
+
+                a {
+                    display: block;
+                    padding: 5px 10px;
+                    background-color: $color-white;
+                    @include nice-transition(background-color 0.2s);
+
+                    &:hover {
+                        background-color: $gray-vlight;
+                    }
+                }
+            }
+        }
+    }
     footer {
         .text-brand {
             font-size: 1.25em;

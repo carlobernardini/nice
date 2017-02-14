@@ -14,7 +14,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="docs/docs.js"></script>
     </head>
-    <body>
+    <body class="nice-fixed-header">
         <header class="nice-header fixed">
             <div class="nice-header-container">
                 <h1 class="nice-header-brand">
@@ -342,6 +342,53 @@
                         <h3>Columns</h3>
                         The grid system is based on a 12-column layout, meaning that all columns in a row should add up to 12. A column can have an offset by using <code class="inline">.nice-shift-x</code>, where `x` represents the number of columns it should be shifted to the right with a maximum of 11.
                     </p>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-flex-grid">
+                <h2>Flexible grid</h2>
+                <div class="nice-col-6">
+                    <ul>
+                        <li>
+                            <h4>
+                                <code class="inline"><strong>.nice-flex-container</strong></code>
+                            </h4>
+                            Defines the flex container and enables flex content for all direct children.
+                        </li>
+                        <li>
+                            <h4>
+                                <code class="inline"><strong>.align-</strong>[start|end|center|baseline|stretch]</code>
+                            </h4>
+                            Defines the way in which items are aligned along the cross axis on the current line.
+                        </li>
+                        <li>
+                            <h4>
+                                <code class="inline"><strong>.justify-</strong>[start|end|center|space-between|space-around]</code>
+                            </h4>
+                            Defines how the items are distributed along the main axis.
+                        </li>
+                    </ul>
+                </div>
+                <div class="nice-col-6">
+                    <ul>
+                        <li>
+                            <h4>
+                                <code class="inline">.no-wrap .wrap .wrap-reverse</code>
+                            </h4>
+                            Change the way in which items are wrapped, and in which direction (rtl / ltr).
+                        </li>
+                        <li>
+                            <h4>
+                                <code class="inline"><strong>.grow-</strong>[stretch|double]</code>
+                            </h4>
+                            Defines the ability for a flex item to grow if necessary. If all items are set to `.grow-stretch`, the remaining space in the container will be distributed equally to all children. If one of the children has `.grow-double`, the remaining space would take up twice as much space as the others (or it will try to, at least).
+                        </li>
+                        <li>
+                            <h4>
+                                <code class="inline"><strong>.direction-</strong>[row|row-reverse|column|column-reverse]</code>
+                            </h4>
+                            Establishes the main-axis, thus defining the direction flex items are placed in the flex container.
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="nice-row" id="nice-page-header">

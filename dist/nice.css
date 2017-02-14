@@ -3139,12 +3139,12 @@ i.icon {
     -o-justify-content: space-around;
     justify-content: space-around;
     -ms-flex-pack: distribute; }
-  .nice-flex-container > .nice-flex-stretch {
+  .nice-flex-container > .grow-stretch {
     -webkit-flex-grow: 1;
     -moz-flex-grow: 1;
     flex-grow: 1;
     -ms-flex-positive: 1; }
-  .nice-flex-container > .nice-flex-double {
+  .nice-flex-container > .grow-double {
     -webkit-flex-grow: 2;
     -moz-flex-grow: 2;
     flex-grow: 2;
@@ -3173,6 +3173,9 @@ i.icon {
     -moz-flex-wrap: wrap-reverse;
     -ms-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse; }
+
+body.nice-fixed-header {
+  padding-top: 60px; }
 
 header,
 .nice-header {

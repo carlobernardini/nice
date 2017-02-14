@@ -4872,7 +4872,9 @@ summary.nice-card {
       summary.nice-card .nice-card-sub.icon:before {
         color: #D0D1D5;
         position: absolute;
-        top: 15px;
+        width: 14px;
+        text-align: center;
+        top: 12px;
         left: 15px;
         text-shadow: 1px 1px 0 #FFF; }
   div.nice-card .nice-card-controls,

@@ -38,7 +38,9 @@ summary {
                 &:before {
                     color: $gray-medium;
                     position: absolute;
-                    top: 15px;
+                    width: 14px;
+                    text-align: center;
+                    top: 12px;
                     left: 15px;
                     @include nice-text-shadow(1px 1px 0 $color-white);
                 }

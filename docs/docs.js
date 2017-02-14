@@ -31,6 +31,9 @@ $(function(){
             toggle.bind('click', function(e){
                 var isCollapsed = code.is('.collapsed');
                 code.toggleClass('collapsed', !isCollapsed);
+                toggle.text(
+                    isCollapsed ? 'Collapse' : 'Expand'
+                )
                 return false;
             });
             copy.bind('click', function(e){

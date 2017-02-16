@@ -3406,17 +3406,17 @@ header,
       text-overflow: ellipsis;
       white-space: nowrap;
       text-align: center; }
-    header .nice-header-menu > li.fixed-width.w125,
-    .nice-header .nice-header-menu > li.fixed-width.w125 {
+    header .nice-header-menu > li.fixed-width.w125 > a,
+    .nice-header .nice-header-menu > li.fixed-width.w125 > a {
       width: 125px; }
-    header .nice-header-menu > li.fixed-width.w150,
-    .nice-header .nice-header-menu > li.fixed-width.w150 {
+    header .nice-header-menu > li.fixed-width.w150 > a,
+    .nice-header .nice-header-menu > li.fixed-width.w150 > a {
       width: 150px; }
-    header .nice-header-menu > li.fixed-width.w175,
-    .nice-header .nice-header-menu > li.fixed-width.w175 {
+    header .nice-header-menu > li.fixed-width.w175 > a,
+    .nice-header .nice-header-menu > li.fixed-width.w175 > a {
       width: 175px; }
-    header .nice-header-menu > li.fixed-width.w200,
-    .nice-header .nice-header-menu > li.fixed-width.w200 {
+    header .nice-header-menu > li.fixed-width.w200 > a,
+    .nice-header .nice-header-menu > li.fixed-width.w200 > a {
       width: 200px; }
     header .nice-header-menu li,
     .nice-header .nice-header-menu li {

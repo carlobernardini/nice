@@ -150,16 +150,24 @@ header,
                     text-align: center;
                 }
                 &.w125 {
-                    width: 125px;
+                    > a {
+                        width: 125px;
+                    }
                 }
                 &.w150 {
-                    width: 150px;
+                    > a {
+                        width: 150px;
+                    }
                 }
                 &.w175 {
-                    width: 175px;
+                    > a {
+                        width: 175px;
+                    }
                 }
                 &.w200 {
-                    width: 200px;
+                    > a {
+                        width: 200px;
+                    }
                 }
             }
         }

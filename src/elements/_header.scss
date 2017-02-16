@@ -342,12 +342,27 @@ header,
             height: 100%;
             @include nice-transition(left .2s ease-in-out);
 
+            > li {
+                &.fixed-width {
+                    > a {
+                        width: auto;
+                    }
+                }
+                &.highlight {
+                    > a {
+                        padding: 15px 20px 15px 14px;
+                        border-bottom-width: 0;
+                        border-left-width: 4px;
+                        border-left-style: solid;
+                    }
+                }
+            }
             li {
                 float: none;
 
                 a {
                     position: relative;
-                    padding: 0 20px;
+                    padding: 15px 20px;
                     color: $color-white;
                     @include nice-transition(background-color .1s, color .1s);
 

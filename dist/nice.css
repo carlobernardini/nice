@@ -3581,13 +3581,22 @@ header,
       -ms-transition: left 0.2s ease-in-out;
       -o-transition: left 0.2s ease-in-out;
       transition: left 0.2s ease-in-out; }
+      header .nice-header-menu > li.fixed-width > a,
+      .nice-header .nice-header-menu > li.fixed-width > a {
+        width: auto; }
+      header .nice-header-menu > li.highlight > a,
+      .nice-header .nice-header-menu > li.highlight > a {
+        padding: 15px 20px 15px 14px;
+        border-bottom-width: 0;
+        border-left-width: 4px;
+        border-left-style: solid; }
       header .nice-header-menu li,
       .nice-header .nice-header-menu li {
         float: none; }
         header .nice-header-menu li a,
         .nice-header .nice-header-menu li a {
           position: relative;
-          padding: 0 20px;
+          padding: 15px 20px;
           color: #FFF;
           -webkit-transition: background-color 0.1s, color 0.1s;
           -moz-transition: background-color 0.1s, color 0.1s;

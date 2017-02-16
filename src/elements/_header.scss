@@ -123,6 +123,46 @@ header,
         margin: 0;
         @include nice-line-height(60px);
 
+        > li {
+            &.highlight {
+                > a {
+                    padding: 20px 10px 16px;
+                    border-bottom: 4px solid transparent;
+                }
+                @each $type in (primary, brand, info, good, warning, bad) {
+                    &.#{$type} {
+                        > a {
+                            border-color: map-get($color-scheme, #{$type});
+                            @include nice-transition(background-color 0.1s, border-color 0.3s);
+
+                            &:hover {
+                                border-color: lighten(map-get($color-scheme, #{$type}), 15%);
+                            }
+                        }
+                    }
+                }
+            }
+            &.fixed-width {
+                > a {
+                    width: 100px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: center;
+                }
+                &.w125 {
+                    width: 125px;
+                }
+                &.w150 {
+                    width: 150px;
+                }
+                &.w175 {
+                    width: 175px;
+                }
+                &.w200 {
+                    width: 200px;
+                }
+            }
+        }
         li {
             list-style: none;
             display: block;
@@ -131,7 +171,8 @@ header,
 
             a {
                 display: block;
-                padding: 0 10px;
+                padding: 20px 10px;
+                line-height: normal;
             }
             ul {
                 display: none;
@@ -149,7 +190,7 @@ header,
                         min-width: 200px;
                         color: $color-white;
                         display: block;
-                        padding: 0 15px;
+                        padding: 15px;
                         white-space: nowrap;
 
                         &:hover {
@@ -182,7 +223,9 @@ header,
                         color: $color-white;
                         position: absolute;
                         right: 15px;
-                        top: 0;
+                        top: 50%;
+                        @include nice-line-height(20px);
+                        margin-top: -10px;
                     }
                 }
                 &:hover {

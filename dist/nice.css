@@ -3330,6 +3330,94 @@ header,
     margin: 0;
     line-height: 60px;
     line-height: 3.75rem; }
+    header .nice-header-menu > li.highlight > a,
+    .nice-header .nice-header-menu > li.highlight > a {
+      padding: 20px 10px 16px;
+      border-bottom: 4px solid transparent; }
+    header .nice-header-menu > li.highlight.primary > a,
+    .nice-header .nice-header-menu > li.highlight.primary > a {
+      border-color: #F18700;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.primary > a:hover,
+      .nice-header .nice-header-menu > li.highlight.primary > a:hover {
+        border-color: #ffaa3f; }
+    header .nice-header-menu > li.highlight.brand > a,
+    .nice-header .nice-header-menu > li.highlight.brand > a {
+      border-color: #009CC1;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.brand > a:hover,
+      .nice-header .nice-header-menu > li.highlight.brand > a:hover {
+        border-color: #0fd1ff; }
+    header .nice-header-menu > li.highlight.info > a,
+    .nice-header .nice-header-menu > li.highlight.info > a {
+      border-color: #60C4DE;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.info > a:hover,
+      .nice-header .nice-header-menu > li.highlight.info > a:hover {
+        border-color: #9fdceb; }
+    header .nice-header-menu > li.highlight.good > a,
+    .nice-header .nice-header-menu > li.highlight.good > a {
+      border-color: #5CB85C;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.good > a:hover,
+      .nice-header .nice-header-menu > li.highlight.good > a:hover {
+        border-color: #91cf91; }
+    header .nice-header-menu > li.highlight.warning > a,
+    .nice-header .nice-header-menu > li.highlight.warning > a {
+      border-color: #FFB819;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.warning > a:hover,
+      .nice-header .nice-header-menu > li.highlight.warning > a:hover {
+        border-color: #ffd066; }
+    header .nice-header-menu > li.highlight.bad > a,
+    .nice-header .nice-header-menu > li.highlight.bad > a {
+      border-color: #F42534;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.bad > a:hover,
+      .nice-header .nice-header-menu > li.highlight.bad > a:hover {
+        border-color: #f86e78; }
+    header .nice-header-menu > li.fixed-width > a,
+    .nice-header .nice-header-menu > li.fixed-width > a {
+      width: 100px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center; }
+    header .nice-header-menu > li.fixed-width.w125,
+    .nice-header .nice-header-menu > li.fixed-width.w125 {
+      width: 125px; }
+    header .nice-header-menu > li.fixed-width.w150,
+    .nice-header .nice-header-menu > li.fixed-width.w150 {
+      width: 150px; }
+    header .nice-header-menu > li.fixed-width.w175,
+    .nice-header .nice-header-menu > li.fixed-width.w175 {
+      width: 175px; }
+    header .nice-header-menu > li.fixed-width.w200,
+    .nice-header .nice-header-menu > li.fixed-width.w200 {
+      width: 200px; }
     header .nice-header-menu li,
     .nice-header .nice-header-menu li {
       list-style: none;
@@ -3339,7 +3427,8 @@ header,
       header .nice-header-menu li a,
       .nice-header .nice-header-menu li a {
         display: block;
-        padding: 0 10px; }
+        padding: 20px 10px;
+        line-height: normal; }
       header .nice-header-menu li ul,
       .nice-header .nice-header-menu li ul {
         display: none;
@@ -3358,7 +3447,7 @@ header,
             min-width: 200px;
             color: #FFF;
             display: block;
-            padding: 0 15px;
+            padding: 15px;
             white-space: nowrap; }
             header .nice-header-menu li ul li a:hover,
             .nice-header .nice-header-menu li ul li a:hover {
@@ -3382,7 +3471,10 @@ header,
         color: #FFF;
         position: absolute;
         right: 15px;
-        top: 0; }
+        top: 50%;
+        line-height: 20px;
+        line-height: 1.25rem;
+        margin-top: -10px; }
       header .nice-header-menu li.has-children:hover > a:after,
       .nice-header .nice-header-menu li.has-children:hover > a:after {
         color: #FFF;

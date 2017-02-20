@@ -1535,42 +1535,42 @@
             </div>
             <div class="nice-row" id="nice-tables">
                 <h2>Tables</h2>
-                <table class="nice-table striped bordered hover">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First name</th>
-                            <th>Last name</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Carlo</td>
-                            <td>Bernardini</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Chris</td>
-                            <td>Dekker</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Dario</td>
-                            <td>Tognacci</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Darko</td>
-                            <td>Zelić</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Paul</td>
-                            <td>Karabilo</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <table class="nice-table striped bordered hover">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info">
+                                <th scope="row">1</th>
+                                <td>Carlo</td>
+                                <td>Bernardini</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Chris</td>
+                                <td>Dekker</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Dario</td>
+                                <td class="bad">Tognacci</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Darko</td>
+                                <td>Zelić</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Paul</td>
+                                <td>Karabilo</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 <div class="docs-code-wrapper">
                     <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
     &lt;thead&gt;
@@ -1581,10 +1581,30 @@
         &lt;/tr&gt;
     &lt;/thead&gt;
     &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;th scope="row"&gt;1&lt;/th&gt;
+        &lt;tr class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;
+            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
             &lt;td&gt;Carlo&lt;/td&gt;
             &lt;td&gt;Bernardini&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Chris&lt;/td&gt;
+            &lt;td&gt;Dekker&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+            &lt;td&gt;Dario&lt;/td&gt;
+            &lt;td class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;Tognacci&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+            &lt;td&gt;Darko&lt;/td&gt;
+            &lt;td&gt;Zeli&cacute;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
+            &lt;td&gt;Paul&lt;/td&gt;
+            &lt;td&gt;Karabilo&lt;/td&gt;
         &lt;/tr&gt;
     &lt;/tbody&gt;
 &lt;/table&gt;</code>
@@ -1610,7 +1630,7 @@
                     <tbody>
                         <tr>
                             <td>Internet Explorer 9</td>
-                            <td>Limited</td>
+                            <td class="warning">Limited</td>
                             <td>
                                 <ul>
                                     <li>No transitions</li>
@@ -1622,12 +1642,12 @@
                         </tr>
                         <tr>
                             <td>Internet Explorer 10</td>
-                            <td>Good</td>
+                            <td class="good">Good</td>
                             <td>Uses fallbacks for limited Flexbox support</td>
                         </tr>
                         <tr>
                             <td>Internet Explorer 11+</td>
-                            <td>Full support</td>
+                            <td class="good">Full support</td>
                             <td></td>
                         </tr>
                     </tbody>

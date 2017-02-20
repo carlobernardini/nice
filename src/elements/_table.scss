@@ -28,6 +28,20 @@ table {
                     text-align: left;
                     padding: 8px;
                 }
+                td {
+                    @each $type in (info, good, warning, bad) {
+                        &.#{$type} {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+                        }
+                    }
+                }
+                @each $type in (info, good, warning, bad) {
+                    &.#{$type} {
+                        th, td {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+                        }
+                    }
+                }
             }
         }
         &.condensed {
@@ -42,14 +56,10 @@ table {
         &.striped {
             tbody {
                 tr:nth-child(odd) {
-                    th, td {
-                        background-color: $gray-vlight;
-                    }
+                    background-color: $gray-vlight;
                 }
                 tr:nth-child(even) {
-                    th, td {
-                        background-color: transparent;
-                    }
+                    background-color: transparent;
                 }
             }
         }
@@ -69,7 +79,20 @@ table {
                     &:hover {
                         th, td {
                             background-color: $gray-light;
-                            color: $color-black
+                            color: $color-black;
+
+                            @each $type in (info, good, warning, bad) {
+                                &.#{$type} {
+                                    background-color: lighten(map-get($color-scheme, #{$type}), 30%);
+                                }
+                            }
+                        }
+                        @each $type in (info, good, warning, bad) {
+                            &.#{$type} {
+                                th, td {
+                                    background-color: lighten(map-get($color-scheme, #{$type}), 30%);
+                                }
+                            }
                         }
                     }
                 }

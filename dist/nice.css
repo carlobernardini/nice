@@ -4442,12 +4442,28 @@ table.nice-table {
     vertical-align: top;
     text-align: left;
     padding: 8px; }
+  table.nice-table tbody tr td.info {
+    background-color: #f4fbfd; }
+  table.nice-table tbody tr td.good {
+    background-color: #d8eed8; }
+  table.nice-table tbody tr td.warning {
+    background-color: #ffefcc; }
+  table.nice-table tbody tr td.bad {
+    background-color: #fdcfd2; }
+  table.nice-table tbody tr.info th, table.nice-table tbody tr.info td {
+    background-color: #f4fbfd; }
+  table.nice-table tbody tr.good th, table.nice-table tbody tr.good td {
+    background-color: #d8eed8; }
+  table.nice-table tbody tr.warning th, table.nice-table tbody tr.warning td {
+    background-color: #ffefcc; }
+  table.nice-table tbody tr.bad th, table.nice-table tbody tr.bad td {
+    background-color: #fdcfd2; }
   table.nice-table.condensed tbody tr th, table.nice-table.condensed tbody tr td {
     line-height: 24px;
     line-height: 1.5rem; }
-  table.nice-table.striped tbody tr:nth-child(odd) th, table.nice-table.striped tbody tr:nth-child(odd) td {
+  table.nice-table.striped tbody tr:nth-child(odd) {
     background-color: #F5F7F7; }
-  table.nice-table.striped tbody tr:nth-child(even) th, table.nice-table.striped tbody tr:nth-child(even) td {
+  table.nice-table.striped tbody tr:nth-child(even) {
     background-color: transparent; }
   table.nice-table.bordered {
     border: 1px solid #D0D1D5; }
@@ -4456,6 +4472,22 @@ table.nice-table {
   table.nice-table.hover tbody tr:hover th, table.nice-table.hover tbody tr:hover td {
     background-color: #ECF0F1;
     color: #000; }
+    table.nice-table.hover tbody tr:hover th.info, table.nice-table.hover tbody tr:hover td.info {
+      background-color: #dff3f8; }
+    table.nice-table.hover tbody tr:hover th.good, table.nice-table.hover tbody tr:hover td.good {
+      background-color: #c7e6c7; }
+    table.nice-table.hover tbody tr:hover th.warning, table.nice-table.hover tbody tr:hover td.warning {
+      background-color: #ffe7b2; }
+    table.nice-table.hover tbody tr:hover th.bad, table.nice-table.hover tbody tr:hover td.bad {
+      background-color: #fbb7bc; }
+  table.nice-table.hover tbody tr:hover.info th, table.nice-table.hover tbody tr:hover.info td {
+    background-color: #dff3f8; }
+  table.nice-table.hover tbody tr:hover.good th, table.nice-table.hover tbody tr:hover.good td {
+    background-color: #c7e6c7; }
+  table.nice-table.hover tbody tr:hover.warning th, table.nice-table.hover tbody tr:hover.warning td {
+    background-color: #ffe7b2; }
+  table.nice-table.hover tbody tr:hover.bad th, table.nice-table.hover tbody tr:hover.bad td {
+    background-color: #fbb7bc; }
   table.nice-table.small-body tbody tr td {
     font-size: .85em; }
 

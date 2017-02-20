@@ -26,7 +26,7 @@ header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
 .nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, button,
-.nice-btn, .nice-dropdown, .nice-loading {
+.nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-loading {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline-block;
@@ -4886,6 +4886,10 @@ button,
       font-size: 0.875rem; }
       .nice-dropdown .dropdown-menu li a:hover, .nice-dropdown .dropdown-menu li span:hover {
         background-color: #F5F7F7; }
+      .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i {
+        width: 20px;
+        text-align: center;
+        margin-right: 3px; }
     .nice-dropdown .dropdown-menu li:first-child a {
       -webkit-border-radius: 3px 3px 0 0;
       -moz-border-radius: 3px 3px 0 0;

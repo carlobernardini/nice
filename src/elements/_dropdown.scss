@@ -29,6 +29,7 @@
                 text-overflow: ellipsis;
                 padding: 6px 10px;
                 @include nice-font-size(14px);
+                @include nice-transition(background-color .1s);
 
                 &:hover {
                     background-color: $gray-vlight;
@@ -88,6 +89,17 @@
                     background-color: $color-white;
                     color: $color-muted;
                     @include nice-font-size(11px);
+                }
+            }
+            @each $type in (info, good, warning, bad) {
+                &.#{$type} {
+                    a {
+                        background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+
+                        &:hover {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 30%);
+                        }
+                    }
                 }
             }
         }

@@ -4884,7 +4884,12 @@ button,
       text-overflow: ellipsis;
       padding: 6px 10px;
       font-size: 14px;
-      font-size: 0.875rem; }
+      font-size: 0.875rem;
+      -webkit-transition: background-color 0.1s;
+      -moz-transition: background-color 0.1s;
+      -ms-transition: background-color 0.1s;
+      -o-transition: background-color 0.1s;
+      transition: background-color 0.1s; }
       .nice-dropdown .dropdown-menu li a:hover, .nice-dropdown .dropdown-menu li span:hover {
         background-color: #F5F7F7; }
       .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i {
@@ -4930,6 +4935,22 @@ button,
       color: #B2B2B2;
       font-size: 11px;
       font-size: 0.6875rem; }
+    .nice-dropdown .dropdown-menu li.info a {
+      background-color: #f4fbfd; }
+      .nice-dropdown .dropdown-menu li.info a:hover {
+        background-color: #dff3f8; }
+    .nice-dropdown .dropdown-menu li.good a {
+      background-color: #d8eed8; }
+      .nice-dropdown .dropdown-menu li.good a:hover {
+        background-color: #c7e6c7; }
+    .nice-dropdown .dropdown-menu li.warning a {
+      background-color: #ffefcc; }
+      .nice-dropdown .dropdown-menu li.warning a:hover {
+        background-color: #ffe7b2; }
+    .nice-dropdown .dropdown-menu li.bad a {
+      background-color: #fdcfd2; }
+      .nice-dropdown .dropdown-menu li.bad a:hover {
+        background-color: #fbb7bc; }
 
 .nice-alert {
   margin: 0 0 20px 0;

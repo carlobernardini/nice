@@ -4891,6 +4891,8 @@ button,
         width: 20px;
         text-align: center;
         margin-right: 3px; }
+    .nice-dropdown .dropdown-menu li a {
+      outline: none; }
     .nice-dropdown .dropdown-menu li:first-child a {
       -webkit-border-radius: 3px 3px 0 0;
       -moz-border-radius: 3px 3px 0 0;

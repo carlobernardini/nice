@@ -40,6 +40,9 @@
                     @extend %display-inline-block;
                 }
             }
+            a {
+                outline: none;
+            }
             &:first-child {
                 a {
                     @include nice-border-radius($default-radius $default-radius 0 0);

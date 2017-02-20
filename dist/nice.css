@@ -3850,6 +3850,11 @@ html {
             html body footer .nice-footer-menu li a:hover,
             html body .nice-footer .nice-footer-menu li a:hover {
               color: #FFF; }
+            html body footer .nice-footer-menu li a.icon:before, html body footer .nice-footer-menu li a.product-icon:before, html body footer .nice-footer-menu li a.additional-icon:before,
+            html body .nice-footer .nice-footer-menu li a.icon:before,
+            html body .nice-footer .nice-footer-menu li a.product-icon:before,
+            html body .nice-footer .nice-footer-menu li a.additional-icon:before {
+              margin-right: 5px; }
 
 @media screen and (min-width: 20em) and (max-width: 720px) {
   html body footer,

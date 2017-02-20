@@ -14,6 +14,11 @@ var ClipboardHelper = {
 };
 
 $(function(){
+    $(document).on('click', function(e){
+        if (!$(e.target).closest('.dropdown-menu').length) {
+            $('.nice-dropdown .dropdown-menu').removeClass('shown');
+        }
+    });
     $('.nice-header .nice-header-toggle').bind('click', function(e){
         var toggle = $(this),
             menu = $('.nice-header-collapse'),
@@ -22,6 +27,14 @@ $(function(){
         toggle.toggleClass('collapsed', !state);
         $('body').toggleClass('expanded', state);
     });
+    $('.nice-dropdown').on('click', '.nice-btn', function(){
+        var btn = $(this),
+            dd = btn.closest('.nice-dropdown'),
+            menu = dd.children('.dropdown-menu');
+        var isShown = menu.is('.shown');
+        menu.toggleClass('shown', !isShown);
+        return false;
+    })
     $('.docs-code-wrapper').each(function(){
         var code = $(this).find('code.docs'),
             toggle = $(this).find('.toggle'),

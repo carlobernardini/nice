@@ -1,0 +1,92 @@
+.nice-dropdown {
+    position: relative;
+    @extend %display-inline-block;
+
+    .dropdown-menu {
+        display: none;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        margin: 3px 0 0;
+        min-width: 100%;
+        z-index: 5;
+        @include nice-border-radius($default-radius);
+        @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
+
+        &.shown {
+            display: block;
+        }
+
+        li {
+            a, span {
+                color: $color-black;
+                display: block;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding: 6px 10px;
+                @include nice-font-size(14px);
+
+                &:hover {
+                    background-color: $gray-vlight;
+                }
+                i {
+                    width: 20px;
+                    text-align: center;
+                    margin-right: 3px;
+                    @extend %display-inline-block;
+                }
+            }
+            &:first-child {
+                a {
+                    @include nice-border-radius($default-radius $default-radius 0 0);
+                }
+            }
+            &:last-child {
+                a {
+                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                }
+            }
+            &.separator {
+                border-bottom: 1px solid $gray-light;
+                height: 4px;
+                margin-bottom: 3px;
+                overflow: hidden;
+            }
+            &.disabled {
+                a, span {
+                    color: $color-muted;
+                    cursor: not-allowed;
+                }
+                &:hover {
+                    a, span {
+                        background-color: $color-white;
+                    }
+                }
+            }
+            &.heading {
+                span {
+                    border-bottom: 1px solid $gray-light;
+                    line-height: 26px;
+                    font-weight: 600;
+                    cursor: default;
+                    margin-bottom: 3px;
+
+                    &:hover {
+                        background-color: $color-white;
+                    }
+                }
+            }
+            &.description {
+                span {
+                    background-color: $color-white;
+                    color: $color-muted;
+                    @include nice-font-size(11px);
+                }
+            }
+        }
+    }
+}

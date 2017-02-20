@@ -3180,7 +3180,7 @@ body.nice-fixed-header {
 header,
 .nice-header {
   position: relative;
-  z-index: 3;
+  z-index: 5;
   background-color: #FFF;
   border-bottom: 1px solid #D0D1D5;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -4865,7 +4865,7 @@ button,
     border: 1px solid #D0D1D5;
     margin: 3px 0 0;
     min-width: 100%;
-    z-index: 5;
+    z-index: 4;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

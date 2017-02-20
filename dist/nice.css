@@ -3429,6 +3429,11 @@ header,
         display: block;
         padding: 20px 10px;
         line-height: normal; }
+        header .nice-header-menu li a.icon:before, header .nice-header-menu li a.product-icon:before, header .nice-header-menu li a.additional-icon:before,
+        .nice-header .nice-header-menu li a.icon:before,
+        .nice-header .nice-header-menu li a.product-icon:before,
+        .nice-header .nice-header-menu li a.additional-icon:before {
+          margin-right: 5px; }
       header .nice-header-menu li ul,
       .nice-header .nice-header-menu li ul {
         display: none;

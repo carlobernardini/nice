@@ -181,6 +181,14 @@ header,
                 display: block;
                 padding: 20px 10px;
                 line-height: normal;
+                
+                &.icon,
+                &.product-icon,
+                &.additional-icon {
+                    &:before {
+                        margin-right: 5px;
+                    }
+                }
             }
             ul {
                 display: none;

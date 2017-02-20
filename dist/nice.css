@@ -5078,6 +5078,10 @@ summary.nice-card {
   article.nice-card.brand .nice-card-title,
   summary.nice-card.brand .nice-card-title {
     background-color: #009CC1; }
+  div.nice-card.info .nice-card-title,
+  article.nice-card.info .nice-card-title,
+  summary.nice-card.info .nice-card-title {
+    background-color: #60C4DE; }
   div.nice-card.good .nice-card-title,
   article.nice-card.good .nice-card-title,
   summary.nice-card.good .nice-card-title {
@@ -5090,6 +5094,10 @@ summary.nice-card {
   article.nice-card.bad .nice-card-title,
   summary.nice-card.bad .nice-card-title {
     background-color: #F42534; }
+  div.nice-card.muted .nice-card-title,
+  article.nice-card.muted .nice-card-title,
+  summary.nice-card.muted .nice-card-title {
+    background-color: #B2B2B2; }
 
 .nice-loading {
   border: 0.25rem solid rgba(0, 0, 0, 0.15);

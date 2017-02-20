@@ -95,29 +95,11 @@ summary {
         &.has-controls {
             padding-bottom: 42px;
         }
-        &.primary {
-            .nice-card-title {
-                background-color: $color-primary;
-            }
-        }
-        &.brand {
-            .nice-card-title {
-                background-color: $color-brand;
-            }
-        }
-        &.good {
-            .nice-card-title {
-                background-color: $color-good;
-            }
-        }
-        &.warning {
-            .nice-card-title {
-                background-color: $color-warning;
-            }
-        }
-        &.bad {
-            .nice-card-title {
-                background-color: $color-bad;
+        @each $type in (primary, brand, info, good, warning, bad, muted) {
+            &.#{$type} {
+                .nice-card-title {
+                    background-color: map-get($color-scheme, #{$type});
+                }
             }
         }
     }

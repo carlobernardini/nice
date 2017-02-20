@@ -4865,6 +4865,7 @@ button,
     border: 1px solid #D0D1D5;
     margin: 3px 0 0;
     min-width: 100%;
+    z-index: 5;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;

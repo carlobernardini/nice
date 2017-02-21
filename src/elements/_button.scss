@@ -112,7 +112,8 @@ button,
     @extend %clearfix;
 
     > {
-        .nice-btn {
+        .nice-btn,
+        .nice-dropdown {
             position: relative;
             float: left;
 
@@ -125,17 +126,24 @@ button,
             &:last-child {
                 @include nice-border-radius(0 $default-radius $default-radius 0);
             }
-            + .nice-btn {
+            + .nice-btn,
+            + .nice-dropdown {
                 margin-left: -1px;
             }
             &:hover {
                 z-index: 2;
             }
         }
+        .nice-dropdown {
+            .nice-btn {
+                @include nice-border-radius(inherit);
+            }
+        }
     }
     &.stacked {
         > {
-            .nice-btn {
+            .nice-btn,
+            .nice-dropdown {
                 float: none;
                 display: block;
                 width: 100%;
@@ -152,6 +160,11 @@ button,
                     margin-top: -1px;
                 }
             }
+            .nice-dropdown {
+                .nice-btn {
+                    @include nice-border-radius(inherit);
+                }
+            }
         }
     }
     &.justified {
@@ -161,7 +174,8 @@ button,
         width: 100%;
 
         > {
-            .nice-btn {
+            .nice-btn,
+            .nice-dropdown {
                 display: table-cell;
                 float: none;
                 width: 100%;

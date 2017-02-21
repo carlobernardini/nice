@@ -125,13 +125,13 @@ header,
 
         > li {
             &.highlight {
-                > a {
+                > a, > span {
                     padding: 20px 10px 16px;
                     border-bottom: 4px solid transparent;
                 }
                 @each $type in (primary, brand, info, good, warning, bad) {
                     &.#{$type} {
-                        > a {
+                        > a, > span {
                             border-color: map-get($color-scheme, #{$type});
                             @include nice-transition(background-color 0.1s, border-color 0.3s);
 
@@ -177,7 +177,7 @@ header,
             float:left;
             position: relative;
 
-            a {
+            a, span {
                 display: block;
                 padding: 20px 10px;
                 line-height: normal;
@@ -202,7 +202,7 @@ header,
                     float: none;
                     @include nice-line-height(50px);
 
-                    a {
+                    a, span {
                         min-width: 200px;
                         color: $color-white;
                         display: block;
@@ -232,7 +232,7 @@ header,
                 }
             }
             &.has-children {
-                > a {
+                > a, > span {
                     &:after {
                         font-family: $fonts-icon;
                         content: '\f107';
@@ -245,7 +245,7 @@ header,
                     }
                 }
                 &:hover {
-                    > a {
+                    > a, > span {
                         &:after {
                             color: $color-white;
                             // @include nice-animation(flip .15s linear forwards);
@@ -375,13 +375,19 @@ header,
             li {
                 float: none;
 
-                a {
+                a, span {
                     position: relative;
                     padding: 15px 20px;
                     color: $color-white;
                     @include nice-transition(background-color .1s, color .1s);
 
                     &::before {
+                        display: -moz-inline-stack;
+                        display: inline-block;
+                        *display: inline-block;
+                        zoom: 1;
+                        width: 20px;
+                        text-align: center;
                         margin-right: 10px;
                     }
                 }
@@ -392,7 +398,7 @@ header,
                     li {
                         white-space: normal;
 
-                        a {
+                        a, span {
                             padding-left: 50px;
                             @include nice-font($size: .9em);
 
@@ -411,7 +417,7 @@ header,
                     }
                 }
                 &.has-children {
-                    > a {
+                    > a, > span {
                         &:after {
                             display: none;
                         }

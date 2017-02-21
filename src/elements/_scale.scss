@@ -1,0 +1,80 @@
+.nice-scale {
+    position: relative;
+    margin: 15px 0;
+
+    .nice-scale-selection {
+        z-index: 999;
+        list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: table;
+        table-layout: fixed;
+
+        li {
+            text-align: center;
+            vertical-align: top;
+            display: table-cell;
+
+            input[type='radio'] {
+                display: none;
+
+                + span {
+                    cursor: pointer;
+                    position: relative;
+                    top: -2px;
+                    width: 19px;
+                    height: 19px;
+                    border: 3px solid $color-border;
+                    background-color: $color-white;
+                    display: block;
+                    margin: 0 auto;
+                    @include nice-transition(border-color .1s, background-color .3s);
+                    @include nice-border-radius(50%);
+
+                }
+                &:checked {
+                    + span {
+                        border-color: $color-accent;
+                        background-color: $color-primary;
+                    }
+                }
+            }
+            label {
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                font-weight: 600;
+                // white-space: nowrap;
+                // text-overflow: ellipsis;
+                @include nice-font-size(13px);
+
+                &:hover {
+                    input[type='radio']:not(:checked) {
+                        + span {
+                            border-color: $color-brand;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:before {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        display: block;
+        top: 5px;
+        left: 10%;
+        background-color: $gray-light;
+        height: 4px;
+        width: 80%;
+        @include nice-border-radius($default-radius);
+        @include nice-transition(background-color .2s);
+    }
+    &:hover {
+        &:before {
+            background-color: darken($gray-light, 5%)   ;
+        }
+    }
+}

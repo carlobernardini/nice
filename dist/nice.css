@@ -4854,10 +4854,13 @@ button,
 
 .nice-dropdown {
   position: relative; }
-  .nice-dropdown.dropup .dropdown-menu {
+  .nice-dropdown.drop-up .dropdown-menu {
     top: auto;
     bottom: 100%;
     margin: 0 0 3px; }
+  .nice-dropdown.align-right .dropdown-menu {
+    left: auto;
+    right: 0; }
   .nice-dropdown .dropdown-menu {
     display: none;
     list-style: none;

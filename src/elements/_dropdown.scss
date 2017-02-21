@@ -2,11 +2,17 @@
     position: relative;
     @extend %display-inline-block;
 
-    &.dropup {
+    &.drop-up {
         .dropdown-menu {
             top: auto;
             bottom: 100%;
             margin: 0 0 3px;
+        }
+    }
+    &.align-right {
+        .dropdown-menu {
+            left: auto;
+            right: 0;
         }
     }
 

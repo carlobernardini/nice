@@ -5092,7 +5092,7 @@ button,
             -o-transition: border-bottom-color 0.2s;
             transition: border-bottom-color 0.2s; }
   .nice-scale:before {
-    z-index: -1;
+    z-index: 0;
     content: '';
     position: absolute;
     display: block;

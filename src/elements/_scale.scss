@@ -35,8 +35,9 @@
                 }
                 &:checked {
                     + span {
-                        border-color: $color-accent;
+                        border-color: $color-white;
                         background-color: $color-primary;
+                        @include nice-box-shadow(0 1px 4px rgba($color-black, .3));
                     }
                 }
             }
@@ -45,9 +46,8 @@
                 display: block;
                 width: 100%;
                 font-weight: 600;
-                // white-space: nowrap;
-                // text-overflow: ellipsis;
                 @include nice-font-size(13px);
+                @extend %disable-user-select;
 
                 &:hover {
                     input[type='radio']:not(:checked) {

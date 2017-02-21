@@ -15,7 +15,7 @@ html {
  * Nice! Placeholders collection
  **/
 button,
-.nice-btn {
+.nice-btn, .nice-scale .nice-scale-selection li label {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -5032,8 +5032,11 @@ button,
           -moz-background-clip: padding;
           background-clip: padding-box; }
         .nice-scale .nice-scale-selection li input[type='radio']:checked + span {
-          border-color: #182642;
-          background-color: #F18700; }
+          border-color: #FFF;
+          background-color: #F18700;
+          -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+          -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
       .nice-scale .nice-scale-selection li label {
         cursor: pointer;
         display: block;

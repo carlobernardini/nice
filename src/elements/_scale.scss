@@ -55,6 +55,49 @@
                             border-color: $color-brand;
                         }
                     }
+                    .nice-scale-label {
+                        color: $color-white;
+                        background-color: $color-brand;
+
+                        &:before {
+                            border-bottom-color: $color-brand;
+                        }
+                    }
+                }
+                input[type='radio']:checked {
+                    ~ .nice-scale-label {
+                        color: $color-white;
+                        background-color: $color-primary;
+
+                        &:before {
+                            border-bottom-color: $color-primary;
+                        }
+                    }
+                }
+                .nice-scale-label {
+                    position: relative;
+                    display: inline-block;
+                    margin-top: 3px;
+                    padding: 3px 8px;
+                    min-width: 26px;
+                    text-align: center;
+                    background-color: $gray-light;
+                    @include nice-transition(color .2s, background-color .2s);
+                    @include nice-border-radius($default-radius * 1.5);
+
+                    &:before {
+                        position: absolute;
+                        top: -4px;
+                        left: 50%;
+                        margin-left: -4px;
+                        content: '';
+                        width: 0; 
+                        height: 0; 
+                        border-left: 4px solid transparent;
+                        border-right: 4px solid transparent;
+                        border-bottom: 4px solid $gray-light;
+                        @include nice-transition(border-bottom-color .2s);
+                    }
                 }
             }
         }

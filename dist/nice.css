@@ -5046,6 +5046,51 @@ button,
         font-size: 0.8125rem; }
         .nice-scale .nice-scale-selection li label:hover input[type='radio']:not(:checked) + span {
           border-color: #009CC1; }
+        .nice-scale .nice-scale-selection li label:hover .nice-scale-label {
+          color: #FFF;
+          background-color: #009CC1; }
+          .nice-scale .nice-scale-selection li label:hover .nice-scale-label:before {
+            border-bottom-color: #009CC1; }
+        .nice-scale .nice-scale-selection li label input[type='radio']:checked ~ .nice-scale-label {
+          color: #FFF;
+          background-color: #F18700; }
+          .nice-scale .nice-scale-selection li label input[type='radio']:checked ~ .nice-scale-label:before {
+            border-bottom-color: #F18700; }
+        .nice-scale .nice-scale-selection li label .nice-scale-label {
+          position: relative;
+          display: inline-block;
+          margin-top: 3px;
+          padding: 3px 8px;
+          min-width: 26px;
+          text-align: center;
+          background-color: #ECF0F1;
+          -webkit-transition: color 0.2s, background-color 0.2s;
+          -moz-transition: color 0.2s, background-color 0.2s;
+          -ms-transition: color 0.2s, background-color 0.2s;
+          -o-transition: color 0.2s, background-color 0.2s;
+          transition: color 0.2s, background-color 0.2s;
+          -webkit-border-radius: 4.5px;
+          -moz-border-radius: 4.5px;
+          border-radius: 4.5px;
+          -webkit-background-clip: padding-box;
+          -moz-background-clip: padding;
+          background-clip: padding-box; }
+          .nice-scale .nice-scale-selection li label .nice-scale-label:before {
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            margin-left: -4px;
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-bottom: 4px solid #ECF0F1;
+            -webkit-transition: border-bottom-color 0.2s;
+            -moz-transition: border-bottom-color 0.2s;
+            -ms-transition: border-bottom-color 0.2s;
+            -o-transition: border-bottom-color 0.2s;
+            transition: border-bottom-color 0.2s; }
   .nice-scale:before {
     z-index: -1;
     content: '';

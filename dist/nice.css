@@ -60,15 +60,15 @@ header .nice-header-brand,
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.clearfix, .nice-tabs, nav, .nice-btn-group {
+.clearfix, .nice-tabs, nav, .nice-btn-group, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after {
+  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     content: "";
     display: table; }
-  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after {
+  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     clear: both;
     content: ".";
     display: block;
@@ -5074,6 +5074,143 @@ button,
     -ms-transition: background-color 0.3s;
     -o-transition: background-color 0.3s;
     transition: background-color 0.3s; }
+
+.nice-modal {
+  border: 1px solid #D0D1D5;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.15); }
+  .nice-modal .nice-modal-content {
+    background-color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-modal .nice-modal-content .nice-modal-header {
+      position: relative;
+      padding: 15px 15px;
+      border-bottom: 1px solid #D0D1D5;
+      -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-modal .nice-modal-content .nice-modal-header .nice-modal-close {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 20px;
+        text-align: center;
+        margin-top: -15px;
+        color: #B2B2B2;
+        line-height: 30px;
+        line-height: 1.875rem; }
+      .nice-modal .nice-modal-content .nice-modal-header h4 {
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        font-size: 16px;
+        font-size: 1rem; }
+    .nice-modal .nice-modal-content .nice-modal-sub {
+      padding: 10px 15px;
+      border-bottom: 1px solid #D0D1D5;
+      background-color: #F5F7F7;
+      color: #B2B2B2;
+      text-shadow: 1px 1px 0 #FFF;
+      font-size: 14px;
+      font-size: 0.875rem; }
+    .nice-modal .nice-modal-content .nice-modal-body {
+      padding: 15px; }
+    .nice-modal .nice-modal-content .nice-modal-footer {
+      padding: 15px;
+      border-top: 1px solid #D0D1D5;
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-modal .nice-modal-content .nice-modal-footer .nice-btn-group {
+        margin: 0; }
+  .nice-modal.accent {
+    border-color: #182642; }
+    .nice-modal.accent .nice-modal-content .nice-modal-header {
+      border-bottom-color: #182642;
+      background-color: #182642;
+      color: #FFF; }
+      .nice-modal.accent .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.accent .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #4167b2; }
+  .nice-modal.primary {
+    border-color: #F18700; }
+    .nice-modal.primary .nice-modal-content .nice-modal-header {
+      border-bottom-color: #F18700;
+      background-color: #F18700;
+      color: #FFF; }
+      .nice-modal.primary .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.primary .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #ffcc8b; }
+  .nice-modal.brand {
+    border-color: #009CC1; }
+    .nice-modal.brand .nice-modal-content .nice-modal-header {
+      border-bottom-color: #009CC1;
+      background-color: #009CC1;
+      color: #FFF; }
+      .nice-modal.brand .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.brand .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #5be0ff; }
+  .nice-modal.info {
+    border-color: #60C4DE; }
+    .nice-modal.info .nice-modal-content .nice-modal-header {
+      border-bottom-color: #60C4DE;
+      background-color: #60C4DE;
+      color: #FFF; }
+      .nice-modal.info .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.info .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #dff3f8; }
+  .nice-modal.good {
+    border-color: #5CB85C; }
+    .nice-modal.good .nice-modal-content .nice-modal-header {
+      border-bottom-color: #5CB85C;
+      background-color: #5CB85C;
+      color: #FFF; }
+      .nice-modal.good .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.good .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #c7e6c7; }
+  .nice-modal.warning {
+    border-color: #FFB819; }
+    .nice-modal.warning .nice-modal-content .nice-modal-header {
+      border-bottom-color: #FFB819;
+      background-color: #FFB819;
+      color: #FFF; }
+      .nice-modal.warning .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.warning .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #ffe7b2; }
+  .nice-modal.bad {
+    border-color: #F42534; }
+    .nice-modal.bad .nice-modal-content .nice-modal-header {
+      border-bottom-color: #F42534;
+      background-color: #F42534;
+      color: #FFF; }
+      .nice-modal.bad .nice-modal-content .nice-modal-header .nice-modal-close {
+        color: #FFF; }
+    .nice-modal.bad .nice-modal-content .nice-modal-sub {
+      border-bottom-color: #fbb7bc; }
 
 div.nice-card,
 article.nice-card,

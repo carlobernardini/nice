@@ -5041,7 +5041,6 @@ button,
         cursor: pointer;
         display: block;
         width: 100%;
-        font-weight: 600;
         font-size: 13px;
         font-size: 0.8125rem; }
         .nice-scale .nice-scale-selection li label:hover input[type='radio']:not(:checked) + span {

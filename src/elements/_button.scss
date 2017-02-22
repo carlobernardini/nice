@@ -44,6 +44,11 @@
         &::before {
             margin-right: 5px;
         }
+        &.text-bold {
+            &:before {
+                font-weight: normal;
+            }
+        }
     }
     &.link {
         color: $color-link;

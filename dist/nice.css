@@ -4573,6 +4573,8 @@ table.nice-table {
       box-shadow: none; }
   .nice-btn.icon::before {
     margin-right: 5px; }
+  .nice-btn.icon.text-bold:before {
+    font-weight: normal; }
   .nice-btn.link {
     color: #009CC1;
     border: none;

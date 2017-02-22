@@ -5003,8 +5003,9 @@ button,
     .nice-dropdown .dropdown-menu li.description span {
       background-color: #FFF;
       color: #B2B2B2;
-      font-size: 11px;
-      font-size: 0.6875rem; }
+      white-space: normal;
+      font-size: 13px;
+      font-size: 0.8125rem; }
     .nice-dropdown .dropdown-menu li.info a {
       background-color: #f4fbfd; }
       .nice-dropdown .dropdown-menu li.info a:hover {

@@ -102,7 +102,8 @@
                 span {
                     background-color: $color-white;
                     color: $color-muted;
-                    @include nice-font-size(11px);
+                    white-space: normal;
+                    @include nice-font-size(13px);
                 }
             }
             @each $type in (info, good, warning, bad) {

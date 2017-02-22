@@ -257,7 +257,8 @@ body {
   background-color: #F5F7F7;
   font-family: "Open Sans", sans-serif, helvetica;
   font-weight: 400;
-  font-size: 16px; }
+  font-size: 16px;
+  font-size: 1rem; }
 
 a {
   color: #009CC1;
@@ -3910,7 +3911,6 @@ input.nice-form-control, select.nice-form-control, textarea.nice-form-control {
   outline: none;
   padding: 5px;
   font-family: "Open Sans", sans-serif, helvetica;
-  font-size: 1em;
   width: 100%;
   display: block;
   background-color: #FFF;

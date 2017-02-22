@@ -3,7 +3,7 @@ body {
     background-color: $gray-vlight;
     font-family: $fonts-primary;
     font-weight: $default-font-weight;
-    font-size: 16px;
+    @include nice-font-size(16px);
 }
 a {
     color: $color-link;

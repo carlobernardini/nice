@@ -43,11 +43,8 @@
                 text-overflow: ellipsis;
                 padding: 6px 10px;
                 @include nice-font-size(14px);
-                @include nice-transition(background-color .1s);
+                @include nice-transition(color .1s, background-color .1s);
 
-                &:hover {
-                    background-color: $gray-vlight;
-                }
                 i {
                     width: 20px;
                     text-align: center;
@@ -57,6 +54,14 @@
             }
             a {
                 outline: none;
+                &:hover {
+                    color: $color-white;
+                    background-color: $color-brand;
+                }
+                &:active {
+                    background-color: lighten($color-brand, 2%);
+                    @include nice-transition(background-color 0s);
+                }
             }
             &:first-child {
                 a {
@@ -112,7 +117,11 @@
                         background-color: lighten(map-get($color-scheme, #{$type}), 35%);
 
                         &:hover {
-                            background-color: lighten(map-get($color-scheme, #{$type}), 30%);
+                            color: $color-white;
+                            background-color: map-get($color-scheme, #{$type});
+                        }
+                        &:active {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 5%);
                         }
                     }
                 }

@@ -4852,19 +4852,27 @@ table.nice-table {
       padding: 6px 10px;
       font-size: 14px;
       font-size: 0.875rem;
-      -webkit-transition: background-color 0.1s;
-      -moz-transition: background-color 0.1s;
-      -ms-transition: background-color 0.1s;
-      -o-transition: background-color 0.1s;
-      transition: background-color 0.1s; }
-      .nice-dropdown .dropdown-menu li a:hover, .nice-dropdown .dropdown-menu li span:hover {
-        background-color: #F5F7F7; }
+      -webkit-transition: color 0.1s, background-color 0.1s;
+      -moz-transition: color 0.1s, background-color 0.1s;
+      -ms-transition: color 0.1s, background-color 0.1s;
+      -o-transition: color 0.1s, background-color 0.1s;
+      transition: color 0.1s, background-color 0.1s; }
       .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i {
         width: 20px;
         text-align: center;
         margin-right: 3px; }
     .nice-dropdown .dropdown-menu li a {
       outline: none; }
+      .nice-dropdown .dropdown-menu li a:hover {
+        color: #FFF;
+        background-color: #009CC1; }
+      .nice-dropdown .dropdown-menu li a:active {
+        background-color: #00a4cb;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
     .nice-dropdown .dropdown-menu li:first-child a {
       -webkit-border-radius: 3px 3px 0 0;
       -moz-border-radius: 3px 3px 0 0;
@@ -4906,19 +4914,31 @@ table.nice-table {
     .nice-dropdown .dropdown-menu li.info a {
       background-color: #f4fbfd; }
       .nice-dropdown .dropdown-menu li.info a:hover {
-        background-color: #dff3f8; }
+        color: #FFF;
+        background-color: #60C4DE; }
+      .nice-dropdown .dropdown-menu li.info a:active {
+        background-color: #75cce2; }
     .nice-dropdown .dropdown-menu li.good a {
       background-color: #d8eed8; }
       .nice-dropdown .dropdown-menu li.good a:hover {
-        background-color: #c7e6c7; }
+        color: #FFF;
+        background-color: #5CB85C; }
+      .nice-dropdown .dropdown-menu li.good a:active {
+        background-color: #6ec06e; }
     .nice-dropdown .dropdown-menu li.warning a {
       background-color: #ffefcc; }
       .nice-dropdown .dropdown-menu li.warning a:hover {
-        background-color: #ffe7b2; }
+        color: #FFF;
+        background-color: #FFB819; }
+      .nice-dropdown .dropdown-menu li.warning a:active {
+        background-color: #ffc033; }
     .nice-dropdown .dropdown-menu li.bad a {
       background-color: #fdcfd2; }
       .nice-dropdown .dropdown-menu li.bad a:hover {
-        background-color: #fbb7bc; }
+        color: #FFF;
+        background-color: #F42534; }
+      .nice-dropdown .dropdown-menu li.bad a:active {
+        background-color: #f53d4b; }
 
 .nice-scale {
   position: relative;

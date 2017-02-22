@@ -29,11 +29,12 @@ $(function(){
     });
     $('#docs-sections li a').on('click', function(e){
         var section = $(this).attr('href');
-        console.log(section);
-        $('html, body').animate({
-            scrollTop: $(section).offset().top - $(section).children('h2').outerHeight() - 20
-        }, 500);
-        return false;
+        if (section.substring(0, 1) == '#') {
+            $('html, body').animate({
+                scrollTop: $(section).offset().top - $(section).children('h2').outerHeight() - 20
+            }, 500);
+            return false;
+        }
     });
     $('.nice-dropdown').on('click', '.nice-btn', function(){
         var btn = $(this),

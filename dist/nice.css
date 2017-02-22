@@ -5400,6 +5400,13 @@ table.nice-table {
         background-clip: padding-box; }
       .nice-popover .nice-popover-controls a:hover, .nice-popover .nice-popover-controls button:hover {
         background-color: #F5F7F7; }
+      .nice-popover .nice-popover-controls a:active, .nice-popover .nice-popover-controls button:active {
+        background-color: #ECF0F1;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
   .nice-popover:before {
     position: absolute;
     bottom: 100%;
@@ -5733,6 +5740,15 @@ summary.nice-card {
       article.nice-card .nice-card-controls > a:hover,
       summary.nice-card .nice-card-controls > a:hover {
         background-color: #F5F7F7; }
+      div.nice-card .nice-card-controls > a:active,
+      article.nice-card .nice-card-controls > a:active,
+      summary.nice-card .nice-card-controls > a:active {
+        background-color: #ECF0F1;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
   div.nice-card > div:last-child,
   article.nice-card > div:last-child,
   summary.nice-card > div:last-child {

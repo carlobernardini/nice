@@ -75,6 +75,10 @@ summary {
                 &:hover {
                     background-color: $gray-vlight;
                 }
+                &:active {
+                    background-color: $gray-light;
+                    @include nice-transition(background-color 0s);
+                }
             }
         }
         > {

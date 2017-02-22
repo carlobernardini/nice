@@ -33,6 +33,7 @@ i {
 .nice-responsive-container {
     overflow:auto;
     overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .nice-circle {
     @include nice-border-radius(50%);

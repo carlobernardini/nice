@@ -14,7 +14,6 @@ html {
 /**
  * Nice! Placeholders collection
  **/
-button,
 .nice-btn, .nice-scale .nice-scale-selection li label {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -25,8 +24,7 @@ button,
 header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-group label, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, button,
-.nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
 .nice-popover .nice-popover-title .product-icon,
 .nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
@@ -4534,7 +4532,6 @@ table.nice-table {
   table.nice-table.small-body tbody tr td {
     font-size: .85em; }
 
-button,
 .nice-btn {
   color: #000;
   position: relative;
@@ -4564,41 +4561,29 @@ button,
   transition: border 0.1s, background 0.1s;
   font-size: 14px;
   font-size: 0.875rem; }
-  button:hover,
   .nice-btn:hover {
     color: #000;
     border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
-  button:active,
   .nice-btn:active {
     border: 1px solid #a8a9b1;
     background: #ECF0F1;
     -webkit-box-shadow: inset 0px 2px 1px #d0d1d5;
     -moz-box-shadow: inset 0px 2px 1px #d0d1d5;
     box-shadow: inset 0px 2px 1px #d0d1d5; }
-  button[disabled], button.disabled,
-  .nice-btn[disabled],
-  .nice-btn.disabled {
+  .nice-btn[disabled], .nice-btn.disabled {
     background-color: white;
     border-color: #dddee1;
     color: #B2B2B2;
     cursor: default; }
-    button[disabled]:active, button[disabled]:hover, button[disabled]:focus, button.disabled:active, button.disabled:hover, button.disabled:focus,
-    .nice-btn[disabled]:active,
-    .nice-btn[disabled]:hover,
-    .nice-btn[disabled]:focus,
-    .nice-btn.disabled:active,
-    .nice-btn.disabled:hover,
-    .nice-btn.disabled:focus {
+    .nice-btn[disabled]:active, .nice-btn[disabled]:hover, .nice-btn[disabled]:focus, .nice-btn.disabled:active, .nice-btn.disabled:hover, .nice-btn.disabled:focus {
       background-color: white;
       border-color: #dddee1;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-  button.icon::before,
   .nice-btn.icon::before {
     margin-right: 5px; }
-  button.link,
   .nice-btn.link {
     color: #009CC1;
     border: none;
@@ -4609,19 +4594,14 @@ button,
     -ms-transition: color 0.3s;
     -o-transition: color 0.3s;
     transition: color 0.3s; }
-    button.link:hover, button.link:focus,
-    .nice-btn.link:hover,
-    .nice-btn.link:focus {
+    .nice-btn.link:hover, .nice-btn.link:focus {
       color: #00c5f4;
       background-color: transparent;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
       box-shadow: none; }
-    button.link[disabled], button.link.disabled,
-    .nice-btn.link[disabled],
-    .nice-btn.link.disabled {
+    .nice-btn.link[disabled], .nice-btn.link.disabled {
       color: #B2B2B2; }
-  button.primary,
   .nice-btn.primary {
     background-color: #ffd7a5;
     color: #8b4e00;
@@ -4635,25 +4615,18 @@ button,
     font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
-    button.primary:hover,
     .nice-btn.primary:hover {
       background-color: #ff940c; }
-    button.primary:active,
     .nice-btn.primary:active {
       -webkit-box-shadow: inset 0px 2px 1px #d87900;
       -moz-box-shadow: inset 0px 2px 1px #d87900;
       box-shadow: inset 0px 2px 1px #d87900; }
-    button.primary[disabled], button.primary.disabled,
-    .nice-btn.primary[disabled],
-    .nice-btn.primary.disabled {
+    .nice-btn.primary[disabled], .nice-btn.primary.disabled {
       background-color: #eabe87; }
-      button.primary[disabled]:active, button.primary.disabled:active,
-      .nice-btn.primary[disabled]:active,
-      .nice-btn.primary.disabled:active {
+      .nice-btn.primary[disabled]:active, .nice-btn.primary.disabled:active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  button.accent,
   .nice-btn.accent {
     background-color: #4e73bf;
     color: black;
@@ -4667,25 +4640,18 @@ button,
     font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
-    button.accent:hover,
     .nice-btn.accent:hover {
       background-color: #1f3155; }
-    button.accent:active,
     .nice-btn.accent:active {
       -webkit-box-shadow: inset 0px 2px 1px #111b2f;
       -moz-box-shadow: inset 0px 2px 1px #111b2f;
       box-shadow: inset 0px 2px 1px #111b2f; }
-    button.accent[disabled], button.accent.disabled,
-    .nice-btn.accent[disabled],
-    .nice-btn.accent.disabled {
+    .nice-btn.accent[disabled], .nice-btn.accent.disabled {
       background-color: #5b677f; }
-      button.accent[disabled]:active, button.accent.disabled:active,
-      .nice-btn.accent[disabled]:active,
-      .nice-btn.accent.disabled:active {
+      .nice-btn.accent[disabled]:active, .nice-btn.accent.disabled:active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  button.info,
   .nice-btn.info {
     background-color: #f4fbfd;
     color: #2596b3;
@@ -4699,25 +4665,18 @@ button,
     font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
-    button.info:hover,
     .nice-btn.info:hover {
       background-color: #75cce2; }
-    button.info:active,
     .nice-btn.info:active {
       -webkit-box-shadow: inset 0px 2px 1px #4bbcda;
       -moz-box-shadow: inset 0px 2px 1px #4bbcda;
       box-shadow: inset 0px 2px 1px #4bbcda; }
-    button.info[disabled], button.info.disabled,
-    .nice-btn.info[disabled],
-    .nice-btn.info.disabled {
+    .nice-btn.info[disabled], .nice-btn.info.disabled {
       background-color: #d3e5ea; }
-      button.info[disabled]:active, button.info.disabled:active,
-      .nice-btn.info[disabled]:active,
-      .nice-btn.info.disabled:active {
+      .nice-btn.info[disabled]:active, .nice-btn.info.disabled:active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  button.good,
   .nice-btn.good {
     background-color: #d8eed8;
     color: #357935;
@@ -4731,25 +4690,18 @@ button,
     font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
-    button.good:hover,
     .nice-btn.good:hover {
       background-color: #6ec06e; }
-    button.good:active,
     .nice-btn.good:active {
       -webkit-box-shadow: inset 0px 2px 1px #4cae4c;
       -moz-box-shadow: inset 0px 2px 1px #4cae4c;
       box-shadow: inset 0px 2px 1px #4cae4c; }
-    button.good[disabled], button.good.disabled,
-    .nice-btn.good[disabled],
-    .nice-btn.good.disabled {
+    .nice-btn.good[disabled], .nice-btn.good.disabled {
       background-color: #c5cfc5; }
-      button.good[disabled]:active, button.good.disabled:active,
-      .nice-btn.good[disabled]:active,
-      .nice-btn.good.disabled:active {
+      .nice-btn.good[disabled]:active, .nice-btn.good.disabled:active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  button.warning,
   .nice-btn.warning {
     background-color: #ffefcc;
     color: #b27b00;
@@ -4763,25 +4715,18 @@ button,
     font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
-    button.warning:hover,
     .nice-btn.warning:hover {
       background-color: #ffc033; }
-    button.warning:active,
     .nice-btn.warning:active {
       -webkit-box-shadow: inset 0px 2px 1px #ffb000;
       -moz-box-shadow: inset 0px 2px 1px #ffb000;
       box-shadow: inset 0px 2px 1px #ffb000; }
-    button.warning[disabled], button.warning.disabled,
-    .nice-btn.warning[disabled],
-    .nice-btn.warning.disabled {
+    .nice-btn.warning[disabled], .nice-btn.warning.disabled {
       background-color: #f0d9a8; }
-      button.warning[disabled]:active, button.warning.disabled:active,
-      .nice-btn.warning[disabled]:active,
-      .nice-btn.warning.disabled:active {
+      .nice-btn.warning[disabled]:active, .nice-btn.warning.disabled:active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  button.bad,
   .nice-btn.bad {
     background-color: #fdcfd2;
     color: #aa0914;
@@ -4795,41 +4740,30 @@ button,
     font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
-    button.bad:hover,
     .nice-btn.bad:hover {
       background-color: #f53d4b; }
-    button.bad:active,
     .nice-btn.bad:active {
       -webkit-box-shadow: inset 0px 2px 1px #f30d1d;
       -moz-box-shadow: inset 0px 2px 1px #f30d1d;
       box-shadow: inset 0px 2px 1px #f30d1d; }
-    button.bad[disabled], button.bad.disabled,
-    .nice-btn.bad[disabled],
-    .nice-btn.bad.disabled {
+    .nice-btn.bad[disabled], .nice-btn.bad.disabled {
       background-color: #ebaeb2; }
-      button.bad[disabled]:active, button.bad.disabled:active,
-      .nice-btn.bad[disabled]:active,
-      .nice-btn.bad.disabled:active {
+      .nice-btn.bad[disabled]:active, .nice-btn.bad.disabled:active {
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-  button.small,
-  .nice-btn.small,
-  .nice-btn-group.small > .nice-btn {
+  .nice-btn.small, .nice-btn-group.small > .nice-btn {
     padding: 0 5px;
     line-height: 18px;
     line-height: 1.125rem;
     font-size: 13px;
     font-size: 0.8125rem; }
-  button.large,
-  .nice-btn.large,
-  .nice-btn-group.large > .nice-btn {
+  .nice-btn.large, .nice-btn-group.large > .nice-btn {
     padding: 0 15px;
     line-height: 42px;
     line-height: 2.625rem;
     font-size: 18px;
     font-size: 1.125rem; }
-  button.bold,
   .nice-btn.bold {
     font-weight: 600; }
 
@@ -5175,6 +5109,13 @@ button,
       color: #2596b3; }
       .nice-alert.info .nice-alert-button:hover {
         background-color: #dff3f8; }
+      .nice-alert.info .nice-alert-button:active {
+        background-color: #caebf4;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
   .nice-alert.good {
     background-color: #d8eed8;
     color: #357935;
@@ -5189,6 +5130,13 @@ button,
       color: #357935; }
       .nice-alert.good .nice-alert-button:hover {
         background-color: #c7e6c7; }
+      .nice-alert.good .nice-alert-button:active {
+        background-color: #b5dfb5;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
   .nice-alert.warning {
     background-color: #ffefcc;
     color: #b27b00;
@@ -5203,6 +5151,13 @@ button,
       color: #b27b00; }
       .nice-alert.warning .nice-alert-button:hover {
         background-color: #ffe7b2; }
+      .nice-alert.warning .nice-alert-button:active {
+        background-color: #ffdf99;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
   .nice-alert.bad {
     background-color: #fdcfd2;
     color: #aa0914;
@@ -5217,19 +5172,36 @@ button,
       color: #aa0914; }
       .nice-alert.bad .nice-alert-button:hover {
         background-color: #fbb7bc; }
+      .nice-alert.bad .nice-alert-button:active {
+        background-color: #fa9ea5;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
   .nice-alert .nice-alert-heading {
     margin: -15px -15px 15px;
     padding: 5px 15px;
     font-weight: 600; }
   .nice-alert .nice-alert-dismiss {
+    outline: none;
+    background-color: transparent;
+    border: none;
     padding: 10px;
     margin: -10px;
-    float: right; }
+    float: right;
+    cursor: pointer; }
     .nice-alert .nice-alert-dismiss:hover {
       color: #000; }
+    .nice-alert .nice-alert-dismiss .icon {
+      line-height: 22px;
+      line-height: 1.375rem;
+      font-size: 16px;
+      font-size: 1rem; }
   .nice-alert .nice-alert-wrapper {
     margin: -15px;
     display: table;
+    table-layout: fixed;
     width: calc(100% + 30px);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -5255,6 +5227,7 @@ button,
     width: 20%;
     vertical-align: middle;
     font-weight: 600;
+    cursor: pointer;
     -webkit-border-radius: 0 3px 3px 0;
     -moz-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;

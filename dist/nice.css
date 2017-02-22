@@ -5369,12 +5369,13 @@ table.nice-table {
     display: table;
     table-layout: fixed;
     width: 100%; }
-    .nice-popover .nice-popover-controls a, .nice-popover .nice-popover-controls button {
+    .nice-popover .nice-popover-controls .nice-popover-control {
       padding: 10px 15px;
       display: table-cell;
       text-align: center;
       white-space: nowrap;
       text-overflow: ellipsis;
+      cursor: pointer;
       font-size: 14px;
       font-size: 0.875rem;
       -webkit-transition: background-color 0.2s, color 0.2s;
@@ -5382,25 +5383,25 @@ table.nice-table {
       -ms-transition: background-color 0.2s, color 0.2s;
       -o-transition: background-color 0.2s, color 0.2s;
       transition: background-color 0.2s, color 0.2s; }
-      .nice-popover .nice-popover-controls a + a, .nice-popover .nice-popover-controls a + button, .nice-popover .nice-popover-controls button + a, .nice-popover .nice-popover-controls button + button {
+      .nice-popover .nice-popover-controls .nice-popover-control + .nice-popover-control {
         border-left: 1px solid #ECF0F1; }
-      .nice-popover .nice-popover-controls a:first-child, .nice-popover .nice-popover-controls button:first-child {
+      .nice-popover .nice-popover-controls .nice-popover-control:first-child {
         -webkit-border-radius: 0 0 0 3px;
         -moz-border-radius: 0 0 0 3px;
         border-radius: 0 0 0 3px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      .nice-popover .nice-popover-controls a:last-child, .nice-popover .nice-popover-controls button:last-child {
+      .nice-popover .nice-popover-controls .nice-popover-control:last-child {
         -webkit-border-radius: 0 0 3px 0;
         -moz-border-radius: 0 0 3px 0;
         border-radius: 0 0 3px 0;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      .nice-popover .nice-popover-controls a:hover, .nice-popover .nice-popover-controls button:hover {
+      .nice-popover .nice-popover-controls .nice-popover-control:hover {
         background-color: #F5F7F7; }
-      .nice-popover .nice-popover-controls a:active, .nice-popover .nice-popover-controls button:active {
+      .nice-popover .nice-popover-controls .nice-popover-control:active {
         background-color: #ECF0F1;
         -webkit-transition: background-color 0s;
         -moz-transition: background-color 0s;
@@ -5701,9 +5702,9 @@ summary.nice-card {
     width: 100%;
     border-top: 1px solid #ebebed;
     background-color: #FFF; }
-    div.nice-card .nice-card-controls > a,
-    article.nice-card .nice-card-controls > a,
-    summary.nice-card .nice-card-controls > a {
+    div.nice-card .nice-card-controls > .nice-card-control,
+    article.nice-card .nice-card-controls > .nice-card-control,
+    summary.nice-card .nice-card-controls > .nice-card-control {
       vertical-align: bottom;
       padding: 10px 15px;
       text-align: center;
@@ -5713,36 +5714,36 @@ summary.nice-card {
       -ms-transition: background-color 0.2s, color 0.2s;
       -o-transition: background-color 0.2s, color 0.2s;
       transition: background-color 0.2s, color 0.2s; }
-      div.nice-card .nice-card-controls > a + a,
-      article.nice-card .nice-card-controls > a + a,
-      summary.nice-card .nice-card-controls > a + a {
+      div.nice-card .nice-card-controls > .nice-card-control + .nice-card-control,
+      article.nice-card .nice-card-controls > .nice-card-control + .nice-card-control,
+      summary.nice-card .nice-card-controls > .nice-card-control + .nice-card-control {
         border-left: 1px solid #ebebed;
         text-align: center; }
-      div.nice-card .nice-card-controls > a:first-child,
-      article.nice-card .nice-card-controls > a:first-child,
-      summary.nice-card .nice-card-controls > a:first-child {
+      div.nice-card .nice-card-controls > .nice-card-control:first-child,
+      article.nice-card .nice-card-controls > .nice-card-control:first-child,
+      summary.nice-card .nice-card-controls > .nice-card-control:first-child {
         -webkit-border-radius: 0 0 0 3px;
         -moz-border-radius: 0 0 0 3px;
         border-radius: 0 0 0 3px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      div.nice-card .nice-card-controls > a:last-child,
-      article.nice-card .nice-card-controls > a:last-child,
-      summary.nice-card .nice-card-controls > a:last-child {
+      div.nice-card .nice-card-controls > .nice-card-control:last-child,
+      article.nice-card .nice-card-controls > .nice-card-control:last-child,
+      summary.nice-card .nice-card-controls > .nice-card-control:last-child {
         -webkit-border-radius: 0 0 3px 0;
         -moz-border-radius: 0 0 3px 0;
         border-radius: 0 0 3px 0;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      div.nice-card .nice-card-controls > a:hover,
-      article.nice-card .nice-card-controls > a:hover,
-      summary.nice-card .nice-card-controls > a:hover {
+      div.nice-card .nice-card-controls > .nice-card-control:hover,
+      article.nice-card .nice-card-controls > .nice-card-control:hover,
+      summary.nice-card .nice-card-controls > .nice-card-control:hover {
         background-color: #F5F7F7; }
-      div.nice-card .nice-card-controls > a:active,
-      article.nice-card .nice-card-controls > a:active,
-      summary.nice-card .nice-card-controls > a:active {
+      div.nice-card .nice-card-controls > .nice-card-control:active,
+      article.nice-card .nice-card-controls > .nice-card-control:active,
+      summary.nice-card .nice-card-controls > .nice-card-control:active {
         background-color: #ECF0F1;
         -webkit-transition: background-color 0s;
         -moz-transition: background-color 0s;

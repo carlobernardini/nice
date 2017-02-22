@@ -62,15 +62,15 @@ header .nice-header-brand,
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.clearfix, .nice-tabs, nav, .nice-btn-group, .nice-modal .nice-modal-content .nice-modal-footer {
+.clearfix, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     content: "";
     display: table; }
-  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     clear: both;
     content: ".";
     display: block;
@@ -5366,6 +5366,24 @@ button,
       -webkit-background-clip: padding-box;
       -moz-background-clip: padding;
       background-clip: padding-box; }
+    .nice-popover .nice-popover-body .nice-popover-image {
+      margin: -15px 15px -15px -15px;
+      float: left;
+      -webkit-border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-popover .nice-popover-body .nice-popover-image.right {
+        margin: -15px -15px -15px 15px;
+        float: right;
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
   .nice-popover .nice-popover-controls {
     border-top: 1px solid #ECF0F1;
     display: table;

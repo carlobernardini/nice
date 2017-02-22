@@ -30,9 +30,21 @@
     .nice-popover-body {
         padding: 15px;
         @include nice-font-size(14px);
+        @extend %clearfix;
 
         + .nice-popover-title {
             @include nice-border-radius(0 0 $default-radius $default-radius);
+        }
+        .nice-popover-image {
+            margin: -15px 15px -15px -15px;
+            float: left;
+            @include nice-border-radius($default-radius 0 0 $default-radius);
+
+            &.right {
+                margin: -15px -15px -15px 15px;
+                float: right;
+                @include nice-border-radius(0 $default-radius $default-radius 0);
+            }
         }
     }
     .nice-popover-controls {

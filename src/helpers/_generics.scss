@@ -34,6 +34,7 @@ i {
     overflow:auto;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin-bottom: 15px;
 }
 .nice-circle {
     @include nice-border-radius(50%);

@@ -294,7 +294,9 @@ i.icon {
 
 .nice-responsive-container {
   overflow: auto;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  margin-bottom: 15px; }
 
 .nice-circle {
   -webkit-border-radius: 50%;

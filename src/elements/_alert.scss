@@ -67,13 +67,12 @@
         display: table-cell;
     }
     .nice-alert-content {
-        width: 80%;
         vertical-align: top;
         @include nice-border-radius($default-radius 0 0 $default-radius);
     }
     .nice-alert-button {
+        width: 30%;
         text-align: center;
-        width: 20%;
         vertical-align: middle;
         font-weight: 600;
         cursor: pointer;

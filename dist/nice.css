@@ -5214,7 +5214,6 @@ table.nice-table {
     padding: 15px;
     display: table-cell; }
   .nice-alert .nice-alert-content {
-    width: 80%;
     vertical-align: top;
     -webkit-border-radius: 3px 0 0 3px;
     -moz-border-radius: 3px 0 0 3px;
@@ -5223,8 +5222,8 @@ table.nice-table {
     -moz-background-clip: padding;
     background-clip: padding-box; }
   .nice-alert .nice-alert-button {
+    width: 30%;
     text-align: center;
-    width: 20%;
     vertical-align: middle;
     font-weight: 600;
     cursor: pointer;

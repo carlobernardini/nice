@@ -116,7 +116,7 @@
     background: linear-gradient($color-from, $color-to);
 }
 
-@mixin nice-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin nice-abs-pos ($top: null, $right: null, $bottom: null, $left: null) {
     top: $top;
     right: $right;
     bottom: $bottom;

@@ -72,7 +72,7 @@
             background-color: map-get($color-scheme, #{$type});
             border: none;
             padding: 6px 11px;
-            @include nice-font($weight: 400, $size: 14px);
+            @include nice-font($size: 14px);
 
             &:hover {
                 background-color: lighten(map-get($color-scheme, #{$type}), 5%);

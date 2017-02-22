@@ -4599,7 +4599,6 @@ table.nice-table {
     background-color: #F18700;
     border: none;
     padding: 6px 11px;
-    font-weight: 400;
     font-size: 14px; }
     .nice-btn.primary:hover {
       background-color: #ff940c; }
@@ -4621,7 +4620,6 @@ table.nice-table {
     background-color: #182642;
     border: none;
     padding: 6px 11px;
-    font-weight: 400;
     font-size: 14px; }
     .nice-btn.accent:hover {
       background-color: #1f3155; }
@@ -4643,7 +4641,6 @@ table.nice-table {
     background-color: #60C4DE;
     border: none;
     padding: 6px 11px;
-    font-weight: 400;
     font-size: 14px; }
     .nice-btn.info:hover {
       background-color: #75cce2; }
@@ -4665,7 +4662,6 @@ table.nice-table {
     background-color: #5CB85C;
     border: none;
     padding: 6px 11px;
-    font-weight: 400;
     font-size: 14px; }
     .nice-btn.good:hover {
       background-color: #6ec06e; }
@@ -4687,7 +4683,6 @@ table.nice-table {
     background-color: #FFB819;
     border: none;
     padding: 6px 11px;
-    font-weight: 400;
     font-size: 14px; }
     .nice-btn.warning:hover {
       background-color: #ffc033; }
@@ -4709,7 +4704,6 @@ table.nice-table {
     background-color: #F42534;
     border: none;
     padding: 6px 11px;
-    font-weight: 400;
     font-size: 14px; }
     .nice-btn.bad:hover {
       background-color: #f53d4b; }

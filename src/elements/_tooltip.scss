@@ -1,0 +1,57 @@
+.nice-tooltip {
+    position: relative;
+    color: $color-white;
+    background-color: $color-accent;
+    padding: 5px 10px;
+    font-weight: 600;
+    @include nice-font-size(13px);
+    @include nice-border-radius($default-radius);
+    @extend %display-inline-block;
+
+    &:before {
+        position: absolute;
+        bottom: 100%;
+        left: 10px;
+        content: '';
+        width: 0; 
+        height: 0; 
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $color-accent;
+    }
+    &.top {
+        &:before {
+            top: auto;
+            bottom: 100%;
+        }
+    }
+    &.bottom {
+        &:before {
+            top: 100%;
+            bottom: auto;
+            border-bottom: none;
+            border-top: 5px solid $color-accent;
+        }
+    }
+    &.left {
+        &:before {
+            left: 10px;
+            right: auto;
+        }
+    }
+    &.right {
+        &:before {
+            left: auto;
+            right: 10px;
+        }
+    }
+    @each $type in (info, good, warning, bad) {
+        &.#{$type} {
+            background-color: map-get($color-scheme, #{$type});
+            &:before {
+                border-bottom-color: map-get($color-scheme, #{$type});
+                border-top-color: map-get($color-scheme, #{$type});
+            }
+        }
+    }
+}

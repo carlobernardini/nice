@@ -26,7 +26,9 @@ header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
 .nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, button,
-.nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-loading {
+.nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-popover .nice-popover-title .product-icon,
+.nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
   display: inline-block;
   *display: inline-block;
@@ -60,15 +62,15 @@ header .nice-header-brand,
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.clearfix, .nice-tabs, nav, .nice-btn-group, .nice-modal .nice-modal-content .nice-modal-footer {
+.clearfix, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     content: "";
     display: table; }
-  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     clear: both;
     content: ".";
     display: block;
@@ -5256,6 +5258,252 @@ button,
     -ms-transition: background-color 0.3s;
     -o-transition: background-color 0.3s;
     transition: background-color 0.3s; }
+
+.nice-tooltip {
+  position: relative;
+  color: #FFF;
+  background-color: #182642;
+  padding: 5px 10px;
+  font-weight: 600;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-tooltip:before {
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #182642; }
+  .nice-tooltip.top:before {
+    top: auto;
+    bottom: 100%; }
+  .nice-tooltip.bottom:before {
+    top: 100%;
+    bottom: auto;
+    border-bottom: none;
+    border-top: 5px solid #182642; }
+  .nice-tooltip.left:before {
+    left: 10px;
+    right: auto; }
+  .nice-tooltip.right:before {
+    left: auto;
+    right: 10px; }
+  .nice-tooltip.info {
+    background-color: #60C4DE; }
+    .nice-tooltip.info:before {
+      border-bottom-color: #60C4DE;
+      border-top-color: #60C4DE; }
+  .nice-tooltip.good {
+    background-color: #5CB85C; }
+    .nice-tooltip.good:before {
+      border-bottom-color: #5CB85C;
+      border-top-color: #5CB85C; }
+  .nice-tooltip.warning {
+    background-color: #FFB819; }
+    .nice-tooltip.warning:before {
+      border-bottom-color: #FFB819;
+      border-top-color: #FFB819; }
+  .nice-tooltip.bad {
+    background-color: #F42534; }
+    .nice-tooltip.bad:before {
+      border-bottom-color: #F42534;
+      border-top-color: #F42534; }
+
+.nice-popover {
+  position: relative;
+  background-color: #FFF;
+  border: 1px solid #182642;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15); }
+  .nice-popover .nice-popover-title {
+    background-color: #182642;
+    padding: 10px 15px;
+    font-weight: 600;
+    color: #FFF;
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    .nice-popover .nice-popover-title .icon,
+    .nice-popover .nice-popover-title .product-icon,
+    .nice-popover .nice-popover-title .additional-icon {
+      width: 15px;
+      text-align: center;
+      margin-right: 5px; }
+      .nice-popover .nice-popover-title .icon.pull-right,
+      .nice-popover .nice-popover-title .product-icon.pull-right,
+      .nice-popover .nice-popover-title .additional-icon.pull-right {
+        margin-right: 0;
+        margin-left: 5px; }
+  .nice-popover .nice-popover-body {
+    padding: 15px;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    .nice-popover .nice-popover-body + .nice-popover-title {
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-popover .nice-popover-body .nice-popover-image {
+      margin: -15px 15px -15px -15px;
+      float: left;
+      -webkit-border-radius: 3px 0 0 3px;
+      -moz-border-radius: 3px 0 0 3px;
+      border-radius: 3px 0 0 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-popover .nice-popover-body .nice-popover-image.right {
+        margin: -15px -15px -15px 15px;
+        float: right;
+        -webkit-border-radius: 0 3px 3px 0;
+        -moz-border-radius: 0 3px 3px 0;
+        border-radius: 0 3px 3px 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+  .nice-popover .nice-popover-controls {
+    border-top: 1px solid #ECF0F1;
+    display: table;
+    table-layout: fixed;
+    width: 100%; }
+    .nice-popover .nice-popover-controls a, .nice-popover .nice-popover-controls button {
+      padding: 10px 15px;
+      display: table-cell;
+      text-align: center;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      font-size: 0.875rem;
+      -webkit-transition: background-color 0.2s, color 0.2s;
+      -moz-transition: background-color 0.2s, color 0.2s;
+      -ms-transition: background-color 0.2s, color 0.2s;
+      -o-transition: background-color 0.2s, color 0.2s;
+      transition: background-color 0.2s, color 0.2s; }
+      .nice-popover .nice-popover-controls a + a, .nice-popover .nice-popover-controls a + button, .nice-popover .nice-popover-controls button + a, .nice-popover .nice-popover-controls button + button {
+        border-left: 1px solid #ECF0F1; }
+      .nice-popover .nice-popover-controls a:first-child, .nice-popover .nice-popover-controls button:first-child {
+        -webkit-border-radius: 0 0 0 3px;
+        -moz-border-radius: 0 0 0 3px;
+        border-radius: 0 0 0 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-popover .nice-popover-controls a:last-child, .nice-popover .nice-popover-controls button:last-child {
+        -webkit-border-radius: 0 0 3px 0;
+        -moz-border-radius: 0 0 3px 0;
+        border-radius: 0 0 3px 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-popover .nice-popover-controls a:hover, .nice-popover .nice-popover-controls button:hover {
+        background-color: #F5F7F7; }
+  .nice-popover:before {
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #182642; }
+  .nice-popover.top {
+    -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15); }
+    .nice-popover.top:before {
+      top: auto;
+      bottom: 100%; }
+  .nice-popover.bottom {
+    -webkit-box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15); }
+    .nice-popover.bottom:before {
+      top: 100%;
+      bottom: auto;
+      border-bottom: none;
+      border-top: 10px solid #60C4DE; }
+  .nice-popover.left:before {
+    left: 10px;
+    right: auto; }
+  .nice-popover.right:before {
+    left: auto;
+    right: 10px; }
+  .nice-popover.info {
+    border-color: #60C4DE; }
+    .nice-popover.info .nice-popover-title {
+      background-color: #f4fbfd;
+      color: #2596b3; }
+    .nice-popover.info .nice-popover-controls a, .nice-popover.info .nice-popover-controls button {
+      color: #2596b3; }
+    .nice-popover.info:before {
+      border-bottom-color: #60C4DE; }
+      .nice-popover.info:before.top {
+        border-bottom-color: #60C4DE; }
+      .nice-popover.info:before.bottom {
+        border-top-color: #60C4DE; }
+  .nice-popover.good {
+    border-color: #5CB85C; }
+    .nice-popover.good .nice-popover-title {
+      background-color: #d8eed8;
+      color: #357935; }
+    .nice-popover.good .nice-popover-controls a, .nice-popover.good .nice-popover-controls button {
+      color: #357935; }
+    .nice-popover.good:before {
+      border-bottom-color: #5CB85C; }
+      .nice-popover.good:before.top {
+        border-bottom-color: #5CB85C; }
+      .nice-popover.good:before.bottom {
+        border-top-color: #5CB85C; }
+  .nice-popover.warning {
+    border-color: #FFB819; }
+    .nice-popover.warning .nice-popover-title {
+      background-color: #ffefcc;
+      color: #b27b00; }
+    .nice-popover.warning .nice-popover-controls a, .nice-popover.warning .nice-popover-controls button {
+      color: #b27b00; }
+    .nice-popover.warning:before {
+      border-bottom-color: #FFB819; }
+      .nice-popover.warning:before.top {
+        border-bottom-color: #FFB819; }
+      .nice-popover.warning:before.bottom {
+        border-top-color: #FFB819; }
+  .nice-popover.bad {
+    border-color: #F42534; }
+    .nice-popover.bad .nice-popover-title {
+      background-color: #fdcfd2;
+      color: #aa0914; }
+    .nice-popover.bad .nice-popover-controls a, .nice-popover.bad .nice-popover-controls button {
+      color: #aa0914; }
+    .nice-popover.bad:before {
+      border-bottom-color: #F42534; }
+      .nice-popover.bad:before.top {
+        border-bottom-color: #F42534; }
+      .nice-popover.bad:before.bottom {
+        border-top-color: #F42534; }
 
 .nice-modal {
   border: 1px solid #D0D1D5;

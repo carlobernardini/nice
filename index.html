@@ -921,10 +921,12 @@
                 <h2>Form elements</h2>
                 <div class="nice-col-6">
                     <div class="nice-form-group">
-                        <input type="text" placeholder="Nice input..." class="nice-form-control" />
+                        <label for="demo-input-1">Some label</label>
+                        <input type="text" placeholder="Nice input..." class="nice-form-control" id="demo-input-1" />
                     </div>
                     <div class="nice-form-group">
-                        <input type="password" placeholder="Nice password..." class="nice-form-control" />
+                        <label for="demo-input-2">Password</label>
+                        <input type="password" placeholder="Nice password..." class="nice-form-control" id="demo-input-2" />
                     </div>
                     <div class="nice-form-group">
                         <select class="nice-form-control">
@@ -985,52 +987,84 @@
                             </label>
                         </div>
                     </div>
+<form class="nice-form-inline" style="margin-top: 30px;">
+    <div class="nice-form-group">
+        <label for="demo-input-3">Name</label>
+        <input type="text" class="nice-form-control" placeholder="Foo Bar" id="demo-input-3" />
+    </div>
+    <div class="nice-form-group">
+        <label for="demo-input-4">Email</label>
+        <input type="text" class="nice-form-control" placeholder="bar.foo@textkernel.com" id="demo-input-4" />
+    </div>
+    <button class="nice-btn">
+        <i class="icon fa-envelope-o"></i>
+    </button>
+</form>
                 </div>
                 <div class="nice-col-6">
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
-    &lt;input type=&quot;text&quot; placeholder=&quot;Nice input...&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
-    &lt;input type=&quot;password&quot; placeholder=&quot;Nice password...&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=&quot;nice-form-group&quot;&gt;
-    &lt;select class=&quot;<span class="main">nice-form-control</span>&quot;&gt;
-        &lt;option&gt;Item 1&lt;/option&gt;
-        &lt;option&gt;Item 2&lt;/option&gt;
-        &lt;option&gt;Item 3&lt;/option&gt;
-        &lt;option&gt;Item 4&lt;/option&gt;
-        &lt;option&gt;Item 5&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/div&gt;
-&lt;div class=&quot;nice-form-group&quot;&gt;
-    &lt;select class=&quot;<span class="main">nice-form-control</span>&quot; size=&quot;5&quot; multiple=&quot;multiple&quot;&gt;
-        &lt;option&gt;Item 1&lt;/option&gt;
-        &lt;option&gt;Item 2&lt;/option&gt;
-        &lt;option&gt;Item 3&lt;/option&gt;
-        &lt;option&gt;Item 4&lt;/option&gt;
-        &lt;option&gt;Item 5&lt;/option&gt;
-    &lt;/select&gt;
-&lt;/div&gt;
-&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
-    &lt;textarea class=&quot;<span class="main">nice-form-control</span>&quot; placeholder=&quot;Nice textarea...&quot;&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
-    &lt;div class=&quot;<span class="main">nice-radio</span>&quot;&gt;
-        &lt;label&gt;
-            &lt;input type=&quot;radio&quot; name=&quot;nice-radio-example&quot; /&gt;
-            Radio A
-        &lt;/label&gt;
+                        <code class="docs">&lt;form&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;label for=&quot;demo-input-1&quot;&gt;Some label&lt;/label&gt;
+        &lt;input type=&quot;text&quot; placeholder=&quot;Nice input...&quot; class=&quot;<span class="main">nice-form-control</span>&quot; id=&quot;demo-input-1&quot; /&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
-    &lt;div class=&quot;<span class="main">nice-checkbox</span>&quot;&gt;
-        &lt;label&gt;
-            &lt;input type=&quot;checkbox&quot; name=&quot;nice-checkbox-example[]&quot; /&gt;
-            Checkbox A
-        &lt;/label&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;label for=&quot;demo-input-2&quot;&gt;Password&lt;/label&gt;
+        &lt;input type=&quot;password&quot; placeholder=&quot;Nice password...&quot; class=&quot;<span class="main">nice-form-control</span>&quot; id=&quot;demo-input-2&quot; /&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code>
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;select class=&quot;<span class="main">nice-form-control</span>&quot;&gt;
+            &lt;option&gt;Item 1&lt;/option&gt;
+            &lt;option&gt;Item 2&lt;/option&gt;
+            &lt;option&gt;Item 3&lt;/option&gt;
+            &lt;option&gt;Item 4&lt;/option&gt;
+            &lt;option&gt;Item 5&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;select class=&quot;<span class="main">nice-form-control</span>&quot; size=&quot;5&quot; multiple=&quot;multiple&quot;&gt;
+            &lt;option&gt;Item 1&lt;/option&gt;
+            &lt;option&gt;Item 2&lt;/option&gt;
+            &lt;option&gt;Item 3&lt;/option&gt;
+            &lt;option&gt;Item 4&lt;/option&gt;
+            &lt;option&gt;Item 5&lt;/option&gt;
+        &lt;/select&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;textarea class=&quot;<span class="main">nice-form-control</span>&quot; placeholder=&quot;Nice textarea...&quot;&gt;&lt;/textarea&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;div class=&quot;<span class="main">nice-radio</span>&quot;&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;radio&quot; name=&quot;nice-radio-example&quot; /&gt;
+                Radio A
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;div class=&quot;<span class="main">nice-checkbox</span>&quot;&gt;
+            &lt;label&gt;
+                &lt;input type=&quot;checkbox&quot; name=&quot;nice-checkbox-example[]&quot; /&gt;
+                Checkbox A
+            &lt;/label&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Inline forms --&gt;
+&lt;form class=&quot;<span class="main">nice-form-inline</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;label for=&quot;demo-input-3&quot;&gt;Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;<span class="main">nice-form-control</span>&quot; placeholder=&quot;Foo Bar&quot; id=&quot;demo-input-3&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;label for=&quot;demo-input-4&quot;&gt;Email&lt;/label&gt;
+        &lt;input type=&quot;text&quot; class=&quot;<span class="main">nice-form-control</span>&quot; placeholder=&quot;bar.foo@textkernel.com&quot; id=&quot;demo-input-4&quot; /&gt;
+    &lt;/div&gt;
+    &lt;button class=&quot;nice-btn&quot;&gt;
+        &lt;i class=&quot;icon fa-envelope-o&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+&lt;/form&gt;</code>
                         <ul class="doc-code-tools">
                             <li><a href="#" class="toggle">Expand</a></li>
                             <li><a href="#" class="copy">Copy</a></li>

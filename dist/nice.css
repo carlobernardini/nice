@@ -4941,8 +4941,9 @@ table.nice-table {
         background-color: #f53d4b; }
 
 .nice-scale {
-  position: relative;
-  margin: 15px 0; }
+  position: relative; }
+  .nice-scale + .nice-scale {
+    margin-top: 15px; }
   .nice-scale .nice-scale-selection {
     z-index: 999;
     list-style: none;

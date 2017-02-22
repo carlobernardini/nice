@@ -1,6 +1,9 @@
 .nice-scale {
     position: relative;
-    margin: 15px 0;
+
+    + .nice-scale {
+        margin-top: 15px;
+    }
 
     .nice-scale-selection {
         z-index: 999;

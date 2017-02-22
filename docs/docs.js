@@ -27,6 +27,14 @@ $(function(){
         toggle.toggleClass('collapsed', !state);
         $('body').toggleClass('expanded', state);
     });
+    $('#docs-sections li a').on('click', function(e){
+        var section = $(this).attr('href');
+        console.log(section);
+        $('html, body').animate({
+            scrollTop: $(section).offset().top - $(section).children('h2').outerHeight() - 20
+        }, 500);
+        return false;
+    });
     $('.nice-dropdown').on('click', '.nice-btn', function(){
         var btn = $(this),
             dd = btn.closest('.nice-dropdown'),

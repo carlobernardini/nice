@@ -53,16 +53,17 @@
         table-layout: fixed;
         width: 100%;
 
-        a, button {
+        .nice-popover-control {
             padding: 10px 15px;
             display: table-cell;
             text-align: center;
             white-space: nowrap;
             text-overflow: ellipsis;
+            cursor: pointer;
             @include nice-font-size(14px);
             @include nice-transition(background-color 0.2s, color 0.2s);
 
-            + a, + button {
+            + .nice-popover-control {
                 border-left: 1px solid $gray-light;
             }
             &:first-child {
@@ -73,6 +74,10 @@
             }
             &:hover {
                 background-color: $gray-vlight;
+            }
+            &:active {
+                background-color: $gray-light;
+                @include nice-transition(background-color 0s);
             }
         }
     }

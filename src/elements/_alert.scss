@@ -24,6 +24,10 @@
                 &:hover {
                     background-color: lighten(map-get($color-scheme, #{$type}), 30%);
                 }
+                &:active {
+                    background-color: lighten(map-get($color-scheme, #{$type}), 25%);
+                    @include nice-transition(background-color 0s);
+                }
             }
         }
     }
@@ -33,17 +37,27 @@
         font-weight: 600;
     }
     .nice-alert-dismiss {
+        outline: none;
+        background-color: transparent;
+        border: none;
         padding: 10px;
         margin: -10px;
         float: right;
+        cursor: pointer;
 
         &:hover {
             color: $color-black;
+        }
+        .icon {
+            @include nice-line-height(22px);
+            @include nice-font-size(16px);
+            @extend %display-inline-block;
         }
     }
     .nice-alert-wrapper {
         margin: -15px;
         display: table;
+        table-layout: fixed;
         width: calc(100% + 30px);
         @include nice-border-radius($default-radius);
     }
@@ -53,15 +67,15 @@
         display: table-cell;
     }
     .nice-alert-content {
-        width: 80%;
         vertical-align: top;
         @include nice-border-radius($default-radius 0 0 $default-radius);
     }
     .nice-alert-button {
+        width: 30%;
         text-align: center;
-        width: 20%;
         vertical-align: middle;
         font-weight: 600;
+        cursor: pointer;
         @include nice-border-radius(0 $default-radius $default-radius 0);
         @include nice-transition(background-color 0.3s);
     }

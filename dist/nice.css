@@ -76,30 +76,46 @@ header .nice-header-brand,
     line-height: 0;
     height: 0; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Open Sans", sans-serif, helvetica;
-  font-weight: 400; }
-  h1.bold, h2.bold, h3.bold, h4.bold, h5.bold, h6.bold {
-    font-weight: 600; }
-  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  padding: 0; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small,
+  .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
     font-size: .75em; }
 
-h1 {
+h1, h2, h3, .h1, .h2, .h3 {
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px; }
+
+h4, h5, h6, .h4, .h5, .h6 {
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+h1, .h1 {
+  font-size: 36px;
   font-size: 2.25rem; }
 
-h2 {
+h2, .h2 {
+  font-size: 30px;
   font-size: 1.875rem; }
 
-h3 {
+h3, .h3 {
+  font-size: 24px;
   font-size: 1.5rem; }
 
-h4 {
+h4, .h4 {
+  font-size: 18px;
   font-size: 1.125rem; }
 
-h5 {
+h5, .h5 {
+  font-size: 14px;
   font-size: 0.875rem; }
 
-h6 {
+h6, .h6 {
+  font-size: 12px;
   font-size: 0.75rem; }
 
 .text-align-left {

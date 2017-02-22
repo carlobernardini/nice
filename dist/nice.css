@@ -117,10 +117,7 @@ h6 {
 .text-brand {
   letter-spacing: 1px;
   font-family: Colaborate, "Open Sans", sans-serif;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 300;
-  font-size: 1em; }
+  font-weight: 300; }
 
 .text-muted {
   color: #B2B2B2; }
@@ -136,13 +133,6 @@ h6 {
 
 .text-uppercase {
   text-transform: uppercase; }
-
-.text-default {
-  font-family: "Open Sans", sans-serif, helvetica;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 300;
-  font-size: 1em; }
 
 @-webkit-keyframes pulse {
   0% {
@@ -3217,8 +3207,6 @@ header,
     height: 60px;
     outline: none;
     font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 600;
     font-size: 1.3em;
     -webkit-background-size: contain;
@@ -3531,9 +3519,6 @@ header,
   .nice-header .nice-header-product {
     float: right;
     padding-left: 15px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 1em; }
 
@@ -3659,10 +3644,6 @@ header,
             .nice-header .nice-header-menu li ul li a,
             .nice-header .nice-header-menu li ul li span {
               padding-left: 50px;
-              font-family: "Open Sans", sans-serif, helvetica;
-              font-style: normal;
-              font-variant: normal;
-              font-weight: 300;
               font-size: 0.9em; }
               header .nice-header-menu li ul li a:hover, header .nice-header-menu li ul li a:focus, header .nice-header-menu li ul li a:active, header .nice-header-menu li ul li span:hover, header .nice-header-menu li ul li span:focus, header .nice-header-menu li ul li span:active,
               .nice-header .nice-header-menu li ul li a:hover,
@@ -3781,9 +3762,6 @@ header,
       padding: 0 20px;
       color: #FFF;
       background-color: #2c467a;
-      font-family: "Open Sans", sans-serif, helvetica;
-      font-style: normal;
-      font-variant: normal;
       font-weight: 600;
       font-size: 0.9em; }
       header .nice-header-product + .nice-header-form,
@@ -4273,9 +4251,6 @@ textarea.nice-form-control {
       color: #FFF;
       padding: 3px 8px;
       margin: -3px;
-      font-family: "Open Sans", sans-serif, helvetica;
-      font-style: normal;
-      font-variant: normal;
       font-weight: 600;
       font-size: 13px;
       -webkit-border-radius: 15px;
@@ -4473,11 +4448,7 @@ table.nice-table {
     border-bottom: 1px solid #D0D1D5;
     padding: 8px;
     background-color: #FFF;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 600;
-    font-size: 1em; }
+    font-weight: 600; }
   table.nice-table tbody tr th, table.nice-table tbody tr td {
     vertical-align: top;
     text-align: left;
@@ -4541,10 +4512,6 @@ table.nice-table {
   outline: none;
   text-align: center;
   font-family: "Open Sans", sans-serif, helvetica;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 300;
-  font-size: 1em;
   line-height: 20px;
   line-height: 1.25rem;
   -webkit-border-radius: 3px;
@@ -4609,9 +4576,6 @@ table.nice-table {
     background-color: #F18700;
     border: none;
     padding: 6px 11px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
     .nice-btn.primary:hover {
@@ -4634,9 +4598,6 @@ table.nice-table {
     background-color: #182642;
     border: none;
     padding: 6px 11px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
     .nice-btn.accent:hover {
@@ -4659,9 +4620,6 @@ table.nice-table {
     background-color: #60C4DE;
     border: none;
     padding: 6px 11px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
     .nice-btn.info:hover {
@@ -4684,9 +4642,6 @@ table.nice-table {
     background-color: #5CB85C;
     border: none;
     padding: 6px 11px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
     .nice-btn.good:hover {
@@ -4709,9 +4664,6 @@ table.nice-table {
     background-color: #FFB819;
     border: none;
     padding: 6px 11px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
     .nice-btn.warning:hover {
@@ -4734,9 +4686,6 @@ table.nice-table {
     background-color: #F42534;
     border: none;
     padding: 6px 11px;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 400;
     font-size: 14px; }
     .nice-btn.bad:hover {
@@ -5868,9 +5817,6 @@ summary.nice-card {
     min-width: 10%;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-family: "Open Sans", sans-serif, helvetica;
-    font-style: normal;
-    font-variant: normal;
     font-weight: 600;
     font-size: 0.8em;
     line-height: 20px;

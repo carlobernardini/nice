@@ -122,7 +122,13 @@
             border-color: map-get($color-scheme, #{$type});
 
             .nice-popover-title {
-                background-color: map-get($color-scheme, #{$type});
+                background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+                color: darken(map-get($color-scheme, #{$type}), 20%);
+            }
+            .nice-popover-controls {
+                a, button {
+                    color: darken(map-get($color-scheme, #{$type}), 20%);   
+                }
             }
             &:before {
                 border-bottom-color: map-get($color-scheme, #{$type});

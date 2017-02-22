@@ -5455,7 +5455,10 @@ button,
   .nice-popover.info {
     border-color: #60C4DE; }
     .nice-popover.info .nice-popover-title {
-      background-color: #60C4DE; }
+      background-color: #f4fbfd;
+      color: #2596b3; }
+    .nice-popover.info .nice-popover-controls a, .nice-popover.info .nice-popover-controls button {
+      color: #2596b3; }
     .nice-popover.info:before {
       border-bottom-color: #60C4DE; }
       .nice-popover.info:before.top {
@@ -5465,7 +5468,10 @@ button,
   .nice-popover.good {
     border-color: #5CB85C; }
     .nice-popover.good .nice-popover-title {
-      background-color: #5CB85C; }
+      background-color: #d8eed8;
+      color: #357935; }
+    .nice-popover.good .nice-popover-controls a, .nice-popover.good .nice-popover-controls button {
+      color: #357935; }
     .nice-popover.good:before {
       border-bottom-color: #5CB85C; }
       .nice-popover.good:before.top {
@@ -5475,7 +5481,10 @@ button,
   .nice-popover.warning {
     border-color: #FFB819; }
     .nice-popover.warning .nice-popover-title {
-      background-color: #FFB819; }
+      background-color: #ffefcc;
+      color: #b27b00; }
+    .nice-popover.warning .nice-popover-controls a, .nice-popover.warning .nice-popover-controls button {
+      color: #b27b00; }
     .nice-popover.warning:before {
       border-bottom-color: #FFB819; }
       .nice-popover.warning:before.top {
@@ -5485,7 +5494,10 @@ button,
   .nice-popover.bad {
     border-color: #F42534; }
     .nice-popover.bad .nice-popover-title {
-      background-color: #F42534; }
+      background-color: #fdcfd2;
+      color: #aa0914; }
+    .nice-popover.bad .nice-popover-controls a, .nice-popover.bad .nice-popover-controls button {
+      color: #aa0914; }
     .nice-popover.bad:before {
       border-bottom-color: #F42534; }
       .nice-popover.bad:before.top {

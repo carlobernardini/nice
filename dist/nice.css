@@ -23,7 +23,7 @@ button,
   user-select: none; }
 
 header .nice-header-brand,
-.nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
+.nice-header .nice-header-brand, .nice-form-group label, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
 .nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, button,
 .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-tooltip, .nice-popover .nice-popover-title .icon,
@@ -3955,6 +3955,12 @@ textarea.nice-form-control {
   line-height: 18px;
   line-height: 1.125rem; }
 
+.nice-form-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
 .nice-form-group + .nice-form-group {
   margin-top: 15px; }
 
@@ -4042,7 +4048,8 @@ textarea.nice-form-control {
   cursor: pointer;
   min-height: 20px;
   padding-left: 20px;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  font-weight: normal; }
 
 .nice-radio input[type="checkbox"],
 .nice-radio input[type="radio"],

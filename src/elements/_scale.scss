@@ -45,6 +45,7 @@
                 cursor: pointer;
                 display: block;
                 width: 100%;
+                font-weight: normal;
                 @include nice-font-size(13px);
                 @extend %disable-user-select;
 

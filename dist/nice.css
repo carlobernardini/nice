@@ -4797,6 +4797,14 @@ table.nice-table {
       -webkit-background-clip: padding-box;
       -moz-background-clip: padding;
       background-clip: padding-box; }
+    .nice-btn-group > .nice-btn:first-child:last-child,
+    .nice-btn-group > .nice-dropdown:first-child:last-child {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
     .nice-btn-group > .nice-btn + .nice-btn,
     .nice-btn-group > .nice-btn + .nice-dropdown,
     .nice-btn-group > .nice-dropdown + .nice-btn,

@@ -289,6 +289,10 @@ strong {
 i.icon {
   font-style: normal; }
 
+.nice-responsive-container {
+  overflow: auto;
+  overflow-y: hidden; }
+
 .nice-circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;

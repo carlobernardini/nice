@@ -30,6 +30,10 @@ i {
         font-style: normal;
     }
 }
+.nice-responsive-container {
+    overflow:auto;
+    overflow-y: hidden;
+}
 .nice-circle {
     @include nice-border-radius(50%);
 }

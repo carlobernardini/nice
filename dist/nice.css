@@ -11,9 +11,6 @@ html {
  * Nice! Mixins collection
  **/
 /**
- * @example when-breakpoint(medium) { width: 50% }
- **/
-/**
  * Nice! Placeholders collection
  **/
 .nice-btn, .nice-scale .nice-scale-selection li label {
@@ -2955,1771 +2952,468 @@ i.icon {
   .nice-col-12:last-child {
     margin-right: 0; }
 
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
-.nice-col-1 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 6.17215%; }
-  .nice-col-1:last-child {
-    margin-right: 0; }
-
-.nice-shift-1 {
-  margin-left: 8.5298%; }
-
-.nice-col-2 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 14.70196%; }
-  .nice-col-2:last-child {
-    margin-right: 0; }
-
-.nice-shift-2 {
-  margin-left: 17.05961%; }
-
-.nice-col-3 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .nice-col-3:last-child {
-    margin-right: 0; }
-
-.nice-shift-3 {
-  margin-left: 25.58941%; }
-
-.nice-col-4 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%; }
-  .nice-col-4:last-child {
-    margin-right: 0; }
-
-.nice-shift-4 {
-  margin-left: 34.11922%; }
-
-.nice-col-5 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 40.29137%; }
-  .nice-col-5:last-child {
-    margin-right: 0; }
-
-.nice-shift-5 {
-  margin-left: 42.64902%; }
-
-.nice-col-6 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%; }
-  .nice-col-6:last-child {
-    margin-right: 0; }
-
-.nice-shift-6 {
-  margin-left: 51.17883%; }
-
-.nice-col-7 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 57.35098%; }
-  .nice-col-7:last-child {
-    margin-right: 0; }
-
-.nice-shift-7 {
-  margin-left: 59.70863%; }
-
-.nice-col-8 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 65.88078%; }
-  .nice-col-8:last-child {
-    margin-right: 0; }
-
-.nice-shift-8 {
-  margin-left: 68.23843%; }
-
-.nice-col-9 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .nice-col-9:last-child {
-    margin-right: 0; }
-
-.nice-shift-9 {
-  margin-left: 76.76824%; }
-
-.nice-col-10 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%; }
-  .nice-col-10:last-child {
-    margin-right: 0; }
-
-.nice-shift-10 {
-  margin-left: 85.29804%; }
-
-.nice-col-11 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 91.4702%; }
-  .nice-col-11:last-child {
-    margin-right: 0; }
-
-.nice-shift-11 {
-  margin-left: 93.82785%; }
-
-.nice-col-12 {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 100%; }
-  .nice-col-12:last-child {
-    margin-right: 0; }
-
 @media screen and (min-width: 1025px) {
-  .nice-large-hide {
+  .nice-desktop-hide, .nice-large-hide {
     display: none; }
-  .nice-col-large-1 {
+  .nice-col-desktop-1, .nice-col-large-1 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 6.17215%; }
-    .nice-col-large-1:last-child {
+    .nice-col-desktop-1:last-child, .nice-col-large-1:last-child {
       margin-right: 0; }
-  .nice-shift-large-1 {
+  .nice-shift-desktop-1, .nice-shift-large-1 {
     margin-left: 8.5298%; }
-  .nice-col-large-2 {
+  .nice-col-desktop-2, .nice-col-large-2 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%; }
-    .nice-col-large-2:last-child {
+    .nice-col-desktop-2:last-child, .nice-col-large-2:last-child {
       margin-right: 0; }
-  .nice-shift-large-2 {
+  .nice-shift-desktop-2, .nice-shift-large-2 {
     margin-left: 17.05961%; }
-  .nice-col-large-3 {
+  .nice-col-desktop-3, .nice-col-large-3 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    .nice-col-large-3:last-child {
+    .nice-col-desktop-3:last-child, .nice-col-large-3:last-child {
       margin-right: 0; }
-  .nice-shift-large-3 {
+  .nice-shift-desktop-3, .nice-shift-large-3 {
     margin-left: 25.58941%; }
-  .nice-col-large-4 {
+  .nice-col-desktop-4, .nice-col-large-4 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .nice-col-large-4:last-child {
+    .nice-col-desktop-4:last-child, .nice-col-large-4:last-child {
       margin-right: 0; }
-  .nice-shift-large-4 {
+  .nice-shift-desktop-4, .nice-shift-large-4 {
     margin-left: 34.11922%; }
-  .nice-col-large-5 {
+  .nice-col-desktop-5, .nice-col-large-5 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%; }
-    .nice-col-large-5:last-child {
+    .nice-col-desktop-5:last-child, .nice-col-large-5:last-child {
       margin-right: 0; }
-  .nice-shift-large-5 {
+  .nice-shift-desktop-5, .nice-shift-large-5 {
     margin-left: 42.64902%; }
-  .nice-col-large-6 {
+  .nice-col-desktop-6, .nice-col-large-6 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%; }
-    .nice-col-large-6:last-child {
+    .nice-col-desktop-6:last-child, .nice-col-large-6:last-child {
       margin-right: 0; }
-  .nice-shift-large-6 {
+  .nice-shift-desktop-6, .nice-shift-large-6 {
     margin-left: 51.17883%; }
-  .nice-col-large-7 {
+  .nice-col-desktop-7, .nice-col-large-7 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%; }
-    .nice-col-large-7:last-child {
+    .nice-col-desktop-7:last-child, .nice-col-large-7:last-child {
       margin-right: 0; }
-  .nice-shift-large-7 {
+  .nice-shift-desktop-7, .nice-shift-large-7 {
     margin-left: 59.70863%; }
-  .nice-col-large-8 {
+  .nice-col-desktop-8, .nice-col-large-8 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .nice-col-large-8:last-child {
+    .nice-col-desktop-8:last-child, .nice-col-large-8:last-child {
       margin-right: 0; }
-  .nice-shift-large-8 {
+  .nice-shift-desktop-8, .nice-shift-large-8 {
     margin-left: 68.23843%; }
-  .nice-col-large-9 {
+  .nice-col-desktop-9, .nice-col-large-9 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%; }
-    .nice-col-large-9:last-child {
+    .nice-col-desktop-9:last-child, .nice-col-large-9:last-child {
       margin-right: 0; }
-  .nice-shift-large-9 {
+  .nice-shift-desktop-9, .nice-shift-large-9 {
     margin-left: 76.76824%; }
-  .nice-col-large-10 {
+  .nice-col-desktop-10, .nice-col-large-10 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%; }
-    .nice-col-large-10:last-child {
+    .nice-col-desktop-10:last-child, .nice-col-large-10:last-child {
       margin-right: 0; }
-  .nice-shift-large-10 {
+  .nice-shift-desktop-10, .nice-shift-large-10 {
     margin-left: 85.29804%; }
-  .nice-col-large-11 {
+  .nice-col-desktop-11, .nice-col-large-11 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 91.4702%; }
-    .nice-col-large-11:last-child {
+    .nice-col-desktop-11:last-child, .nice-col-large-11:last-child {
       margin-right: 0; }
-  .nice-shift-large-11 {
+  .nice-shift-desktop-11, .nice-shift-large-11 {
     margin-left: 93.82785%; }
-  .nice-col-large-12 {
+  .nice-col-desktop-12, .nice-col-large-12 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    .nice-col-large-12:last-child {
+    .nice-col-desktop-12:last-child, .nice-col-large-12:last-child {
       margin-right: 0; }
-  .nice-large-block {
+  .nice-desktop-block, .nice-large-block {
     display: block; }
-  .nice-large-inline {
+  .nice-desktop-inline, .nice-large-inline {
     display: inline; }
-  .nice-large-inline-block {
+  .nice-desktop-inline-block, .nice-large-inline-block {
     display: inline-block; } }
 
-@media screen and (max-width: 1025px) and (min-width: 640px) {
-  .nice-medium-hide {
+@media screen and (min-width: 641px) and (max-width: 1025px) {
+  .nice-tablet-hide, .nice-medium-hide {
     display: none; }
-  .nice-col-medium-1 {
+  .nice-col-tablet-1, .nice-col-medium-1 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 6.17215%; }
-    .nice-col-medium-1:last-child {
+    .nice-col-tablet-1:last-child, .nice-col-medium-1:last-child {
       margin-right: 0; }
-  .nice-shift-medium-1 {
+  .nice-shift-tablet-1, .nice-shift-medium-1 {
     margin-left: 8.5298%; }
-  .nice-col-medium-2 {
+  .nice-col-tablet-2, .nice-col-medium-2 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%; }
-    .nice-col-medium-2:last-child {
+    .nice-col-tablet-2:last-child, .nice-col-medium-2:last-child {
       margin-right: 0; }
-  .nice-shift-medium-2 {
+  .nice-shift-tablet-2, .nice-shift-medium-2 {
     margin-left: 17.05961%; }
-  .nice-col-medium-3 {
+  .nice-col-tablet-3, .nice-col-medium-3 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    .nice-col-medium-3:last-child {
+    .nice-col-tablet-3:last-child, .nice-col-medium-3:last-child {
       margin-right: 0; }
-  .nice-shift-medium-3 {
+  .nice-shift-tablet-3, .nice-shift-medium-3 {
     margin-left: 25.58941%; }
-  .nice-col-medium-4 {
+  .nice-col-tablet-4, .nice-col-medium-4 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .nice-col-medium-4:last-child {
+    .nice-col-tablet-4:last-child, .nice-col-medium-4:last-child {
       margin-right: 0; }
-  .nice-shift-medium-4 {
+  .nice-shift-tablet-4, .nice-shift-medium-4 {
     margin-left: 34.11922%; }
-  .nice-col-medium-5 {
+  .nice-col-tablet-5, .nice-col-medium-5 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%; }
-    .nice-col-medium-5:last-child {
+    .nice-col-tablet-5:last-child, .nice-col-medium-5:last-child {
       margin-right: 0; }
-  .nice-shift-medium-5 {
+  .nice-shift-tablet-5, .nice-shift-medium-5 {
     margin-left: 42.64902%; }
-  .nice-col-medium-6 {
+  .nice-col-tablet-6, .nice-col-medium-6 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%; }
-    .nice-col-medium-6:last-child {
+    .nice-col-tablet-6:last-child, .nice-col-medium-6:last-child {
       margin-right: 0; }
-  .nice-shift-medium-6 {
+  .nice-shift-tablet-6, .nice-shift-medium-6 {
     margin-left: 51.17883%; }
-  .nice-col-medium-7 {
+  .nice-col-tablet-7, .nice-col-medium-7 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%; }
-    .nice-col-medium-7:last-child {
+    .nice-col-tablet-7:last-child, .nice-col-medium-7:last-child {
       margin-right: 0; }
-  .nice-shift-medium-7 {
+  .nice-shift-tablet-7, .nice-shift-medium-7 {
     margin-left: 59.70863%; }
-  .nice-col-medium-8 {
+  .nice-col-tablet-8, .nice-col-medium-8 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .nice-col-medium-8:last-child {
+    .nice-col-tablet-8:last-child, .nice-col-medium-8:last-child {
       margin-right: 0; }
-  .nice-shift-medium-8 {
+  .nice-shift-tablet-8, .nice-shift-medium-8 {
     margin-left: 68.23843%; }
-  .nice-col-medium-9 {
+  .nice-col-tablet-9, .nice-col-medium-9 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%; }
-    .nice-col-medium-9:last-child {
+    .nice-col-tablet-9:last-child, .nice-col-medium-9:last-child {
       margin-right: 0; }
-  .nice-shift-medium-9 {
+  .nice-shift-tablet-9, .nice-shift-medium-9 {
     margin-left: 76.76824%; }
-  .nice-col-medium-10 {
+  .nice-col-tablet-10, .nice-col-medium-10 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%; }
-    .nice-col-medium-10:last-child {
+    .nice-col-tablet-10:last-child, .nice-col-medium-10:last-child {
       margin-right: 0; }
-  .nice-shift-medium-10 {
+  .nice-shift-tablet-10, .nice-shift-medium-10 {
     margin-left: 85.29804%; }
-  .nice-col-medium-11 {
+  .nice-col-tablet-11, .nice-col-medium-11 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 91.4702%; }
-    .nice-col-medium-11:last-child {
+    .nice-col-tablet-11:last-child, .nice-col-medium-11:last-child {
       margin-right: 0; }
-  .nice-shift-medium-11 {
+  .nice-shift-tablet-11, .nice-shift-medium-11 {
     margin-left: 93.82785%; }
-  .nice-col-medium-12 {
+  .nice-col-tablet-12, .nice-col-medium-12 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    .nice-col-medium-12:last-child {
+    .nice-col-tablet-12:last-child, .nice-col-medium-12:last-child {
       margin-right: 0; }
-  .nice-medium-block {
+  .nice-tablet-block, .nice-medium-block {
     display: block; }
-  .nice-medium-inline {
+  .nice-tablet-inline, .nice-medium-inline {
     display: inline; }
-  .nice-medium-inline-block {
+  .nice-tablet-inline-block, .nice-medium-inline-block {
     display: inline-block; } }
 
-@media (max-width: 640px) {
-  .nice-small-hide {
+@media screen and (max-width: 1025px) {
+  .nice-mobile-and-tablet-hide, .nice-medium-and-small-hide {
     display: none; }
-  .nice-col-small-1 {
+  .nice-col-mobile-and-tablet-1, .nice-col-medium-and-small-1 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 6.17215%; }
-    .nice-col-small-1:last-child {
+    .nice-col-mobile-and-tablet-1:last-child, .nice-col-medium-and-small-1:last-child {
       margin-right: 0; }
-  .nice-shift-small-1 {
+  .nice-shift-mobile-and-tablet-1, .nice-shift-medium-and-small-1 {
     margin-left: 8.5298%; }
-  .nice-col-small-2 {
+  .nice-col-mobile-and-tablet-2, .nice-col-medium-and-small-2 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 14.70196%; }
-    .nice-col-small-2:last-child {
+    .nice-col-mobile-and-tablet-2:last-child, .nice-col-medium-and-small-2:last-child {
       margin-right: 0; }
-  .nice-shift-small-2 {
+  .nice-shift-mobile-and-tablet-2, .nice-shift-medium-and-small-2 {
     margin-left: 17.05961%; }
-  .nice-col-small-3 {
+  .nice-col-mobile-and-tablet-3, .nice-col-medium-and-small-3 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    .nice-col-small-3:last-child {
+    .nice-col-mobile-and-tablet-3:last-child, .nice-col-medium-and-small-3:last-child {
       margin-right: 0; }
-  .nice-shift-small-3 {
+  .nice-shift-mobile-and-tablet-3, .nice-shift-medium-and-small-3 {
     margin-left: 25.58941%; }
-  .nice-col-small-4 {
+  .nice-col-mobile-and-tablet-4, .nice-col-medium-and-small-4 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .nice-col-small-4:last-child {
+    .nice-col-mobile-and-tablet-4:last-child, .nice-col-medium-and-small-4:last-child {
       margin-right: 0; }
-  .nice-shift-small-4 {
+  .nice-shift-mobile-and-tablet-4, .nice-shift-medium-and-small-4 {
     margin-left: 34.11922%; }
-  .nice-col-small-5 {
+  .nice-col-mobile-and-tablet-5, .nice-col-medium-and-small-5 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 40.29137%; }
-    .nice-col-small-5:last-child {
+    .nice-col-mobile-and-tablet-5:last-child, .nice-col-medium-and-small-5:last-child {
       margin-right: 0; }
-  .nice-shift-small-5 {
+  .nice-shift-mobile-and-tablet-5, .nice-shift-medium-and-small-5 {
     margin-left: 42.64902%; }
-  .nice-col-small-6 {
+  .nice-col-mobile-and-tablet-6, .nice-col-medium-and-small-6 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 48.82117%; }
-    .nice-col-small-6:last-child {
+    .nice-col-mobile-and-tablet-6:last-child, .nice-col-medium-and-small-6:last-child {
       margin-right: 0; }
-  .nice-shift-small-6 {
+  .nice-shift-mobile-and-tablet-6, .nice-shift-medium-and-small-6 {
     margin-left: 51.17883%; }
-  .nice-col-small-7 {
+  .nice-col-mobile-and-tablet-7, .nice-col-medium-and-small-7 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 57.35098%; }
-    .nice-col-small-7:last-child {
+    .nice-col-mobile-and-tablet-7:last-child, .nice-col-medium-and-small-7:last-child {
       margin-right: 0; }
-  .nice-shift-small-7 {
+  .nice-shift-mobile-and-tablet-7, .nice-shift-medium-and-small-7 {
     margin-left: 59.70863%; }
-  .nice-col-small-8 {
+  .nice-col-mobile-and-tablet-8, .nice-col-medium-and-small-8 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 65.88078%; }
-    .nice-col-small-8:last-child {
+    .nice-col-mobile-and-tablet-8:last-child, .nice-col-medium-and-small-8:last-child {
       margin-right: 0; }
-  .nice-shift-small-8 {
+  .nice-shift-mobile-and-tablet-8, .nice-shift-medium-and-small-8 {
     margin-left: 68.23843%; }
-  .nice-col-small-9 {
+  .nice-col-mobile-and-tablet-9, .nice-col-medium-and-small-9 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 74.41059%; }
-    .nice-col-small-9:last-child {
+    .nice-col-mobile-and-tablet-9:last-child, .nice-col-medium-and-small-9:last-child {
       margin-right: 0; }
-  .nice-shift-small-9 {
+  .nice-shift-mobile-and-tablet-9, .nice-shift-medium-and-small-9 {
     margin-left: 76.76824%; }
-  .nice-col-small-10 {
+  .nice-col-mobile-and-tablet-10, .nice-col-medium-and-small-10 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 82.94039%; }
-    .nice-col-small-10:last-child {
+    .nice-col-mobile-and-tablet-10:last-child, .nice-col-medium-and-small-10:last-child {
       margin-right: 0; }
-  .nice-shift-small-10 {
+  .nice-shift-mobile-and-tablet-10, .nice-shift-medium-and-small-10 {
     margin-left: 85.29804%; }
-  .nice-col-small-11 {
+  .nice-col-mobile-and-tablet-11, .nice-col-medium-and-small-11 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 91.4702%; }
-    .nice-col-small-11:last-child {
+    .nice-col-mobile-and-tablet-11:last-child, .nice-col-medium-and-small-11:last-child {
       margin-right: 0; }
-  .nice-shift-small-11 {
+  .nice-shift-mobile-and-tablet-11, .nice-shift-medium-and-small-11 {
     margin-left: 93.82785%; }
-  .nice-col-small-12 {
+  .nice-col-mobile-and-tablet-12, .nice-col-medium-and-small-12 {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 100%; }
-    .nice-col-small-12:last-child {
+    .nice-col-mobile-and-tablet-12:last-child, .nice-col-medium-and-small-12:last-child {
       margin-right: 0; }
-  .nice-small-block {
+  .nice-mobile-and-tablet-block, .nice-medium-and-small-block {
     display: block; }
-  .nice-small-inline {
+  .nice-mobile-and-tablet-inline, .nice-medium-and-small-inline {
     display: inline; }
-  .nice-small-inline-block {
+  .nice-mobile-and-tablet-inline-block, .nice-medium-and-small-inline-block {
+    display: inline-block; } }
+
+@media screen and (max-width: 641px) {
+  .nice-mobile-hide, .nice-small-hide {
+    display: none; }
+  .nice-col-mobile-1, .nice-col-small-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 6.17215%; }
+    .nice-col-mobile-1:last-child, .nice-col-small-1:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-1, .nice-shift-small-1 {
+    margin-left: 8.5298%; }
+  .nice-col-mobile-2, .nice-col-small-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%; }
+    .nice-col-mobile-2:last-child, .nice-col-small-2:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-2, .nice-shift-small-2 {
+    margin-left: 17.05961%; }
+  .nice-col-mobile-3, .nice-col-small-3 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%; }
+    .nice-col-mobile-3:last-child, .nice-col-small-3:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-3, .nice-shift-small-3 {
+    margin-left: 25.58941%; }
+  .nice-col-mobile-4, .nice-col-small-4 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .nice-col-mobile-4:last-child, .nice-col-small-4:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-4, .nice-shift-small-4 {
+    margin-left: 34.11922%; }
+  .nice-col-mobile-5, .nice-col-small-5 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%; }
+    .nice-col-mobile-5:last-child, .nice-col-small-5:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-5, .nice-shift-small-5 {
+    margin-left: 42.64902%; }
+  .nice-col-mobile-6, .nice-col-small-6 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .nice-col-mobile-6:last-child, .nice-col-small-6:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-6, .nice-shift-small-6 {
+    margin-left: 51.17883%; }
+  .nice-col-mobile-7, .nice-col-small-7 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%; }
+    .nice-col-mobile-7:last-child, .nice-col-small-7:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-7, .nice-shift-small-7 {
+    margin-left: 59.70863%; }
+  .nice-col-mobile-8, .nice-col-small-8 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .nice-col-mobile-8:last-child, .nice-col-small-8:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-8, .nice-shift-small-8 {
+    margin-left: 68.23843%; }
+  .nice-col-mobile-9, .nice-col-small-9 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%; }
+    .nice-col-mobile-9:last-child, .nice-col-small-9:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-9, .nice-shift-small-9 {
+    margin-left: 76.76824%; }
+  .nice-col-mobile-10, .nice-col-small-10 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%; }
+    .nice-col-mobile-10:last-child, .nice-col-small-10:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-10, .nice-shift-small-10 {
+    margin-left: 85.29804%; }
+  .nice-col-mobile-11, .nice-col-small-11 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 91.4702%; }
+    .nice-col-mobile-11:last-child, .nice-col-small-11:last-child {
+      margin-right: 0; }
+  .nice-shift-mobile-11, .nice-shift-small-11 {
+    margin-left: 93.82785%; }
+  .nice-col-mobile-12, .nice-col-small-12 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .nice-col-mobile-12:last-child, .nice-col-small-12:last-child {
+      margin-right: 0; }
+  .nice-mobile-block, .nice-small-block {
+    display: block; }
+  .nice-mobile-inline, .nice-small-inline {
+    display: inline; }
+  .nice-mobile-inline-block, .nice-small-inline-block {
     display: inline-block; } }
 
 .nice-flex-container {
@@ -5266,7 +3960,7 @@ header,
     font-weight: 400;
     font-size: 1em; }
 
-@media screen and (min-width: 20em) and (max-width: 60em) {
+@media screen and (max-width: 1025px) {
   body {
     padding-left: 15px;
     padding-right: 15px;
@@ -5512,7 +4206,7 @@ header,
       .nice-header .nice-header-product + .nice-header-form {
         border-top: 1px solid #4167b2; } }
 
-@media screen and (min-width: 20em) and (max-width: 720px) {
+@media screen and (max-width: 641px) {
   header .nice-header-form .nice-header-input-wrapper button,
   .nice-header .nice-header-form .nice-header-input-wrapper button {
     right: 0; }
@@ -5562,7 +4256,7 @@ header,
       -moz-box-shadow: none;
       box-shadow: none; } }
 
-@media screen and (min-width: 720px) and (max-width: 60em) {
+@media screen and (min-width: 641px) and (max-width: 1025px) {
   header .nice-header-form,
   .nice-header .nice-header-form {
     width: 50%;
@@ -5613,7 +4307,7 @@ html {
             html body .nice-footer .nice-footer-menu li a.additional-icon:before {
               margin-right: 5px; }
 
-@media screen and (min-width: 20em) and (max-width: 720px) {
+@media screen and (max-width: 641px) {
   html body footer,
   html body .nice-footer {
     margin-top: 15px;
@@ -6972,7 +5666,7 @@ table.nice-table {
     left: auto;
     right: 30px; }
 
-@media screen and (min-width: 20em) and (max-width: 60em) {
+@media screen and (max-width: 1025px) {
   .nice-alert .nice-alert-content {
     width: 70%; }
   .nice-alert .nice-alert-button {

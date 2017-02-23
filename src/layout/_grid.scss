@@ -26,6 +26,14 @@
 
 @each $size in large, medium, small {
     @include nice-breakpoint(#{$size}) {
+        .nice-#{$size}-hide {
+            display: none;
+        }
         @include col(#{$size});
+        @each $display in block, inline, inline-block {
+            .nice-#{$size}-#{$display} {
+                display: #{$display};
+            }
+        }
     }
 }

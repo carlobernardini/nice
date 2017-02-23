@@ -6087,7 +6087,7 @@ table.nice-table {
     background-clip: padding-box; }
     .nice-modal .nice-modal-content .nice-modal-header {
       position: relative;
-      padding: 15px 15px;
+      padding: 10px 15px;
       border-bottom: 1px solid #D0D1D5;
       -webkit-border-radius: 3px 3px 0 0;
       -moz-border-radius: 3px 3px 0 0;
@@ -6138,6 +6138,8 @@ table.nice-table {
       border-bottom-color: #182642;
       background-color: #182642;
       color: #FFF; }
+      .nice-modal.accent .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 black; }
       .nice-modal.accent .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.accent .nice-modal-content .nice-modal-sub {
@@ -6148,6 +6150,8 @@ table.nice-table {
       border-bottom-color: #F18700;
       background-color: #F18700;
       color: #FFF; }
+      .nice-modal.primary .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 #8b4e00; }
       .nice-modal.primary .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.primary .nice-modal-content .nice-modal-sub {
@@ -6158,6 +6162,8 @@ table.nice-table {
       border-bottom-color: #009CC1;
       background-color: #009CC1;
       color: #FFF; }
+      .nice-modal.brand .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 #004a5b; }
       .nice-modal.brand .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.brand .nice-modal-content .nice-modal-sub {
@@ -6168,6 +6174,8 @@ table.nice-table {
       border-bottom-color: #60C4DE;
       background-color: #60C4DE;
       color: #FFF; }
+      .nice-modal.info .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 #2596b3; }
       .nice-modal.info .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.info .nice-modal-content .nice-modal-sub {
@@ -6178,6 +6186,8 @@ table.nice-table {
       border-bottom-color: #5CB85C;
       background-color: #5CB85C;
       color: #FFF; }
+      .nice-modal.good .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 #357935; }
       .nice-modal.good .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.good .nice-modal-content .nice-modal-sub {
@@ -6188,6 +6198,8 @@ table.nice-table {
       border-bottom-color: #FFB819;
       background-color: #FFB819;
       color: #FFF; }
+      .nice-modal.warning .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 #b27b00; }
       .nice-modal.warning .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.warning .nice-modal-content .nice-modal-sub {
@@ -6198,6 +6210,8 @@ table.nice-table {
       border-bottom-color: #F42534;
       background-color: #F42534;
       color: #FFF; }
+      .nice-modal.bad .nice-modal-content .nice-modal-header h4 {
+        text-shadow: 1px 1px 0 #aa0914; }
       .nice-modal.bad .nice-modal-content .nice-modal-header .nice-modal-close {
         color: #FFF; }
     .nice-modal.bad .nice-modal-content .nice-modal-sub {

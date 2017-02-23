@@ -20,7 +20,7 @@ header,
     .nice-header-container {
         height: 60px;
         @include nice-line-height(60px);
-        @include outer-container;
+        @include outer-container($max-containment);
 
         &:after {
             display: none;

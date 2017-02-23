@@ -12,6 +12,7 @@ $default-font-size-large:   18px;
 
 $tablet-size:           641px;
 $desktop-size:          1025px;
+$max-containment:       1170px;
 
 // Breakpoints
 $mobile:                new-breakpoint(max-width $tablet-size 12);

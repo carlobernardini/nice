@@ -1,5 +1,5 @@
 .nice-container {
-    @include outer-container;
+    @include outer-container ($max-containment);
 }
 .nice-row {
     @include fill-parent();

@@ -3957,6 +3957,53 @@ header,
     header .nice-header-menu.menu-pills li ul li a:hover,
     .nice-header .nice-header-menu.menu-pills li ul li a:hover {
       background-color: #009CC1; }
+    header .nice-header-menu.menu-alt li,
+    .nice-header .nice-header-menu.menu-alt li {
+      margin-top: 16px;
+      margin-bottom: 16px; }
+      header .nice-header-menu.menu-alt li a,
+      .nice-header .nice-header-menu.menu-alt li a {
+        padding: 5px 10px;
+        background-color: #ECF0F1;
+        font-size: 12px;
+        font-size: 0.75rem;
+        -webkit-transition: color 0.1s, background-color 0.1s;
+        -moz-transition: color 0.1s, background-color 0.1s;
+        -ms-transition: color 0.1s, background-color 0.1s;
+        -o-transition: color 0.1s, background-color 0.1s;
+        transition: color 0.1s, background-color 0.1s; }
+        header .nice-header-menu.menu-alt li a:hover,
+        .nice-header .nice-header-menu.menu-alt li a:hover {
+          background-color: #009CC1;
+          color: #FFF; }
+      header .nice-header-menu.menu-alt li:first-child a,
+      .nice-header .nice-header-menu.menu-alt li:first-child a {
+        -webkit-border-top-left-radius: 15px;
+        -moz-border-radius-topleft: 15px;
+        border-top-left-radius: 15px;
+        -webkit-border-bottom-left-radius: 15px;
+        -moz-border-radius-bottomleft: 15px;
+        border-bottom-left-radius: 15px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      header .nice-header-menu.menu-alt li:last-child a,
+      .nice-header .nice-header-menu.menu-alt li:last-child a {
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topright: 15px;
+        border-top-right-radius: 15px;
+        -webkit-border-bottom-right-radius: 15px;
+        -moz-border-radius-bottomright: 15px;
+        border-bottom-right-radius: 15px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      header .nice-header-menu.menu-alt li + li a,
+      .nice-header .nice-header-menu.menu-alt li + li a {
+        border-left: 1px solid #F5F7F7; }
+    header .nice-header-menu + .nice-header-menu,
+    .nice-header .nice-header-menu + .nice-header-menu {
+      margin-left: 15px; }
   header .nice-header-toggle,
   .nice-header .nice-header-toggle {
     display: none; }
@@ -4032,6 +4079,7 @@ header,
       overflow: hidden;
       overflow-y: auto;
       z-index: 5;
+      width: 100%;
       height: 100%;
       -webkit-transition: left 0.2s ease-in-out;
       -moz-transition: left 0.2s ease-in-out;
@@ -4120,6 +4168,9 @@ header,
       .nice-header .nice-header-menu.menu-pills li ul li a:active {
         background-color: transparent;
         color: #FFF; }
+      header .nice-header-menu.menu-alt,
+      .nice-header .nice-header-menu.menu-alt {
+        display: none; }
       header .nice-header-menu:nth-child(3),
       .nice-header .nice-header-menu:nth-child(3) {
         height: calc(100% - 120px); }
@@ -4270,7 +4321,10 @@ header,
     position: absolute;
     right: calc(100% + 75px);
     padding: 0 15px;
-    background-color: transparent; } }
+    background-color: transparent; }
+    header .nice-header-form ~ .nice-header-menu,
+    .nice-header .nice-header-form ~ .nice-header-menu {
+      height: 100%; } }
 
 html {
   position: relative;

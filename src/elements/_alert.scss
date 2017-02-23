@@ -1,5 +1,4 @@
 .nice-alert {
-    margin: 0 0 20px 0;
     padding: 15px;
     border: 1px solid $color-border;
     @include nice-border-radius($default-radius);
@@ -30,6 +29,9 @@
                 }
             }
         }
+    }
+    + .nice-alert {
+        margin-top: 15px;
     }
     .nice-alert-heading {
         margin: -15px -15px 15px;
@@ -78,6 +80,22 @@
         cursor: pointer;
         @include nice-border-radius(0 $default-radius $default-radius 0);
         @include nice-transition(background-color 0.3s);
+    }
+    &.top {
+        top: 75px;
+        bottom: auto;
+    }
+    &.bottom {
+        top: auto;
+        bottom: 30px;
+    }
+    &.left {
+        left: 30px;
+        right: auto;
+    }
+    &.right {
+        left: auto;
+        right: 30px;
     }
 }
 

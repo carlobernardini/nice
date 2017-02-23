@@ -5813,6 +5813,7 @@ table.nice-table {
   background-color: #182642;
   padding: 5px 10px;
   font-weight: 600;
+  min-width: 26px;
   font-size: 13px;
   font-size: 0.8125rem;
   -webkit-border-radius: 3px;
@@ -5845,7 +5846,7 @@ table.nice-table {
   .nice-tooltip.center:before {
     left: 50%;
     right: auto;
-    margin-left: -3px; }
+    margin-left: -6px; }
   .nice-tooltip.right:before {
     left: auto;
     right: 10px; }

@@ -39,41 +39,10 @@ i {
 .nice-circle {
     @include nice-border-radius(50%);
 }
-.nice-muted {
-    color: $gray-medium;
-}
-.nice-brand {
-    color: $color-brand;
-}
-.nice-bg-brand {
-    background-color: $color-brand;
-}
-.nice-bg-link {
-    background-color: $color-link;
-}
-.nice-bg-text {
-    background-color: $color-text;
-}
-.nice-bg-primary {
-    background-color: $color-primary;
-}
-.nice-bg-accent {
-    background-color: $color-accent;
-}
-.nice-bg-muted {
-    background-color: $color-muted;
-}
-.nice-bg-warning {
-    background-color: $color-warning;
-}
-.nice-bg-danger {
-    background-color: $color-bad;
-}
-.nice-bg-info {
-    background-color: $color-info;
-}
-.nice-bg-success {
-    background-color: $color-good;
+@each $type in (brand, link, text, primary, accent, muted, good, info, warning, bad, white, black) {
+    .nice-bg-#{$type} {
+        background-color: map-get($color-scheme, #{$type});
+    }
 }
 .clearfix {
     @extend %clearfix;

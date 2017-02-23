@@ -131,6 +131,39 @@ h6, .h6 {
 .text-align-justify {
   text-align: justify; }
 
+.text-color-brand {
+  color: #009CC1; }
+
+.text-color-link {
+  color: #009CC1; }
+
+.text-color-primary {
+  color: #F18700; }
+
+.text-color-accent {
+  color: #182642; }
+
+.text-color-muted {
+  color: #B2B2B2; }
+
+.text-color-good {
+  color: #5CB85C; }
+
+.text-color-info {
+  color: #60C4DE; }
+
+.text-color-warning {
+  color: #FFB819; }
+
+.text-color-bad {
+  color: #F42534; }
+
+.text-color-white {
+  color: #FFF; }
+
+.text-color-black {
+  color: #000; }
+
 .text-brand {
   letter-spacing: 1px;
   font-family: Colaborate, "Open Sans", sans-serif;
@@ -304,12 +337,6 @@ i.icon {
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.nice-muted {
-  color: #D0D1D5; }
-
-.nice-brand {
-  color: #009CC1; }
-
 .nice-bg-brand {
   background-color: #009CC1; }
 
@@ -328,17 +355,23 @@ i.icon {
 .nice-bg-muted {
   background-color: #B2B2B2; }
 
-.nice-bg-warning {
-  background-color: #FFB819; }
-
-.nice-bg-danger {
-  background-color: #F42534; }
+.nice-bg-good {
+  background-color: #5CB85C; }
 
 .nice-bg-info {
   background-color: #60C4DE; }
 
-.nice-bg-success {
-  background-color: #5CB85C; }
+.nice-bg-warning {
+  background-color: #FFB819; }
+
+.nice-bg-bad {
+  background-color: #F42534; }
+
+.nice-bg-white {
+  background-color: #FFF; }
+
+.nice-bg-black {
+  background-color: #000; }
 
 .shown {
   display: block; }
@@ -4476,6 +4509,8 @@ table.nice-table {
     vertical-align: top;
     text-align: left;
     padding: 8px; }
+  table.nice-table tbody tr th {
+    font-weight: 600; }
   table.nice-table tbody tr td.info {
     background-color: #f4fbfd; }
   table.nice-table tbody tr td.good {

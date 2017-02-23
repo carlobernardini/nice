@@ -39,6 +39,11 @@ h6, .h6 {
         text-align: $value;
     }
 }
+@each $type in (brand, link, primary, accent, muted, good, info, warning, bad, white, black) {
+    .text-color-#{$type} {
+        color: map-get($color-scheme, #{$type});
+    }
+}
 .text-brand {
     letter-spacing: 1px;
     @include nice-font($family: $fonts-brand, $weight: 300);

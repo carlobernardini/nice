@@ -28,6 +28,9 @@ table {
                     text-align: left;
                     padding: 8px;
                 }
+                th {
+                    @include nice-font($weight: 600);
+                }
                 td {
                     @each $type in (info, good, warning, bad) {
                         &.#{$type} {

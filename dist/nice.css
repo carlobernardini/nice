@@ -23,7 +23,7 @@ html {
 header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
 .nice-popover .nice-popover-title .product-icon,
 .nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
@@ -294,6 +294,7 @@ body {
   background-color: #F5F7F7;
   font-family: "Open Sans", sans-serif, helvetica;
   font-weight: 400;
+  text-rendering: geometricPrecision;
   font-size: 16px;
   font-size: 1rem; }
 
@@ -4676,6 +4677,73 @@ textarea.nice-form-control {
     display: block;
     font-weight: 600;
     font-size: 1em; }
+    .nice-stacked-list li .item-heading.icon:before {
+      width: 20px;
+      text-align: center;
+      font-weight: 400; }
+    .nice-stacked-list li .item-heading .badge {
+      font-family: "Open Sans", sans-serif, helvetica; }
+  .nice-stacked-list li .nice-stacked-list-controls {
+    width: calc(100% + 30px);
+    display: table;
+    table-layout: fixed;
+    margin: -15px; }
+    .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control {
+      display: table-cell;
+      padding: 10px 15px;
+      text-align: center;
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      -ms-transition: background-color 0.2s;
+      -o-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:first-child {
+        -webkit-border-top-left-radius: 3px;
+        -moz-border-radius-topleft: 3px;
+        border-top-left-radius: 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:last-child {
+        -webkit-border-top-right-radius: 3px;
+        -moz-border-radius-topright: 3px;
+        border-top-right-radius: 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
+        border-left: 1px solid #ECF0F1; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:hover {
+        background-color: #F5F7F7; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:active {
+        background-color: #ECF0F1;
+        -webkit-transition: background-color 0s;
+        -moz-transition: background-color 0s;
+        -ms-transition: background-color 0s;
+        -o-transition: background-color 0s;
+        transition: background-color 0s; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.icon:before {
+        margin-right: 5px; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.primary {
+        background-color: #F18700; }
+        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.primary:hover {
+          background-color: #ff940c; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.info {
+        background-color: #60C4DE; }
+        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.info:hover {
+          background-color: #75cce2; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.good {
+        background-color: #5CB85C; }
+        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.good:hover {
+          background-color: #6ec06e; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.warning {
+        background-color: #FFB819; }
+        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.warning:hover {
+          background-color: #ffc033; }
+      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.bad {
+        background-color: #F42534; }
+        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.bad:hover {
+          background-color: #f53d4b; }
   .nice-stacked-list > li, .nice-stacked-list > a {
     display: block;
     border-bottom: 1px solid #ebebed;
@@ -4708,10 +4776,10 @@ textarea.nice-form-control {
         background-color: #1f3155; }
       .nice-stacked-list > li .badge.info, .nice-stacked-list > a .badge.info {
         background-color: #75cce2; }
-      .nice-stacked-list > li .badge.warning, .nice-stacked-list > a .badge.warning {
-        background-color: #ffc033; }
       .nice-stacked-list > li .badge.good, .nice-stacked-list > a .badge.good {
         background-color: #6ec06e; }
+      .nice-stacked-list > li .badge.warning, .nice-stacked-list > a .badge.warning {
+        background-color: #ffc033; }
       .nice-stacked-list > li .badge.bad, .nice-stacked-list > a .badge.bad {
         background-color: #f53d4b; }
     .nice-stacked-list > li:hover .badge, .nice-stacked-list > a:hover .badge {
@@ -4722,10 +4790,10 @@ textarea.nice-form-control {
         background-color: #182642; }
       .nice-stacked-list > li:hover .badge.info, .nice-stacked-list > a:hover .badge.info {
         background-color: #60C4DE; }
-      .nice-stacked-list > li:hover .badge.warning, .nice-stacked-list > a:hover .badge.warning {
-        background-color: #FFB819; }
       .nice-stacked-list > li:hover .badge.good, .nice-stacked-list > a:hover .badge.good {
         background-color: #5CB85C; }
+      .nice-stacked-list > li:hover .badge.warning, .nice-stacked-list > a:hover .badge.warning {
+        background-color: #FFB819; }
       .nice-stacked-list > li:hover .badge.bad, .nice-stacked-list > a:hover .badge.bad {
         background-color: #F42534; }
     .nice-stacked-list > li.current, .nice-stacked-list > a.current {
@@ -4735,6 +4803,60 @@ textarea.nice-form-control {
       border-bottom: none; }
   .nice-stacked-list.condensed li, .nice-stacked-list.condensed a {
     padding: 10px 15px; }
+  .nice-stacked-list.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    z-index: 999;
+    margin-bottom: 0;
+    border-top: none;
+    overflow: auto;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #FFF;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-stacked-list.sidebar.left {
+      right: auto;
+      left: 0; }
+    .nice-stacked-list.sidebar li {
+      border-bottom-color: #D0D1D5; }
+      .nice-stacked-list.sidebar li .item-heading {
+        background-color: #000; }
+      .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control {
+        color: #FFF;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+        text-shadow: none; }
+        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control:hover {
+          background-color: #000; }
+        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control:active {
+          background-color: #262626; }
+        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
+          border-left-color: #D0D1D5; }
+      .nice-stacked-list.sidebar li .nice-form-control {
+        border-width: 0;
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8); }
+    .nice-stacked-list.sidebar a {
+      color: #5be0ff;
+      text-shadow: 1px 1px 0 black; }
+      .nice-stacked-list.sidebar a:hover {
+        color: #8ee9ff; }
 
 .nice-breadcrumb {
   list-style: none;

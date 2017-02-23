@@ -28,8 +28,8 @@ summary {
             background-color: $gray-vlight;
             color: $gray-dark;
             padding: 10px 15px;
-            font-size: .8em;
             border-top: 1px solid $color-border;
+            @include nice-font-size(13px);
 
             &.icon {
                 position: relative;

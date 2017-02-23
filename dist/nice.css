@@ -295,6 +295,7 @@ body {
   font-family: "Open Sans", sans-serif, helvetica;
   font-weight: 400;
   text-rendering: geometricPrecision;
+  line-height: 1.5;
   font-size: 14px;
   font-size: 0.875rem; }
 
@@ -6231,8 +6232,9 @@ summary.nice-card {
     background-color: #F5F7F7;
     color: #333333;
     padding: 10px 15px;
-    font-size: .8em;
-    border-top: 1px solid #D0D1D5; }
+    border-top: 1px solid #D0D1D5;
+    font-size: 13px;
+    font-size: 0.8125rem; }
     div.nice-card .nice-card-sub.icon,
     article.nice-card .nice-card-sub.icon,
     summary.nice-card .nice-card-sub.icon {

@@ -4,6 +4,7 @@ body {
     font-family: $fonts-primary;
     font-weight: $default-font-weight;
     text-rendering: geometricPrecision;
+    line-height: 1.5;
     @include nice-font-size(14px);
 }
 a {

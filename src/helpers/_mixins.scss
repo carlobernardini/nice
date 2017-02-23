@@ -123,25 +123,3 @@
     left: $left;
     position: absolute;
 }
-
-
-/**
- * @example when-breakpoint(medium) { width: 50% }
- **/
-@mixin nice-breakpoint ($point) {
-    @if $point == large {
-        @include media(min-width 1025px) {
-            @content;
-        }
-    }
-    @else if $point == medium {
-        @include media(max-width 1025px min-width 641px) {
-            @content;
-        }
-    }
-    @else if $point == small {
-        @media (max-width: 641px)  {
-            @content;
-        }
-    }
-}

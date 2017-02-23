@@ -6,32 +6,35 @@
     @include row();
 }
 
-@mixin col($size) {
+@mixin col($size, $alias) {
     @for $i from 1 through 12 {
-        .nice-col-#{if($size != false, $size + '-', '')}#{$i} {
+        .nice-col-#{if($size != false, $size + '-', '')}#{$i}
+        #{if($alias != false, ', .nice-col-' + $alias + '-' + $i, '')} {
             @include span-columns($i);
         }
         @if($i < 12) {
-            .nice-shift-#{if($size != false, $size + '-', '')}#{$i} {
+            .nice-shift-#{if($size != false, $size + '-', '')}#{$i}
+            #{if($alias != false, ', .nice-shift-' + $alias + '-' + $i, '')} {
                 @include shift($i);
             }
         }
     }
 }
 
-@for $i from 1 through 12 {
-    @include col(false);
-}
+@include col(false, false);
 
 
-@each $size in large, medium, small {
-    @include nice-breakpoint(#{$size}) {
-        .nice-#{$size}-hide {
+@each $bp, $size, $alias in ($desktop, desktop, large), 
+                    ($tablet, tablet, medium), 
+                    ($mobile-and-tablet, mobile-and-tablet, medium-and-small),
+                    ($mobile, mobile, small) {
+    @include media($bp) {
+        .nice-#{$size}-hide, .nice-#{$alias}-hide {
             display: none;
         }
-        @include col(#{$size});
+        @include col(#{$size}, #{$alias});
         @each $display in block, inline, inline-block {
-            .nice-#{$size}-#{$display} {
+            .nice-#{$size}-#{$display}, .nice-#{$alias}-#{$display} {
                 display: #{$display};
             }
         }

@@ -57,7 +57,6 @@
     .nice-alert-wrapper {
         margin: -15px;
         display: table;
-        table-layout: fixed;
         width: calc(100% + 30px);
         @include nice-border-radius($default-radius);
     }

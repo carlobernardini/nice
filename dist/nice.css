@@ -5198,7 +5198,6 @@ table.nice-table {
   .nice-alert .nice-alert-wrapper {
     margin: -15px;
     display: table;
-    table-layout: fixed;
     width: calc(100% + 30px);
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;

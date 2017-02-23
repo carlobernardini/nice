@@ -6010,6 +6010,10 @@ table.nice-table {
   .nice-popover.left:before {
     left: 10px;
     right: auto; }
+  .nice-popover.center:before {
+    left: 50%;
+    right: auto;
+    margin-left: -10px; }
   .nice-popover.right:before {
     left: auto;
     right: 10px; }

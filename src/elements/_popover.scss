@@ -116,6 +116,13 @@
             right: auto;
         }
     }
+    &.center {
+        &:before {
+            left: 50%;
+            right: auto;
+            margin-left: -10px;
+        }
+    }
     &.right {
         &:before {
             left: auto;

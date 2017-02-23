@@ -3871,7 +3871,10 @@ header,
       .nice-header .nice-header-menu li span {
         display: block;
         padding: 20px 10px;
-        line-height: normal; }
+        line-height: normal;
+        font-size: 1.1em;
+        font-size: 15px;
+        font-size: 0.9375rem; }
         header .nice-header-menu li a.icon:before, header .nice-header-menu li a.product-icon:before, header .nice-header-menu li a.additional-icon:before, header .nice-header-menu li span.icon:before, header .nice-header-menu li span.product-icon:before, header .nice-header-menu li span.additional-icon:before,
         .nice-header .nice-header-menu li a.icon:before,
         .nice-header .nice-header-menu li a.product-icon:before,

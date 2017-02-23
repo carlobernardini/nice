@@ -279,11 +279,11 @@ header,
             }
         }
         &.menu-alt {
-            li {
-                margin-top: 16px;
-                margin-bottom: 16px;
+            > li {
+                padding-top: 17px;
+                padding-bottom: 16px;
 
-                a {
+                > a {
                     padding: 5px 10px;
                     background-color: $gray-light;
                     @include nice-font-size(12px);
@@ -295,17 +295,17 @@ header,
                     }
                 }
                 &:first-child {
-                    a {
+                    > a {
                         @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
                     }
                 }
                 &:last-child {
-                    a {
+                    > a {
                         @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
                     }
                 }
                 + li {
-                    a {
+                    > a {
                         border-left: 1px solid $gray-vlight;
                     }
                 }

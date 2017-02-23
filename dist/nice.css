@@ -3957,12 +3957,12 @@ header,
     header .nice-header-menu.menu-pills li ul li a:hover,
     .nice-header .nice-header-menu.menu-pills li ul li a:hover {
       background-color: #009CC1; }
-    header .nice-header-menu.menu-alt li,
-    .nice-header .nice-header-menu.menu-alt li {
-      margin-top: 16px;
-      margin-bottom: 16px; }
-      header .nice-header-menu.menu-alt li a,
-      .nice-header .nice-header-menu.menu-alt li a {
+    header .nice-header-menu.menu-alt > li,
+    .nice-header .nice-header-menu.menu-alt > li {
+      padding-top: 17px;
+      padding-bottom: 16px; }
+      header .nice-header-menu.menu-alt > li > a,
+      .nice-header .nice-header-menu.menu-alt > li > a {
         padding: 5px 10px;
         background-color: #ECF0F1;
         font-size: 12px;
@@ -3972,12 +3972,12 @@ header,
         -ms-transition: color 0.1s, background-color 0.1s;
         -o-transition: color 0.1s, background-color 0.1s;
         transition: color 0.1s, background-color 0.1s; }
-        header .nice-header-menu.menu-alt li a:hover,
-        .nice-header .nice-header-menu.menu-alt li a:hover {
+        header .nice-header-menu.menu-alt > li > a:hover,
+        .nice-header .nice-header-menu.menu-alt > li > a:hover {
           background-color: #009CC1;
           color: #FFF; }
-      header .nice-header-menu.menu-alt li:first-child a,
-      .nice-header .nice-header-menu.menu-alt li:first-child a {
+      header .nice-header-menu.menu-alt > li:first-child > a,
+      .nice-header .nice-header-menu.menu-alt > li:first-child > a {
         -webkit-border-top-left-radius: 15px;
         -moz-border-radius-topleft: 15px;
         border-top-left-radius: 15px;
@@ -3987,8 +3987,8 @@ header,
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      header .nice-header-menu.menu-alt li:last-child a,
-      .nice-header .nice-header-menu.menu-alt li:last-child a {
+      header .nice-header-menu.menu-alt > li:last-child > a,
+      .nice-header .nice-header-menu.menu-alt > li:last-child > a {
         -webkit-border-top-right-radius: 15px;
         -moz-border-radius-topright: 15px;
         border-top-right-radius: 15px;
@@ -3998,8 +3998,8 @@ header,
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      header .nice-header-menu.menu-alt li + li a,
-      .nice-header .nice-header-menu.menu-alt li + li a {
+      header .nice-header-menu.menu-alt > li + li > a,
+      .nice-header .nice-header-menu.menu-alt > li + li > a {
         border-left: 1px solid #F5F7F7; }
     header .nice-header-menu + .nice-header-menu,
     .nice-header .nice-header-menu + .nice-header-menu {

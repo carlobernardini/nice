@@ -15,4 +15,4 @@ __What it's not meant for__
 __Contact us__
 [nice@textkernel.nl](mailto:nice@textkernel.nl)
 
-[__Project wiki__](http://tkgit-01.textkernel.local/bernardini/nice/wikis/home)
+[__Project wiki__](/../wikis/home)

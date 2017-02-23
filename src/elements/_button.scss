@@ -1,17 +1,17 @@
-button,
 .nice-btn {
     color: $color-black;
     position: relative;
     border: 1px solid $color-border;
     background-color: $color-white;
-    padding: 0 10px;
+    padding: 5px 10px;
     text-decoration:none;
     outline: none;
     text-align: center;
     @include nice-font($family: $fonts-primary);
-    @include nice-line-height(32px);
+    @include nice-line-height(20px);
     @include nice-border-radius($default-radius);
     @include nice-transition(border 0.1s, background 0.1s);
+    @include nice-font-size(14px);
     @extend %display-inline-block;
     @extend %disable-user-select;
 
@@ -25,37 +25,76 @@ button,
         background: $gray-light;
         @include nice-box-shadow(inset 0px 2px 1px rgba($gray-medium, 1));
     }
+    &[disabled],
+    &.disabled {
+        background-color: lighten($color-border, 20%);
+        border-color: lighten($color-border, 5%);
+        color: $color-muted;
+        cursor: default;
+
+        &:active,
+        &:hover,
+        &:focus {
+            background-color: lighten($color-border, 20%);
+            border-color: lighten($color-border, 5%);
+            @include nice-box-shadow(none);
+        }
+    }
     &.icon {
         &::before {
             margin-right: 5px;
+        }
+        &.text-bold {
+            &:before {
+                font-weight: normal;
+            }
         }
     }
     &.link {
         color: $color-link;
         border: none;
+        padding: 6px 10px;
         background-color: transparent;
         @include nice-transition(color 0.3s);
 
         &:hover,
         &:focus {
-            color:lighten($color-link, 10%);
+            color: lighten($color-link, 10%);
             background-color: transparent;
             @include nice-box-shadow(none);
         }
-    }
-    &.primary {
-        color: $color-white;
-        background-color: $color-primary;
-        border: none;
-        padding: 0 11px;
-        @include nice-line-height(34px);
-        @include nice-font($weight: 400);
-
-        &:hover {
-            background-color: #F39C12;
+        &[disabled],
+        &.disabled {
+            color: $color-muted;
         }
-        &:active {
-            @include nice-box-shadow(inset 0px 2px 1px darken($color-primary, 5%));
+    }
+    @each $type in (primary, accent, info, good, warning, bad) {
+        &.#{$type} {
+            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+            color: darken(map-get($color-scheme, #{$type}), 20%);
+            border-color: lighten(map-get($color-scheme, #{$type}), 5%);    
+            color: $color-white;
+            background-color: map-get($color-scheme, #{$type});
+            border: none;
+            padding: 6px 11px;
+            @include nice-font($size: 14px);
+
+            &:hover {
+                background-color: lighten(map-get($color-scheme, #{$type}), 5%);
+            }
+            &:active {
+                @include nice-box-shadow(inset 0px 2px 1px darken(map-get($color-scheme, #{$type}), 5%));
+            }
+            &[disabled],
+            &.disabled {
+                $btn-lightened: lighten(map-get($color-scheme, #{$type}), 25%);
+                $btn-desaturated: desaturate($btn-lightened, 30%);
+                background-color: $btn-desaturated;
+
+                &:active {
+                    @include nice-box-shadow(none);
+                }
+            }
         }
     }
     &.small {
@@ -68,13 +107,17 @@ button,
         @include nice-line-height(42px);
         @include nice-font-size($default-font-size-large);
     }
+    &.bold {
+        font-weight: 600;
+    }
 }
 .nice-btn-group {    
     margin: 15px 0;
     @extend %clearfix;
 
     > {
-        .nice-btn {
+        .nice-btn,
+        .nice-dropdown {
             position: relative;
             float: left;
 
@@ -87,17 +130,27 @@ button,
             &:last-child {
                 @include nice-border-radius(0 $default-radius $default-radius 0);
             }
-            + .nice-btn {
+            &:first-child:last-child {
+                @include nice-border-radius($default-radius);
+            }
+            + .nice-btn,
+            + .nice-dropdown {
                 margin-left: -1px;
             }
             &:hover {
                 z-index: 2;
             }
         }
+        .nice-dropdown {
+            .nice-btn {
+                @include nice-border-radius(inherit);
+            }
+        }
     }
     &.stacked {
         > {
-            .nice-btn {
+            .nice-btn,
+            .nice-dropdown {
                 float: none;
                 display: block;
                 width: 100%;
@@ -114,6 +167,11 @@ button,
                     margin-top: -1px;
                 }
             }
+            .nice-dropdown {
+                .nice-btn {
+                    @include nice-border-radius(inherit);
+                }
+            }
         }
     }
     &.justified {
@@ -123,7 +181,8 @@ button,
         width: 100%;
 
         > {
-            .nice-btn {
+            .nice-btn,
+            .nice-dropdown {
                 display: table-cell;
                 float: none;
                 width: 100%;

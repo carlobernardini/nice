@@ -15,10 +15,9 @@ table {
                 th, td {
                     text-align: left;
                     border-bottom: 1px solid $color-border;
-                    padding: 0 10px;
+                    padding: 8px;
                     background-color: $color-white;
                     @include nice-font($weight: 600);
-                    @include nice-line-height(36px);
                 }
             }
         }
@@ -27,8 +26,21 @@ table {
                 th, td {
                     vertical-align: top;
                     text-align: left;
-                    padding: 0 10px;
-                    @include nice-line-height(32px);
+                    padding: 8px;
+                }
+                td {
+                    @each $type in (info, good, warning, bad) {
+                        &.#{$type} {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+                        }
+                    }
+                }
+                @each $type in (info, good, warning, bad) {
+                    &.#{$type} {
+                        th, td {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
+                        }
+                    }
                 }
             }
         }
@@ -44,14 +56,10 @@ table {
         &.striped {
             tbody {
                 tr:nth-child(odd) {
-                    th, td {
-                        background-color: $gray-light;
-                    }
+                    background-color: $gray-vlight;
                 }
                 tr:nth-child(even) {
-                    th, td {
-                        background-color: transparent;
-                    }
+                    background-color: transparent;
                 }
             }
         }
@@ -71,8 +79,30 @@ table {
                     &:hover {
                         th, td {
                             background-color: $gray-light;
-                            color: $color-black
+                            color: $color-black;
+
+                            @each $type in (info, good, warning, bad) {
+                                &.#{$type} {
+                                    background-color: lighten(map-get($color-scheme, #{$type}), 30%);
+                                }
+                            }
                         }
+                        @each $type in (info, good, warning, bad) {
+                            &.#{$type} {
+                                th, td {
+                                    background-color: lighten(map-get($color-scheme, #{$type}), 30%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.small-body {
+            tbody {
+                tr {
+                    td {
+                        font-size: .85em;
                     }
                 }
             }

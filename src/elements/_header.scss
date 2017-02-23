@@ -1,7 +1,12 @@
+body {
+    &.nice-fixed-header {
+        padding-top: 60px;
+    }
+}
 header,
 .nice-header {
     position: relative;
-    z-index: 1;
+    z-index: 5;
     background-color: $color-white;
     border-bottom: 1px solid $color-border;
     @include nice-box-shadow(0 1px 3px rgba($color-black, 0.1));
@@ -34,8 +39,8 @@ header,
         a {
             display: inline-block;
         }
-        img {
-            height: 30px;
+        img,
+        svg {
             margin: 15px 0;
             border: 0;
         }
@@ -118,15 +123,72 @@ header,
         margin: 0;
         @include nice-line-height(60px);
 
+        > li {
+            &.highlight {
+                > a, > span {
+                    padding: 20px 10px 16px;
+                    border-bottom: 4px solid transparent;
+                }
+                @each $type in (primary, brand, info, good, warning, bad) {
+                    &.#{$type} {
+                        > a, > span {
+                            border-color: map-get($color-scheme, #{$type});
+                            @include nice-transition(background-color 0.1s, border-color 0.3s);
+
+                            &:hover {
+                                border-color: lighten(map-get($color-scheme, #{$type}), 15%);
+                            }
+                        }
+                    }
+                }
+            }
+            &.fixed-width {
+                > a {
+                    width: 100px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: center;
+                }
+                &.w125 {
+                    > a {
+                        width: 125px;
+                    }
+                }
+                &.w150 {
+                    > a {
+                        width: 150px;
+                    }
+                }
+                &.w175 {
+                    > a {
+                        width: 175px;
+                    }
+                }
+                &.w200 {
+                    > a {
+                        width: 200px;
+                    }
+                }
+            }
+        }
         li {
             list-style: none;
             display: block;
             float:left;
             position: relative;
 
-            a {
+            a, span {
                 display: block;
-                padding: 0 10px;
+                padding: 20px 10px;
+                line-height: normal;
+
+                &.icon,
+                &.product-icon,
+                &.additional-icon {
+                    &:before {
+                        margin-right: 5px;
+                    }
+                }
             }
             ul {
                 display: none;
@@ -140,11 +202,11 @@ header,
                     float: none;
                     @include nice-line-height(50px);
 
-                    a {
+                    a, span {
                         min-width: 200px;
                         color: $color-white;
                         display: block;
-                        padding: 0 15px;
+                        padding: 15px;
                         white-space: nowrap;
 
                         &:hover {
@@ -170,18 +232,20 @@ header,
                 }
             }
             &.has-children {
-                > a {
+                > a, > span {
                     &:after {
                         font-family: $fonts-icon;
                         content: '\f107';
                         color: $color-white;
                         position: absolute;
                         right: 15px;
-                        top: 0;
+                        top: 50%;
+                        @include nice-line-height(20px);
+                        margin-top: -10px;
                     }
                 }
                 &:hover {
-                    > a {
+                    > a, > span {
                         &:after {
                             color: $color-white;
                             // @include nice-animation(flip .15s linear forwards);
@@ -286,16 +350,44 @@ header,
             height: 100%;
             @include nice-transition(left .2s ease-in-out);
 
+            > li {
+                &.fixed-width {
+                    > a {
+                        width: auto;
+                        text-align: left;
+                    }
+                    &.w125,
+                    &.w150,
+                    &.w175,
+                    &.w200 {
+                        width: auto;
+                    }
+                }
+                &.highlight {
+                    > a {
+                        padding: 15px 20px 15px 16px;
+                        border-bottom-width: 0;
+                        border-left-width: 4px;
+                        border-left-style: solid;
+                    }
+                }
+            }
             li {
                 float: none;
 
-                a {
+                a, span {
                     position: relative;
-                    padding: 0 20px;
+                    padding: 15px 20px;
                     color: $color-white;
                     @include nice-transition(background-color .1s, color .1s);
 
                     &::before {
+                        display: -moz-inline-stack;
+                        display: inline-block;
+                        *display: inline-block;
+                        zoom: 1;
+                        width: 20px;
+                        text-align: center;
                         margin-right: 10px;
                     }
                 }
@@ -306,7 +398,7 @@ header,
                     li {
                         white-space: normal;
 
-                        a {
+                        a, span {
                             padding-left: 50px;
                             @include nice-font($size: .9em);
 
@@ -325,7 +417,7 @@ header,
                     }
                 }
                 &.has-children {
-                    > a {
+                    > a, > span {
                         &:after {
                             display: none;
                         }

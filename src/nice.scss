@@ -14,9 +14,12 @@
         'helpers/generics';
 
 // Fonts
-@import 'font-awesome',
+@import '//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800',
+        '//fonts.googleapis.com/css?family=Titillium+Web:400,600,700',
+        'font-awesome',
         'fonts/font-colaborate',
-        'fonts/font-tk-products';
+        'fonts/font-tk-products',
+        'fonts/font-tk-additional';
 
 // Layout
 @import 'layout/grid',
@@ -27,12 +30,18 @@
         'elements/footer',
         'elements/form',
         'elements/tabs',
+        'elements/panel',
         'elements/stacked-list',
         'elements/breadcrumb',
         'elements/pagination',
         'elements/table',
         'elements/button',
+        'elements/dropdown',
+        'elements/scale',
         'elements/alert',
+        'elements/tooltip',
+        'elements/popover',
+        'elements/modal',
         'elements/card',
         'elements/progress',
         'elements/code';

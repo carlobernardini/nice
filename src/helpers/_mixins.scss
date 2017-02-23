@@ -7,7 +7,7 @@
     @return $remSize * 1rem;
 }
 
-@mixin nice-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $family: $fonts-primary) {
+@mixin nice-font ($style: null, $variant: null, $weight: null, $size: null, $family: null) {
     font-family: $family;
     font-style: $style;
     font-variant: $variant;
@@ -88,6 +88,11 @@
          -o-user-select: $param;
             user-select: $param;
 }
+@mixin nice-appearance ($param) {
+    -webkit-appearance: $param;
+       -moz-appearance: $param;
+            appearance: $param;
+}
 
 @mixin nice-placeholder-color {
   &::-webkit-input-placeholder {
@@ -111,7 +116,7 @@
     background: linear-gradient($color-from, $color-to);
 }
 
-@mixin nice-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin nice-abs-pos ($top: null, $right: null, $bottom: null, $left: null) {
     top: $top;
     right: $right;
     bottom: $bottom;

@@ -17,6 +17,9 @@ html {
             overflow: hidden;
             width: 100%;
 
+            p {
+                margin: 15px 0;
+            }
             .nice-footer-menu {
                 margin: 0;
                 float: right;
@@ -33,6 +36,13 @@ html {
 
                         &:hover {
                             color: $color-white;
+                        }
+                        &.icon,
+                        &.product-icon,
+                        &.additional-icon {
+                            &:before {
+                                margin-right: 5px;
+                            }
                         }
                     }
                 }

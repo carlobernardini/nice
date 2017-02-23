@@ -1,7 +1,9 @@
 body {
+    color: $color-text;
     background-color: $gray-vlight;
     font-family: $fonts-primary;
     font-weight: $default-font-weight;
+    @include nice-font-size(16px);
 }
 a {
     color: $color-link;
@@ -12,10 +14,27 @@ a {
         color: lighten($color-link, 10%);
     }
 }
+p {
+    margin: 0 0 15px 0;
+}
+strong {
+    font-weight: 600;
+}
 .icon {
     &::before {
         font-family: FontAwesome;
     }
+}
+i {
+    &.icon {
+        font-style: normal;
+    }
+}
+.nice-responsive-container {
+    overflow:auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin-bottom: 15px;
 }
 .nice-circle {
     @include nice-border-radius(50%);
@@ -29,11 +48,20 @@ a {
 .nice-bg-brand {
     background-color: $color-brand;
 }
+.nice-bg-link {
+    background-color: $color-link;
+}
+.nice-bg-text {
+    background-color: $color-text;
+}
 .nice-bg-primary {
     background-color: $color-primary;
 }
 .nice-bg-accent {
     background-color: $color-accent;
+}
+.nice-bg-muted {
+    background-color: $color-muted;
 }
 .nice-bg-warning {
     background-color: $color-warning;
@@ -46,4 +74,30 @@ a {
 }
 .nice-bg-success {
     background-color: $color-good;
+}
+.clearfix {
+    @extend %clearfix;
+}
+.shown {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.invisible {
+    visibility: hidden;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.center-block {
+    margin: 0 auto;
+}
+@each $value in (fixed, relative, absolute, static) {
+    .position-#{$value} {
+        position: $value;
+    }
 }

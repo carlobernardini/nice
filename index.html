@@ -10,7 +10,7 @@
         <title>Nice! Framework examples</title>
         <link href="docs/docs.min.css" rel="stylesheet">
         <link href="dist/nice.css" rel="stylesheet">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="docs/docs.js"></script>
     </head>
     <body class="nice-fixed-header">
@@ -174,7 +174,7 @@
             </div><!-- .nice-header-container -->
         </header>
         <div class="banner">
-            <div class="nice-container">
+            <div class="nice-container nice-mobile-hide">
                 <h1 class="docs">
                     <span class="nice-brand">Nice!</span>
                     <small>Framework for reusable UI elements</small>
@@ -184,7 +184,7 @@
         <section class="nice-container">
             <div class="nice-row" id="nice-colors">
                 <h2 class="docs">Colors</h2>
-                <div class="nice-col-8 nice-example">
+                <div class="nice-col-8 nice-col-small-12 nice-example">
                     <div class="nice-flex-container wrap">
                         <div class="color-swatch nice-circle nice-bg-brand">
                             <strong>Brand</strong>
@@ -228,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nice-col-4">
+                <div class="nice-col-4 nice-col-small-12">
                     <p class="nice-alert warning text-align-justify">
                         <i class="fa fa-warning"></i> When copying specific color codes, please make sure to take these directly from the official <a href="https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline" target="_blank">Brand Guidelines</a>.
                     </p>
@@ -236,7 +236,7 @@
             </div>
             <div class="nice-row" id="nice-static-assets">
                 <h2 class="docs">Static assets</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-small-12 nice-example">
                     <table class="nice-table bordered small-body">
                         <thead>
                             <tr>
@@ -284,7 +284,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="nice-col-6 text-align-justify">
+                <div class="nice-col-6 nice-col-small-12 text-align-justify">
                     <p>
                         Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.
                     </p>
@@ -301,7 +301,7 @@
                 <p>
                     Nice! is bundeled with <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a> out of the box. To know which version of FontAwesome is included with the release of Nice! you are using, refer to the <code class="inline">package.json</code> file. Additionally, a custom font iconset is included for all Textkernel products listed below. The font family is called &ldquo;TKProducts&rdquo;. Any other custom icons that do not come with FontAwesome and are not related to Textkernel products, are included in &ldquo;TKAdditional&rdquo;. All font icons are scalable vector graphics, meaning they can be resized without loss of quality.
                 </p>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-small-12 nice-example">
                     <i class="product-icon extract" title="product-icon extract"></i>
                     <i class="product-icon harvester" title="product-icon harvester"></i>
                     <i class="product-icon jobfeed" title="product-icon jobfeed"></i>
@@ -312,7 +312,7 @@
                     <i class="product-icon textkernel" title="product-icon textkernel"></i>
                     <i class="additional-icon frontify" title="additional-icon frontify"></i>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <code class="docs">&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">extract</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">harvester</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">jobfeed</span>&quot;&gt;&lt;/i&gt;
@@ -326,7 +326,7 @@
             </div>
             <div class="nice-row" id="nice-grid-system">
                 <h2 class="docs">Grid system</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-small-12 nice-example">
                     <!-- <code class="docs">.nice-container
 .nice-row
 .nice-col-[1-12]
@@ -358,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nice-col-6 docs">
+                <div class="nice-col-6 nice-col-small-12 docs">
                     <p>
                         Nice! has an integrated grid system as well as a range of <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes" target="_blank" title="MDN: Using CSS Flexible Boxes">Flexbox</a> helper classes.
                     </p>
@@ -381,7 +381,7 @@
                 <p class="nice-alert warning">
                     <strong>Please note:</strong> Flexible grids are only supported by <a href="http://caniuse.com/#feat=flexbox" target="_blank" title="Can I use: Flexbox support">modern browsers</a>. If your application requires comprehensive cross browser compatibility, it is recommended to only use the regular <a href="#nice-grid-system">grid system</a> for your layout.
                 </p>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <ul>
                         <li>
                             <h4>
@@ -403,7 +403,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <ul>
                         <li>
                             <h4>
@@ -550,7 +550,7 @@
             </div>
             <div class="nice-row" id="nice-buttons">
                 <h2 class="docs">Buttons</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-small-12 nice-example">
                     <p>
                         <a href="javascript:void(0);" class="nice-btn icon fa-check">Default button</a>
                         <a href="javascript:void(0);" class="nice-btn primary icon fa-search">Primary button</a>
@@ -625,7 +625,7 @@
                         </div>
                     </p>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <p>
                         The justified button group uses table layout by default for better browser support. Alternatively, you can omit the <code class="inline">justified</code> class and apply <a href="#nice-flex-grid">Flexbox classes</a> instead.
                     </p>
@@ -678,7 +678,7 @@
             </div>
             <div class="nice-row" id="nice-dropdowns">
                 <h2 class="docs">Dropdowns</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-small-12 nice-example">
                     <div class="nice-dropdown" style="margin-bottom: 15px;">
                         <button class="nice-btn">
                             Dropdown
@@ -724,7 +724,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-dropdown</span> <span class="variation">drop-up align-right</span>&quot;&gt;
     &lt;button class=&quot;<span class="main">nice-btn</span>&quot;&gt;
@@ -766,7 +766,7 @@
             </div>
             <div class="nice-row" id="nice-scale">
                 <h2 class="docs">Scale selection</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-small-12 nice-example">
                     <div class="nice-scale">
                         <ol class="nice-scale-selection">
                             <li>
@@ -870,7 +870,7 @@
                         </ol>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <p class="nice-alert info">
                         The use of <code class="inline">span.nice-scale-label</code> for tick labels is optional
                     </p>
@@ -923,7 +923,7 @@
             </div>
             <div class="nice-row" id="nice-form-elements">
                 <h2 class="docs">Form elements</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <div class="nice-form-group">
                         <label for="demo-input-1">Some label</label>
                         <input type="text" placeholder="Nice input..." class="nice-form-control" id="demo-input-1" />
@@ -1005,7 +1005,7 @@
     </button>
 </form>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-small-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;form&gt;
     &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
@@ -1078,7 +1078,7 @@
             </div>
             <div class="nice-row" id="nice-tabs">
                 <h2 class="docs">Tabs</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <p>
                         <div class="nice-tabs-wrapper">
                             <ul class="nice-tabs">
@@ -1130,7 +1130,7 @@
                         </div>
                     </p>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
     &lt;ul class=&quot;<span class="main">nice-tabs</span> <span class="variation">small bold</span>&quot;&gt;
@@ -1168,7 +1168,7 @@
             </div>
             <div class="nice-row" id="nice-modal-dialogs">
                 <h2 class="docs">Modal dialogs</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="nice-modal info">
                         <div class="nice-modal-content">
                             <div class="nice-modal-header">
@@ -1195,7 +1195,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-modal</span> <span class="variation">accent primary info good warning bad</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-modal-content</span>&quot;&gt;
@@ -1231,7 +1231,7 @@
             </div>
             <div class="nice-row" id="nice-breadcrumb">
                 <h2 class="docs">Breadcrumbs</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <ol class="nice-breadcrumb">
                         <li>
                             <a href="#" class="icon fa-home">
@@ -1267,7 +1267,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;ol class=&quot;<span class="main">nice-breadcrumb</span> <span class="variation">small</span>&quot;&gt;
     &lt;li&gt;
@@ -1312,7 +1312,7 @@
             </div>
             <div class="nice-row" id="nice-pagination">
                 <h2 class="docs">Pagination</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <nav>
                         <ul class="nice-pagination small" role="navigation">
                             <li class="disabled">
@@ -1395,7 +1395,7 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;nav&gt;
     &lt;ul class=&quot;<span class="main">nice-pagination</span> <span class="variation">bordered small large</span>&quot; role=&quot;navigation&quot;&gt;
@@ -1433,7 +1433,7 @@
             </div>
             <div class="nice-row" id="nice-panels">
                 <h2 class="docs">Panels</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="nice-panel">
                         <div class="nice-panel-content">
                             This is a panel without heading
@@ -1508,7 +1508,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <p class="text-align-justify">
                         Panels are required to have a <code class="inline">.nice-panel-content</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
                     </p>
@@ -1533,7 +1533,7 @@
             </div>
             <div class="nice-row" id="nice-stacked-lists">
                 <h2 class="docs">Stacked lists</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <nav class="nice-stacked-list">
                         <a href="#">
                             Menu item A
@@ -1614,7 +1614,7 @@
                         <li>Item D</li>
                     </ul>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;nav class=&quot;<span class="main">nice-stacked-list</span>&quot;&gt;
     &lt;a href=&quot;#&quot;&gt;
@@ -1650,7 +1650,7 @@
             </div>
             <div class="nice-row" id="nice-alerts">
                 <h2 class="docs">Alerts</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-mobile-12 nice-example">
                     <div class="nice-alert info">
                         <strong>Hey you!</strong> Here is some information
                     </div>
@@ -1677,7 +1677,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <p class="nice-alert info">
                         If you want your alert to stick to a certain corner of the viewport, try adding <code class="inline">.position-fixed</code> together with <code class="inline">.top|.bottom .left|right</code>.
                     </p>
@@ -1723,7 +1723,7 @@
             </div>
             <div class="nice-row" id="nice-tooltips-popovers">
                 <h2 class="docs">Tooltips &amp; Popovers</h2>
-                <div class="nice-col-6 nice-example">
+                <div class="nice-col-6 nice-col-mobile-12 nice-example">
                     <div class="nice-tooltip right">
                         This is a tooltip
                     </div>
@@ -1746,7 +1746,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;!-- Tooltips --&gt;
 &lt;div class=&quot;<span class="main">nice-tooltip</span> <span class="variation">top bottom left right info good warning bad</span>&quot;&gt;
@@ -1861,7 +1861,7 @@
             </div>
             <div class="nice-row" id="nice-progress-loading">
                 <h2 class="docs">Progress and loading</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="nice-progress">
                         <div class="nice-progress-fill" style="width: 65%;">
                             65%
@@ -1893,7 +1893,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <code class="docs">&lt;div class="<span class="main">nice-progress</span> <span class="variation">accent brand good bad pulse</span>"&gt;
     &lt;div class="<span class="main">nice-progress-fill</span>" style="width: 65%;"&gt;
         65%
@@ -1915,7 +1915,7 @@
             </div>
             <div class="nice-row" id="nice-code-blocks">
                 <h2 class="docs">Code blocks</h2>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="nice-code-container">
                         <div class="nice-code-heading icon fa-code">
                             Sample API response
@@ -1973,7 +1973,7 @@
                         You can also use <code class="inline">inline code blocks</code> where necessary.
                     </p>
                 </div>
-                <div class="nice-col-6">
+                <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-code-container</span>&quot;&gt;
     &lt;code class=&quot;<span class="variation">restrain-s restrain-m restrain-l restrain-max</span>&quot;&gt

@@ -130,12 +130,12 @@
         }
     }
     @else if $point == medium {
-        @include media(max-width 1025px min-width 640px) {
+        @include media(max-width 1025px min-width 641px) {
             @content;
         }
     }
     @else if $point == small {
-        @media (max-width: 640px)  {
+        @media (max-width: 641px)  {
             @content;
         }
     }

@@ -57,10 +57,22 @@
     text-shadow: $params;
 }
 
-@mixin nice-border-radius ($radiuses...) {
+@mixin nice-border-radius ($radiuses: null, $top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
     -webkit-border-radius: $radiuses;
        -moz-border-radius: $radiuses;
             border-radius: $radiuses;
+    -webkit-border-top-left-radius: $top-left;
+        -moz-border-radius-topleft: $top-left;
+            border-top-left-radius: $top-left;
+    -webkit-border-top-right-radius: $top-right;
+        -moz-border-radius-topright: $top-right;
+            border-top-right-radius: $top-right;
+    -webkit-border-bottom-right-radius: $bottom-right;
+        -moz-border-radius-bottomright: $bottom-right;
+            border-bottom-right-radius: $bottom-right;
+    -webkit-border-bottom-left-radius: $bottom-left;
+        -moz-border-radius-bottomleft: $bottom-left;
+            border-bottom-left-radius: $bottom-left;
     -webkit-background-clip: padding-box; 
        -moz-background-clip: padding; 
             background-clip: padding-box;

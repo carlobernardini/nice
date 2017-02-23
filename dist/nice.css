@@ -5820,9 +5820,9 @@ table.nice-table {
     content: '';
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 5px solid #182642; }
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #182642; }
   .nice-tooltip.top:before {
     top: auto;
     bottom: 100%; }
@@ -5834,6 +5834,10 @@ table.nice-table {
   .nice-tooltip.left:before {
     left: 10px;
     right: auto; }
+  .nice-tooltip.center:before {
+    left: 50%;
+    right: auto;
+    margin-left: -3px; }
   .nice-tooltip.right:before {
     left: auto;
     right: 10px; }

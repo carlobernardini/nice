@@ -53,6 +53,12 @@ h6, .h6 {
 }
 .text-bold {
     font-weight: 600;
+
+    &.icon {
+        &:before {
+            font-weight: normal;
+        }
+    }
 }
 .text-italic {
     font-style: italic;

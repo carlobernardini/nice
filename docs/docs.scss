@@ -20,13 +20,15 @@ body {
         border-bottom: 1px solid lighten($color-border, 5%);
     }
     .banner {
+        top: 0;
         position: relative;
         height: 400px;
         display: flex;
         align-items: center;
         background-image: url(assets/nice-banner-background.jpg);
-        background-size: cover;
         background-position: 50% 70%;
+        border-top: 1px solid transparent;
+        @include nice-background-size(cover);
 
         &:before {
             content: ' ';
@@ -238,6 +240,23 @@ body {
     body {
         .banner {
             height: 200px;
+        }
+    }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    body {
+        .banner {
+            .nice-container {
+                h1 {
+                    text-align: center;
+                    width: 600px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -300px;
+                    margin-top: -25px;
+                    top: 50%;
+                }
+            }
         }
     }
 }

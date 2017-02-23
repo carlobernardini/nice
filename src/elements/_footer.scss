@@ -47,6 +47,10 @@ html {
                     }
                 }
             }
+            .text-brand {
+                font-size: 1.25em;
+                margin: 0 5px;
+            }
         }
     }
 }
@@ -57,11 +61,20 @@ html {
             footer,
             .nice-footer {
                 margin-top: 15px;
-                padding: 0 15px;
 
                 .nice-footer-menu {
                     display: none;
                 }
+            }
+        }
+    }
+}
+@include media($mobile-and-tablet) {
+    html {
+        body {
+            footer,
+            .nice-footer {
+                padding: 0 15px;
             }
         }
     }

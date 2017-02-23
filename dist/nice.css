@@ -4311,15 +4311,23 @@ html {
             html body .nice-footer .nice-footer-menu li a.product-icon:before,
             html body .nice-footer .nice-footer-menu li a.additional-icon:before {
               margin-right: 5px; }
+      html body footer .text-brand,
+      html body .nice-footer .text-brand {
+        font-size: 1.25em;
+        margin: 0 5px; }
 
 @media screen and (max-width: 641px) {
   html body footer,
   html body .nice-footer {
-    margin-top: 15px;
-    padding: 0 15px; }
+    margin-top: 15px; }
     html body footer .nice-footer-menu,
     html body .nice-footer .nice-footer-menu {
       display: none; } }
+
+@media screen and (max-width: 1025px) {
+  html body footer,
+  html body .nice-footer {
+    padding: 0 15px; } }
 
 /**
  * Module variables

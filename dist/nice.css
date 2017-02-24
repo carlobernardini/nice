@@ -23,7 +23,7 @@ html {
 header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-range .nice-range-value, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
 .nice-popover .nice-popover-title .product-icon,
 .nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
@@ -5689,6 +5689,167 @@ table.nice-table {
     transition: background-color 0.2s; }
   .nice-scale:hover:before {
     background-color: #dde4e6; }
+
+.nice-range {
+  position: relative; }
+  .nice-range .nice-range-slider {
+    width: 100%;
+    height: 12px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ECF0F1;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-box-shadow: inset 0 1px #D0D1D5, 0 1px 0 #FFF;
+    -moz-box-shadow: inset 0 1px #D0D1D5, 0 1px 0 #FFF;
+    box-shadow: inset 0 1px #D0D1D5, 0 1px 0 #FFF; }
+    .nice-range .nice-range-slider::-webkit-slider-thumb {
+      position: relative;
+      top: -1px;
+      width: 19px;
+      height: 19px;
+      border: 3px solid #FFF;
+      cursor: pointer;
+      background-color: #009CC1;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      -ms-transition: background-color 0.2s;
+      -o-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+      .nice-range .nice-range-slider::-webkit-slider-thumb:active {
+        cursor: grab; }
+    .nice-range .nice-range-slider::-moz-range-thumb {
+      position: relative;
+      top: -1px;
+      width: 19px;
+      height: 19px;
+      border: 3px solid #FFF;
+      cursor: pointer;
+      background-color: #009CC1;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      -ms-transition: background-color 0.2s;
+      -o-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+      .nice-range .nice-range-slider::-moz-range-thumb:active {
+        cursor: grab; }
+    .nice-range .nice-range-slider::-ms-thumb {
+      position: relative;
+      top: -1px;
+      width: 19px;
+      height: 19px;
+      border: 3px solid #FFF;
+      cursor: pointer;
+      background-color: #009CC1;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      -webkit-transition: background-color 0.2s;
+      -moz-transition: background-color 0.2s;
+      -ms-transition: background-color 0.2s;
+      -o-transition: background-color 0.2s;
+      transition: background-color 0.2s; }
+      .nice-range .nice-range-slider::-ms-thumb:active {
+        cursor: grab; }
+  .nice-range .nice-range-value {
+    position: absolute;
+    top: 22px;
+    background-color: #ECF0F1;
+    padding: 3px 8px;
+    text-align: center;
+    margin-top: 3px;
+    min-width: 26px;
+    cursor: pointer;
+    font-size: 13px;
+    font-size: 0.8125rem;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    -moz-transition: background-color 0.2s, color 0.2s;
+    -ms-transition: background-color 0.2s, color 0.2s;
+    -o-transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; }
+    .nice-range .nice-range-value + .nice-range-slider {
+      margin-bottom: 25px; }
+    .nice-range .nice-range-value:before {
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      margin-left: -4px;
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 4px solid  transparent;
+      border-right: 4px solid transparent;
+      border-bottom: 4px solid #ECF0F1;
+      -webkit-transition: border-bottom-color 0.2s;
+      -moz-transition: border-bottom-color 0.2s;
+      -ms-transition: border-bottom-color 0.2s;
+      -o-transition: border-bottom-color 0.2s;
+      transition: border-bottom-color 0.2s; }
+    .nice-range .nice-range-value:active {
+      cursor: grab; }
+  .nice-range:hover .nice-range-slider::-webkit-slider-thumb {
+    background-color: #F18700; }
+  .nice-range:hover .nice-range-slider::-moz-range-thumb {
+    background-color: #F18700; }
+  .nice-range:hover .nice-range-slider::-ms-thumb {
+    background-color: #F18700; }
+  .nice-range:hover .nice-range-value {
+    background-color: #009CC1;
+    color: #FFF; }
+    .nice-range:hover .nice-range-value:before {
+      border-bottom-color: #009CC1; }
 
 .nice-alert {
   padding: 15px;

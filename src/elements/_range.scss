@@ -39,4 +39,8 @@
     &::-ms-thumb {
         @include range-thumb;
     }
+
+    + .nice-range-slider {
+        margin-top: 15px;
+    }
 }

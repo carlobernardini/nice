@@ -5796,6 +5796,8 @@ table.nice-table {
       background-color: #F18700; }
     .nice-range-slider::-ms-thumb:active {
       cursor: grab; }
+  .nice-range-slider + .nice-range-slider {
+    margin-top: 15px; }
 
 .nice-alert {
   padding: 15px;

@@ -79,10 +79,10 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 30vh;
-        height: 26vh;
-        margin-left: -15vh;
-        margin-top: -13vh;
+        width: 400px;
+        height: 350px;
+        margin-left: -200px;
+        margin-top: -175px;
 
         .nice-modal-content {
             position: relative;
@@ -96,12 +96,12 @@
             }
         }
         &.tall {
-            height: 50vh;
-            margin-top: -25vh;
+            height: 600px;
+            margin-top: -300px;
         }
         &.wide {
-            width: 60vh;
-            margin-left: -30vh;
+            width: 550px;
+            margin-left: -275px;
         }
     }
 }

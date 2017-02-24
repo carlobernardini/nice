@@ -6389,10 +6389,10 @@ table.nice-table {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 30vh;
-    height: 26vh;
-    margin-left: -15vh;
-    margin-top: -13vh; }
+    width: 400px;
+    height: 350px;
+    margin-left: -200px;
+    margin-top: -175px; }
     .nice-modal.viewport-center .nice-modal-content {
       position: relative;
       height: 100%; }
@@ -6402,11 +6402,11 @@ table.nice-table {
         width: 100%;
         height: 62px; }
     .nice-modal.viewport-center.tall {
-      height: 50vh;
-      margin-top: -25vh; }
+      height: 600px;
+      margin-top: -300px; }
     .nice-modal.viewport-center.wide {
-      width: 60vh;
-      margin-left: -30vh; }
+      width: 550px;
+      margin-left: -275px; }
 
 div.nice-card,
 article.nice-card,

@@ -43,7 +43,7 @@ $(function(){
         var isShown = menu.is('.shown');
         menu.toggleClass('shown', !isShown);
         return false;
-    })
+    });
     $('.docs-code-wrapper').each(function(){
         var code = $(this).find('code.docs'),
             toggle = $(this).find('.toggle'),

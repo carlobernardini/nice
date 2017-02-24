@@ -5690,6 +5690,115 @@ table.nice-table {
   .nice-scale:hover:before {
     background-color: #dde4e6; }
 
+.nice-range-slider {
+  width: 100%;
+  height: 12px;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ECF0F1;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: inset 0 1px #D0D1D5, 0 1px 0 #FFF;
+  -moz-box-shadow: inset 0 1px #D0D1D5, 0 1px 0 #FFF;
+  box-shadow: inset 0 1px #D0D1D5, 0 1px 0 #FFF; }
+  .nice-range-slider::-webkit-slider-thumb {
+    position: relative;
+    top: -1px;
+    width: 19px;
+    height: 19px;
+    border: 3px solid #FFF;
+    cursor: pointer;
+    background-color: #009CC1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    .nice-range-slider::-webkit-slider-thumb:hover, .nice-range-slider::-webkit-slider-thumb:active {
+      background-color: #F18700; }
+    .nice-range-slider::-webkit-slider-thumb:active {
+      cursor: grab; }
+  .nice-range-slider::-moz-range-thumb {
+    position: relative;
+    top: -1px;
+    width: 19px;
+    height: 19px;
+    border: 3px solid #FFF;
+    cursor: pointer;
+    background-color: #009CC1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    .nice-range-slider::-moz-range-thumb:hover, .nice-range-slider::-moz-range-thumb:active {
+      background-color: #F18700; }
+    .nice-range-slider::-moz-range-thumb:active {
+      cursor: grab; }
+  .nice-range-slider::-ms-thumb {
+    position: relative;
+    top: -1px;
+    width: 19px;
+    height: 19px;
+    border: 3px solid #FFF;
+    cursor: pointer;
+    background-color: #009CC1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -ms-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s; }
+    .nice-range-slider::-ms-thumb:hover, .nice-range-slider::-ms-thumb:active {
+      background-color: #F18700; }
+    .nice-range-slider::-ms-thumb:active {
+      cursor: grab; }
+  .nice-range-slider + .nice-range-slider {
+    margin-top: 15px; }
+
 .nice-alert {
   padding: 15px;
   border: 1px solid #D0D1D5;

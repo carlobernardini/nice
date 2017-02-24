@@ -45,7 +45,7 @@
             background-color: $color-brand;
             color: $color-white;
             padding: 10px 15px;
-            vertical-align: top;
+            vertical-align: middle;
             @include nice-font-size(32px);
             @include nice-border-radius($top-left: $default-radius * 2);
 

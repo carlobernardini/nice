@@ -118,6 +118,7 @@
         margin-left: 0;
         margin-right: 0;
         @include nice-border-radius(0);
+        @include nice-box-shadow(none);
 
         .nice-login-intro {
             @include nice-border-radius($top-left: 0, $top-right: 0);

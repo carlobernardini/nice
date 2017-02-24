@@ -1,7 +1,7 @@
 .nice-login {
     position: absolute;
     display: block;
-    top: 100vh;
+    top: 200px;
     left: 50%;
     width: 400px;
     margin-left: -200px;
@@ -106,6 +106,27 @@
         .text-brand {
             font-weight: 200;
             @include nice-font-size(12px);
+        }
+    }
+}
+
+@include media($mobile) {
+    .nice-login {
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        margin-right: 0;
+        @include nice-border-radius(0);
+
+        .nice-login-intro {
+            @include nice-border-radius($top-left: 0, $top-right: 0);
+
+            .nice-login-intro-content {
+                @include nice-border-radius($top-left: 0);
+            }
+        }
+        .nice-login-version {
+            @include nice-border-radius($bottom-right: 0, $bottom-left: 0);
         }
     }
 }

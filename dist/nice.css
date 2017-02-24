@@ -4388,7 +4388,7 @@ html {
 .nice-login {
   position: absolute;
   display: block;
-  top: 100vh;
+  top: 200px;
   left: 50%;
   width: 400px;
   margin-left: -200px;
@@ -4541,6 +4541,46 @@ html {
       font-weight: 200;
       font-size: 12px;
       font-size: 0.75rem; }
+
+@media screen and (max-width: 641px) {
+  .nice-login {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    margin-right: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-login .nice-login-intro {
+      -webkit-border-top-left-radius: 0;
+      -moz-border-radius-topleft: 0;
+      border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 0;
+      -moz-border-radius-topright: 0;
+      border-top-right-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-login .nice-login-intro .nice-login-intro-content {
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+    .nice-login .nice-login-version {
+      -webkit-border-bottom-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+      border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      -moz-border-radius-bottomleft: 0;
+      border-bottom-left-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; } }
 
 /**
  * Module variables

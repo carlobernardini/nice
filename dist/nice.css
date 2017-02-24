@@ -5898,6 +5898,30 @@ table.nice-table {
     margin: -15px -15px 15px;
     padding: 5px 15px;
     font-weight: 600; }
+    .nice-alert .nice-alert-heading + .nice-alert-wrapper {
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-alert .nice-alert-heading + .nice-alert-wrapper .nice-alert-content {
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-alert .nice-alert-heading + .nice-alert-wrapper .nice-alert-button {
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
   .nice-alert .nice-alert-dismiss {
     outline: none;
     background-color: transparent;

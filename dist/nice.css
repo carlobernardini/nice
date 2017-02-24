@@ -4386,13 +4386,10 @@ html {
     padding: 0 15px; } }
 
 .nice-login {
-  position: absolute;
   display: block;
-  top: 200px;
-  left: 50%;
   width: 400px;
   min-width: 375px;
-  margin-left: -200px;
+  margin: 0 auto;
   padding: 15px;
   border: 1px solid #009CC1;
   background-color: #FFF;
@@ -4545,8 +4542,6 @@ html {
 
 @media screen and (max-width: 641px) {
   .nice-login {
-    top: 0;
-    left: 0;
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 60px;

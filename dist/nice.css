@@ -4543,6 +4543,7 @@ html {
 
 @media screen and (max-width: 641px) {
   .nice-login {
+    margin-top: 0;
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 60px;

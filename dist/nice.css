@@ -59,15 +59,15 @@ header .nice-header-brand,
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.clearfix, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
+.clearfix, .nice-login .nice-login-footer, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .clearfix:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:before, .nice-login .nice-login-footer:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-login .nice-login-footer:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     content: "";
     display: table; }
-  .clearfix:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:after, .nice-login .nice-login-footer:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     clear: both;
     content: ".";
     display: block;
@@ -4384,6 +4384,207 @@ html {
   html body footer,
   html body .nice-footer {
     padding: 0 15px; } }
+
+.nice-login {
+  display: block;
+  width: 400px;
+  min-width: 375px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid #009CC1;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-login .nice-login-brand {
+    margin: -15px -15px 15px;
+    padding: 5px 15px;
+    text-align: left;
+    background-color: #009CC1;
+    color: #FFF;
+    font-size: 16px;
+    font-size: 1rem; }
+    .nice-login .nice-login-brand + .nice-login-intro {
+      -webkit-border-top-left-radius: 0;
+      -moz-border-radius-topleft: 0;
+      border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 0;
+      -moz-border-radius-topright: 0;
+      border-top-right-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-login .nice-login-brand + .nice-login-intro .nice-login-intro-logo {
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-login .nice-login-brand + .nice-login-intro .nice-login-intro-content {
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+  .nice-login .nice-login-intro {
+    background-color: #f4fbfd;
+    color: #2596b3;
+    display: table;
+    margin-bottom: 15px;
+    margin: -15px -15px 15px;
+    width: calc(100% + 30px);
+    font-size: 13px;
+    font-size: 0.8125rem;
+    -webkit-border-top-left-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    -moz-border-radius-topright: 6px;
+    border-top-right-radius: 6px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-login .nice-login-intro .nice-login-intro-logo {
+      display: table-cell;
+      background-color: #009CC1;
+      color: #FFF;
+      padding: 10px 15px;
+      vertical-align: middle;
+      font-size: 32px;
+      font-size: 2rem;
+      -webkit-border-top-left-radius: 6px;
+      -moz-border-radius-topleft: 6px;
+      border-top-left-radius: 6px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-login .nice-login-intro .nice-login-intro-logo + .nice-login-intro-content {
+        background-color: #f4fbfd;
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+    .nice-login .nice-login-intro .nice-login-intro-content {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 15px;
+      background-color: #f4fbfd;
+      color: #2596b3;
+      -webkit-border-top-left-radius: 6px;
+      -moz-border-radius-topleft: 6px;
+      border-top-left-radius: 6px;
+      -webkit-border-top-right-radius: 6px;
+      -moz-border-radius-topright: 6px;
+      border-top-right-radius: 6px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+  .nice-login .nice-login-logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -55px;
+    top: -55px;
+    width: 110px;
+    text-align: center;
+    color: #FFF;
+    background-color: #009CC1;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    line-height: 90px; }
+    .nice-login .nice-login-logo i {
+      position: relative;
+      top: 10px;
+      font-size: 64px;
+      font-size: 4rem; }
+  .nice-login .nice-login-footer {
+    padding: 15px 15px;
+    margin: 15px -15px -15px; }
+    .nice-login .nice-login-footer .nice-btn.link {
+      padding-left: 0;
+      padding-right: 0; }
+    .nice-login .nice-login-footer .nice-btn-group {
+      margin: 0; }
+  .nice-login .nice-login-version {
+    margin: 15px -15px -15px;
+    padding: 10px;
+    border-top: 1px solid #ECF0F1;
+    background-color: #F5F7F7;
+    color: #B2B2B2;
+    font-size: 11px;
+    font-size: 0.6875rem;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-bottom-right-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    -moz-border-radius-bottomleft: 6px;
+    border-bottom-left-radius: 6px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    text-shadow: 1px 1px 0 #FFF; }
+    .nice-login .nice-login-version .text-brand {
+      font-weight: 200;
+      font-size: 12px;
+      font-size: 0.75rem; }
+
+@media screen and (max-width: 641px) {
+  .nice-login {
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 60px;
+    border-left-width: 0;
+    border-right-width: 0;
+    width: calc(100% + 32px);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; }
+    .nice-login .nice-login-intro {
+      -webkit-border-top-left-radius: 0;
+      -moz-border-radius-topleft: 0;
+      border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 0;
+      -moz-border-radius-topright: 0;
+      border-top-right-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+      .nice-login .nice-login-intro .nice-login-intro-content {
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+    .nice-login .nice-login-version {
+      -webkit-border-bottom-right-radius: 0;
+      -moz-border-radius-bottomright: 0;
+      border-bottom-right-radius: 0;
+      -webkit-border-bottom-left-radius: 0;
+      -moz-border-radius-bottomleft: 0;
+      border-bottom-left-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; } }
 
 /**
  * Module variables

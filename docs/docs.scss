@@ -55,6 +55,12 @@ body {
             }
         }
     }
+    .nice-example-login {
+        .nice-login {
+            position: static;
+            margin-left: 0;
+        }
+    }
     .nice-example {
         .color-swatch {
             width: 100px;

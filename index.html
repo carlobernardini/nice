@@ -84,7 +84,7 @@
                                     <a href="#nice-page-footer">Page footer</a>
                                 </li>
                                 <li class="has-children">
-                                    <span>Components</span>
+                                    <span>UI Elements</span>
                                     <ul>
                                         <li>
                                             <a href="#nice-buttons">Buttons</a>
@@ -931,13 +931,13 @@
             <div class="nice-row" id="nice-range-slider">
                 <h2 class="docs">Range slider</h2>
                 <div class="nice-col-6 nice-col-small-12 nice-example">
-                    <div class="nice-range">
-                        <span class="nice-range-value" style="left: 21px;">150</span>
-                        <input type="range" class="nice-range-slider" min="100" max="1000" step="50" value="150" name="nice-range" />
-                    </div>
+                    <input type="range" class="nice-range-slider" min="100" max="1000" step="50" value="150" />
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
-
+                    <p class="nice-alert warning">
+                        The range slider element is based on the HTML5 range slider input type, which isn't <a href="http://caniuse.com/#feat=input-range" target="_blank" title="Can I use: Range input type">supported by all browsers</a>. Before implementation, make sure all browsers that your application should support are covered.
+                    </p>
+                    <code class="docs">&lt;input type=&quot;range&quot; class=&quot;<span class="main">nice-range-slider</span>&quot; min=&quot;100&quot; max=&quot;1000&quot; step=&quot;50&quot; value=&quot;150&quot; /&gt;</code>
                 </div>
             </div>
             <div class="nice-row" id="nice-form-elements">

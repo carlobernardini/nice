@@ -4440,6 +4440,7 @@ html {
     display: table;
     margin-bottom: 15px;
     margin: -15px -15px 15px;
+    width: calc(100% + 30px);
     font-size: 13px;
     font-size: 0.8125rem;
     -webkit-border-top-left-radius: 6px;

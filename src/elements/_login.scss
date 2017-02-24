@@ -34,6 +34,7 @@
         display: table;
         margin-bottom: 15px;
         margin: -15px -15px 15px;
+        width: calc(100% + 30px);
         @include nice-font-size(13px);
         @include nice-border-radius($top-left: $default-radius * 2, $top-right: $default-radius * 2);
 

@@ -4520,7 +4520,7 @@ html {
       margin: 0; }
   .nice-login .nice-login-version {
     margin: 15px -15px -15px;
-    padding: 10px;
+    padding: 10px 15px;
     border-top: 1px solid #ECF0F1;
     background-color: #F5F7F7;
     color: #B2B2B2;

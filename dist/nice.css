@@ -3703,7 +3703,7 @@ header,
         header .nice-header-form input[type="text"]:focus + button,
         .nice-header .nice-header-form input[type="text"]:focus + button {
           display: block;
-          color: #cfd9db; }
+          color: #D0D1D5; }
     header .nice-header-form .nice-header-input-wrapper,
     .nice-header .nice-header-form .nice-header-input-wrapper {
       position: relative; }
@@ -3736,13 +3736,14 @@ header,
         transition: background-color 0.3s, color 0.3s; }
         header .nice-header-form .nice-header-input-wrapper button i,
         .nice-header .nice-header-form .nice-header-input-wrapper button i {
-          font-size: .9em; }
+          font-size: 1em; }
       header .nice-header-form .nice-header-input-wrapper:hover button,
       .nice-header .nice-header-form .nice-header-input-wrapper:hover button {
         display: block; }
         header .nice-header-form .nice-header-input-wrapper:hover button:hover,
         .nice-header .nice-header-form .nice-header-input-wrapper:hover button:hover {
-          background-color: transparent; }
+          background-color: transparent;
+          color: #009CC1; }
         header .nice-header-form .nice-header-input-wrapper:hover button:active,
         .nice-header .nice-header-form .nice-header-input-wrapper:hover button:active {
           color: #009CC1;
@@ -3904,8 +3905,7 @@ header,
             min-width: 200px;
             color: #FFF;
             display: block;
-            padding: 15px;
-            white-space: nowrap; }
+            padding: 15px; }
             header .nice-header-menu li ul li a:hover, header .nice-header-menu li ul li span:hover,
             .nice-header .nice-header-menu li ul li a:hover,
             .nice-header .nice-header-menu li ul li span:hover {
@@ -4015,24 +4015,6 @@ header,
     font-size: 1em; }
 
 @media screen and (max-width: 1025px) {
-  body {
-    padding-left: 15px;
-    padding-right: 15px;
-    left: 0;
-    -webkit-transition: left 0.2s ease-in-out;
-    -moz-transition: left 0.2s ease-in-out;
-    -ms-transition: left 0.2s ease-in-out;
-    -o-transition: left 0.2s ease-in-out;
-    transition: left 0.2s ease-in-out; }
-    body.expanded {
-      position: relative;
-      left: calc(-100% + 60px);
-      z-index: 999;
-      overflow: visible; }
-      body.expanded .nice-header.fixed {
-        left: calc(-100% + 60px); }
-      body.expanded .nice-header .nice-header-collapse {
-        left: 60px; }
   header,
   .nice-header {
     margin: 0 -15px;
@@ -4052,15 +4034,13 @@ header,
     .nice-header .nice-header-collapse {
       top: 0;
       height: 100%;
-      width: calc(100% - 60px);
       position: fixed;
-      left: 105%;
       background-color: #182642;
-      -webkit-transition: left 0.2s ease-out;
-      -moz-transition: left 0.2s ease-out;
-      -ms-transition: left 0.2s ease-out;
-      -o-transition: left 0.2s ease-out;
-      transition: left 0.2s ease-out; }
+      -webkit-transition: left 0.2s ease-out, right 0.2s ease-out;
+      -moz-transition: left 0.2s ease-out, right 0.2s ease-out;
+      -ms-transition: left 0.2s ease-out, right 0.2s ease-out;
+      -o-transition: left 0.2s ease-out, right 0.2s ease-out;
+      transition: left 0.2s ease-out, right 0.2s ease-out; }
       header .nice-header-collapse > form, header .nice-header-collapse ul, header .nice-header-collapse div, header .nice-header-collapse span,
       .nice-header .nice-header-collapse > form,
       .nice-header .nice-header-collapse ul,
@@ -4096,12 +4076,6 @@ header,
       .nice-header .nice-header-menu > li.fixed-width.w175,
       .nice-header .nice-header-menu > li.fixed-width.w200 {
         width: auto; }
-      header .nice-header-menu > li.highlight > a,
-      .nice-header .nice-header-menu > li.highlight > a {
-        padding: 15px 20px 15px 16px;
-        border-bottom-width: 0;
-        border-left-width: 4px;
-        border-left-style: solid; }
       header .nice-header-menu li,
       .nice-header .nice-header-menu li {
         float: none; }
@@ -4109,7 +4083,6 @@ header,
         .nice-header .nice-header-menu li a,
         .nice-header .nice-header-menu li span {
           position: relative;
-          padding: 15px 20px;
           color: #FFF;
           -webkit-transition: background-color 0.1s, color 0.1s;
           -moz-transition: background-color 0.1s, color 0.1s;
@@ -4265,66 +4238,138 @@ header,
         border-top: 1px solid #4167b2; } }
 
 @media screen and (max-width: 641px) {
-  header .nice-header-form .nice-header-input-wrapper button,
-  .nice-header .nice-header-form .nice-header-input-wrapper button {
-    right: 0; }
-    header .nice-header-form .nice-header-input-wrapper button:active,
-    .nice-header .nice-header-form .nice-header-input-wrapper button:active {
-      color: #FFF; }
-  header .nice-header-form input[type="text"],
-  .nice-header .nice-header-form input[type="text"] {
-    color: #FFF;
-    border-color: transparent;
-    background-color: transparent;
-    padding: 5px 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-    -webkit-transition: border-bottom-color 0.3s;
-    -moz-transition: border-bottom-color 0.3s;
-    -ms-transition: border-bottom-color 0.3s;
-    -o-transition: border-bottom-color 0.3s;
-    transition: border-bottom-color 0.3s; }
-    header .nice-header-form input[type="text"]::-webkit-input-placeholder,
-    .nice-header .nice-header-form input[type="text"]::-webkit-input-placeholder {
-      color: #F5F7F7; }
-    header .nice-header-form input[type="text"]:-moz-placeholder,
-    .nice-header .nice-header-form input[type="text"]:-moz-placeholder {
-      color: #F5F7F7; }
-    header .nice-header-form input[type="text"]::-moz-placeholder,
-    .nice-header .nice-header-form input[type="text"]::-moz-placeholder {
-      color: #F5F7F7; }
-    header .nice-header-form input[type="text"]:-ms-input-placeholder,
-    .nice-header .nice-header-form input[type="text"]:-ms-input-placeholder {
-      color: #F5F7F7; }
-    header .nice-header-form input[type="text"]:focus, header .nice-header-form input[type="text"]:active,
-    .nice-header .nice-header-form input[type="text"]:focus,
-    .nice-header .nice-header-form input[type="text"]:active {
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+    left: 0;
+    right: auto;
+    -webkit-transition: left 0.2s ease-in-out;
+    -moz-transition: left 0.2s ease-in-out;
+    -ms-transition: left 0.2s ease-in-out;
+    -o-transition: left 0.2s ease-in-out;
+    transition: left 0.2s ease-in-out; }
+    body.expanded {
+      position: relative;
+      left: calc(-100% + 60px);
+      z-index: 999;
+      overflow: visible; }
+      body.expanded .nice-header.fixed {
+        left: calc(-100% + 60px); }
+      body.expanded .nice-header .nice-header-collapse {
+        left: 60px; }
+  header .nice-header-collapse,
+  .nice-header .nice-header-collapse {
+    left: 105%;
+    right: auto;
+    width: calc(100% - 60px); }
+    header .nice-header-collapse .nice-header-form .nice-header-input-wrapper button,
+    .nice-header .nice-header-collapse .nice-header-form .nice-header-input-wrapper button {
+      right: 0; }
+      header .nice-header-collapse .nice-header-form .nice-header-input-wrapper button:active,
+      .nice-header .nice-header-collapse .nice-header-form .nice-header-input-wrapper button:active {
+        color: #FFF; }
+    header .nice-header-collapse .nice-header-form input[type="text"],
+    .nice-header .nice-header-collapse .nice-header-form input[type="text"] {
+      color: #FFF;
       border-color: transparent;
-      border-bottom-color: #FFF;
-      width: 100%;
-      margin-left: 0;
+      background-color: transparent;
+      padding: 5px 0;
       -webkit-box-shadow: none;
       -moz-box-shadow: none;
-      box-shadow: none; } }
+      box-shadow: none;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+      -webkit-transition: border-bottom-color 0.3s;
+      -moz-transition: border-bottom-color 0.3s;
+      -ms-transition: border-bottom-color 0.3s;
+      -o-transition: border-bottom-color 0.3s;
+      transition: border-bottom-color 0.3s; }
+      header .nice-header-collapse .nice-header-form input[type="text"]::-webkit-input-placeholder,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]::-webkit-input-placeholder {
+        color: #F5F7F7; }
+      header .nice-header-collapse .nice-header-form input[type="text"]:-moz-placeholder,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:-moz-placeholder {
+        color: #F5F7F7; }
+      header .nice-header-collapse .nice-header-form input[type="text"]::-moz-placeholder,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]::-moz-placeholder {
+        color: #F5F7F7; }
+      header .nice-header-collapse .nice-header-form input[type="text"]:-ms-input-placeholder,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:-ms-input-placeholder {
+        color: #F5F7F7; }
+      header .nice-header-collapse .nice-header-form input[type="text"]:focus, header .nice-header-collapse .nice-header-form input[type="text"]:active,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:focus,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:active {
+        border-color: transparent;
+        border-bottom-color: #FFF;
+        width: 100%;
+        margin-left: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none; }
+    header .nice-header-collapse .nice-header-menu > li.highlight > a,
+    .nice-header .nice-header-collapse .nice-header-menu > li.highlight > a {
+      padding: 15px 20px 15px 16px;
+      border-bottom-width: 0;
+      border-left-width: 4px;
+      border-left-style: solid; }
+    header .nice-header-collapse .nice-header-menu ul li a, header .nice-header-collapse .nice-header-menu ul li span,
+    .nice-header .nice-header-collapse .nice-header-menu ul li a,
+    .nice-header .nice-header-collapse .nice-header-menu ul li span {
+      padding: 15px 20px; } }
 
 @media screen and (min-width: 641px) and (max-width: 1025px) {
-  header .nice-header-form,
-  .nice-header .nice-header-form {
-    width: 50%;
-    position: absolute;
-    right: calc(100% + 75px);
-    padding: 0 15px;
-    background-color: transparent; }
-    header .nice-header-form ~ .nice-header-menu,
-    .nice-header .nice-header-form ~ .nice-header-menu {
-      height: 100%; } }
+  body {
+    padding-left: 15px;
+    padding-right: 15px;
+    left: auto;
+    right: 0;
+    -webkit-transition: right 0.2s ease-in-out;
+    -moz-transition: right 0.2s ease-in-out;
+    -ms-transition: right 0.2s ease-in-out;
+    -o-transition: right 0.2s ease-in-out;
+    transition: right 0.2s ease-in-out; }
+    body.expanded {
+      position: relative;
+      right: 340px;
+      z-index: 999;
+      overflow: visible; }
+      body.expanded .nice-header.fixed {
+        left: -340px; }
+      body.expanded .nice-header .nice-header-collapse {
+        left: auto;
+        right: 0; }
+  header .nice-header-collapse,
+  .nice-header .nice-header-collapse {
+    right: -340px;
+    left: auto;
+    width: 340px; }
+    header .nice-header-collapse .nice-header-form,
+    .nice-header .nice-header-collapse .nice-header-form {
+      width: 285px;
+      position: absolute;
+      right: calc(100% + 40px);
+      padding: 0 15px;
+      background-color: transparent; }
+      header .nice-header-collapse .nice-header-form input[type="text"]:focus,
+      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:focus {
+        width: 100%;
+        margin-left: auto; }
+      header .nice-header-collapse .nice-header-form ~ .nice-header-menu,
+      .nice-header .nice-header-collapse .nice-header-form ~ .nice-header-menu {
+        height: 100%; }
+    header .nice-header-collapse .nice-header-menu > li.highlight > a,
+    .nice-header .nice-header-collapse .nice-header-menu > li.highlight > a {
+      padding: 20px 20px 20px 16px;
+      border-bottom-width: 0;
+      border-left-width: 4px;
+      border-left-style: solid; }
+    header .nice-header-collapse .nice-header-menu > li > a,
+    .nice-header .nice-header-collapse .nice-header-menu > li > a {
+      padding: 20px 20px; } }
 
 html {
   position: relative;

@@ -8,11 +8,13 @@
 }
 
 @mixin nice-font ($style: null, $variant: null, $weight: null, $size: null, $family: null) {
-    font-family: $family;
-    font-style: $style;
-    font-variant: $variant;
-    font-weight: $weight;
-    font-size: $size;
+    font: {
+      family: $family;
+      style: $style;
+      variant: $variant;
+      weight: $weight;
+      size: $size;
+    }
 }
 
 @mixin nice-font-size ($size: 12px) {

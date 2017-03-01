@@ -73,7 +73,7 @@ header,
 
                 + button {
                     display: block;
-                    color: darken($gray-light, 10%);
+                    color: $gray-medium;
                 }
             }
         }
@@ -98,7 +98,7 @@ header,
                 @include nice-transition(background-color 0.3s, color 0.3s);
 
                 i {
-                    font-size: .9em;
+                    font-size: 1em;
                 }
             }
             &:hover {
@@ -107,6 +107,7 @@ header,
 
                     &:hover {
                         background-color: transparent;
+                        color: $color-brand;
                     }
                     &:active {
                         color: $color-brand;
@@ -209,7 +210,7 @@ header,
                         color: $color-white;
                         display: block;
                         padding: 15px;
-                        white-space: nowrap;
+                        // white-space: nowrap;
 
                         &:hover {
                             background-color: $color-brand;
@@ -326,28 +327,6 @@ header,
 }
 
 @include media($mobile-and-tablet) {
-    body {
-        padding-left: 15px;
-        padding-right: 15px;
-        left: 0;
-        @include nice-transition(left .2s ease-in-out);
-
-        &.expanded {
-            position: relative;
-            left: calc(-100% + 60px);
-            z-index: 999;
-            overflow: visible;
-
-            .nice-header {
-                &.fixed {
-                    left: calc(-100% + 60px);
-                }
-                .nice-header-collapse {
-                    left: 60px;
-                }
-            }
-        }
-    }
     header,
     .nice-header {
         margin: 0 -15px;
@@ -363,11 +342,9 @@ header,
         .nice-header-collapse {
             top: 0;
             height: 100%;
-            width: calc(100% - 60px);
             position: fixed;
-            left: 105%;
             background-color: $color-accent;
-            @include nice-transition(left .2s ease-out);
+            @include nice-transition(left .2s ease-out, right .2s ease-out);
 
             > form, ul, div, span {
                 float: none;
@@ -402,21 +379,12 @@ header,
                         width: auto;
                     }
                 }
-                &.highlight {
-                    > a {
-                        padding: 15px 20px 15px 16px;
-                        border-bottom-width: 0;
-                        border-left-width: 4px;
-                        border-left-style: solid;
-                    }
-                }
             }
             li {
                 float: none;
 
                 a, span {
                     position: relative;
-                    padding: 15px 20px;
                     color: $color-white;
                     @include nice-transition(background-color .1s, color .1s);
 
@@ -564,37 +532,85 @@ header,
 }
 
 @include media($mobile) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+        left: 0;
+        right: auto;
+        @include nice-transition(left .2s ease-in-out);
+
+        &.expanded {
+            position: relative;
+            left: calc(-100% + 60px);
+            z-index: 999;
+            overflow: visible;
+
+            .nice-header {
+                &.fixed {
+                    left: calc(-100% + 60px);
+                }
+                .nice-header-collapse {
+                    left: 60px;
+                }
+            }
+        }
+    }
     header,
     .nice-header {
-        .nice-header-form {
-            .nice-header-input-wrapper {
-                button {
-                    right: 0;
+        .nice-header-collapse {
+            left: 105%;
+            right: auto;
+            width: calc(100% - 60px);
 
+            .nice-header-form {
+                .nice-header-input-wrapper {
+                    button {
+                        right: 0;
+
+                        &:active {
+                            color: $color-white;
+                        }
+                    }
+                }
+                input[type="text"] {
+                    color: $color-white;
+                    border-color: transparent;
+                    background-color: transparent;
+                    padding: 5px 0;
+                    @include nice-box-shadow(none);
+                    @include nice-border-radius(0);
+                    @include nice-transition(border-bottom-color 0.3s);
+                    @include nice-placeholder-color {
+                        color: $gray-vlight;
+                    }
+
+                    &:focus,
                     &:active {
-                        color: $color-white;
+                        border-color: transparent;
+                        border-bottom-color: $color-white;
+                        width: 100%;
+                        margin-left: 0;
+                        @include nice-box-shadow(none);
                     }
                 }
             }
-            input[type="text"] {
-                color: $color-white;
-                border-color: transparent;
-                background-color: transparent;
-                padding: 5px 0;
-                @include nice-box-shadow(none);
-                @include nice-border-radius(0);
-                @include nice-transition(border-bottom-color 0.3s);
-                @include nice-placeholder-color {
-                    color: $gray-vlight;
+            .nice-header-menu {
+                > li {
+                    &.highlight {
+                        > a {
+                            padding: 15px 20px 15px 16px;
+                            border-bottom-width: 0;
+                            border-left-width: 4px;
+                            border-left-style: solid;
+                        }
+                    }
                 }
-
-                &:focus,
-                &:active {
-                    border-color: transparent;
-                    border-bottom-color: $color-white;
-                    width: 100%;
-                    margin-left: 0;
-                    @include nice-box-shadow(none);
+                ul {
+                    li {
+                        a, span {
+                            padding: 15px 20px;
+                        }
+                    }
                 }
             }
         }
@@ -602,19 +618,68 @@ header,
 }
 
 @include media($tablet) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+        left: auto;
+        right: 0;
+        @include nice-transition(right .2s ease-in-out);
+
+        &.expanded {
+            position: relative;
+            right: 340px;
+            z-index: 999;
+            overflow: visible;
+
+            .nice-header {
+                &.fixed {
+                    left: -340px;
+                }
+                .nice-header-collapse {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
     header,
     .nice-header {
-        .nice-header-form {
-            width: 50%;
-            position: absolute;
-            right: calc(100% + 75px);
-            padding: 0 15px;
-            background-color: transparent;
+        .nice-header-collapse {
+            right: -340px;
+            left: auto;
+            width: 340px;
 
-            input[type="text"] {
+            .nice-header-form {
+                width: 285px;
+                position: absolute;
+                right: calc(100% + 40px);
+                padding: 0 15px;
+                background-color: transparent;
+
+                input[type="text"] {
+                    &:focus {
+                        width: 100%;
+                        margin-left: auto;
+                    }
+                }
+                ~ .nice-header-menu {
+                    height: 100%;
+                }
             }
-            ~ .nice-header-menu {
-                height: 100%;
+            .nice-header-menu {
+                > li {
+                    &.highlight {
+                        > a {
+                            padding: 20px 20px 20px 16px;
+                            border-bottom-width: 0;
+                            border-left-width: 4px;
+                            border-left-style: solid;
+                        }
+                    }
+                    > a {
+                        padding: 20px 20px;
+                    }
+                }
             }
         }
     }

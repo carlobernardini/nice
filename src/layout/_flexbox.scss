@@ -35,7 +35,7 @@ $item-grow: (
         }
     }
     @each $name, $value in $item-grow {
-        >.nice-flex-#{$name} {
+        >.grow-#{$name} {
             @include flex-grow($value);
         }
     }

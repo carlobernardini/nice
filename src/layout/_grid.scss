@@ -1,17 +1,42 @@
 .nice-container {
-    @include outer-container;
+    @include outer-container ($max-containment);
 }
 .nice-row {
     @include fill-parent();
     @include row();
 }
-@for $i from 1 through 12 {
-    .nice-col-#{$i} {
-        @include span-columns($i);
+
+@mixin col($size, $alias) {
+    @for $i from 1 through 12 {
+        .nice-col-#{if($size != false, $size + '-', '')}#{$i}
+        #{if($alias != false, ', .nice-col-' + $alias + '-' + $i, '')} {
+            @include span-columns($i);
+        }
+        @if($i < 12) {
+            .nice-shift-#{if($size != false, $size + '-', '')}#{$i}
+            #{if($alias != false, ', .nice-shift-' + $alias + '-' + $i, '')} {
+                @include shift($i);
+            }
+        }
     }
 }
-@for $i from 1 through 11 {
-    .nice-shift-#{$i} {
-        @include shift($i);
+
+@include col(false, false);
+
+
+@each $bp, $size, $alias in ($desktop, desktop, large), 
+                    ($tablet, tablet, medium), 
+                    ($mobile-and-tablet, mobile-and-tablet, medium-and-small),
+                    ($mobile, mobile, small) {
+    @include media($bp) {
+        .nice-#{$size}-hide, .nice-#{$alias}-hide {
+            display: none;
+        }
+        @include col(#{$size}, #{$alias});
+        @each $display in block, inline, inline-block {
+            .nice-#{$size}-#{$display}, .nice-#{$alias}-#{$display} {
+                display: #{$display};
+            }
+        }
     }
 }

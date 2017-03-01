@@ -7,12 +7,14 @@
     @return $remSize * 1rem;
 }
 
-@mixin nice-font ($style: normal, $variant: normal, $weight: 300, $size: 1em, $family: $fonts-primary) {
-    font-family: $family;
-    font-style: $style;
-    font-variant: $variant;
-    font-weight: $weight;
-    font-size: $size;
+@mixin nice-font ($style: null, $variant: null, $weight: null, $size: null, $family: null) {
+    font: {
+      family: $family;
+      style: $style;
+      variant: $variant;
+      weight: $weight;
+      size: $size;
+    }
 }
 
 @mixin nice-font-size ($size: 12px) {
@@ -57,10 +59,22 @@
     text-shadow: $params;
 }
 
-@mixin nice-border-radius ($radiuses...) {
+@mixin nice-border-radius ($radiuses: null, $top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
     -webkit-border-radius: $radiuses;
        -moz-border-radius: $radiuses;
             border-radius: $radiuses;
+    -webkit-border-top-left-radius: $top-left;
+        -moz-border-radius-topleft: $top-left;
+            border-top-left-radius: $top-left;
+    -webkit-border-top-right-radius: $top-right;
+        -moz-border-radius-topright: $top-right;
+            border-top-right-radius: $top-right;
+    -webkit-border-bottom-right-radius: $bottom-right;
+        -moz-border-radius-bottomright: $bottom-right;
+            border-bottom-right-radius: $bottom-right;
+    -webkit-border-bottom-left-radius: $bottom-left;
+        -moz-border-radius-bottomleft: $bottom-left;
+            border-bottom-left-radius: $bottom-left;
     -webkit-background-clip: padding-box; 
        -moz-background-clip: padding; 
             background-clip: padding-box;
@@ -88,6 +102,11 @@
          -o-user-select: $param;
             user-select: $param;
 }
+@mixin nice-appearance ($param) {
+    -webkit-appearance: $param;
+       -moz-appearance: $param;
+            appearance: $param;
+}
 
 @mixin nice-placeholder-color {
   &::-webkit-input-placeholder {
@@ -111,32 +130,10 @@
     background: linear-gradient($color-from, $color-to);
 }
 
-@mixin nice-abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+@mixin nice-abs-pos ($top: null, $right: null, $bottom: null, $left: null) {
     top: $top;
     right: $right;
     bottom: $bottom;
     left: $left;
     position: absolute;
-}
-
-
-/**
- * @example when-breakpoint(medium) { width: 50% }
- **/
-@mixin nice-breakpoint ($point) {
-    @if $point == large {
-        @media (min-width: 64.375em) { 
-            @content; 
-        }
-    }
-    @else if $point == medium {
-        @media (min-width: 50em) { 
-            @content; 
-        }
-    }
-    @else if $point == small {
-        @media (min-width: 37.5em)  {
-            @content; 
-        }
-    }
 }

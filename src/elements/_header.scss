@@ -1,7 +1,12 @@
+body {
+    &.nice-fixed-header {
+        padding-top: 60px;
+    }
+}
 header,
 .nice-header {
     position: relative;
-    z-index: 1;
+    z-index: 5;
     background-color: $color-white;
     border-bottom: 1px solid $color-border;
     @include nice-box-shadow(0 1px 3px rgba($color-black, 0.1));
@@ -15,7 +20,7 @@ header,
     .nice-header-container {
         height: 60px;
         @include nice-line-height(60px);
-        @include outer-container;
+        @include outer-container($max-containment);
 
         &:after {
             display: none;
@@ -34,8 +39,8 @@ header,
         a {
             display: inline-block;
         }
-        img {
-            height: 30px;
+        img,
+        svg {
             margin: 15px 0;
             border: 0;
         }
@@ -52,9 +57,9 @@ header,
         padding: 0 15px;
 
         input[type="text"] {
-            display: inline;
+            display: inline-block;
             border-color: $gray-light;
-            padding: 0 10px;
+            padding: 5px 10px;
             @include nice-border-radius(15px);
             @include nice-transition(border-color 0.3s, margin-left 0.3s, width 0.3s);
 
@@ -68,7 +73,7 @@ header,
 
                 + button {
                     display: block;
-                    color: darken($gray-light, 10%);
+                    color: $gray-medium;
                 }
             }
         }
@@ -93,7 +98,7 @@ header,
                 @include nice-transition(background-color 0.3s, color 0.3s);
 
                 i {
-                    font-size: .9em;
+                    font-size: 1em;
                 }
             }
             &:hover {
@@ -102,6 +107,7 @@ header,
 
                     &:hover {
                         background-color: transparent;
+                        color: $color-brand;
                     }
                     &:active {
                         color: $color-brand;
@@ -118,15 +124,74 @@ header,
         margin: 0;
         @include nice-line-height(60px);
 
+        > li {
+            &.highlight {
+                > a, > span {
+                    padding: 20px 10px 16px;
+                    border-bottom: 4px solid transparent;
+                }
+                @each $type in (primary, brand, info, good, warning, bad) {
+                    &.#{$type} {
+                        > a, > span {
+                            border-color: map-get($color-scheme, #{$type});
+                            @include nice-transition(background-color 0.1s, border-color 0.3s);
+
+                            &:hover {
+                                border-color: lighten(map-get($color-scheme, #{$type}), 15%);
+                            }
+                        }
+                    }
+                }
+            }
+            &.fixed-width {
+                > a {
+                    width: 100px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    text-align: center;
+                }
+                &.w125 {
+                    > a {
+                        width: 125px;
+                    }
+                }
+                &.w150 {
+                    > a {
+                        width: 150px;
+                    }
+                }
+                &.w175 {
+                    > a {
+                        width: 175px;
+                    }
+                }
+                &.w200 {
+                    > a {
+                        width: 200px;
+                    }
+                }
+            }
+        }
         li {
             list-style: none;
             display: block;
             float:left;
             position: relative;
 
-            a {
+            a, span {
                 display: block;
-                padding: 0 10px;
+                padding: 20px 10px;
+                line-height: normal;
+                font-size: 1.1em;
+                @include nice-font-size(15px);
+
+                &.icon,
+                &.product-icon,
+                &.additional-icon {
+                    &:before {
+                        margin-right: 5px;
+                    }
+                }
             }
             ul {
                 display: none;
@@ -140,12 +205,12 @@ header,
                     float: none;
                     @include nice-line-height(50px);
 
-                    a {
+                    a, span {
                         min-width: 200px;
                         color: $color-white;
                         display: block;
-                        padding: 0 15px;
-                        white-space: nowrap;
+                        padding: 15px;
+                        // white-space: nowrap;
 
                         &:hover {
                             background-color: $color-brand;
@@ -170,18 +235,20 @@ header,
                 }
             }
             &.has-children {
-                > a {
+                > a, > span {
                     &:after {
                         font-family: $fonts-icon;
                         content: '\f107';
                         color: $color-white;
                         position: absolute;
                         right: 15px;
-                        top: 0;
+                        top: 50%;
+                        @include nice-line-height(20px);
+                        margin-top: -10px;
                     }
                 }
                 &:hover {
-                    > a {
+                    > a, > span {
                         &:after {
                             color: $color-white;
                             // @include nice-animation(flip .15s linear forwards);
@@ -212,6 +279,42 @@ header,
                 }
             }
         }
+        &.menu-alt {
+            > li {
+                padding-top: 17px;
+                padding-bottom: 16px;
+
+                > a {
+                    padding: 5px 10px;
+                    background-color: $gray-light;
+                    @include nice-font-size(12px);
+                    @include nice-transition(color .1s, background-color .1s);
+
+                    &:hover {
+                        background-color: $color-link;
+                        color: $color-white;
+                    }
+                }
+                &:first-child {
+                    > a {
+                        @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
+                    }
+                }
+                &:last-child {
+                    > a {
+                        @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
+                    }
+                }
+                + li {
+                    > a {
+                        border-left: 1px solid $gray-vlight;
+                    }
+                }
+            }
+        }
+        + .nice-header-menu {
+            margin-left: 15px;
+        }
     }
     .nice-header-toggle {
         display: none;
@@ -223,29 +326,7 @@ header,
     }
 }
 
-@include media($mobile) {
-    body {
-        padding-left: 15px;
-        padding-right: 15px;
-        left: 0;
-        @include nice-transition(left .2s ease-in-out);
-
-        &.expanded {
-            position: relative;
-            left: calc(-100% + 60px);
-            z-index: 999;
-            overflow: visible;
-
-            .nice-header {
-                &.fixed {
-                    left: calc(-100% + 60px);
-                }
-                .nice-header-collapse {
-                    left: 60px;
-                }
-            }
-        }
-    }
+@include media($mobile-and-tablet) {
     header,
     .nice-header {
         margin: 0 -15px;
@@ -261,11 +342,9 @@ header,
         .nice-header-collapse {
             top: 0;
             height: 100%;
-            width: calc(100% - 60px);
             position: fixed;
-            left: 105%;
             background-color: $color-accent;
-            @include nice-transition(left .2s ease-out);
+            @include nice-transition(left .2s ease-out, right .2s ease-out);
 
             > form, ul, div, span {
                 float: none;
@@ -275,36 +354,6 @@ header,
             padding: 0 20px;
             background-color: lighten($color-accent, 15%);
 
-            input[type="text"] {
-                color: $color-white;
-                border-color: transparent;
-                background-color: transparent;
-                padding: 0;
-                @include nice-box-shadow(none);
-                @include nice-border-radius(0);
-                @include nice-transition(border-bottom-color 0.3s);
-                @include nice-placeholder-color {
-                    color: $gray-vlight;
-                }
-
-                &:focus,
-                &:active {
-                    border-color: transparent;
-                    border-bottom-color: $color-white;
-                    width: 100%;
-                    margin-left: 0;
-                    @include nice-box-shadow(none);
-                }
-            }
-            .nice-header-input-wrapper {
-                button {
-                    right: 0;
-
-                    &:active {
-                        color: $color-white;
-                    }
-                }
-            }
             ~ .nice-header-menu {
                 height: calc(100% - 60px);    
             }
@@ -313,19 +362,39 @@ header,
             overflow: hidden;
             overflow-y: auto;
             z-index: 5;
+            width: 100%;
             height: 100%;
             @include nice-transition(left .2s ease-in-out);
 
+            > li {
+                &.fixed-width {
+                    > a {
+                        width: auto;
+                        text-align: left;
+                    }
+                    &.w125,
+                    &.w150,
+                    &.w175,
+                    &.w200 {
+                        width: auto;
+                    }
+                }
+            }
             li {
                 float: none;
 
-                a {
+                a, span {
                     position: relative;
-                    padding: 0 20px;
                     color: $color-white;
                     @include nice-transition(background-color .1s, color .1s);
 
                     &::before {
+                        display: -moz-inline-stack;
+                        display: inline-block;
+                        *display: inline-block;
+                        zoom: 1;
+                        width: 20px;
+                        text-align: center;
                         margin-right: 10px;
                     }
                 }
@@ -336,7 +405,7 @@ header,
                     li {
                         white-space: normal;
 
-                        a {
+                        a, span {
                             padding-left: 50px;
                             @include nice-font($size: .9em);
 
@@ -355,7 +424,7 @@ header,
                     }
                 }
                 &.has-children {
-                    > a {
+                    > a, > span {
                         &:after {
                             display: none;
                         }
@@ -385,6 +454,9 @@ header,
                         }
                     }
                 }
+            }
+            &.menu-alt {
+                display: none;
             }
             @for $i from 3 to 5 {
                 &:nth-child(#{$i}) {
@@ -454,6 +526,160 @@ header,
 
             + .nice-header-form {
                 border-top: 1px solid lighten($color-accent, 30%);
+            }
+        }
+    }
+}
+
+@include media($mobile) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+        left: 0;
+        right: auto;
+        @include nice-transition(left .2s ease-in-out);
+
+        &.expanded {
+            position: relative;
+            left: calc(-100% + 60px);
+            z-index: 999;
+            overflow: visible;
+
+            .nice-header {
+                &.fixed {
+                    left: calc(-100% + 60px);
+                }
+                .nice-header-collapse {
+                    left: 60px;
+                }
+            }
+        }
+    }
+    header,
+    .nice-header {
+        .nice-header-collapse {
+            left: 105%;
+            right: auto;
+            width: calc(100% - 60px);
+
+            .nice-header-form {
+                .nice-header-input-wrapper {
+                    button {
+                        right: 0;
+
+                        &:active {
+                            color: $color-white;
+                        }
+                    }
+                }
+                input[type="text"] {
+                    color: $color-white;
+                    border-color: transparent;
+                    background-color: transparent;
+                    padding: 5px 0;
+                    @include nice-box-shadow(none);
+                    @include nice-border-radius(0);
+                    @include nice-transition(border-bottom-color 0.3s);
+                    @include nice-placeholder-color {
+                        color: $gray-vlight;
+                    }
+
+                    &:focus,
+                    &:active {
+                        border-color: transparent;
+                        border-bottom-color: $color-white;
+                        width: 100%;
+                        margin-left: 0;
+                        @include nice-box-shadow(none);
+                    }
+                }
+            }
+            .nice-header-menu {
+                > li {
+                    &.highlight {
+                        > a {
+                            padding: 15px 20px 15px 16px;
+                            border-bottom-width: 0;
+                            border-left-width: 4px;
+                            border-left-style: solid;
+                        }
+                    }
+                }
+                ul {
+                    li {
+                        a, span {
+                            padding: 15px 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media($tablet) {
+    body {
+        padding-left: 15px;
+        padding-right: 15px;
+        left: auto;
+        right: 0;
+        @include nice-transition(right .2s ease-in-out);
+
+        &.expanded {
+            position: relative;
+            right: 340px;
+            z-index: 999;
+            overflow: visible;
+
+            .nice-header {
+                &.fixed {
+                    left: -340px;
+                }
+                .nice-header-collapse {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+    header,
+    .nice-header {
+        .nice-header-collapse {
+            right: -340px;
+            left: auto;
+            width: 340px;
+
+            .nice-header-form {
+                width: 285px;
+                position: absolute;
+                right: calc(100% + 40px);
+                padding: 0 15px;
+                background-color: transparent;
+
+                input[type="text"] {
+                    &:focus {
+                        width: 100%;
+                        margin-left: auto;
+                    }
+                }
+                ~ .nice-header-menu {
+                    height: 100%;
+                }
+            }
+            .nice-header-menu {
+                > li {
+                    &.highlight {
+                        > a {
+                            padding: 20px 20px 20px 16px;
+                            border-bottom-width: 0;
+                            border-left-width: 4px;
+                            border-left-style: solid;
+                        }
+                    }
+                    > a {
+                        padding: 20px 20px;
+                    }
+                }
             }
         }
     }

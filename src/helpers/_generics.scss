@@ -1,6 +1,11 @@
 body {
+    color: $color-text;
     background-color: $gray-vlight;
     font-family: $fonts-primary;
+    font-weight: $default-font-weight;
+    text-rendering: geometricPrecision;
+    line-height: 1.5;
+    @include nice-font-size(14px);
 }
 a {
     color: $color-link;
@@ -11,38 +16,59 @@ a {
         color: lighten($color-link, 10%);
     }
 }
+p {
+    margin: 0 0 15px 0;
+}
+strong {
+    font-weight: 600;
+}
 .icon {
     &::before {
         font-family: FontAwesome;
     }
 }
+i {
+    &.icon {
+        font-style: normal;
+    }
+}
+.nice-responsive-container {
+    overflow:auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin-bottom: 15px;
+}
 .nice-circle {
     @include nice-border-radius(50%);
 }
-.nice-muted {
-    color: $gray-medium;
+@each $type in (brand, link, text, primary, accent, muted, good, info, warning, bad, white, black) {
+    .nice-bg-#{$type} {
+        background-color: map-get($color-scheme, #{$type});
+    }
 }
-.nice-brand {
-    color: $color-brand;
+.clearfix {
+    @extend %clearfix;
 }
-.nice-bg-brand {
-    background-color: $color-brand;
+.shown {
+    display: block;
 }
-.nice-bg-primary {
-    background-color: $color-primary;
+.hidden {
+    display: none;
 }
-.nice-bg-accent {
-    background-color: $color-accent;
+.invisible {
+    visibility: hidden;
 }
-.nice-bg-warning {
-    background-color: $color-warning;
+.pull-left {
+    float: left;
 }
-.nice-bg-danger {
-    background-color: $color-bad;
+.pull-right {
+    float: right;
 }
-.nice-bg-info {
-    background-color: $color-info;
+.center-block {
+    margin: 0 auto;
 }
-.nice-bg-success {
-    background-color: $color-good;
+@each $value in (fixed, relative, absolute, static) {
+    .position-#{$value} {
+        position: $value;
+    }
 }

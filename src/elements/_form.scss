@@ -1,9 +1,16 @@
+/**
+ * Module variables
+ **/
+$select-caret-base64: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+';
+
+/**
+ * Module placeholders
+ **/
 %form-control {
     border: 1px solid $color-border;
     outline: none;
-    padding: 0 5px;
+    padding: 5px;
     font-family: $fonts-primary;
-    font-size: 1em;
     width: 100%;
     display: block;
     background-color: $color-white;
@@ -17,18 +24,17 @@
         @include nice-box-shadow(inset 0 2px 2px $gray-light);
     }
 }
+
 input {
     &.nice-form-control {
-        &[type="text"],
-        &[type="password"] {
-            @extend %form-control;
-            @include nice-line-height(30px);
-        }
+        @extend %form-control;
+        @include nice-line-height(20px);
     }
 }
 select {
     &.nice-form-control {
-        height: calculateRem(30px);
+        height: calculateRem(32px);
+        @include nice-line-height(20px);
         @extend %form-control;
 
         &[multiple] {
@@ -45,17 +51,100 @@ textarea {
     }
 }
 .nice-form-group {
-    margin-bottom: 15px;
+    label {
+        margin-bottom: 5px;
+        font-weight: 600;
+        display: block;
+    }
+    + .nice-form-group {
+        margin-top: 15px;
+    }
+}
+.nice-form-inline {
+    .nice-form-group {
+        margin-top: 0;
+        vertical-align: middle;
+        @extend %display-inline-block;
+
+        input,
+        select {
+            &.nice-form-control {
+                width: auto;
+                vertical-align: middle;
+                @extend %display-inline-block;
+            }
+        }
+        label {
+            @extend %display-inline-block;
+        }
+    }
+    .nice-control-group {
+        > {
+            input.nice-form-control, 
+            select.nice-form-control,
+            .nice-control-group-btn {
+                display: table-cell;
+            }
+        }
+    }
 }
 .nice-control-group {
-    > *:first-child {
-        @include nice-border-radius($default-radius 0 0 $default-radius);
-    }
-    > *:last-child {
-        @include nice-border-radius(0 $default-radius $default-radius 0);
-    }
-    > *:not(:first-child):not(:last-child) {
-        @include nice-border-radius(none);
+    display: table;
+    white-space: nowrap;
+    border-collapse: separate;
+
+    > {
+        input.nice-form-control, 
+        select.nice-form-control,
+        .nice-control-group-btn {
+            display: table-cell;
+        }
+        *:first-child {
+            @include nice-border-radius($default-radius 0 0 $default-radius);
+        }
+        *:last-child {
+            @include nice-border-radius(0 $default-radius $default-radius 0);
+        }
+        *:not(:first-child):not(:last-child) {
+            margin-left: -1px;
+            @include nice-border-radius(0);
+        }
+        .nice-form-control {
+            position: relative;
+            float: left;
+            width: 100%;
+            z-index: 2;
+
+            &:focus {
+                z-index: 3;
+            }
+        }
+        .nice-control-group-btn {
+            font-size: 0;
+            white-space: nowrap;
+            vertical-align: middle;
+            position: relative;
+            width: 1%;
+
+            &:last-child {
+                button,
+                .nice-btn {
+                    z-index: 2;
+                    margin-left: -1px;
+                }
+            }
+            button,
+            .nice-btn {
+                position: relative;
+            }
+            *:last-child {
+                margin-left: -1px;
+                @include nice-border-radius(0 $default-radius $default-radius 0);
+            }
+            *:not(:first-child):not(:last-child) {
+                @include nice-border-radius(none);
+            }
+        }
     }
 }
 .nice-radio,
@@ -65,6 +154,7 @@ textarea {
         min-height: 20px;
         padding-left: 20px;
         margin-bottom: 0;
+        font-weight: normal;
         @extend %display-inline-block;
     }
     input[type="checkbox"],
@@ -74,5 +164,22 @@ textarea {
         margin-left: -20px;
         padding: 0;
         @include nice-box-sizing(border-box);
+    }
+}
+
+/**
+ * Normalize <select /> appearance across browsers
+ * Target Webkit-browsers only
+ **/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {
+        &.nice-form-control {
+            background: $color-white url($select-caret-base64) no-repeat right 50%;
+            @include nice-appearance(none);
+
+            &[multiple] {
+                background-image: none;
+            }
+        }
     }
 }

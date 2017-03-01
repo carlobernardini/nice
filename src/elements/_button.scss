@@ -15,7 +15,8 @@
     @extend %display-inline-block;
     @extend %disable-user-select;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $color-black;
         border: 1px solid darken($color-border, 15%);
         background-color: $gray-vlight;
@@ -79,7 +80,8 @@
             padding: 6px 11px;
             @include nice-font($size: 14px);
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: lighten(map-get($color-scheme, #{$type}), 5%);
             }
             &:active {

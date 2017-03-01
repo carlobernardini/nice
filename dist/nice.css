@@ -5408,7 +5408,7 @@ table.nice-table {
   transition: border 0.1s, background 0.1s;
   font-size: 14px;
   font-size: 0.875rem; }
-  .nice-btn:hover {
+  .nice-btn:hover, .nice-btn:focus {
     color: #000;
     border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
@@ -5460,7 +5460,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.primary:hover {
+    .nice-btn.primary:hover, .nice-btn.primary:focus {
       background-color: #ff940c; }
     .nice-btn.primary:active {
       -webkit-box-shadow: inset 0px 2px 1px #d87900;
@@ -5481,7 +5481,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.accent:hover {
+    .nice-btn.accent:hover, .nice-btn.accent:focus {
       background-color: #1f3155; }
     .nice-btn.accent:active {
       -webkit-box-shadow: inset 0px 2px 1px #111b2f;
@@ -5502,7 +5502,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.info:hover {
+    .nice-btn.info:hover, .nice-btn.info:focus {
       background-color: #75cce2; }
     .nice-btn.info:active {
       -webkit-box-shadow: inset 0px 2px 1px #4bbcda;
@@ -5523,7 +5523,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.good:hover {
+    .nice-btn.good:hover, .nice-btn.good:focus {
       background-color: #6ec06e; }
     .nice-btn.good:active {
       -webkit-box-shadow: inset 0px 2px 1px #4cae4c;
@@ -5544,7 +5544,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.warning:hover {
+    .nice-btn.warning:hover, .nice-btn.warning:focus {
       background-color: #ffc033; }
     .nice-btn.warning:active {
       -webkit-box-shadow: inset 0px 2px 1px #ffb000;
@@ -5565,7 +5565,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.bad:hover {
+    .nice-btn.bad:hover, .nice-btn.bad:focus {
       background-color: #f53d4b; }
     .nice-btn.bad:active {
       -webkit-box-shadow: inset 0px 2px 1px #f30d1d;

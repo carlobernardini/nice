@@ -21,6 +21,7 @@ html {
                 margin: 15px 0;
             }
             .nice-footer-menu {
+                padding: 0;
                 margin: 0;
                 float: right;
 
@@ -75,6 +76,13 @@ html {
             footer,
             .nice-footer {
                 padding: 0 15px;
+            }
+
+            &.expanded {
+                footer,
+                .nice-footer {
+                    bottom: -$default-footer-height;
+                }
             }
         }
     }

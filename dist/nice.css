@@ -4392,6 +4392,7 @@ html {
         margin: 15px 0; }
       html body footer .nice-footer-menu,
       html body .nice-footer .nice-footer-menu {
+        padding: 0;
         margin: 0;
         float: right; }
         html body footer .nice-footer-menu li,
@@ -4428,7 +4429,10 @@ html {
 @media screen and (max-width: 1025px) {
   html body footer,
   html body .nice-footer {
-    padding: 0 15px; } }
+    padding: 0 15px; }
+  html body.expanded footer,
+  html body.expanded .nice-footer {
+    bottom: -100px; } }
 
 .nice-login {
   display: block;

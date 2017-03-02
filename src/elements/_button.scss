@@ -5,7 +5,7 @@
     background-color: $color-white;
     padding: 5px 10px;
     text-decoration:none;
-    outline: none;
+    outline-style: none;
     text-align: center;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
@@ -15,10 +15,14 @@
     @extend %display-inline-block;
     @extend %disable-user-select;
 
-    &:hover {
+    &:hover,
+    &:focus {
         color: $color-black;
         border: 1px solid darken($color-border, 15%);
         background-color: $gray-vlight;
+    }
+    &:focus {
+        outline-style: auto;
     }
     &:active {
         border: 1px solid darken($color-border, 15%);
@@ -79,7 +83,8 @@
             padding: 6px 11px;
             @include nice-font($size: 14px);
 
-            &:hover {
+            &:hover,
+            &:focus {
                 background-color: lighten(map-get($color-scheme, #{$type}), 5%);
             }
             &:active {

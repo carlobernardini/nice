@@ -52,6 +52,7 @@
         @include nice-line-height(20px);
         @include nice-border-radius(15px);
         @include nice-transition(width 0.3s ease-in-out);
+        @include nice-text-shadow(1px 1px 0 rgba(0,0,0,.5));
     }
     &.accent {
         .nice-progress-fill {

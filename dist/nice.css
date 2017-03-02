@@ -6928,7 +6928,8 @@ summary.nice-card {
     -moz-transition: width 0.3s ease-in-out;
     -ms-transition: width 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
+    transition: width 0.3s ease-in-out;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); }
   .nice-progress.accent .nice-progress-fill {
     background-color: #182642; }
   .nice-progress.brand .nice-progress-fill {

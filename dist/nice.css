@@ -5390,7 +5390,7 @@ table.nice-table {
   background-color: #FFF;
   padding: 5px 10px;
   text-decoration: none;
-  outline: none;
+  outline-style: none;
   text-align: center;
   font-family: "Open Sans", sans-serif, helvetica;
   line-height: 20px;
@@ -5412,6 +5412,8 @@ table.nice-table {
     color: #000;
     border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
+  .nice-btn:focus {
+    outline-style: auto; }
   .nice-btn:active {
     border: 1px solid #a8a9b1;
     background: #ECF0F1;

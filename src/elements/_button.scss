@@ -5,7 +5,7 @@
     background-color: $color-white;
     padding: 5px 10px;
     text-decoration:none;
-    outline: none;
+    outline-style: none;
     text-align: center;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
@@ -20,6 +20,9 @@
         color: $color-black;
         border: 1px solid darken($color-border, 15%);
         background-color: $gray-vlight;
+    }
+    &:focus {
+        outline-style: auto;
     }
     &:active {
         border: 1px solid darken($color-border, 15%);

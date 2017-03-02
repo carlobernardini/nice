@@ -2819,6 +2819,12 @@ i.icon {
     content: "";
     display: table; }
 
+.nice-container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .nice-row {
   width: 100%;
   display: block; }

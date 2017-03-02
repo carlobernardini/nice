@@ -1,6 +1,12 @@
 .nice-container {
     @include outer-container ($max-containment);
 }
+.nice-container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .nice-row {
     @include fill-parent();
     @include row();

@@ -2819,6 +2819,12 @@ i.icon {
     content: "";
     display: table; }
 
+.nice-container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+
 .nice-row {
   width: 100%;
   display: block; }
@@ -5390,7 +5396,7 @@ table.nice-table {
   background-color: #FFF;
   padding: 5px 10px;
   text-decoration: none;
-  outline: none;
+  outline-style: none;
   text-align: center;
   font-family: "Open Sans", sans-serif, helvetica;
   line-height: 20px;
@@ -5408,10 +5414,12 @@ table.nice-table {
   transition: border 0.1s, background 0.1s;
   font-size: 14px;
   font-size: 0.875rem; }
-  .nice-btn:hover {
+  .nice-btn:hover, .nice-btn:focus {
     color: #000;
     border: 1px solid #a8a9b1;
     background-color: #F5F7F7; }
+  .nice-btn:focus {
+    outline-style: auto; }
   .nice-btn:active {
     border: 1px solid #a8a9b1;
     background: #ECF0F1;
@@ -5460,7 +5468,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.primary:hover {
+    .nice-btn.primary:hover, .nice-btn.primary:focus {
       background-color: #ff940c; }
     .nice-btn.primary:active {
       -webkit-box-shadow: inset 0px 2px 1px #d87900;
@@ -5481,7 +5489,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.accent:hover {
+    .nice-btn.accent:hover, .nice-btn.accent:focus {
       background-color: #1f3155; }
     .nice-btn.accent:active {
       -webkit-box-shadow: inset 0px 2px 1px #111b2f;
@@ -5502,7 +5510,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.info:hover {
+    .nice-btn.info:hover, .nice-btn.info:focus {
       background-color: #75cce2; }
     .nice-btn.info:active {
       -webkit-box-shadow: inset 0px 2px 1px #4bbcda;
@@ -5523,7 +5531,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.good:hover {
+    .nice-btn.good:hover, .nice-btn.good:focus {
       background-color: #6ec06e; }
     .nice-btn.good:active {
       -webkit-box-shadow: inset 0px 2px 1px #4cae4c;
@@ -5544,7 +5552,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.warning:hover {
+    .nice-btn.warning:hover, .nice-btn.warning:focus {
       background-color: #ffc033; }
     .nice-btn.warning:active {
       -webkit-box-shadow: inset 0px 2px 1px #ffb000;
@@ -5565,7 +5573,7 @@ table.nice-table {
     border: none;
     padding: 6px 11px;
     font-size: 14px; }
-    .nice-btn.bad:hover {
+    .nice-btn.bad:hover, .nice-btn.bad:focus {
       background-color: #f53d4b; }
     .nice-btn.bad:active {
       -webkit-box-shadow: inset 0px 2px 1px #f30d1d;
@@ -6928,7 +6936,8 @@ summary.nice-card {
     -moz-transition: width 0.3s ease-in-out;
     -ms-transition: width 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
+    transition: width 0.3s ease-in-out;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); }
   .nice-progress.accent .nice-progress-fill {
     background-color: #182642; }
   .nice-progress.brand .nice-progress-fill {

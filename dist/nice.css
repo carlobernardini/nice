@@ -4167,7 +4167,8 @@ header,
       padding: 10px 10px;
       background-color: transparent;
       outline: none;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
       header .nice-header-toggle .icon-bar,
       .nice-header .nice-header-toggle .icon-bar {
         display: block;
@@ -4224,6 +4225,9 @@ header,
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0); }
+      header .nice-header-toggle:hover .icon-bar,
+      .nice-header .nice-header-toggle:hover .icon-bar {
+        background-color: #009CC1; }
       header .nice-header-toggle:focus, header .nice-header-toggle:active,
       .nice-header .nice-header-toggle:focus,
       .nice-header .nice-header-toggle:active {
@@ -4822,8 +4826,7 @@ textarea.nice-form-control {
   .nice-tabs li {
     margin-bottom: -1px;
     position: relative;
-    float: left;
-    display: block; }
+    float: left; }
     .nice-tabs li + li {
       margin-left: 1px; }
     .nice-tabs li.brand a {

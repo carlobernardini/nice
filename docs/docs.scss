@@ -8,6 +8,7 @@
         '../src/helpers/mixins';
 
 body {
+    min-width: 375px;
     margin: 0;
 
     h1.docs {

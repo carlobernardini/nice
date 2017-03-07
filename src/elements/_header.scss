@@ -475,6 +475,7 @@ header,
             background-color: transparent;
             outline: none;
             text-align: center;
+            cursor: pointer;
 
             .icon-bar {
                 display: block;
@@ -509,6 +510,11 @@ header,
                     &.bottom-bar {
                         @include nice-transform(rotate(0));
                     }
+                }
+            }
+            &:hover {
+                .icon-bar {
+                    background-color: $color-brand;
                 }
             }
             &:focus,

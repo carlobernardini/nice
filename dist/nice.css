@@ -4167,7 +4167,8 @@ header,
       padding: 10px 10px;
       background-color: transparent;
       outline: none;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
       header .nice-header-toggle .icon-bar,
       .nice-header .nice-header-toggle .icon-bar {
         display: block;
@@ -4224,6 +4225,9 @@ header,
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0); }
+      header .nice-header-toggle:hover .icon-bar,
+      .nice-header .nice-header-toggle:hover .icon-bar {
+        background-color: #009CC1; }
       header .nice-header-toggle:focus, header .nice-header-toggle:active,
       .nice-header .nice-header-toggle:focus,
       .nice-header .nice-header-toggle:active {
@@ -4822,66 +4826,9 @@ textarea.nice-form-control {
   .nice-tabs li {
     margin-bottom: -1px;
     position: relative;
-    float: left;
-    display: block; }
-    .nice-tabs li a {
-      text-align: center;
-      min-width: 80px;
-      display: block;
-      text-decoration: none;
-      padding: 10px 15px;
-      margin-right: 2px;
-      position: relative;
-      white-space: nowrap;
-      outline: none;
-      border: 1px solid transparent;
-      line-height: 20px;
-      line-height: 1.25rem;
-      -webkit-border-radius: 3px 3px 0 0;
-      -moz-border-radius: 3px 3px 0 0;
-      border-radius: 3px 3px 0 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box; }
-      .nice-tabs li a:hover {
-        background-color: #ECF0F1; }
-      .nice-tabs li a.icon {
-        min-width: auto;
-        text-align: left;
-        padding-left: 30px; }
-        .nice-tabs li a.icon:before {
-          position: absolute;
-          left: 15px;
-          top: 50%;
-          margin-top: -10px; }
-    .nice-tabs li.current a {
-      background-color: #FFF;
-      border: 1px solid #D0D1D5;
-      border-bottom-color: #FFF;
-      cursor: default;
-      color: #000; }
-      .nice-tabs li.current a:hover {
-        background-color: #FFF; }
-    .nice-tabs li.primary a {
-      background-color: #F18700;
-      color: #FFF;
-      -webkit-transition: background-color 0.3s;
-      -moz-transition: background-color 0.3s;
-      -ms-transition: background-color 0.3s;
-      -o-transition: background-color 0.3s;
-      transition: background-color 0.3s; }
-      .nice-tabs li.primary a:hover {
-        background-color: #ff9f25; }
-    .nice-tabs li.accent a {
-      background-color: #182642;
-      color: #FFF;
-      -webkit-transition: background-color 0.3s;
-      -moz-transition: background-color 0.3s;
-      -ms-transition: background-color 0.3s;
-      -o-transition: background-color 0.3s;
-      transition: background-color 0.3s; }
-      .nice-tabs li.accent a:hover {
-        background-color: #263c67; }
+    float: left; }
+    .nice-tabs li + li {
+      margin-left: 1px; }
     .nice-tabs li.brand a {
       background-color: #009CC1;
       color: #FFF;
@@ -4890,8 +4837,212 @@ textarea.nice-form-control {
       -ms-transition: background-color 0.3s;
       -o-transition: background-color 0.3s;
       transition: background-color 0.3s; }
+      .nice-tabs li.brand a .badge {
+        background-color: #0fd1ff; }
       .nice-tabs li.brand a:hover {
         background-color: #00c5f4; }
+        .nice-tabs li.brand a:hover .badge {
+          background-color: #009CC1;
+          color: #FFF; }
+    .nice-tabs li.brand.current a {
+      border-top-color: #009CC1; }
+      .nice-tabs li.brand.current a .badge {
+        background-color: #009CC1; }
+    .nice-tabs li.primary a {
+      background-color: #F18700;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.primary a .badge {
+        background-color: #ffaa3f; }
+      .nice-tabs li.primary a:hover {
+        background-color: #ff9f25; }
+        .nice-tabs li.primary a:hover .badge {
+          background-color: #F18700;
+          color: #FFF; }
+    .nice-tabs li.primary.current a {
+      border-top-color: #F18700; }
+      .nice-tabs li.primary.current a .badge {
+        background-color: #F18700; }
+    .nice-tabs li.accent a {
+      background-color: #182642;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.accent a .badge {
+        background-color: #2c467a; }
+      .nice-tabs li.accent a:hover {
+        background-color: #263c67; }
+        .nice-tabs li.accent a:hover .badge {
+          background-color: #182642;
+          color: #FFF; }
+    .nice-tabs li.accent.current a {
+      border-top-color: #182642; }
+      .nice-tabs li.accent.current a .badge {
+        background-color: #182642; }
+    .nice-tabs li.info a {
+      background-color: #60C4DE;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.info a .badge {
+        background-color: #9fdceb; }
+      .nice-tabs li.info a:hover {
+        background-color: #8ad4e7; }
+        .nice-tabs li.info a:hover .badge {
+          background-color: #60C4DE;
+          color: #FFF; }
+    .nice-tabs li.info.current a {
+      border-top-color: #60C4DE; }
+      .nice-tabs li.info.current a .badge {
+        background-color: #60C4DE; }
+    .nice-tabs li.good a {
+      background-color: #5CB85C;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.good a .badge {
+        background-color: #91cf91; }
+      .nice-tabs li.good a:hover {
+        background-color: #80c780; }
+        .nice-tabs li.good a:hover .badge {
+          background-color: #5CB85C;
+          color: #FFF; }
+    .nice-tabs li.good.current a {
+      border-top-color: #5CB85C; }
+      .nice-tabs li.good.current a .badge {
+        background-color: #5CB85C; }
+    .nice-tabs li.warning a {
+      background-color: #FFB819;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.warning a .badge {
+        background-color: #ffd066; }
+      .nice-tabs li.warning a:hover {
+        background-color: #ffc84c; }
+        .nice-tabs li.warning a:hover .badge {
+          background-color: #FFB819;
+          color: #FFF; }
+    .nice-tabs li.warning.current a {
+      border-top-color: #FFB819; }
+      .nice-tabs li.warning.current a .badge {
+        background-color: #FFB819; }
+    .nice-tabs li.bad a {
+      background-color: #F42534;
+      color: #FFF;
+      -webkit-transition: background-color 0.3s;
+      -moz-transition: background-color 0.3s;
+      -ms-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .nice-tabs li.bad a .badge {
+        background-color: #f86e78; }
+      .nice-tabs li.bad a:hover {
+        background-color: #f65661; }
+        .nice-tabs li.bad a:hover .badge {
+          background-color: #F42534;
+          color: #FFF; }
+    .nice-tabs li.bad.current a {
+      border-top-color: #F42534; }
+      .nice-tabs li.bad.current a .badge {
+        background-color: #F42534; }
+    .nice-tabs li a {
+      text-align: center;
+      min-width: 80px;
+      display: block;
+      text-decoration: none;
+      padding: 10px 15px;
+      position: relative;
+      white-space: nowrap;
+      outline: none;
+      background-color: #ECF0F1;
+      line-height: 20px;
+      line-height: 1.25rem;
+      -webkit-transition: background-color 0.1s, color 0.1s;
+      -moz-transition: background-color 0.1s, color 0.1s;
+      -ms-transition: background-color 0.1s, color 0.1s;
+      -o-transition: background-color 0.1s, color 0.1s;
+      transition: background-color 0.1s, color 0.1s; }
+      .nice-tabs li a:hover {
+        background-color: #009CC1;
+        color: #FFF; }
+        .nice-tabs li a:hover .badge {
+          background-color: #FFF;
+          color: #009CC1; }
+      .nice-tabs li a.icon {
+        min-width: auto;
+        text-align: left;
+        padding-left: 35px; }
+        .nice-tabs li a.icon:before {
+          position: absolute;
+          left: 5px;
+          top: 50%;
+          margin-top: -10px;
+          width: 24px;
+          text-align: center; }
+      .nice-tabs li a .badge {
+        text-align: center;
+        font-size: .8em;
+        padding: 1px 6px 2px;
+        background-color: #c0cdd1;
+        color: #FFF;
+        margin: 1px -3px 0 8px;
+        float: right;
+        line-height: 16px;
+        line-height: 1rem;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+        -webkit-transition: background-color 0.1s, color 0.1s;
+        -moz-transition: background-color 0.1s, color 0.1s;
+        -ms-transition: background-color 0.1s, color 0.1s;
+        -o-transition: background-color 0.1s, color 0.1s;
+        transition: background-color 0.1s, color 0.1s; }
+    .nice-tabs li.current a {
+      background-color: #FFF;
+      border: 1px solid #D0D1D5;
+      border-bottom-color: #FFF;
+      border-top: 1px solid #F18700;
+      cursor: default;
+      color: #000; }
+      .nice-tabs li.current a:hover {
+        background-color: #FFF; }
+      .nice-tabs li.current a .badge {
+        background-color: #F18700;
+        color: #FFF; }
+    .nice-tabs li:first-child a {
+      -webkit-border-top-left-radius: 3px;
+      -moz-border-radius-topleft: 3px;
+      border-top-left-radius: 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-tabs li:last-child a {
+      -webkit-border-top-right-radius: 3px;
+      -moz-border-radius-topright: 3px;
+      border-top-right-radius: 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
   .nice-tabs.bold {
     font-weight: 600; }
   .nice-tabs.small a {
@@ -4912,6 +5063,9 @@ textarea.nice-form-control {
   border: 1px solid #D0D1D5;
   background-color: #FFF;
   padding: 15px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-border-radius: 0 3px 3px;
   -moz-border-radius: 0 3px 3px;
   border-radius: 0 3px 3px;
@@ -4928,6 +5082,27 @@ textarea.nice-form-control {
     padding: 15px; }
     .nice-tabs-wrapper ul.nice-tabs-content li.current {
       display: block; }
+
+@media screen and (max-width: 1025px) {
+  .nice-tabs li a.icon {
+    min-width: 80px;
+    text-align: left;
+    padding: 25px 15px 5px;
+    text-align: center; }
+    .nice-tabs li a.icon:before {
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      margin-left: -12px;
+      width: 24px;
+      text-align: center; }
+  .nice-tabs.small a.icon {
+    min-width: 60px;
+    padding: 20px 10px 3px; }
+    .nice-tabs.small a.icon:before {
+      top: 5px;
+      left: 50%;
+      margin-top: 0; } }
 
 .nice-panel .nice-panel-heading + table.nice-table {
   border-top: 0; }

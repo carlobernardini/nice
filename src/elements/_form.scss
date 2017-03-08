@@ -16,12 +16,21 @@ $select-caret-base64: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1
     background-color: $color-white;
     @include nice-border-radius($default-radius);
     @include nice-box-sizing(border-box);
-    @include nice-transition(box-shadow 0.1s, border 0.1s);
+    @include nice-transition(box-shadow .1s, border .1s, background-color .1s);
     @include nice-font-size(14px);
 
     &:focus {
         border: 1px solid $color-brand;
         @include nice-box-shadow(inset 0 2px 2px $gray-light);
+    }
+    @each $type in (info, good, warning, bad) {
+        &.#{$type} {
+            border-color: map-get($color-scheme, $type);
+
+            &:focus {
+                border-color: $color-brand;
+            }
+        }
     }
 }
 
@@ -92,6 +101,7 @@ textarea {
     display: table;
     white-space: nowrap;
     border-collapse: separate;
+    margin-bottom: 10px;
 
     > {
         input.nice-form-control, 
@@ -119,18 +129,21 @@ textarea {
                 z-index: 3;
             }
         }
+        .nice-input-addon,
         .nice-control-group-btn {
-            font-size: 0;
             white-space: nowrap;
             vertical-align: middle;
-            position: relative;
             width: 1%;
+        }
+        .nice-control-group-btn {
+            font-size: 0;
+            position: relative;
 
             &:last-child {
                 button,
                 .nice-btn {
                     z-index: 2;
-                    margin-left: -1px;
+                    margin-left: -2px;
                 }
             }
             button,
@@ -143,6 +156,32 @@ textarea {
             }
             *:not(:first-child):not(:last-child) {
                 @include nice-border-radius(none);
+            }
+        }
+    }
+    .nice-input-addon {
+        background-color: $gray-light;
+        display: table-cell;
+        padding: 3px 10px;
+        border: 1px solid $color-border;
+
+        &:first-child {
+            border-right-width: 0;
+            @include nice-border-radius($top-left: $default-radius, $bottom-left: $default-radius);
+        }
+    }
+    @each $type in (info, good, warning, bad) {
+        &.#{$type} {
+            .nice-input-addon {
+                background-color: lighten(map-get($color-scheme, $type), 35%);
+                border-color: map-get($color-scheme, $type);
+                color: darken(map-get($color-scheme, #{$type}), 20%);
+            }
+            .nice-form-control {
+                @extend .#{$type};
+            }
+            .nice-btn {
+                @extend .#{$type};
             }
         }
     }

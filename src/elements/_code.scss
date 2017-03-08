@@ -1,12 +1,11 @@
 code {
-    display: block;
+    padding: 3px 3px;
+    color: $color-bad;
     position: relative;
-    padding: 15px;
-    border: 1px solid $color-border;
+    border: 1px solid $gray-light;
     background-color: $color-white;
-    font-size: 12px;
-    line-height: 18px;
-    color: $gray-dark;
+    font-size: 12px; 
+    line-height: inherit;
     overflow: auto;
     white-space: pre-wrap;
     @include nice-transition(max-height 0.5s);
@@ -27,18 +26,19 @@ code {
     &.inline {
         display: inline;
         background-color: $color-white;
-        line-height: inherit;
-        border: none;
-        padding: 3px 3px;
-        color: $color-bad;
         // font-size: inherit;
-        @include nice-border-radius(#{$default-radius - 1}px);
+        
     }
 }
 .nice-code-container {
     margin-bottom: 20px;
 
     code {
+        color: $color-text;
+        display: block;
+        padding: 15px;
+        line-height: 18px;
+        border: 1px solid $color-border;
         border-bottom: none;
         @include nice-border-radius($default-radius $default-radius 0 0);
 

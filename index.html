@@ -989,7 +989,10 @@
                     </div>
                     <div class="nice-form-group">
                         <div class="nice-control-group">
-                            <input type="text" class="nice-form-control" placeholder="Input group..." />
+                            <span class="nice-input-addon">
+                                My field
+                            </span>
+                            <input type="text" class="nice-form-control" placeholder="Some placeholder..." />
                             <span class="nice-control-group-btn">
                                 <button type="button" class="nice-btn">
                                     Try me
@@ -1025,19 +1028,19 @@
                             </label>
                         </div>
                     </div>
-<form class="nice-form-inline" style="margin-top: 30px;">
-    <div class="nice-form-group">
-        <label for="demo-input-3">Name</label>
-        <input type="text" class="nice-form-control" placeholder="Foo Bar" id="demo-input-3" />
-    </div>
-    <div class="nice-form-group">
-        <label for="demo-input-4">Email</label>
-        <input type="text" class="nice-form-control" placeholder="bar.foo@textkernel.com" id="demo-input-4" />
-    </div>
-    <button class="nice-btn">
-        <i class="icon fa-envelope-o"></i>
-    </button>
-</form>
+                    <form class="nice-form-inline" style="margin-top: 30px;">
+                        <div class="nice-form-group">
+                            <label for="demo-input-3">Name</label>
+                            <input type="text" class="nice-form-control" placeholder="Foo Bar" id="demo-input-3" />
+                        </div>
+                        <div class="nice-form-group">
+                            <label for="demo-input-4">Email</label>
+                            <input type="text" class="nice-form-control" placeholder="bar.foo@textkernel.com" id="demo-input-4" />
+                        </div>
+                        <button class="nice-btn">
+                            <i class="icon fa-envelope-o"></i>
+                        </button>
+                    </form>
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
                     <div class="docs-code-wrapper">
@@ -1050,6 +1053,8 @@
         &lt;label for=&quot;demo-input-2&quot;&gt;Password&lt;/label&gt;
         &lt;input type=&quot;password&quot; placeholder=&quot;Nice password...&quot; class=&quot;<span class="main">nice-form-control</span>&quot; id=&quot;demo-input-2&quot; /&gt;
     &lt;/div&gt;
+
+    &lt;!-- Single selects --&gt;
     &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
         &lt;select class=&quot;<span class="main">nice-form-control</span>&quot;&gt;
             &lt;option&gt;Item 1&lt;/option&gt;
@@ -1059,6 +1064,8 @@
             &lt;option&gt;Item 5&lt;/option&gt;
         &lt;/select&gt;
     &lt;/div&gt;
+
+    &lt;!-- Multiselects --&gt;
     &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
         &lt;select class=&quot;<span class="main">nice-form-control</span>&quot; size=&quot;5&quot; multiple=&quot;multiple&quot;&gt;
             &lt;option&gt;Item 1&lt;/option&gt;
@@ -1068,9 +1075,28 @@
             &lt;option&gt;Item 5&lt;/option&gt;
         &lt;/select&gt;
     &lt;/div&gt;
+
+    &lt;!-- Textareas --&gt;
     &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
         &lt;textarea class=&quot;<span class="main">nice-form-control</span>&quot; placeholder=&quot;Nice textarea...&quot;&gt;&lt;/textarea&gt;
     &lt;/div&gt;
+
+    &lt;!-- Input groups and addons --&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;div class=&quot;<span class="main">nice-control-group</span>&quot;&gt;
+            &lt;span class=&quot;<span class="main">nice-input-addon</span> <span class="variation">info good warning bad</span>&quot;&gt;
+                My field
+            &lt;/span&gt;
+            &lt;input type=&quot;text&quot; class=&quot;nice-form-control&quot; placeholder=&quot;Some placeholder...&quot; /&gt;
+            &lt;span class=&quot;<span class="main">nice-control-group-btn</span>&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;<span class="main">nice-btn</span>&quot;&gt;
+                    Try me
+                &lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Radio buttons --&gt;
     &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
         &lt;div class=&quot;<span class="main">nice-radio</span>&quot;&gt;
             &lt;label&gt;
@@ -1079,6 +1105,8 @@
             &lt;/label&gt;
         &lt;/div&gt;
     &lt;/div&gt;
+
+    &lt;!-- Checkboxes --&gt;
     &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
         &lt;div class=&quot;<span class="main">nice-checkbox</span>&quot;&gt;
             &lt;label&gt;
@@ -1117,20 +1145,31 @@
                         <div class="nice-tabs-wrapper">
                             <ul class="nice-tabs">
                                 <li class="current">
-                                    <a href="#" class="icon fa-info">First</a>
+                                    <a href="javascript:void(0);" class="icon fa-info">
+                                        First
+                                        <span class="badge">
+                                            96
+                                        </span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Second</a>
+                                    <a href="javascript:void(0);" class="icon fa-question">
+                                        Second
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Third</a>
+                                    <a href="javascript:void(0);" class="icon fa-home">
+                                        Third
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Fourth</a>
+                                    <a href="javascript:void(0);" class="icon fa-wrench">
+                                        Fourth
+                                    </a>
                                 </li>
                             </ul>
-                            <div class="nice-tabs-content">
-                                Tab content
+                            <div class="nice-tabs-content text-align-justify">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
                             </div>
                         </div>
                     </p>
@@ -1138,24 +1177,37 @@
                         <div class="nice-tabs-wrapper">
                             <ul class="nice-tabs small bold">
                                 <li class="current">
-                                    <a href="#" class="icon fa-home">First</a>
+                                    <a href="javascript:void(0);">
+                                        First
+                                        <span class="badge">
+                                            8
+                                        </span>
+                                    </a>
                                 </li>
                                 <li class="brand">
-                                    <a href="#" class="icon fa-cog">Second</a>
+                                    <a href="javascript:void(0);">
+                                        Second
+                                    </a>
                                 </li>
                                 <li class="accent">
-                                    <a href="#">Third</a>
+                                    <a href="javascript:void(0);">
+                                        Third
+                                    </a>
                                 </li>
                                 <li class="primary">
-                                    <a href="#">Fourth</a>
+                                    <a href="javascript:void(0);">
+                                        Fourth
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="#">Fifth</a>
+                                    <a href="javascript:void(0);">
+                                        Fifth
+                                    </a>
                                 </li>
                             </ul>
                             <ul class="nice-tabs-content">
-                                <li class="current">
-                                    This tab is currently active
+                                <li class="current text-align-justify">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
                                 </li>
                                 <li>
                                     This tab is hidden
@@ -1169,7 +1221,12 @@
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
     &lt;ul class=&quot;<span class="main">nice-tabs</span> <span class="variation">small bold</span>&quot;&gt;
         &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-home</span>&quot;&gt;First&lt;/a&gt;
+            &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-home</span>&quot;&gt;
+                First
+                &lt;span class="badge"&gt;
+                    96
+                &lt;/span&gt;
+            &lt;/a&gt;
         &lt;/li&gt;
         &lt;li class=&quot;<span class="variation">brand</span>&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;Second&lt;/a&gt;

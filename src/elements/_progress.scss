@@ -6,19 +6,13 @@
     @include animation(spin 1s linear);
     @include animation-iteration-count(infinite);
     @include nice-border-radius(50%);
+    @include nice-transition(border-top-color .5s);
     @extend %display-inline-block;
 
-    &.primary {
-        border-top-color: rgba($color-primary, 1);
-    }
-    &.brand {
-        border-top-color: rgba($color-brand, 1);
-    }
-    &.good {
-        border-top-color: rgba($color-good, 1);
-    }
-    &.bad {
-        border-top-color: rgba($color-bad, 1);
+    @each $type in (brand, primary, info, good, warning, bad) {
+        &.#{$type} {
+            border-top-color: rgba(map-get($color-scheme, $type), 1);
+        }
     }
     &.medium {
         border-width: .35rem;
@@ -54,24 +48,11 @@
         @include nice-transition(width 0.3s ease-in-out);
         @include nice-text-shadow(1px 1px 0 rgba(0,0,0,.5));
     }
-    &.accent {
-        .nice-progress-fill {
-            background-color: $color-accent;
-        }
-    }
-    &.brand {
-        .nice-progress-fill {
-            background-color: $color-brand;
-        }
-    }
-    &.good {
-        .nice-progress-fill {
-            background-color: $color-good;
-        }   
-    }
-    &.bad {
-        .nice-progress-fill {
-            background-color: $color-bad;
+    @each $type in (brand, primary, accent, info, good, warning, bad) {
+        &.#{$type} {
+            .nice-progress-fill {
+                background-color: map-get($color-scheme, $type);
+            }
         }
     }
     &.pulse {

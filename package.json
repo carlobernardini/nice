@@ -1,6 +1,6 @@
 {
   "name": "nice",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A framework of reusable UI-elements",
   "main": "gulpfile.js",
   "scripts": {

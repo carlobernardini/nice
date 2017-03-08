@@ -7054,13 +7054,22 @@ summary.nice-card {
   border-radius: 50%;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box; }
-  .nice-loading.primary {
-    border-top-color: #f18700; }
+  background-clip: padding-box;
+  -webkit-transition: border-top-color 0.5s;
+  -moz-transition: border-top-color 0.5s;
+  -ms-transition: border-top-color 0.5s;
+  -o-transition: border-top-color 0.5s;
+  transition: border-top-color 0.5s; }
   .nice-loading.brand {
     border-top-color: #009cc1; }
+  .nice-loading.primary {
+    border-top-color: #f18700; }
+  .nice-loading.info {
+    border-top-color: #60c4de; }
   .nice-loading.good {
     border-top-color: #5cb85c; }
+  .nice-loading.warning {
+    border-top-color: #ffb819; }
   .nice-loading.bad {
     border-top-color: #f42534; }
   .nice-loading.medium {
@@ -7113,12 +7122,18 @@ summary.nice-card {
     -o-transition: width 0.3s ease-in-out;
     transition: width 0.3s ease-in-out;
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5); }
-  .nice-progress.accent .nice-progress-fill {
-    background-color: #182642; }
   .nice-progress.brand .nice-progress-fill {
     background-color: #009CC1; }
+  .nice-progress.primary .nice-progress-fill {
+    background-color: #F18700; }
+  .nice-progress.accent .nice-progress-fill {
+    background-color: #182642; }
+  .nice-progress.info .nice-progress-fill {
+    background-color: #60C4DE; }
   .nice-progress.good .nice-progress-fill {
     background-color: #5CB85C; }
+  .nice-progress.warning .nice-progress-fill {
+    background-color: #FFB819; }
   .nice-progress.bad .nice-progress-fill {
     background-color: #F42534; }
   .nice-progress.pulse .nice-progress-fill {

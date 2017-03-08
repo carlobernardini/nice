@@ -25,6 +25,10 @@ header,
         &:after {
             display: none;
         }
+        &.fluid {
+            max-width: 100%;
+            @extend .nice-container-fluid;
+        }
     }
     .nice-header-brand {
         margin: 0;

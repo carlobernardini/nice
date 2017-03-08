@@ -2838,7 +2838,8 @@ i.icon {
     content: "";
     display: table; }
 
-.nice-container-fluid {
+.nice-container-fluid, header .nice-header-container.fluid,
+.nice-header .nice-header-container.fluid {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -3666,6 +3667,9 @@ header,
     header .nice-header-container:after,
     .nice-header .nice-header-container:after {
       display: none; }
+    header .nice-header-container.fluid,
+    .nice-header .nice-header-container.fluid {
+      max-width: 100%; }
   header .nice-header-brand,
   .nice-header .nice-header-brand {
     margin: 0;
@@ -7279,14 +7283,13 @@ summary.nice-card {
     animation-iteration-count: infinite; }
 
 code {
-  display: block;
+  padding: 3px 3px;
+  color: #F42534;
   position: relative;
-  padding: 15px;
-  border: 1px solid #D0D1D5;
+  border: 1px solid #ECF0F1;
   background-color: #FFF;
   font-size: 12px;
-  line-height: 18px;
-  color: #333333;
+  line-height: inherit;
   overflow: auto;
   white-space: pre-wrap;
   -webkit-transition: max-height 0.5s;
@@ -7310,21 +7313,16 @@ code {
     max-height: 100%; }
   code.inline {
     display: inline;
-    background-color: #FFF;
-    line-height: inherit;
-    border: none;
-    padding: 3px 3px;
-    color: #F42534;
-    -webkit-border-radius: 2pxpx;
-    -moz-border-radius: 2pxpx;
-    border-radius: 2pxpx;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box; }
+    background-color: #FFF; }
 
 .nice-code-container {
   margin-bottom: 20px; }
   .nice-code-container code {
+    color: #1D1D1B;
+    display: block;
+    padding: 15px;
+    line-height: 18px;
+    border: 1px solid #D0D1D5;
     border-bottom: none;
     -webkit-border-radius: 3px 3px 0 0;
     -moz-border-radius: 3px 3px 0 0;

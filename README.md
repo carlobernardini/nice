@@ -1,7 +1,7 @@
 # [Nice!](https://nice.textkernel.nl)
 [![npm (scoped)](https://img.shields.io/npm/v/@textkernel/nice.svg)](https://www.npmjs.com/package/@textkernel/nice)
 
-Nice! is a framework of reusable UI elements, created by [Carlo Bernardini](mailto:bernardini@textkernel.nl) and maintained by the [Nice! circle](mailto:nice@textkernel.nl) within [Textkernel](https://textkernel.com).
+Nice! is a framework of reusable UI elements, created by [Carlo Bernardini](mailto:bernardini@textkernel.nl) and maintained by the [Nice! circle](mailto:nice@textkernel.nl) within [Textkernel](http://textkernel.com).
 
 To get started, check out <https://nice.textkernel.nl>.
 
@@ -34,7 +34,9 @@ nice/
 
 We provide compiled CSS (`nice.css`), as well as compiled and minified CSS (`nice.min.css`).
 For convenience, we also provide a number of webfonts (in `dist/fonts/`) and additional assets (logos, favicons; in `assets/`).
-Source files are in SASS and can be found in `src/` folder. To import all of Nice! into your own SASS bundle, you can just `@import "nice";` assuming that `./nice/src` is on your SASS import path.
+Source files are in SASS and can be found in `src/` folder.
+
+It is recommended that you use one of the precompiled CSS versions when including Nice! in your projects.
 
 ## Bugs and feature requests
 
@@ -52,4 +54,4 @@ Changes can be found in our [changelog](https://github.com/textkernel/nice/blob/
 
 ## Copyright and license
 
-Code and documentation :copyright: 2017 [Textkernel B.V.](https://textkernel.com), released under the [MIT License](https://github.com/textkernel/nice/blob/master/LICENSE).
+Code and documentation :copyright: 2017 [Textkernel B.V.](http://textkernel.com), released under the [MIT License](https://github.com/textkernel/nice/blob/master/LICENSE).

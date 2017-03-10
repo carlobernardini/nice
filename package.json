@@ -1,17 +1,14 @@
 {
-  "name": "nice",
-  "version": "1.0.4",
+  "name": "@textkernel/nice",
+  "version": "1.0.5",
   "description": "A framework of reusable UI-elements",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
-    "url": "git@tkgit-01.textkernel.local:nice/nice.git"
+    "url": "https://github.com/textkernel/nice.git"
   },
   "author": "Textkernel B.V.",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "font-awesome": "4.7.0",
     "gulp": "3.9.1",

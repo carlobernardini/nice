@@ -75,17 +75,20 @@
                 margin-left: 30px;
             }
 
-            &.pad-left {
-                a {
-                    padding-left: 40px;
-                }
-            }
-
             + li {
                 margin-top: 2px;
 
                 a {
                     margin-left: 0;
+                }
+            }
+        }
+        &.has-icons {
+            > li {
+                a {
+                    &:not(.icon) {
+                        padding-left: 40px;
+                    }
                 }
             }
         }

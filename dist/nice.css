@@ -5680,12 +5680,12 @@ textarea.nice-form-control {
       .nice-menu.stacked li ul {
         padding-left: 10px;
         margin-left: 30px; }
-      .nice-menu.stacked li.pad-left a {
-        padding-left: 40px; }
       .nice-menu.stacked li + li {
         margin-top: 2px; }
         .nice-menu.stacked li + li a {
           margin-left: 0; }
+    .nice-menu.stacked.has-icons > li a:not(.icon) {
+      padding-left: 40px; }
   .nice-menu + .nice-menu {
     margin-top: 15px; }
 

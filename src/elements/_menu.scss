@@ -7,6 +7,7 @@
     width: 100%;
 
     li {
+        margin: 0;
         display: table-cell;
 
         a, span {
@@ -67,6 +68,11 @@
                         @extend %display-inline-block;
                     }
                 }
+            }
+
+            ul {
+                padding-left: 10px;
+                margin-left: 30px;
             }
 
             &.pad-left {

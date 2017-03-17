@@ -5637,6 +5637,7 @@ textarea.nice-form-control {
   table-layout: fixed;
   width: 100%; }
   .nice-menu li {
+    margin: 0;
     display: table-cell; }
     .nice-menu li a, .nice-menu li span {
       display: block;
@@ -5676,6 +5677,9 @@ textarea.nice-form-control {
       .nice-menu.stacked li a.icon:before {
         width: 20px;
         text-align: center; }
+      .nice-menu.stacked li ul {
+        padding-left: 10px;
+        margin-left: 30px; }
       .nice-menu.stacked li.pad-left a {
         padding-left: 40px; }
       .nice-menu.stacked li + li {

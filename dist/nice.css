@@ -5787,6 +5787,7 @@ table.nice-table {
   text-decoration: none;
   outline-style: none;
   text-align: center;
+  cursor: pointer;
   font-family: "Open Sans", sans-serif, helvetica;
   line-height: 20px;
   line-height: 1.25rem;

@@ -5,6 +5,7 @@
     li {
         &.list-heading {
             @extend %panel-heading;
+            @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
 
             + li {
                 border-top-width: 0;

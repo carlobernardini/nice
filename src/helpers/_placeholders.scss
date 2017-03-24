@@ -39,7 +39,6 @@
     font-weight: 600;
     margin: -1px -1px 0 -1px;
     padding: 10px 15px;
-    @include nice-border-radius($default-radius $default-radius 0 0);
 }
 
 %clearfix {

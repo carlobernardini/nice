@@ -25,13 +25,15 @@
                 }
             }
         }
+        &:first-child {
+            @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
+        }
+        &:last-child {
+            @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius);
+        }
     }
     .nice-panel-content {
         padding: 15px;
-
-        ~ .nice-panel-heading {
-            @include nice-border-radius(0 0 $default-radius $default-radius);
-        }
     }
     > table {
         &.nice-table {

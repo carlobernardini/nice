@@ -6062,8 +6062,11 @@ table.nice-table {
 
 .nice-btn-alt, header .nice-header-menu.menu-alt > li > a,
 .nice-header .nice-header-menu.menu-alt > li > a {
+  border: 0;
   padding: 5px 10px;
   background-color: #ECF0F1;
+  color: #009CC1;
+  font-family: "Open Sans", sans-serif, helvetica;
   font-size: 12px;
   font-size: 0.75rem;
   -webkit-transition: color 0.1s, background-color 0.1s;
@@ -6140,6 +6143,8 @@ table.nice-table {
     background-clip: padding-box; }
   .nice-btn-group > .nice-btn-alt, header .nice-header-menu.menu-alt > li.nice-btn-group > a,
   .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a {
+    position: relative;
+    float: left;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;

@@ -56,12 +56,6 @@ body {
             }
         }
     }
-    // .nice-example-login {
-    //     .nice-login {
-    //         position: static;
-    //         margin-left: 0;
-    //     }
-    // }
     .nice-example {
         .color-swatch {
             width: 100px;
@@ -164,6 +158,14 @@ body {
                 width: 100%;
                 @include linear-gradient(rgba(255,255,255, 0) 0%, rgba(255,255,255, 1) 50%);
             }
+        }
+    }
+    #docs-sections-side {
+        margin-top: 15px;
+
+        &.affix {
+            position: fixed;
+            top: 60px;
         }
     }
     .docs-code-wrapper {

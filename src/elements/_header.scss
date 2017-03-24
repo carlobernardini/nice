@@ -134,7 +134,7 @@ header,
                     padding: 20px 10px 16px;
                     border-bottom: 4px solid transparent;
                 }
-                @each $type in (primary, brand, info, good, warning, bad) {
+                @each $type in (primary, brand, accent, info, good, warning, bad) {
                     &.#{$type} {
                         > a, > span {
                             border-color: map-get($color-scheme, #{$type});

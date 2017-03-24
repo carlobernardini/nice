@@ -23,7 +23,7 @@ html {
 header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-menu.stacked li a.icon:before, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-menu.stacked li a.icon:before, .nice-menu.stacked li span.icon:before, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
 .nice-popover .nice-popover-title .product-icon,
 .nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
@@ -116,7 +116,7 @@ h6, .h6 {
   font-size: 12px;
   font-size: 0.75rem; }
 
-.text-align-left, .nice-menu.stacked li a {
+.text-align-left, .nice-menu.stacked li a, .nice-menu.stacked li span {
   text-align: left; }
 
 .text-align-right {
@@ -3822,6 +3822,19 @@ header,
       .nice-header .nice-header-menu > li.highlight.brand > a:hover,
       .nice-header .nice-header-menu > li.highlight.brand > span:hover {
         border-color: #0fd1ff; }
+    header .nice-header-menu > li.highlight.accent > a, header .nice-header-menu > li.highlight.accent > span,
+    .nice-header .nice-header-menu > li.highlight.accent > a,
+    .nice-header .nice-header-menu > li.highlight.accent > span {
+      border-color: #182642;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      header .nice-header-menu > li.highlight.accent > a:hover, header .nice-header-menu > li.highlight.accent > span:hover,
+      .nice-header .nice-header-menu > li.highlight.accent > a:hover,
+      .nice-header .nice-header-menu > li.highlight.accent > span:hover {
+        border-color: #2c467a; }
     header .nice-header-menu > li.highlight.info > a, header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.info header .nice-header-menu > li.highlight.nice-form-control > a, header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.info header .nice-header-menu > li.highlight.nice-btn > a, header .nice-header-menu > li.highlight.info > span, header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.info header .nice-header-menu > li.highlight.nice-form-control > span, header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.info header .nice-header-menu > li.highlight.nice-btn > span,
     .nice-header .nice-header-menu > li.highlight.info > a,
     .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.info
@@ -5653,11 +5666,11 @@ textarea.nice-form-control {
       -ms-transition: background-color 0s, color 0s;
       -o-transition: background-color 0s, color 0s;
       transition: background-color 0s, color 0s; }
-      .nice-menu li a:hover, .nice-menu li span:hover {
-        background-color: #009CC1;
-        color: #FFF; }
       .nice-menu li a.icon:before, .nice-menu li span.icon:before {
         margin-right: 5px; }
+    .nice-menu li a:hover {
+      background-color: #009CC1;
+      color: #FFF; }
     .nice-menu li.current a {
       background-color: #182642;
       color: #FFF; }
@@ -5674,7 +5687,7 @@ textarea.nice-form-control {
     width: auto; }
     .nice-menu.stacked li {
       display: block; }
-      .nice-menu.stacked li a.icon:before {
+      .nice-menu.stacked li a.icon:before, .nice-menu.stacked li span.icon:before {
         width: 20px;
         text-align: center; }
       .nice-menu.stacked li ul {
@@ -5686,6 +5699,9 @@ textarea.nice-form-control {
           margin-left: 0; }
     .nice-menu.stacked.has-icons > li a:not(.icon) {
       padding-left: 40px; }
+    .nice-menu.stacked.narrow li a {
+      padding-top: 4px;
+      padding-bottom: 4px; }
   .nice-menu + .nice-menu {
     margin-top: 15px; }
 

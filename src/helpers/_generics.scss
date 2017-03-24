@@ -54,9 +54,14 @@ i {
 .nice-circle {
     @include nice-border-radius(50%);
 }
-@each $type in (brand, link, text, primary, accent, muted, good, info, warning, bad, white, black) {
+@each $type  in (brand, link, text, primary, accent, muted, good, info, warning, bad, white, black) {
     .nice-bg-#{$type} {
         background-color: map-get($color-scheme, #{$type});
+    }
+}
+@each $type  in (brand, link, text, primary, accent, muted, good, info, warning, bad) {
+    .nice-bg-light-#{$type} {
+        background-color: lighten(map-get($color-scheme, #{$type}), 35%);
     }
 }
 .clearfix {

@@ -393,6 +393,36 @@ i.icon {
 .nice-bg-black {
   background-color: #000; }
 
+.nice-bg-light-brand {
+  background-color: #75e4ff; }
+
+.nice-bg-light-link {
+  background-color: #75e4ff; }
+
+.nice-bg-light-text {
+  background-color: #797971; }
+
+.nice-bg-light-primary {
+  background-color: #ffd7a5; }
+
+.nice-bg-light-accent {
+  background-color: #4e73bf; }
+
+.nice-bg-light-muted {
+  background-color: white; }
+
+.nice-bg-light-good {
+  background-color: #d8eed8; }
+
+.nice-bg-light-info {
+  background-color: #f4fbfd; }
+
+.nice-bg-light-warning {
+  background-color: #ffefcc; }
+
+.nice-bg-light-bad {
+  background-color: #fdcfd2; }
+
 .shown {
   display: block; }
 

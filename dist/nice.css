@@ -5353,6 +5353,12 @@ textarea.nice-form-control {
   .nice-panel.bad .nice-panel-heading, .nice-control-group.bad .nice-panel.nice-form-control .nice-panel-heading, .nice-control-group.bad .nice-panel.nice-btn .nice-panel-heading {
     background-color: #F42534; }
 
+.nice-panel.gray .nice-panel-heading {
+  margin: 0;
+  padding: 9px 14px 10px;
+  background-color: #F5F7F7;
+  color: #1D1D1B; }
+
 .nice-stacked-list {
   list-style: none; }
   .nice-stacked-list li.list-heading + li {

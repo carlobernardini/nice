@@ -1,6 +1,7 @@
 .nice-alert {
     padding: 15px;
     border: 1px solid $color-border;
+    margin-bottom: 15px;
     @include nice-border-radius($default-radius);
 
     @each $type in (info, good, warning, bad) {

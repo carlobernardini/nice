@@ -6449,6 +6449,7 @@ table.nice-table {
 .nice-alert {
   padding: 15px;
   border: 1px solid #D0D1D5;
+  margin-bottom: 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;

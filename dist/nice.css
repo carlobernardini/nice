@@ -6895,7 +6895,7 @@ table.nice-table {
         -ms-transition: background-color 0s;
         -o-transition: background-color 0s;
         transition: background-color 0s; }
-  .nice-popover:before {
+  .nice-popover:not(.no-arrow):before {
     position: absolute;
     bottom: 100%;
     left: 10px;
@@ -6905,30 +6905,30 @@ table.nice-table {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #182642; }
-  .nice-popover.top {
+  .nice-popover:not(.no-arrow).top {
     -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15); }
-    .nice-popover.top:before {
+    .nice-popover:not(.no-arrow).top:before {
       top: auto;
       bottom: 100%; }
-  .nice-popover.bottom {
+  .nice-popover:not(.no-arrow).bottom {
     -webkit-box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15); }
-    .nice-popover.bottom:before {
+    .nice-popover:not(.no-arrow).bottom:before {
       top: 100%;
       bottom: auto;
       border-bottom: none;
       border-top: 10px solid #60C4DE; }
-  .nice-popover.left:before {
+  .nice-popover:not(.no-arrow).left:before {
     left: 10px;
     right: auto; }
-  .nice-popover.center:before {
+  .nice-popover:not(.no-arrow).center:before {
     left: 50%;
     right: auto;
     margin-left: -10px; }
-  .nice-popover.right:before {
+  .nice-popover:not(.no-arrow).right:before {
     left: auto;
     right: 10px; }
   .nice-popover.info, .nice-control-group.info .nice-popover.nice-form-control, .nice-control-group.info .nice-popover.nice-btn {
@@ -6938,11 +6938,11 @@ table.nice-table {
       color: #2596b3; }
     .nice-popover.info .nice-popover-controls a, .nice-control-group.info .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.info .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.info .nice-popover-controls button, .nice-control-group.info .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.info .nice-popover.nice-btn .nice-popover-controls button {
       color: #2596b3; }
-    .nice-popover.info:before, .nice-control-group.info .nice-popover.nice-form-control:before, .nice-control-group.info .nice-popover.nice-btn:before {
+    .nice-popover.info:not(.no-arrow):before, .nice-control-group.info .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.info .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #60C4DE; }
-      .nice-popover.info:before.top, .nice-control-group.info .nice-popover.nice-form-control:before.top, .nice-control-group.info .nice-popover.nice-btn:before.top {
+      .nice-popover.info:not(.no-arrow):before.top, .nice-control-group.info .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.info .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #60C4DE; }
-      .nice-popover.info:before.bottom, .nice-control-group.info .nice-popover.nice-form-control:before.bottom, .nice-control-group.info .nice-popover.nice-btn:before.bottom {
+      .nice-popover.info:not(.no-arrow):before.bottom, .nice-control-group.info .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.info .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #60C4DE; }
   .nice-popover.good, .nice-control-group.good .nice-popover.nice-form-control, .nice-control-group.good .nice-popover.nice-btn {
     border-color: #5CB85C; }
@@ -6951,11 +6951,11 @@ table.nice-table {
       color: #357935; }
     .nice-popover.good .nice-popover-controls a, .nice-control-group.good .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.good .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.good .nice-popover-controls button, .nice-control-group.good .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.good .nice-popover.nice-btn .nice-popover-controls button {
       color: #357935; }
-    .nice-popover.good:before, .nice-control-group.good .nice-popover.nice-form-control:before, .nice-control-group.good .nice-popover.nice-btn:before {
+    .nice-popover.good:not(.no-arrow):before, .nice-control-group.good .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.good .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #5CB85C; }
-      .nice-popover.good:before.top, .nice-control-group.good .nice-popover.nice-form-control:before.top, .nice-control-group.good .nice-popover.nice-btn:before.top {
+      .nice-popover.good:not(.no-arrow):before.top, .nice-control-group.good .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.good .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #5CB85C; }
-      .nice-popover.good:before.bottom, .nice-control-group.good .nice-popover.nice-form-control:before.bottom, .nice-control-group.good .nice-popover.nice-btn:before.bottom {
+      .nice-popover.good:not(.no-arrow):before.bottom, .nice-control-group.good .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.good .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #5CB85C; }
   .nice-popover.warning, .nice-control-group.warning .nice-popover.nice-form-control, .nice-control-group.warning .nice-popover.nice-btn {
     border-color: #FFB819; }
@@ -6964,11 +6964,11 @@ table.nice-table {
       color: #b27b00; }
     .nice-popover.warning .nice-popover-controls a, .nice-control-group.warning .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.warning .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.warning .nice-popover-controls button, .nice-control-group.warning .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.warning .nice-popover.nice-btn .nice-popover-controls button {
       color: #b27b00; }
-    .nice-popover.warning:before, .nice-control-group.warning .nice-popover.nice-form-control:before, .nice-control-group.warning .nice-popover.nice-btn:before {
+    .nice-popover.warning:not(.no-arrow):before, .nice-control-group.warning .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.warning .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #FFB819; }
-      .nice-popover.warning:before.top, .nice-control-group.warning .nice-popover.nice-form-control:before.top, .nice-control-group.warning .nice-popover.nice-btn:before.top {
+      .nice-popover.warning:not(.no-arrow):before.top, .nice-control-group.warning .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.warning .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #FFB819; }
-      .nice-popover.warning:before.bottom, .nice-control-group.warning .nice-popover.nice-form-control:before.bottom, .nice-control-group.warning .nice-popover.nice-btn:before.bottom {
+      .nice-popover.warning:not(.no-arrow):before.bottom, .nice-control-group.warning .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.warning .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #FFB819; }
   .nice-popover.bad, .nice-control-group.bad .nice-popover.nice-form-control, .nice-control-group.bad .nice-popover.nice-btn {
     border-color: #F42534; }
@@ -6977,11 +6977,11 @@ table.nice-table {
       color: #aa0914; }
     .nice-popover.bad .nice-popover-controls a, .nice-control-group.bad .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.bad .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.bad .nice-popover-controls button, .nice-control-group.bad .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.bad .nice-popover.nice-btn .nice-popover-controls button {
       color: #aa0914; }
-    .nice-popover.bad:before, .nice-control-group.bad .nice-popover.nice-form-control:before, .nice-control-group.bad .nice-popover.nice-btn:before {
+    .nice-popover.bad:not(.no-arrow):before, .nice-control-group.bad .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.bad .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #F42534; }
-      .nice-popover.bad:before.top, .nice-control-group.bad .nice-popover.nice-form-control:before.top, .nice-control-group.bad .nice-popover.nice-btn:before.top {
+      .nice-popover.bad:not(.no-arrow):before.top, .nice-control-group.bad .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.bad .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #F42534; }
-      .nice-popover.bad:before.bottom, .nice-control-group.bad .nice-popover.nice-form-control:before.bottom, .nice-control-group.bad .nice-popover.nice-btn:before.bottom {
+      .nice-popover.bad:not(.no-arrow):before.bottom, .nice-control-group.bad .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.bad .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #F42534; }
 
 .nice-modal {

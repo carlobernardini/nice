@@ -81,52 +81,54 @@
             }
         }
     }
-    &:before {
-        position: absolute;
-        bottom: 100%;
-        left: 10px;
-        content: '';
-        width: 0; 
-        height: 0; 
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 10px solid $color-accent;
-    }
-    &.top {
-        @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
-
+    &:not(.no-arrow) {
         &:before {
-            top: auto;
+            position: absolute;
             bottom: 100%;
-        }
-    }
-    &.bottom {
-        @include nice-box-shadow(1px -2px 6px rgba($color-black, .15));
-
-        &:before {
-            top: 100%;
-            bottom: auto;
-            border-bottom: none;
-            border-top: 10px solid $color-info;
-        }
-    }
-    &.left {
-        &:before {
             left: 10px;
-            right: auto;
+            content: '';
+            width: 0; 
+            height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $color-accent;
         }
-    }
-    &.center {
-        &:before {
-            left: 50%;
-            right: auto;
-            margin-left: -10px;
+        &.top {
+            @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
+
+            &:before {
+                top: auto;
+                bottom: 100%;
+            }
         }
-    }
-    &.right {
-        &:before {
-            left: auto;
-            right: 10px;
+        &.bottom {
+            @include nice-box-shadow(1px -2px 6px rgba($color-black, .15));
+
+            &:before {
+                top: 100%;
+                bottom: auto;
+                border-bottom: none;
+                border-top: 10px solid $color-info;
+            }
+        }
+        &.left {
+            &:before {
+                left: 10px;
+                right: auto;
+            }
+        }
+        &.center {
+            &:before {
+                left: 50%;
+                right: auto;
+                margin-left: -10px;
+            }
+        }
+        &.right {
+            &:before {
+                left: auto;
+                right: 10px;
+            }
         }
     }
     @each $type in (info, good, warning, bad) {
@@ -142,14 +144,16 @@
                     color: darken(map-get($color-scheme, #{$type}), 20%);   
                 }
             }
-            &:before {
-                border-bottom-color: map-get($color-scheme, #{$type});
-
-                &.top {
+            &:not(.no-arrow) {
+                &:before {
                     border-bottom-color: map-get($color-scheme, #{$type});
-                }
-                &.bottom {
-                    border-top-color: map-get($color-scheme, #{$type});
+
+                    &.top {
+                        border-bottom-color: map-get($color-scheme, #{$type});
+                    }
+                    &.bottom {
+                        border-top-color: map-get($color-scheme, #{$type});
+                    }
                 }
             }
         }

@@ -4091,29 +4091,14 @@ header,
     .nice-header .nice-header-menu.menu-alt > li {
       padding-top: 17px;
       padding-bottom: 16px; }
-      header .nice-header-menu.menu-alt > li > a,
-      .nice-header .nice-header-menu.menu-alt > li > a {
-        padding: 5px 10px;
-        background-color: #ECF0F1;
-        font-size: 12px;
-        font-size: 0.75rem;
-        -webkit-transition: color 0.1s, background-color 0.1s;
-        -moz-transition: color 0.1s, background-color 0.1s;
-        -ms-transition: color 0.1s, background-color 0.1s;
-        -o-transition: color 0.1s, background-color 0.1s;
-        transition: color 0.1s, background-color 0.1s; }
-        header .nice-header-menu.menu-alt > li > a:hover,
-        .nice-header .nice-header-menu.menu-alt > li > a:hover {
-          background-color: #009CC1;
-          color: #FFF; }
       header .nice-header-menu.menu-alt > li:first-child > a,
       .nice-header .nice-header-menu.menu-alt > li:first-child > a {
-        -webkit-border-top-left-radius: 15px;
-        -moz-border-radius-topleft: 15px;
-        border-top-left-radius: 15px;
-        -webkit-border-bottom-left-radius: 15px;
-        -moz-border-radius-bottomleft: 15px;
-        border-bottom-left-radius: 15px;
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-bottomright: 0;
+        border-bottom-right-radius: 0;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
@@ -4130,7 +4115,16 @@ header,
         background-clip: padding-box; }
       header .nice-header-menu.menu-alt > li + li > a,
       .nice-header .nice-header-menu.menu-alt > li + li > a {
-        border-left: 1px solid #F5F7F7; }
+        border-left: 1px solid #F5F7F7;
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-border-bottom-left-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        border-bottom-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
     header .nice-header-menu + .nice-header-menu,
     .nice-header .nice-header-menu + .nice-header-menu {
       margin-left: 15px; }
@@ -6067,6 +6061,31 @@ table.nice-table {
   .nice-btn.bold {
     font-weight: 600; }
 
+.nice-btn-alt, header .nice-header-menu.menu-alt > li > a,
+.nice-header .nice-header-menu.menu-alt > li > a {
+  padding: 5px 10px;
+  background-color: #ECF0F1;
+  font-size: 12px;
+  font-size: 0.75rem;
+  -webkit-transition: color 0.1s, background-color 0.1s;
+  -moz-transition: color 0.1s, background-color 0.1s;
+  -ms-transition: color 0.1s, background-color 0.1s;
+  -o-transition: color 0.1s, background-color 0.1s;
+  transition: color 0.1s, background-color 0.1s;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-btn-alt:hover, header .nice-header-menu.menu-alt > li > a:hover,
+  .nice-header .nice-header-menu.menu-alt > li > a:hover {
+    background-color: #009CC1;
+    color: #FFF; }
+  .nice-btn-alt.icon:before, header .nice-header-menu.menu-alt > li > a.icon:before,
+  .nice-header .nice-header-menu.menu-alt > li > a.icon:before {
+    margin-right: 5px; }
+
 .nice-btn-group {
   margin: 15px 0; }
   .nice-btn-group > .nice-btn,
@@ -6120,6 +6139,40 @@ table.nice-table {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
+  .nice-btn-group > .nice-btn-alt, header .nice-header-menu.menu-alt > li.nice-btn-group > a,
+  .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-btn-group > .nice-btn-alt:first-child, header .nice-header-menu.menu-alt > li.nice-btn-group > a:first-child,
+    .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a:first-child {
+      -webkit-border-top-left-radius: 15px;
+      -moz-border-radius-topleft: 15px;
+      border-top-left-radius: 15px;
+      -webkit-border-bottom-left-radius: 15px;
+      -moz-border-radius-bottomleft: 15px;
+      border-bottom-left-radius: 15px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn-alt:last-child, header .nice-header-menu.menu-alt > li.nice-btn-group > a:last-child,
+    .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a:last-child {
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topright: 15px;
+      border-top-right-radius: 15px;
+      -webkit-border-bottom-right-radius: 15px;
+      -moz-border-radius-bottomright: 15px;
+      border-bottom-right-radius: 15px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn-alt + .nice-btn-alt, header .nice-header-menu.menu-alt > li.nice-btn-group > a + .nice-btn-alt,
+    .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a + .nice-btn-alt, header .nice-header-menu.menu-alt > li.nice-btn-group > .nice-btn-alt + a, header .nice-header-menu.menu-alt > li.nice-btn-group > a + a,
+    .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > .nice-btn-alt + a, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a + a {
+      margin-left: 1px; }
   .nice-btn-group.stacked > .nice-btn,
   .nice-btn-group.stacked > .nice-dropdown {
     float: none;

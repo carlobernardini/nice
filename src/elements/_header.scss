@@ -289,19 +289,12 @@ header,
                 padding-bottom: 16px;
 
                 > a {
-                    padding: 5px 10px;
-                    background-color: $gray-light;
-                    @include nice-font-size(12px);
-                    @include nice-transition(color .1s, background-color .1s);
+                    @extend .nice-btn-alt;
 
-                    &:hover {
-                        background-color: $color-link;
-                        color: $color-white;
-                    }
                 }
                 &:first-child {
                     > a {
-                        @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
+                        @include nice-border-radius($top-right: 0, $bottom-right: 0);
                     }
                 }
                 &:last-child {
@@ -312,6 +305,7 @@ header,
                 + li {
                     > a {
                         border-left: 1px solid $gray-vlight;
+                        @include nice-border-radius($top-left: 0, $bottom-left: 0);
                     }
                 }
             }

@@ -4985,13 +4985,16 @@ textarea.nice-form-control {
 .nice-radio input[type="radio"],
 .nice-checkbox input[type="checkbox"],
 .nice-checkbox input[type="radio"] {
-  position: absolute;
-  margin: 4px 0 0;
-  margin-left: -20px;
-  padding: 0;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
   -webkit-box-sizing: border-box;
   moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.nice-radio input[type="radio"],
+.nice-checkbox input[type="radio"] {
+  bottom: 2px; }
 
 /**
  * Normalize <select /> appearance across browsers

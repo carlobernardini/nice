@@ -51,13 +51,7 @@ header .nice-header-brand,
   color: #FFF;
   font-weight: 600;
   margin: -1px -1px 0 -1px;
-  padding: 10px 15px;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
+  padding: 10px 15px; }
 
 .clearfix, .nice-login .nice-login-footer, .nice-form-horizontal .nice-form-group, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
@@ -5302,15 +5296,30 @@ textarea.nice-form-control {
     .nice-panel .nice-panel-heading + table.nice-table.bordered thead:first-child tr:first-child th {
       border-top: 0; }
 
+.nice-panel .nice-panel-heading:first-child {
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.nice-panel .nice-panel-heading:last-child {
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
 .nice-panel .nice-panel-content {
   padding: 15px; }
-  .nice-panel .nice-panel-content ~ .nice-panel-heading {
-    -webkit-border-radius: 0 0 3px 3px;
-    -moz-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box; }
 
 .nice-panel > table.nice-table.bordered {
   border: 0; }
@@ -5369,10 +5378,25 @@ textarea.nice-form-control {
   background-color: #F5F7F7;
   color: #1D1D1B; }
 
+.nice-panel:not(.gray) .nice-panel-heading a {
+  color: #FFF; }
+  .nice-panel:not(.gray) .nice-panel-heading a:hover {
+    text-decoration: underline; }
+
 .nice-stacked-list {
   list-style: none; }
-  .nice-stacked-list li.list-heading + li {
-    border-top-width: 0; }
+  .nice-stacked-list li.list-heading {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-stacked-list li.list-heading + li {
+      border-top-width: 0; }
   .nice-stacked-list li .item-heading {
     margin: -15px -15px 15px;
     padding: 10px 15px;

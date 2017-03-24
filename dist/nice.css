@@ -4861,7 +4861,7 @@ textarea.nice-form-control {
 
 .nice-form-horizontal .nice-form-group {
   margin-bottom: 15px; }
-  .nice-form-horizontal .nice-form-group label {
+  .nice-form-horizontal .nice-form-group .nice-control-label {
     padding-top: 7px;
     margin-bottom: 0;
     text-align: right; }

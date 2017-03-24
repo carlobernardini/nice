@@ -5007,6 +5007,22 @@ textarea.nice-form-control {
     float: left; }
     .nice-tabs li + li {
       margin-left: 1px; }
+    .nice-tabs li.pull-right {
+      float: right; }
+      .nice-tabs li.pull-right a {
+        -webkit-border-top-right-radius: 3px;
+        -moz-border-radius-topright: 3px;
+        border-top-right-radius: 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-tabs li.pull-right + .pull-right a {
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
     .nice-tabs li.brand a {
       background-color: #009CC1;
       color: #FFF;

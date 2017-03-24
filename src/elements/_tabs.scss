@@ -13,6 +13,18 @@
         + li {
             margin-left: 1px;
         }
+        &.pull-right {
+            float: right;
+
+            a {
+                @include nice-border-radius($top-right: $default-radius);
+            }
+            + .pull-right {
+                a {
+                    @include nice-border-radius($top-right: 0);
+                }
+            }
+        }
         @each $type in (brand, primary, accent, info, good, warning, bad) {
             &.#{$type} {
                 a {

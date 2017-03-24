@@ -97,6 +97,18 @@ textarea {
         }
     }
 }
+.nice-form-horizontal {
+    .nice-form-group {
+        margin-bottom: 15px;
+        @extend %clearfix;
+
+        label {
+            padding-top: 7px;
+            margin-bottom: 0;
+            text-align: right;
+        }
+    }
+}
 .nice-control-group {
     display: table;
     white-space: nowrap;

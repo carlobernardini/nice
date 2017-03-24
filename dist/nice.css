@@ -59,15 +59,15 @@ header .nice-header-brand,
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.clearfix, .nice-login .nice-login-footer, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
+.clearfix, .nice-login .nice-login-footer, .nice-form-horizontal .nice-form-group, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .clearfix:before, .nice-login .nice-login-footer:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-login .nice-login-footer:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:before, .nice-login .nice-login-footer:before, .nice-form-horizontal .nice-form-group:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-login .nice-login-footer:after, .nice-form-horizontal .nice-form-group:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     content: "";
     display: table; }
-  .clearfix:after, .nice-login .nice-login-footer:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:after, .nice-login .nice-login-footer:after, .nice-form-horizontal .nice-form-group:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     clear: both;
     content: ".";
     display: block;
@@ -4864,6 +4864,13 @@ textarea.nice-form-control {
 .nice-form-inline .nice-control-group > select.nice-form-control,
 .nice-form-inline .nice-control-group > .nice-control-group-btn {
   display: table-cell; }
+
+.nice-form-horizontal .nice-form-group {
+  margin-bottom: 15px; }
+  .nice-form-horizontal .nice-form-group label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right; }
 
 .nice-control-group {
   display: table;

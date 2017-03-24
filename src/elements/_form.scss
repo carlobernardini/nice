@@ -210,11 +210,13 @@ textarea {
     }
     input[type="checkbox"],
     input[type="radio"] {
-        position: absolute;
-        margin: 4px 0 0;
-        margin-left: -20px;
-        padding: 0;
+        vertical-align: middle;
+        position: relative;
+        bottom: 1px;
         @include nice-box-sizing(border-box);
+    }
+    input[type="radio"] {
+        bottom: 2px;
     }
 }
 

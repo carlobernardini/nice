@@ -5378,6 +5378,11 @@ textarea.nice-form-control {
   background-color: #F5F7F7;
   color: #1D1D1B; }
 
+.nice-panel:not(.gray) .nice-panel-heading a {
+  color: #FFF; }
+  .nice-panel:not(.gray) .nice-panel-heading a:hover {
+    text-decoration: underline; }
+
 .nice-stacked-list {
   list-style: none; }
   .nice-stacked-list li.list-heading {

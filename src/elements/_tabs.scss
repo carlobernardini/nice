@@ -145,7 +145,7 @@
     .nice-tabs {
         border-bottom: none;
     }
-    .nice-tabs-content {
+    .nice-tab-content {
         border: 1px solid $color-border;
         background-color: $color-white;
         padding: 15px;
@@ -154,7 +154,7 @@
         @include nice-border-radius(0 $default-radius $default-radius);
     }
     ul {
-        &.nice-tabs-content {
+        &.nice-tab-content {
             list-style: none;
             margin: 0;
             padding: 0;

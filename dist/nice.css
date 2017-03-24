@@ -5237,7 +5237,7 @@ textarea.nice-form-control {
 .nice-tabs-wrapper .nice-tabs {
   border-bottom: none; }
 
-.nice-tabs-wrapper .nice-tabs-content {
+.nice-tabs-wrapper .nice-tab-content {
   border: 1px solid #D0D1D5;
   background-color: #FFF;
   padding: 15px;
@@ -5251,14 +5251,14 @@ textarea.nice-form-control {
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.nice-tabs-wrapper ul.nice-tabs-content {
+.nice-tabs-wrapper ul.nice-tab-content {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .nice-tabs-wrapper ul.nice-tabs-content li {
+  .nice-tabs-wrapper ul.nice-tab-content li {
     display: none;
     padding: 15px; }
-    .nice-tabs-wrapper ul.nice-tabs-content li.current {
+    .nice-tabs-wrapper ul.nice-tab-content li.current {
       display: block; }
 
 @media screen and (max-width: 1025px) {

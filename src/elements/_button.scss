@@ -7,6 +7,7 @@
     text-decoration:none;
     outline-style: none;
     text-align: center;
+    cursor: pointer;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
     @include nice-border-radius($default-radius);
@@ -116,6 +117,26 @@
         font-weight: 600;
     }
 }
+.nice-btn-alt {
+    border: 0;
+    padding: 5px 10px;
+    background-color: $gray-light;
+    color: $color-link;
+    @include nice-font($family: $fonts-primary);
+    @include nice-font-size(12px);
+    @include nice-transition(color .1s, background-color .1s);
+    @include nice-border-radius($default-radius * 5);
+
+    &:hover {
+        background-color: $color-link;
+        color: $color-white;
+    }
+    &.icon {
+        &:before {
+            margin-right: 5px;
+        }
+    }
+}
 .nice-btn-group {    
     margin: 15px 0;
     @extend %clearfix;
@@ -149,6 +170,21 @@
         .nice-dropdown {
             .nice-btn {
                 @include nice-border-radius(inherit);
+            }
+        }
+        .nice-btn-alt {
+            position: relative;
+            float: left;
+            @include nice-border-radius(0);
+
+            &:first-child {
+                @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
+            }
+            &:last-child {
+                @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
+            }
+            + .nice-btn-alt {
+                margin-left: 1px;
             }
         }
     }

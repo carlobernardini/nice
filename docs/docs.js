@@ -19,6 +19,19 @@ $(function(){
             $('.nice-dropdown .dropdown-menu').removeClass('shown');
         }
     });
+    $(window).on('scroll', function(){
+        var scrollTop = $(this).scrollTop(),
+            contentOffset = $('section.nice-container').offset().top,
+            sideNav = $('#docs-sections-side');
+        if (sideNav.is('*')) {
+            var offset = sideNav.offset().top;
+            if (scrollTop >= contentOffset && !sideNav.is('.affix')) {
+                sideNav.addClass('affix');
+            } else if (scrollTop < contentOffset) {
+                sideNav.removeClass('affix');
+            }
+        }
+    });
     $('.nice-header .nice-header-toggle').bind('click', function(e){
         var toggle = $(this),
             menu = $('.nice-header-collapse'),

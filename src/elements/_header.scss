@@ -3,7 +3,6 @@ body {
         padding-top: 60px;
     }
 }
-header,
 .nice-header {
     position: relative;
     z-index: 5;
@@ -134,7 +133,7 @@ header,
                     padding: 20px 10px 16px;
                     border-bottom: 4px solid transparent;
                 }
-                @each $type in (primary, brand, info, good, warning, bad) {
+                @each $type in (primary, brand, accent, info, good, warning, bad) {
                     &.#{$type} {
                         > a, > span {
                             border-color: map-get($color-scheme, #{$type});
@@ -289,19 +288,12 @@ header,
                 padding-bottom: 16px;
 
                 > a {
-                    padding: 5px 10px;
-                    background-color: $gray-light;
-                    @include nice-font-size(12px);
-                    @include nice-transition(color .1s, background-color .1s);
+                    @extend .nice-btn-alt;
 
-                    &:hover {
-                        background-color: $color-link;
-                        color: $color-white;
-                    }
                 }
                 &:first-child {
                     > a {
-                        @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
+                        @include nice-border-radius($top-right: 0, $bottom-right: 0);
                     }
                 }
                 &:last-child {
@@ -312,6 +304,7 @@ header,
                 + li {
                     > a {
                         border-left: 1px solid $gray-vlight;
+                        @include nice-border-radius($top-left: 0, $bottom-left: 0);
                     }
                 }
             }
@@ -331,9 +324,7 @@ header,
 }
 
 @include media($mobile-and-tablet) {
-    header,
     .nice-header {
-        margin: 0 -15px;
         position: relative;
 
         &.fixed {
@@ -343,129 +334,184 @@ header,
         .nice-header-container {
             padding: 0 15px;
         }
+        .nice-header-menu {
+            + .nice-header-menu {
+                margin-left: 0;
+            }
+        }
         .nice-header-collapse {
             top: 0;
             height: 100%;
             position: fixed;
             background-color: $color-accent;
+            overflow: hidden;
+            overflow-y: auto;
             @include nice-transition(left .2s ease-out, right .2s ease-out);
 
             > form, ul, div, span {
                 float: none;
             }
-        }
-        .nice-header-form {
-            padding: 0 20px;
-            background-color: lighten($color-accent, 15%);
+            .nice-header-menu {
+                z-index: 5;
+                width: 100%;
+                @include nice-transition(left .2s ease-in-out);
 
-            ~ .nice-header-menu {
-                height: calc(100% - 60px);    
-            }
-        }
-        .nice-header-menu {
-            overflow: hidden;
-            overflow-y: auto;
-            z-index: 5;
-            width: 100%;
-            height: 100%;
-            @include nice-transition(left .2s ease-in-out);
-
-            > li {
-                &.fixed-width {
-                    > a {
-                        width: auto;
-                        text-align: left;
-                    }
-                    &.w125,
-                    &.w150,
-                    &.w175,
-                    &.w200 {
-                        width: auto;
-                    }
-                }
-            }
-            li {
-                float: none;
-
-                a, span {
-                    position: relative;
-                    color: $color-white;
-                    @include nice-transition(background-color .1s, color .1s);
-
-                    &::before {
-                        display: -moz-inline-stack;
-                        display: inline-block;
-                        *display: inline-block;
-                        zoom: 1;
-                        width: 20px;
-                        text-align: center;
-                        margin-right: 10px;
-                    }
-                }
-                ul {
-                    display: block;
-                    position: relative;
-
-                    li {
-                        white-space: normal;
-
-                        a, span {
-                            padding-left: 50px;
-                            @include nice-font($size: .9em);
-
-                            &:hover,
-                            &:focus,
-                            &:active {
-                                background-color: transparent;
-                            }
+                > li {
+                    &.fixed-width {
+                        > a {
+                            width: auto;
+                            text-align: left;
                         }
-                        ul {
-                            display: block;
-                            position: relative;
-                            left: auto;
-                            padding-left: 15px;
+                        &.w125,
+                        &.w150,
+                        &.w175,
+                        &.w200 {
+                            width: auto;
                         }
                     }
                 }
-                &.has-children {
-                    > a, > span {
-                        &:after {
-                            display: none;
-                        }
-                    }
-                }
-            }
-            &.menu-pills {
                 li {
-                    a {
-                        &:hover,
-                        &:active {
-                            background-color: $color-white;
-                            color: $color-link;
-                            outline: none;
+                    float: none;
+
+                    a, span {
+                        position: relative;
+                        color: $color-white;
+                        @include nice-transition(background-color .1s, color .1s);
+
+                        &::before {
+                            display: -moz-inline-stack;
+                            display: inline-block;
+                            *display: inline-block;
+                            zoom: 1;
+                            width: 20px;
+                            text-align: center;
+                            margin-right: 10px;
                         }
                     }
                     ul {
+                        display: block;
+                        position: relative;
+
                         li {
-                            a {
+                            white-space: normal;
+
+                            a, span {
+                                padding-left: 50px;
+                                @include nice-font($size: .9em);
+
                                 &:hover,
                                 &:focus,
                                 &:active {
                                     background-color: transparent;
-                                    color: $color-white;
+                                }
+                            }
+                            ul {
+                                display: block;
+                                position: relative;
+                                left: auto;
+                                padding-left: 15px;
+                            }
+                        }
+                    }
+                    &.has-children {
+                        > a, > span {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                &.menu-pills {
+                    li {
+                        a {
+                            &:hover,
+                            &:active {
+                                background-color: $color-white;
+                                color: $color-link;
+                                outline: none;
+                            }
+                        }
+                        ul {
+                            li {
+                                a {
+                                    &:hover,
+                                    &:focus,
+                                    &:active {
+                                        background-color: transparent;
+                                        color: $color-white;
+                                    }
                                 }
                             }
                         }
                     }
                 }
-            }
-            &.menu-alt {
-                display: none;
-            }
-            @for $i from 3 to 5 {
-                &:nth-child(#{$i}) {
-                    height: calc(100% - #{($i - 1) * 60 + 'px'});
+                &.menu-alt {
+                    margin-left: 0;
+                    margin-top: 0;
+                    left: auto;
+                    width: auto;
+                    height: auto;
+                    padding-top: 0;
+                    padding-bottom: 10px;
+
+                    > li {
+                        padding: 10px 15px 0 15px;
+
+                        + li {
+                            padding-top: 0;
+
+                            > a {
+                                border-left: none;
+                                border-top: 1px solid $gray-medium;
+                            }
+                        }
+                        &:first-child {
+                            a {
+                                @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius, $bottom-left: 0);
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius, $top-right: 0);
+                            }
+                        }
+                    }
                 }
+            }
+        }
+        .nice-header-form {
+            padding: 0 20px;
+            background-color: lighten($color-accent, 15%);
+            position: fixed;
+            top: 0;
+            width: calc(100% - 60px);
+            z-index: 6;
+
+            input[type="text"] {
+                color: $color-white;
+                border-color: transparent;
+                background-color: transparent;
+                padding: 5px 0;
+                @include nice-box-shadow(none);
+                @include nice-border-radius(0);
+                @include nice-transition(border-bottom-color 0.3s);
+                @include nice-placeholder-color {
+                    color: $gray-vlight;
+                }
+
+                &:focus,
+                &:active {
+                    border-color: transparent;
+                    border-bottom-color: $color-white;
+                    width: 100%;
+                    margin-left: 0;
+                    @include nice-box-shadow(none);
+                }
+            }
+
+            ~ .nice-header-menu {
+                margin-top: 60px;
+                // height: calc(100% - 60px);
             }
         }
         .nice-header-toggle {
@@ -582,27 +628,6 @@ header,
                         }
                     }
                 }
-                input[type="text"] {
-                    color: $color-white;
-                    border-color: transparent;
-                    background-color: transparent;
-                    padding: 5px 0;
-                    @include nice-box-shadow(none);
-                    @include nice-border-radius(0);
-                    @include nice-transition(border-bottom-color 0.3s);
-                    @include nice-placeholder-color {
-                        color: $gray-vlight;
-                    }
-
-                    &:focus,
-                    &:active {
-                        border-color: transparent;
-                        border-bottom-color: $color-white;
-                        width: 100%;
-                        margin-left: 0;
-                        @include nice-box-shadow(none);
-                    }
-                }
             }
             .nice-header-menu {
                 > li {
@@ -660,20 +685,17 @@ header,
             width: 340px;
 
             .nice-header-form {
-                width: 285px;
-                position: absolute;
-                right: calc(100% + 40px);
-                padding: 0 15px;
-                background-color: transparent;
+                width: 340px;
+                // position: fixed;
+                // right: calc(100% + 40px);
+                // padding: 0 15px;
+                // background-color: transparent;
 
                 input[type="text"] {
                     &:focus {
                         width: 100%;
                         margin-left: auto;
                     }
-                }
-                ~ .nice-header-menu {
-                    height: 100%;
                 }
             }
             .nice-header-menu {

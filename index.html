@@ -56,15 +56,8 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="has-children">
+                                <li>
                                     <a href="#nice-static-assets">Static assets</a>
-                                    <ul>
-                                        <li>
-                                            <a href="http://tkgit-01.textkernel.net/nice/nice-logos/tree/master" target="_blank" class="icon fa-picture-o">
-                                                Product logos
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </li>
                                 <li>
                                     <a href="#nice-font-icons">Font icons</a>
@@ -115,6 +108,9 @@
                                         </li>
                                         <li>
                                             <a href="#nice-pagination">Pagination</a>
+                                        </li>
+                                        <li>
+                                            <a href="#nice-menus">Menus</a>
                                         </li>
                                         <li>
                                             <a href="#nice-panels">Panels</a>
@@ -176,7 +172,7 @@
                     </ul>
                     <ul class="nice-header-menu menu-alt">
                         <li>
-                            <a href="https://https://github.com/textkernel/nice/issues/new" class="icon fa-external-link" target="_blank">
+                            <a href="https://github.com/textkernel/nice/issues/new" class="icon fa-external-link" target="_blank">
                                 Report issue
                             </a>
                         </li>
@@ -299,7 +295,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="//tkgit-01.textkernel.net/nice/nice/tree/master/assets/favicons" target="_blank">assets/favicons/</a>
+                                    <a href="https://github.com/textkernel/nice/tree/master/assets/favicons" target="_blank">assets/favicons/</a>
                                 </td>
                                 <td>Favicons for various devices</td>
                             </tr>
@@ -312,9 +308,6 @@
                     </p>
                     <p>
                         The use of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_as_an_Image" target="_blank" title="MDN: SVG as an Image">SVG images</a> is highly recommended because as these can scale any size without quality loss.
-                    </p>
-                    <p>
-                        Additional high resolution logo files can be found in the <a href="http://tkgit-01.textkernel.net/nice/nice-logos/tree/master" target="_blank">Nice! Logo repository</a>.
                     </p>
                 </div>
             </div>
@@ -510,8 +503,15 @@
                         Textkernel
                     &lt;/a&gt;
                 &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
+            &lt;/ul&gt;&lt;!-- .nice-header-menu.menu-pills --&gt;
+            &lt;ul class=&quot;<span class="main">nice-header-menu</span> <span class="variation">menu-alt</span>&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-external-link</span>&quot;&gt;
+                        Alternative link
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;&lt;!-- .nice-header-menu.menu-alt --&gt;
+        &lt;/div&gt;&lt;!-- .nice-header-collapse --&gt;
         &lt;button type=&quot;button&quot; class=&quot;<span class="main">nice-header-toggle collapsed</span>&quot;&gt;
             &lt;span class=&quot;icon-bar top-bar&quot;&gt;&lt;/span&gt;
             &lt;span class=&quot;icon-bar middle-bar&quot;&gt;&lt;/span&gt;
@@ -644,6 +644,16 @@
                             <button type="button" class="nice-btn">
                                 Third
                             </button>
+                        </div>
+                    </p>
+                    <p>
+                        <div class="nice-btn-group">
+                            <a href="javascript:void(0);" class="nice-btn-alt icon fa-info">
+                                Alternative button
+                            </a>
+                            <a href="javascript:void(0);" class="nice-btn-alt icon fa-question">
+                                Alternative button
+                            </a>
                         </div>
                     </p>
                 </div>
@@ -1041,6 +1051,28 @@
                             <i class="icon fa-envelope-o"></i>
                         </button>
                     </form>
+                    <form class="nice-form-horizontal" style="margin-top: 30px;">
+                        <div class="nice-form-group">
+                            <label for="demo-input-5" class="nice-col-3 nice-control-label">Name</label>
+                            <div class="nice-col-9">
+                                <input type="text" class="nice-form-control" placeholder="Foo Bar" id="demo-input-5" />
+                            </div>
+                        </div>
+                        <div class="nice-form-group">
+                            <label for="demo-input-6" class="nice-col-3 nice-control-label">Email</label>
+                            <div class="nice-col-9">
+                                <input type="text" class="nice-form-control" placeholder="bar.foo@textkernel.com" id="demo-input-6" />
+                            </div>
+                        </div>
+                        <div class="nice-form-group">
+                            <div class="nice-col-9 nice-shift-3">
+                                <button class="nice-btn">
+                                    <i class="icon fa-envelope-o"></i>
+                                    Submit message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
                     <div class="docs-code-wrapper">
@@ -1130,6 +1162,30 @@
     &lt;button class=&quot;nice-btn&quot;&gt;
         &lt;i class=&quot;icon fa-envelope-o&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
+&lt;/form&gt;
+
+&lt;!-- Horizontal forms --&gt;
+&lt;form class=&quot;<span class="main">nice-form-horizontal</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;label for=&quot;demo-input-5&quot; class=&quot;<span class="main">nice-col-3 nice-control-label</span>&quot;&gt;Name&lt;/label&gt;
+        &lt;div class=&quot;<span class="main">nice-col-9</span>&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;nice-form-control&quot; placeholder=&quot;Foo Bar&quot; id=&quot;demo-input-5&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;label for=&quot;demo-input-6&quot; class=&quot;<span class="main">nice-col-3 nice-control-label</span>&quot;&gt;Email&lt;/label&gt;
+        &lt;div class=&quot;<span class="main">nice-col-9</span>&quot;&gt;
+            &lt;input type=&quot;text&quot; class=&quot;nice-form-control&quot; placeholder=&quot;bar.foo@textkernel.com&quot; id=&quot;demo-input-6&quot; /&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-form-group</span>&quot;&gt;
+        &lt;div class=&quot;<span class="main">nice-col-9 nice-shift-3</span>&quot;&gt;
+            &lt;button class=&quot;nice-btn&quot;&gt;
+                &lt;i class=&quot;icon fa-envelope-o&quot;&gt;&lt;/i&gt;
+                Submit message
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/form&gt;</code>
                         <ul class="doc-code-tools">
                             <li><a href="#" class="toggle">Expand</a></li>
@@ -1157,18 +1213,18 @@
                                         Second
                                     </a>
                                 </li>
-                                <li>
+                                <li class="pull-right">
                                     <a href="javascript:void(0);" class="icon fa-home">
                                         Third
                                     </a>
                                 </li>
-                                <li>
+                                <li class="pull-right">
                                     <a href="javascript:void(0);" class="icon fa-wrench">
                                         Fourth
                                     </a>
                                 </li>
                             </ul>
-                            <div class="nice-tabs-content text-align-justify">
+                            <div class="nice-tab-content text-align-justify">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
                             </div>
                         </div>
@@ -1205,7 +1261,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <ul class="nice-tabs-content">
+                            <ul class="nice-tab-content">
                                 <li class="current text-align-justify">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
                                 </li>
@@ -1241,7 +1297,7 @@
             &lt;a href=&quot;#&quot;&gt;Fifth&lt;/a&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
-    &lt;ul class=&quot;<span class="main">nice-tabs-content</span>&quot;&gt;
+    &lt;ul class=&quot;<span class="main">nice-tab-content</span>&quot;&gt;
         &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
             This tab is currently active
         &lt;/li&gt;
@@ -1629,6 +1685,111 @@
                     </div>
                 </div>
             </div>
+            <div class="nice-row" id="nice-menus">
+                <h2 class="docs">Menus</h2>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <ul class="nice-menu">
+                        <li class="current">
+                            <a href="javascript:void(0);" class="icon fa-home">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="icon fa-map-pin">Cities</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Regions</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="javascript:void(0);" class="icon fa-globe">Countries</a>
+                        </li>
+                    </ul>
+                    <ul class="nice-menu stacked has-icons">
+                        <li class="current">
+                            <a href="javascript:void(0);" class="icon fa-home">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="icon fa-map-pin">Cities</a>
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0);">Amsterdam</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Paris</a>
+                                </li>
+                                <li class="disabled">
+                                    <a href="javascript:void(0);">Berlin</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Rome</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Barcelona</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Regions</a>
+                        </li>
+                        <li class="disabled">
+                            <a href="javascript:void(0);" class="icon fa-globe">Countries</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;ul class=&quot;<span class="main">nice-menu</span>&quot;&gt;
+    &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;icon fa-home&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; class=&quot;icon fa-map-pin&quot;&gt;Cities&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Regions&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;<span class="variation">disabled</span>&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;icon fa-globe&quot;&gt;Countries&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Stacked menus --&gt;
+&lt;ul class=&quot;<span class="main">nice-menu</span> <span class="variation">stacked narrow has-icons</span>&quot;&gt;
+    &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;icon fa-home&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot; class=&quot;icon fa-map-pin&quot;&gt;Cities&lt;/a&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Amsterdam&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Paris&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;<span class="variation">disabled</span>&quot;&gt;
+                &lt;a href=&quot;#&quot;&gt;Berlin&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Rome&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;Barcelona&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;<span class="variation">pad-left</span>&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;Regions&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;<span class="variation">disabled</span>&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;icon fa-globe&quot;&gt;Countries&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="nice-row" id="nice-panels">
                 <h2 class="docs">Panels</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
@@ -1658,7 +1819,7 @@
                             This panel has a inverse heading
                         </div>
                         <div class="nice-panel-heading">
-                            For Your Information
+                            For Your Information <a href="#">test</a>
                         </div>
                     </div>
                     <div class="nice-panel">
@@ -1683,22 +1844,22 @@
                                     <td>The Netherlands</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
+                                    <th scope="row" class="text-align-center">2</th>
                                     <td>Paris</td>
                                     <td>France</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">2</th>
+                                    <th scope="row" class="text-align-center">2</th>
                                     <td>Berlin</td>
                                     <td>Germany</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">3</th>
+                                    <th scope="row" class="text-align-center">3</th>
                                     <td>Rome</td>
                                     <td>Italy</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">4</th>
+                                    <th scope="row" class="text-align-center">4</th>
                                     <td>Barcelona</td>
                                     <td>Spain</td>
                                 </tr>
@@ -1711,7 +1872,7 @@
                         Panels are required to have a <code class="inline">.nice-panel-content</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
                     </p>
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;div class=&quot;<span class="main">nice-panel</span> <span class="variation">brand info good warning bad</span>&quot;&gt;
+                        <code class="docs">&lt;div class=&quot;<span class="main">nice-panel</span> <span class="variation">brand primary info good warning bad gray</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-panel-heading</span>&quot;&gt;
         Optional panel heading
     &lt;/div&gt;
@@ -1733,49 +1894,49 @@
                 <h2 class="docs">Stacked lists</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <nav class="nice-stacked-list">
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item A
                             <span class="badge">
                                 14
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item B
                             <span class="badge">
                                 New
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item C
                             <span class="badge primary">
                                 23
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item C
                             <span class="badge accent">
                                 23
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item C
                             <span class="badge info">
                                 Working
                             </span>
                         </a>
-                        <a href="#" class="current">
+                        <a class="list-item" href="#" class="current">
                             Menu item C
                             <span class="badge warning">
                                 Attention
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item D
                             <span class="badge good">
                                 Complete
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item E
                             <span class="badge bad">
                                 Error
@@ -1783,10 +1944,10 @@
                         </a>
                     </nav>
                     <ul class="nice-stacked-list">
-                        <li class="list-heading">
+                        <li class="list-item list-heading">
                             Search!
                         </li>
-                        <li>
+                        <li class="list-item">
                             <h3 class="item-heading">
                                 Working Hours
                             </h3>
@@ -1798,7 +1959,7 @@
                                 </select>
                             </div>
                         </li>
-                        <li>
+                        <li class="list-item">
                             <h3 class="item-heading">Advertiser Type</h3>
                             <div class="nice-form-group">
                                 <select class="nice-form-control">
@@ -1808,14 +1969,14 @@
                                 </select>
                             </div>
                         </li>
-                        <li>Item C</li>
-                        <li>Item D</li>
+                        <li class="list-item">Item C</li>
+                        <li class="list-item">Item D</li>
                     </ul>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;nav class=&quot;<span class="main">nice-stacked-list</span>&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;
+                        <code class="docs">&lt;nav class=&quot;<span class="main">nice-stacked-list</span> <span class="variation">sidebar</span>&quot;&gt;
+    &lt;a class=&quot;<span class="main">list-item</span>&quot; href=&quot;#&quot;&gt;
         Menu item A
         &lt;span class=&quot;<span class="main">badge</span> <span class="variation">primary accent info good warning bad</span>&quot;&gt;
             23
@@ -1825,22 +1986,22 @@
 &lt;/nav&gt;
 
 &lt;ul class=&quot;<span class="main">nice-stacked-list</span> <span class="variation">sidebar left</span>&quot;&gt;
-    &lt;li&gt;
+    &lt;li class=&quot;<span class="main">list-item</span>&quot;&gt;
         &lt;div class=&quot;<span class="main">nice-stacked-list-controls</span>&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-stacked-list-control</span>&quot;&gt;Button 1&lt;/a&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-stacked-list-control</span>&quot;&gt;Button 2&lt;/a&gt;
         &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;<span class="variation">list-heading</span>&quot;&gt;
+    &lt;li class=&quot;<span class="main">list-item</span> <span class="variation">list-heading</span>&quot;&gt;
         Search!
     &lt;/li&gt;
-    &lt;li&gt;
+    &lt;li class=&quot;<span class="main">list-item</span>&quot;&gt;
         &lt;h3 class=&quot;<span class="variation">item-heading</span>&quot;&gt;
             Item heading
         &lt;/h3&gt;
         Item A
     &lt;/li&gt;
-    &lt;li&gt;
+    &lt;li class=&quot;<span class="main">list-item</span>&quot;&gt;
         Item B
     &lt;/li&gt;
     ...
@@ -1958,7 +2119,7 @@
 &lt;/div&gt;
 
 &lt;!-- Popovers --&gt;
-&lt;div class=&quot;<span class="main">nice-popover</span> <span class="variation">top bottom left center right info good warning bad</span>&quot;&gt;
+&lt;div class=&quot;<span class="main">nice-popover</span> <span class="variation">no-arrow top bottom left center right info good warning bad</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-popover-title</span>&quot;&gt;
         This is a popover
     &lt;/div&gt;
@@ -2205,7 +2366,7 @@
                     <table class="nice-table striped bordered hover">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th class="text-align-center">#</th>
                                 <th>City</th>
                                 <th>Region</th>
                                 <th>Country</th>
@@ -2213,31 +2374,31 @@
                         </thead>
                         <tbody>
                             <tr class="info">
-                                <th scope="row">1</th>
+                                <th scope="row" class="text-align-center">1</th>
                                 <td>Amsterdam</td>
                                 <td>Noord-Holland</td>
                                 <td>The Netherlands</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
+                                <th scope="row" class="text-align-center">2</th>
                                 <td class="warning">Paris</td>
                                 <td>Île-de-France</td>
                                 <td>France</td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
+                                <th scope="row" class="text-align-center">2</th>
                                 <td>Berlin</td>
                                 <td class="bad">Brandenburg</td>
                                 <td>Germany</td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
+                                <th scope="row" class="text-align-center">3</th>
                                 <td>Rome</td>
                                 <td>Lazio</td>
                                 <td class="good">Italy</td>
                             </tr>
                             <tr>
-                                <th scope="row">4</th>
+                                <th scope="row" class="text-align-center">4</th>
                                 <td>Barcelona</td>
                                 <td>Catalonia</td>
                                 <td>Spain</td>
@@ -2433,17 +2594,12 @@
                 </p>
                 <ul class="nice-footer-menu">
                     <li>
-                        <a href="http://tkgit-01.textkernel.net/nice/nice/blob/master/LICENSE" target="_blank">
+                        <a href="https://github.com/textkernel/nice/blob/master/LICENSE" target="_blank" class="icon fa-balance-scale">
                             Project License
                         </a>
                     </li>
                     <li>
-                        <a href="index.html" class="icon fa-book">
-                            Nice! Documentation
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://tkgit-01.textkernel.local/nice/nice" target="_blank" class="icon fa-gitlab">
+                        <a href="https://github.com/textkernel/nice/" target="_blank" class="icon fa-github">
                             Source
                         </a>
                     </li>

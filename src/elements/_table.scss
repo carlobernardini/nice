@@ -1,4 +1,13 @@
 table {
+    th {
+        text-align: left;
+    }
+    td[class*="nice-col"],
+    th[class*="nice-col"] {
+        float: none;
+        position: static;
+        display: table-cell;
+    }
     &.nice-table {
         border-spacing: 0;
         border-collapse: collapse;
@@ -13,7 +22,6 @@ table {
         thead {
             tr {
                 th, td {
-                    text-align: left;
                     border-bottom: 1px solid $color-border;
                     padding: 8px;
                     background-color: $color-white;
@@ -25,7 +33,6 @@ table {
             tr {
                 th, td {
                     vertical-align: top;
-                    text-align: left;
                     padding: 8px;
                 }
                 th {

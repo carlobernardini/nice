@@ -2,14 +2,15 @@
     list-style: none;
     @extend %panel;
 
-    li {
-        &.list-heading {
-            @extend %panel-heading;
+    .list-heading {
+        @extend %panel-heading;
+        @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
 
-            + li {
-                border-top-width: 0;
-            }
+        + .list-item {
+            border-top-width: 0;
         }
+    }
+    .list-item {
         .item-heading {
             margin: -15px -15px 15px;
             padding: 10px 15px;
@@ -29,6 +30,9 @@
             .badge {
                 font-family: $fonts-primary;
             }
+        }
+        p {
+            margin: 0 0 5px 0;
         }
         .nice-stacked-list-controls {
             width: calc(100% + 30px);
@@ -75,7 +79,7 @@
             }
         }
     }
-    > li, > a {
+    .list-item {
         display: block;
         border-bottom: 1px solid lighten($color-border, 10%);
         padding: 15px 15px;
@@ -87,9 +91,8 @@
             background-color: $gray-medium;
             color: $color-white;
             padding: 3px 8px;
-            margin: -3px;
-            @extend %display-inline-block;
-            @include nice-font($size: 13px, $weight: 600);
+            margin: -3px 0;
+            @include nice-font($size: 80%, $weight: 600);
             @include nice-border-radius(15px);
             @include nice-transition(background-color 0.1s);
 
@@ -97,6 +100,27 @@
                 &.#{$type} {
                     background-color: lighten(map-get($color-scheme, #{$type}), 5%);
                 }
+            }
+            .badge-addon {
+                background-color: lighten($gray-dark, 8%);
+                color: $gray-medium;
+                float:left;
+                margin: -3px 5px -3px -8px;
+                padding: 3px 5px;
+                @include nice-font($weight: 400);
+                @include nice-border-radius($top-left: 15px, $bottom-left: 15px);
+
+                a {
+                    color: $color-white;
+                    @include nice-text-shadow(none);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .badge-text {
+                float: left;
             }
         }
         &:hover {
@@ -119,7 +143,7 @@
         }
     }
     &.condensed {
-        li, a {
+        .list-item {
             padding: 10px 15px;
         }
     }
@@ -143,7 +167,7 @@
             right: auto;
             left: 0;
         }
-        li {
+        .list-item {
             border-bottom-color: $gray-medium;
 
             .item-heading {

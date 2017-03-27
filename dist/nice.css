@@ -20,10 +20,9 @@ html {
   -o-user-select: none;
   user-select: none; }
 
-header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-checkbox label, .nice-stacked-list .list-item .item-heading.icon:before, .nice-breadcrumb li, .nice-pagination, .nice-menu.stacked li a.icon:before, .nice-menu.stacked li span.icon:before, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
 .nice-popover .nice-popover-title .product-icon,
 .nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
@@ -46,28 +45,22 @@ header .nice-header-brand,
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
 
-.nice-panel .nice-panel-heading, .nice-stacked-list li.list-heading {
+.nice-panel .nice-panel-heading, .nice-stacked-list .list-heading {
   background-color: #182642;
   color: #FFF;
   font-weight: 600;
   margin: -1px -1px 0 -1px;
-  padding: 10px 15px;
-  -webkit-border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  border-radius: 3px 3px 0 0;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding;
-  background-clip: padding-box; }
+  padding: 10px 15px; }
 
-.clearfix, .nice-login .nice-login-footer, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
+.clearfix, .nice-login .nice-login-footer, .nice-form-horizontal .nice-form-group, .nice-tabs, nav, .nice-btn-group, .nice-popover .nice-popover-body, .nice-modal .nice-modal-content .nice-modal-footer {
   zoom: 1;
   display: block;
   height: 1%;
   clear: both; }
-  .clearfix:before, .nice-login .nice-login-footer:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-login .nice-login-footer:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:before, .nice-login .nice-login-footer:before, .nice-form-horizontal .nice-form-group:before, .nice-tabs:before, nav:before, .nice-btn-group:before, .nice-popover .nice-popover-body:before, .nice-modal .nice-modal-content .nice-modal-footer:before, .clearfix:after, .nice-login .nice-login-footer:after, .nice-form-horizontal .nice-form-group:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     content: "";
     display: table; }
-  .clearfix:after, .nice-login .nice-login-footer:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
+  .clearfix:after, .nice-login .nice-login-footer:after, .nice-form-horizontal .nice-form-group:after, .nice-tabs:after, nav:after, .nice-btn-group:after, .nice-popover .nice-popover-body:after, .nice-modal .nice-modal-content .nice-modal-footer:after {
     clear: both;
     content: ".";
     display: block;
@@ -116,13 +109,13 @@ h6, .h6 {
   font-size: 12px;
   font-size: 0.75rem; }
 
-.text-align-left {
+.text-align-left, .nice-menu.stacked li a, .nice-menu.stacked li span {
   text-align: left; }
 
 .text-align-right {
   text-align: right; }
 
-.text-align-center {
+.text-align-center, .nice-menu li a, .nice-menu li span {
   text-align: center; }
 
 .text-align-justify {
@@ -392,6 +385,36 @@ i.icon {
 
 .nice-bg-black {
   background-color: #000; }
+
+.nice-bg-light-brand {
+  background-color: #75e4ff; }
+
+.nice-bg-light-link {
+  background-color: #75e4ff; }
+
+.nice-bg-light-text {
+  background-color: #797971; }
+
+.nice-bg-light-primary {
+  background-color: #ffd7a5; }
+
+.nice-bg-light-accent {
+  background-color: #4e73bf; }
+
+.nice-bg-light-muted {
+  background-color: white; }
+
+.nice-bg-light-good {
+  background-color: #d8eed8; }
+
+.nice-bg-light-info {
+  background-color: #f4fbfd; }
+
+.nice-bg-light-warning {
+  background-color: #ffefcc; }
+
+.nice-bg-light-bad {
+  background-color: #fdcfd2; }
 
 .shown {
   display: block; }
@@ -2838,8 +2861,7 @@ i.icon {
     content: "";
     display: table; }
 
-.nice-container-fluid, header .nice-header-container.fluid,
-.nice-header .nice-header-container.fluid {
+.nice-container-fluid, .nice-header .nice-header-container.fluid {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -3636,7 +3658,6 @@ i.icon {
 body.nice-fixed-header {
   padding-top: 60px; }
 
-header,
 .nice-header {
   position: relative;
   z-index: 5;
@@ -3645,13 +3666,11 @@ header,
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
-  header.fixed,
   .nice-header.fixed {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%; }
-  header .nice-header-container,
   .nice-header .nice-header-container {
     height: 60px;
     line-height: 60px;
@@ -3659,18 +3678,14 @@ header,
     max-width: 1170px;
     margin-left: auto;
     margin-right: auto; }
-    header .nice-header-container::after,
     .nice-header .nice-header-container::after {
       clear: both;
       content: "";
       display: table; }
-    header .nice-header-container:after,
     .nice-header .nice-header-container:after {
       display: none; }
-    header .nice-header-container.fluid,
     .nice-header .nice-header-container.fluid {
       max-width: 100%; }
-  header .nice-header-brand,
   .nice-header .nice-header-brand {
     margin: 0;
     padding: 0;
@@ -3684,28 +3699,19 @@ header,
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain; }
-    header .nice-header-brand a,
     .nice-header .nice-header-brand a {
       display: inline-block; }
-    header .nice-header-brand img,
-    header .nice-header-brand svg,
     .nice-header .nice-header-brand img,
     .nice-header .nice-header-brand svg {
       margin: 15px 0;
       border: 0; }
-  header .nice-header-collapse,
   .nice-header .nice-header-collapse {
     float: right; }
-    header .nice-header-collapse > form, header .nice-header-collapse ul, header .nice-header-collapse div,
-    .nice-header .nice-header-collapse > form,
-    .nice-header .nice-header-collapse ul,
-    .nice-header .nice-header-collapse div {
+    .nice-header .nice-header-collapse > form, .nice-header .nice-header-collapse ul, .nice-header .nice-header-collapse div {
       float: left; }
-  header .nice-header-form,
   .nice-header .nice-header-form {
     float: right;
     padding: 0 15px; }
-    header .nice-header-form input[type="text"],
     .nice-header .nice-header-form input[type="text"] {
       display: inline-block;
       border-color: #ECF0F1;
@@ -3721,22 +3727,17 @@ header,
       -ms-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
       -o-transition: border-color 0.3s, margin-left 0.3s, width 0.3s;
       transition: border-color 0.3s, margin-left 0.3s, width 0.3s; }
-      header .nice-header-form input[type="text"]:hover,
       .nice-header .nice-header-form input[type="text"]:hover {
         border-color: #cfd9db; }
-      header .nice-header-form input[type="text"]:focus,
       .nice-header .nice-header-form input[type="text"]:focus {
         width: 150%;
         margin-left: -50%;
         border-color: #009CC1; }
-        header .nice-header-form input[type="text"]:focus + button,
         .nice-header .nice-header-form input[type="text"]:focus + button {
           display: block;
           color: #D0D1D5; }
-    header .nice-header-form .nice-header-input-wrapper,
     .nice-header .nice-header-form .nice-header-input-wrapper {
       position: relative; }
-      header .nice-header-form .nice-header-input-wrapper button,
       .nice-header .nice-header-form .nice-header-input-wrapper button {
         position: absolute;
         width: 24px;
@@ -3763,17 +3764,13 @@ header,
         -ms-transition: background-color 0.3s, color 0.3s;
         -o-transition: background-color 0.3s, color 0.3s;
         transition: background-color 0.3s, color 0.3s; }
-        header .nice-header-form .nice-header-input-wrapper button i,
         .nice-header .nice-header-form .nice-header-input-wrapper button i {
           font-size: 1em; }
-      header .nice-header-form .nice-header-input-wrapper:hover button,
       .nice-header .nice-header-form .nice-header-input-wrapper:hover button {
         display: block; }
-        header .nice-header-form .nice-header-input-wrapper:hover button:hover,
         .nice-header .nice-header-form .nice-header-input-wrapper:hover button:hover {
           background-color: transparent;
           color: #009CC1; }
-        header .nice-header-form .nice-header-input-wrapper:hover button:active,
         .nice-header .nice-header-form .nice-header-input-wrapper:hover button:active {
           color: #009CC1;
           -webkit-transition: none;
@@ -3784,202 +3781,105 @@ header,
           -webkit-box-shadow: none;
           -moz-box-shadow: none;
           box-shadow: none; }
-  header .nice-header-menu,
   .nice-header .nice-header-menu {
     float: right;
     padding: 0;
     margin: 0;
     line-height: 60px;
     line-height: 3.75rem; }
-    header .nice-header-menu > li.highlight > a, header .nice-header-menu > li.highlight > span,
-    .nice-header .nice-header-menu > li.highlight > a,
-    .nice-header .nice-header-menu > li.highlight > span {
+    .nice-header .nice-header-menu > li.highlight > a, .nice-header .nice-header-menu > li.highlight > span {
       padding: 20px 10px 16px;
       border-bottom: 4px solid transparent; }
-    header .nice-header-menu > li.highlight.primary > a, header .nice-header-menu > li.highlight.primary > span,
-    .nice-header .nice-header-menu > li.highlight.primary > a,
-    .nice-header .nice-header-menu > li.highlight.primary > span {
+    .nice-header .nice-header-menu > li.highlight.primary > a, .nice-header .nice-header-menu > li.highlight.primary > span {
       border-color: #F18700;
       -webkit-transition: background-color 0.1s, border-color 0.3s;
       -moz-transition: background-color 0.1s, border-color 0.3s;
       -ms-transition: background-color 0.1s, border-color 0.3s;
       -o-transition: background-color 0.1s, border-color 0.3s;
       transition: background-color 0.1s, border-color 0.3s; }
-      header .nice-header-menu > li.highlight.primary > a:hover, header .nice-header-menu > li.highlight.primary > span:hover,
-      .nice-header .nice-header-menu > li.highlight.primary > a:hover,
-      .nice-header .nice-header-menu > li.highlight.primary > span:hover {
+      .nice-header .nice-header-menu > li.highlight.primary > a:hover, .nice-header .nice-header-menu > li.highlight.primary > span:hover {
         border-color: #ffaa3f; }
-    header .nice-header-menu > li.highlight.brand > a, header .nice-header-menu > li.highlight.brand > span,
-    .nice-header .nice-header-menu > li.highlight.brand > a,
-    .nice-header .nice-header-menu > li.highlight.brand > span {
+    .nice-header .nice-header-menu > li.highlight.brand > a, .nice-header .nice-header-menu > li.highlight.brand > span {
       border-color: #009CC1;
       -webkit-transition: background-color 0.1s, border-color 0.3s;
       -moz-transition: background-color 0.1s, border-color 0.3s;
       -ms-transition: background-color 0.1s, border-color 0.3s;
       -o-transition: background-color 0.1s, border-color 0.3s;
       transition: background-color 0.1s, border-color 0.3s; }
-      header .nice-header-menu > li.highlight.brand > a:hover, header .nice-header-menu > li.highlight.brand > span:hover,
-      .nice-header .nice-header-menu > li.highlight.brand > a:hover,
-      .nice-header .nice-header-menu > li.highlight.brand > span:hover {
+      .nice-header .nice-header-menu > li.highlight.brand > a:hover, .nice-header .nice-header-menu > li.highlight.brand > span:hover {
         border-color: #0fd1ff; }
-    header .nice-header-menu > li.highlight.info > a, header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.info header .nice-header-menu > li.highlight.nice-form-control > a, header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.info header .nice-header-menu > li.highlight.nice-btn > a, header .nice-header-menu > li.highlight.info > span, header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.info header .nice-header-menu > li.highlight.nice-form-control > span, header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.info header .nice-header-menu > li.highlight.nice-btn > span,
-    .nice-header .nice-header-menu > li.highlight.info > a,
-    .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.info
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > a,
-    .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.info
-    .nice-header .nice-header-menu > li.highlight.nice-btn > a,
-    .nice-header .nice-header-menu > li.highlight.info > span,
-    .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.info
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > span,
-    .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.info
-    .nice-header .nice-header-menu > li.highlight.nice-btn > span {
+    .nice-header .nice-header-menu > li.highlight.accent > a, .nice-header .nice-header-menu > li.highlight.accent > span {
+      border-color: #182642;
+      -webkit-transition: background-color 0.1s, border-color 0.3s;
+      -moz-transition: background-color 0.1s, border-color 0.3s;
+      -ms-transition: background-color 0.1s, border-color 0.3s;
+      -o-transition: background-color 0.1s, border-color 0.3s;
+      transition: background-color 0.1s, border-color 0.3s; }
+      .nice-header .nice-header-menu > li.highlight.accent > a:hover, .nice-header .nice-header-menu > li.highlight.accent > span:hover {
+        border-color: #2c467a; }
+    .nice-header .nice-header-menu > li.highlight.info > a, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-form-control > a, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-btn > a, .nice-header .nice-header-menu > li.highlight.info > span, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-form-control > span, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-btn > span {
       border-color: #60C4DE;
       -webkit-transition: background-color 0.1s, border-color 0.3s;
       -moz-transition: background-color 0.1s, border-color 0.3s;
       -ms-transition: background-color 0.1s, border-color 0.3s;
       -o-transition: background-color 0.1s, border-color 0.3s;
       transition: background-color 0.1s, border-color 0.3s; }
-      header .nice-header-menu > li.highlight.info > a:hover, header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.info header .nice-header-menu > li.highlight.nice-form-control > a:hover, header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.info header .nice-header-menu > li.highlight.nice-btn > a:hover, header .nice-header-menu > li.highlight.info > span:hover, header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.info header .nice-header-menu > li.highlight.nice-form-control > span:hover, header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.info header .nice-header-menu > li.highlight.nice-btn > span:hover,
-      .nice-header .nice-header-menu > li.highlight.info > a:hover,
-      .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.info
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover,
-      .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.info
-      .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover,
-      .nice-header .nice-header-menu > li.highlight.info > span:hover,
-      .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.info
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover,
-      .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.info
-      .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
+      .nice-header .nice-header-menu > li.highlight.info > a:hover, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-header .nice-header-menu > li.highlight.info > span:hover, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-header .nice-control-group.info .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.info .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
         border-color: #9fdceb; }
-    header .nice-header-menu > li.highlight.good > a, header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.good header .nice-header-menu > li.highlight.nice-form-control > a, header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.good header .nice-header-menu > li.highlight.nice-btn > a, header .nice-header-menu > li.highlight.good > span, header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.good header .nice-header-menu > li.highlight.nice-form-control > span, header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.good header .nice-header-menu > li.highlight.nice-btn > span,
-    .nice-header .nice-header-menu > li.highlight.good > a,
-    .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.good
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > a,
-    .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.good
-    .nice-header .nice-header-menu > li.highlight.nice-btn > a,
-    .nice-header .nice-header-menu > li.highlight.good > span,
-    .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.good
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > span,
-    .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.good
-    .nice-header .nice-header-menu > li.highlight.nice-btn > span {
+    .nice-header .nice-header-menu > li.highlight.good > a, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-form-control > a, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-btn > a, .nice-header .nice-header-menu > li.highlight.good > span, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-form-control > span, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-btn > span {
       border-color: #5CB85C;
       -webkit-transition: background-color 0.1s, border-color 0.3s;
       -moz-transition: background-color 0.1s, border-color 0.3s;
       -ms-transition: background-color 0.1s, border-color 0.3s;
       -o-transition: background-color 0.1s, border-color 0.3s;
       transition: background-color 0.1s, border-color 0.3s; }
-      header .nice-header-menu > li.highlight.good > a:hover, header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.good header .nice-header-menu > li.highlight.nice-form-control > a:hover, header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.good header .nice-header-menu > li.highlight.nice-btn > a:hover, header .nice-header-menu > li.highlight.good > span:hover, header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.good header .nice-header-menu > li.highlight.nice-form-control > span:hover, header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.good header .nice-header-menu > li.highlight.nice-btn > span:hover,
-      .nice-header .nice-header-menu > li.highlight.good > a:hover,
-      .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.good
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover,
-      .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.good
-      .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover,
-      .nice-header .nice-header-menu > li.highlight.good > span:hover,
-      .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.good
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover,
-      .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.good
-      .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
+      .nice-header .nice-header-menu > li.highlight.good > a:hover, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-header .nice-header-menu > li.highlight.good > span:hover, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-header .nice-control-group.good .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.good .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
         border-color: #91cf91; }
-    header .nice-header-menu > li.highlight.warning > a, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-form-control > a, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-btn > a, header .nice-header-menu > li.highlight.warning > span, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-form-control > span, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-btn > span,
-    .nice-header .nice-header-menu > li.highlight.warning > a,
-    .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.warning
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > a,
-    .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.warning
-    .nice-header .nice-header-menu > li.highlight.nice-btn > a,
-    .nice-header .nice-header-menu > li.highlight.warning > span,
-    .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.warning
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > span,
-    .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.warning
-    .nice-header .nice-header-menu > li.highlight.nice-btn > span {
+    .nice-header .nice-header-menu > li.highlight.warning > a, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-form-control > a, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-btn > a, .nice-header .nice-header-menu > li.highlight.warning > span, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-form-control > span, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-btn > span {
       border-color: #FFB819;
       -webkit-transition: background-color 0.1s, border-color 0.3s;
       -moz-transition: background-color 0.1s, border-color 0.3s;
       -ms-transition: background-color 0.1s, border-color 0.3s;
       -o-transition: background-color 0.1s, border-color 0.3s;
       transition: background-color 0.1s, border-color 0.3s; }
-      header .nice-header-menu > li.highlight.warning > a:hover, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-form-control > a:hover, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-btn > a:hover, header .nice-header-menu > li.highlight.warning > span:hover, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-form-control > span:hover, header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.warning header .nice-header-menu > li.highlight.nice-btn > span:hover,
-      .nice-header .nice-header-menu > li.highlight.warning > a:hover,
-      .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.warning
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover,
-      .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.warning
-      .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover,
-      .nice-header .nice-header-menu > li.highlight.warning > span:hover,
-      .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.warning
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover,
-      .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.warning
-      .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
+      .nice-header .nice-header-menu > li.highlight.warning > a:hover, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-header .nice-header-menu > li.highlight.warning > span:hover, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-header .nice-control-group.warning .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.warning .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
         border-color: #ffd066; }
-    header .nice-header-menu > li.highlight.bad > a, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-form-control > a, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-btn > a, header .nice-header-menu > li.highlight.bad > span, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-form-control > span, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-btn > span,
-    .nice-header .nice-header-menu > li.highlight.bad > a,
-    .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.bad
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > a,
-    .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.bad
-    .nice-header .nice-header-menu > li.highlight.nice-btn > a,
-    .nice-header .nice-header-menu > li.highlight.bad > span,
-    .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.bad
-    .nice-header .nice-header-menu > li.highlight.nice-form-control > span,
-    .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.bad
-    .nice-header .nice-header-menu > li.highlight.nice-btn > span {
+    .nice-header .nice-header-menu > li.highlight.bad > a, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > a, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-form-control > a, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > a, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-btn > a, .nice-header .nice-header-menu > li.highlight.bad > span, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > span, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-form-control > span, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > span, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-btn > span {
       border-color: #F42534;
       -webkit-transition: background-color 0.1s, border-color 0.3s;
       -moz-transition: background-color 0.1s, border-color 0.3s;
       -ms-transition: background-color 0.1s, border-color 0.3s;
       -o-transition: background-color 0.1s, border-color 0.3s;
       transition: background-color 0.1s, border-color 0.3s; }
-      header .nice-header-menu > li.highlight.bad > a:hover, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-form-control > a:hover, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-btn > a:hover, header .nice-header-menu > li.highlight.bad > span:hover, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-form-control > span:hover, header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.bad header .nice-header-menu > li.highlight.nice-btn > span:hover,
-      .nice-header .nice-header-menu > li.highlight.bad > a:hover,
-      .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.bad
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover,
-      .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.bad
-      .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover,
-      .nice-header .nice-header-menu > li.highlight.bad > span:hover,
-      .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.bad
-      .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover,
-      .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.bad
-      .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
+      .nice-header .nice-header-menu > li.highlight.bad > a:hover, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-form-control > a:hover, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-btn > a:hover, .nice-header .nice-header-menu > li.highlight.bad > span:hover, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-form-control > span:hover, .nice-header .nice-control-group.bad .nice-header-menu > li.highlight.nice-btn > span:hover, .nice-control-group.bad .nice-header .nice-header-menu > li.highlight.nice-btn > span:hover {
         border-color: #f86e78; }
-    header .nice-header-menu > li.fixed-width > a,
     .nice-header .nice-header-menu > li.fixed-width > a {
       width: 100px;
       text-overflow: ellipsis;
       white-space: nowrap;
       text-align: center; }
-    header .nice-header-menu > li.fixed-width.w125 > a,
     .nice-header .nice-header-menu > li.fixed-width.w125 > a {
       width: 125px; }
-    header .nice-header-menu > li.fixed-width.w150 > a,
     .nice-header .nice-header-menu > li.fixed-width.w150 > a {
       width: 150px; }
-    header .nice-header-menu > li.fixed-width.w175 > a,
     .nice-header .nice-header-menu > li.fixed-width.w175 > a {
       width: 175px; }
-    header .nice-header-menu > li.fixed-width.w200 > a,
     .nice-header .nice-header-menu > li.fixed-width.w200 > a {
       width: 200px; }
-    header .nice-header-menu li,
     .nice-header .nice-header-menu li {
       list-style: none;
       display: block;
       float: left;
       position: relative; }
-      header .nice-header-menu li a, header .nice-header-menu li span,
-      .nice-header .nice-header-menu li a,
-      .nice-header .nice-header-menu li span {
+      .nice-header .nice-header-menu li a, .nice-header .nice-header-menu li span {
         display: block;
         padding: 20px 10px;
         line-height: normal;
         font-size: 1.1em;
         font-size: 15px;
         font-size: 0.9375rem; }
-        header .nice-header-menu li a.icon:before, header .nice-header-menu li a.product-icon:before, header .nice-header-menu li a.additional-icon:before, header .nice-header-menu li span.icon:before, header .nice-header-menu li span.product-icon:before, header .nice-header-menu li span.additional-icon:before,
-        .nice-header .nice-header-menu li a.icon:before,
-        .nice-header .nice-header-menu li a.product-icon:before,
-        .nice-header .nice-header-menu li a.additional-icon:before,
-        .nice-header .nice-header-menu li span.icon:before,
-        .nice-header .nice-header-menu li span.product-icon:before,
-        .nice-header .nice-header-menu li span.additional-icon:before {
+        .nice-header .nice-header-menu li a.icon:before, .nice-header .nice-header-menu li a.product-icon:before, .nice-header .nice-header-menu li a.additional-icon:before, .nice-header .nice-header-menu li span.icon:before, .nice-header .nice-header-menu li span.product-icon:before, .nice-header .nice-header-menu li span.additional-icon:before {
           margin-right: 5px; }
-      header .nice-header-menu li ul,
       .nice-header .nice-header-menu li ul {
         display: none;
         position: absolute;
@@ -3987,37 +3887,27 @@ header,
         left: 0;
         background-color: #182642;
         padding: 0; }
-        header .nice-header-menu li ul li,
         .nice-header .nice-header-menu li ul li {
           float: none;
           line-height: 50px;
           line-height: 3.125rem; }
-          header .nice-header-menu li ul li a, header .nice-header-menu li ul li span,
-          .nice-header .nice-header-menu li ul li a,
-          .nice-header .nice-header-menu li ul li span {
+          .nice-header .nice-header-menu li ul li a, .nice-header .nice-header-menu li ul li span {
             min-width: 200px;
             color: #FFF;
             display: block;
             padding: 15px; }
-            header .nice-header-menu li ul li a:hover, header .nice-header-menu li ul li span:hover,
-            .nice-header .nice-header-menu li ul li a:hover,
-            .nice-header .nice-header-menu li ul li span:hover {
+            .nice-header .nice-header-menu li ul li a:hover, .nice-header .nice-header-menu li ul li span:hover {
               background-color: #009CC1; }
-          header .nice-header-menu li ul li ul,
           .nice-header .nice-header-menu li ul li ul {
             position: absolute;
             left: 100%;
             top: 0;
             display: none; }
-          header .nice-header-menu li ul li:hover > ul,
           .nice-header .nice-header-menu li ul li:hover > ul {
             display: block; }
-      header .nice-header-menu li:hover > ul,
       .nice-header .nice-header-menu li:hover > ul {
         display: block; }
-      header .nice-header-menu li.has-children > a:after, header .nice-header-menu li.has-children > span:after,
-      .nice-header .nice-header-menu li.has-children > a:after,
-      .nice-header .nice-header-menu li.has-children > span:after {
+      .nice-header .nice-header-menu li.has-children > a:after, .nice-header .nice-header-menu li.has-children > span:after {
         font-family: FontAwesome;
         content: '\f107';
         color: #FFF;
@@ -4027,9 +3917,7 @@ header,
         line-height: 20px;
         line-height: 1.25rem;
         margin-top: -10px; }
-      header .nice-header-menu li.has-children:hover > a:after, header .nice-header-menu li.has-children:hover > span:after,
-      .nice-header .nice-header-menu li.has-children:hover > a:after,
-      .nice-header .nice-header-menu li.has-children:hover > span:after {
+      .nice-header .nice-header-menu li.has-children:hover > a:after, .nice-header .nice-header-menu li.has-children:hover > span:after {
         color: #FFF;
         -webkit-animation: flip 0.15s linear forwards;
         -moz-animation: flip 0.15s linear forwards;
@@ -4037,50 +3925,29 @@ header,
         -webkit-animation-iteration-count: 1;
         -moz-animation-iteration-count: 1;
         animation-iteration-count: 1; }
-    header .nice-header-menu.menu-pills li a,
     .nice-header .nice-header-menu.menu-pills li a {
       -webkit-transition: background-color 0.1s;
       -moz-transition: background-color 0.1s;
       -ms-transition: background-color 0.1s;
       -o-transition: background-color 0.1s;
       transition: background-color 0.1s; }
-      header .nice-header-menu.menu-pills li a:hover,
       .nice-header .nice-header-menu.menu-pills li a:hover {
         background-color: #F5F7F7; }
-    header .nice-header-menu.menu-pills li ul li a:hover,
     .nice-header .nice-header-menu.menu-pills li ul li a:hover {
       background-color: #009CC1; }
-    header .nice-header-menu.menu-alt > li,
     .nice-header .nice-header-menu.menu-alt > li {
       padding-top: 17px;
       padding-bottom: 16px; }
-      header .nice-header-menu.menu-alt > li > a,
-      .nice-header .nice-header-menu.menu-alt > li > a {
-        padding: 5px 10px;
-        background-color: #ECF0F1;
-        font-size: 12px;
-        font-size: 0.75rem;
-        -webkit-transition: color 0.1s, background-color 0.1s;
-        -moz-transition: color 0.1s, background-color 0.1s;
-        -ms-transition: color 0.1s, background-color 0.1s;
-        -o-transition: color 0.1s, background-color 0.1s;
-        transition: color 0.1s, background-color 0.1s; }
-        header .nice-header-menu.menu-alt > li > a:hover,
-        .nice-header .nice-header-menu.menu-alt > li > a:hover {
-          background-color: #009CC1;
-          color: #FFF; }
-      header .nice-header-menu.menu-alt > li:first-child > a,
       .nice-header .nice-header-menu.menu-alt > li:first-child > a {
-        -webkit-border-top-left-radius: 15px;
-        -moz-border-radius-topleft: 15px;
-        border-top-left-radius: 15px;
-        -webkit-border-bottom-left-radius: 15px;
-        -moz-border-radius-bottomleft: 15px;
-        border-bottom-left-radius: 15px;
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-bottomright: 0;
+        border-bottom-right-radius: 0;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      header .nice-header-menu.menu-alt > li:last-child > a,
       .nice-header .nice-header-menu.menu-alt > li:last-child > a {
         -webkit-border-top-right-radius: 15px;
         -moz-border-radius-topright: 15px;
@@ -4091,16 +3958,21 @@ header,
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      header .nice-header-menu.menu-alt > li + li > a,
       .nice-header .nice-header-menu.menu-alt > li + li > a {
-        border-left: 1px solid #F5F7F7; }
-    header .nice-header-menu + .nice-header-menu,
+        border-left: 1px solid #F5F7F7;
+        -webkit-border-top-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        border-top-left-radius: 0;
+        -webkit-border-bottom-left-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        border-bottom-left-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
     .nice-header .nice-header-menu + .nice-header-menu {
       margin-left: 15px; }
-  header .nice-header-toggle,
   .nice-header .nice-header-toggle {
     display: none; }
-  header .nice-header-product,
   .nice-header .nice-header-product {
     float: right;
     padding-left: 15px;
@@ -4108,11 +3980,8 @@ header,
     font-size: 1em; }
 
 @media screen and (max-width: 1025px) {
-  header,
   .nice-header {
-    margin: 0 -15px;
     position: relative; }
-    header.fixed,
     .nice-header.fixed {
       -webkit-transition: left 0.2s ease-out;
       -moz-transition: left 0.2s ease-out;
@@ -4120,130 +3989,164 @@ header,
       -o-transition: left 0.2s ease-out;
       transition: left 0.2s ease-out;
       margin: 0; }
-    header .nice-header-container,
     .nice-header .nice-header-container {
       padding: 0 15px; }
-    header .nice-header-collapse,
+    .nice-header .nice-header-menu + .nice-header-menu {
+      margin-left: 0; }
     .nice-header .nice-header-collapse {
       top: 0;
       height: 100%;
       position: fixed;
       background-color: #182642;
+      overflow: hidden;
+      overflow-y: auto;
       -webkit-transition: left 0.2s ease-out, right 0.2s ease-out;
       -moz-transition: left 0.2s ease-out, right 0.2s ease-out;
       -ms-transition: left 0.2s ease-out, right 0.2s ease-out;
       -o-transition: left 0.2s ease-out, right 0.2s ease-out;
       transition: left 0.2s ease-out, right 0.2s ease-out; }
-      header .nice-header-collapse > form, header .nice-header-collapse ul, header .nice-header-collapse div, header .nice-header-collapse span,
-      .nice-header .nice-header-collapse > form,
-      .nice-header .nice-header-collapse ul,
-      .nice-header .nice-header-collapse div,
-      .nice-header .nice-header-collapse span {
+      .nice-header .nice-header-collapse > form, .nice-header .nice-header-collapse ul, .nice-header .nice-header-collapse div, .nice-header .nice-header-collapse span {
         float: none; }
-    header .nice-header-form,
+      .nice-header .nice-header-collapse .nice-header-menu {
+        z-index: 5;
+        width: 100%;
+        -webkit-transition: left 0.2s ease-in-out;
+        -moz-transition: left 0.2s ease-in-out;
+        -ms-transition: left 0.2s ease-in-out;
+        -o-transition: left 0.2s ease-in-out;
+        transition: left 0.2s ease-in-out; }
+        .nice-header .nice-header-collapse .nice-header-menu > li.fixed-width > a {
+          width: auto;
+          text-align: left; }
+        .nice-header .nice-header-collapse .nice-header-menu > li.fixed-width.w125, .nice-header .nice-header-collapse .nice-header-menu > li.fixed-width.w150, .nice-header .nice-header-collapse .nice-header-menu > li.fixed-width.w175, .nice-header .nice-header-collapse .nice-header-menu > li.fixed-width.w200 {
+          width: auto; }
+        .nice-header .nice-header-collapse .nice-header-menu li {
+          float: none; }
+          .nice-header .nice-header-collapse .nice-header-menu li a, .nice-header .nice-header-collapse .nice-header-menu li span {
+            position: relative;
+            color: #FFF;
+            -webkit-transition: background-color 0.1s, color 0.1s;
+            -moz-transition: background-color 0.1s, color 0.1s;
+            -ms-transition: background-color 0.1s, color 0.1s;
+            -o-transition: background-color 0.1s, color 0.1s;
+            transition: background-color 0.1s, color 0.1s; }
+            .nice-header .nice-header-collapse .nice-header-menu li a::before, .nice-header .nice-header-collapse .nice-header-menu li span::before {
+              display: -moz-inline-stack;
+              display: inline-block;
+              *display: inline-block;
+              zoom: 1;
+              width: 20px;
+              text-align: center;
+              margin-right: 10px; }
+          .nice-header .nice-header-collapse .nice-header-menu li ul {
+            display: block;
+            position: relative; }
+            .nice-header .nice-header-collapse .nice-header-menu li ul li {
+              white-space: normal; }
+              .nice-header .nice-header-collapse .nice-header-menu li ul li a, .nice-header .nice-header-collapse .nice-header-menu li ul li span {
+                padding-left: 50px;
+                font-size: 0.9em; }
+                .nice-header .nice-header-collapse .nice-header-menu li ul li a:hover, .nice-header .nice-header-collapse .nice-header-menu li ul li a:focus, .nice-header .nice-header-collapse .nice-header-menu li ul li a:active, .nice-header .nice-header-collapse .nice-header-menu li ul li span:hover, .nice-header .nice-header-collapse .nice-header-menu li ul li span:focus, .nice-header .nice-header-collapse .nice-header-menu li ul li span:active {
+                  background-color: transparent; }
+              .nice-header .nice-header-collapse .nice-header-menu li ul li ul {
+                display: block;
+                position: relative;
+                left: auto;
+                padding-left: 15px; }
+          .nice-header .nice-header-collapse .nice-header-menu li.has-children > a:after, .nice-header .nice-header-collapse .nice-header-menu li.has-children > span:after {
+            display: none; }
+        .nice-header .nice-header-collapse .nice-header-menu.menu-pills li a:hover, .nice-header .nice-header-collapse .nice-header-menu.menu-pills li a:active {
+          background-color: #FFF;
+          color: #009CC1;
+          outline: none; }
+        .nice-header .nice-header-collapse .nice-header-menu.menu-pills li ul li a:hover, .nice-header .nice-header-collapse .nice-header-menu.menu-pills li ul li a:focus, .nice-header .nice-header-collapse .nice-header-menu.menu-pills li ul li a:active {
+          background-color: transparent;
+          color: #FFF; }
+        .nice-header .nice-header-collapse .nice-header-menu.menu-alt {
+          margin-left: 0;
+          margin-top: 0;
+          left: auto;
+          width: auto;
+          height: auto;
+          padding-top: 0;
+          padding-bottom: 10px; }
+          .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li {
+            padding: 10px 15px 0 15px; }
+            .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li + li {
+              padding-top: 0; }
+              .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li + li > a {
+                border-left: none;
+                border-top: 1px solid #D0D1D5; }
+            .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li:first-child a {
+              -webkit-border-top-left-radius: 3px;
+              -moz-border-radius-topleft: 3px;
+              border-top-left-radius: 3px;
+              -webkit-border-top-right-radius: 3px;
+              -moz-border-radius-topright: 3px;
+              border-top-right-radius: 3px;
+              -webkit-border-bottom-left-radius: 0;
+              -moz-border-radius-bottomleft: 0;
+              border-bottom-left-radius: 0;
+              -webkit-background-clip: padding-box;
+              -moz-background-clip: padding;
+              background-clip: padding-box; }
+            .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li:last-child a {
+              -webkit-border-top-right-radius: 0;
+              -moz-border-radius-topright: 0;
+              border-top-right-radius: 0;
+              -webkit-border-bottom-right-radius: 3px;
+              -moz-border-radius-bottomright: 3px;
+              border-bottom-right-radius: 3px;
+              -webkit-border-bottom-left-radius: 3px;
+              -moz-border-radius-bottomleft: 3px;
+              border-bottom-left-radius: 3px;
+              -webkit-background-clip: padding-box;
+              -moz-background-clip: padding;
+              background-clip: padding-box; }
     .nice-header .nice-header-form {
       padding: 0 20px;
-      background-color: #2c467a; }
-      header .nice-header-form ~ .nice-header-menu,
-      .nice-header .nice-header-form ~ .nice-header-menu {
-        height: calc(100% - 60px); }
-    header .nice-header-menu,
-    .nice-header .nice-header-menu {
-      overflow: hidden;
-      overflow-y: auto;
-      z-index: 5;
-      width: 100%;
-      height: 100%;
-      -webkit-transition: left 0.2s ease-in-out;
-      -moz-transition: left 0.2s ease-in-out;
-      -ms-transition: left 0.2s ease-in-out;
-      -o-transition: left 0.2s ease-in-out;
-      transition: left 0.2s ease-in-out; }
-      header .nice-header-menu > li.fixed-width > a,
-      .nice-header .nice-header-menu > li.fixed-width > a {
-        width: auto;
-        text-align: left; }
-      header .nice-header-menu > li.fixed-width.w125, header .nice-header-menu > li.fixed-width.w150, header .nice-header-menu > li.fixed-width.w175, header .nice-header-menu > li.fixed-width.w200,
-      .nice-header .nice-header-menu > li.fixed-width.w125,
-      .nice-header .nice-header-menu > li.fixed-width.w150,
-      .nice-header .nice-header-menu > li.fixed-width.w175,
-      .nice-header .nice-header-menu > li.fixed-width.w200 {
-        width: auto; }
-      header .nice-header-menu li,
-      .nice-header .nice-header-menu li {
-        float: none; }
-        header .nice-header-menu li a, header .nice-header-menu li span,
-        .nice-header .nice-header-menu li a,
-        .nice-header .nice-header-menu li span {
-          position: relative;
-          color: #FFF;
-          -webkit-transition: background-color 0.1s, color 0.1s;
-          -moz-transition: background-color 0.1s, color 0.1s;
-          -ms-transition: background-color 0.1s, color 0.1s;
-          -o-transition: background-color 0.1s, color 0.1s;
-          transition: background-color 0.1s, color 0.1s; }
-          header .nice-header-menu li a::before, header .nice-header-menu li span::before,
-          .nice-header .nice-header-menu li a::before,
-          .nice-header .nice-header-menu li span::before {
-            display: -moz-inline-stack;
-            display: inline-block;
-            *display: inline-block;
-            zoom: 1;
-            width: 20px;
-            text-align: center;
-            margin-right: 10px; }
-        header .nice-header-menu li ul,
-        .nice-header .nice-header-menu li ul {
-          display: block;
-          position: relative; }
-          header .nice-header-menu li ul li,
-          .nice-header .nice-header-menu li ul li {
-            white-space: normal; }
-            header .nice-header-menu li ul li a, header .nice-header-menu li ul li span,
-            .nice-header .nice-header-menu li ul li a,
-            .nice-header .nice-header-menu li ul li span {
-              padding-left: 50px;
-              font-size: 0.9em; }
-              header .nice-header-menu li ul li a:hover, header .nice-header-menu li ul li a:focus, header .nice-header-menu li ul li a:active, header .nice-header-menu li ul li span:hover, header .nice-header-menu li ul li span:focus, header .nice-header-menu li ul li span:active,
-              .nice-header .nice-header-menu li ul li a:hover,
-              .nice-header .nice-header-menu li ul li a:focus,
-              .nice-header .nice-header-menu li ul li a:active,
-              .nice-header .nice-header-menu li ul li span:hover,
-              .nice-header .nice-header-menu li ul li span:focus,
-              .nice-header .nice-header-menu li ul li span:active {
-                background-color: transparent; }
-            header .nice-header-menu li ul li ul,
-            .nice-header .nice-header-menu li ul li ul {
-              display: block;
-              position: relative;
-              left: auto;
-              padding-left: 15px; }
-        header .nice-header-menu li.has-children > a:after, header .nice-header-menu li.has-children > span:after,
-        .nice-header .nice-header-menu li.has-children > a:after,
-        .nice-header .nice-header-menu li.has-children > span:after {
-          display: none; }
-      header .nice-header-menu.menu-pills li a:hover, header .nice-header-menu.menu-pills li a:active,
-      .nice-header .nice-header-menu.menu-pills li a:hover,
-      .nice-header .nice-header-menu.menu-pills li a:active {
-        background-color: #FFF;
-        color: #009CC1;
-        outline: none; }
-      header .nice-header-menu.menu-pills li ul li a:hover, header .nice-header-menu.menu-pills li ul li a:focus, header .nice-header-menu.menu-pills li ul li a:active,
-      .nice-header .nice-header-menu.menu-pills li ul li a:hover,
-      .nice-header .nice-header-menu.menu-pills li ul li a:focus,
-      .nice-header .nice-header-menu.menu-pills li ul li a:active {
+      background-color: #2c467a;
+      position: fixed;
+      top: 0;
+      width: calc(100% - 60px);
+      z-index: 6; }
+      .nice-header .nice-header-form input[type="text"] {
+        color: #FFF;
+        border-color: transparent;
         background-color: transparent;
-        color: #FFF; }
-      header .nice-header-menu.menu-alt,
-      .nice-header .nice-header-menu.menu-alt {
-        display: none; }
-      header .nice-header-menu:nth-child(3),
-      .nice-header .nice-header-menu:nth-child(3) {
-        height: calc(100% - 120px); }
-      header .nice-header-menu:nth-child(4),
-      .nice-header .nice-header-menu:nth-child(4) {
-        height: calc(100% - 180px); }
-    header .nice-header-toggle,
+        padding: 5px 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box;
+        -webkit-transition: border-bottom-color 0.3s;
+        -moz-transition: border-bottom-color 0.3s;
+        -ms-transition: border-bottom-color 0.3s;
+        -o-transition: border-bottom-color 0.3s;
+        transition: border-bottom-color 0.3s; }
+        .nice-header .nice-header-form input[type="text"]::-webkit-input-placeholder {
+          color: #F5F7F7; }
+        .nice-header .nice-header-form input[type="text"]:-moz-placeholder {
+          color: #F5F7F7; }
+        .nice-header .nice-header-form input[type="text"]::-moz-placeholder {
+          color: #F5F7F7; }
+        .nice-header .nice-header-form input[type="text"]:-ms-input-placeholder {
+          color: #F5F7F7; }
+        .nice-header .nice-header-form input[type="text"]:focus, .nice-header .nice-header-form input[type="text"]:active {
+          border-color: transparent;
+          border-bottom-color: #FFF;
+          width: 100%;
+          margin-left: 0;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none; }
+      .nice-header .nice-header-form ~ .nice-header-menu {
+        margin-top: 60px; }
     .nice-header .nice-header-toggle {
       display: block;
       position: absolute;
@@ -4256,7 +4159,6 @@ header,
       outline: none;
       text-align: center;
       cursor: pointer; }
-      header .nice-header-toggle .icon-bar,
       .nice-header .nice-header-toggle .icon-bar {
         display: block;
         width: 22px;
@@ -4267,7 +4169,6 @@ header,
         -ms-transition: all 0.2s;
         -o-transition: all 0.2s;
         transition: all 0.2s; }
-        header .nice-header-toggle .icon-bar.top-bar,
         .nice-header .nice-header-toggle .icon-bar.top-bar {
           transform-origin: 10% 10%;
           -webkit-transform: rotate(45deg);
@@ -4275,13 +4176,11 @@ header,
           -ms-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           transform: rotate(45deg); }
-        header .nice-header-toggle .icon-bar.middle-bar,
         .nice-header .nice-header-toggle .icon-bar.middle-bar {
           -khtml-opacity: 0;
           -moz-opacity: 0;
           opacity: 0;
           filter: alpha(opacity=0); }
-        header .nice-header-toggle .icon-bar.bottom-bar,
         .nice-header .nice-header-toggle .icon-bar.bottom-bar {
           transform-origin: 10% 90%;
           -webkit-transform: rotate(-45deg);
@@ -4289,40 +4188,32 @@ header,
           -ms-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg); }
-        header .nice-header-toggle .icon-bar + .icon-bar,
         .nice-header .nice-header-toggle .icon-bar + .icon-bar {
           margin-top: 4px; }
-      header .nice-header-toggle.collapsed .icon-bar.top-bar,
       .nice-header .nice-header-toggle.collapsed .icon-bar.top-bar {
         -webkit-transform: rotate(0);
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0); }
-      header .nice-header-toggle.collapsed .icon-bar.middle-bar,
       .nice-header .nice-header-toggle.collapsed .icon-bar.middle-bar {
         -khtml-opacity: 1;
         -moz-opacity: 1;
         opacity: 1;
         filter: alpha(opacity=100); }
-      header .nice-header-toggle.collapsed .icon-bar.bottom-bar,
       .nice-header .nice-header-toggle.collapsed .icon-bar.bottom-bar {
         -webkit-transform: rotate(0);
         -moz-transform: rotate(0);
         -ms-transform: rotate(0);
         -o-transform: rotate(0);
         transform: rotate(0); }
-      header .nice-header-toggle:hover .icon-bar,
       .nice-header .nice-header-toggle:hover .icon-bar {
         background-color: #009CC1; }
-      header .nice-header-toggle:focus, header .nice-header-toggle:active,
-      .nice-header .nice-header-toggle:focus,
-      .nice-header .nice-header-toggle:active {
+      .nice-header .nice-header-toggle:focus, .nice-header .nice-header-toggle:active {
         background-color: transparent;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none; }
-    header .nice-header-product,
     .nice-header .nice-header-product {
       display: block;
       padding: 0 20px;
@@ -4330,7 +4221,6 @@ header,
       background-color: #2c467a;
       font-weight: 600;
       font-size: 0.9em; }
-      header .nice-header-product + .nice-header-form,
       .nice-header .nice-header-product + .nice-header-form {
         border-top: 1px solid #4167b2; } }
 
@@ -4365,48 +4255,6 @@ header,
       header .nice-header-collapse .nice-header-form .nice-header-input-wrapper button:active,
       .nice-header .nice-header-collapse .nice-header-form .nice-header-input-wrapper button:active {
         color: #FFF; }
-    header .nice-header-collapse .nice-header-form input[type="text"],
-    .nice-header .nice-header-collapse .nice-header-form input[type="text"] {
-      color: #FFF;
-      border-color: transparent;
-      background-color: transparent;
-      padding: 5px 0;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      box-shadow: none;
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      -webkit-transition: border-bottom-color 0.3s;
-      -moz-transition: border-bottom-color 0.3s;
-      -ms-transition: border-bottom-color 0.3s;
-      -o-transition: border-bottom-color 0.3s;
-      transition: border-bottom-color 0.3s; }
-      header .nice-header-collapse .nice-header-form input[type="text"]::-webkit-input-placeholder,
-      .nice-header .nice-header-collapse .nice-header-form input[type="text"]::-webkit-input-placeholder {
-        color: #F5F7F7; }
-      header .nice-header-collapse .nice-header-form input[type="text"]:-moz-placeholder,
-      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:-moz-placeholder {
-        color: #F5F7F7; }
-      header .nice-header-collapse .nice-header-form input[type="text"]::-moz-placeholder,
-      .nice-header .nice-header-collapse .nice-header-form input[type="text"]::-moz-placeholder {
-        color: #F5F7F7; }
-      header .nice-header-collapse .nice-header-form input[type="text"]:-ms-input-placeholder,
-      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:-ms-input-placeholder {
-        color: #F5F7F7; }
-      header .nice-header-collapse .nice-header-form input[type="text"]:focus, header .nice-header-collapse .nice-header-form input[type="text"]:active,
-      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:focus,
-      .nice-header .nice-header-collapse .nice-header-form input[type="text"]:active {
-        border-color: transparent;
-        border-bottom-color: #FFF;
-        width: 100%;
-        margin-left: 0;
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none; }
     header .nice-header-collapse .nice-header-menu > li.highlight > a,
     .nice-header .nice-header-collapse .nice-header-menu > li.highlight > a {
       padding: 15px 20px 15px 16px;
@@ -4446,18 +4294,11 @@ header,
     width: 340px; }
     header .nice-header-collapse .nice-header-form,
     .nice-header .nice-header-collapse .nice-header-form {
-      width: 285px;
-      position: absolute;
-      right: calc(100% + 40px);
-      padding: 0 15px;
-      background-color: transparent; }
+      width: 340px; }
       header .nice-header-collapse .nice-header-form input[type="text"]:focus,
       .nice-header .nice-header-collapse .nice-header-form input[type="text"]:focus {
         width: 100%;
         margin-left: auto; }
-      header .nice-header-collapse .nice-header-form ~ .nice-header-menu,
-      .nice-header .nice-header-collapse .nice-header-form ~ .nice-header-menu {
-        height: 100%; }
     header .nice-header-collapse .nice-header-menu > li.highlight > a,
     .nice-header .nice-header-collapse .nice-header-menu > li.highlight > a {
       padding: 20px 20px 20px 16px;
@@ -4767,6 +4608,12 @@ input.nice-form-control, select.nice-form-control, textarea.nice-form-control {
     -webkit-box-shadow: inset 0 2px 2px #ECF0F1;
     -moz-box-shadow: inset 0 2px 2px #ECF0F1;
     box-shadow: inset 0 2px 2px #ECF0F1; }
+  input[disabled].nice-form-control, select[disabled].nice-form-control, textarea[disabled].nice-form-control {
+    background-color: #F5F7F7;
+    cursor: not-allowed;
+    -webkit-box-shadow: inset 0 1px 2px #ECF0F1;
+    -moz-box-shadow: inset 0 1px 2px #ECF0F1;
+    box-shadow: inset 0 1px 2px #ECF0F1; }
   input.info.nice-form-control, .nice-control-group.info input.nice-form-control, select.info.nice-form-control, .nice-control-group.info select.nice-form-control, textarea.info.nice-form-control, .nice-control-group.info textarea.nice-form-control {
     border-color: #60C4DE; }
     input.info.nice-form-control:focus, .nice-control-group.info input.nice-form-control:focus, select.info.nice-form-control:focus, .nice-control-group.info select.nice-form-control:focus, textarea.info.nice-form-control:focus, .nice-control-group.info textarea.nice-form-control:focus {
@@ -4821,6 +4668,13 @@ textarea.nice-form-control {
 .nice-form-inline .nice-control-group > select.nice-form-control,
 .nice-form-inline .nice-control-group > .nice-control-group-btn {
   display: table-cell; }
+
+.nice-form-horizontal .nice-form-group {
+  margin-bottom: 15px; }
+  .nice-form-horizontal .nice-form-group .nice-control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: right; }
 
 .nice-control-group {
   display: table;
@@ -4927,7 +4781,6 @@ textarea.nice-form-control {
 .nice-checkbox label {
   cursor: pointer;
   min-height: 20px;
-  padding-left: 20px;
   margin-bottom: 0;
   font-weight: normal; }
 
@@ -4935,13 +4788,16 @@ textarea.nice-form-control {
 .nice-radio input[type="radio"],
 .nice-checkbox input[type="checkbox"],
 .nice-checkbox input[type="radio"] {
-  position: absolute;
-  margin: 4px 0 0;
-  margin-left: -20px;
-  padding: 0;
+  vertical-align: middle;
+  position: relative;
+  bottom: 1px;
   -webkit-box-sizing: border-box;
   moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+.nice-radio input[type="radio"],
+.nice-checkbox input[type="radio"] {
+  bottom: 2px; }
 
 /**
  * Normalize <select /> appearance across browsers
@@ -4967,6 +4823,22 @@ textarea.nice-form-control {
     float: left; }
     .nice-tabs li + li {
       margin-left: 1px; }
+    .nice-tabs li.pull-right {
+      float: right; }
+      .nice-tabs li.pull-right a {
+        -webkit-border-top-right-radius: 3px;
+        -moz-border-radius-topright: 3px;
+        border-top-right-radius: 3px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+      .nice-tabs li.pull-right + .pull-right a {
+        -webkit-border-top-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        border-top-right-radius: 0;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
     .nice-tabs li.brand a {
       background-color: #009CC1;
       color: #FFF;
@@ -5159,7 +5031,10 @@ textarea.nice-form-control {
       background-color: #FFF;
       border: 1px solid #D0D1D5;
       border-bottom-color: #FFF;
-      border-top: 1px solid #F18700;
+      border-top-color: #F18700;
+      padding-top: 9px;
+      padding-left: 14px;
+      padding-right: 14px;
       cursor: default;
       color: #000; }
       .nice-tabs li.current a:hover {
@@ -5183,21 +5058,25 @@ textarea.nice-form-control {
       background-clip: padding-box; }
   .nice-tabs.bold {
     font-weight: 600; }
-  .nice-tabs.small a {
+  .nice-tabs.small li a {
     min-width: 60px;
     padding: 5px 10px;
     font-size: 13px;
     font-size: 0.8125rem; }
-    .nice-tabs.small a.icon {
+    .nice-tabs.small li a.icon {
       min-width: auto; }
-      .nice-tabs.small a.icon:before {
+      .nice-tabs.small li a.icon:before {
         left: 12px;
         margin-top: -9px; }
+  .nice-tabs.small li.current a {
+    padding-top: 4px;
+    padding-left: 9px;
+    padding-right: 9px; }
 
 .nice-tabs-wrapper .nice-tabs {
   border-bottom: none; }
 
-.nice-tabs-wrapper .nice-tabs-content {
+.nice-tabs-wrapper .nice-tab-content {
   border: 1px solid #D0D1D5;
   background-color: #FFF;
   padding: 15px;
@@ -5211,14 +5090,14 @@ textarea.nice-form-control {
   -moz-background-clip: padding;
   background-clip: padding-box; }
 
-.nice-tabs-wrapper ul.nice-tabs-content {
+.nice-tabs-wrapper ul.nice-tab-content {
   list-style: none;
   margin: 0;
   padding: 0; }
-  .nice-tabs-wrapper ul.nice-tabs-content li {
+  .nice-tabs-wrapper ul.nice-tab-content li {
     display: none;
     padding: 15px; }
-    .nice-tabs-wrapper ul.nice-tabs-content li.current {
+    .nice-tabs-wrapper ul.nice-tab-content li.current {
       display: block; }
 
 @media screen and (max-width: 1025px) {
@@ -5249,24 +5128,48 @@ textarea.nice-form-control {
     .nice-panel .nice-panel-heading + table.nice-table.bordered thead:first-child tr:first-child th {
       border-top: 0; }
 
+.nice-panel .nice-panel-heading:first-child {
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-right-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
+.nice-panel .nice-panel-heading:last-child {
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+
 .nice-panel .nice-panel-content {
   padding: 15px; }
-  .nice-panel .nice-panel-content ~ .nice-panel-heading {
-    -webkit-border-radius: 0 0 3px 3px;
-    -moz-border-radius: 0 0 3px 3px;
-    border-radius: 0 0 3px 3px;
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box; }
 
-.nice-panel > table.nice-table.bordered {
-  border: 0; }
-  .nice-panel > table.nice-table.bordered tr td:first-child, .nice-panel > table.nice-table.bordered tr th:first-child {
-    border-left: 0; }
-  .nice-panel > table.nice-table.bordered tr td:last-child, .nice-panel > table.nice-table.bordered tr th:last-child {
-    border-right: 0; }
-  .nice-panel > table.nice-table.bordered tbody tr:last-child td, .nice-panel > table.nice-table.bordered tbody tr:last-child th {
-    border-bottom: 0; }
+.nice-panel > table.nice-table {
+  margin-bottom: 0; }
+  .nice-panel > table.nice-table.bordered {
+    border: 0; }
+    .nice-panel > table.nice-table.bordered tr td:first-child, .nice-panel > table.nice-table.bordered tr th:first-child {
+      border-left: 0; }
+    .nice-panel > table.nice-table.bordered tr td:last-child, .nice-panel > table.nice-table.bordered tr th:last-child {
+      border-right: 0; }
+    .nice-panel > table.nice-table.bordered tbody tr:last-child td, .nice-panel > table.nice-table.bordered tbody tr:last-child th {
+      border-bottom: 0; }
+
+.nice-panel.primary {
+  -webkit-box-shadow: 0 1px 2px rgba(241, 135, 0, 0.6);
+  -moz-box-shadow: 0 1px 2px rgba(241, 135, 0, 0.6);
+  box-shadow: 0 1px 2px rgba(241, 135, 0, 0.6); }
+  .nice-panel.primary .nice-panel-heading {
+    background-color: #F18700; }
 
 .nice-panel.brand {
   -webkit-box-shadow: 0 1px 2px rgba(0, 156, 193, 0.6);
@@ -5303,29 +5206,52 @@ textarea.nice-form-control {
   .nice-panel.bad .nice-panel-heading, .nice-control-group.bad .nice-panel.nice-form-control .nice-panel-heading, .nice-control-group.bad .nice-panel.nice-btn .nice-panel-heading {
     background-color: #F42534; }
 
+.nice-panel.gray .nice-panel-heading {
+  margin: 0;
+  padding: 9px 14px 10px;
+  background-color: #F5F7F7;
+  color: #1D1D1B; }
+
+.nice-panel:not(.gray) .nice-panel-heading a {
+  color: #FFF; }
+  .nice-panel:not(.gray) .nice-panel-heading a:hover {
+    text-decoration: underline; }
+
 .nice-stacked-list {
   list-style: none; }
-  .nice-stacked-list li.list-heading + li {
-    border-top-width: 0; }
-  .nice-stacked-list li .item-heading {
+  .nice-stacked-list .list-heading {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-stacked-list .list-heading + .list-item {
+      border-top-width: 0; }
+  .nice-stacked-list .list-item .item-heading {
     margin: -15px -15px 15px;
     padding: 10px 15px;
     background-color: #F5F7F7;
     display: block;
     font-weight: 600;
     font-size: 1em; }
-    .nice-stacked-list li .item-heading.icon:before {
+    .nice-stacked-list .list-item .item-heading.icon:before {
       width: 20px;
       text-align: center;
       font-weight: 400; }
-    .nice-stacked-list li .item-heading .badge {
+    .nice-stacked-list .list-item .item-heading .badge {
       font-family: "Open Sans", sans-serif, helvetica; }
-  .nice-stacked-list li .nice-stacked-list-controls {
+  .nice-stacked-list .list-item p {
+    margin: 0 0 5px 0; }
+  .nice-stacked-list .list-item .nice-stacked-list-controls {
     width: calc(100% + 30px);
     display: table;
     table-layout: fixed;
     margin: -15px; }
-    .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control {
+    .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control {
       display: table-cell;
       padding: 10px 15px;
       text-align: center;
@@ -5334,68 +5260,68 @@ textarea.nice-form-control {
       -ms-transition: background-color 0.2s;
       -o-transition: background-color 0.2s;
       transition: background-color 0.2s; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:first-child {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:first-child {
         -webkit-border-top-left-radius: 3px;
         -moz-border-radius-topleft: 3px;
         border-top-left-radius: 3px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:last-child {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:last-child {
         -webkit-border-top-right-radius: 3px;
         -moz-border-radius-topright: 3px;
         border-top-right-radius: 3px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
         border-left: 1px solid #ECF0F1; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:hover {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:hover {
         background-color: #F5F7F7; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:active {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:active {
         background-color: #ECF0F1;
         -webkit-transition: background-color 0s;
         -moz-transition: background-color 0s;
         -ms-transition: background-color 0s;
         -o-transition: background-color 0s;
         transition: background-color 0s; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.icon:before {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.icon:before {
         margin-right: 5px; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.primary {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.primary {
         background-color: #F18700; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.primary:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.primary:hover {
           background-color: #ff940c; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.info, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.info, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #60C4DE; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.info:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn:hover, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.info:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn:hover, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #75cce2; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.good, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.good, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #5CB85C; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.good:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn:hover, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.good:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn:hover, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #6ec06e; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.warning, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.warning, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #FFB819; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.warning:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn:hover, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.warning:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn:hover, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #ffc033; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.bad, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.bad, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #F42534; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.bad:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn:hover, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.bad:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn:hover, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #f53d4b; }
-  .nice-stacked-list > li, .nice-stacked-list > a {
+  .nice-stacked-list .list-item {
     display: block;
     border-bottom: 1px solid #ebebed;
     padding: 15px 15px;
     position: relative;
     line-height: 18px;
     line-height: 1.125rem; }
-    .nice-stacked-list > li .badge, .nice-stacked-list > a .badge {
+    .nice-stacked-list .list-item .badge {
       float: right;
       background-color: #D0D1D5;
       color: #FFF;
       padding: 3px 8px;
-      margin: -3px;
+      margin: -3px 0;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 80%;
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
       border-radius: 15px;
@@ -5407,38 +5333,61 @@ textarea.nice-form-control {
       -ms-transition: background-color 0.1s;
       -o-transition: background-color 0.1s;
       transition: background-color 0.1s; }
-      .nice-stacked-list > li .badge.primary, .nice-stacked-list > a .badge.primary {
+      .nice-stacked-list .list-item .badge.primary {
         background-color: #ff940c; }
-      .nice-stacked-list > li .badge.accent, .nice-stacked-list > a .badge.accent {
+      .nice-stacked-list .list-item .badge.accent {
         background-color: #1f3155; }
-      .nice-stacked-list > li .badge.info, .nice-stacked-list > li .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.info, .nice-stacked-list > a .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.info, .nice-stacked-list .list-item .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #75cce2; }
-      .nice-stacked-list > li .badge.good, .nice-stacked-list > li .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.good, .nice-stacked-list > a .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.good, .nice-stacked-list .list-item .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #6ec06e; }
-      .nice-stacked-list > li .badge.warning, .nice-stacked-list > li .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.warning, .nice-stacked-list > a .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.warning, .nice-stacked-list .list-item .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #ffc033; }
-      .nice-stacked-list > li .badge.bad, .nice-stacked-list > li .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.bad, .nice-stacked-list > a .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.bad, .nice-stacked-list .list-item .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #f53d4b; }
-    .nice-stacked-list > li:hover .badge, .nice-stacked-list > a:hover .badge {
+      .nice-stacked-list .list-item .badge .badge-addon {
+        background-color: #474747;
+        color: #D0D1D5;
+        float: left;
+        margin: -3px 5px -3px -8px;
+        padding: 3px 5px;
+        font-weight: 400;
+        -webkit-border-top-left-radius: 15px;
+        -moz-border-radius-topleft: 15px;
+        border-top-left-radius: 15px;
+        -webkit-border-bottom-left-radius: 15px;
+        -moz-border-radius-bottomleft: 15px;
+        border-bottom-left-radius: 15px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+        .nice-stacked-list .list-item .badge .badge-addon a {
+          color: #FFF;
+          text-shadow: none; }
+          .nice-stacked-list .list-item .badge .badge-addon a:hover {
+            text-decoration: underline; }
+      .nice-stacked-list .list-item .badge .badge-text {
+        float: left; }
+    .nice-stacked-list .list-item:hover .badge {
       background-color: #009CC1; }
-      .nice-stacked-list > li:hover .badge.primary, .nice-stacked-list > a:hover .badge.primary {
+      .nice-stacked-list .list-item:hover .badge.primary {
         background-color: #F18700; }
-      .nice-stacked-list > li:hover .badge.accent, .nice-stacked-list > a:hover .badge.accent {
+      .nice-stacked-list .list-item:hover .badge.accent {
         background-color: #182642; }
-      .nice-stacked-list > li:hover .badge.info, .nice-stacked-list > li:hover .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.info, .nice-stacked-list > a:hover .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.info, .nice-stacked-list .list-item:hover .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #60C4DE; }
-      .nice-stacked-list > li:hover .badge.good, .nice-stacked-list > li:hover .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.good, .nice-stacked-list > a:hover .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.good, .nice-stacked-list .list-item:hover .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #5CB85C; }
-      .nice-stacked-list > li:hover .badge.warning, .nice-stacked-list > li:hover .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.warning, .nice-stacked-list > a:hover .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.warning, .nice-stacked-list .list-item:hover .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #FFB819; }
-      .nice-stacked-list > li:hover .badge.bad, .nice-stacked-list > li:hover .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.bad, .nice-stacked-list > a:hover .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.bad, .nice-stacked-list .list-item:hover .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #F42534; }
-    .nice-stacked-list > li.current, .nice-stacked-list > a.current {
+    .nice-stacked-list .list-item.current {
       background-color: #F5F7F7;
       color: #000; }
-    .nice-stacked-list > li:last-child, .nice-stacked-list > a:last-child {
+    .nice-stacked-list .list-item:last-child {
       border-bottom: none; }
-  .nice-stacked-list.condensed li, .nice-stacked-list.condensed a {
+  .nice-stacked-list.condensed .list-item {
     padding: 10px 15px; }
   .nice-stacked-list.sidebar {
     position: fixed;
@@ -5465,11 +5414,11 @@ textarea.nice-form-control {
     .nice-stacked-list.sidebar.left {
       right: auto;
       left: 0; }
-    .nice-stacked-list.sidebar li {
+    .nice-stacked-list.sidebar .list-item {
       border-bottom-color: #D0D1D5; }
-      .nice-stacked-list.sidebar li .item-heading {
+      .nice-stacked-list.sidebar .list-item .item-heading {
         background-color: #000; }
-      .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control {
+      .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control {
         color: #FFF;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -5478,13 +5427,13 @@ textarea.nice-form-control {
         -moz-background-clip: padding;
         background-clip: padding-box;
         text-shadow: none; }
-        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control:hover {
+        .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control:hover {
           background-color: #000; }
-        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control:active {
+        .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control:active {
           background-color: #262626; }
-        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
+        .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
           border-left-color: #D0D1D5; }
-      .nice-stacked-list.sidebar li .nice-form-control {
+      .nice-stacked-list.sidebar .list-item .nice-form-control {
         border-width: 0;
         -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
         -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
@@ -5629,6 +5578,78 @@ textarea.nice-form-control {
     background-color: #182642;
     border-color: #182642; }
 
+.nice-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+  .nice-menu li {
+    margin: 0;
+    display: table-cell; }
+    .nice-menu li a, .nice-menu li span {
+      display: block;
+      padding: 10px 15px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box;
+      -webkit-transition: background-color 0s, color 0s;
+      -moz-transition: background-color 0s, color 0s;
+      -ms-transition: background-color 0s, color 0s;
+      -o-transition: background-color 0s, color 0s;
+      transition: background-color 0s, color 0s; }
+      .nice-menu li a.icon:before, .nice-menu li span.icon:before {
+        margin-right: 5px; }
+    .nice-menu li a:hover {
+      background-color: #009CC1;
+      color: #FFF; }
+    .nice-menu li.current a {
+      background-color: #182642;
+      color: #FFF; }
+    .nice-menu li.disabled a, .nice-menu li.disabled span {
+      color: #B2B2B2;
+      cursor: not-allowed; }
+      .nice-menu li.disabled a:hover, .nice-menu li.disabled span:hover {
+        background-color: #ECF0F1; }
+    .nice-menu li + li a {
+      margin-left: 2px; }
+  .nice-menu.stacked {
+    display: block;
+    table-layout: auto;
+    width: auto; }
+    .nice-menu.stacked li {
+      display: block; }
+      .nice-menu.stacked li a.icon:before, .nice-menu.stacked li span.icon:before {
+        width: 20px;
+        text-align: center; }
+      .nice-menu.stacked li ul {
+        padding-left: 10px;
+        margin-left: 30px; }
+      .nice-menu.stacked li + li {
+        margin-top: 2px; }
+        .nice-menu.stacked li + li a {
+          margin-left: 0; }
+    .nice-menu.stacked.has-icons > li a:not(.icon) {
+      padding-left: 40px; }
+    .nice-menu.stacked.narrow li a {
+      padding-top: 4px;
+      padding-bottom: 4px; }
+  .nice-menu + .nice-menu {
+    margin-top: 15px; }
+
+table th {
+  text-align: left; }
+
+table td[class*="nice-col"],
+table th[class*="nice-col"] {
+  float: none;
+  position: static;
+  display: table-cell; }
+
 table.nice-table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -5641,14 +5662,12 @@ table.nice-table {
   table.nice-table:last-child {
     margin-bottom: 0; }
   table.nice-table thead tr th, table.nice-table thead tr td {
-    text-align: left;
     border-bottom: 1px solid #D0D1D5;
     padding: 8px;
     background-color: #FFF;
     font-weight: 600; }
   table.nice-table tbody tr th, table.nice-table tbody tr td {
     vertical-align: top;
-    text-align: left;
     padding: 8px; }
   table.nice-table tbody tr th {
     font-weight: 600; }
@@ -5711,6 +5730,7 @@ table.nice-table {
   text-decoration: none;
   outline-style: none;
   text-align: center;
+  cursor: pointer;
   font-family: "Open Sans", sans-serif, helvetica;
   line-height: 20px;
   line-height: 1.25rem;
@@ -5913,6 +5933,31 @@ table.nice-table {
   .nice-btn.bold {
     font-weight: 600; }
 
+.nice-btn-alt, .nice-header .nice-header-menu.menu-alt > li > a {
+  border: 0;
+  padding: 5px 10px;
+  background-color: #ECF0F1;
+  color: #009CC1;
+  font-family: "Open Sans", sans-serif, helvetica;
+  font-size: 12px;
+  font-size: 0.75rem;
+  -webkit-transition: color 0.1s, background-color 0.1s;
+  -moz-transition: color 0.1s, background-color 0.1s;
+  -ms-transition: color 0.1s, background-color 0.1s;
+  -o-transition: color 0.1s, background-color 0.1s;
+  transition: color 0.1s, background-color 0.1s;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box; }
+  .nice-btn-alt:hover, .nice-header .nice-header-menu.menu-alt > li > a:hover {
+    background-color: #009CC1;
+    color: #FFF; }
+  .nice-btn-alt.icon:before, .nice-header .nice-header-menu.menu-alt > li > a.icon:before {
+    margin-right: 5px; }
+
 .nice-btn-group {
   margin: 15px 0; }
   .nice-btn-group > .nice-btn,
@@ -5966,6 +6011,37 @@ table.nice-table {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
+  .nice-btn-group > .nice-btn-alt, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a {
+    position: relative;
+    float: left;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box; }
+    .nice-btn-group > .nice-btn-alt:first-child, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a:first-child {
+      -webkit-border-top-left-radius: 15px;
+      -moz-border-radius-topleft: 15px;
+      border-top-left-radius: 15px;
+      -webkit-border-bottom-left-radius: 15px;
+      -moz-border-radius-bottomleft: 15px;
+      border-bottom-left-radius: 15px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn-alt:last-child, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a:last-child {
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topright: 15px;
+      border-top-right-radius: 15px;
+      -webkit-border-bottom-right-radius: 15px;
+      -moz-border-radius-bottomright: 15px;
+      border-bottom-right-radius: 15px;
+      -webkit-background-clip: padding-box;
+      -moz-background-clip: padding;
+      background-clip: padding-box; }
+    .nice-btn-group > .nice-btn-alt + .nice-btn-alt, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a + .nice-btn-alt, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > .nice-btn-alt + a, .nice-header .nice-header-menu.menu-alt > li.nice-btn-group > a + a {
+      margin-left: 1px; }
   .nice-btn-group.stacked > .nice-btn,
   .nice-btn-group.stacked > .nice-dropdown {
     float: none;
@@ -6373,6 +6449,7 @@ table.nice-table {
 .nice-alert {
   padding: 15px;
   border: 1px solid #D0D1D5;
+  margin-bottom: 15px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -6741,7 +6818,7 @@ table.nice-table {
         -ms-transition: background-color 0s;
         -o-transition: background-color 0s;
         transition: background-color 0s; }
-  .nice-popover:before {
+  .nice-popover:not(.no-arrow):before {
     position: absolute;
     bottom: 100%;
     left: 10px;
@@ -6751,30 +6828,30 @@ table.nice-table {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-bottom: 10px solid #182642; }
-  .nice-popover.top {
+  .nice-popover:not(.no-arrow).top {
     -webkit-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.15); }
-    .nice-popover.top:before {
+    .nice-popover:not(.no-arrow).top:before {
       top: auto;
       bottom: 100%; }
-  .nice-popover.bottom {
+  .nice-popover:not(.no-arrow).bottom {
     -webkit-box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15);
     box-shadow: 1px -2px 6px rgba(0, 0, 0, 0.15); }
-    .nice-popover.bottom:before {
+    .nice-popover:not(.no-arrow).bottom:before {
       top: 100%;
       bottom: auto;
       border-bottom: none;
       border-top: 10px solid #60C4DE; }
-  .nice-popover.left:before {
+  .nice-popover:not(.no-arrow).left:before {
     left: 10px;
     right: auto; }
-  .nice-popover.center:before {
+  .nice-popover:not(.no-arrow).center:before {
     left: 50%;
     right: auto;
     margin-left: -10px; }
-  .nice-popover.right:before {
+  .nice-popover:not(.no-arrow).right:before {
     left: auto;
     right: 10px; }
   .nice-popover.info, .nice-control-group.info .nice-popover.nice-form-control, .nice-control-group.info .nice-popover.nice-btn {
@@ -6784,11 +6861,11 @@ table.nice-table {
       color: #2596b3; }
     .nice-popover.info .nice-popover-controls a, .nice-control-group.info .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.info .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.info .nice-popover-controls button, .nice-control-group.info .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.info .nice-popover.nice-btn .nice-popover-controls button {
       color: #2596b3; }
-    .nice-popover.info:before, .nice-control-group.info .nice-popover.nice-form-control:before, .nice-control-group.info .nice-popover.nice-btn:before {
+    .nice-popover.info:not(.no-arrow):before, .nice-control-group.info .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.info .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #60C4DE; }
-      .nice-popover.info:before.top, .nice-control-group.info .nice-popover.nice-form-control:before.top, .nice-control-group.info .nice-popover.nice-btn:before.top {
+      .nice-popover.info:not(.no-arrow):before.top, .nice-control-group.info .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.info .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #60C4DE; }
-      .nice-popover.info:before.bottom, .nice-control-group.info .nice-popover.nice-form-control:before.bottom, .nice-control-group.info .nice-popover.nice-btn:before.bottom {
+      .nice-popover.info:not(.no-arrow):before.bottom, .nice-control-group.info .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.info .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #60C4DE; }
   .nice-popover.good, .nice-control-group.good .nice-popover.nice-form-control, .nice-control-group.good .nice-popover.nice-btn {
     border-color: #5CB85C; }
@@ -6797,11 +6874,11 @@ table.nice-table {
       color: #357935; }
     .nice-popover.good .nice-popover-controls a, .nice-control-group.good .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.good .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.good .nice-popover-controls button, .nice-control-group.good .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.good .nice-popover.nice-btn .nice-popover-controls button {
       color: #357935; }
-    .nice-popover.good:before, .nice-control-group.good .nice-popover.nice-form-control:before, .nice-control-group.good .nice-popover.nice-btn:before {
+    .nice-popover.good:not(.no-arrow):before, .nice-control-group.good .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.good .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #5CB85C; }
-      .nice-popover.good:before.top, .nice-control-group.good .nice-popover.nice-form-control:before.top, .nice-control-group.good .nice-popover.nice-btn:before.top {
+      .nice-popover.good:not(.no-arrow):before.top, .nice-control-group.good .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.good .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #5CB85C; }
-      .nice-popover.good:before.bottom, .nice-control-group.good .nice-popover.nice-form-control:before.bottom, .nice-control-group.good .nice-popover.nice-btn:before.bottom {
+      .nice-popover.good:not(.no-arrow):before.bottom, .nice-control-group.good .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.good .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #5CB85C; }
   .nice-popover.warning, .nice-control-group.warning .nice-popover.nice-form-control, .nice-control-group.warning .nice-popover.nice-btn {
     border-color: #FFB819; }
@@ -6810,11 +6887,11 @@ table.nice-table {
       color: #b27b00; }
     .nice-popover.warning .nice-popover-controls a, .nice-control-group.warning .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.warning .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.warning .nice-popover-controls button, .nice-control-group.warning .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.warning .nice-popover.nice-btn .nice-popover-controls button {
       color: #b27b00; }
-    .nice-popover.warning:before, .nice-control-group.warning .nice-popover.nice-form-control:before, .nice-control-group.warning .nice-popover.nice-btn:before {
+    .nice-popover.warning:not(.no-arrow):before, .nice-control-group.warning .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.warning .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #FFB819; }
-      .nice-popover.warning:before.top, .nice-control-group.warning .nice-popover.nice-form-control:before.top, .nice-control-group.warning .nice-popover.nice-btn:before.top {
+      .nice-popover.warning:not(.no-arrow):before.top, .nice-control-group.warning .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.warning .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #FFB819; }
-      .nice-popover.warning:before.bottom, .nice-control-group.warning .nice-popover.nice-form-control:before.bottom, .nice-control-group.warning .nice-popover.nice-btn:before.bottom {
+      .nice-popover.warning:not(.no-arrow):before.bottom, .nice-control-group.warning .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.warning .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #FFB819; }
   .nice-popover.bad, .nice-control-group.bad .nice-popover.nice-form-control, .nice-control-group.bad .nice-popover.nice-btn {
     border-color: #F42534; }
@@ -6823,11 +6900,11 @@ table.nice-table {
       color: #aa0914; }
     .nice-popover.bad .nice-popover-controls a, .nice-control-group.bad .nice-popover.nice-form-control .nice-popover-controls a, .nice-control-group.bad .nice-popover.nice-btn .nice-popover-controls a, .nice-popover.bad .nice-popover-controls button, .nice-control-group.bad .nice-popover.nice-form-control .nice-popover-controls button, .nice-control-group.bad .nice-popover.nice-btn .nice-popover-controls button {
       color: #aa0914; }
-    .nice-popover.bad:before, .nice-control-group.bad .nice-popover.nice-form-control:before, .nice-control-group.bad .nice-popover.nice-btn:before {
+    .nice-popover.bad:not(.no-arrow):before, .nice-control-group.bad .nice-popover.nice-form-control:not(.no-arrow):before, .nice-control-group.bad .nice-popover.nice-btn:not(.no-arrow):before {
       border-bottom-color: #F42534; }
-      .nice-popover.bad:before.top, .nice-control-group.bad .nice-popover.nice-form-control:before.top, .nice-control-group.bad .nice-popover.nice-btn:before.top {
+      .nice-popover.bad:not(.no-arrow):before.top, .nice-control-group.bad .nice-popover.nice-form-control:not(.no-arrow):before.top, .nice-control-group.bad .nice-popover.nice-btn:not(.no-arrow):before.top {
         border-bottom-color: #F42534; }
-      .nice-popover.bad:before.bottom, .nice-control-group.bad .nice-popover.nice-form-control:before.bottom, .nice-control-group.bad .nice-popover.nice-btn:before.bottom {
+      .nice-popover.bad:not(.no-arrow):before.bottom, .nice-control-group.bad .nice-popover.nice-form-control:not(.no-arrow):before.bottom, .nice-control-group.bad .nice-popover.nice-btn:not(.no-arrow):before.bottom {
         border-top-color: #F42534; }
 
 .nice-modal {

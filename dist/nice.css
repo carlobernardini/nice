@@ -5806,6 +5806,9 @@ textarea.nice-form-control {
   .nice-menu + .nice-menu {
     margin-top: 15px; }
 
+th {
+  text-align: left; }
+
 table.nice-table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -5818,14 +5821,12 @@ table.nice-table {
   table.nice-table:last-child {
     margin-bottom: 0; }
   table.nice-table thead tr th, table.nice-table thead tr td {
-    text-align: left;
     border-bottom: 1px solid #D0D1D5;
     padding: 8px;
     background-color: #FFF;
     font-weight: 600; }
   table.nice-table tbody tr th, table.nice-table tbody tr td {
     vertical-align: top;
-    text-align: left;
     padding: 8px; }
   table.nice-table tbody tr th {
     font-weight: 600; }

@@ -20,7 +20,7 @@
 - Unfloat `.nice-col-*` when applied to tables
 - Remove element type constraint for stacked lists
 - Support right aligmnent (`.pull-right`) on tabs
-- Fixes checkbox / radion alignment without absolute positioning
+- Fixes checkbox / radios alignment without absolute positioning
 
 ## 1.0.5
 :date: 2017-03-10

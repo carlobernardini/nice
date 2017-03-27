@@ -109,7 +109,10 @@
                 background-color: $color-white;
                 border: 1px solid $color-border;
                 border-bottom-color: $color-white;
-                border-top: 1px solid $color-primary;
+                border-top-color: $color-primary;
+                padding-top: 9px;
+                padding-left: 14px;
+                padding-right: 14px;
                 cursor: default;
                 color: $color-black;
 
@@ -137,19 +140,28 @@
         font-weight: 600;
     }
     &.small {
-        a {
-            min-width: 60px;
-            padding: 5px 10px;
-            @include nice-font-size(13px);
+        li {
+            a {
+                min-width: 60px;
+                padding: 5px 10px;
+                @include nice-font-size(13px);
 
-            &.icon {
-                min-width: auto;
+                &.icon {
+                    min-width: auto;
 
-                &:before {
-                    left: 12px;
-                    margin-top: -9px;
+                    &:before {
+                        left: 12px;
+                        margin-top: -9px;
+                    }
+                }            
+            }
+            &.current {
+                a {
+                    padding-top: 4px;
+                    padding-left: 9px;
+                    padding-right: 9px;
                 }
-            }            
+            }
         }
     }
 }

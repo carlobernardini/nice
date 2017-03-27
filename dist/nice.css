@@ -5215,7 +5215,10 @@ textarea.nice-form-control {
       background-color: #FFF;
       border: 1px solid #D0D1D5;
       border-bottom-color: #FFF;
-      border-top: 1px solid #F18700;
+      border-top-color: #F18700;
+      padding-top: 9px;
+      padding-left: 14px;
+      padding-right: 14px;
       cursor: default;
       color: #000; }
       .nice-tabs li.current a:hover {
@@ -5239,16 +5242,20 @@ textarea.nice-form-control {
       background-clip: padding-box; }
   .nice-tabs.bold {
     font-weight: 600; }
-  .nice-tabs.small a {
+  .nice-tabs.small li a {
     min-width: 60px;
     padding: 5px 10px;
     font-size: 13px;
     font-size: 0.8125rem; }
-    .nice-tabs.small a.icon {
+    .nice-tabs.small li a.icon {
       min-width: auto; }
-      .nice-tabs.small a.icon:before {
+      .nice-tabs.small li a.icon:before {
         left: 12px;
         margin-top: -9px; }
+  .nice-tabs.small li.current a {
+    padding-top: 4px;
+    padding-left: 9px;
+    padding-right: 9px; }
 
 .nice-tabs-wrapper .nice-tabs {
   border-bottom: none; }

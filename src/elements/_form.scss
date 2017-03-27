@@ -23,6 +23,11 @@ $select-caret-base64: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1
         border: 1px solid $color-brand;
         @include nice-box-shadow(inset 0 2px 2px $gray-light);
     }
+    &[disabled] {
+        background-color: $gray-vlight;
+        cursor: not-allowed;
+        @include nice-box-shadow(inset 0 1px 2px $gray-light);
+    }
     @each $type in (info, good, warning, bad) {
         &.#{$type} {
             border-color: map-get($color-scheme, $type);
@@ -33,7 +38,6 @@ $select-caret-base64: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1
         }
     }
 }
-
 input {
     &.nice-form-control {
         @extend %form-control;

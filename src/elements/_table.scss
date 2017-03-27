@@ -1,7 +1,13 @@
-th {
-    text-align: left;
-}
 table {
+    th {
+        text-align: left;
+    }
+    td[class*="nice-col"],
+    th[class*="nice-col"] {
+        float: none;
+        position: static;
+        display: table-cell;
+    }
     &.nice-table {
         border-spacing: 0;
         border-collapse: collapse;

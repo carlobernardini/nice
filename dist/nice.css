@@ -5831,8 +5831,14 @@ textarea.nice-form-control {
   .nice-menu + .nice-menu {
     margin-top: 15px; }
 
-th {
+table th {
   text-align: left; }
+
+table td[class*="nice-col"],
+table th[class*="nice-col"] {
+  float: none;
+  position: static;
+  display: table-cell; }
 
 table.nice-table {
   border-spacing: 0;

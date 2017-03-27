@@ -342,6 +342,8 @@ header,
             height: 100%;
             position: fixed;
             background-color: $color-accent;
+            overflow: hidden;
+            overflow-y: auto;
             @include nice-transition(left .2s ease-out, right .2s ease-out);
 
             > form, ul, div, span {
@@ -351,17 +353,41 @@ header,
         .nice-header-form {
             padding: 0 20px;
             background-color: lighten($color-accent, 15%);
+            position: fixed;
+            top: 0;
+            width: calc(100% - 60px);
+            z-index: 6;
+
+            input[type="text"] {
+                color: $color-white;
+                border-color: transparent;
+                background-color: transparent;
+                padding: 5px 0;
+                @include nice-box-shadow(none);
+                @include nice-border-radius(0);
+                @include nice-transition(border-bottom-color 0.3s);
+                @include nice-placeholder-color {
+                    color: $gray-vlight;
+                }
+
+                &:focus,
+                &:active {
+                    border-color: transparent;
+                    border-bottom-color: $color-white;
+                    width: 100%;
+                    margin-left: 0;
+                    @include nice-box-shadow(none);
+                }
+            }
 
             ~ .nice-header-menu {
-                height: calc(100% - 60px);    
+                margin-top: 60px;
+                // height: calc(100% - 60px);
             }
         }
         .nice-header-menu {
-            overflow: hidden;
-            overflow-y: auto;
             z-index: 5;
             width: 100%;
-            height: 100%;
             @include nice-transition(left .2s ease-in-out);
 
             > li {
@@ -454,11 +480,35 @@ header,
                 }
             }
             &.menu-alt {
-                display: none;
-            }
-            @for $i from 3 to 5 {
-                &:nth-child(#{$i}) {
-                    height: calc(100% - #{($i - 1) * 60 + 'px'});
+                margin-left: 0;
+                margin-top: 0;
+                left: auto;
+                width: auto;
+                height: auto;
+                padding-top: 0;
+                padding-bottom: 10px;
+
+                > li {
+                    padding: 10px 15px 0 15px;
+
+                    + li {
+                        padding-top: 0;
+
+                        > a {
+                            border-left: none;
+                            border-top: 1px solid $gray-medium;
+                        }
+                    }
+                    &:first-child {
+                        a {
+                            @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius, $bottom-left: 0);
+                        }
+                    }
+                    &:last-child {
+                        a {
+                            @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius, $top-right: 0);
+                        }
+                    }
                 }
             }
         }
@@ -576,27 +626,6 @@ header,
                         }
                     }
                 }
-                input[type="text"] {
-                    color: $color-white;
-                    border-color: transparent;
-                    background-color: transparent;
-                    padding: 5px 0;
-                    @include nice-box-shadow(none);
-                    @include nice-border-radius(0);
-                    @include nice-transition(border-bottom-color 0.3s);
-                    @include nice-placeholder-color {
-                        color: $gray-vlight;
-                    }
-
-                    &:focus,
-                    &:active {
-                        border-color: transparent;
-                        border-bottom-color: $color-white;
-                        width: 100%;
-                        margin-left: 0;
-                        @include nice-box-shadow(none);
-                    }
-                }
             }
             .nice-header-menu {
                 > li {
@@ -654,20 +683,17 @@ header,
             width: 340px;
 
             .nice-header-form {
-                width: 285px;
-                position: absolute;
-                right: calc(100% + 40px);
-                padding: 0 15px;
-                background-color: transparent;
+                width: 340px;
+                // position: fixed;
+                // right: calc(100% + 40px);
+                // padding: 0 15px;
+                // background-color: transparent;
 
                 input[type="text"] {
                     &:focus {
                         width: 100%;
                         margin-left: auto;
                     }
-                }
-                ~ .nice-header-menu {
-                    height: 100%;
                 }
             }
             .nice-header-menu {

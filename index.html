@@ -1887,49 +1887,49 @@
                 <h2 class="docs">Stacked lists</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <nav class="nice-stacked-list">
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item A
                             <span class="badge">
                                 14
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item B
                             <span class="badge">
                                 New
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item C
                             <span class="badge primary">
                                 23
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item C
                             <span class="badge accent">
                                 23
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item C
                             <span class="badge info">
                                 Working
                             </span>
                         </a>
-                        <a href="#" class="current">
+                        <a class="list-item" href="#" class="current">
                             Menu item C
                             <span class="badge warning">
                                 Attention
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item D
                             <span class="badge good">
                                 Complete
                             </span>
                         </a>
-                        <a href="#">
+                        <a class="list-item" href="#">
                             Menu item E
                             <span class="badge bad">
                                 Error
@@ -1937,10 +1937,10 @@
                         </a>
                     </nav>
                     <ul class="nice-stacked-list">
-                        <li class="list-heading">
+                        <li class="list-item list-heading">
                             Search!
                         </li>
-                        <li>
+                        <li class="list-item">
                             <h3 class="item-heading">
                                 Working Hours
                             </h3>
@@ -1952,7 +1952,7 @@
                                 </select>
                             </div>
                         </li>
-                        <li>
+                        <li class="list-item">
                             <h3 class="item-heading">Advertiser Type</h3>
                             <div class="nice-form-group">
                                 <select class="nice-form-control">
@@ -1962,14 +1962,14 @@
                                 </select>
                             </div>
                         </li>
-                        <li>Item C</li>
-                        <li>Item D</li>
+                        <li class="list-item">Item C</li>
+                        <li class="list-item">Item D</li>
                     </ul>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;nav class=&quot;<span class="main">nice-stacked-list</span>&quot;&gt;
-    &lt;a href=&quot;#&quot;&gt;
+                        <code class="docs">&lt;nav class=&quot;<span class="main">nice-stacked-list</span> <span class="variation">sidebar</span>&quot;&gt;
+    &lt;a class=&quot;<span class="main">list-item</span>&quot; href=&quot;#&quot;&gt;
         Menu item A
         &lt;span class=&quot;<span class="main">badge</span> <span class="variation">primary accent info good warning bad</span>&quot;&gt;
             23
@@ -1979,22 +1979,22 @@
 &lt;/nav&gt;
 
 &lt;ul class=&quot;<span class="main">nice-stacked-list</span> <span class="variation">sidebar left</span>&quot;&gt;
-    &lt;li&gt;
+    &lt;li class=&quot;<span class="main">list-item</span>&quot;&gt;
         &lt;div class=&quot;<span class="main">nice-stacked-list-controls</span>&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-stacked-list-control</span>&quot;&gt;Button 1&lt;/a&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-stacked-list-control</span>&quot;&gt;Button 2&lt;/a&gt;
         &lt;/div&gt;
     &lt;/li&gt;
-    &lt;li class=&quot;<span class="variation">list-heading</span>&quot;&gt;
+    &lt;li class=&quot;<span class="main">list-item</span> <span class="variation">list-heading</span>&quot;&gt;
         Search!
     &lt;/li&gt;
-    &lt;li&gt;
+    &lt;li class=&quot;<span class="main">list-item</span>&quot;&gt;
         &lt;h3 class=&quot;<span class="variation">item-heading</span>&quot;&gt;
             Item heading
         &lt;/h3&gt;
         Item A
     &lt;/li&gt;
-    &lt;li&gt;
+    &lt;li class=&quot;<span class="main">list-item</span>&quot;&gt;
         Item B
     &lt;/li&gt;
     ...

@@ -23,7 +23,7 @@ html {
 header .nice-header-brand,
 .nice-header .nice-header-brand, .nice-form-inline .nice-form-group, .nice-form-inline .nice-form-group input.nice-form-control,
 .nice-form-inline .nice-form-group select.nice-form-control, .nice-form-inline .nice-form-group label, .nice-radio label,
-.nice-checkbox label, .nice-stacked-list li .item-heading.icon:before, .nice-stacked-list > li .badge, .nice-stacked-list > a .badge, .nice-breadcrumb li, .nice-pagination, .nice-menu.stacked li a.icon:before, .nice-menu.stacked li span.icon:before, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
+.nice-checkbox label, .nice-stacked-list .list-item .item-heading.icon:before, .nice-breadcrumb li, .nice-pagination, .nice-menu.stacked li a.icon:before, .nice-menu.stacked li span.icon:before, .nice-btn, .nice-dropdown, .nice-dropdown .dropdown-menu li a i, .nice-dropdown .dropdown-menu li span i, .nice-alert .nice-alert-dismiss .icon, .nice-tooltip, .nice-popover .nice-popover-title .icon,
 .nice-popover .nice-popover-title .product-icon,
 .nice-popover .nice-popover-title .additional-icon, .nice-loading {
   display: -moz-inline-stack;
@@ -46,7 +46,7 @@ header .nice-header-brand,
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
 
-.nice-panel .nice-panel-heading, .nice-stacked-list li.list-heading {
+.nice-panel .nice-panel-heading, .nice-stacked-list .list-heading {
   background-color: #182642;
   color: #FFF;
   font-weight: 600;
@@ -5409,7 +5409,7 @@ textarea.nice-form-control {
 
 .nice-stacked-list {
   list-style: none; }
-  .nice-stacked-list li.list-heading {
+  .nice-stacked-list .list-heading {
     -webkit-border-top-left-radius: 3px;
     -moz-border-radius-topleft: 3px;
     border-top-left-radius: 3px;
@@ -5419,27 +5419,29 @@ textarea.nice-form-control {
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box; }
-    .nice-stacked-list li.list-heading + li {
+    .nice-stacked-list .list-heading + .list-item {
       border-top-width: 0; }
-  .nice-stacked-list li .item-heading {
+  .nice-stacked-list .list-item .item-heading {
     margin: -15px -15px 15px;
     padding: 10px 15px;
     background-color: #F5F7F7;
     display: block;
     font-weight: 600;
     font-size: 1em; }
-    .nice-stacked-list li .item-heading.icon:before {
+    .nice-stacked-list .list-item .item-heading.icon:before {
       width: 20px;
       text-align: center;
       font-weight: 400; }
-    .nice-stacked-list li .item-heading .badge {
+    .nice-stacked-list .list-item .item-heading .badge {
       font-family: "Open Sans", sans-serif, helvetica; }
-  .nice-stacked-list li .nice-stacked-list-controls {
+  .nice-stacked-list .list-item p {
+    margin: 0 0 5px 0; }
+  .nice-stacked-list .list-item .nice-stacked-list-controls {
     width: calc(100% + 30px);
     display: table;
     table-layout: fixed;
     margin: -15px; }
-    .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control {
+    .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control {
       display: table-cell;
       padding: 10px 15px;
       text-align: center;
@@ -5448,68 +5450,68 @@ textarea.nice-form-control {
       -ms-transition: background-color 0.2s;
       -o-transition: background-color 0.2s;
       transition: background-color 0.2s; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:first-child {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:first-child {
         -webkit-border-top-left-radius: 3px;
         -moz-border-radius-topleft: 3px;
         border-top-left-radius: 3px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:last-child {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:last-child {
         -webkit-border-top-right-radius: 3px;
         -moz-border-radius-topright: 3px;
         border-top-right-radius: 3px;
         -webkit-background-clip: padding-box;
         -moz-background-clip: padding;
         background-clip: padding-box; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
         border-left: 1px solid #ECF0F1; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:hover {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:hover {
         background-color: #F5F7F7; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control:active {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control:active {
         background-color: #ECF0F1;
         -webkit-transition: background-color 0s;
         -moz-transition: background-color 0s;
         -ms-transition: background-color 0s;
         -o-transition: background-color 0s;
         transition: background-color 0s; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.icon:before {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.icon:before {
         margin-right: 5px; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.primary {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.primary {
         background-color: #F18700; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.primary:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.primary:hover {
           background-color: #ff940c; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.info, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.info, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #60C4DE; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.info:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn:hover, .nice-control-group.info .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.info:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.info .nice-stacked-list-control.nice-btn:hover, .nice-control-group.info .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #75cce2; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.good, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.good, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #5CB85C; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.good:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn:hover, .nice-control-group.good .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.good:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.good .nice-stacked-list-control.nice-btn:hover, .nice-control-group.good .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #6ec06e; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.warning, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.warning, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #FFB819; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.warning:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn:hover, .nice-control-group.warning .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.warning:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.warning .nice-stacked-list-control.nice-btn:hover, .nice-control-group.warning .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #ffc033; }
-      .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.bad, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
+      .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.bad, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn {
         background-color: #F42534; }
-        .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.bad:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list li .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn:hover, .nice-control-group.bad .nice-stacked-list li .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
+        .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.bad:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-form-control:hover, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-form-control:hover, .nice-stacked-list .list-item .nice-stacked-list-controls .nice-control-group.bad .nice-stacked-list-control.nice-btn:hover, .nice-control-group.bad .nice-stacked-list .list-item .nice-stacked-list-controls .nice-stacked-list-control.nice-btn:hover {
           background-color: #f53d4b; }
-  .nice-stacked-list > li, .nice-stacked-list > a {
+  .nice-stacked-list .list-item {
     display: block;
     border-bottom: 1px solid #ebebed;
     padding: 15px 15px;
     position: relative;
     line-height: 18px;
     line-height: 1.125rem; }
-    .nice-stacked-list > li .badge, .nice-stacked-list > a .badge {
+    .nice-stacked-list .list-item .badge {
       float: right;
       background-color: #D0D1D5;
       color: #FFF;
       padding: 3px 8px;
-      margin: -3px;
+      margin: -3px 0;
       font-weight: 600;
-      font-size: 13px;
+      font-size: 80%;
       -webkit-border-radius: 15px;
       -moz-border-radius: 15px;
       border-radius: 15px;
@@ -5521,38 +5523,61 @@ textarea.nice-form-control {
       -ms-transition: background-color 0.1s;
       -o-transition: background-color 0.1s;
       transition: background-color 0.1s; }
-      .nice-stacked-list > li .badge.primary, .nice-stacked-list > a .badge.primary {
+      .nice-stacked-list .list-item .badge.primary {
         background-color: #ff940c; }
-      .nice-stacked-list > li .badge.accent, .nice-stacked-list > a .badge.accent {
+      .nice-stacked-list .list-item .badge.accent {
         background-color: #1f3155; }
-      .nice-stacked-list > li .badge.info, .nice-stacked-list > li .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.info, .nice-stacked-list > a .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.info, .nice-stacked-list .list-item .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #75cce2; }
-      .nice-stacked-list > li .badge.good, .nice-stacked-list > li .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.good, .nice-stacked-list > a .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.good, .nice-stacked-list .list-item .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #6ec06e; }
-      .nice-stacked-list > li .badge.warning, .nice-stacked-list > li .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.warning, .nice-stacked-list > a .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.warning, .nice-stacked-list .list-item .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #ffc033; }
-      .nice-stacked-list > li .badge.bad, .nice-stacked-list > li .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > li .badge.nice-form-control, .nice-stacked-list > li .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > li .badge.nice-btn, .nice-stacked-list > a .badge.bad, .nice-stacked-list > a .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > a .badge.nice-form-control, .nice-stacked-list > a .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > a .badge.nice-btn {
+      .nice-stacked-list .list-item .badge.bad, .nice-stacked-list .list-item .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list .list-item .badge.nice-form-control, .nice-stacked-list .list-item .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list .list-item .badge.nice-btn {
         background-color: #f53d4b; }
-    .nice-stacked-list > li:hover .badge, .nice-stacked-list > a:hover .badge {
+      .nice-stacked-list .list-item .badge .badge-addon {
+        background-color: #474747;
+        color: #D0D1D5;
+        float: left;
+        margin: -3px 5px -3px -8px;
+        padding: 3px 5px;
+        font-weight: 400;
+        -webkit-border-top-left-radius: 15px;
+        -moz-border-radius-topleft: 15px;
+        border-top-left-radius: 15px;
+        -webkit-border-bottom-left-radius: 15px;
+        -moz-border-radius-bottomleft: 15px;
+        border-bottom-left-radius: 15px;
+        -webkit-background-clip: padding-box;
+        -moz-background-clip: padding;
+        background-clip: padding-box; }
+        .nice-stacked-list .list-item .badge .badge-addon a {
+          color: #FFF;
+          text-shadow: none; }
+          .nice-stacked-list .list-item .badge .badge-addon a:hover {
+            text-decoration: underline; }
+      .nice-stacked-list .list-item .badge .badge-text {
+        float: left; }
+    .nice-stacked-list .list-item:hover .badge {
       background-color: #009CC1; }
-      .nice-stacked-list > li:hover .badge.primary, .nice-stacked-list > a:hover .badge.primary {
+      .nice-stacked-list .list-item:hover .badge.primary {
         background-color: #F18700; }
-      .nice-stacked-list > li:hover .badge.accent, .nice-stacked-list > a:hover .badge.accent {
+      .nice-stacked-list .list-item:hover .badge.accent {
         background-color: #182642; }
-      .nice-stacked-list > li:hover .badge.info, .nice-stacked-list > li:hover .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.info, .nice-stacked-list > a:hover .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.info, .nice-stacked-list .list-item:hover .nice-control-group.info .badge.nice-form-control, .nice-control-group.info .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.info .badge.nice-btn, .nice-control-group.info .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #60C4DE; }
-      .nice-stacked-list > li:hover .badge.good, .nice-stacked-list > li:hover .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.good, .nice-stacked-list > a:hover .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.good, .nice-stacked-list .list-item:hover .nice-control-group.good .badge.nice-form-control, .nice-control-group.good .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.good .badge.nice-btn, .nice-control-group.good .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #5CB85C; }
-      .nice-stacked-list > li:hover .badge.warning, .nice-stacked-list > li:hover .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.warning, .nice-stacked-list > a:hover .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.warning, .nice-stacked-list .list-item:hover .nice-control-group.warning .badge.nice-form-control, .nice-control-group.warning .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.warning .badge.nice-btn, .nice-control-group.warning .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #FFB819; }
-      .nice-stacked-list > li:hover .badge.bad, .nice-stacked-list > li:hover .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > li:hover .badge.nice-form-control, .nice-stacked-list > li:hover .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > li:hover .badge.nice-btn, .nice-stacked-list > a:hover .badge.bad, .nice-stacked-list > a:hover .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list > a:hover .badge.nice-form-control, .nice-stacked-list > a:hover .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list > a:hover .badge.nice-btn {
+      .nice-stacked-list .list-item:hover .badge.bad, .nice-stacked-list .list-item:hover .nice-control-group.bad .badge.nice-form-control, .nice-control-group.bad .nice-stacked-list .list-item:hover .badge.nice-form-control, .nice-stacked-list .list-item:hover .nice-control-group.bad .badge.nice-btn, .nice-control-group.bad .nice-stacked-list .list-item:hover .badge.nice-btn {
         background-color: #F42534; }
-    .nice-stacked-list > li.current, .nice-stacked-list > a.current {
+    .nice-stacked-list .list-item.current {
       background-color: #F5F7F7;
       color: #000; }
-    .nice-stacked-list > li:last-child, .nice-stacked-list > a:last-child {
+    .nice-stacked-list .list-item:last-child {
       border-bottom: none; }
-  .nice-stacked-list.condensed li, .nice-stacked-list.condensed a {
+  .nice-stacked-list.condensed .list-item {
     padding: 10px 15px; }
   .nice-stacked-list.sidebar {
     position: fixed;
@@ -5579,11 +5604,11 @@ textarea.nice-form-control {
     .nice-stacked-list.sidebar.left {
       right: auto;
       left: 0; }
-    .nice-stacked-list.sidebar li {
+    .nice-stacked-list.sidebar .list-item {
       border-bottom-color: #D0D1D5; }
-      .nice-stacked-list.sidebar li .item-heading {
+      .nice-stacked-list.sidebar .list-item .item-heading {
         background-color: #000; }
-      .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control {
+      .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control {
         color: #FFF;
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
@@ -5592,13 +5617,13 @@ textarea.nice-form-control {
         -moz-background-clip: padding;
         background-clip: padding-box;
         text-shadow: none; }
-        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control:hover {
+        .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control:hover {
           background-color: #000; }
-        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control:active {
+        .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control:active {
           background-color: #262626; }
-        .nice-stacked-list.sidebar li .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
+        .nice-stacked-list.sidebar .list-item .nice-stacked-list-controls .nice-stacked-list-control + .nice-stacked-list-control {
           border-left-color: #D0D1D5; }
-      .nice-stacked-list.sidebar li .nice-form-control {
+      .nice-stacked-list.sidebar .list-item .nice-form-control {
         border-width: 0;
         -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
         -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);

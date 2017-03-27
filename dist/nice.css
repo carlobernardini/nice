@@ -5343,14 +5343,16 @@ textarea.nice-form-control {
 .nice-panel .nice-panel-content {
   padding: 15px; }
 
-.nice-panel > table.nice-table.bordered {
-  border: 0; }
-  .nice-panel > table.nice-table.bordered tr td:first-child, .nice-panel > table.nice-table.bordered tr th:first-child {
-    border-left: 0; }
-  .nice-panel > table.nice-table.bordered tr td:last-child, .nice-panel > table.nice-table.bordered tr th:last-child {
-    border-right: 0; }
-  .nice-panel > table.nice-table.bordered tbody tr:last-child td, .nice-panel > table.nice-table.bordered tbody tr:last-child th {
-    border-bottom: 0; }
+.nice-panel > table.nice-table {
+  margin-bottom: 0; }
+  .nice-panel > table.nice-table.bordered {
+    border: 0; }
+    .nice-panel > table.nice-table.bordered tr td:first-child, .nice-panel > table.nice-table.bordered tr th:first-child {
+      border-left: 0; }
+    .nice-panel > table.nice-table.bordered tr td:last-child, .nice-panel > table.nice-table.bordered tr th:last-child {
+      border-right: 0; }
+    .nice-panel > table.nice-table.bordered tbody tr:last-child td, .nice-panel > table.nice-table.bordered tbody tr:last-child th {
+      border-bottom: 0; }
 
 .nice-panel.primary {
   -webkit-box-shadow: 0 1px 2px rgba(241, 135, 0, 0.6);

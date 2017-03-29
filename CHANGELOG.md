@@ -1,5 +1,12 @@
 # Nice! version log
 
+## 1.1.2
+:date: 2017-03-28
+
+### :wrench: Fixes
+- Box shadow on `.nice-header-collapse` would also show when off canvas menu isn't expanded
+- Non-fixed header would have margins on both sides on mobile view
+
 ## 1.1.1
 :date: 2017-03-28
 

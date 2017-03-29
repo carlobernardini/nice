@@ -1,5 +1,12 @@
 # Nice! version log
 
+## 1.1.1
+:date: 2017-03-28
+
+### :wrench: Fixes
+- Fixes and changes header '.menu-alt' items in mobile / tablet view
+- Fixes padding issues for tabs that have icons assigned by class
+
 ## 1.1.0
 :date: 2017-03-27
 

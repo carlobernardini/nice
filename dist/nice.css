@@ -3985,6 +3985,7 @@ body.nice-fixed-header {
     -moz-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
     box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3); }
   .nice-header {
+    margin: 0 -15px;
     position: relative; }
     .nice-header.fixed {
       -webkit-transition: left 0.2s ease-out;

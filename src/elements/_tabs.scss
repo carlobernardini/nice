@@ -110,14 +110,15 @@
                 border: 1px solid $color-border;
                 border-bottom-color: $color-white;
                 border-top-color: $color-primary;
-                padding-top: 9px;
-                padding-left: 14px;
-                padding-right: 14px;
+                padding: 9px 14px 10px 14px;
                 cursor: default;
                 color: $color-black;
 
                 &:hover {
                     background-color: $color-white;
+                }
+                &.icon {
+                    padding: 9px 14px 10px 34px;
                 }
                 .badge {
                     background-color: $color-primary;
@@ -148,18 +149,21 @@
 
                 &.icon {
                     min-width: auto;
+                    padding: 5px 10px 5px 30px;
 
                     &:before {
-                        left: 12px;
+                        left: 5px;
                         margin-top: -9px;
                     }
                 }            
             }
             &.current {
                 a {
-                    padding-top: 4px;
-                    padding-left: 9px;
-                    padding-right: 9px;
+                    padding: 4px 9px 5px 9px;
+
+                    &.icon {
+                        padding-left: 29px;
+                    }
                 }
             }
         }
@@ -215,17 +219,35 @@
                     }
                 }
             }
+            &.current {
+                a {
+                    padding: 9px 14px 10px 14px;
+
+                    &.icon {
+                        padding: 24px 14px 5px;
+                    }
+                }
+            }
         }
         &.small {
-            a {
-                &.icon {
-                    min-width: 60px;
-                    padding: 20px 10px 3px;
+            li {
+                a {
+                    &.icon {
+                        min-width: 60px;
 
-                    &:before {
-                        top: 5px;
-                        left: 50%;
-                        margin-top: 0;
+                        &:before {
+                            left: 5px;
+                            top: 50%;
+                            margin-top: -9px;
+                            margin-left: 0;
+                        }
+                    }
+                }
+                &.current {
+                    a {
+                        &.icon {
+                            padding: 4px 9px 5px 29px;
+                        }
                     }
                 }
             }

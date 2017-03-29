@@ -3980,6 +3980,10 @@ body.nice-fixed-header {
     font-size: 1em; }
 
 @media screen and (max-width: 1025px) {
+  body.expanded .nice-header .nice-header-collapse {
+    -webkit-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
+    -moz-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
+    box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3); }
   .nice-header {
     position: relative; }
     .nice-header.fixed {
@@ -4000,14 +4004,11 @@ body.nice-fixed-header {
       background-color: #182642;
       overflow: hidden;
       overflow-y: auto;
-      -webkit-transition: left 0.2s ease-out, right 0.2s ease-out;
-      -moz-transition: left 0.2s ease-out, right 0.2s ease-out;
-      -ms-transition: left 0.2s ease-out, right 0.2s ease-out;
-      -o-transition: left 0.2s ease-out, right 0.2s ease-out;
-      transition: left 0.2s ease-out, right 0.2s ease-out;
-      -webkit-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
-      -moz-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
-      box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3); }
+      -webkit-transition: left 0.2s ease-out, right 0.2s ease-out, box-shadow 0.5s;
+      -moz-transition: left 0.2s ease-out, right 0.2s ease-out, box-shadow 0.5s;
+      -ms-transition: left 0.2s ease-out, right 0.2s ease-out, box-shadow 0.5s;
+      -o-transition: left 0.2s ease-out, right 0.2s ease-out, box-shadow 0.5s;
+      transition: left 0.2s ease-out, right 0.2s ease-out, box-shadow 0.5s; }
       .nice-header .nice-header-collapse > form, .nice-header .nice-header-collapse ul, .nice-header .nice-header-collapse div, .nice-header .nice-header-collapse span {
         float: none; }
       .nice-header .nice-header-collapse .nice-header-menu {

@@ -324,7 +324,17 @@ body {
 }
 
 @include media($mobile-and-tablet) {
+    body {
+        &.expanded {
+            .nice-header {
+                .nice-header-collapse {
+                    @include nice-box-shadow(-1px 0 15px rgba($color-accent, .3));
+                }
+            }
+        }
+    }
     .nice-header {
+        margin: 0 -15px;
         position: relative;
 
         &.fixed {
@@ -346,8 +356,7 @@ body {
             background-color: $color-accent;
             overflow: hidden;
             overflow-y: auto;
-            @include nice-transition(left .2s ease-out, right .2s ease-out);
-            @include nice-box-shadow(-1px 0 15px rgba($color-accent, .3));
+            @include nice-transition(left .2s ease-out, right .2s ease-out, box-shadow .5s);
 
             > form, ul, div, span {
                 float: none;

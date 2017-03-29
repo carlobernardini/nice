@@ -4004,7 +4004,10 @@ body.nice-fixed-header {
       -moz-transition: left 0.2s ease-out, right 0.2s ease-out;
       -ms-transition: left 0.2s ease-out, right 0.2s ease-out;
       -o-transition: left 0.2s ease-out, right 0.2s ease-out;
-      transition: left 0.2s ease-out, right 0.2s ease-out; }
+      transition: left 0.2s ease-out, right 0.2s ease-out;
+      -webkit-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
+      -moz-box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3);
+      box-shadow: -1px 0 15px rgba(24, 38, 66, 0.3); }
       .nice-header .nice-header-collapse > form, .nice-header .nice-header-collapse ul, .nice-header .nice-header-collapse div, .nice-header .nice-header-collapse span {
         float: none; }
       .nice-header .nice-header-collapse .nice-header-menu {
@@ -4068,15 +4071,33 @@ body.nice-fixed-header {
           left: auto;
           width: auto;
           height: auto;
-          padding-top: 0;
-          padding-bottom: 10px; }
+          padding-top: 0; }
           .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li {
-            padding: 10px 15px 0 15px; }
+            padding: 0;
+            background-color: #2c467a; }
+            .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li > a {
+              padding: 15px 20px;
+              background-color: transparent;
+              color: #FFF;
+              font-size: 13px; }
+              .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li > a.icon:before {
+                width: 20px;
+                text-align: center;
+                margin-right: 10px; }
             .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li + li {
-              padding-top: 0; }
+              padding-top: 0;
+              border-top: 1px solid #33518d; }
               .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li + li > a {
                 border-left: none;
-                border-top: 1px solid #D0D1D5; }
+                -webkit-border-top-right-radius: 0;
+                -moz-border-radius-topright: 0;
+                border-top-right-radius: 0;
+                -webkit-border-bottom-right-radius: 0;
+                -moz-border-radius-bottomright: 0;
+                border-bottom-right-radius: 0;
+                -webkit-background-clip: padding-box;
+                -moz-background-clip: padding;
+                background-clip: padding-box; }
             .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li:first-child a {
               -webkit-border-top-left-radius: 3px;
               -moz-border-radius-topleft: 3px;
@@ -4091,9 +4112,6 @@ body.nice-fixed-header {
               -moz-background-clip: padding;
               background-clip: padding-box; }
             .nice-header .nice-header-collapse .nice-header-menu.menu-alt > li:last-child a {
-              -webkit-border-top-right-radius: 0;
-              -moz-border-radius-topright: 0;
-              border-top-right-radius: 0;
               -webkit-border-bottom-right-radius: 3px;
               -moz-border-radius-bottomright: 3px;
               border-bottom-right-radius: 3px;

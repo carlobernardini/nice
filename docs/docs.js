@@ -94,4 +94,25 @@ $(function(){
             });
         }
     });
+
+    $("#search").on("input", function() {
+      var keyword = $("#search").val();
+
+      // Remove previous marked elements and mark the new keyword inside the context
+      $("section.nice-container").unmark({
+        done: function() {
+          $("section.nice-container").mark(keyword, {
+              // Scroll the first result into view
+              done: function() {
+                  var firstMark = $("mark").get(0);
+                  if (firstMark) {
+                      firstMark.scrollIntoView();
+                      // Because scrollIntoView will scroll stuff under our lovely header
+                      document.body.scrollTop -= 100;
+                  }
+              }
+          });
+        }
+      });
+    });
 });

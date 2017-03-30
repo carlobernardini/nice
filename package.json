@@ -17,5 +17,8 @@
     "node-bourbon": "4.2.8",
     "node-neat": "1.7.2"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "prepublish": "gulp"
+  }
 }

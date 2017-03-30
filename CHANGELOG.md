@@ -1,5 +1,12 @@
 # Nice! version log
 
+## 1.1.3
+:date: 2017-03-30
+
+### :star2: Internal improvements
+- Removed `dist/` from git, but keeping it in the npm release
+- Attached a simple highlighter to the search input on the demo page
+
 ## 1.1.2
 :date: 2017-03-28
 

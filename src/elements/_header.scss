@@ -206,14 +206,14 @@ body {
 
                 li {
                     float: none;
-                    @include nice-line-height(50px);
 
                     a, span {
                         min-width: 200px;
                         color: $color-white;
                         display: block;
-                        padding: 15px;
-                        // white-space: nowrap;
+                        padding: 12px 15px;
+                        @include nice-font($size: 13px);
+                        @include nice-transition(background-color 0.1s);
 
                         &:hover {
                             background-color: $color-brand;
@@ -254,7 +254,6 @@ body {
                     > a, > span {
                         &:after {
                             color: $color-white;
-                            // @include nice-animation(flip .15s linear forwards);
                             @include animation(flip .15s linear forwards);
                             @include animation-iteration-count(1);
                         }
@@ -265,8 +264,6 @@ body {
         &.menu-pills {
             li {
                 a {
-                    @include nice-transition(background-color 0.1s);
-
                     &:hover {
                         background-color: $gray-vlight;
                     }
@@ -463,7 +460,7 @@ body {
                     height: auto;
                     padding-top: 0;
 
-                    > li {
+                    li {
                         padding: 0;
                         background-color: lighten($color-accent, 15%);
 
@@ -499,6 +496,17 @@ body {
                         &:last-child {
                             a {
                                 @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius);
+                            }
+                        }
+                        ul {
+                            border-top: 1px solid lighten($color-accent, 20%);
+
+                            li {
+                                background-color: lighten($color-accent, 20%);
+
+                                a {
+                                    padding: 10px 20px;
+                                }
                             }
                         }
                     }

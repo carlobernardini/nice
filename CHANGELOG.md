@@ -1,5 +1,21 @@
 # Nice! version log
 
+## 1.1.4
+:date: 2017-04-05
+
+### :star2: Improvements
+- Updated styling (mobile view) for items in a `.menu-alt` within the header
+- Switched to using line-height for header menu item sizing instead of (vertical) padding
+- Decreased font size and padding for dropdown items in header menus
+
+### :star2: Internal improvements
+- Fixed documentation snippet for dropdowns
+- Added link to NPM package in header menu, updated documentation page title
+
+### :wrench: Fixes
+- Fixes border radius on mobile for items in a `.menu-alt` within the header
+- Removed border color for header search input in off canvas mode
+
 ## 1.1.3
 :date: 2017-03-30
 

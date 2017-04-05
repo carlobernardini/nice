@@ -130,8 +130,9 @@ body {
         > li {
             &.highlight {
                 > a, > span {
-                    padding: 20px 10px 16px;
+                    padding: 4px 10px 0;
                     border-bottom: 4px solid transparent;
+                    @include nice-line-height(52px);
                 }
                 @each $type in (primary, brand, accent, info, good, warning, bad) {
                     &.#{$type} {
@@ -183,10 +184,12 @@ body {
 
             a, span {
                 display: block;
-                padding: 20px 10px;
                 line-height: normal;
                 font-size: 1.1em;
+                padding: 0 10px;
+                height: 60px;
                 @include nice-font-size(15px);
+                @include nice-line-height(60px);
 
                 &.icon,
                 &.product-icon,
@@ -206,14 +209,15 @@ body {
 
                 li {
                     float: none;
-                    @include nice-line-height(50px);
 
                     a, span {
                         min-width: 200px;
                         color: $color-white;
                         display: block;
-                        padding: 15px;
-                        // white-space: nowrap;
+                        height: 42px;
+                        @include nice-font($size: 13px);
+                        @include nice-transition(background-color 0.1s);
+                        @include nice-line-height(42px);
 
                         &:hover {
                             background-color: $color-brand;
@@ -244,17 +248,16 @@ body {
                         content: '\f107';
                         color: $color-white;
                         position: absolute;
-                        right: 15px;
+                        right: 10px;
                         top: 50%;
-                        @include nice-line-height(20px);
                         margin-top: -10px;
+                        @include nice-line-height(20px);
                     }
                 }
                 &:hover {
                     > a, > span {
                         &:after {
                             color: $color-white;
-                            // @include nice-animation(flip .15s linear forwards);
                             @include animation(flip .15s linear forwards);
                             @include animation-iteration-count(1);
                         }
@@ -265,8 +268,6 @@ body {
         &.menu-pills {
             li {
                 a {
-                    @include nice-transition(background-color 0.1s);
-
                     &:hover {
                         background-color: $gray-vlight;
                     }
@@ -284,27 +285,44 @@ body {
         }
         &.menu-alt {
             > li {
-                padding-top: 17px;
-                padding-bottom: 16px;
+                padding: 16px 0;
 
                 > a {
-                    @extend .nice-btn-alt;
+                    border: 0;
+                    padding: 0 10px;
+                    background-color: $gray-light;
+                    color: $color-link;
+                    height: 28px;
+                    @include nice-font($family: $fonts-primary);
+                    @include nice-font-size(12px);
+                    @include nice-transition(color .1s, background-color .1s);
+                    @include nice-border-radius($default-radius * 5);
+                    @include nice-line-height(28px);
 
+                    &:hover {
+                        background-color: $color-link;
+                        color: $color-white;
+                    }
+                    &.icon {
+                        &:before {
+                            margin-right: 5px;
+                        }
+                    }
                 }
                 &:first-child {
                     > a {
                         @include nice-border-radius($top-right: 0, $bottom-right: 0);
                     }
                 }
-                &:last-child {
-                    > a {
-                        @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
-                    }
-                }
                 + li {
                     > a {
                         border-left: 1px solid $gray-vlight;
-                        @include nice-border-radius($top-left: 0, $bottom-left: 0);
+                        @include nice-border-radius(0);
+                    }
+                }
+                &:last-child {
+                    > a {
+                        @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
                     }
                 }
             }
@@ -463,15 +481,17 @@ body {
                     height: auto;
                     padding-top: 0;
 
-                    > li {
+                    li {
                         padding: 0;
                         background-color: lighten($color-accent, 15%);
 
                         > a {
-                            padding: 15px 20px;
+                            padding: 0 20px;
                             background-color: transparent;
                             color: $color-white;
+                            height: 50px;
                             @include nice-font($size: 13px);
+                            @include nice-line-height(50px);
 
                             &.icon {
                                 &:before {
@@ -501,6 +521,18 @@ body {
                                 @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius);
                             }
                         }
+                        ul {
+                            border-top: 1px solid lighten($color-accent, 20%);
+
+                            li {
+                                background-color: lighten($color-accent, 20%);
+
+                                a {
+                                    padding: 0 20px;
+                                    @include nice-line-height(42px);
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -522,22 +554,26 @@ body {
                 @include nice-border-radius(0);
                 @include nice-transition(border-bottom-color 0.3s);
                 @include nice-placeholder-color {
-                    color: $gray-vlight;
+                    color: lighten($color-accent, 50%);
                 }
 
-                &:focus,
-                &:active {
+                &:hover {
                     border-color: transparent;
-                    border-bottom-color: $color-white;
+                }
+                &:focus {
+                    border-color: transparent;
+                    border-bottom-color: lighten($color-accent, 40%);
                     width: 100%;
                     margin-left: 0;
                     @include nice-box-shadow(none);
+                        @include nice-placeholder-color {
+                        color: $gray-vlight;
+                    }
                 }
             }
 
             ~ .nice-header-menu {
                 margin-top: 60px;
-                // height: calc(100% - 60px);
             }
         }
         .nice-header-toggle {
@@ -659,17 +695,21 @@ body {
                 > li {
                     &.highlight {
                         > a {
-                            padding: 15px 20px 15px 16px;
+                            padding: 0 20px 0 16px;
                             border-bottom-width: 0;
                             border-left-width: 4px;
                             border-left-style: solid;
+                            height: 50px;
+                            @include nice-line-height(50px);
                         }
                     }
                 }
                 ul {
                     li {
                         a, span {
-                            padding: 15px 20px;
+                            padding: 0 20px;
+                            height: 42px;
+                            @include nice-line-height(42px);
                         }
                     }
                 }
@@ -712,10 +752,6 @@ body {
 
             .nice-header-form {
                 width: 340px;
-                // position: fixed;
-                // right: calc(100% + 40px);
-                // padding: 0 15px;
-                // background-color: transparent;
 
                 input[type="text"] {
                     &:focus {
@@ -728,14 +764,18 @@ body {
                 > li {
                     &.highlight {
                         > a {
-                            padding: 20px 20px 20px 16px;
+                            padding: 0 20px 0 16px;
                             border-bottom-width: 0;
                             border-left-width: 4px;
                             border-left-style: solid;
+                            height: 50px;
+                            @include nice-line-height(50px);
                         }
                     }
                     > a {
-                        padding: 20px 20px;
+                        padding: 0 20px;
+                        height: 42px;
+                        @include nice-line-height(42px);
                     }
                 }
             }

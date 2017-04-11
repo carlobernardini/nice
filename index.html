@@ -376,6 +376,82 @@
                             </div>
                         </div>
                     </div>
+                    <table class="nice-table bordered">
+                        <tbody>
+                            <tr>
+                                <th>Container</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>container</strong></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Full-width container</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>container-fluid</strong></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Row</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>row</strong></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Default column</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (mobile breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-mobile</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (tablet breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-tablet</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (desktop breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-desktop</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (mobile and tablet)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-mobile-and-tablet</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset (mobile breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift-mobile</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset (tablet breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift-tablet</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset (desktop breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift-desktop</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="nice-col-6 nice-col-small-12 docs">
                     <p>
@@ -383,15 +459,19 @@
                     </p>
                     <p>
                         <h3>Container</h3>
-                        Containers have a maximum width and center themselves relatively to their parent element in the DOM tree.
+                        Containers have a maximum width and center themselves relatively to their parent element in the DOM tree. There are two types of containers: <code class="inline">.nice-container</code> (fixed-width) and <code class="inline">.nice-container-fluid</code> (full-width).
                     </p>
                     <p>
                         <h3>Rows</h3>
-                        Rows can be used for wrapping columns.
+                        Rows can be used for wrapping columns horizontally and should be used inside a container.
                     </p>
                     <p>
                         <h3>Columns</h3>
-                        The grid system is based on a 12-column layout, meaning that all columns in a row should add up to 12. A column can have an offset by using <code class="inline">.nice-shift-x</code>, where `x` represents the number of columns it should be shifted to the right with a maximum of 11.
+                        The grid system is based on a 12-column layout, meaning that all columns in a row should add up to 12. A column can have an offset by using <code class="inline">.nice-shift-x</code>, where `x` represents the number of columns it should be shifted to the right with a maximum of 11. Columns should be used as direct children of a row.
+                    </p>
+                    <p>
+                        <h3>Responsive grid</h3>
+                        Columns can span variable widths by targeting specific media types. Suppose you want to have a 12-column layout on a desktop-sized viewport, but have it span 6 columns on a mobile view: you would then use <code class="inline">.nice-col-12 .nice-col-mobile-6</code>. Similar classes are available for desktop and tablet view. Make sure to always specify a general column size (without specific media target).
                     </p>
                 </div>
             </div>

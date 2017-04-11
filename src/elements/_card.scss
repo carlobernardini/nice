@@ -79,6 +79,12 @@ summary {
                     background-color: $gray-light;
                     @include nice-transition(background-color 0s);
                 }
+                &.disabled {
+                    color: $color-muted;
+                    cursor: not-allowed;
+                    background-color: $gray-vlight;
+                    @include nice-text-shadow(1px 1px 0 $color-white);
+                }
             }
         }
         > {
@@ -87,7 +93,7 @@ summary {
                     @include nice-border-radius(0 0 $default-radius $default-radius);
                 }
             }
-            img {
+            img, .nice-card-image {
                 margin: 0 -1px;
                 vertical-align: middle;
             }

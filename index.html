@@ -1466,7 +1466,8 @@
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <p class="nice-alert info icon fa-lightbulb-o">
-                        Use <code class="inline">.viewport-center</code> to center your modal both vertically and horizontally with respect to the parent relative-positioned element. Additionally, you can increase the size of your centered modal dialog using <code class="inline">.tall</code> and <code class="inline">.wide</code>. The latter will only have effect when the modal is centered.
+                        Use <code class="inline">.viewport-center</code> to center your modal both vertically and horizontally with respect to browser viewport. Additionally, you can increase the size of your centered modal dialog using <code class="inline">.tall</code> and <code class="inline">.wide</code>. The latter will only take effect when the modal is centered.<br />
+                        For <strong>modal overlays</strong> (which will cover everything behind the modal under a black, transparent overlay), you can use <code class="inline">.nice-modal-overlay</code>. It is recommended to place this element directly before closing the <code class="inline">body</code> and to place the modal element inside the overlay element.
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-modal</span> <span class="variation">accent primary info good warning bad viewport-center tall wide</span>&quot;&gt;

@@ -307,10 +307,8 @@
                     </table>
                 </div>
                 <div class="nice-col-6 nice-col-small-12 text-align-justify">
-                    <p>
-                        Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.
-                    </p>
-                    <p>
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.<br />
                         The use of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_as_an_Image" target="_blank" title="MDN: SVG as an Image">SVG images</a> is highly recommended because as these can scale any size without quality loss.
                     </p>
                 </div>
@@ -477,7 +475,7 @@
             </div>
             <div class="nice-row" id="nice-flex-grid">
                 <h2 class="docs">Flexible grid</h2>
-                <p class="nice-alert warning">
+                <p class="nice-alert warning icon fa-warning">
                     <strong>Please note:</strong> Flexible grids are only supported by <a href="http://caniuse.com/#feat=flexbox" target="_blank" title="Can I use: Flexbox support">modern browsers</a>. If your application requires comprehensive cross browser compatibility, it is recommended to only use the regular <a href="#nice-grid-system">grid system</a> for your layout.
                 </p>
                 <div class="nice-col-6 nice-col-small-12">
@@ -535,7 +533,7 @@
                         In case you need the header to stick to the top of the viewport, apply the additional <code class="inline">fixed</code> class to the top level header element and <code class="inline">nice-fixed-header</code> to the body element.
                     </p>
                 </div>
-                <div class="nice-col-12">
+                <div class="nice-col-7 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
@@ -552,12 +550,12 @@
                 &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; /&gt;
             &lt;/form&gt;
             &lt;ul class=&quot;<span class="main">nice-header-menu</span> <span class="variation">menu-pills</span>&quot;&gt;
-                &lt;li class=&quot;<span class="variation">has-children</span>&quot;&gt;
+                &lt;li&gt;
                     &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-book</span>&quot;&gt;
                         Link
                     &lt;/a&gt;
                     &lt;ul&gt;
-                        &lt;li&gt;
+                        &lt;li class=&quot;<span class="main">has-children</span>&quot;&gt;
                             &lt;a href=&quot;#&quot;&gt;Sub-item&lt;/a&gt;
                             &lt;ul&gt;
                                 &lt;li&gt;
@@ -572,12 +570,12 @@
                         &lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/li&gt;
-                &lt;li&gt;
+                &lt;li class=&quot;<span class="main">highlight</span> <span class="variation">primary brand accent info good warning bad</span>&quot;&gt;
                     &lt;a href=&quot;#&quot;&gt;
                         Link
                     &lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li&gt;
+                &lt;li class=&quot;<span class="main">fixed-width</span> <span class="variation">w125 w150 w175 w200</span>&quot;&gt;
                     &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
                         Link
                     &lt;/a&gt;
@@ -596,6 +594,8 @@
                 &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- .nice-header-menu.menu-alt --&gt;
         &lt;/div&gt;&lt;!-- .nice-header-collapse --&gt;
+
+        &lt;!-- A <code class="inline">.nice-header-toggle</code> is optional: Only include it when your app is responsive and you use the off-canvas menu --&gt;
         &lt;button type=&quot;button&quot; class=&quot;<span class="main">nice-header-toggle collapsed</span>&quot;&gt;
             &lt;span class=&quot;icon-bar top-bar&quot;&gt;&lt;/span&gt;
             &lt;span class=&quot;icon-bar middle-bar&quot;&gt;&lt;/span&gt;
@@ -609,8 +609,46 @@
                         </ul>
                     </div>
                 </div>
+                <div class="nice-col-5 nice-col-mobile-12">
+                    <div class="nice-alert info icon fa-lightbulb-o">
+                        Top level menu items accept certain optional classes that are listed below
+                    </div>
+                    <div class="nice-responsive-container">
+                        <table class="nice-table condensed bordered small-body">
+                            <thead>
+                                <th>Class</th>
+                                <th>Description</th>
+                                <th>Variations</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <code class="inline">highlight</code>
+                                    </th>
+                                    <td>
+                                        Adds a bottom border highlight
+                                    </td>
+                                    <td>
+                                        <code class="inline">primary|good|bad|warning|info</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <code class="inline">fixed-width</code>
+                                    </th>
+                                    <td>
+                                        Enforces a fixed-width on the menu item (100 pixels by default)
+                                    </td>
+                                    <td>
+                                        <code class="inline">w125|w150|w175|w200</code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-                        <div class="nice-row" id="nice-page-footer">
+            <div class="nice-row" id="nice-page-footer">
                 <h2 class="docs">Page footer</h2>
                 <div class="nice-col-12">
                     <p>
@@ -987,7 +1025,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         The use of <code class="inline">span.nice-scale-label</code> for tick labels is optional
                     </p>
                     <div class="docs-code-wrapper">
@@ -1043,7 +1081,7 @@
                     <input type="range" class="nice-range-slider" min="100" max="1000" step="50" value="150" />
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
-                    <p class="nice-alert warning">
+                    <p class="nice-alert warning icon fa-warning">
                         The range slider element is based on the HTML5 range slider input type, which isn't <a href="http://caniuse.com/#feat=input-range" target="_blank" title="Can I use: Range input type">supported by all browsers</a>. Before implementation, make sure all browsers that your application should support are covered.
                     </p>
                     <code class="docs">&lt;input type=&quot;range&quot; class=&quot;<span class="main">nice-range-slider</span>&quot; min=&quot;100&quot; max=&quot;1000&quot; step=&quot;50&quot; value=&quot;150&quot; /&gt;</code>
@@ -1427,7 +1465,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         Use <code class="inline">.viewport-center</code> to center your modal both vertically and horizontally with respect to the parent relative-positioned element. Additionally, you can increase the size of your centered modal dialog using <code class="inline">.tall</code> and <code class="inline">.wide</code>. The latter will only have effect when the modal is centered.
                     </p>
                     <div class="docs-code-wrapper">
@@ -1512,7 +1550,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="nice-alert warning">
+                    <p class="nice-alert warning icon fa-warning">
                         The login dialog should be used on a page without further content, other than an (optional) header and footer. The positions itself horizontally in the center of the parent container. Any other positioning should be done either with Javascript, or by applying flex classes. The <code class="inline">.nice-logo-brand</code>, <code class="inline">.nice-login-intro-logo</code> and <code class="inline">.nice-logo-version</code> elements are optional. Make sure to clearly state the application name the user is signing in to.
                     </p>
                     <div class="docs-code-wrapper">
@@ -1952,7 +1990,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="text-align-justify">
+                    <p class="text-align-justify nice-alert warning icon fa-warning">
                         Panels are required to have a <code class="inline">.nice-panel-content</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
                     </p>
                     <div class="docs-code-wrapper">
@@ -2127,7 +2165,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         If you want your alert to stick to a certain corner of the viewport, try adding <code class="inline">.position-fixed</code> together with <code class="inline">.top|.bottom .left|right</code>.
                     </p>
                     <div class="docs-code-wrapper">
@@ -2626,7 +2664,7 @@
                     </div>
                 </div>
                 <div class="nice-col-4 nice-col-mobile-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         Nice! comes with a set of helper classes that can be applied to arbitrary elements that you want to provide with a certain style.
                     </p>
                 </div>

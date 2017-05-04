@@ -90,3 +90,8 @@ i {
         position: $value;
     }
 }
+@each $value in (pointer, move, grab, not-allowed, help, wait, text, zoom-in, zoom-out) {
+    .cursor-#{$value} {
+        cursor: $value;
+    }
+}

@@ -6,6 +6,8 @@ $product-search: "\e904";
 $product-sourcebox: "\e905";
 $product-wte: "\e906";
 $product-textkernel: "\e907";
+$product-connector: "\e908";
+$product-tkportal: "\e909";
 
 @font-face {
     font-family: 'TKProducts';
@@ -62,6 +64,16 @@ $product-textkernel: "\e907";
     &.textkernel {
         &:before {
             content: $product-textkernel;
+        }
+    }
+    &.connector {
+        &:before {
+            content: $product-connector;
+        }
+    }
+    &.tkportal {
+        &:before {
+            content: $product-tkportal;
         }
     }
 }

@@ -1,3 +1,17 @@
+.nice-modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0, .75);
+    z-index: 998;
+
+    .nice-modal {
+        z-index: 999;
+        @include nice-box-shadow(5px 3px 50px 5px rgba(0,0,0, 1));
+    }
+}
 .nice-modal {
     border: 1px solid $color-border;
     @include nice-border-radius($default-radius);
@@ -76,7 +90,7 @@
         }
     }
     &.viewport-center {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         width: 400px;

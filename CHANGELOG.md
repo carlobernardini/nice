@@ -1,5 +1,26 @@
 # Nice! version log
 
+## 1.1.5
+:date: 2017-05-04
+
+### :star2: New features
+- Implemented additional helper classes
+⋅⋅- ... for forcing `top`, `right`, `bottom` and `left` position to be `0`
+⋅⋅- ... for setting a certain cursor type when pointing to an element
+⋅⋅- ... for overflow handling
+- Added `.nice-overlay` class for full-viewport content overlay when using modals
+- Added new Textkernel product font icons for TK Portal and Connector Manager
+
+### :star: Improvements
+- Updated documentation to include use of `.nice-responsive-container`
+- Updated documentation about grid layout
+- Added disabled state for menu items
+- Added disabled state for card controls
+- Added `.nice-card-image` class
+
+### :wrench: Fixes
+- Updated `.viewport-center` class to use fixed instead of absolute positioning
+
 ## 1.1.4
 :date: 2017-04-05
 

@@ -307,10 +307,8 @@
                     </table>
                 </div>
                 <div class="nice-col-6 nice-col-small-12 text-align-justify">
-                    <p>
-                        Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.
-                    </p>
-                    <p>
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Nice! is bundeled with some frequently used assets such as the Textkernel logo. Always make sure to use these readily available assets instead of using customized ones. Assets that are bundeled with Nice! are guaranteed to be of high quality and to use accurate colors.<br />
                         The use of <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_as_an_Image" target="_blank" title="MDN: SVG as an Image">SVG images</a> is highly recommended because as these can scale any size without quality loss.
                     </p>
                 </div>
@@ -328,6 +326,8 @@
                     <i class="product-icon search" title="product-icon search"></i>
                     <i class="product-icon sourcebox" title="product-icon sourcebox"></i>
                     <i class="product-icon wte" title="product-icon wte"></i>
+                    <i class="product-icon tkportal" title="product-icon tkportal"></i>
+                    <i class="product-icon connector" title="product-icon connector"></i>
                     <i class="product-icon textkernel" title="product-icon textkernel"></i>
                     <i class="additional-icon frontify" title="additional-icon frontify"></i>
                 </div>
@@ -339,6 +339,8 @@
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">search</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">sourcebox</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">wte</span>&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">tkportal</span>&quot;&gt;&lt;/i&gt;
+&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">connector</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">additional-icon</span> <span class="variation">frontify</span>&quot;&gt;&lt;/i&gt;</code>
                 </div>
@@ -376,6 +378,82 @@
                             </div>
                         </div>
                     </div>
+                    <table class="nice-table bordered">
+                        <tbody>
+                            <tr>
+                                <th>Container</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>container</strong></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Full-width container</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>container-fluid</strong></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Row</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>row</strong></code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Default column</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (mobile breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-mobile</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (tablet breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-tablet</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (desktop breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-desktop</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Column (mobile and tablet)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>col-mobile-and-tablet</strong>-[1-12]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset (mobile breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift-mobile</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset (tablet breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift-tablet</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Offset (desktop breakpoint)</th>
+                                <td>
+                                    <code class="inline">.nice-<strong>shift-desktop</strong>-[1-11]</code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="nice-col-6 nice-col-small-12 docs">
                     <p>
@@ -383,21 +461,25 @@
                     </p>
                     <p>
                         <h3>Container</h3>
-                        Containers have a maximum width and center themselves relatively to their parent element in the DOM tree.
+                        Containers have a maximum width and center themselves relatively to their parent element in the DOM tree. There are two types of containers: <code class="inline">.nice-container</code> (fixed-width) and <code class="inline">.nice-container-fluid</code> (full-width).
                     </p>
                     <p>
                         <h3>Rows</h3>
-                        Rows can be used for wrapping columns.
+                        Rows can be used for wrapping columns horizontally and should be used inside a container.
                     </p>
                     <p>
                         <h3>Columns</h3>
-                        The grid system is based on a 12-column layout, meaning that all columns in a row should add up to 12. A column can have an offset by using <code class="inline">.nice-shift-x</code>, where `x` represents the number of columns it should be shifted to the right with a maximum of 11.
+                        The grid system is based on a 12-column layout, meaning that all columns in a row should add up to 12. A column can have an offset by using <code class="inline">.nice-shift-x</code>, where `x` represents the number of columns it should be shifted to the right with a maximum of 11. Columns should be used as direct children of a row.
+                    </p>
+                    <p>
+                        <h3>Responsive grid</h3>
+                        Columns can span variable widths by targeting specific media types. Suppose you want to have a 12-column layout on a desktop-sized viewport, but have it span 6 columns on a mobile view: you would then use <code class="inline">.nice-col-12 .nice-col-mobile-6</code>. Similar classes are available for desktop and tablet view. Make sure to always specify a general column size (without specific media target).
                     </p>
                 </div>
             </div>
             <div class="nice-row" id="nice-flex-grid">
                 <h2 class="docs">Flexible grid</h2>
-                <p class="nice-alert warning">
+                <p class="nice-alert warning icon fa-warning">
                     <strong>Please note:</strong> Flexible grids are only supported by <a href="http://caniuse.com/#feat=flexbox" target="_blank" title="Can I use: Flexbox support">modern browsers</a>. If your application requires comprehensive cross browser compatibility, it is recommended to only use the regular <a href="#nice-grid-system">grid system</a> for your layout.
                 </p>
                 <div class="nice-col-6 nice-col-small-12">
@@ -455,7 +537,7 @@
                         In case you need the header to stick to the top of the viewport, apply the additional <code class="inline">fixed</code> class to the top level header element and <code class="inline">nice-fixed-header</code> to the body element.
                     </p>
                 </div>
-                <div class="nice-col-12">
+                <div class="nice-col-7 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
@@ -472,12 +554,12 @@
                 &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; /&gt;
             &lt;/form&gt;
             &lt;ul class=&quot;<span class="main">nice-header-menu</span> <span class="variation">menu-pills</span>&quot;&gt;
-                &lt;li class=&quot;<span class="variation">has-children</span>&quot;&gt;
+                &lt;li&gt;
                     &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-book</span>&quot;&gt;
                         Link
                     &lt;/a&gt;
                     &lt;ul&gt;
-                        &lt;li&gt;
+                        &lt;li class=&quot;<span class="main">has-children</span>&quot;&gt;
                             &lt;a href=&quot;#&quot;&gt;Sub-item&lt;/a&gt;
                             &lt;ul&gt;
                                 &lt;li&gt;
@@ -492,12 +574,12 @@
                         &lt;/li&gt;
                     &lt;/ul&gt;
                 &lt;/li&gt;
-                &lt;li&gt;
+                &lt;li class=&quot;<span class="main">highlight</span> <span class="variation">primary brand accent info good warning bad</span>&quot;&gt;
                     &lt;a href=&quot;#&quot;&gt;
                         Link
                     &lt;/a&gt;
                 &lt;/li&gt;
-                &lt;li&gt;
+                &lt;li class=&quot;<span class="main">fixed-width</span> <span class="variation">w125 w150 w175 w200</span>&quot;&gt;
                     &lt;a href=&quot;#&quot; target=&quot;_blank&quot;&gt;
                         Link
                     &lt;/a&gt;
@@ -516,6 +598,8 @@
                 &lt;/li&gt;
             &lt;/ul&gt;&lt;!-- .nice-header-menu.menu-alt --&gt;
         &lt;/div&gt;&lt;!-- .nice-header-collapse --&gt;
+
+        &lt;!-- A <code class="inline">.nice-header-toggle</code> is optional: Only include it when your app is responsive and you use the off-canvas menu --&gt;
         &lt;button type=&quot;button&quot; class=&quot;<span class="main">nice-header-toggle collapsed</span>&quot;&gt;
             &lt;span class=&quot;icon-bar top-bar&quot;&gt;&lt;/span&gt;
             &lt;span class=&quot;icon-bar middle-bar&quot;&gt;&lt;/span&gt;
@@ -529,8 +613,46 @@
                         </ul>
                     </div>
                 </div>
+                <div class="nice-col-5 nice-col-mobile-12">
+                    <div class="nice-alert info icon fa-lightbulb-o">
+                        Top level menu items accept certain optional classes that are listed below
+                    </div>
+                    <div class="nice-responsive-container">
+                        <table class="nice-table condensed bordered small-body">
+                            <thead>
+                                <th>Class</th>
+                                <th>Description</th>
+                                <th>Variations</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        <code class="inline">highlight</code>
+                                    </th>
+                                    <td>
+                                        Adds a bottom border highlight
+                                    </td>
+                                    <td>
+                                        <code class="inline">primary|good|bad|warning|info</code>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <code class="inline">fixed-width</code>
+                                    </th>
+                                    <td>
+                                        Enforces a fixed-width on the menu item (100 pixels by default)
+                                    </td>
+                                    <td>
+                                        <code class="inline">w125|w150|w175|w200</code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-                        <div class="nice-row" id="nice-page-footer">
+            <div class="nice-row" id="nice-page-footer">
                 <h2 class="docs">Page footer</h2>
                 <div class="nice-col-12">
                     <p>
@@ -907,7 +1029,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         The use of <code class="inline">span.nice-scale-label</code> for tick labels is optional
                     </p>
                     <div class="docs-code-wrapper">
@@ -963,7 +1085,7 @@
                     <input type="range" class="nice-range-slider" min="100" max="1000" step="50" value="150" />
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
-                    <p class="nice-alert warning">
+                    <p class="nice-alert warning icon fa-warning">
                         The range slider element is based on the HTML5 range slider input type, which isn't <a href="http://caniuse.com/#feat=input-range" target="_blank" title="Can I use: Range input type">supported by all browsers</a>. Before implementation, make sure all browsers that your application should support are covered.
                     </p>
                     <code class="docs">&lt;input type=&quot;range&quot; class=&quot;<span class="main">nice-range-slider</span>&quot; min=&quot;100&quot; max=&quot;1000&quot; step=&quot;50&quot; value=&quot;150&quot; /&gt;</code>
@@ -1347,8 +1469,9 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="nice-alert info">
-                        Use <code class="inline">.viewport-center</code> to center your modal both vertically and horizontally with respect to the parent relative-positioned element. Additionally, you can increase the size of your centered modal dialog using <code class="inline">.tall</code> and <code class="inline">.wide</code>. The latter will only have effect when the modal is centered.
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Use <code class="inline">.viewport-center</code> to center your modal both vertically and horizontally with respect to browser viewport. Additionally, you can increase the size of your centered modal dialog using <code class="inline">.tall</code> and <code class="inline">.wide</code>. The latter will only take effect when the modal is centered.<br />
+                        For <strong>modal overlays</strong> (which will cover everything behind the modal under a black, transparent overlay), you can use <code class="inline">.nice-modal-overlay</code>. It is recommended to place this element directly before closing the <code class="inline">body</code> and to place the modal element inside the overlay element.
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-modal</span> <span class="variation">accent primary info good warning bad viewport-center tall wide</span>&quot;&gt;
@@ -1432,7 +1555,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="nice-alert warning">
+                    <p class="nice-alert warning icon fa-warning">
                         The login dialog should be used on a page without further content, other than an (optional) header and footer. The positions itself horizontally in the center of the parent container. Any other positioning should be done either with Javascript, or by applying flex classes. The <code class="inline">.nice-logo-brand</code>, <code class="inline">.nice-login-intro-logo</code> and <code class="inline">.nice-logo-version</code> elements are optional. Make sure to clearly state the application name the user is signing in to.
                     </p>
                     <div class="docs-code-wrapper">
@@ -1726,7 +1849,7 @@
                                     <a href="javascript:void(0);">Rome</a>
                                 </li>
                                 <li>
-                                    <a href="javascript:void(0);">Barcelona</a>
+                                    <a href="javascript:void(0);">Madrid</a>
                                 </li>
                             </ul>
                         </li>
@@ -1776,7 +1899,7 @@
                 &lt;a href=&quot;#&quot;&gt;Rome&lt;/a&gt;
             &lt;/li&gt;
             &lt;li&gt;
-                &lt;a href=&quot;#&quot;&gt;Barcelona&lt;/a&gt;
+                &lt;a href=&quot;#&quot;&gt;Madrid&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/li&gt;
@@ -1864,7 +1987,7 @@
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-align-center">4</th>
-                                    <td>Barcelona</td>
+                                    <td>Madrid</td>
                                     <td>Spain</td>
                                 </tr>
                             </tbody>
@@ -1872,7 +1995,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="text-align-justify">
+                    <p class="text-align-justify nice-alert warning icon fa-warning">
                         Panels are required to have a <code class="inline">.nice-panel-content</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
                     </p>
                     <div class="docs-code-wrapper">
@@ -2047,7 +2170,7 @@
                     </div>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         If you want your alert to stick to a certain corner of the viewport, try adding <code class="inline">.position-fixed</code> together with <code class="inline">.top|.bottom .left|right</code>.
                     </p>
                     <div class="docs-code-wrapper">
@@ -2164,7 +2287,7 @@
                         <div class="nice-card-title">
                             Yet another card
                         </div>
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150" />
+                        <img class="nice-card-image" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150" />
                         <div class="nice-card-content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper nulla ac quam hendrerit pharetra.
                         </div>
@@ -2172,7 +2295,7 @@
                             <a href="javascript:void(0);" class="nice-card-control icon fa-check">
                                 OK
                             </a>
-                            <a href="javascript:void(0);" class="nice-card-control">
+                            <a href="javascript:void(0);" class="nice-card-control disabled">
                                 Dunno...
                             </a>
                         </div>
@@ -2183,7 +2306,7 @@
                                 Textkernel
                             </h3>
                         </div>
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150" />
+                        <img class="nice-card-image" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150" />
                         <div class="nice-card-content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper nulla ac quam hendrerit pharetra.
                         </div>
@@ -2205,18 +2328,18 @@
             Textkernel
         &lt;/h3&gt;
     &lt;/div&gt;
-    &lt;img src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150&quot; /&gt;
+    &lt;img class=&quot;<span class="main">nice-card-image</span>&quot; src=&quot;https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150&quot; /&gt;
     &lt;div class=&quot;<span class="main">nice-card-content</span>&quot;&gt;
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper nulla ac quam hendrerit pharetra.
     &lt;/div&gt;
     &lt;div class=&quot;<span class="main">nice-card-sub</span> <span class="variation">icon fa-reply</span>&quot;&gt;
         In semper vel lectus sed finibus. Donec in erat risus. Aenean in lectus massa. Phasellus id malesuada arcu, vel ultricies enim
     &lt;/div&gt;
-    &lt;div class=&quot;<span class="main">nice-card-links</span>&quot;&gt;
-        &lt;a href=&quot;#&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-card-controls</span>&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-card-control</span>&quot;&gt;
             Dismiss
         &lt;/a&gt;
-        &lt;a href=&quot;#&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-card-control</span> <span class="variation">disabled</span>&quot;&gt;
             Read more
         &lt;/a&gt;
     &lt;/div&gt;
@@ -2367,95 +2490,105 @@
             </div>
             <div class="nice-row" id="nice-tables">
                 <h2 class="docs">Tables</h2>
-                    <table class="nice-table striped bordered hover">
-                        <thead>
-                            <tr>
-                                <th class="text-align-center">#</th>
-                                <th>City</th>
-                                <th>Region</th>
-                                <th>Country</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="info">
-                                <th scope="row" class="text-align-center">1</th>
-                                <td>Amsterdam</td>
-                                <td>Noord-Holland</td>
-                                <td>The Netherlands</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">2</th>
-                                <td class="warning">Paris</td>
-                                <td>Île-de-France</td>
-                                <td>France</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">2</th>
-                                <td>Berlin</td>
-                                <td class="bad">Brandenburg</td>
-                                <td>Germany</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">3</th>
-                                <td>Rome</td>
-                                <td>Lazio</td>
-                                <td class="good">Italy</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">4</th>
-                                <td>Barcelona</td>
-                                <td>Catalonia</td>
-                                <td>Spain</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                <div class="docs-code-wrapper">
-                    <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;City&lt;/th&gt;
-            &lt;th&gt;Region&lt;/th&gt;
-            &lt;th&gt;Country&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;
-            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
-            &lt;td&gt;Amsterdam&lt;/td&gt;
-            &lt;td&gt;Noord-Holland&lt;/td&gt;
-            &lt;td&gt;The Netherlands&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
-            &lt;td class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;Paris&lt;/td&gt;
-            &lt;td&gt;Île-de-France&lt;/td&gt;
-            &lt;td&gt;France&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
-            &lt;td&gt;Berlin&lt;/td&gt;
-            &lt;td&gt;Sachsen-Anhalt&lt;/td&gt;
-            &lt;td&gt;Germany&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
-            &lt;td&gt;Rome&lt;/td&gt;
-            &lt;td&gt;Lazio&lt;/td&gt;
-            &lt;td&gt;Italy&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
-            &lt;td&gt;Barcelona&lt;/td&gt;
-            &lt;td&gt;Catalonia&lt;/td&gt;
-            &lt;td&gt;Spain&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code>
-                    <ul class="doc-code-tools">
-                        <li><a href="#" class="toggle">Expand</a></li>
-                        <li><a href="#" class="copy">Copy</a></li>
-                    </ul>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="nice-responsive-container">
+                        <table class="nice-table striped bordered hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-align-center">#</th>
+                                    <th>City</th>
+                                    <th>Region</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="info">
+                                    <th scope="row" class="text-align-center">1</th>
+                                    <td>Amsterdam</td>
+                                    <td>Noord-Holland</td>
+                                    <td>The Netherlands</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">2</th>
+                                    <td class="warning">Paris</td>
+                                    <td>Île-de-France</td>
+                                    <td>France</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">2</th>
+                                    <td>Berlin</td>
+                                    <td class="bad">Brandenburg</td>
+                                    <td>Germany</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">3</th>
+                                    <td>Rome</td>
+                                    <td>Lazio</td>
+                                    <td class="good">Italy</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">4</th>
+                                    <td>Madrid</td>
+                                    <td>Madrid</td>
+                                    <td>Spain</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        For responsive applications, you can wrap tables inside a <code class="inline">.nice-responsive-container</code>. This will add a horizontal scrollbar to the responsive container whenever a table exceeds the viewport width.<br />
+                        Table rows and cells can be individually provided with a contextual background color.
+                    </p>
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;#&lt;/th&gt;
+                &lt;th&gt;City&lt;/th&gt;
+                &lt;th&gt;Region&lt;/th&gt;
+                &lt;th&gt;Country&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;
+                &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                &lt;td&gt;Amsterdam&lt;/td&gt;
+                &lt;td&gt;Noord-Holland&lt;/td&gt;
+                &lt;td&gt;The Netherlands&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                &lt;td class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;Paris&lt;/td&gt;
+                &lt;td&gt;Île-de-France&lt;/td&gt;
+                &lt;td&gt;France&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                &lt;td&gt;Berlin&lt;/td&gt;
+                &lt;td&gt;Sachsen-Anhalt&lt;/td&gt;
+                &lt;td&gt;Germany&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                &lt;td&gt;Rome&lt;/td&gt;
+                &lt;td&gt;Lazio&lt;/td&gt;
+                &lt;td&gt;Italy&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
+                &lt;td&gt;Madrid&lt;/td&gt;
+                &lt;td&gt;Madrid&lt;/td&gt;
+                &lt;td&gt;Spain&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="nice-row" id="nice-helper-classes">
@@ -2499,12 +2632,32 @@
                                     <td>Floats an element left or right</td>
                                 </tr>
                                 <tr>
+                                    <td><code class="inline">.overflow-[hidden|visible|scroll|auto]</code></td>
+                                    <td>Sets the type of overflow handling</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.overflow-x-[hidden|visible|scroll|auto]</code></td>
+                                    <td>Sets the type of overflow handling for the X-axis</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.overflow-y-[hidden|visible|scroll|auto]</code></td>
+                                    <td>Sets the type of overflow handling for the Y-axis</td>
+                                </tr>
+                                <tr>
                                     <td><code class="inline">.center-block</code></td>
                                     <td>Forces a static positioned element to the center of its parent container</td>
                                 </tr>
                                 <tr>
                                     <td><code class="inline">.position-[fixed|relative|absolute|static]</code></td>
-                                    <td>Sets the elements positioning</td>
+                                    <td>Sets the element positioning method</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.position-[top|right|bottom|left]</code></td>
+                                    <td>Sets the element top, right, bottom or left position to 0. All combinations are possible</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.cursor-[pointer|move|grab|not-allowed|help|wait|text|zoom-in|zoom-out]</code></td>
+                                    <td>Forces a certain type of cursor to be displayed when pointing on that element</td>
                                 </tr>
                                 <tr>
                                     <th colspan="2" class="nice-bg-white">Text styling</th>
@@ -2546,7 +2699,7 @@
                     </div>
                 </div>
                 <div class="nice-col-4 nice-col-mobile-12">
-                    <p class="nice-alert info">
+                    <p class="nice-alert info icon fa-lightbulb-o">
                         Nice! comes with a set of helper classes that can be applied to arbitrary elements that you want to provide with a certain style.
                     </p>
                 </div>

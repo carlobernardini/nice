@@ -39,6 +39,7 @@
             a, span {
                 color: $color-muted;
                 cursor: not-allowed;
+                @include nice-text-shadow(1px 1px 0 $color-white);
 
                 &:hover {
                     background-color: $gray-light;

@@ -90,8 +90,24 @@ i {
         position: $value;
     }
 }
+@each $value in (top, right, bottom, left) {
+    .position-#{$value} {
+        #{$value}: 0;
+    }
+}
 @each $value in (pointer, move, grab, not-allowed, help, wait, text, zoom-in, zoom-out) {
     .cursor-#{$value} {
         cursor: $value;
+    }
+}
+@each $value in (scroll, hidden, visible, auto) {
+    .overflow-#{$value} {
+        overflow: #{$value};
+    }
+    .overflow-x-#{$value} {
+        overflow-x: #{$value};
+    }
+    .overflow-y-#{$value} {
+        overflow-y: #{$value};
     }
 }

@@ -2538,7 +2538,8 @@
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <p class="nice-alert info icon fa-lightbulb-o">
-                        For responsive applications, you can wrap tables inside a <code class="inline">.nice-responsive-container</code>. This will add a horizontal scrollbar to the responsive container whenever a table exceeds the viewport width.
+                        For responsive applications, you can wrap tables inside a <code class="inline">.nice-responsive-container</code>. This will add a horizontal scrollbar to the responsive container whenever a table exceeds the viewport width.<br />
+                        Table rows and cells can be individually provided with a contextual background color.
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
@@ -2631,12 +2632,28 @@
                                     <td>Floats an element left or right</td>
                                 </tr>
                                 <tr>
+                                    <td><code class="inline">.overflow-[hidden|visible|scroll|auto]</code></td>
+                                    <td>Sets the type of overflow handling</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.overflow-x-[hidden|visible|scroll|auto]</code></td>
+                                    <td>Sets the type of overflow handling for the X-axis</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.overflow-y-[hidden|visible|scroll|auto]</code></td>
+                                    <td>Sets the type of overflow handling for the Y-axis</td>
+                                </tr>
+                                <tr>
                                     <td><code class="inline">.center-block</code></td>
                                     <td>Forces a static positioned element to the center of its parent container</td>
                                 </tr>
                                 <tr>
                                     <td><code class="inline">.position-[fixed|relative|absolute|static]</code></td>
-                                    <td>Sets the elements positioning</td>
+                                    <td>Sets the element positioning method</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="inline">.position-[top|right|bottom|left]</code></td>
+                                    <td>Sets the element top, right, bottom or left position to 0. All combinations are possible</td>
                                 </tr>
                                 <tr>
                                     <td><code class="inline">.cursor-[pointer|move|grab|not-allowed|help|wait|text|zoom-in|zoom-out]</code></td>

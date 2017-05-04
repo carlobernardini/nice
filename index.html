@@ -2490,95 +2490,104 @@
             </div>
             <div class="nice-row" id="nice-tables">
                 <h2 class="docs">Tables</h2>
-                    <table class="nice-table striped bordered hover">
-                        <thead>
-                            <tr>
-                                <th class="text-align-center">#</th>
-                                <th>City</th>
-                                <th>Region</th>
-                                <th>Country</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="info">
-                                <th scope="row" class="text-align-center">1</th>
-                                <td>Amsterdam</td>
-                                <td>Noord-Holland</td>
-                                <td>The Netherlands</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">2</th>
-                                <td class="warning">Paris</td>
-                                <td>Île-de-France</td>
-                                <td>France</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">2</th>
-                                <td>Berlin</td>
-                                <td class="bad">Brandenburg</td>
-                                <td>Germany</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">3</th>
-                                <td>Rome</td>
-                                <td>Lazio</td>
-                                <td class="good">Italy</td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="text-align-center">4</th>
-                                <td>Madrid</td>
-                                <td>Madrid</td>
-                                <td>Spain</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                <div class="docs-code-wrapper">
-                    <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;#&lt;/th&gt;
-            &lt;th&gt;City&lt;/th&gt;
-            &lt;th&gt;Region&lt;/th&gt;
-            &lt;th&gt;Country&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;
-            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
-            &lt;td&gt;Amsterdam&lt;/td&gt;
-            &lt;td&gt;Noord-Holland&lt;/td&gt;
-            &lt;td&gt;The Netherlands&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
-            &lt;td class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;Paris&lt;/td&gt;
-            &lt;td&gt;Île-de-France&lt;/td&gt;
-            &lt;td&gt;France&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
-            &lt;td&gt;Berlin&lt;/td&gt;
-            &lt;td&gt;Sachsen-Anhalt&lt;/td&gt;
-            &lt;td&gt;Germany&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
-            &lt;td&gt;Rome&lt;/td&gt;
-            &lt;td&gt;Lazio&lt;/td&gt;
-            &lt;td&gt;Italy&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
-            &lt;td&gt;Madrid&lt;/td&gt;
-            &lt;td&gt;Madrid&lt;/td&gt;
-            &lt;td&gt;Spain&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;</code>
-                    <ul class="doc-code-tools">
-                        <li><a href="#" class="toggle">Expand</a></li>
-                        <li><a href="#" class="copy">Copy</a></li>
-                    </ul>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="nice-responsive-container">
+                        <table class="nice-table striped bordered hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-align-center">#</th>
+                                    <th>City</th>
+                                    <th>Region</th>
+                                    <th>Country</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="info">
+                                    <th scope="row" class="text-align-center">1</th>
+                                    <td>Amsterdam</td>
+                                    <td>Noord-Holland</td>
+                                    <td>The Netherlands</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">2</th>
+                                    <td class="warning">Paris</td>
+                                    <td>Île-de-France</td>
+                                    <td>France</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">2</th>
+                                    <td>Berlin</td>
+                                    <td class="bad">Brandenburg</td>
+                                    <td>Germany</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">3</th>
+                                    <td>Rome</td>
+                                    <td>Lazio</td>
+                                    <td class="good">Italy</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="text-align-center">4</th>
+                                    <td>Madrid</td>
+                                    <td>Madrid</td>
+                                    <td>Spain</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        For responsive applications, you can wrap tables inside a <code class="inline">.nice-responsive-container</code>. This will add a horizontal scrollbar to the responsive container whenever a table exceeds the viewport width.
+                    </p>
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;table class="<span class="main">nice-table</span> <span class="variation">condensed striped bordered hover</span>"&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;#&lt;/th&gt;
+                &lt;th&gt;City&lt;/th&gt;
+                &lt;th&gt;Region&lt;/th&gt;
+                &lt;th&gt;Country&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;
+                &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                &lt;td&gt;Amsterdam&lt;/td&gt;
+                &lt;td&gt;Noord-Holland&lt;/td&gt;
+                &lt;td&gt;The Netherlands&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                &lt;td class=&quot;<span class="variation">info good warning bad</span>&quot;&gt;Paris&lt;/td&gt;
+                &lt;td&gt;Île-de-France&lt;/td&gt;
+                &lt;td&gt;France&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                &lt;td&gt;Berlin&lt;/td&gt;
+                &lt;td&gt;Sachsen-Anhalt&lt;/td&gt;
+                &lt;td&gt;Germany&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                &lt;td&gt;Rome&lt;/td&gt;
+                &lt;td&gt;Lazio&lt;/td&gt;
+                &lt;td&gt;Italy&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
+                &lt;td&gt;Madrid&lt;/td&gt;
+                &lt;td&gt;Madrid&lt;/td&gt;
+                &lt;td&gt;Spain&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="nice-row" id="nice-helper-classes">

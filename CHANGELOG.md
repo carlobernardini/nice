@@ -8,7 +8,7 @@
   - ... for forcing `top`, `right`, `bottom` and `left` position to be `0`
   - ... for setting a certain cursor type when pointing to an element
   - ... for overflow handling
-- Added `.nice-overlay` class for full-viewport content overlay when using modals
+- Added `.nice-modal-overlay` class for full-viewport content overlay when using modals
 - Added new Textkernel product font icons for TK Portal and Connector Manager
 
 ### :star: Improvements

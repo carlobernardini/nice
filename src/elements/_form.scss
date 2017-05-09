@@ -123,6 +123,7 @@ textarea {
         input.nice-form-control, 
         select.nice-form-control,
         .nice-control-group-btn {
+            margin: 0;
             display: table-cell;
         }
         *:first-child {
@@ -177,8 +178,9 @@ textarea {
     }
     .nice-input-addon {
         background-color: $gray-light;
+        text-align: center;
         display: table-cell;
-        padding: 3px 10px;
+        padding: 0 10px;
         border: 1px solid $color-border;
 
         &:first-child {

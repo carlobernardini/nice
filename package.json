@@ -10,14 +10,15 @@
   "author": "Textkernel B.V.",
   "license": "MIT",
   "dependencies": {
-    "font-awesome": "4.7.0",
+    "bourbon": "4.3.3",
+    "bourbon-neat": "1.7.2",
+    "font-awesome": "4.7.0"
+  },
+  "devDependencies": {
     "gulp": "3.9.1",
     "gulp-rename": "1.2.2",
-    "gulp-sass": "2.3.2",
-    "node-bourbon": "4.2.8",
-    "node-neat": "1.7.2"
+    "gulp-sass": "2.3.2"
   },
-  "devDependencies": {},
   "scripts": {
     "prepublish": "gulp"
   }

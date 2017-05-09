@@ -43,7 +43,7 @@
                 text-overflow: ellipsis;
                 padding: 6px 10px;
                 @include nice-font-size(14px);
-                @include nice-transition(color .1s, background-color .1s);
+                @include nice-transition(color .1s, background-color .1s, border-color .1s);
 
                 i {
                     width: 20px;
@@ -52,11 +52,16 @@
                     @extend %display-inline-block;
                 }
             }
-            a {
-                outline: none;
+            a {                
+                margin-left: -1px;
+                margin-right: -1px;
+                border-left: 1px solid $color-border;
+                border-right: 1px solid $color-border;
+
                 &:hover {
                     color: $color-white;
                     background-color: $color-brand;
+                    border-color: $color-brand;
                 }
                 &:active {
                     background-color: lighten($color-brand, 2%);
@@ -87,6 +92,7 @@
                 &:hover {
                     a, span {
                         background-color: $color-white;
+                        border-color: $color-border;
                     }
                 }
             }
@@ -119,6 +125,7 @@
                         &:hover {
                             color: $color-white;
                             background-color: map-get($color-scheme, #{$type});
+                            border-color: map-get($color-scheme, #{$type});
                         }
                         &:active {
                             background-color: lighten(map-get($color-scheme, #{$type}), 5%);

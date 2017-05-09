@@ -36,6 +36,7 @@ table {
                     padding: 8px;
                 }
                 th {
+                    background-color: $color-white;
                     @include nice-font($weight: 600);
                 }
                 td {

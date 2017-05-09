@@ -67,7 +67,7 @@ table {
         &.striped {
             tbody {
                 tr:nth-child(odd) {
-                    background-color: $gray-vlight;
+                    background-color: $gray-light;
                 }
                 tr:nth-child(even) {
                     background-color: transparent;

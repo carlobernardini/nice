@@ -106,34 +106,49 @@
                 position: absolute;
                 top: 100%;
                 left: 0;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                z-index: 9;
-                background-color: lighten($color-brand, 15%);
-                @include nice-border-radius($top-right: $default-radius, $bottom-right: $default-radius, $bottom-left: $default-radius);
+                padding-top: 3px;
+                z-index: 1;
+                text-align: left;
 
-                li {
-                    text-align: left;
+                &.shown {
+                    display: block;
+                }
+                > :first-child {
+                    @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
+                }
+                > :last-child {
+                    @include nice-border-radius($bottom-right: $default-radius, $bottom-left: $default-radius);
+                }
 
-                    a {
-                        display: block;
-                        color: $color-white;
-                        padding: 0 7px;
-                        @include nice-font($size: .9em);
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    background-color: lighten($color-brand, 15%);
+                    max-height: 260px;
+                    overflow: hidden;
+                    overflow-y: auto;
 
-                        &:hover {
-                            background-color: $color-brand;
-                        }
-                    }
-                    &:first-child {
+                    li {
                         a {
-                            @include nice-border-radius($top-right: $default-radius);
+                            display: block;
+                            color: $color-white;
+                            padding: 0 7px;
+                            @include nice-font($size: .9em);
+
+                            &:hover {
+                                background-color: $color-brand;
+                            }
                         }
-                    }
-                    &:last-child {
-                        a {
-                            @include nice-border-radius($bottom-right: $default-radius, $bottom-left: $default-radius);
+                        &:first-child {
+                            a {
+                                @include nice-border-radius($top-right: $default-radius);
+                            }
+                        }
+                        &:last-child {
+                            a {
+                                @include nice-border-radius($bottom-right: $default-radius, $bottom-left: $default-radius);
+                            }
                         }
                     }
                 }
@@ -161,12 +176,14 @@
                     }
 
                     .nice-tag-dropdown {
-                        background-color: lighten(map-get($color-scheme, #{$type}), 15%);
+                        ul {
+                            background-color: lighten(map-get($color-scheme, #{$type}), 15%);
 
-                        li {
-                            a {
-                                &:hover {
-                                    background-color: map-get($color-scheme, #{$type});
+                            li {
+                                a {
+                                    &:hover {
+                                        background-color: map-get($color-scheme, #{$type});
+                                    }
                                 }
                             }
                         }

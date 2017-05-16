@@ -9,27 +9,12 @@
     .nice-tag-input {
         float: left;
         margin: 3px 3px 0 0;
-        padding: 0 7px;
+        padding: 0;
         border: none;
         outline: none;
         color: $color-text;
         @include nice-line-height(26px);
         @include nice-font($family: $fonts-primary);
-        @include nice-border-radius($default-radius);
-        @include nice-transition(all .1s);
-        @include nice-placeholder-color {
-            @include nice-transition(color .1s);
-        }
-
-        &:focus {
-            background-color: $color-brand;
-            color: $color-white;
-            @include nice-box-shadow(inset 0 -2px 0 darken($color-brand, 20%));
-
-            @include nice-placeholder-color {
-                color: $gray-light;
-            }
-        }
     }
 
     .nice-tag {
@@ -73,6 +58,9 @@
             border: none;
             cursor: pointer;
             margin: 0;
+            vertical-align: middle;
+            height: 26px;
+            line-height: auto;
             @include nice-transition(background-color .3s);
 
             &:hover {
@@ -80,6 +68,9 @@
             }
         }
         .nice-tag-detail {
+            + .nice-tag-btn {
+                margin-left: 1px;
+            }
             &:after {
                 right: 100%;
                 top: 50%;
@@ -110,24 +101,15 @@
                 z-index: 1;
                 text-align: left;
 
-                &.shown {
-                    display: block;
-                }
-                > :first-child {
-                    @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
-                }
-                > :last-child {
-                    @include nice-border-radius($bottom-right: $default-radius, $bottom-left: $default-radius);
-                }
-
                 ul {
                     list-style: none;
                     padding: 0;
                     margin: 0;
-                    background-color: lighten($color-brand, 15%);
+                    background-color: $color-brand;
                     max-height: 260px;
                     overflow: hidden;
                     overflow-y: auto;
+                    @include nice-border-radius($default-radius);
 
                     li {
                         a {
@@ -135,9 +117,10 @@
                             color: $color-white;
                             padding: 0 7px;
                             @include nice-font($size: .9em);
+                            @include nice-transition(none);
 
                             &:hover {
-                                background-color: $color-brand;
+                                background-color: lighten($color-brand, 15%);
                             }
                         }
                         &:first-child {
@@ -174,15 +157,14 @@
                     &:after {
                         border-right-color: lighten(map-get($color-scheme, #{$type}), 15%);
                     }
-
                     .nice-tag-dropdown {
                         ul {
-                            background-color: lighten(map-get($color-scheme, #{$type}), 15%);
+                            background-color: map-get($color-scheme, #{$type});
 
                             li {
                                 a {
                                     &:hover {
-                                        background-color: map-get($color-scheme, #{$type});
+                                        background-color: lighten(map-get($color-scheme, #{$type}), 15%);
                                     }
                                 }
                             }

@@ -123,6 +123,37 @@
   }
 }
 
+@mixin nice-scrollbar(
+  $track-color: $color-white, 
+  $track-radius: $default-radius, 
+  $thumb-color: rgba($color-black, .5), 
+  $thumb-radius: $default-radius, 
+  $size-vertical: 6px, 
+  $size-horizontal: $size-vertical,
+  $zIndex: 999,
+  $appearance: none
+) {
+  &::-webkit-scrollbar {
+      z-index: $zIndex;
+      webkit-appearance: $appearance;
+
+      &:vertical {
+        width: $size-vertical;
+      }
+      &:horizontal {
+        width: $size-horizontal;
+      }
+  }
+  &::-webkit-scrollbar-thumb {
+      background-color: $thumb-color;
+      @include nice-border-radius($thumb-radius);
+  }
+  &::-webkit-scrollbar-track { 
+      background-color: $track-color; 
+      @include nice-border-radius($track-radius);
+  }
+}
+
 @mixin nice-linear-gradient ($color-from, $color-to) {
     background: -webkit-linear-gradient($color-from, $color-to);
     background: -o-linear-gradient($color-from, $color-to);

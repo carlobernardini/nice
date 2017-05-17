@@ -30,12 +30,12 @@
     }
     .nice-login-loading {
         position: absolute;
-        display: none;
         top: 100%;
         left: 0;
         width: 100%;
         height: 2px;
         overflow: hidden;
+        display: none;
         @include nice-border-radius($default-radius);
 
         &:before {
@@ -46,7 +46,7 @@
             bottom: 0;
             width: 50%;
             background-color: $color-primary;
-            @include animation(slide 3s ease-in-out);
+            @include animation(slide 3s cubic-bezier(1.000, 0.185, 1.000, 0.980));
             @include animation-iteration-count(infinite);
             @include nice-border-radius($default-radius);
         }
@@ -58,7 +58,7 @@
             bottom: 0;
             width: 50%;
             background-color: $color-info;
-            @include animation(slide 2s ease-in-out);
+            @include animation(slide 2s cubic-bezier(1.000, 0.185, 1.000, 0.980));
             @include animation-iteration-count(infinite);
             @include animation-delay(1.5s);
             @include nice-border-radius($default-radius);

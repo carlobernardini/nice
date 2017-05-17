@@ -1,6 +1,18 @@
 .nice-toggle {
     display: none;
 
+    &.disabled,
+    &[disabled] {
+        + .nice-toggle-btn {
+            cursor: not-allowed;
+        }
+        &:checked {
+            + .nice-toggle-btn {
+                color: $color-muted;
+            }
+        }
+    }
+
     + .nice-toggle-btn {
         outline: none;
         width: 48px;
@@ -33,7 +45,7 @@
         }
         &:after {
             left: 2px;
-            background: $gray-medium;
+            background-color: $gray-medium;
             @include nice-border-radius(1em);
             @include nice-transition(all .2s ease);
         }

@@ -859,10 +859,11 @@
                 <div class="nice-col-6 nice-col-small-12">
                     <div class="docs-code-wrapper">
                         <p class="nice-alert info icon fa-lightbulb-o">
-                            Toggle switches are built on top of checkboxes and labels and are functionally the same. Don't forget to provide your checkbox with an id, and refer to that id in the <code class="inline">for</code>-property of the corresponding label.
+                            Toggle switches are built on top of checkboxes and labels and are functionally the same. Don't forget to provide your checkbox with an id, and refer to that id in the <code class="inline">for</code>-property of the corresponding label.<br />
+                            When adding <code class="inline">.off-muted</code> to the toggle button, the (optional) label text will be gray when the switch is turned off.
                         </p>
                         <code class="docs">&lt;input type=&quot;checkbox&quot; class=&quot;<span class="main">nice-toggle</span>&quot; id=&quot;toggle1&quot; <span class="variation">checked</span> /&gt;
-&lt;label class=&quot;<span class="main">nice-toggle-btn</span> <span class="variation">accent primary info good warning bad</span>&quot; for=&quot;toggle1&quot;&gt;<span class="variation">Optional label text</span>&lt;/label&gt;</code>
+&lt;label class=&quot;<span class="main">nice-toggle-btn</span> <span class="variation">accent primary info good warning bad off-muted</span>&quot; for=&quot;toggle1&quot;&gt;<span class="variation">Optional label text</span>&lt;/label&gt;</code>
                     </div>
                 </div>
             </div>
@@ -1688,7 +1689,7 @@
                             </div>
                             <div class="nice-form-group">
                                 <input type="checkbox" class="nice-toggle" id="login-remember" />
-                                <label class="nice-toggle-btn" for="login-remember">
+                                <label class="nice-toggle-btn off-muted" for="login-remember">
                                     Remember me on this device
                                 </label>
                             </div>

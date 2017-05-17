@@ -862,7 +862,7 @@
                             Toggle switches are built on top of checkboxes and labels and are functionally the same. Don't forget to provide your checkbox with an id, and refer to that id in the <code class="inline">for</code>-property of the corresponding label.
                         </p>
                         <code class="docs">&lt;input type=&quot;checkbox&quot; class=&quot;<span class="main">nice-toggle</span>&quot; id=&quot;toggle1&quot; <span class="variation">checked</span> /&gt;
-&lt;label class=&quot;<span class="main">nice-toggle-btn</span> <span class="variation">accent primary info good warning bad</span>&quot; for=&quot;toggle1&quot;&gt;&lt;/label&gt;</code>
+&lt;label class=&quot;<span class="main">nice-toggle-btn</span> <span class="variation">accent primary info good warning bad</span>&quot; for=&quot;toggle1&quot;&gt;<span class="variation">Optional label text</span>&lt;/label&gt;</code>
                     </div>
                 </div>
             </div>
@@ -1685,6 +1685,12 @@
                             <div class="nice-form-group">
                                 <label for="nice-login-password">Password</label>
                                 <input type="password" placeholder="Password..." class="nice-form-control" id="nice-login-password" />
+                            </div>
+                            <div class="nice-form-group">
+                                <input type="checkbox" class="nice-toggle" id="login-remember" />
+                                <label class="nice-toggle-btn" for="login-remember">
+                                    Remember me on this device
+                                </label>
                             </div>
                         </div>
                         <div class="nice-login-footer">

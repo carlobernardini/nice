@@ -1,0 +1,59 @@
+.nice-toggle {
+    display: none;
+
+    + .nice-toggle-btn {
+        outline: none;
+        width: 48px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+        padding: 2px;
+        background-color: $color-white;
+        border: 2px solid $gray-medium;
+        @include nice-user-select(none);
+        @include nice-border-radius(2em);
+        @include nice-transition(all .2s ease);
+        @extend %display-inline-block;
+
+        &:after,
+        &:before {
+            position: relative;
+            display: block;
+            content: '';
+            width: 50%;
+            height: 100%;
+        }
+        &:after {
+            left: 0;
+            background: $gray-medium;
+            @include nice-border-radius(1em);
+            @include nice-transition(all .2s ease);
+        }
+        &:before {
+            display: none;
+        }
+    }
+    &:checked {
+        + .nice-toggle-btn {
+            border: 2px solid $color-brand;
+
+            &:after {
+                left: 50%;
+                background-color: $color-brand;
+            }
+        }
+    }
+    @each $type in (accent, primary, info, good, warning, bad) {
+        &.#{$type} {
+            &:checked {
+                + .nice-toggle-btn {
+                    border-color: map-get($color-scheme, #{$type});
+
+                    &:after {
+                        background-color: map-get($color-scheme, #{$type});
+                    }
+                }
+            }
+        }
+    }
+}

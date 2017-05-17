@@ -1673,38 +1673,43 @@
                             <div class="nice-login-intro-content">
                                 Welcome to <strong>Textkernel</strong>. Please log in using your credentials to access your account.
                             </div>
-                        </div>
-                        <div class="nice-login-content">
-                            <div class="nice-form-group">
-                                <label for="nice-login-username">Username</label>
-                                <input type="email" placeholder="Username..." class="nice-form-control" id="nice-login-username" />
-                            </div>
-                            <div class="nice-form-group">
-                                <label for="nice-login-account">Account</label>
-                                <input type="text" placeholder="Account name..." class="nice-form-control" id="nice-login-account" />
-                            </div>
-                            <div class="nice-form-group">
-                                <label for="nice-login-password">Password</label>
-                                <input type="password" placeholder="Password..." class="nice-form-control" id="nice-login-password" />
-                            </div>
-                            <div class="nice-form-group">
-                                <input type="checkbox" class="nice-toggle" id="login-remember" />
-                                <label class="nice-toggle-btn off-muted" for="login-remember">
-                                    Remember me on this device
-                                </label>
+                            <div class="nice-login-loading">
+                                <div class="nice-login-loading-bar"></div>
                             </div>
                         </div>
-                        <div class="nice-login-footer">
-                            <a href="javascript:void(0);" class="nice-btn link icon fa-question">Lost your credentials?</a>
-                            <div class="nice-btn-group pull-right">
-                                <button type="button" class="nice-btn">
-                                    Cancel
-                                </button>
-                                <button type="submit" class="nice-btn primary icon fa-sign-in text-bold">
-                                    Sign in
-                                </button>
+                        <form id="nice-login-example">
+                            <div class="nice-login-content">
+                                <div class="nice-form-group">
+                                    <label for="nice-login-username">Username</label>
+                                    <input type="email" placeholder="Username..." class="nice-form-control" id="nice-login-username" />
+                                </div>
+                                <div class="nice-form-group">
+                                    <label for="nice-login-account">Account</label>
+                                    <input type="text" placeholder="Account name..." class="nice-form-control" id="nice-login-account" />
+                                </div>
+                                <div class="nice-form-group">
+                                    <label for="nice-login-password">Password</label>
+                                    <input type="password" placeholder="Password..." class="nice-form-control" id="nice-login-password" />
+                                </div>
+                                <div class="nice-form-group">
+                                    <input type="checkbox" class="nice-toggle" id="login-remember" />
+                                    <label class="nice-toggle-btn off-muted" for="login-remember">
+                                        Remember me on this device
+                                    </label>
+                                </div>
                             </div>
-                        </div>
+                            <div class="nice-login-footer">
+                                <a href="javascript:void(0);" class="nice-btn link icon fa-question">Lost your credentials?</a>
+                                <div class="nice-btn-group pull-right">
+                                    <button type="button" class="nice-btn nice-example-cancel">
+                                        Cancel
+                                    </button>
+                                    <button type="submit" class="nice-btn primary icon fa-sign-in text-bold">
+                                        Sign in
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
                         <div class="nice-login-version">
                             Textkernel v1.2.3
                             <span class="text-brand pull-right">
@@ -1728,6 +1733,9 @@
         &lt;/div&gt;
         &lt;div class=&quot;<span class="main">nice-login-intro-content</span>&quot;&gt;
             Welcome to &lt;strong&gt;Textkernel&lt;/strong&gt;. Please log in using your credentials to access your account.
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="main">nice-login-loading</span> <span class="variation">shown</span>&quot;&gt;
+            &lt;div class=&quot;<span class="main">nice-login-loading-bar</span>&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="main">nice-login-content</span>&quot;&gt;

@@ -32,6 +32,15 @@ $(function(){
             }
         }
     });
+    $('#nice-login-example')
+        .on('submit', function(e){
+            e.preventDefault();
+            $(this).closest('.nice-login').find('.nice-login-loading').addClass('shown');
+        })
+        .on('click', '.nice-example-cancel', function(e){
+            e.preventDefault();
+            $(this).closest('.nice-login').find('.nice-login-loading').removeClass('shown');
+        });
     $('.nice-header .nice-header-toggle').bind('click', function(e){
         var toggle = $(this),
             menu = $('.nice-header-collapse'),

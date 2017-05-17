@@ -28,7 +28,33 @@
             }
         }
     }
+    .nice-login-loading {
+        position: absolute;
+        display: none;
+        top: 100%;
+        margin-top: 2px;
+        left: 2px;
+        width: calc(100% - 4px);
+        height: 2px;
+        overflow: hidden;
+
+        .nice-login-loading-bar {
+            position: absolute;
+            left: -50%;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-color: $color-primary;
+            @include animation(slide 2s ease-in-out);
+            @include animation-iteration-count(infinite);
+            @include nice-border-radius(3px);
+        }
+        &.shown {
+            display: block;
+        }
+    }
     .nice-login-intro {
+        position: relative;
         background-color: lighten($color-info, 35%);
         color: darken($color-info, 20%);
         display: table;

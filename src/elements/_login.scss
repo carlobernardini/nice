@@ -44,6 +44,8 @@
             color: $color-white;
             padding: 10px 15px;
             vertical-align: middle;
+            width: 1%;
+            white-space: nowrap;
             @include nice-font-size(32px);
             @include nice-border-radius($top-left: $default-radius * 2);
 

@@ -28,12 +28,12 @@
 
         .nice-tag-label,
         .nice-tag-btn,
-        .nice-tag-detail {
+        .nice-tag-badge {
             @include nice-line-height(26px);
             @include nice-font($size: .9em);
         }
         .nice-tag-btn,
-        .nice-tag-detail {
+        .nice-tag-badge {
             position: relative;
             background-color: lighten($color-brand, 15%);
             text-align: center;
@@ -67,7 +67,7 @@
                 background-color: lighten($color-brand, 20%);
             }
         }
-        .nice-tag-detail {
+        .nice-tag-badge {
             + .nice-tag-btn {
                 margin-left: 1px;
             }
@@ -171,7 +171,7 @@
                         background-color: lighten(map-get($color-scheme, #{$type}), 20%);
                     }
                 }
-                .nice-tag-detail {
+                .nice-tag-badge {
                     background-color: lighten(map-get($color-scheme, #{$type}), 15%);
                     @include nice-box-shadow(inset 0 -2px 0 darken(map-get($color-scheme, #{$type}), 20%));
 

@@ -32,22 +32,36 @@
         position: absolute;
         display: none;
         top: 100%;
-        margin-top: 2px;
-        left: 2px;
-        width: calc(100% - 4px);
+        left: 0;
+        width: 100%;
         height: 2px;
         overflow: hidden;
+        @include nice-border-radius($default-radius);
 
-        .nice-login-loading-bar {
+        &:before {
+            content: '';
             position: absolute;
             left: -50%;
             top: 0;
             bottom: 0;
             width: 50%;
             background-color: $color-primary;
+            @include animation(slide 3s ease-in-out);
+            @include animation-iteration-count(infinite);
+            @include nice-border-radius($default-radius);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-color: $color-info;
             @include animation(slide 2s ease-in-out);
             @include animation-iteration-count(infinite);
-            @include nice-border-radius(3px);
+            @include animation-delay(1.5s);
+            @include nice-border-radius($default-radius);
         }
         &.shown {
             display: block;

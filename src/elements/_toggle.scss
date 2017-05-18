@@ -27,10 +27,10 @@
         text-indent: 50px;
         white-space: nowrap;
         color: $color-text;
-        @include nice-user-select(none);
         @include nice-border-radius(2em);
         @include nice-transition(all .2s ease);
         @include nice-font($size: .9em, $weight: 400);
+        @extend %disable-user-select;
         @extend %display-inline-block;
 
         &:after,

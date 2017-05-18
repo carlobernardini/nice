@@ -15,6 +15,13 @@
             right: 0;
         }
     }
+    &.shown {
+        @extend %display-inline-block;
+
+        .dropdown-menu {
+            display: block;
+        }
+    }
 
     .dropdown-menu {
         display: none;
@@ -36,7 +43,17 @@
         }
 
         li {
-            a, span {
+            input[type="checkbox"],
+            input[type="radio"] {
+                position: relative;
+                top: -2px;
+                outline: none;
+                padding: 0;
+                vertical-align: middle;
+                margin: 0 5px 0 0;
+                @extend %border-box-sizing;
+            }
+            a, span, label {
                 color: $color-black;
                 display: block;
                 white-space: nowrap;
@@ -44,6 +61,7 @@
                 padding: 6px 10px;
                 @include nice-font-size(14px);
                 @include nice-transition(color .1s, background-color .1s, border-color .1s);
+                @extend %disable-user-select;
 
                 i {
                     width: 20px;
@@ -52,7 +70,7 @@
                     @extend %display-inline-block;
                 }
             }
-            a {                
+            a, label {                
                 margin-left: -1px;
                 margin-right: -1px;
                 border-left: 1px solid $color-border;
@@ -85,12 +103,17 @@
                 overflow: hidden;
             }
             &.disabled {
-                a, span {
+                a, span, label {
                     color: $color-muted;
                     cursor: not-allowed;
+
+                    input[type="checkbox"],
+                    input[type="radio"] {
+                        cursor: not-allowed;
+                    }
                 }
                 &:hover {
-                    a, span {
+                    a, span, label {
                         background-color: $color-white;
                         border-color: $color-border;
                     }

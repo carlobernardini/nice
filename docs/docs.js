@@ -16,7 +16,7 @@ var ClipboardHelper = {
 $(function(){
     $(document).on('click', function(e){
         if (!$(e.target).closest('.dropdown-menu').length) {
-            $('.nice-dropdown .dropdown-menu').removeClass('shown');
+            $('.nice-dropdown').removeClass('shown');
         }
     });
     $(window).on('scroll', function(){
@@ -60,10 +60,9 @@ $(function(){
     });
     $('.nice-dropdown').on('click', '.nice-btn', function(){
         var btn = $(this),
-            dd = btn.closest('.nice-dropdown'),
-            menu = dd.children('.dropdown-menu');
-        var isShown = menu.is('.shown');
-        menu.toggleClass('shown', !isShown);
+            dd = btn.closest('.nice-dropdown');
+        var isShown = dd.is('.shown');
+        dd.toggleClass('shown', !isShown);
         return false;
     });
     $('.docs-code-wrapper').each(function(){

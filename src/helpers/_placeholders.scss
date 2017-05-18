@@ -10,11 +10,7 @@
 }
 
 %disable-user-select {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-         -o-user-select: none;
-            user-select: none;
+    @include nice-user-select(none);
 }
 
 %display-inline-block {

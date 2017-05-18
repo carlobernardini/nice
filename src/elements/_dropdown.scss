@@ -51,7 +51,7 @@
                 padding: 0;
                 vertical-align: middle;
                 margin: 0 5px 0 0;
-                @include nice-box-sizing(border-box);
+                @extend %border-box-sizing;
             }
             a, span, label {
                 color: $color-black;

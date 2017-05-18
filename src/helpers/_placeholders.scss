@@ -24,6 +24,10 @@
     zoom: 1;
 }
 
+%border-box-sizing {
+    @include nice-box-sizing(border-box);
+}
+
 %panel {
     padding: 0;
     margin: 0 0 15px 0;

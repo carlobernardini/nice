@@ -12,7 +12,7 @@ nav {
 
     li {
         display: inline;
-        @include nice-box-sizing(border-box);
+        @extend %border-box-sizing;
 
         span, a {
             margin: 0 1px;

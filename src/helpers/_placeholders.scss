@@ -10,11 +10,7 @@
 }
 
 %disable-user-select {
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-         -o-user-select: none;
-            user-select: none;
+    @include nice-user-select(none);
 }
 
 %display-inline-block {
@@ -22,6 +18,10 @@
     display: inline-block;
     *display: inline-block;
     zoom: 1;
+}
+
+%border-box-sizing {
+    @include nice-box-sizing(border-box);
 }
 
 %panel {

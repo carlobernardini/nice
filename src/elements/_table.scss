@@ -14,7 +14,7 @@ table {
         width: 100%;
         max-width: 100%;
         margin-bottom: 20px;
-        @include nice-box-sizing(border-box);
+        @extend %border-box-sizing;
 
         &:last-child {
             margin-bottom: 0;
@@ -36,6 +36,7 @@ table {
                     padding: 8px;
                 }
                 th {
+                    background-color: $color-white;
                     @include nice-font($weight: 600);
                 }
                 td {
@@ -66,7 +67,7 @@ table {
         &.striped {
             tbody {
                 tr:nth-child(odd) {
-                    background-color: $gray-vlight;
+                    background-color: $gray-light;
                 }
                 tr:nth-child(even) {
                     background-color: transparent;

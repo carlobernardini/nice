@@ -15,9 +15,9 @@ $select-caret-base64: 'data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1
     display: block;
     background-color: $color-white;
     @include nice-border-radius($default-radius);
-    @include nice-box-sizing(border-box);
     @include nice-transition(box-shadow .1s, border .1s, background-color .1s);
     @include nice-font-size(14px);
+    @extend %border-box-sizing;
 
     &:focus {
         border: 1px solid $color-brand;
@@ -123,6 +123,7 @@ textarea {
         input.nice-form-control, 
         select.nice-form-control,
         .nice-control-group-btn {
+            margin: 0;
             display: table-cell;
         }
         *:first-child {
@@ -177,8 +178,9 @@ textarea {
     }
     .nice-input-addon {
         background-color: $gray-light;
+        text-align: center;
         display: table-cell;
-        padding: 3px 10px;
+        padding: 0 10px;
         border: 1px solid $color-border;
 
         &:first-child {
@@ -216,7 +218,7 @@ textarea {
         vertical-align: middle;
         position: relative;
         bottom: 1px;
-        @include nice-box-sizing(border-box);
+        @extend %border-box-sizing;
     }
     input[type="radio"] {
         bottom: 2px;

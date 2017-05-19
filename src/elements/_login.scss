@@ -28,7 +28,47 @@
             }
         }
     }
+    .nice-login-loading {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        overflow: hidden;
+        display: none;
+        @include nice-border-radius($default-radius);
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-color: $color-primary;
+            @include animation(slide 3s cubic-bezier(1.000, 0.185, 1.000, 0.980));
+            @include animation-iteration-count(infinite);
+            @include nice-border-radius($default-radius);
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            left: -50%;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            background-color: $color-info;
+            @include animation(slide 2s cubic-bezier(1.000, 0.185, 1.000, 0.980));
+            @include animation-iteration-count(infinite);
+            @include animation-delay(1.5s);
+            @include nice-border-radius($default-radius);
+        }
+        &.shown {
+            display: block;
+        }
+    }
     .nice-login-intro {
+        position: relative;
         background-color: lighten($color-info, 35%);
         color: darken($color-info, 20%);
         display: table;
@@ -44,6 +84,8 @@
             color: $color-white;
             padding: 10px 15px;
             vertical-align: middle;
+            width: 1%;
+            white-space: nowrap;
             @include nice-font-size(32px);
             @include nice-border-radius($top-left: $default-radius * 2);
 

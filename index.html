@@ -83,57 +83,69 @@
                                 <li class="has-children">
                                     <span>UI Elements</span>
                                     <ul>
-                                        <li>
-                                            <a href="#nice-buttons">Buttons</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-dropdowns">Dropdowns</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-scale">Scale selection</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-range-slider">Range slider</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-tabs">Tabs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-modal-dialogs">Modal dialogs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-login-dialog">Login dialog</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-breadcrumb">Breadcrumbs</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-pagination">Pagination</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-menus">Menus</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-panels">Panels</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-stacked-lists">Stacked lists</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-alerts">Alerts</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-tooltips-popovers">Tooltips &amp; popovers</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-cards">Cards</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-progress-loading">Progress and loading</a>
-                                        </li>
-                                        <li>
-                                            <a href="#nice-code-blocks">Code blocks</a>
-                                        </li>
+                                        <div class="multi-column col-2">
+                                            <ul>
+                                                <li>
+                                                    <a href="#nice-buttons">Buttons</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-toggle">Toggle switches</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-dropdowns">Dropdowns</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-scale">Scale selection</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-range-slider">Range slider</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-tags">Tags</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-tabs">Tabs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-modal-dialogs">Modal dialogs</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-login-dialog">Login dialog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-breadcrumb">Breadcrumbs</a>
+                                                </li>
+                                            </ul>
+                                            <ul>
+                                                <li>
+                                                    <a href="#nice-pagination">Pagination</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-menus">Menus</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-panels">Panels</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-stacked-lists">Stacked lists</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-alerts">Alerts</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-tooltips-popovers">Tooltips &amp; popovers</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-cards">Cards</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-progress-loading">Progress and loading</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#nice-code-blocks">Code blocks</a>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </ul>
                                 </li>
                                 <li>
@@ -834,6 +846,33 @@
                     </div>
                 </div>
             </div>
+            <div class="nice-row" id="nice-toggle">
+                <h2 class="docs">Toggle switches</h2>
+                <div class="nice-col-6 nice-col-small-12 nice-example">
+                    <input type="checkbox" class="nice-toggle" id="nice-toggle-example1" checked />
+                    <label class="nice-toggle-btn" for="nice-toggle-example1"></label>
+                    <input type="checkbox" class="nice-toggle primary" id="nice-toggle-example2" checked />
+                    <label class="nice-toggle-btn" for="nice-toggle-example2"></label>
+                    <input type="checkbox" class="nice-toggle info" id="nice-toggle-example3" checked />
+                    <label class="nice-toggle-btn" for="nice-toggle-example3"></label>
+                    <input type="checkbox" class="nice-toggle good" id="nice-toggle-example4" checked />
+                    <label class="nice-toggle-btn" for="nice-toggle-example4"></label>
+                    <input type="checkbox" class="nice-toggle warning" id="nice-toggle-example5" checked disabled />
+                    <label class="nice-toggle-btn" for="nice-toggle-example5"></label>
+                    <input type="checkbox" class="nice-toggle bad" id="nice-toggle-example6" />
+                    <label class="nice-toggle-btn off-muted" for="nice-toggle-example6"></label>
+                </div>
+                <div class="nice-col-6 nice-col-small-12">
+                    <div class="docs-code-wrapper">
+                        <p class="nice-alert info icon fa-lightbulb-o">
+                            Toggle switches are built on top of checkboxes and labels and are functionally the same. Don't forget to provide your checkbox with an id, and refer to that id in the <code class="inline">for</code>-property of the corresponding label.<br />
+                            When adding <code class="inline">.off-muted</code> to the toggle button, the (optional) label text will be gray when the switch is turned off.
+                        </p>
+                        <code class="docs">&lt;input type=&quot;checkbox&quot; class=&quot;<span class="main">nice-toggle</span>&quot; id=&quot;toggle1&quot; <span class="variation">checked disabled</span> /&gt;
+&lt;label class=&quot;<span class="main">nice-toggle-btn</span> <span class="variation">accent primary info good warning bad off-muted</span>&quot; for=&quot;toggle1&quot;&gt;<span class="variation">Optional label text</span>&lt;/label&gt;</code>
+                    </div>
+                </div>
+            </div>
             <div class="nice-row" id="nice-dropdowns">
                 <h2 class="docs">Dropdowns</h2>
                 <div class="nice-col-6 nice-col-small-12 nice-example">
@@ -878,6 +917,88 @@
                                 <a href="javascript:void(0);">
                                     Disabled item
                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nice-dropdown" style="margin-bottom: 15px;">
+                        <button class="nice-btn">
+                            Multiselect Checkbox
+                            <i class="icon fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="description">
+                                <span>This multiselect uses checkboxes</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" />
+                                    Item 1
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" />
+                                    Item 2
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" />
+                                    Item 3
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="checkbox" />
+                                    Item 4
+                                </label>
+                            </li>
+                            <li class="disabled">
+                                <label>
+                                    <input type="checkbox" disabled />
+                                    Disabled item
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nice-dropdown" style="margin-bottom: 15px;">
+                        <button class="nice-btn">
+                            Multiselect Radio
+                            <i class="icon fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="description">
+                                <span>This multiselect uses radios</span>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="nice-ms-1" value="a" />
+                                    Item 1
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="nice-ms-1" value="b" />
+                                    Item 2
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="nice-ms-1" value="c" />
+                                    Item 3
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="nice-ms-1" value="d" />
+                                    Item 4
+                                </label>
+                            </li>
+                            <li class="disabled">
+                                <label>
+                                    <input type="radio" name="nice-ms-1" value="e" disabled />
+                                    Disabled item
+                                </label>
                             </li>
                         </ul>
                     </div>
@@ -1030,7 +1151,7 @@
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
                     <p class="nice-alert info icon fa-lightbulb-o">
-                        The use of <code class="inline">span.nice-scale-label</code> for tick labels is optional
+                        The use of <code class="inline">span.nice-scale-label</code> for tick labels is optional.
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-scale</span>&quot;&gt;
@@ -1320,6 +1441,126 @@
                     </div>
                 </div>
             </div>
+            <div class="nice-row" id="nice-tags">
+                <h2 class="docs">Tags</h2>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="nice-tags-container">
+                        <div class="nice-tag">
+                            <span class="nice-tag-label">
+                                The Netherlands
+                            </span>
+                            <button class="nice-tag-btn">
+                                <i class="icon fa-trash-o"></i>
+                            </button>
+                        </div>
+                        <div class="nice-tag good">
+                            <span class="nice-tag-label">
+                                Germany
+                            </span>
+                            <span class="nice-tag-badge cursor-help">
+                                16
+                                <div class="nice-tag-dropdown hover">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Baden-Württemberg</a></li>
+                                        <li><a href="javascript:void(0);">Bavaria</a></li>
+                                        <li><a href="javascript:void(0);">Berlin</a></li>
+                                        <li><a href="javascript:void(0);">Brandenburg</a></li>
+                                        <li><a href="javascript:void(0);">Bremen</a></li>
+                                        <li><a href="javascript:void(0);">Hamburg</a></li>
+                                        <li><a href="javascript:void(0);">Hessen</a></li>
+                                        <li><a href="javascript:void(0);">Niedersachsen</a></li>
+                                        <li><a href="javascript:void(0);">Mecklenburg-Vorpommern</a></li>
+                                        <li><a href="javascript:void(0);">Nordrhein-Westfalen</a></li>
+                                        <li><a href="javascript:void(0);">Rheinland-Pfalz</a></li>
+                                        <li><a href="javascript:void(0);">Saarland</a></li>
+                                        <li><a href="javascript:void(0);">Sachsen</a></li>
+                                        <li><a href="javascript:void(0);">Sachsen-Anhalt</a></li>
+                                        <li><a href="javascript:void(0);">Schleswig-Holstein</a></li>
+                                        <li><a href="javascript:void(0);">Thüringen</a></li>
+                                    </ul>
+                                </div>
+                            </span>
+                            <button class="nice-tag-btn">
+                                <i class="icon fa-trash-o"></i>
+                            </button>
+                        </div>
+                        <div class="nice-tag primary">
+                            <span class="nice-tag-label">
+                                Italy
+                            </span>
+                            <span class="nice-tag-badge cursor-help">
+                                20
+                                <div class="nice-tag-dropdown hover">
+                                    <ul>
+                                        <li><a href="javascript:void(0);">Abruzzo</a></li>
+                                        <li><a href="javascript:void(0);">Valle d'Aosta</a></li>
+                                        <li><a href="javascript:void(0);">Apulia</a></li>
+                                        <li><a href="javascript:void(0);">Basilicata</a></li>
+                                        <li><a href="javascript:void(0);">Calabria</a></li>
+                                        <li><a href="javascript:void(0);">Campania</a></li>
+                                        <li><a href="javascript:void(0);">Emilia-Romagna</a></li>
+                                        <li><a href="javascript:void(0);">Friuli-Venezia Giulia</a></li>
+                                        <li><a href="javascript:void(0);">Lazio</a></li>
+                                        <li><a href="javascript:void(0);">Liguria</a></li>
+                                        <li><a href="javascript:void(0);">Lombardia</a></li>
+                                        <li><a href="javascript:void(0);">Molise</a></li>
+                                        <li><a href="javascript:void(0);">Piemonte</a></li>
+                                        <li><a href="javascript:void(0);">Sardegna</a></li>
+                                        <li><a href="javascript:void(0);">Sicilia</a></li>
+                                        <li><a href="javascript:void(0);">Le Marche</a></li>
+                                        <li><a href="javascript:void(0);">Trentino-Alto Adige</a></li>
+                                        <li><a href="javascript:void(0);">Toscana</a></li>
+                                        <li><a href="javascript:void(0);">Umbria</a></li>
+                                        <li><a href="javascript:void(0);">Veneto</a></li>
+                                    </ul>
+                                </div>
+                            </span>
+                        </div>
+                        <div class="nice-tag bad">
+                            <span class="nice-tag-label">
+                                Spain
+                            </span>
+                        </div>
+                        <input type="text" placeholder="Add new tag..." class="nice-tag-input" />
+                    </div>
+                </div>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;div class=&quot;<span class="main">nice-tags-container</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-tag</span> <span class="variation">primary accent muted info good warning bad</span>&quot;&gt;
+        &lt;span class=&quot;<span class="main">nice-tag-label</span>&quot;&gt;
+            Germany
+        &lt;/span&gt;
+        &lt;span class=&quot;<span class="main">nice-tag-badge</span>&quot;&gt;
+            16
+            &lt;div class=&quot;<span class="main">nice-tag-dropdown</span> <span class="variation">hover</span>&quot;&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            Item 1
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a href=&quot;#&quot;&gt;
+                            Item 2
+                        &lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/span&gt;
+        &lt;button class=&quot;<span class="main">nice-tag-btn</span>&quot;&gt;
+            &lt;i class=&quot;icon fa-trash-o&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;input type=&quot;text&quot; class=&quot;<span class="main">nice-tag-input</span>&quot; placeholder=&quot;Add new tag...&quot; /&gt;
+&lt;/div&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="nice-row" id="nice-tabs">
                 <h2 class="docs">Tabs</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
@@ -1520,32 +1761,41 @@
                             <div class="nice-login-intro-content">
                                 Welcome to <strong>Textkernel</strong>. Please log in using your credentials to access your account.
                             </div>
+                            <div class="nice-login-loading"></div>
                         </div>
-                        <div class="nice-login-content">
-                            <div class="nice-form-group">
-                                <label for="nice-login-username">Username</label>
-                                <input type="email" placeholder="Username..." class="nice-form-control" id="nice-login-username" />
+                        <form id="nice-login-example">
+                            <div class="nice-login-content">
+                                <div class="nice-form-group">
+                                    <label for="nice-login-username">Username</label>
+                                    <input type="email" placeholder="Username..." class="nice-form-control" id="nice-login-username" />
+                                </div>
+                                <div class="nice-form-group">
+                                    <label for="nice-login-account">Account</label>
+                                    <input type="text" placeholder="Account name..." class="nice-form-control" id="nice-login-account" />
+                                </div>
+                                <div class="nice-form-group">
+                                    <label for="nice-login-password">Password</label>
+                                    <input type="password" placeholder="Password..." class="nice-form-control" id="nice-login-password" />
+                                </div>
+                                <div class="nice-form-group">
+                                    <input type="checkbox" class="nice-toggle" id="login-remember" />
+                                    <label class="nice-toggle-btn off-muted" for="login-remember">
+                                        Remember me on this device
+                                    </label>
+                                </div>
                             </div>
-                            <div class="nice-form-group">
-                                <label for="nice-login-account">Account</label>
-                                <input type="text" placeholder="Account name..." class="nice-form-control" id="nice-login-account" />
+                            <div class="nice-login-footer">
+                                <a href="javascript:void(0);" class="nice-btn link icon fa-question">Lost your credentials?</a>
+                                <div class="nice-btn-group pull-right">
+                                    <button type="button" class="nice-btn nice-example-cancel">
+                                        Cancel
+                                    </button>
+                                    <button type="submit" class="nice-btn primary icon fa-sign-in text-bold">
+                                        Sign in
+                                    </button>
+                                </div>
                             </div>
-                            <div class="nice-form-group">
-                                <label for="nice-login-password">Password</label>
-                                <input type="password" placeholder="Password..." class="nice-form-control" id="nice-login-password" />
-                            </div>
-                        </div>
-                        <div class="nice-login-footer">
-                            <a href="javascript:void(0);" class="nice-btn link icon fa-question">Lost your credentials?</a>
-                            <div class="nice-btn-group pull-right">
-                                <button type="button" class="nice-btn">
-                                    Cancel
-                                </button>
-                                <button type="submit" class="nice-btn primary icon fa-sign-in text-bold">
-                                    Sign in
-                                </button>
-                            </div>
-                        </div>
+                        </form>
                         <div class="nice-login-version">
                             Textkernel v1.2.3
                             <span class="text-brand pull-right">
@@ -1557,6 +1807,9 @@
                 <div class="nice-col-6 nice-col-mobile-12">
                     <p class="nice-alert warning icon fa-warning">
                         The login dialog should be used on a page without further content, other than an (optional) header and footer. The positions itself horizontally in the center of the parent container. Any other positioning should be done either with Javascript, or by applying flex classes. The <code class="inline">.nice-logo-brand</code>, <code class="inline">.nice-login-intro-logo</code> and <code class="inline">.nice-logo-version</code> elements are optional. Make sure to clearly state the application name the user is signing in to.
+                    </p>
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Try clicking 'Sign in' to see the loading animation
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-login</span>&quot;&gt;
@@ -1570,6 +1823,7 @@
         &lt;div class=&quot;<span class="main">nice-login-intro-content</span>&quot;&gt;
             Welcome to &lt;strong&gt;Textkernel&lt;/strong&gt;. Please log in using your credentials to access your account.
         &lt;/div&gt;
+        &lt;div class=&quot;<span class="main">nice-login-loading</span> <span class="variation">shown</span>&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="main">nice-login-content</span>&quot;&gt;
         &lt;div class=&quot;nice-form-group&quot;&gt;
@@ -1583,6 +1837,12 @@
         &lt;div class=&quot;nice-form-group&quot;&gt;
             &lt;label for=&quot;nice-login-password&quot;&gt;Password&lt;/label&gt;
             &lt;input type=&quot;password&quot; placeholder=&quot;Password...&quot; class=&quot;nice-form-control&quot; id=&quot;nice-login-password&quot; /&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nice-form-group&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; class=&quot;nice-toggle&quot; id=&quot;login-remember&quot; /&gt;
+            &lt;label class=&quot;nice-toggle-btn&quot; for=&quot;login-remember&quot;&gt;
+                Remember me on this device
+            &lt;/label&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="main">nice-login-footer</span>&quot;&gt;
@@ -1615,34 +1875,34 @@
                 <div class="nice-col-6 nice-col-mobile-12">
                     <ol class="nice-breadcrumb">
                         <li>
-                            <a href="#" class="icon fa-home">
+                            <a href="javascript:void(0);" class="icon fa-home">
                                 Level 1
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="javascript:void(0);">
                                 Level 2
                             </a>
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         Some child node 1
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         Some child node 2
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="javascript:void(0);">
                                         Some child node 3
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="current">
+                            <a href="javascript:void(0);" class="current">
                                 Level 3
                             </a>
                         </li>
@@ -1705,19 +1965,19 @@
                                 <span>1</span>
                             </li>
                             <li>
-                                <a href="#">2</a>
+                                <a href="javascript:void(0);">2</a>
                             </li>
                             <li>
-                                <a href="#">3</a>
+                                <a href="javascript:void(0);">3</a>
                             </li>
                             <li>
-                                <a href="#">4</a>
+                                <a href="javascript:void(0);">4</a>
                             </li>
                             <li>
-                                <a href="#">5</a>
+                                <a href="javascript:void(0);">5</a>
                             </li>
                             <li>
-                                <a href="#">Next &raquo;</a>
+                                <a href="javascript:void(0);">Next &raquo;</a>
                             </li>
                         </ul>
                     </nav>
@@ -1732,19 +1992,19 @@
                                 <span>1</span>
                             </li>
                             <li>
-                                <a href="#">2</a>
+                                <a href="javascript:void(0);">2</a>
                             </li>
                             <li>
-                                <a href="#">3</a>
+                                <a href="javascript:void(0);">3</a>
                             </li>
                             <li>
-                                <a href="#">4</a>
+                                <a href="javascript:void(0);">4</a>
                             </li>
                             <li>
-                                <a href="#">5</a>
+                                <a href="javascript:void(0);">5</a>
                             </li>
                             <li>
-                                <a href="#">Next &raquo;</a>
+                                <a href="javascript:void(0);">Next &raquo;</a>
                             </li>
                         </ul>
                     </nav>
@@ -1759,19 +2019,19 @@
                                 <span>1</span>
                             </li>
                             <li>
-                                <a href="#">2</a>
+                                <a href="javascript:void(0);">2</a>
                             </li>
                             <li>
-                                <a href="#">3</a>
+                                <a href="javascript:void(0);">3</a>
                             </li>
                             <li>
-                                <a href="#">4</a>
+                                <a href="javascript:void(0);">4</a>
                             </li>
                             <li>
-                                <a href="#">5</a>
+                                <a href="javascript:void(0);">5</a>
                             </li>
                             <li>
-                                <a href="#">Next &raquo;</a>
+                                <a href="javascript:void(0);">Next &raquo;</a>
                             </li>
                         </ul>
                     </nav>
@@ -2595,7 +2855,7 @@
                 <h2 class="docs">Helper classes</h2>
                 <div class="nice-col-8 nice-col-mobile-12">
                     <div class="nice-responsive-container">
-                        <table class="nice-table bordered">
+                        <table class="nice-table bordered striped">
                             <thead>
                                 <tr>
                                     <th>Class name</th>

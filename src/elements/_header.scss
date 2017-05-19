@@ -207,6 +207,26 @@ body {
                 background-color: $color-accent;
                 padding: 0;
 
+                .multi-column {
+                    float: none;
+                    background-color: $color-accent;
+                    white-space: nowrap;
+                    @extend %clearfix;
+
+                    &.col-2 {
+                        min-width: 200%;
+                    }
+                    &.col-3 {
+                        min-width: 300%;
+                    }
+
+                    ul {
+                        position: relative;
+                        float: left;
+                        left: auto;
+                    }
+                }
+
                 li {
                     float: none;
 
@@ -239,6 +259,12 @@ body {
             &:hover {
                 > ul {
                     display: block;
+
+                    .multi-column {
+                        ul {
+                            display: block;
+                        }
+                    }
                 }
             }
             &.has-children {
@@ -438,6 +464,11 @@ body {
                                 position: relative;
                                 left: auto;
                                 padding-left: 15px;
+
+                                .multi-column {
+                                    min-width: 100%;
+                                    width: 100%;
+                                }
                             }
                         }
                     }
@@ -541,7 +572,6 @@ body {
             padding: 0 20px;
             background-color: lighten($color-accent, 15%);
             position: fixed;
-            top: 0;
             width: calc(100% - 60px);
             z-index: 6;
 

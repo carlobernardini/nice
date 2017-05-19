@@ -14,9 +14,9 @@ var ClipboardHelper = {
 };
 
 $(function(){
-    $(document).on('click', function(e){
+    $(document).on('click.dd', function(e){
         if (!$(e.target).closest('.dropdown-menu').length) {
-            $('.nice-dropdown .dropdown-menu').removeClass('shown');
+            $('.nice-dropdown').removeClass('shown');
         }
     });
     $(window).on('scroll', function(){
@@ -32,6 +32,15 @@ $(function(){
             }
         }
     });
+    $('#nice-login-example')
+        .on('submit', function(e){
+            e.preventDefault();
+            $(this).closest('.nice-login').find('.nice-login-loading').addClass('shown');
+        })
+        .on('click', '.nice-example-cancel', function(e){
+            e.preventDefault();
+            $(this).closest('.nice-login').find('.nice-login-loading').removeClass('shown');
+        });
     $('.nice-header .nice-header-toggle').bind('click', function(e){
         var toggle = $(this),
             menu = $('.nice-header-collapse'),
@@ -51,10 +60,12 @@ $(function(){
     });
     $('.nice-dropdown').on('click', '.nice-btn', function(){
         var btn = $(this),
-            dd = btn.closest('.nice-dropdown'),
-            menu = dd.children('.dropdown-menu');
-        var isShown = menu.is('.shown');
-        menu.toggleClass('shown', !isShown);
+            dd = btn.closest('.nice-dropdown');
+        var isShown = dd.is('.shown');
+        if (!isShown) {
+            $(document).trigger('click.dd');
+        }
+        dd.toggleClass('shown', !isShown);
         return false;
     });
     $('.docs-code-wrapper').each(function(){

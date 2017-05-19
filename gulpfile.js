@@ -3,11 +3,12 @@
 // Utilities
 var     gulp = require('gulp'),
         sass = require('gulp-sass'),
-        rename = require('gulp-rename'),
-        neat = require('node-neat').includePaths;
+        rename = require('gulp-rename');
 
 var scssIncludes = [
-    './node_modules/font-awesome/scss'
+    './node_modules/font-awesome/scss',
+    './node_modules/bourbon/app/assets/stylesheets',
+    './node_modules/bourbon-neat/app/assets/stylesheets'
 ];
 
 gulp.task('icons', function(){
@@ -21,7 +22,7 @@ gulp.task('fonts', function(){
 gulp.task('compile', function(){
     return gulp.src('./src/**/*.scss')
         .pipe(sass({
-            includePaths: scssIncludes.concat(neat)
+            includePaths: scssIncludes
         }).on('error', sass.logError))
         .pipe(rename('nice.css'))
         .pipe(gulp.dest('./dist'));
@@ -29,7 +30,7 @@ gulp.task('compile', function(){
 gulp.task('compile-min', function(){
     return gulp.src('./src/**/*.scss')
         .pipe(sass({
-            includePaths: scssIncludes.concat(neat),
+            includePaths: scssIncludes,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename('nice.min.css'))
@@ -38,7 +39,7 @@ gulp.task('compile-min', function(){
 gulp.task('docs', function(){
     return gulp.src('./docs/**/*.scss')
         .pipe(sass({
-            includePaths: scssIncludes.concat(neat),
+            includePaths: scssIncludes,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename('docs.min.css'))

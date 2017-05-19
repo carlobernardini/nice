@@ -14,7 +14,7 @@ var ClipboardHelper = {
 };
 
 $(function(){
-    $(document).on('click', function(e){
+    $(document).on('click.dd', function(e){
         if (!$(e.target).closest('.dropdown-menu').length) {
             $('.nice-dropdown').removeClass('shown');
         }
@@ -62,6 +62,9 @@ $(function(){
         var btn = $(this),
             dd = btn.closest('.nice-dropdown');
         var isShown = dd.is('.shown');
+        if (!isShown) {
+            $(document).trigger('click.dd');
+        }
         dd.toggleClass('shown', !isShown);
         return false;
     });

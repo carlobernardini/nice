@@ -61,6 +61,9 @@
                                     <a href="#nice-static-assets">Static assets</a>
                                 </li>
                                 <li>
+                                    <a href="#nice-getting-started">Getting started</a>
+                                </li>
+                                <li>
                                     <a href="#nice-font-icons">Font icons</a>
                                 </li>
                                 <li class="has-children">
@@ -325,6 +328,49 @@
                     </p>
                 </div>
             </div>
+            <div class="nice-row" id="nice-getting-started">
+                <h2 class="docs">Getting started</h2>
+                <div class="nice-col-5 nice-col-small-12">
+                    <h3>Install with NPM</h3>
+                    <p>
+                        Nice! is available as an <a href="https://www.npmjs.com/package/@textkernel/nice" target="_blank">NPM module</a>. Install it with the following command:
+                    </p>
+                    <code class="docs">$ npm install @textkernel/nice</code>
+                    <h3>Clone the repository</h3>
+                    <p>
+                        Alternatively, you can clone the Github repository. This will not include the precompiled <code class="inline">dist/</code> folder.
+                    </p>
+                    <code class="docs">$ git clone https://github.com/textkernel/nice.git</code>
+                </div>
+                <div class="nice-col-7 nice-col-small-12">
+                    <h3>Start with a basic HTML structure</h3>
+                    <p>
+                        Make sure you use the <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Introduction_to_HTML5" target="_blank">HTML5</a> doctype and apply the necessary meta-tags:
+                    </p>
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1<span class="variation">, user-scalable=no</span>&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;dist/nice.min.css&quot; /&gt;
+        &lt;!-- Optional favicons in multiple sizes --&gt;
+        <span class="variation">&lt;link rel=&quot;icon&quot; href=&quot;assets/favicons/textkernel/favicon-16x16.png&quot; /&gt;
+        &lt;link rel=&quot;icon&quot; href=&quot;assets/favicons/textkernel/favicon-32x32.png&quot; /&gt;
+        &lt;link rel=&quot;icon&quot; href=&quot;assets/favicons/textkernel/favicon-96x96.png&quot; /&gt;</span>
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...
+    &lt;/body&gt;
+&lt;/html&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="nice-row" id="nice-font-icons">
                 <h2 class="docs">Font icons</h2>
                 <p>
@@ -551,11 +597,14 @@
                 </div>
                 <div class="nice-col-7 nice-col-mobile-12">
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;header class=&quot;<span class="variation">fixed</span>&quot;&gt;
+                        <code class="docs">&lt;header class=&quot;<span class="main">nice-header</span> <span class="variation">fixed</span>&quot;&gt;
     &lt;div class=&quot;<span class="main">nice-header-container</span>&quot;&gt;
         &lt;h1 class=&quot;<span class="main">nice-header-brand</span>&quot;&gt;
             &lt;a href=&quot;#&quot;&gt;
-                &lt;img src=&quot;assets/textkernel.svg&quot; /&gt;
+                &lt;!-- SVG logo with PNG fallback. Size may need adjustment. --&gt;
+                &lt;svg height=&quot;30&quot; width=&quot;172&quot;&gt;
+                    &lt;image xlink:href=&quot;assets/textkernel.svg&quot; src=&quot;assets/textkernel@2x.png&quot; height=&quot;30&quot; width=&quot;172&quot; /&gt;
+                &lt;/svg&gt;
             &lt;/a&gt;
         &lt;/h1&gt;
         &lt;div class=&quot;<span class="main">nice-header-collapse</span>&quot;&gt;
@@ -563,7 +612,9 @@
                 Product! v1.0
             &lt;/span&gt;
             &lt;form action=&quot;#&quot; class=&quot;<span class="main">nice-header-form</span>&quot;&gt;
-                &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; /&gt;
+                &lt;div class=&quot;<span class="main">nice-header-input-wrapper</span>&quot;&gt;
+                    &lt;input type=&quot;text&quot; placeholder=&quot;Search...&quot; class=&quot;<span class="main">nice-form-control</span>&quot; /&gt;
+                &lt;/div&gt;
             &lt;/form&gt;
             &lt;ul class=&quot;<span class="main">nice-header-menu</span> <span class="variation">menu-pills</span>&quot;&gt;
                 &lt;li class=&quot;<span class="variation">align-left</span>&quot;&gt;

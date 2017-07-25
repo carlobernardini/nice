@@ -105,8 +105,8 @@
         }
     }
     &.small {
-        padding: 0 5px;
-        @include nice-line-height(18px);
+        padding: 3px 5px;
+        @include nice-line-height(15px);
         @include nice-font-size($default-font-size-small);
     }
     &.large {

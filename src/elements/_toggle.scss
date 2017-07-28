@@ -55,6 +55,13 @@
         &.off-muted {
             color: $color-muted;
         }
+        &.small {
+            width: 36px;
+            height: 18px;
+            text-indent: 36px;
+            padding: 0 2px;
+            line-height: 1.2em;
+        }
     }
     &:checked {
         + .nice-toggle-btn {

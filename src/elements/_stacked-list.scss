@@ -27,9 +27,6 @@
                     @extend %display-inline-block;
                 }
             }
-            .badge {
-                font-family: $fonts-primary;
-            }
         }
         p {
             margin: 0 0 5px 0;
@@ -86,50 +83,17 @@
         position: relative;
         @include nice-line-height(18px);
 
-        .badge {
+        .nice-badge {
             float: right;
-            background-color: $gray-medium;
-            color: $color-white;
-            padding: 3px 8px;
             margin: -3px 0;
-            @include nice-font($size: 80%, $weight: 600);
-            @include nice-border-radius(15px);
-            @include nice-transition(background-color 0.1s);
-
-            @each $type in (primary, accent, info, good, warning, bad) {
-                &.#{$type} {
-                    background-color: lighten(map-get($color-scheme, #{$type}), 5%);
-                }
-            }
-            .badge-addon {
-                background-color: lighten($gray-dark, 8%);
-                color: $gray-medium;
-                float:left;
-                margin: -3px 5px -3px -8px;
-                padding: 3px 5px;
-                @include nice-font($weight: 400);
-                @include nice-border-radius($top-left: 15px, $bottom-left: 15px);
-
-                a {
-                    color: $color-white;
-                    @include nice-text-shadow(none);
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-            .badge-text {
-                float: left;
-            }
         }
         &:hover {
-            .badge {
+            .nice-badge {
                 background-color: $color-brand;
 
                 @each $type in (primary, accent, info, good, warning, bad) {
                     &.#{$type} {
-                        background-color: map-get($color-scheme, #{$type});
+                        background-color: lighten(map-get($color-scheme, #{$type}), 5%);
                     }
                 }
             }

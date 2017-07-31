@@ -32,13 +32,13 @@
                     color: $color-white;
                     @include nice-transition(background-color 0.3s);
 
-                    .badge {
+                    .nice-badge {
                         background-color: lighten(map-get($color-scheme, $type), 15%);
                     }
                     &:hover {
                         background-color: lighten(map-get($color-scheme, $type), 10%);
 
-                        .badge {
+                        .nice-badge {
                             background-color: map-get($color-scheme, $type);
                             color: $color-white;
                         }
@@ -48,7 +48,7 @@
                     a {
                         border-top-color: map-get($color-scheme, $type);
 
-                        .badge {
+                        .nice-badge {
                             background-color: map-get($color-scheme, $type);
                         }
                     }
@@ -72,7 +72,7 @@
                 background-color: $color-brand;
                 color: $color-white;
 
-                .badge {
+                .nice-badge {
                     background-color: $color-white;
                     color: $color-brand;
                 }
@@ -91,16 +91,14 @@
                     text-align: center;
                 }
             }
-            .badge {
+            .nice-badge {
                 text-align: center;
                 font-size: .8em;
                 padding: 1px 6px 2px;
                 background-color: darken($gray-light, 15%);
-                color: $color-white;
                 margin: 1px -3px 0 3px;
                 @include nice-line-height(16px);
                 @include nice-border-radius($default-radius);
-                @include nice-transition(background-color .1s, color .1s);
                 @extend %display-inline-block;
             }
         }
@@ -120,9 +118,9 @@
                 &.icon {
                     padding: 9px 14px 10px 34px;
                 }
-                .badge {
-                    background-color: $color-primary;
+                .nice-badge {
                     color: $color-white;
+                    background-color: $color-primary;
                 }
             }
         }
@@ -155,7 +153,7 @@
                         left: 5px;
                         margin-top: -9px;
                     }
-                }            
+                }
             }
             &.current {
                 a {

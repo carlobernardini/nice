@@ -9,7 +9,7 @@
             margin: 0 0 3px;
         }
     }
-    &.align-right {
+    &.align-left {
         .dropdown-menu {
             left: auto;
             right: 0;
@@ -20,6 +20,11 @@
 
         .dropdown-menu {
             display: block;
+        }
+    }
+    &.small {
+        .nice-btn {
+            @extend .nice-btn.small;
         }
     }
 

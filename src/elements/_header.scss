@@ -249,6 +249,11 @@ body {
                         top: 0;
                         display: none;
                     }
+                    &.align-left {
+                        ul {
+                            right: 100%;
+                        }
+                    }
                     &:hover {
                         > ul {
                             display: block;
@@ -263,6 +268,20 @@ body {
                     .multi-column {
                         ul {
                             display: block;
+                        }
+                    }
+                }
+            }
+            &.align-left {
+                > ul {
+                    left: auto;
+                    right: 0;
+                    > .multi-column {
+                        position: relative;
+                        right: 100%;
+
+                        > ul {
+                            right: auto;
                         }
                     }
                 }
@@ -286,6 +305,15 @@ body {
                             color: $color-white;
                             @include animation(flip .15s linear forwards);
                             @include animation-iteration-count(1);
+                        }
+                    }
+                }
+                &.align-left {
+                    &:hover {
+                        > a, > span {
+                            &:after {
+                                @include animation(flip-opposite .15s linear forwards);
+                            }
                         }
                     }
                 }
@@ -468,6 +496,10 @@ body {
                                 .multi-column {
                                     min-width: 100%;
                                     width: 100%;
+
+                                    ul {
+                                        float: none;
+                                    }
                                 }
                             }
                         }
@@ -476,6 +508,15 @@ body {
                         > a, > span {
                             &:after {
                                 display: none;
+                            }
+                        }
+                    }
+                    &.align-left {
+                        ul {
+                            right: auto;
+
+                            .multi-column {
+                                right: auto;
                             }
                         }
                     }

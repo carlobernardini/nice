@@ -27,6 +27,14 @@
         @include nice-transform(rotate(-90deg));
     }
 }
+@include keyframes(flip-opposite) {
+    from {
+        @include nice-transform(rotate(0deg));
+    }
+    to {
+        @include nice-transform(rotate(90deg));
+    }
+}
 @include keyframes(slide) {
     0% {
         left: -50%;

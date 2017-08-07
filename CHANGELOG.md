@@ -1,5 +1,21 @@
 # Nice! version log
 
+## 1.2.1
+:date: 2017-08-07
+
+### :star2: Improvements
+- Toggle switches: Added a `.small` state
+- Dropdowns: Support left alignment of dropdowns and leafs using `.align-left`
+- Badges: Added `.nice-badge` to make them independent from other components
+- Control sizing: Extended and improved support for `.small` state. Can also be used on control- and button groups (including input fields, buttons and dropdowns).
+
+### :star2: Internal improvements
+- Documentation corrections:
+  - Updated footer example
+  - Updated header example
+  - Added "Getting started" section
+- Corrected last changelog entry
+
 ## 1.2.0
 :date: 2017-05-19
 
@@ -9,24 +25,23 @@
 - Extended the login dialog with optional loading bar (`.nice-login-loading`)
 
 ### :star2: Improvements
-- Button groups: Fixed gaps between button / dropdown groups on iOS devices
-- Input addons: Fixed height for iOS devices
 - Tables: Headings within `tbody` now have a background color
 - Tables: Darker background color for table cell hover state
-- Off canvas menu: Fixed `.nice-header-form` rendering on iOS devices
 - Dropdown: No left / right borders on item hover
 - Dropdown: Support for multiselect with checkboxes / radios
 - Header menu: Support multi-column submenu's
-
 
 ### :star2: Internal improvements
 - Use placeholders for `box-sizing: border-box`, `user-select: none`
 - Removed `node-neat`, `node-bourbon` dependencies, replaced with `bourbon`, `bourbon-neat`
 - Updated `gulp-sass` to version 3.1.0
 - Package: Moved gulp dependencies to dev-dependencies
-- Gulpfile: Fixed task for documentation styles
 
 ### :wrench: Fixes
+- Off canvas menu: Fixed `.nice-header-form` rendering on iOS devices
+- Button groups: Fixed gaps between button / dropdown groups on iOS devices
+- Input addons: Fixed height for iOS devices
+- Gulpfile: Fixed task for documentation styles
 
 ## 1.1.5
 :date: 2017-05-04

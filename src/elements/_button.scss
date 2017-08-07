@@ -83,7 +83,6 @@
             background-color: map-get($color-scheme, #{$type});
             border: none;
             padding: 6px 11px;
-            @include nice-font($size: 14px);
 
             &:hover,
             &:focus {
@@ -101,6 +100,9 @@
                 &:active {
                     @include nice-box-shadow(none);
                 }
+            }
+            &.small {
+                padding: 4px 5px;
             }
         }
     }
@@ -147,7 +149,6 @@
         .nice-dropdown {
             position: relative;
             float: left;
-
 
             &:not(:first-child):not(:last-child) {
                 @include nice-border-radius(0);
@@ -236,6 +237,9 @@
         > {
             .nice-btn {
                 @extend .nice-btn.small;
+            }
+            .nice-dropdown {
+                @extend .nice-dropdown.small;
             }
         }
     }

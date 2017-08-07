@@ -1,5 +1,21 @@
 # Nice! version log
 
+## 1.2.1
+:date: 2017-08-07
+
+### :star2: Improvements
+- Toggle switches: Added a `.small` state
+- Dropdowns: Support left alignment of dropdowns and leafs using `.align-left`
+- Badges: Added `.nice-badge` to make them independent from other components
+- Control sizing: Extended and improved support for `.small` state. Can also be used on control- and button groups (including input fields, buttons and dropdowns).
+
+### :star2: Internal improvements
+- Documentation corrections:
+  - Updated footer example
+  - Updated header example
+  - Added "Getting started" section
+- Corrected last changelog entry
+
 ## 1.2.0
 :date: 2017-05-19
 

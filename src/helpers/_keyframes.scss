@@ -1,4 +1,4 @@
-@include keyframes(pulse) {
+@keyframes {
     0% {
         background-color: lighten($color-primary, 15%);
     }    
@@ -10,7 +10,7 @@
     }
 }
 
-@include keyframes(spin) {
+@keyframes {
     0% {
         @include nice-transform(rotate(0deg));
     }
@@ -19,7 +19,7 @@
     }
 }
 
-@include keyframes(flip) {
+@keyframes {
     from {
         @include nice-transform(rotate(0deg));
     }
@@ -27,7 +27,7 @@
         @include nice-transform(rotate(-90deg));
     }
 }
-@include keyframes(flip-opposite) {
+@keyframes {
     from {
         @include nice-transform(rotate(0deg));
     }
@@ -35,7 +35,7 @@
         @include nice-transform(rotate(90deg));
     }
 }
-@include keyframes(slide) {
+@keyframes {
     0% {
         left: -50%;
     }

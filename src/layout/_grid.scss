@@ -1,5 +1,7 @@
 .nice-container {
-    @include outer-container ($max-containment);
+    max-width: $max-containment;
+    margin-left: auto;
+    margin-right: auto;
 }
 .nice-container-fluid {
     margin-right: auto;
@@ -8,8 +10,9 @@
     padding-right: 15px;
 }
 .nice-row {
-    @include fill-parent();
-    @include row();
+    width: 100%;
+    display: block;
+    @extend %clearfix;
 }
 
 @mixin col($size, $alias) {

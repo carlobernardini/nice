@@ -46,8 +46,8 @@
             bottom: 0;
             width: 50%;
             background-color: $color-primary;
-            @include animation(slide 3s cubic-bezier(1.000, 0.185, 1.000, 0.980));
-            @include animation-iteration-count(infinite);
+            animation: slide 3s cubic-bezier(1.000, 0.185, 1.000, 0.980);
+            animation-iteration-count: infinite;
             @include nice-border-radius($radius-normal);
         }
         &:after {
@@ -58,9 +58,9 @@
             bottom: 0;
             width: 50%;
             background-color: $color-info;
-            @include animation(slide 2s cubic-bezier(1.000, 0.185, 1.000, 0.980));
-            @include animation-iteration-count(infinite);
-            @include animation-delay(1.5s);
+            animation: slide 2s cubic-bezier(1.000, 0.185, 1.000, 0.980);
+            animation-iteration-count: infinite;
+            animation-delay: 1.5s;
             @include nice-border-radius($radius-normal);
         }
         &.shown {

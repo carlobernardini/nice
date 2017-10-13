@@ -74,7 +74,7 @@
             color: $color-muted;
         }
     }
-    @each $type in (primary, accent, info, good, warning, bad) {
+    @each $type in (brand, primary, accent, info, good, warning, bad) {
         &.#{$type} {
             background-color: lighten(map-get($color-scheme, #{$type}), 35%);
             color: darken(map-get($color-scheme, #{$type}), 20%);

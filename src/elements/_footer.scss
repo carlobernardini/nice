@@ -6,7 +6,6 @@ html {
         margin-bottom: $default-footer-height;
         padding-bottom: 15px;
 
-        footer,
         .nice-footer {
             background-color: $color-accent;
             color: $color-white;
@@ -59,7 +58,6 @@ html {
 @include media($mobile) {
     html {
         body {
-            footer,
             .nice-footer {
                 margin-top: 15px;
 
@@ -73,13 +71,11 @@ html {
 @include media($mobile-and-tablet) {
     html {
         body {
-            footer,
             .nice-footer {
                 padding: 0 15px;
             }
 
             &.expanded {
-                footer,
                 .nice-footer {
                     bottom: -$default-footer-height;
                 }

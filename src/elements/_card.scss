@@ -7,7 +7,7 @@ summary {
         background-color: $gray-vlight;
         border: 1px solid $color-border;
         margin: 0 5px 15px;
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
         @include nice-box-shadow(0 1px 1px rgba(0,0,0,.1));
 
         .nice-card-title {
@@ -16,7 +16,7 @@ summary {
             padding: 10px 15px;
             margin: -1px -1px 0 -1px;
             @include nice-font-size(18px);
-            @include nice-border-radius($default-radius $default-radius 0 0);
+            @include nice-border-radius($radius-normal $radius-normal 0 0);
 
             h3 {
                 margin: 0;
@@ -67,10 +67,10 @@ summary {
                     text-align: center;
                 }
                 &:first-child {
-                    @include nice-border-radius(0 0 0 $default-radius);
+                    @include nice-border-radius(0 0 0 $radius-normal);
                 }
                 &:last-child {
-                    @include nice-border-radius(0 0 $default-radius 0);
+                    @include nice-border-radius(0 0 $radius-normal 0);
                 }
                 &:hover {
                     background-color: $gray-vlight;
@@ -90,7 +90,7 @@ summary {
         > {
             div {
                 &:last-child {
-                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                    @include nice-border-radius(0 0 $radius-normal $radius-normal);
                 }
             }
             img, .nice-card-image {

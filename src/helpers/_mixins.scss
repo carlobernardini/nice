@@ -125,9 +125,9 @@
 
 @mixin nice-scrollbar(
   $track-color: $color-white, 
-  $track-radius: $default-radius, 
+  $track-radius: $radius-normal, 
   $thumb-color: rgba($color-black, .5), 
-  $thumb-radius: $default-radius, 
+  $thumb-radius: $radius-normal, 
   $size-vertical: 6px, 
   $size-horizontal: $size-vertical,
   $zIndex: 999,

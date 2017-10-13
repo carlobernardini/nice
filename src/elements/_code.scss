@@ -9,7 +9,7 @@ code {
     overflow: auto;
     white-space: pre-wrap;
     @include nice-transition(max-height 0.5s);
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
 
     &.restrain-s {
         max-height: 250px;
@@ -26,7 +26,6 @@ code {
     &.inline {
         display: inline;
         background-color: $color-white;
-        // font-size: inherit;
         
     }
 }
@@ -40,12 +39,12 @@ code {
         line-height: 18px;
         border: 1px solid $color-border;
         border-bottom: none;
-        @include nice-border-radius($default-radius $default-radius 0 0);
+        @include nice-border-radius($radius-normal $radius-normal 0 0);
 
         + .nice-code-title {
             border: 1px solid $color-border;
             border-top: none;
-            @include nice-border-radius(0 0 $default-radius $default-radius);
+            @include nice-border-radius(0 0 $radius-normal $radius-normal);
         }
     }
     .nice-code-heading {
@@ -57,12 +56,12 @@ code {
         font-size: 0.7em;
         font-weight: 600;
         @include nice-line-height(32px);
-        @include nice-border-radius($default-radius $default-radius 0 0);
+        @include nice-border-radius($radius-normal $radius-normal 0 0);
 
         + code {
             border: 1px solid $color-border;
             border-top: none;
-            @include nice-border-radius(0 0 $default-radius $default-radius);
+            @include nice-border-radius(0 0 $radius-normal $radius-normal);
         }
         &::before {
             position: relative;
@@ -92,7 +91,7 @@ code {
         }
         .nice-code-syntax {
             float: right;
-            @include nice-border-radius($default-radius);
+            @include nice-border-radius($radius-normal);
         }
     }
 }

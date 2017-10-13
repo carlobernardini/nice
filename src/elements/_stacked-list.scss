@@ -4,7 +4,7 @@
 
     .list-heading {
         @extend %panel-heading;
-        @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
+        @include nice-border-radius($top-left: $radius-normal, $top-right: $radius-normal);
 
         + .list-item {
             border-top-width: 0;
@@ -44,10 +44,10 @@
                 @include nice-transition(background-color .2s);
 
                 &:first-child {
-                    @include nice-border-radius($top-left: $default-radius);
+                    @include nice-border-radius($top-left: $radius-normal);
                 }
                 &:last-child {
-                    @include nice-border-radius($top-right: $default-radius);
+                    @include nice-border-radius($top-right: $radius-normal);
                 }
                 + .nice-stacked-list-control {
                     border-left: 1px solid $gray-light;

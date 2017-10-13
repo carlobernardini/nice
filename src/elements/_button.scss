@@ -11,7 +11,7 @@
     margin: 0;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
     @include nice-transition(border 0.1s, background 0.1s);
     @include nice-font-size(14px);
     @extend %display-inline-block;
@@ -109,12 +109,12 @@
     &.small {
         padding: 3px 5px;
         @include nice-line-height(15px);
-        @include nice-font-size($default-font-size-small);
+        @include nice-font-size($font-size-small);
     }
     &.large {
         padding: 0 15px;
         @include nice-line-height(42px);
-        @include nice-font-size($default-font-size-large);
+        @include nice-font-size($font-size-large);
     }
     &.bold {
         font-weight: 600;
@@ -128,7 +128,7 @@
     @include nice-font($family: $fonts-primary);
     @include nice-font-size(12px);
     @include nice-transition(color .1s, background-color .1s);
-    @include nice-border-radius($default-radius * 5);
+    @include nice-border-radius($radius-normal * 5);
 
     &:hover {
         background-color: $color-link;
@@ -154,13 +154,13 @@
                 @include nice-border-radius(0);
             }
             &:first-child {
-                @include nice-border-radius($default-radius 0 0 $default-radius);
+                @include nice-border-radius($radius-normal 0 0 $radius-normal);
             }
             &:last-child {
-                @include nice-border-radius(0 $default-radius $default-radius 0);
+                @include nice-border-radius(0 $radius-normal $radius-normal 0);
             }
             &:first-child:last-child {
-                @include nice-border-radius($default-radius);
+                @include nice-border-radius($radius-normal);
             }
             + .nice-btn,
             + .nice-dropdown {
@@ -181,10 +181,10 @@
             @include nice-border-radius(0);
 
             &:first-child {
-                @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
+                @include nice-border-radius($top-left: $radius-normal * 5, $bottom-left: $radius-normal * 5);
             }
             &:last-child {
-                @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
+                @include nice-border-radius($top-right: $radius-normal * 5, $bottom-right: $radius-normal * 5);
             }
             + .nice-btn-alt {
                 margin-left: 1px;
@@ -202,10 +202,10 @@
                 margin-left: 0;
 
                 &:first-child {
-                    @include nice-border-radius($default-radius $default-radius 0 0);
+                    @include nice-border-radius($radius-normal $radius-normal 0 0);
                 }
                 &:last-child {
-                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                    @include nice-border-radius(0 0 $radius-normal $radius-normal);
                 }
                 + .nice-btn {
                     margin-top: -1px;

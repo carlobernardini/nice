@@ -3,7 +3,7 @@
     padding: 0 0 3px 3px;
     white-space: nowrap;
     border: 1px solid $color-border;
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
     @extend %clearfix;
 
     .nice-tag-input {
@@ -23,7 +23,7 @@
         display: block;
         float: left;
         margin: 3px 3px 0 0;
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
         @include nice-box-shadow(inset 0 -2px 0 darken($color-brand, 20%));
 
         .nice-tag-label,
@@ -44,7 +44,7 @@
             @include nice-box-shadow(inset 0 -2px 0 $color-brand);
 
             &:last-child {
-                @include nice-border-radius($top-right: $default-radius, $bottom-right: $default-radius);
+                @include nice-border-radius($top-right: $radius-normal, $bottom-right: $radius-normal);
             }
         }
 
@@ -52,7 +52,7 @@
             padding: 0 7px;
             display: block;
             float: left;
-            @include nice-border-radius($top-left: $default-radius, $bottom-left: $default-radius);
+            @include nice-border-radius($top-left: $radius-normal, $bottom-left: $radius-normal);
         }
         .nice-tag-btn {
             border: none;
@@ -109,7 +109,7 @@
                     max-height: 260px;
                     overflow: hidden;
                     overflow-y: auto;
-                    @include nice-border-radius($default-radius);
+                    @include nice-border-radius($radius-normal);
                     @include nice-scrollbar($track-color: lighten($color-brand, 15%));
 
                     &::-webkit-scrollbar {
@@ -125,11 +125,11 @@
                     }
                     &::-webkit-scrollbar-thumb {
                         background-color: rgba(0, 0, 0, .5);
-                        @include nice-border-radius($default-radius);
+                        @include nice-border-radius($radius-normal);
                     }
                     &::-webkit-scrollbar-track { 
                         background-color: lighten($color-brand, 15%); 
-                        @include nice-border-radius($default-radius);
+                        @include nice-border-radius($radius-normal);
                     }
 
                     li {
@@ -146,12 +146,12 @@
                         }
                         &:first-child {
                             a {
-                                @include nice-border-radius($top-right: $default-radius);
+                                @include nice-border-radius($top-right: $radius-normal);
                             }
                         }
                         &:last-child {
                             a {
-                                @include nice-border-radius($bottom-right: $default-radius, $bottom-left: $default-radius);
+                                @include nice-border-radius($bottom-right: $radius-normal, $bottom-left: $radius-normal);
                             }
                         }
                     }

@@ -7,7 +7,7 @@
     border: 1px solid $color-brand;
     background-color: $color-white;
     @include nice-box-shadow(0 2px 6px rgba(0,0,0,.1));
-    @include nice-border-radius($default-radius * 2);
+    @include nice-border-radius($radius-normal * 2);
 
     .nice-login-brand {
         margin: -15px -15px 15px;
@@ -36,7 +36,7 @@
         height: 2px;
         overflow: hidden;
         display: none;
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
 
         &:before {
             content: '';
@@ -48,7 +48,7 @@
             background-color: $color-primary;
             @include animation(slide 3s cubic-bezier(1.000, 0.185, 1.000, 0.980));
             @include animation-iteration-count(infinite);
-            @include nice-border-radius($default-radius);
+            @include nice-border-radius($radius-normal);
         }
         &:after {
             content: '';
@@ -61,7 +61,7 @@
             @include animation(slide 2s cubic-bezier(1.000, 0.185, 1.000, 0.980));
             @include animation-iteration-count(infinite);
             @include animation-delay(1.5s);
-            @include nice-border-radius($default-radius);
+            @include nice-border-radius($radius-normal);
         }
         &.shown {
             display: block;
@@ -76,7 +76,7 @@
         margin: -15px -15px 15px;
         width: calc(100% + 30px);
         @include nice-font-size(13px);
-        @include nice-border-radius($top-left: $default-radius * 2, $top-right: $default-radius * 2);
+        @include nice-border-radius($top-left: $radius-normal * 2, $top-right: $radius-normal * 2);
 
         .nice-login-intro-logo {
             display: table-cell;
@@ -87,7 +87,7 @@
             width: 1%;
             white-space: nowrap;
             @include nice-font-size(32px);
-            @include nice-border-radius($top-left: $default-radius * 2);
+            @include nice-border-radius($top-left: $radius-normal * 2);
 
             + .nice-login-intro-content {
                 background-color: lighten($color-info, 35%);
@@ -100,7 +100,7 @@
             padding: 15px;
             background-color: lighten($color-info, 35%);
             color: darken($color-info, 20%);
-            @include nice-border-radius($top-left: $default-radius * 2, $top-right: $default-radius * 2);
+            @include nice-border-radius($top-left: $radius-normal * 2, $top-right: $radius-normal * 2);
         }
     }
     .nice-login-logo {
@@ -141,7 +141,7 @@
         background-color: $gray-vlight;
         color: $color-muted;
         @include nice-font-size(11px);
-        @include nice-border-radius($bottom-right: $default-radius * 2, $bottom-left: $default-radius * 2);
+        @include nice-border-radius($bottom-right: $radius-normal * 2, $bottom-left: $radius-normal * 2);
         @include nice-text-shadow(1px 1px 0 $color-white);
 
         .text-brand {

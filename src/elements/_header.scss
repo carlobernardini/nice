@@ -350,7 +350,7 @@ body {
                     @include nice-font($family: $fonts-primary);
                     @include nice-font-size(12px);
                     @include nice-transition(color .1s, background-color .1s);
-                    @include nice-border-radius($default-radius * 5);
+                    @include nice-border-radius($radius-normal * 5);
                     @include nice-line-height(28px);
 
                     &:hover {
@@ -376,7 +376,7 @@ body {
                 }
                 &:last-child {
                     > a {
-                        @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
+                        @include nice-border-radius($top-right: $radius-normal * 5, $bottom-right: $radius-normal * 5);
                     }
                 }
             }
@@ -585,12 +585,12 @@ body {
                         }
                         &:first-child {
                             a {
-                                @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius, $bottom-left: 0);
+                                @include nice-border-radius($top-left: $radius-normal, $top-right: $radius-normal, $bottom-left: 0);
                             }
                         }
                         &:last-child {
                             a {
-                                @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius);
+                                @include nice-border-radius($bottom-left: $radius-normal, $bottom-right: $radius-normal);
                             }
                         }
                         ul {

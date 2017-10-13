@@ -40,7 +40,7 @@
         margin: 3px 0 0;
         min-width: 100%;
         z-index: 4;
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
         @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
 
         &.shown {
@@ -93,12 +93,12 @@
             }
             &:first-child {
                 a {
-                    @include nice-border-radius($default-radius $default-radius 0 0);
+                    @include nice-border-radius($radius-normal $radius-normal 0 0);
                 }
             }
             &:last-child {
                 a {
-                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                    @include nice-border-radius(0 0 $radius-normal $radius-normal);
                 }
             }
             &.separator {

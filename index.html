@@ -113,13 +113,16 @@
                                                     <a href="#nice-modal-dialogs">Modal dialogs</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#nice-login-dialog">Login dialog</a>
+                                                    <a href="#nice-stepper">Stepper</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#nice-breadcrumb">Breadcrumbs</a>
+                                                    <a href="#nice-login-dialog">Login dialog</a>
                                                 </li>
                                             </ul>
                                             <ul>
+                                                <li>
+                                                    <a href="#nice-breadcrumb">Breadcrumbs</a>
+                                                </li>
                                                 <li>
                                                     <a href="#nice-pagination">Pagination</a>
                                                 </li>
@@ -1799,6 +1802,128 @@
                 &lt;button class=&quot;nice-btn&quot;&gt;Cancel&lt;/button&gt;
                 &lt;button class=&quot;nice-btn primary&quot;&gt;Save&lt;/button&gt;
             &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-stepper">
+                <h2 class="docs">Stepper</h2>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="nice-stepper">
+                        <ol class="nice-stepper-flow">
+                            <li class="nice-stepper-step bad">
+                                <span class="nice-stepper-bullet">
+                                    <i class="icon fa-warning"></i>
+                                </span>
+                                <a href="javascript:;" class="nice-stepper-label">
+                                    First step
+                                    <small>We have a problem here</small>
+                                </a>
+                            </li>
+                            <li class="nice-stepper-divider"></li>
+                            <li class="nice-stepper-step active">
+                                <span class="nice-stepper-bullet">
+                                    2
+                                </span>
+                                <a href="javascript:;" class="nice-stepper-label">
+                                    Second step
+                                    <small>Optional</small>
+                                </a>
+                            </li>
+                            <li class="nice-stepper-divider"></li>
+                            <li class="nice-stepper-step">
+                                <span class="nice-stepper-bullet">
+                                    3
+                                </span>
+                                <a href="javascript:;" class="nice-stepper-label">
+                                    Summary
+                                </a>
+                            </li>
+                        </ol>
+                        <div class="nice-stepper-body">
+                            <form>
+                                <div class="nice-form-group">
+                                    <label for="demo-input-7">Some label</label>
+                                    <input type="text" placeholder="Nice input..." class="nice-form-control" id="demo-input-7">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="nice-stepper-footer">
+                            <button class="nice-btn">
+                                Cancel
+                            </button>
+                            <div class="nice-btn-group pull-right">
+                                <button class="nice-btn">
+                                    Previous step
+                                </button>
+                                <button class="nice-btn brand">
+                                    Next step
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Steppers are useful for sequential task flows. You can also wrap them inside <a href="#nice-modal-dialogs">modal dialogs</a>. Use <code class="inline">&lt;small&gt;</code> within step labels to provide additional information about that step.
+                    </p>
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;div class=&quot;<span class="main">nice-stepper</span>&quot;&gt;
+    &lt;ol class=&quot;<span class="main">nice-stepper-flow</span>&quot;&gt;
+        &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">active primary accent info good warning bad</span>&quot;&gt;
+            &lt;span class=&quot;<span class="main">nice-stepper-bullet</span>&quot;&gt;
+                &lt;i class=&quot;icon fa-warning&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+            &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-stepper-label</span>&quot;&gt;
+                First step
+                &lt;small&gt;We have a problem here&lt;/small&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;<span class="main">nice-stepper-divider</span>&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;nice-stepper-step active&quot;&gt;
+            &lt;span class=&quot;nice-stepper-bullet&quot;&gt;
+                2
+            &lt;/span&gt;
+            &lt;a href=&quot;#&quot; class=&quot;nice-stepper-label&quot;&gt;
+                Second step
+                &lt;small&gt;Optional&lt;/small&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nice-stepper-divider&quot;&gt;&lt;/li&gt;
+        &lt;li class=&quot;nice-stepper-step&quot;&gt;
+            &lt;span class=&quot;nice-stepper-bullet&quot;&gt;
+                3
+            &lt;/span&gt;
+            &lt;a href=&quot;#&quot; class=&quot;nice-stepper-label&quot;&gt;
+                Summary
+            &lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ol&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-body</span>&quot;&gt;
+        &lt;form&gt;
+            &lt;div class=&quot;nice-form-group&quot;&gt;
+                &lt;label for=&quot;my-input&quot;&gt;Some label&lt;/label&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Nice input...&quot; class=&quot;nice-form-control&quot; id=&quot;my-input&quot;&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-footer</span>&quot;&gt;
+        &lt;button class=&quot;nice-btn&quot;&gt;
+            Cancel
+        &lt;/button&gt;
+        &lt;div class=&quot;nice-btn-group pull-right&quot;&gt;
+            &lt;button class=&quot;nice-btn&quot;&gt;
+                Previous step
+            &lt;/button&gt;
+            &lt;button class=&quot;nice-btn brand&quot;&gt;
+                Continue
+            &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>

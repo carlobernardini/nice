@@ -1,5 +1,5 @@
 code {
-    padding: 3px 3px;
+    padding: 3px;
     color: $color-bad;
     position: relative;
     border: 1px solid $gray-light;
@@ -63,7 +63,7 @@ code {
             border-top: none;
             @include nice-border-radius(0 0 $radius-normal $radius-normal);
         }
-        &::before {
+        &:before {
             position: relative;
             left: -5px;
         }

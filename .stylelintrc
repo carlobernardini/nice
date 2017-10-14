@@ -8,7 +8,6 @@
         "max-empty-lines": 5,
         "indentation": 4,
         "color-named": "never",
-        "selector-no-qualifying-type": true,
         "selector-max-id": 0,
         "selector-combinator-space-after": "always",
         "selector-attribute-quotes": "always",

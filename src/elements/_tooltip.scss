@@ -4,7 +4,7 @@
     background-color: $color-accent;
     padding: 5px 10px;
     font-weight: 600;
-    min-width:26px;
+    min-width: 26px;
     @include nice-font-size(13px);
     @include nice-border-radius($radius-normal);
     @extend %display-inline-block;

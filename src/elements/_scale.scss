@@ -49,8 +49,8 @@
                 display: block;
                 width: 100%;
                 font-weight: normal;
+                user-select: none;
                 @include nice-font-size(13px);
-                @extend %disable-user-select;
 
                 &:hover {
                     input[type='radio']:not(:checked) {

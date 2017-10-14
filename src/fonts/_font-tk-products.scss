@@ -10,9 +10,9 @@ $product-connector: "\e908";
 $product-tkportal: "\e909";
 
 @font-face {
-    font-family: 'TKProducts';
-    src:  url('#{$font-path}/tk-products/tk-products.eot?1313ij');
-    src:  url('#{$font-path}/tk-products/tk-products.eot?1313ij#iefix') format('embedded-opentype'),
+    font-family: TKProducts;
+    src: url('#{$font-path}/tk-products/tk-products.eot?1313ij');
+    src: url('#{$font-path}/tk-products/tk-products.eot?1313ij#iefix') format('embedded-opentype'),
         url('#{$font-path}/tk-products/tk-products.ttf?1313ij') format('truetype'),
         url('#{$font-path}/tk-products/tk-products.woff?1313ij') format('woff'),
         url('#{$font-path}/tk-products/tk-products.svg?1313ij#TKProducts') format('svg');
@@ -23,7 +23,7 @@ $product-tkportal: "\e909";
 .product-icon {
     font-style: normal;
 
-    &::before {
+    &:before {
         font-family: TKProducts;
     }
     &.extract {

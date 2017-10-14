@@ -114,7 +114,7 @@
 
                     &::-webkit-scrollbar {
                         z-index: 999;
-                        webkit-appearance: none;
+                        appearance: none;
 
                         &:vertical {
                             width: 6px;
@@ -201,8 +201,7 @@
 @include media($mobile-and-tablet) {
     .nice-tags-container {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-between;
 
         .nice-tag {

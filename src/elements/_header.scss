@@ -179,7 +179,7 @@ body {
         li {
             list-style: none;
             display: block;
-            float:left;
+            float: left;
             position: relative;
 
             a, span {
@@ -460,7 +460,7 @@ body {
                         color: $color-white;
                         @include nice-transition(background-color .1s, color .1s);
 
-                        &::before {
+                        &:before {
                             display: -moz-inline-stack;
                             display: inline-block;
                             *display: inline-block;
@@ -637,7 +637,7 @@ body {
                     width: 100%;
                     margin-left: 0;
                     @include nice-box-shadow(none);
-                        @include nice-placeholder-color {
+                    @include nice-placeholder-color {
                         color: $gray-vlight;
                     }
                 }
@@ -654,7 +654,7 @@ body {
             top: 50%;
             margin-top: -16px;
             border: none;
-            padding: 10px 10px;
+            padding: 10px;
             background-color: transparent;
             outline: none;
             text-align: center;
@@ -678,7 +678,7 @@ body {
                     transform-origin: 10% 90%;
                     @include nice-transform(rotate(-45deg));
                 }
-                &+.icon-bar {
+                + .icon-bar {
                     margin-top: 4px;
                 }
             }

@@ -113,7 +113,7 @@
                 border: 1px solid $color-border;
                 border-bottom-color: $color-white;
                 border-top-color: $color-primary;
-                padding: 9px 14px 10px 14px;
+                padding: 9px 14px 10px;
                 cursor: default;
                 color: $color-black;
 
@@ -163,7 +163,7 @@
             }
             &.current {
                 a {
-                    padding: 4px 9px 5px 9px;
+                    padding: 4px 9px 5px;
 
                     &.icon {
                         padding-left: 29px;
@@ -209,7 +209,6 @@
             a {
                 &.icon {
                     min-width: 80px;
-                    text-align: left;
                     padding: 25px 15px 5px;
                     text-align: center;
 
@@ -225,7 +224,7 @@
             }
             &.current {
                 a {
-                    padding: 9px 14px 10px 14px;
+                    padding: 9px 14px 10px;
 
                     &.icon {
                         padding: 24px 14px 5px;

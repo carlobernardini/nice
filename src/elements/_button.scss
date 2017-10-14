@@ -4,18 +4,18 @@
     border: 1px solid $color-border;
     background-color: $color-white;
     padding: 5px 10px;
-    text-decoration:none;
+    text-decoration: none;
     outline-style: none;
     text-align: center;
     cursor: pointer;
     margin: 0;
+    user-select: none;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
     @include nice-border-radius($radius-normal);
     @include nice-transition(border 0.1s, background 0.1s);
     @include nice-font-size(14px);
     @extend %display-inline-block;
-    @extend %disable-user-select;
 
     &:hover,
     &:focus {
@@ -47,7 +47,7 @@
         }
     }
     &.icon {
-        &::before {
+        &:before {
             margin-right: 5px;
         }
         &.text-bold {
@@ -76,8 +76,6 @@
     }
     @each $type in (brand, primary, accent, info, good, warning, bad) {
         &.#{$type} {
-            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
-            color: darken(map-get($color-scheme, #{$type}), 20%);
             border-color: lighten(map-get($color-scheme, #{$type}), 5%);    
             color: $color-white;
             background-color: map-get($color-scheme, #{$type});

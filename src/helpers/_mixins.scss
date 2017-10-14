@@ -9,11 +9,11 @@
 
 @mixin nice-font ($style: null, $variant: null, $weight: null, $size: null, $family: null) {
     font: {
-      family: $family;
-      style: $style;
-      variant: $variant;
-      weight: $weight;
-      size: $size;
+        family: $family;
+        style: $style;
+        variant: $variant;
+        weight: $weight;
+        size: $size;
     }
 }
 
@@ -28,31 +28,19 @@
 }
 
 @mixin nice-transform ($params...) {
-    -webkit-transform:  $params;
-       -moz-transform:  $params;
-        -ms-transform:  $params;
-         -o-transform:  $params;
-            transform:  $params;
+    transform: $params;
 }
 
 @mixin nice-box-sizing ($param) {
-    -webkit-box-sizing: $param;
-        moz-box-sizing: $param;
-            box-sizing: $param;
+    box-sizing: $param;
 }
 
 @mixin nice-transition ($params...) {
-    -webkit-transition: $params;
-       -moz-transition: $params;
-        -ms-transition: $params;
-         -o-transition: $params;
-            transition: $params;
+    transition: $params;
 }
 
 @mixin nice-box-shadow ($params...) {
-    -webkit-box-shadow: $params;
-       -moz-box-shadow: $params;
-            box-shadow: $params;
+    box-shadow: $params;
 }
 
 @mixin nice-text-shadow ($params...) {
@@ -60,104 +48,73 @@
 }
 
 @mixin nice-border-radius ($radiuses: null, $top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
-    -webkit-border-radius: $radiuses;
-       -moz-border-radius: $radiuses;
-            border-radius: $radiuses;
-    -webkit-border-top-left-radius: $top-left;
-        -moz-border-radius-topleft: $top-left;
-            border-top-left-radius: $top-left;
-    -webkit-border-top-right-radius: $top-right;
-        -moz-border-radius-topright: $top-right;
-            border-top-right-radius: $top-right;
-    -webkit-border-bottom-right-radius: $bottom-right;
-        -moz-border-radius-bottomright: $bottom-right;
-            border-bottom-right-radius: $bottom-right;
-    -webkit-border-bottom-left-radius: $bottom-left;
-        -moz-border-radius-bottomleft: $bottom-left;
-            border-bottom-left-radius: $bottom-left;
-    -webkit-background-clip: padding-box; 
-       -moz-background-clip: padding; 
-            background-clip: padding-box;
+    border-radius: $radiuses;
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-right-radius: $bottom-right;
+    border-bottom-left-radius: $bottom-left;
+    background-clip: padding-box;
 }
 
 @mixin nice-opacity ($transparency) {
-    -khtml-opacity: $transparency;
-      -moz-opacity: $transparency;
-           opacity: $transparency;
-       $opacity-ie: $transparency * 100;
-            filter: alpha(opacity=$opacity-ie);
+    opacity: $transparency;
 }
 
 @mixin nice-background-size ($param) {
-     -webkit-background-size: $param;
-        -moz-background-size: $param;
-          -o-background-size: $param;
-             background-size: $param;
+    background-size: $param;
 }
 
-@mixin nice-user-select ($param) {
-    -webkit-user-select: $param;
-       -moz-user-select: $param;
-        -ms-user-select: $param;
-         -o-user-select: $param;
-            user-select: $param;
-}
 @mixin nice-appearance ($param) {
-    -webkit-appearance: $param;
-       -moz-appearance: $param;
-            appearance: $param;
+    appearance: $param;
 }
 
 @mixin nice-placeholder-color {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
 }
 
 @mixin nice-scrollbar(
-  $track-color: $color-white, 
-  $track-radius: $radius-normal, 
-  $thumb-color: rgba($color-black, .5), 
-  $thumb-radius: $radius-normal, 
-  $size-vertical: 6px, 
-  $size-horizontal: $size-vertical,
-  $zIndex: 999,
-  $appearance: none
+    $track-color: $color-white, 
+    $track-radius: $radius-normal, 
+    $thumb-color: rgba($color-black, .5), 
+    $thumb-radius: $radius-normal, 
+    $size-vertical: 6px, 
+    $size-horizontal: $size-vertical,
+    $zIndex: 999,
+    $appearance: none
 ) {
-  &::-webkit-scrollbar {
-      z-index: $zIndex;
-      webkit-appearance: $appearance;
+    &::-webkit-scrollbar {
+        z-index: $zIndex;
+        webkit-appearance: $appearance;
 
-      &:vertical {
-        width: $size-vertical;
-      }
-      &:horizontal {
-        width: $size-horizontal;
-      }
-  }
-  &::-webkit-scrollbar-thumb {
-      background-color: $thumb-color;
-      @include nice-border-radius($thumb-radius);
-  }
-  &::-webkit-scrollbar-track { 
-      background-color: $track-color; 
-      @include nice-border-radius($track-radius);
-  }
+        &:vertical {
+            width: $size-vertical;
+        }
+        &:horizontal {
+            width: $size-horizontal;
+        }
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $thumb-color;
+        @include nice-border-radius($thumb-radius);
+    }
+    &::-webkit-scrollbar-track { 
+        background-color: $track-color; 
+        @include nice-border-radius($track-radius);
+    }
 }
 
 @mixin nice-linear-gradient ($color-from, $color-to) {
-    background: -webkit-linear-gradient($color-from, $color-to);
-    background: -o-linear-gradient($color-from, $color-to);
-    background: -moz-linear-gradient($color-from, $color-to);
     background: linear-gradient($color-from, $color-to);
 }
 

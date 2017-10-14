@@ -273,7 +273,7 @@ textarea {
  * Normalize <select /> appearance across browsers
  * Target Webkit-browsers only
  **/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
     select {
         &.nice-form-control {
             background: $color-white url($select-caret-base64) no-repeat right 50%;

@@ -4,10 +4,13 @@
 var     gulp = require('gulp'),
         sass = require('gulp-sass'),
         rename = require('gulp-rename'),
+        stylelint = require('gulp-stylelint'),
         autoprefixer = require('gulp-autoprefixer');
 
 var scssIncludes = [
-    './node_modules/font-awesome/scss'
+    './node_modules/font-awesome/scss',
+    './node_modules/bourbon/app/assets/stylesheets',
+    './node_modules/bourbon-neat/app/assets/stylesheets'
 ];
 
 var autoprefixerOptions = {
@@ -25,6 +28,17 @@ gulp.task('icons', function(){
 gulp.task('fonts', function(){
     return gulp.src('./src/fonts/**/*.{eot,svg,ttf,otf,woff}')
         .pipe(gulp.dest('./dist/fonts'));
+});
+gulp.task('lint', function(){
+    return gulp.src('./src/**/*.scss')
+        .pipe(stylelint({
+            syntax: "scss",
+            debug: false,
+            reporters: [{
+                formatter: "string",
+                console: true
+            }]
+        }));
 });
 gulp.task('compile', function(){
     return gulp.src('./src/**/*.scss')

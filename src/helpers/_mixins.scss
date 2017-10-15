@@ -49,10 +49,12 @@
 
 @mixin nice-border-radius ($radiuses: null, $top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
     border-radius: $radiuses;
+    /* stylelint-disable */
     border-top-left-radius: $top-left;
     border-top-right-radius: $top-right;
     border-bottom-right-radius: $bottom-right;
     border-bottom-left-radius: $bottom-left;
+    /* stylelint-enable */
     background-clip: padding-box;
 }
 
@@ -69,20 +71,12 @@
 }
 
 @mixin nice-placeholder-color {
-    &::-webkit-input-placeholder {
-        @content;
-    }
-    &:-moz-placeholder {
-        @content;
-    }
-    &::-moz-placeholder {
-        @content;
-    }
-    &:-ms-input-placeholder {
+    &::placeholder {
         @content;
     }
 }
 
+/* stylelint-disable */
 @mixin nice-scrollbar(
     $track-color: $color-white, 
     $track-radius: $radius-normal, 
@@ -113,6 +107,7 @@
         @include nice-border-radius($track-radius);
     }
 }
+/* stylelint-enable */
 
 @mixin nice-linear-gradient ($color-from, $color-to) {
     background: linear-gradient($color-from, $color-to);

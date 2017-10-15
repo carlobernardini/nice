@@ -112,6 +112,7 @@
                     @include nice-border-radius($radius-normal);
                     @include nice-scrollbar($track-color: lighten($color-brand, 15%));
 
+                    /* stylelint-disable */
                     &::-webkit-scrollbar {
                         z-index: 999;
                         appearance: none;
@@ -131,6 +132,7 @@
                         background-color: lighten($color-brand, 15%); 
                         @include nice-border-radius($radius-normal);
                     }
+                    /* stylelint-enable */
 
                     li {
                         a {

@@ -5,11 +5,11 @@
     background-color: $color-white;
     padding: 5px 10px;
     text-decoration: none;
-    outline-style: none;
     text-align: center;
     cursor: pointer;
     margin: 0;
     user-select: none;
+    outline: none;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
     @include nice-border-radius($radius-normal);
@@ -24,10 +24,9 @@
         background-color: $gray-vlight;
     }
     &:focus {
-        outline-style: auto;
+        border: 1px solid $color-brand;
     }
     &:active {
-        border: 1px solid darken($color-border, 15%);
         background: $gray-light;
         @include nice-box-shadow(inset 0px 2px 1px rgba($gray-medium, 1));
     }
@@ -76,7 +75,6 @@
     }
     @each $type in (brand, primary, accent, info, good, warning, bad) {
         &.#{$type} {
-            border-color: lighten(map-get($color-scheme, #{$type}), 5%);    
             color: $color-white;
             background-color: map-get($color-scheme, #{$type});
             border: none;

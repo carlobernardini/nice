@@ -13,14 +13,6 @@ var scssIncludes = [
     './node_modules/bourbon-neat/app/assets/stylesheets'
 ];
 
-var autoprefixerOptions = {
-    browsers: [
-        'last 2 versions',
-        'ie >= 10',
-        '> 5%'
-    ]
-};
-
 gulp.task('icons', function(){
     return gulp.src('./node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('./dist/fonts'))
@@ -32,6 +24,7 @@ gulp.task('fonts', function(){
 gulp.task('lint', function(){
     return gulp.src('./src/**/*.scss')
         .pipe(stylelint({
+            failAfterError: true,
             syntax: "scss",
             debug: false,
             reporters: [{
@@ -46,7 +39,7 @@ gulp.task('compile', function(){
             includePaths: scssIncludes
         }).on('error', sass.logError))
         .pipe(rename('nice.css'))
-        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('./dist'));
 });
 gulp.task('compile-min', function(){
@@ -56,7 +49,7 @@ gulp.task('compile-min', function(){
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename('nice.min.css'))
-        .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(autoprefixer())
         .pipe(gulp.dest('./dist'));
 });
 gulp.task('docs', function(){
@@ -68,7 +61,7 @@ gulp.task('docs', function(){
         .pipe(rename('docs.min.css'))
         .pipe(gulp.dest('./docs'));
 });
-gulp.task('default', ['icons', 'fonts', 'compile', 'compile-min']);
+gulp.task('default', ['icons', 'fonts', 'lint', 'compile', 'compile-min']);
 
 gulp.task('watch', function(){
     gulp.watch('./src/**/*.scss', ['default']);

@@ -4,6 +4,7 @@
       ],
     "extends": "stylelint-config-recommended-scss",
     "rules": {
+        "length-zero-no-unit": true,
         "block-no-empty": true,
         "max-empty-lines": 5,
         "indentation": 4,

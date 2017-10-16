@@ -1,11 +1,12 @@
 @charset 'UTF-8';
 
+@import 'layout/neat';
+
 // Themes
 @import 'themes/default';
 
 // Utilities
-@import 'neat',
-    'helpers/variables',
+@import 'helpers/variables',
     'helpers/mixins',
     'helpers/placeholders',
     'helpers/typography',

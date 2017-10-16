@@ -10,7 +10,6 @@
   "author": "Textkernel B.V.",
   "license": "MIT",
   "dependencies": {
-    "bourbon-neat": "1.9.0",
     "font-awesome": "4.7.0"
   },
   "devDependencies": {

@@ -4,6 +4,7 @@
       ],
     "extends": "stylelint-config-recommended-scss",
     "rules": {
+        "no-missing-end-of-source-newline": true,
         "length-zero-no-unit": true,
         "block-no-empty": true,
         "max-empty-lines": 5,

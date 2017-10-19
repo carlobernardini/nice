@@ -7,7 +7,7 @@
     border: 1px solid $color-brand;
     background-color: $color-white;
     @include nice-box-shadow(0 2px 6px rgba(0,0,0,.1));
-    @include nice-border-radius($radius-normal * 2);
+    @include nice-border-radius($radius-normal);
 
     .nice-login-brand {
         margin: -15px -15px 15px;

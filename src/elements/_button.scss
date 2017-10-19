@@ -27,7 +27,7 @@
         border: 1px solid $color-brand;
     }
     &:active {
-        background: $gray-light;
+        background-color: $gray-light;
         @include nice-box-shadow(inset 0 2px 1px rgba($gray-medium, 1));
     }
     &[disabled],

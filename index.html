@@ -390,7 +390,6 @@
                     <i class="product-icon tkportal" title="product-icon tkportal"></i>
                     <i class="product-icon connector" title="product-icon connector"></i>
                     <i class="product-icon textkernel" title="product-icon textkernel"></i>
-                    <i class="additional-icon frontify" title="additional-icon frontify"></i>
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
                     <code class="docs">&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">extract</span>&quot;&gt;&lt;/i&gt;
@@ -402,8 +401,7 @@
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">wte</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">tkportal</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">connector</span>&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;<span class="main">additional-icon</span> <span class="variation">frontify</span>&quot;&gt;&lt;/i&gt;</code>
+&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;</code>
                 </div>
             </div>
             <div class="nice-row" id="nice-grid-system">
@@ -3154,7 +3152,8 @@
             <div class="nice-row" id="nice-browser-support">
                 <h2 class="docs">Browser support</h2>
                 <p>
-                    Nice! supports Internet Explorer 9 and newer versions, except for specific modules such as Flexbox that are only supported in modern browsers. It is designed to deliver an equally consistent appearance on browsers that do not support CSS3. Please check <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">this reference</a> for a detailed overview of CSS3 browser support.
+                    Nice! supports Internet Explorer 10 and newer versions except for specific modules such as Flexbox that are only supported in modern browsers. From version 1.3.0 onwards you should use <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> in your build process to apply any vendor prefixes (e.g. <code class="inline">-webkit-, -moz-, -ms-</code>) required by different (older) browsers. It's included with Nice!'s default build script.<br />
+                    Please check <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">this reference</a> for a detailed overview of CSS3 browser support.
                 </p>
                 <table class="nice-table bordered striped">
                     <thead>

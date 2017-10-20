@@ -2,7 +2,7 @@ body {
     color: $color-text;
     background-color: $gray-vlight;
     font-family: $fonts-primary;
-    font-weight: $default-font-weight;
+    font-weight: $font-weight;
     text-rendering: geometricPrecision;
     line-height: 1.5;
     @include nice-font-size(14px);
@@ -17,7 +17,7 @@ a {
     }
 }
 p {
-    margin: 0 0 15px 0;
+    margin: 0 0 15px;
 }
 strong {
     font-weight: 600;
@@ -33,20 +33,17 @@ pre {
     font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
     overflow: auto;
     @include nice-font-size(14px);
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
 }
 .icon {
-    &::before {
+    font-style: normal;
+
+    &:before {
         font-family: FontAwesome;
     }
 }
-i {
-    &.icon {
-        font-style: normal;
-    }
-}
 .nice-responsive-container {
-    overflow:auto;
+    overflow: auto;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     margin-bottom: 15px;

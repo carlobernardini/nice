@@ -29,11 +29,10 @@
 
 @include col(false, false);
 
-
 @each $bp, $size, $alias in ($desktop, desktop, large), 
-                    ($tablet, tablet, medium), 
-                    ($mobile-and-tablet, mobile-and-tablet, medium-and-small),
-                    ($mobile, mobile, small) {
+    ($tablet, tablet, medium), 
+    ($mobile-and-tablet, mobile-and-tablet, medium-and-small),
+    ($mobile, mobile, small) {
     @include media($bp) {
         .nice-#{$size}-hide, .nice-#{$alias}-hide {
             display: none;

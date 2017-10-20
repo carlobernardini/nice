@@ -179,7 +179,7 @@ body {
         li {
             list-style: none;
             display: block;
-            float:left;
+            float: left;
             position: relative;
 
             a, span {
@@ -303,8 +303,8 @@ body {
                     > a, > span {
                         &:after {
                             color: $color-white;
-                            @include animation(flip .15s linear forwards);
-                            @include animation-iteration-count(1);
+                            animation: flip .15s linear forwards;
+                            animation-iteration-count: 1;
                         }
                     }
                 }
@@ -312,7 +312,7 @@ body {
                     &:hover {
                         > a, > span {
                             &:after {
-                                @include animation(flip-opposite .15s linear forwards);
+                                animation: flip-opposite .15s linear forwards;
                             }
                         }
                     }
@@ -350,7 +350,7 @@ body {
                     @include nice-font($family: $fonts-primary);
                     @include nice-font-size(12px);
                     @include nice-transition(color .1s, background-color .1s);
-                    @include nice-border-radius($default-radius * 5);
+                    @include nice-border-radius($radius-normal * 5);
                     @include nice-line-height(28px);
 
                     &:hover {
@@ -376,7 +376,7 @@ body {
                 }
                 &:last-child {
                     > a {
-                        @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
+                        @include nice-border-radius($top-right: $radius-normal * 5, $bottom-right: $radius-normal * 5);
                     }
                 }
             }
@@ -460,7 +460,7 @@ body {
                         color: $color-white;
                         @include nice-transition(background-color .1s, color .1s);
 
-                        &::before {
+                        &:before {
                             display: -moz-inline-stack;
                             display: inline-block;
                             *display: inline-block;
@@ -585,12 +585,12 @@ body {
                         }
                         &:first-child {
                             a {
-                                @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius, $bottom-left: 0);
+                                @include nice-border-radius($top-left: $radius-normal, $top-right: $radius-normal, $bottom-left: 0);
                             }
                         }
                         &:last-child {
                             a {
-                                @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius);
+                                @include nice-border-radius($bottom-left: $radius-normal, $bottom-right: $radius-normal);
                             }
                         }
                         ul {
@@ -637,7 +637,7 @@ body {
                     width: 100%;
                     margin-left: 0;
                     @include nice-box-shadow(none);
-                        @include nice-placeholder-color {
+                    @include nice-placeholder-color {
                         color: $gray-vlight;
                     }
                 }
@@ -654,7 +654,7 @@ body {
             top: 50%;
             margin-top: -16px;
             border: none;
-            padding: 10px 10px;
+            padding: 10px;
             background-color: transparent;
             outline: none;
             text-align: center;
@@ -678,7 +678,7 @@ body {
                     transform-origin: 10% 90%;
                     @include nice-transform(rotate(-45deg));
                 }
-                &+.icon-bar {
+                + .icon-bar {
                     margin-top: 4px;
                 }
             }

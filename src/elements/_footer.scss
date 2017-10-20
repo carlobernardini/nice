@@ -3,7 +3,7 @@ html {
     min-height: 100%;
 
     body {
-        margin-bottom: $default-footer-height;
+        margin-bottom: $footer-height;
         padding-bottom: 15px;
 
         .nice-footer {
@@ -12,7 +12,7 @@ html {
             position: absolute;
             left: 0;
             bottom: 0;
-            height: $default-footer-height;
+            height: $footer-height;
             overflow: hidden;
             width: 100%;
 
@@ -77,7 +77,7 @@ html {
 
             &.expanded {
                 .nice-footer {
-                    bottom: -$default-footer-height;
+                    bottom: -$footer-height;
                 }
             }
         }

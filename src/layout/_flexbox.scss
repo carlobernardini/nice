@@ -18,30 +18,30 @@ $item-grow: (
 );
 
 .nice-flex-container {
-    @include display(flex);
+    display: flex;
     @each $name, $alignment in $alignments {
         &.align-#{$name} {
-            @include align-items($alignment);
+            align-items: $alignment;
         }
     }
     @each $direction in (row, row-reverse, column, column-reverse) {
         &.direction-#{$direction} {
-            @include flex-direction($direction);
+            flex-direction: $direction;
         }
     }
     @each $name, $value in $justifications {
         &.justify-#{$name} {
-            @include justify-content($value);
+            justify-content: $value;
         }
     }
     @each $name, $value in $item-grow {
-        >.grow-#{$name} {
-            @include flex-grow($value);
+        > .grow-#{$name} {
+            flex-grow: $value;
         }
     }
     @each $value in (no-wrap, wrap, wrap-reverse) {
         &.#{$value} {
-            @include flex-wrap($value);
+            flex-wrap: $value;
         }
     }
 }

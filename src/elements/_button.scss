@@ -4,18 +4,18 @@
     border: 1px solid $color-border;
     background-color: $color-white;
     padding: 5px 10px;
-    text-decoration:none;
-    outline-style: none;
+    text-decoration: none;
     text-align: center;
     cursor: pointer;
     margin: 0;
+    user-select: none;
+    outline: none;
     @include nice-font($family: $fonts-primary);
     @include nice-line-height(20px);
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
     @include nice-transition(border 0.1s, background 0.1s);
     @include nice-font-size(14px);
     @extend %display-inline-block;
-    @extend %disable-user-select;
 
     &:hover,
     &:focus {
@@ -24,12 +24,11 @@
         background-color: $gray-vlight;
     }
     &:focus {
-        outline-style: auto;
+        border: 1px solid $color-brand;
     }
     &:active {
-        border: 1px solid darken($color-border, 15%);
-        background: $gray-light;
-        @include nice-box-shadow(inset 0px 2px 1px rgba($gray-medium, 1));
+        background-color: $gray-light;
+        @include nice-box-shadow(inset 0 2px 1px rgba($gray-medium, 1));
     }
     &[disabled],
     &.disabled {
@@ -47,7 +46,7 @@
         }
     }
     &.icon {
-        &::before {
+        &:before {
             margin-right: 5px;
         }
         &.text-bold {
@@ -76,9 +75,6 @@
     }
     @each $type in (brand, primary, accent, info, good, warning, bad) {
         &.#{$type} {
-            background-color: lighten(map-get($color-scheme, #{$type}), 35%);
-            color: darken(map-get($color-scheme, #{$type}), 20%);
-            border-color: lighten(map-get($color-scheme, #{$type}), 5%);    
             color: $color-white;
             background-color: map-get($color-scheme, #{$type});
             border: none;
@@ -89,7 +85,7 @@
                 background-color: lighten(map-get($color-scheme, #{$type}), 5%);
             }
             &:active {
-                @include nice-box-shadow(inset 0px 2px 1px darken(map-get($color-scheme, #{$type}), 5%));
+                @include nice-box-shadow(inset 0 2px 1px darken(map-get($color-scheme, #{$type}), 5%));
             }
             &[disabled],
             &.disabled {
@@ -109,12 +105,12 @@
     &.small {
         padding: 3px 5px;
         @include nice-line-height(15px);
-        @include nice-font-size($default-font-size-small);
+        @include nice-font-size($font-size-small);
     }
     &.large {
         padding: 0 15px;
         @include nice-line-height(42px);
-        @include nice-font-size($default-font-size-large);
+        @include nice-font-size($font-size-large);
     }
     &.bold {
         font-weight: 600;
@@ -128,7 +124,7 @@
     @include nice-font($family: $fonts-primary);
     @include nice-font-size(12px);
     @include nice-transition(color .1s, background-color .1s);
-    @include nice-border-radius($default-radius * 5);
+    @include nice-border-radius($radius-normal * 5);
 
     &:hover {
         background-color: $color-link;
@@ -154,13 +150,13 @@
                 @include nice-border-radius(0);
             }
             &:first-child {
-                @include nice-border-radius($default-radius 0 0 $default-radius);
+                @include nice-border-radius($radius-normal 0 0 $radius-normal);
             }
             &:last-child {
-                @include nice-border-radius(0 $default-radius $default-radius 0);
+                @include nice-border-radius(0 $radius-normal $radius-normal 0);
             }
             &:first-child:last-child {
-                @include nice-border-radius($default-radius);
+                @include nice-border-radius($radius-normal);
             }
             + .nice-btn,
             + .nice-dropdown {
@@ -181,10 +177,10 @@
             @include nice-border-radius(0);
 
             &:first-child {
-                @include nice-border-radius($top-left: $default-radius * 5, $bottom-left: $default-radius * 5);
+                @include nice-border-radius($top-left: $radius-normal * 5, $bottom-left: $radius-normal * 5);
             }
             &:last-child {
-                @include nice-border-radius($top-right: $default-radius * 5, $bottom-right: $default-radius * 5);
+                @include nice-border-radius($top-right: $radius-normal * 5, $bottom-right: $radius-normal * 5);
             }
             + .nice-btn-alt {
                 margin-left: 1px;
@@ -202,10 +198,10 @@
                 margin-left: 0;
 
                 &:first-child {
-                    @include nice-border-radius($default-radius $default-radius 0 0);
+                    @include nice-border-radius($radius-normal $radius-normal 0 0);
                 }
                 &:last-child {
-                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                    @include nice-border-radius(0 0 $radius-normal $radius-normal);
                 }
                 + .nice-btn {
                     margin-top: -1px;

@@ -26,10 +26,10 @@
             }
         }
         &:first-child {
-            @include nice-border-radius($top-left: $default-radius, $top-right: $default-radius);
+            @include nice-border-radius($top-left: $radius-normal, $top-right: $radius-normal);
         }
         &:last-child {
-            @include nice-border-radius($bottom-left: $default-radius, $bottom-right: $default-radius);
+            @include nice-border-radius($bottom-left: $radius-normal, $bottom-right: $radius-normal);
         }
     }
     .nice-panel-content {

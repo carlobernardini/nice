@@ -1,7 +1,10 @@
 {
     "plugins": [
         "stylelint-scss"
-      ],
+    ],
+    "ignoreFiles": [
+        "./src/fonts/font-awesome/**/*.scss"
+    ],
     "extends": "stylelint-config-recommended-scss",
     "rules": {
         "unit-case": "lower",

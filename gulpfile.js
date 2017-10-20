@@ -7,16 +7,8 @@ var     gulp = require('gulp'),
         stylelint = require('gulp-stylelint'),
         autoprefixer = require('gulp-autoprefixer');
 
-var scssIncludes = [
-    './node_modules/font-awesome/scss'
-];
-
-gulp.task('icons', function(){
-    return gulp.src('./node_modules/font-awesome/fonts/*')
-        .pipe(gulp.dest('./dist/fonts'))
-});
 gulp.task('fonts', function(){
-    return gulp.src('./src/fonts/**/*.{eot,svg,ttf,otf,woff}')
+    return gulp.src('./src/fonts/**/*.{eot,svg,ttf,otf,woff,woff2}')
         .pipe(gulp.dest('./dist/fonts'));
 });
 gulp.task('lint', function(){
@@ -33,9 +25,7 @@ gulp.task('lint', function(){
 });
 gulp.task('compile', function(){
     return gulp.src('./src/**/*.scss')
-        .pipe(sass({
-            includePaths: scssIncludes
-        }).on('error', sass.logError))
+        .pipe(sass().on('error', sass.logError))
         .pipe(rename('nice.css'))
         .pipe(autoprefixer())
         .pipe(gulp.dest('./dist'));
@@ -43,7 +33,6 @@ gulp.task('compile', function(){
 gulp.task('compile-min', function(){
     return gulp.src('./src/**/*.scss')
         .pipe(sass({
-            includePaths: scssIncludes,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename('nice.min.css'))
@@ -59,7 +48,7 @@ gulp.task('docs', function(){
         .pipe(rename('docs.min.css'))
         .pipe(gulp.dest('./docs'));
 });
-gulp.task('default', ['icons', 'fonts', 'lint', 'compile', 'compile-min']);
+gulp.task('default', ['fonts', 'lint', 'compile', 'compile-min']);
 
 gulp.task('watch', function(){
     gulp.watch('./src/**/*.scss', ['default']);

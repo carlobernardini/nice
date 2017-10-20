@@ -9,9 +9,7 @@
   },
   "author": "Textkernel B.V.",
   "license": "MIT",
-  "dependencies": {
-    "font-awesome": "4.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "3.9.1",
     "gulp-autoprefixer": "4.0.0",

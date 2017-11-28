@@ -42,6 +42,7 @@
         z-index: 4;
         @include nice-border-radius($radius-normal);
         @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
+        animation: slide-in-down .15s ease-out forwards;
 
         &.shown {
             display: block;

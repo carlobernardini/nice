@@ -206,6 +206,7 @@ body {
                 left: 0;
                 background-color: $color-accent;
                 padding: 0;
+                animation: slide-in-down .15s ease-out forwards;
 
                 .multi-column {
                     float: none;

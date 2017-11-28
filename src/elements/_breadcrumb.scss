@@ -37,6 +37,7 @@
             left: 0;
             top: 100%;
             @include nice-border-radius(0 0 $radius-normal $radius-normal);
+            animation: slide-in-down .15s ease-out forwards;
         }
         &:hover {
             > ul {

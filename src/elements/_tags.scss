@@ -110,29 +110,7 @@
                     overflow: hidden;
                     overflow-y: auto;
                     @include nice-border-radius($radius-normal);
-                    @include nice-scrollbar($track-color: lighten($color-brand, 15%));
-
-                    /* stylelint-disable */
-                    &::-webkit-scrollbar {
-                        z-index: 999;
-                        appearance: none;
-
-                        &:vertical {
-                            width: 6px;
-                        }
-                        &:horizontal {
-                            height: 6px;
-                        }
-                    }
-                    &::-webkit-scrollbar-thumb {
-                        background-color: rgba(0, 0, 0, .5);
-                        @include nice-border-radius($radius-normal);
-                    }
-                    &::-webkit-scrollbar-track { 
-                        background-color: lighten($color-brand, 15%); 
-                        @include nice-border-radius($radius-normal);
-                    }
-                    /* stylelint-enable */
+                    animation: slide-in-down .15s ease-out forwards;
 
                     li {
                         a {
@@ -183,7 +161,6 @@
                     .nice-tag-dropdown {
                         ul {
                             background-color: map-get($color-scheme, #{$type});
-                            @include nice-scrollbar($track-color: lighten(map-get($color-scheme, #{$type}), 15%), $size-vertical: null, $size-horizontal: null, $appearance: null, $zIndex: null, $thumb-radius: null, $track-radius: null);
 
                             li {
                                 a {

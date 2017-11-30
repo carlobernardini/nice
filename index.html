@@ -1815,54 +1815,66 @@
                 <h2 class="docs">Stepper</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <div class="nice-stepper">
-                        <ol class="nice-stepper-flow">
-                            <li class="nice-stepper-step bad">
-                                <span class="nice-stepper-bullet">
-                                    <i class="icon fa-warning"></i>
-                                </span>
-                                <a href="javascript:;" class="nice-stepper-label">
-                                    First step
-                                    <small>We have a problem here</small>
-                                </a>
-                            </li>
-                            <li class="nice-stepper-divider"></li>
-                            <li class="nice-stepper-step active">
-                                <span class="nice-stepper-bullet">
-                                    2
-                                </span>
-                                <a href="javascript:;" class="nice-stepper-label">
-                                    Second step
-                                    <small>Optional</small>
-                                </a>
-                            </li>
-                            <li class="nice-stepper-divider"></li>
-                            <li class="nice-stepper-step">
-                                <span class="nice-stepper-bullet">
-                                    3
-                                </span>
-                                <a href="javascript:;" class="nice-stepper-label">
-                                    Summary
-                                </a>
-                            </li>
-                        </ol>
-                        <div class="nice-stepper-body">
-                            <form>
-                                <div class="nice-form-group">
-                                    <label for="demo-input-7">Some label</label>
-                                    <input type="text" placeholder="Nice input..." class="nice-form-control" id="demo-input-7">
-                                </div>
-                            </form>
+                        <div class="nice-stepper-title">
+                            <i class="fa fa-magic"></i>
+                            Wizard
+                        </div>
+                        <div class="nice-stepper-content">
+                            <ol class="nice-stepper-steps">
+                                <li class="nice-stepper-step step-past">
+                                    <a href="javascript:;" class="step-container">
+                                        <div class="step-bullet">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="step-label">
+                                            First step
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nice-stepper-step step-past step-previous">
+                                    <a href="javascript:;" class="step-container">
+                                        <div class="step-bullet">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="step-label">
+                                            Second step
+                                            <small>
+                                                Optional
+                                            </small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nice-stepper-step step-current">
+                                    <a href="javascript:;" class="step-container">
+                                        <div class="step-bullet">
+                                            3
+                                        </div>
+                                        <div class="step-label">
+                                            Last step
+                                        </div>
+                                    </a>
+                                </li>
+                            </ol>
+                            <div class="nice-stepper-body">
+                                <p>
+                                    Here goes your content.
+                                </p>
+                            </div>
                         </div>
                         <div class="nice-stepper-footer">
-                            <button class="nice-btn">
-                                Cancel
-                            </button>
-                            <div class="nice-btn-group pull-right">
-                                <button class="nice-btn">
-                                    Previous step
-                                </button>
-                                <button class="nice-btn brand">
-                                    Next step
+                            <div class="stepper-footer-left">
+                                <div class="nice-btn-group">
+                                    <button type="button" class="nice-btn">
+                                        Previous
+                                    </button>
+                                    <button type="button" class="nice-btn" disabled>
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="stepper-footer-right">
+                                <button type="button" class="nice-btn primary">
+                                    Done
                                 </button>
                             </div>
                         </div>
@@ -1874,54 +1886,66 @@
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-stepper</span>&quot;&gt;
-    &lt;ol class=&quot;<span class="main">nice-stepper-flow</span>&quot;&gt;
-        &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">active primary accent info good warning bad</span>&quot;&gt;
-            &lt;span class=&quot;<span class="main">nice-stepper-bullet</span>&quot;&gt;
-                &lt;i class=&quot;icon fa-warning&quot;&gt;&lt;/i&gt;
-            &lt;/span&gt;
-            &lt;a href=&quot;#&quot; class=&quot;<span class="main">nice-stepper-label</span>&quot;&gt;
-                First step
-                &lt;small&gt;We have a problem here&lt;/small&gt;
-            &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;<span class="main">nice-stepper-divider</span>&quot;&gt;&lt;/li&gt;
-        &lt;li class=&quot;nice-stepper-step active&quot;&gt;
-            &lt;span class=&quot;nice-stepper-bullet&quot;&gt;
-                2
-            &lt;/span&gt;
-            &lt;a href=&quot;#&quot; class=&quot;nice-stepper-label&quot;&gt;
-                Second step
-                &lt;small&gt;Optional&lt;/small&gt;
-            &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class=&quot;nice-stepper-divider&quot;&gt;&lt;/li&gt;
-        &lt;li class=&quot;nice-stepper-step&quot;&gt;
-            &lt;span class=&quot;nice-stepper-bullet&quot;&gt;
-                3
-            &lt;/span&gt;
-            &lt;a href=&quot;#&quot; class=&quot;nice-stepper-label&quot;&gt;
-                Summary
-            &lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ol&gt;
-    &lt;div class=&quot;<span class="main">nice-stepper-body</span>&quot;&gt;
-        &lt;form&gt;
-            &lt;div class=&quot;nice-form-group&quot;&gt;
-                &lt;label for=&quot;my-input&quot;&gt;Some label&lt;/label&gt;
-                &lt;input type=&quot;text&quot; placeholder=&quot;Nice input...&quot; class=&quot;nice-form-control&quot; id=&quot;my-input&quot;&gt;
-            &lt;/div&gt;
-        &lt;/form&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-title</span>&quot;&gt;
+        &lt;i class=&quot;fa fa-magic&quot;&gt;&lt;/i&gt;
+        Wizard
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-content</span>&quot;&gt;
+        &lt;ol class=&quot;<span class="main">nice-stepper-steps</span>&quot;&gt;
+            &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">step-past</span>&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="main">step-container</span>&quot;&gt;
+                    &lt;div class=&quot;<span class="main">step-bullet</span>&quot;&gt;
+                        &lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;<span class="main">step-label</span>&quot;&gt;
+                        First step
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">step-past step-previous</span>&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="main">step-container</span>&quot;&gt;
+                    &lt;div class=&quot;<span class="main">step-bullet</span>&quot;&gt;
+                        &lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;<span class="main">step-label</span>&quot;&gt;
+                        Second step
+                        <span class="variation">&lt;small&gt;</span>
+                            Optional
+                        <span class="variation">&lt;/small&gt;</span>
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">step-current</span>&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="main">step-container</span>&quot;&gt;
+                    &lt;div class=&quot;<span class="main">step-bullet</span>&quot;&gt;
+                        3
+                    &lt;/div&gt;
+                    &lt;div class=&quot;<span class="main">step-label</span>&quot;&gt;
+                        Last step
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;div class=&quot;<span class="main">nice-stepper-body</span>&quot;&gt;
+            &lt;p&gt;
+                Here goes your content.
+            &lt;/p&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;<span class="main">nice-stepper-footer</span>&quot;&gt;
-        &lt;button class=&quot;nice-btn&quot;&gt;
-            Cancel
-        &lt;/button&gt;
-        &lt;div class=&quot;nice-btn-group pull-right&quot;&gt;
-            &lt;button class=&quot;nice-btn&quot;&gt;
-                Previous step
-            &lt;/button&gt;
-            &lt;button class=&quot;nice-btn brand&quot;&gt;
-                Continue
+        &lt;div class=&quot;<span class="main">stepper-footer-left</span>&quot;&gt;
+            &lt;div class=&quot;nice-btn-group&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;nice-btn&quot;&gt;
+                    Previous
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;nice-btn&quot; disabled&gt;
+                    Next
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="main">stepper-footer-right</span>&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;nice-btn primary&quot;&gt;
+                Done
             &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;

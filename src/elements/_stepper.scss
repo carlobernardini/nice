@@ -1,100 +1,170 @@
 .nice-stepper {
+    font: {
+        family: $fonts-primary;
+    }
     background-color: $color-white;
-    padding: 15px;
+    border-radius: $radius-normal;
 
-    .nice-stepper-flow {
-        width: 100%;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        border-bottom: 1px solid $gray-light;
-        padding: 0 15px 15px;
-        margin: 0 -15px;
+    .nice-stepper-title {
+        padding: 15px;
+        border-bottom: 1px solid $color-border;
+        min-width: 250px;
+        font: {
+            weight: 600;
+            family: $fonts-primary;
+        }
+
+        i {
+            margin-right: 10px;
+        }
+    }
+    .nice-stepper-content {
+        display: table;
+
+        > * {
+            display: table-cell;
+        }
+    }
+    .nice-stepper-steps {
         position: relative;
-        box-sizing: content-box;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        vertical-align: top;
+        width: 1%;
+        overflow: hidden;
 
-        .nice-stepper-step {
-            align-items: center;
-            display: flex;
-            flex-direction: row;
-            padding: 0;
-            margin: 0;
-            font: {
-                size: $font-size-small;
-            }
-            .nice-stepper-bullet {
-                align-items: center;
-                display: inline-flex;
-                justify-content: center;
-                background-color: $gray-medium;
-                margin: 5px 5px 5px 0;
-                width: 30px;
-                height: 30px;
-                line-height: 30px;
-                text-align: center;
-                float: left;
-                @extend .nice-circle;
-            }
-            .nice-stepper-label {
-                align-items: flex-start;
-                display: flex;
-                flex-direction: column;
-                text-align: left;
-                color: $color-black;
+        &:before {
+            position: absolute;
+            left: 36px;
+            top: 20px;
+            bottom: 20px;
+            width: 1px;
+            content: '';
+            border-left: 1px solid $gray-light;
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            margin-top: -15px;
+            width: 100%;
+            height: 100%;
+            background-color: $color-white;
+        }
+    }
+    .nice-stepper-step {
+        position: relative;
+        z-index: 2;
+        padding: 15px;
+        display: block;
 
-                small {
-                    display: block;
-                    color: $color-muted;
-                }
+        .step-container {
+            display: table;
+            table-layout: fixed;
+            text-decoration: none;
+        }
+        .step-bullet {
+            color: $color-text;
+            display: table-cell;
+            vertical-align: middle;
+            background-color: $gray-light;
+            text-align: center;
+            height: 42px;
+            width: 42px;
+            min: {
+                height: 42px;
+                width: 42px;
             }
-            @each $type in (brand, primary, accent, info, good, warning, bad) {
-                &.#{$type} {
-                    .nice-stepper-bullet {
-                        background-color: map-get($color-scheme, #{$type});
-                        color: $color-white;
-                    }
-                }
+            max: {
+                height: 42px;
+                width: 42px;
             }
-            &.bad {
-                .nice-stepper-label {
-                    small {
-                        color: $color-bad;
-                    }
-                }
-            }
-            &.active {
+            border-radius: 50%;
+        }
+        .step-label {
+            padding-left: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            height: 32px;
+            white-space: nowrap;
+
+            small {
+                display: block;
+                color: $color-muted;
                 font: {
-                    weight: $font-weight-bold;
-                }
-                .nice-stepper-bullet {
-                    background-color: $color-brand;
-                    color: $color-white;
+                    weight: 400;
                 }
             }
         }
-        .nice-stepper-divider {
-            height: 1px;
-            display: block;
-            min-height: 1px;
-            width: 100%;
-            flex: 1 1 0%;
-            background-color: $gray-medium;
-            align-self: center;
-            margin: 0 5px;
+        &.step-past,
+        &.step-current {
+            .step-bullet {
+                background-color: $color-brand;
+                color: $color-white;
+            }
+        }
+        &.step-current {
+            .step-bullet {
+                background-color: $color-primary;
+                animation: stepper-bullet-in .5s forwards;
+                font: {
+                    weight: 600;
+                }
+            }
+            .step-label {
+                color: $color-black;
+                font: {
+                    weight: 600;
+                }
+            }
+        }
+        &.step-previous {
+            .step-bullet {
+                i {
+                    animation: scale-in .4s forwards;
+                }
+            }
         }
     }
     .nice-stepper-body {
-        padding: 15px 0;
+        width: 99%;
+        padding: 15px;
+        p {
+            margin: 0 0 15px;
+        }
     }
     .nice-stepper-footer {
-        border-top: 1px solid $gray-light;
+        border-top: 1px solid $color-border;
         padding: 15px;
-        margin: 0 -15px -15px;
+        text-align: right;
         @extend %clearfix;
 
+        .btn {
+            margin-top: 0;
+        }
+        .btn + .btn {
+            margin-left: 10px;
+        }
+    }
+    .stepper-footer-left,
+    .stepper-footer-right {
+        width: 50%;
+        margin: -15px;
+        padding: 15px;
+
+        > .nice-btn,
         .nice-btn-group {
             margin: 0;
         }
+        > .nice-btn + > .nice-btn {
+            margin-left: 5px;
+        }
+    }
+    .stepper-footer-left {
+        float: left;
+    }
+    .stepper-footer-right {
+        float: right;
+        text-align: right;
     }
 }

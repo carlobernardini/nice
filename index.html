@@ -1626,38 +1626,36 @@
                 <h2 class="docs">Tabs</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <p>
-                        <div class="nice-tabs-wrapper">
-                            <ul class="nice-tabs">
-                                <li class="current">
-                                    <a href="javascript:void(0);" class="icon fa-info">
-                                        First
-                                        <span class="nice-badge">
-                                            96
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="icon fa-question">
-                                        Second
-                                        <span class="nice-badge">
-                                            96
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="pull-right">
-                                    <a href="javascript:void(0);" class="icon fa-home">
-                                        Third
-                                    </a>
-                                </li>
-                                <li class="pull-right">
-                                    <a href="javascript:void(0);" class="icon fa-wrench">
-                                        Fourth
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="nice-tab-content text-align-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
-                            </div>
+                        <ul class="nice-tabs">
+                            <li class="current">
+                                <a href="javascript:void(0);" class="icon fa-info">
+                                    First
+                                    <span class="nice-badge">
+                                        96
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="icon fa-question">
+                                    Second
+                                    <span class="nice-badge">
+                                        96
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="pull-right">
+                                <a href="javascript:void(0);" class="icon fa-home">
+                                    Third
+                                </a>
+                            </li>
+                            <li class="pull-right">
+                                <a href="javascript:void(0);" class="icon fa-wrench">
+                                    Fourth
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="nice-tab-content text-align-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
                         </div>
                     </p>
                     <p>
@@ -1704,8 +1702,11 @@
                     </p>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Wrapping the tab panel inside <code class="inline">.nice-tabs-wrapper</code> is optional. You might not want to use it when integrating the tabs inside another component such as a panel or modal dialog.
+                    </p>
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
+                        <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt; &lt;!-- Wrapper is optional: omit when integrating the tab panel inside another component (e.g. modal or panel) --&gt;
     &lt;ul class=&quot;<span class="main">nice-tabs</span> <span class="variation">small bold</span>&quot;&gt;
         &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-home</span>&quot;&gt;

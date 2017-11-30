@@ -58,6 +58,14 @@
             > .nice-stepper {
                 margin: -15px;
             }
+            > .nice-tabs,
+            > .nice-tab-content {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            > .nice-tab-content {
+                margin-bottom: -15px;
+            }
         }
         .nice-modal-footer {
             padding: 15px;

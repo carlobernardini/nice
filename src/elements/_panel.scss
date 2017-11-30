@@ -34,6 +34,19 @@
     }
     .nice-panel-content {
         padding: 15px;
+
+        > .nice-stepper {
+            margin: -15px;
+        }
+        > .nice-tabs,
+        > .nice-tab-content {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        > .nice-tab-content {
+            margin-bottom: -15px;
+            @include nice-border-radius($bottom-left: $radius-normal, $bottom-right: $radius-normal);
+        }
     }
     > table {
         &.nice-table {

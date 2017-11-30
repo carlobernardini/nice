@@ -29,18 +29,44 @@
 
 @mixin nice-transform ($params...) {
     transform: $params;
+
+    @if not $autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-transform: $params;
+        -ms-tranform: $params;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-box-sizing ($param) {
     box-sizing: $param;
+
+    @if not $autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-box-sizing: $param;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-transition ($params...) {
     transition: $params;
+
+    @if not $autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-transition: $params;
+        -o-transition: $params;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-box-shadow ($params...) {
     box-shadow: $params;
+
+    @if not $autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-box-shadow: $params;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-text-shadow ($params...) {
@@ -56,6 +82,16 @@
     border-bottom-left-radius: $bottom-left;
     /* stylelint-enable */
     background-clip: padding-box;
+
+    @if not $autoprefixer {
+        /* stylelint-disable */
+        -webkit-border-radius: $radiuses;
+        -webkit-border-top-left-radius: $top-left;
+        -webkit-border-top-right-radius: $top-right;
+        -webkit-border-bottom-right-radius: $bottom-right;
+        -webkit-border-bottom-left-radius: $bottom-left;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-opacity ($transparency) {
@@ -64,10 +100,23 @@
 
 @mixin nice-background-size ($param) {
     background-size: $param;
+
+    @if not $autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-background-size: $param;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-appearance ($param) {
     appearance: $param;
+
+    @if not $autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-appearance: $param;
+        -moz-appearance: $param;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-placeholder-color {

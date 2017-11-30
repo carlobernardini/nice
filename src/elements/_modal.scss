@@ -54,6 +54,10 @@
         }
         .nice-modal-body {
             padding: 15px;
+
+            > .nice-stepper {
+                margin: -15px;
+            }
         }
         .nice-modal-footer {
             padding: 15px;

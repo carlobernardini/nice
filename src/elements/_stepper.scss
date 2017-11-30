@@ -106,7 +106,8 @@
         &.step-current {
             .step-bullet {
                 background-color: $color-primary;
-                animation: stepper-bullet-in .5s forwards;
+                @include nice-animation(stepper-bullet-in .5s forwards);
+
                 font: {
                     weight: 600;
                 }
@@ -121,7 +122,7 @@
         &.step-previous {
             .step-bullet {
                 i {
-                    animation: scale-in .4s forwards;
+                    @include nice-animation(scale-in .4s forwards);
                 }
             }
         }

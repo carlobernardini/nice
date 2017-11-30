@@ -1,3 +1,5 @@
+$login__easing: cubic-bezier(1.000, 0.185, 1.000, 0.980);
+
 .nice-login {
     display: block;
     width: 400px;
@@ -46,8 +48,7 @@
             bottom: 0;
             width: 50%;
             background-color: $color-primary;
-            animation: slide 3s cubic-bezier(1.000, 0.185, 1.000, 0.980);
-            animation-iteration-count: infinite;
+            @include nice-animation(slide 3s $login__easing 0s infinite);
             @include nice-border-radius($radius-normal);
         }
         &:after {
@@ -58,9 +59,7 @@
             bottom: 0;
             width: 50%;
             background-color: $color-info;
-            animation: slide 2s cubic-bezier(1.000, 0.185, 1.000, 0.980);
-            animation-iteration-count: infinite;
-            animation-delay: 1.5s;
+            @include nice-animation(slide 2s $login__easing 1.5s infinite);
             @include nice-border-radius($radius-normal);
         }
         &.shown {

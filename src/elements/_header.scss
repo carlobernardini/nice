@@ -206,7 +206,7 @@ body {
                 left: 0;
                 background-color: $color-accent;
                 padding: 0;
-                animation: slide-in-down .15s ease-out forwards;
+                @include nice-animation(slide-in-down .15s ease-out forwards);
 
                 .multi-column {
                     float: none;
@@ -304,8 +304,7 @@ body {
                     > a, > span {
                         &:after {
                             color: $color-white;
-                            animation: flip .15s linear forwards;
-                            animation-iteration-count: 1;
+                            @include nice-animation(flip .15s linear forwards 0s 1);
                         }
                     }
                 }
@@ -313,7 +312,7 @@ body {
                     &:hover {
                         > a, > span {
                             &:after {
-                                animation: flip-opposite .15s linear forwards;
+                                @include nice-animation(flip-opposite .15s linear forwards);
                             }
                         }
                     }

@@ -123,6 +123,22 @@
     }
 }
 
+@mixin nice-animation ($params: null, $duration: null, $easing: null, $delay: null, $iterations: null) {
+    animation: $params;
+    animation-duration: $duration;
+    animation-delay: $delay;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-animation: $params;
+        -webkit-animation-duration: $duration;
+        -webkit-animation-delay: $delay;
+        -webkit-animation-timing-function: $easing;
+        -webkit-animation-iteration-count: $iterations;
+        /* stylelint-enable */
+    }
+}
+
 @mixin nice-placeholder-color {
     &::placeholder {
         @content;

@@ -110,7 +110,7 @@
                     overflow: hidden;
                     overflow-y: auto;
                     @include nice-border-radius($radius-normal);
-                    animation: slide-in-down .15s ease-out forwards;
+                    @include nice-animation(slide-in-down .15s ease-out forwards);
 
                     li {
                         a {

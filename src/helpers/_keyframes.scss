@@ -56,3 +56,20 @@
         transform: translateY(0);
     }
 }
+
+@keyframes stepper-bullet-in {
+    from {
+        background-color: $gray-medium;
+    }
+    to {
+        background-color: $color-primary;
+    }
+}
+@keyframes scale-in {
+    from {
+        transform: scale(.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}

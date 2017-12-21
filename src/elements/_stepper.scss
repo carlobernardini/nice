@@ -3,7 +3,7 @@
         family: $fonts-primary;
     }
     background-color: $color-white;
-    border-radius: $radius-normal;
+    @include nice-border-radius($radius-normal);
 
     .nice-stepper-title {
         padding: 15px;
@@ -79,7 +79,7 @@
                 height: 42px;
                 width: 42px;
             }
-            border-radius: 50%;
+            @include nice-border-radius(50%);
         }
         .step-label {
             padding-left: 10px;
@@ -149,7 +149,7 @@
     }
     .stepper-footer-left,
     .stepper-footer-right {
-        width: 50%;
+        width: calc(50% + 15px);
         margin: -15px;
         padding: 15px;
 

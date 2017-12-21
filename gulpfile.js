@@ -42,7 +42,6 @@ gulp.task('compile-min', function(){
 gulp.task('docs', function(){
     return gulp.src('./docs/**/*.scss')
         .pipe(sass({
-            includePaths: scssIncludes,
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(rename('docs.min.css'))

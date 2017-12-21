@@ -49,11 +49,11 @@
 @keyframes slide-in-down {
     from {
         opacity: 0;
-        transform: translateY(-7px);
+        @include nice-transform(translateY(-7px));
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        @include nice-transform(translateY(0));
     }
 }
 

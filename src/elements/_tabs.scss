@@ -99,7 +99,7 @@
             .nice-badge {
                 text-align: center;
                 font-size: .8em;
-                padding: 1px 6px 2px;
+                padding: 1px 6px;
                 background-color: darken($gray-light, 15%);
                 margin: 1px -3px 0 3px;
                 @include nice-line-height(16px);

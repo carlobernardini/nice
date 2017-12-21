@@ -10,7 +10,7 @@ To get started, check out <https://nice.textkernel.nl>.
 * Reusable UI elements for delivering a consistent user experience across all products
   * Colors are taken directly from Textkernel's official [Branding Guideline](https://app.frontify.com/d/apB5ernOJZzj/textkernel-branding-guideline)
 * All CSS produced by Nice! is tested and supports all modern browsers (IE10+). You can use a custom Autoprefixer configuration for specific needs.
-* It comes with icons and a grid system out of the box
+* It comes with Textkernel icons and a grid system out of the box
 
 ## Quick start
 
@@ -25,6 +25,8 @@ In the Git repository you will find static assets, source files and default buil
 
 ```
 nice/
+├── .browserlistrc
+├── .stylelintrc
 ├── gulpfile.js
 ├── assets/
 └── dist/
@@ -38,11 +40,19 @@ nice/
     └── ...
 ```
 
-The default build script generates a regular stylesheet (`nice.css`) as well as a minified one (`nice.min.css`). Nice! will not handle vendor prefixing itself but instead assumes you use a tool like [Autoprefixer](https://github.com/postcss/autoprefixer).
- For convenience, we also provide a number of webfonts (in `dist/fonts/`) and additional assets (logos, favicons; in `assets/`).
+The default build script generates a regular stylesheet (`nice.css`) as well as a minified one (`nice.min.css`).
+
+For convenience, we also provide a number of webfonts (in `dist/fonts/`) and additional assets (logos, favicons; in `assets/`). Please note that Nice! only comes with Textkernel font icons. You will have to include e.g. FontAwesome yourself.
+
 Source files are in [SASS](http://sass-lang.com/) and can be found in `src/` folder.
 
-It is recommended that you use one of the precompiled CSS versions when including Nice! in your projects.
+You can either use the precompiled CSS when including Nice! in your projects or you can use the source file `nice.scss` in your own build process.
+
+## CSS Linting
+Nice! uses CSS Linting to assure quality and consistency. Rules are found in `.stylelintrc`.
+
+## Vendor prefixing
+Nice! can handle vendor prefixing itself but instead it is recommended that you use a tool like [Autoprefixer](https://github.com/postcss/autoprefixer). When using Autoprefixer you should set variable `$using-autoprefixer` to `true` so Nice! will not do prefixing too. The default browser compatibility list used by Nice! is found in `.browserlistrc`.
 
 ## Bugs and feature requests
 

@@ -1,5 +1,29 @@
 # Nice! version log
 
+## 2.0.0
+:date: 2017-12-21
+
+### :star2: **Breaking changes**
+- FontAwesome is no longer bundled with Nice!
+- Footer element now requires `.nice-footer` class to be nice
+
+### :star2: New features
+- Added support for Autoprefixing (set variable `$using-autoprefixer` to `true`)
+- Introduced new UI element for stepper / wizard (`.nice-stepper`)
+- Support for disabling animations with `.no-animations` helper
+
+### :star2: Improvements
+- Tabs: Wrapper is now optional, so tab panel can be integrated in other components
+- Dropdowns: Added animations on expand
+- Buttons: Custom outline on focus
+- Buttons: Support `brand` contextual color
+- Footer: Element no longer affected without class applied
+- Removed `webkit-scrollbar` styling because of very limited support
+
+### :star2: Internal improvements
+- Added support for style linting
+- Removed Bourbon / Neat dependencies
+
 ## 1.2.1
 :date: 2017-08-07
 

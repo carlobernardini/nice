@@ -2,7 +2,7 @@
     position: relative;
     background-color: $color-white;
     border: 1px solid $color-accent;
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
     @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
 
     .nice-popover-title {
@@ -10,7 +10,7 @@
         padding: 10px 15px;
         font-weight: 600;
         color: $color-white;
-        @include nice-border-radius($default-radius $default-radius 0 0);
+        @include nice-border-radius($radius-normal $radius-normal 0 0);
         @include nice-font-size(14px);
 
         .icon,
@@ -33,17 +33,17 @@
         @extend %clearfix;
 
         + .nice-popover-title {
-            @include nice-border-radius(0 0 $default-radius $default-radius);
+            @include nice-border-radius(0 0 $radius-normal $radius-normal);
         }
         .nice-popover-image {
             margin: -15px 15px -15px -15px;
             float: left;
-            @include nice-border-radius($default-radius 0 0 $default-radius);
+            @include nice-border-radius($radius-normal 0 0 $radius-normal);
 
             &.right {
                 margin: -15px -15px -15px 15px;
                 float: right;
-                @include nice-border-radius(0 $default-radius $default-radius 0);
+                @include nice-border-radius(0 $radius-normal $radius-normal 0);
             }
         }
     }
@@ -67,10 +67,10 @@
                 border-left: 1px solid $gray-light;
             }
             &:first-child {
-                @include nice-border-radius(0 0 0 $default-radius);
+                @include nice-border-radius(0 0 0 $radius-normal);
             }
             &:last-child {
-                @include nice-border-radius(0 0 $default-radius 0);
+                @include nice-border-radius(0 0 $radius-normal 0);
             }
             &:hover {
                 background-color: $gray-vlight;

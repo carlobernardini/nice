@@ -1,4 +1,4 @@
-@include keyframes(pulse) {
+@keyframes pulse {
     0% {
         background-color: lighten($color-primary, 15%);
     }    
@@ -10,7 +10,7 @@
     }
 }
 
-@include keyframes(spin) {
+@keyframes spin {
     0% {
         @include nice-transform(rotate(0deg));
     }
@@ -19,7 +19,7 @@
     }
 }
 
-@include keyframes(flip) {
+@keyframes flip {
     from {
         @include nice-transform(rotate(0deg));
     }
@@ -27,7 +27,8 @@
         @include nice-transform(rotate(-90deg));
     }
 }
-@include keyframes(flip-opposite) {
+
+@keyframes flip-opposite {
     from {
         @include nice-transform(rotate(0deg));
     }
@@ -35,11 +36,40 @@
         @include nice-transform(rotate(90deg));
     }
 }
-@include keyframes(slide) {
+
+@keyframes slide {
     0% {
         left: -50%;
     }
     100% {
         left: 100%;
+    }
+}
+
+@keyframes slide-in-down {
+    from {
+        opacity: 0;
+        @include nice-transform(translateY(-7px));
+    }
+    to {
+        opacity: 1;
+        @include nice-transform(translateY(0));
+    }
+}
+
+@keyframes stepper-bullet-in {
+    from {
+        background-color: $gray-medium;
+    }
+    to {
+        background-color: $color-primary;
+    }
+}
+@keyframes scale-in {
+    from {
+        transform: scale(.1);
+    }
+    to {
+        transform: scale(1);
     }
 }

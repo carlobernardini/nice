@@ -2,6 +2,10 @@
  * Nice! Mixins collection
  **/
 
+@if $using-autoprefixer {
+    @warn "Dont forget to use Autoprefixer for vendor prefixing (or set variable $using-autoprefixer to `false`)";
+}
+
 @function calculateRem ($size) {
     $remSize: $size / 16px;
     @return $remSize * 1rem;
@@ -9,11 +13,11 @@
 
 @mixin nice-font ($style: null, $variant: null, $weight: null, $size: null, $family: null) {
     font: {
-      family: $family;
-      style: $style;
-      variant: $variant;
-      weight: $weight;
-      size: $size;
+        family: $family;
+        style: $style;
+        variant: $variant;
+        weight: $weight;
+        size: $size;
     }
 }
 
@@ -28,31 +32,45 @@
 }
 
 @mixin nice-transform ($params...) {
-    -webkit-transform:  $params;
-       -moz-transform:  $params;
-        -ms-transform:  $params;
-         -o-transform:  $params;
-            transform:  $params;
+    transform: $params;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-transform: $params;
+        -ms-tranform: $params;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-box-sizing ($param) {
-    -webkit-box-sizing: $param;
-        moz-box-sizing: $param;
-            box-sizing: $param;
+    box-sizing: $param;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-box-sizing: $param;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-transition ($params...) {
-    -webkit-transition: $params;
-       -moz-transition: $params;
-        -ms-transition: $params;
-         -o-transition: $params;
-            transition: $params;
+    transition: $params;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-transition: $params;
+        -o-transition: $params;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-box-shadow ($params...) {
-    -webkit-box-shadow: $params;
-       -moz-box-shadow: $params;
-            box-shadow: $params;
+    box-shadow: $params;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-box-shadow: $params;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-text-shadow ($params...) {
@@ -60,105 +78,83 @@
 }
 
 @mixin nice-border-radius ($radiuses: null, $top-left: null, $top-right: null, $bottom-right: null, $bottom-left: null) {
-    -webkit-border-radius: $radiuses;
-       -moz-border-radius: $radiuses;
-            border-radius: $radiuses;
-    -webkit-border-top-left-radius: $top-left;
-        -moz-border-radius-topleft: $top-left;
-            border-top-left-radius: $top-left;
-    -webkit-border-top-right-radius: $top-right;
-        -moz-border-radius-topright: $top-right;
-            border-top-right-radius: $top-right;
-    -webkit-border-bottom-right-radius: $bottom-right;
-        -moz-border-radius-bottomright: $bottom-right;
-            border-bottom-right-radius: $bottom-right;
-    -webkit-border-bottom-left-radius: $bottom-left;
-        -moz-border-radius-bottomleft: $bottom-left;
-            border-bottom-left-radius: $bottom-left;
-    -webkit-background-clip: padding-box; 
-       -moz-background-clip: padding; 
-            background-clip: padding-box;
+    border-radius: $radiuses;
+    /* stylelint-disable */
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-right-radius: $bottom-right;
+    border-bottom-left-radius: $bottom-left;
+    /* stylelint-enable */
+    background-clip: padding-box;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable */
+        -webkit-border-radius: $radiuses;
+        -webkit-border-top-left-radius: $top-left;
+        -webkit-border-top-right-radius: $top-right;
+        -webkit-border-bottom-right-radius: $bottom-right;
+        -webkit-border-bottom-left-radius: $bottom-left;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-opacity ($transparency) {
-    -khtml-opacity: $transparency;
-      -moz-opacity: $transparency;
-           opacity: $transparency;
-       $opacity-ie: $transparency * 100;
-            filter: alpha(opacity=$opacity-ie);
+    opacity: $transparency;
 }
 
 @mixin nice-background-size ($param) {
-     -webkit-background-size: $param;
-        -moz-background-size: $param;
-          -o-background-size: $param;
-             background-size: $param;
+    background-size: $param;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-background-size: $param;
+        /* stylelint-enable */
+    }
 }
 
-@mixin nice-user-select ($param) {
-    -webkit-user-select: $param;
-       -moz-user-select: $param;
-        -ms-user-select: $param;
-         -o-user-select: $param;
-            user-select: $param;
-}
 @mixin nice-appearance ($param) {
-    -webkit-appearance: $param;
-       -moz-appearance: $param;
-            appearance: $param;
+    appearance: $param;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-appearance: $param;
+        -moz-appearance: $param;
+        /* stylelint-enable */
+    }
+}
+
+@mixin nice-animation ($params: null, $duration: null, $easing: null, $delay: null, $iterations: null) {
+    animation: $params;
+    animation-duration: $duration;
+    animation-delay: $delay;
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable property-no-vendor-prefix */
+        -webkit-animation: $params;
+        -webkit-animation-duration: $duration;
+        -webkit-animation-delay: $delay;
+        -webkit-animation-timing-function: $easing;
+        -webkit-animation-iteration-count: $iterations;
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-placeholder-color {
-  &::-webkit-input-placeholder {
-    @content;
-  }
-  &:-moz-placeholder {
-    @content;
-  }
-  &::-moz-placeholder {
-    @content;
-  }
-  &:-ms-input-placeholder {
-    @content;
-  }
-}
-
-@mixin nice-scrollbar(
-  $track-color: $color-white, 
-  $track-radius: $default-radius, 
-  $thumb-color: rgba($color-black, .5), 
-  $thumb-radius: $default-radius, 
-  $size-vertical: 6px, 
-  $size-horizontal: $size-vertical,
-  $zIndex: 999,
-  $appearance: none
-) {
-  &::-webkit-scrollbar {
-      z-index: $zIndex;
-      webkit-appearance: $appearance;
-
-      &:vertical {
-        width: $size-vertical;
-      }
-      &:horizontal {
-        width: $size-horizontal;
-      }
-  }
-  &::-webkit-scrollbar-thumb {
-      background-color: $thumb-color;
-      @include nice-border-radius($thumb-radius);
-  }
-  &::-webkit-scrollbar-track { 
-      background-color: $track-color; 
-      @include nice-border-radius($track-radius);
-  }
+    &::placeholder {
+        @content;
+    }
 }
 
 @mixin nice-linear-gradient ($color-from, $color-to) {
-    background: -webkit-linear-gradient($color-from, $color-to);
-    background: -o-linear-gradient($color-from, $color-to);
-    background: -moz-linear-gradient($color-from, $color-to);
     background: linear-gradient($color-from, $color-to);
+
+    @if not $using-autoprefixer {
+        /* stylelint-disable value-no-vendor-prefix */
+        background: -moz-linear-gradient(top, $color-from 0%, $color-to 100%);
+        background: -webkit-linear-gradient(top, $color-from 0%, $color-to 100%);
+        background: -o-linear-gradient(top, $color-from 0%, $color-to 100%);
+        /* stylelint-enable */
+    }
 }
 
 @mixin nice-abs-pos ($top: null, $right: null, $bottom: null, $left: null) {

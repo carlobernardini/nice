@@ -2,7 +2,7 @@
     padding: 15px;
     border: 1px solid $color-border;
     margin-bottom: 15px;
-    @include nice-border-radius($default-radius);
+    @include nice-border-radius($radius-normal);
 
     @each $type in (info, good, warning, bad) {
         &.#{$type} {
@@ -40,7 +40,7 @@
         font-weight: 600;
 
         + .nice-alert-wrapper {
-            @include nice-border-radius(0 0 $default-radius $default-radius);
+            @include nice-border-radius(0 0 $radius-normal $radius-normal);
 
             .nice-alert-content {
                 @include nice-border-radius($top-left: 0, $top-right: 0);
@@ -72,7 +72,7 @@
         margin: -15px;
         display: table;
         width: calc(100% + 30px);
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
     }
     .nice-alert-content,
     .nice-alert-button {
@@ -82,7 +82,7 @@
     .nice-alert-content {
         width: 80%;
         vertical-align: top;
-        @include nice-border-radius($default-radius 0 0 $default-radius);
+        @include nice-border-radius($radius-normal 0 0 $radius-normal);
     }
     .nice-alert-button {
         width: 20%;
@@ -90,7 +90,7 @@
         vertical-align: middle;
         font-weight: 600;
         cursor: pointer;
-        @include nice-border-radius(0 $default-radius $default-radius 0);
+        @include nice-border-radius(0 $radius-normal $radius-normal 0);
         @include nice-transition(background-color 0.3s);
     }
     &.top {

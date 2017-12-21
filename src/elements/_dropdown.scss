@@ -40,8 +40,9 @@
         margin: 3px 0 0;
         min-width: 100%;
         z-index: 4;
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
         @include nice-box-shadow(1px 2px 6px rgba($color-black, .15));
+        @include nice-animation(slide-in-down .15s ease-out forwards);
 
         &.shown {
             display: block;
@@ -64,9 +65,9 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 padding: 6px 10px;
+                user-select: none;
                 @include nice-font-size(14px);
                 @include nice-transition(color .1s, background-color .1s, border-color .1s);
-                @extend %disable-user-select;
 
                 i {
                     width: 20px;
@@ -93,12 +94,12 @@
             }
             &:first-child {
                 a {
-                    @include nice-border-radius($default-radius $default-radius 0 0);
+                    @include nice-border-radius($radius-normal $radius-normal 0 0);
                 }
             }
             &:last-child {
                 a {
-                    @include nice-border-radius(0 0 $default-radius $default-radius);
+                    @include nice-border-radius(0 0 $radius-normal $radius-normal);
                 }
             }
             &.separator {

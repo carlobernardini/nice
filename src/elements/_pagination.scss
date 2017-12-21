@@ -19,7 +19,7 @@ nav {
             float: left;
             display: block;
             padding: $padding-y $padding-x;
-            @include nice-border-radius($default-radius);
+            @include nice-border-radius($radius-normal);
         }
         a {
             text-decoration: none;
@@ -48,14 +48,14 @@ nav {
     &.small {
         li {
             span, a {
-                @include nice-font-size($default-font-size-small);
+                @include nice-font-size($font-size-small);
             }
         }
     }
     &.large {
         li {
             span, a {
-                @include nice-font-size($default-font-size-large);
+                @include nice-font-size($font-size-large);
             }
         }
     }
@@ -90,8 +90,6 @@ nav {
             &.current {
                 span, a {
                     background-color: $color-accent;
-                    // border-top: 1px solid $color-accent;
-                    // border-bottom: 1px solid $color-accent;
                     border-color: $color-accent;
                 }
             }

@@ -3,17 +3,16 @@ html {
     min-height: 100%;
 
     body {
-        margin-bottom: $default-footer-height;
+        margin-bottom: $footer-height;
         padding-bottom: 15px;
 
-        footer,
         .nice-footer {
             background-color: $color-accent;
             color: $color-white;
             position: absolute;
             left: 0;
             bottom: 0;
-            height: $default-footer-height;
+            height: $footer-height;
             overflow: hidden;
             width: 100%;
 
@@ -59,7 +58,6 @@ html {
 @include media($mobile) {
     html {
         body {
-            footer,
             .nice-footer {
                 margin-top: 15px;
 
@@ -73,15 +71,13 @@ html {
 @include media($mobile-and-tablet) {
     html {
         body {
-            footer,
             .nice-footer {
                 padding: 0 15px;
             }
 
             &.expanded {
-                footer,
                 .nice-footer {
-                    bottom: -$default-footer-height;
+                    bottom: -$footer-height;
                 }
             }
         }

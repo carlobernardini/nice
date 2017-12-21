@@ -3,8 +3,7 @@
     border-top-color: rgba($color-accent, 1);
     height: 24px;
     width: 24px;
-    @include animation(spin 1s linear);
-    @include animation-iteration-count(infinite);
+    @include nice-animation(spin 1s linear 0s infinite);
     @include nice-border-radius(50%);
     @include nice-transition(border-top-color .5s);
     @extend %display-inline-block;
@@ -18,13 +17,13 @@
         border-width: .35rem;
         height: 48px;
         width: 48px;
-        @include animation-duration(1.25s);
+        @include nice-animation($duration: 1.25s);
     }
     &.large {
         border-width: .45rem;
         height: 128px;
         width: 128px;
-        @include animation-duration(1.5s);
+        @include nice-animation($duration: 1.5s);
     }
 }
 .nice-progress {
@@ -57,8 +56,7 @@
     }
     &.pulse {
         .nice-progress-fill {
-            @include animation(pulse 1.5s ease-out);
-            @include animation-iteration-count(infinite);
+            @include nice-animation(pulse 1.5s ease-out 0s infinite);
         }
     }
 }

@@ -26,7 +26,7 @@
     padding: 0;
     margin: 0;
     background-color: $gray-light;
-    @include nice-border-radius($default-radius * 2);
+    @include nice-border-radius($radius-normal * 2);
     @include nice-appearance(none);
     @include nice-box-shadow(inset 0 1px $gray-medium, 0 1px 0 $color-white);
 

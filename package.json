@@ -9,15 +9,15 @@
   },
   "author": "Textkernel B.V.",
   "license": "MIT",
-  "dependencies": {
-    "bourbon": "4.3.3",
-    "bourbon-neat": "1.7.2",
-    "font-awesome": "4.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "3.9.1",
+    "gulp-autoprefixer": "4.0.0",
     "gulp-rename": "1.2.2",
-    "gulp-sass": "3.1.0"
+    "gulp-sass": "3.1.0",
+    "gulp-stylelint": "^5.0.0",
+    "stylelint-config-recommended-scss": "^2.0.0",
+    "stylelint-scss": "^2.1.0"
   },
   "scripts": {
     "prepublish": "gulp"

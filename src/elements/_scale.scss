@@ -49,8 +49,8 @@
                 display: block;
                 width: 100%;
                 font-weight: normal;
+                user-select: none;
                 @include nice-font-size(13px);
-                @extend %disable-user-select;
 
                 &:hover {
                     input[type='radio']:not(:checked) {
@@ -86,7 +86,7 @@
                     text-align: center;
                     background-color: $gray-light;
                     @include nice-transition(color .2s, background-color .2s);
-                    @include nice-border-radius($default-radius * 1.5);
+                    @include nice-border-radius($radius-normal * 1.5);
 
                     &:before {
                         position: absolute;
@@ -115,7 +115,7 @@
         background-color: $gray-light;
         height: 4px;
         width: 80%;
-        @include nice-border-radius($default-radius);
+        @include nice-border-radius($radius-normal);
         @include nice-transition(background-color .2s);
     }
     &:hover {

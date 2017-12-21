@@ -1,0 +1,42 @@
+{
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "extends": "stylelint-config-recommended-scss",
+    "rules": {
+        "unit-case": "lower",
+        "unit-no-unknown": true,
+        "function-calc-no-unspaced-operator": true,
+        "no-missing-end-of-source-newline": true,
+        "length-zero-no-unit": true,
+        "block-no-empty": true,
+        "max-empty-lines": 2,
+        "indentation": 4,
+        "color-no-invalid-hex": true,
+        "color-named": "never",
+        "string-no-newline": true,
+        "selector-max-id": 0,
+        "selector-combinator-space-after": "always",
+        "selector-attribute-quotes": "always",
+        "selector-attribute-brackets-space-inside": "never",
+        "declaration-block-trailing-semicolon": "always",
+        "declaration-no-important": true,
+        "declaration-colon-space-before": "never",
+        "declaration-colon-space-after": "always",
+        "property-case": "lower",
+        "property-no-vendor-prefix": true,
+        "value-no-vendor-prefix": true,
+        "font-family-name-quotes": "always-where-recommended",
+        "font-family-no-duplicate-names": true,
+        "at-rule-no-vendor-prefix": true,
+        "selector-pseudo-element-colon-notation": "single",
+        "selector-pseudo-class-parentheses-space-inside": "never",
+        "selector-no-vendor-prefix": true,
+        "media-feature-name-no-unknown": true,
+        "media-feature-range-operator-space-before": "always",
+        "media-feature-range-operator-space-after": "always",
+        "media-feature-parentheses-space-inside": "never",
+        "media-feature-colon-space-before": "never",
+        "media-feature-colon-space-after": "always"
+    }
+}

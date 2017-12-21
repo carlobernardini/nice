@@ -10,6 +10,7 @@
         <title>Nice!</title>
         <link href="docs/docs.min.css" rel="stylesheet">
         <link href="dist/nice.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/textkernel/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/textkernel/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/textkernel/favicon-16x16.png">
@@ -113,13 +114,16 @@
                                                     <a href="#nice-modal-dialogs">Modal dialogs</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#nice-login-dialog">Login dialog</a>
+                                                    <a href="#nice-stepper">Stepper</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#nice-breadcrumb">Breadcrumbs</a>
+                                                    <a href="#nice-login-dialog">Login dialog</a>
                                                 </li>
                                             </ul>
                                             <ul>
+                                                <li>
+                                                    <a href="#nice-breadcrumb">Breadcrumbs</a>
+                                                </li>
                                                 <li>
                                                     <a href="#nice-pagination">Pagination</a>
                                                 </li>
@@ -374,7 +378,7 @@
             <div class="nice-row" id="nice-font-icons">
                 <h2 class="docs">Font icons</h2>
                 <p>
-                    Nice! is bundeled with <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a> out of the box. To know which version of FontAwesome is included with the release of Nice! you are using, refer to the <code class="inline">package.json</code> file. Additionally, a custom font iconset is included for all Textkernel products listed below. The font family is called &ldquo;TKProducts&rdquo;. Any other custom icons that do not come with FontAwesome and are not related to Textkernel products, are included in &ldquo;TKAdditional&rdquo;. All font icons are scalable vector graphics, meaning they can be resized without loss of quality.
+                    It is recommended that you use <a href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a> with Nice!, however, you need to include it yourself (either by linking to a CDN or downloading the package into your project).<br />A custom font iconset is included for all Textkernel products listed below. The font family is called &ldquo;TKProducts&rdquo;. All font icons are scalable vector graphics, meaning they can be resized without loss of quality.
                 </p>
                 <div class="nice-col-6 nice-col-small-12 nice-example">
                     <i class="product-icon extract" title="product-icon extract"></i>
@@ -387,9 +391,11 @@
                     <i class="product-icon tkportal" title="product-icon tkportal"></i>
                     <i class="product-icon connector" title="product-icon connector"></i>
                     <i class="product-icon textkernel" title="product-icon textkernel"></i>
-                    <i class="additional-icon frontify" title="additional-icon frontify"></i>
                 </div>
                 <div class="nice-col-6 nice-col-small-12">
+                    <p class="nice-alert warning icon fa-lightbulb-o">
+                        <strong>Please note</strong> FontAwesome is not included with Nice!. Only Textkernel brand icons are.
+                    </p>
                     <code class="docs">&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">extract</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">harvester</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">jobfeed</span>&quot;&gt;&lt;/i&gt;
@@ -399,8 +405,7 @@
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">wte</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">tkportal</span>&quot;&gt;&lt;/i&gt;
 &lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">connector</span>&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;<span class="main">additional-icon</span> <span class="variation">frontify</span>&quot;&gt;&lt;/i&gt;</code>
+&lt;i class=&quot;<span class="main">product-icon</span> <span class="variation">textkernel</span>&quot;&gt;&lt;/i&gt;</code>
                 </div>
             </div>
             <div class="nice-row" id="nice-grid-system">
@@ -1309,6 +1314,9 @@
                                 <button type="button" class="nice-btn">
                                     Try me
                                 </button>
+                                <button type="button" class="nice-btn">
+                                    ...or try me
+                                </button>
                             </span>
                         </div>
                     </div>
@@ -1624,38 +1632,31 @@
                 <h2 class="docs">Tabs</h2>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <p>
-                        <div class="nice-tabs-wrapper">
-                            <ul class="nice-tabs">
-                                <li class="current">
-                                    <a href="javascript:void(0);" class="icon fa-info">
-                                        First
-                                        <span class="nice-badge">
-                                            96
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0);" class="icon fa-question">
-                                        Second
-                                        <span class="nice-badge">
-                                            96
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="pull-right">
-                                    <a href="javascript:void(0);" class="icon fa-home">
-                                        Third
-                                    </a>
-                                </li>
-                                <li class="pull-right">
-                                    <a href="javascript:void(0);" class="icon fa-wrench">
-                                        Fourth
-                                    </a>
-                                </li>
-                            </ul>
-                            <div class="nice-tab-content text-align-justify">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
-                            </div>
+                        <ul class="nice-tabs">
+                            <li class="current">
+                                <a href="javascript:void(0);" class="icon fa-info">
+                                    First
+                                    <span class="nice-badge">
+                                        96
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" class="icon fa-question">
+                                    Second
+                                    <span class="nice-badge">
+                                        96
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="pull-right">
+                                <a href="javascript:void(0);" class="icon fa-home">
+                                    Third
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="nice-tab-content text-align-justify">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec leo at nulla convallis iaculis at ac urna. Nullam finibus sodales elementum. Vestibulum eget semper urna. Fusce gravida turpis eu sem tempus, quis sodales libero pellentesque. Sed tempus augue et felis varius, nec bibendum lorem pulvinar
                         </div>
                     </p>
                     <p>
@@ -1702,8 +1703,11 @@
                     </p>
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Wrapping the tab panel inside <code class="inline">.nice-tabs-wrapper</code> is optional. You might not want to use it when integrating the tabs inside another component such as a panel or modal dialog.
+                    </p>
                     <div class="docs-code-wrapper">
-                        <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt;
+                        <code class="docs">&lt;div class=&quot;<span class="main">nice-tabs-wrapper</span>&quot;&gt; &lt;!-- Wrapper is optional: omit when integrating the tab panel inside another component (e.g. modal or panel) --&gt;
     &lt;ul class=&quot;<span class="main">nice-tabs</span> <span class="variation">small bold</span>&quot;&gt;
         &lt;li class=&quot;<span class="variation">current</span>&quot;&gt;
             &lt;a href=&quot;#&quot; class=&quot;<span class="variation">icon fa-home</span>&quot;&gt;
@@ -1799,6 +1803,152 @@
                 &lt;button class=&quot;nice-btn&quot;&gt;Cancel&lt;/button&gt;
                 &lt;button class=&quot;nice-btn primary&quot;&gt;Save&lt;/button&gt;
             &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                        <ul class="doc-code-tools">
+                            <li><a href="#" class="toggle">Expand</a></li>
+                            <li><a href="#" class="copy">Copy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="nice-row" id="nice-stepper">
+                <h2 class="docs">Stepper</h2>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <div class="nice-stepper">
+                        <div class="nice-stepper-title">
+                            <i class="fa fa-magic"></i>
+                            Wizard
+                        </div>
+                        <div class="nice-stepper-content">
+                            <ol class="nice-stepper-steps">
+                                <li class="nice-stepper-step step-past">
+                                    <a href="javascript:;" class="step-container">
+                                        <div class="step-bullet">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="step-label">
+                                            First step
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nice-stepper-step step-past step-previous">
+                                    <a href="javascript:;" class="step-container">
+                                        <div class="step-bullet">
+                                            <i class="fa fa-check"></i>
+                                        </div>
+                                        <div class="step-label">
+                                            Second step
+                                            <small>
+                                                Optional
+                                            </small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="nice-stepper-step step-current">
+                                    <a href="javascript:;" class="step-container">
+                                        <div class="step-bullet">
+                                            3
+                                        </div>
+                                        <div class="step-label">
+                                            Last step
+                                        </div>
+                                    </a>
+                                </li>
+                            </ol>
+                            <div class="nice-stepper-body">
+                                <p>
+                                    Here goes your content.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="nice-stepper-footer">
+                            <div class="stepper-footer-left">
+                                <div class="nice-btn-group">
+                                    <button type="button" class="nice-btn">
+                                        Previous
+                                    </button>
+                                    <button type="button" class="nice-btn" disabled>
+                                        Next
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="stepper-footer-right">
+                                <button type="button" class="nice-btn primary">
+                                    Done
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nice-col-6 nice-col-mobile-12">
+                    <p class="nice-alert info icon fa-lightbulb-o">
+                        Steppers are useful for sequential task flows. You can also wrap them inside <a href="#nice-modal-dialogs">modal dialogs</a>. Use <code class="inline">&lt;small&gt;</code> within step labels to provide additional information about that step.
+                    </p>
+                    <div class="docs-code-wrapper">
+                        <code class="docs">&lt;div class=&quot;<span class="main">nice-stepper</span>&quot;&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-title</span>&quot;&gt;
+        &lt;i class=&quot;fa fa-magic&quot;&gt;&lt;/i&gt;
+        Wizard
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-content</span>&quot;&gt;
+        &lt;ol class=&quot;<span class="main">nice-stepper-steps</span>&quot;&gt;
+            &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">step-past</span>&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="main">step-container</span>&quot;&gt;
+                    &lt;div class=&quot;<span class="main">step-bullet</span>&quot;&gt;
+                        &lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;<span class="main">step-label</span>&quot;&gt;
+                        First step
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">step-past step-previous</span>&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="main">step-container</span>&quot;&gt;
+                    &lt;div class=&quot;<span class="main">step-bullet</span>&quot;&gt;
+                        &lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;<span class="main">step-label</span>&quot;&gt;
+                        Second step
+                        <span class="variation">&lt;small&gt;</span>
+                            Optional
+                        <span class="variation">&lt;/small&gt;</span>
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;<span class="main">nice-stepper-step</span> <span class="variation">step-current</span>&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;<span class="main">step-container</span>&quot;&gt;
+                    &lt;div class=&quot;<span class="main">step-bullet</span>&quot;&gt;
+                        3
+                    &lt;/div&gt;
+                    &lt;div class=&quot;<span class="main">step-label</span>&quot;&gt;
+                        Last step
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;div class=&quot;<span class="main">nice-stepper-body</span>&quot;&gt;
+            &lt;p&gt;
+                Here goes your content.
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;<span class="main">nice-stepper-footer</span>&quot;&gt;
+        &lt;div class=&quot;<span class="main">stepper-footer-left</span>&quot;&gt;
+            &lt;div class=&quot;nice-btn-group&quot;&gt;
+                &lt;button type=&quot;button&quot; class=&quot;nice-btn&quot;&gt;
+                    Previous
+                &lt;/button&gt;
+                &lt;button type=&quot;button&quot; class=&quot;nice-btn&quot; disabled&gt;
+                    Next
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;<span class="main">stepper-footer-right</span>&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;nice-btn primary&quot;&gt;
+                Done
+            &lt;/button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
@@ -2318,7 +2468,7 @@
                 </div>
                 <div class="nice-col-6 nice-col-mobile-12">
                     <p class="text-align-justify nice-alert warning icon fa-warning">
-                        Panels are required to have a <code class="inline">.nice-panel-content</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
+                        Panels are required to have a <code class="inline">.nice-panel-content</code>, <code class="inline">.nice-stepper</code> or <code class="inline"><strong>table</strong>.nice-table</code> child, and can have an optional <code class="inline">.nice-panel-heading</code>. A panel heading can either be the first of last child of <code class="inline">.nice-panel</code>. Panels can additionally be provided with any contextual color class (including "brand"). This will affect the panel heading background color as well as the panel shadow color.
                     </p>
                     <div class="docs-code-wrapper">
                         <code class="docs">&lt;div class=&quot;<span class="main">nice-panel</span> <span class="variation">brand primary info good warning bad gray</span>&quot;&gt;
@@ -2609,7 +2759,9 @@
                         <div class="nice-card-title">
                             Yet another card
                         </div>
-                        <img class="nice-card-image" src="https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150" />
+                        <div class="nice-card-image" style="background-image:url(https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=300%C3%97150&amp;w=300&amp;h=150);" />
+                            &nbsp;
+                        </div>
                         <div class="nice-card-content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper nulla ac quam hendrerit pharetra.
                         </div>
@@ -2982,6 +3134,10 @@
                                     <td>Forces a certain type of cursor to be displayed when pointing on that element</td>
                                 </tr>
                                 <tr>
+                                    <td><code class="inline">.no-animation</code></td>
+                                    <td>Disables animations on the current node</td>
+                                </tr>
+                                <tr>
                                     <th colspan="2" class="nice-bg-white">Text styling</th>
                                 </tr>
                                 <tr>
@@ -3029,7 +3185,8 @@
             <div class="nice-row" id="nice-browser-support">
                 <h2 class="docs">Browser support</h2>
                 <p>
-                    Nice! supports Internet Explorer 9 and newer versions, except for specific modules such as Flexbox that are only supported in modern browsers. It is designed to deliver an equally consistent appearance on browsers that do not support CSS3. Please check <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">this reference</a> for a detailed overview of CSS3 browser support.
+                    Nice! supports Internet Explorer 10 and newer versions except for specific modules such as Flexbox that are only supported in modern browsers. From version 2.0.0 onwards you can use <a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> in your build process to apply any vendor prefixes according to your compatibility requirements (e.g. <code class="inline">-webkit-, -moz-, -ms-</code>), as required by various (older) browsers. It's included with Nice!'s default build script.<br />
+                    Please check <a href="http://www.w3schools.com/cssref/css3_browsersupport.asp" target="_blank">this reference</a> for a detailed overview of CSS3 browser support.
                 </p>
                 <table class="nice-table bordered striped">
                     <thead>
@@ -3066,10 +3223,10 @@
                 </table>
             </div>
         </section>
-        <footer>
+        <footer class="nice-footer">
             <div class="nice-container">
                 <p class="pull-left">
-                    &copy; 2016 <span class="text-brand">textkernel</span>
+                    &copy; 2018 <span class="text-brand">textkernel</span>
                 </p>
                 <ul class="nice-footer-menu">
                     <li>
